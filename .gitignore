@@ -1,0 +1,76 @@
+# ── Environment & Secrets ──────────────────────────────────────────────────
+.env
+.env.local
+*.key
+*.pem
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+.venv
+
+# ── IDE ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ── Large Data Files (gitignored) ───────────────────────────────────────────
+# Raw Kaggle — too large, download from Kaggle
+data/kaggle_raw/
+
+# Cleaned Kaggle — built locally from raw
+data/kaggle_cleaned/postings_cleaned.csv
+data/kaggle_cleaned/data_quality_report.txt
+
+# Vector store — built locally from cleaned data
+data/vector_store/
+
+# ── Sample Data & Snapshots (NOT ignored — push to repo) ────────────────────
+# These are intentionally kept (marked with !) to ensure they're committed:
+!data/kaggle_cleaned_sample/
+!data/kaggle_cleaned_sample/README.md
+!data/kaggle_cleaned_sample/postings_sample.csv
+!data/arbeitnow/
+!data/arbeitnow/arbeitnow_jobs.json
+!data/personas/
+
+# ── LangSmith & Caching ─────────────────────────────────────────────────────
+.langsmith/
+*.cache
+cache/
+
+# ── OS ──────────────────────────────────────────────────────────────────────
+Thumbs.db
+*.log

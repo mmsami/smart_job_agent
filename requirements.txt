@@ -1,0 +1,21 @@
+# ── Data pipeline ──────────────────────────────────────────────────────
+pandas>=2.0
+numpy>=1.26
+requests>=2.31
+pydantic>=2.0
+
+# ── Embeddings & vector store ──────────────────────────────────────────
+sentence-transformers>=2.7
+faiss-cpu>=1.8
+
+# ── BM25 baseline ─────────────────────────────────────────────────────
+rank-bm25>=0.2
+
+# ── LLM — Google AI Studio (Gemma via Gemini API) ─────────────────────
+google-generativeai>=0.8
+langchain>=0.2
+langchain-google-genai>=1.0
+langsmith>=0.1
+
+# ── Caching ───────────────────────────────────────────────────────────
+diskcache>=5.6
