@@ -66,6 +66,8 @@ data/vector_store/
 !data/arbeitnow/arbeitnow_jobs.json
 !data/personas/
 
+data/resumes
+
 # ── LangSmith & Caching ─────────────────────────────────────────────────────
 .langsmith/
 *.cache
