@@ -1,61 +1,74 @@
-# DEV LOG: Data Cleaning & Fetching
+# Dev Log: Data Cleaning & Ingestion
+**Date:** 2026-04-12 to 2026-04-15
+**Objective:** Create a unified, high-quality dataset by merging a massive static Kaggle dataset with a current API snapshot from Arbeitnow.
 
-## [Phase 1] Initial Setup & Kaggle
-Sami already cleaned the Kaggle data (123k rows). Looks solid. 
-Problem: we wanted more current data, so decided to pull from Arbeitnow API.
+---
 
-## [Iteration 1] Arbeitnow API Exploration
-Did some test calls to `https://www.arbeitnow.com/api/job-board-api?page=1`.
-- Found: `slug` (ID), `company_name`, `title`, `description` (it's all HTML, need to strip it), `tags` (array), `remote` (bool).
-- Missing: No experience level or salary in the API. 
+## 1. The Data Sources
+We are dealing with two fundamentally different data shapes:
+1. **Kaggle LinkedIn Postings:** ~124k jobs. Static, high volume, US-centric. Rich supplementary tables for skills and industries.
+2. **Arbeitnow API:** ~950 jobs. Dynamic, EU/Germany centric. Simple JSON structure, lacking experience levels and salaries.
 
-Headache: How to merge this with Kaggle? Kaggle has tons of fields Arbeitnow doesn't.
-Decision: Create a shared schema. If a field is missing (like salary for Arbeitnow), just set it to `None`. Better to be honest about missing data than guess.
+---
 
-## [Iteration 2] Folder Mess
-Folders were all over the place. Everything was just in `data/cleaned/`.
-- `postings_cleaned.csv`
-- `arbeitnow_jobs.json`
-- some raw files mixed in.
+## 2. Kaggle Pipeline (The Heavy Lifting)
+The Kaggle dataset was too raw for direct indexing. We implemented a multi-stage cleaning pipeline in `parse_kaggle.py`.
 
-Reorganized it to be cleaner:
-- `data/kaggle_raw/` -> raw stuff
-- `data/kaggle_cleaned/` -> processed CSV
-- `data/arbeitnow/` -> API snapshot
-- `data/vector_store/` -> FAISS index
+### The Join Strategy
+To add structure to the raw descriptions, we performed several joins using the `job_id` as the key:
+- **Skill Labels:** Joined `job_skills.csv` → `skills.csv`. This transformed raw IDs into 35 broad professional categories (e.g., "Information Technology", "Sales"). **Coverage: 98.6%**.
+- **Industry Classification:** Joined `job_industries.csv` → `industries.csv`. This added high-level industry labels. **Coverage: 98.8%**.
 
-Now it's actually clear what is input and what is output.
+### Cleaning & Validation
+- **HTML Stripping:** Used regex to remove all HTML tags from descriptions.
+- **Junk Filtering:** Defined a "junk" row as one where the title is $<3$ characters AND the description is $<50$ characters. **Result: 0 rows dropped** (Kaggle's data was surprisingly clean).
+- **Experience Validation:** Verified all `formatted_experience_level` values against our target schema to ensure no unexpected labels would break the filter later.
 
-## [Iteration 3] Schema & Mapping
-Tried mapping manually first, but it was a pain. 
-Solution: Use Pydantic (`schemas.py`).
-- `JobDocument` class handles the mapping for both sources.
-- `tags` from Arbeitnow -> joined into a string for `skill_labels`.
-- `remote` bool -> if True, then "Remote", else use `job_types[0]`.
-- Added `source` field ("kaggle" vs "arbeitnow") so we can filter later.
+### Data Quality Report (Summary)
+- **Total Rows:** 123,849
+- **Full Quality Rows:** 122,040 (98.5%) — have good title, description, and skill labels.
+- **Salary Sparsity:** 75.9% of rows have `null` salaries.
+- **Experience Sparsity:** 23.7% of rows have `null` experience levels.
+- **Median Description Length:** 3,419 characters.
 
-Ran the fetcher: got 957 jobs from Arbeitnow. Not a huge amount, but good for EU/Germany coverage.
+---
 
-## [Iteration 4] Vector Store Build
-Updated `build_vector_store.py` to pull from both sources.
-- Loaded Kaggle CSV + Arbeitnow JSON.
-- Paragraph chunking: split on `\n\n`. If a para is too long (>512 tokens), use a sliding window with 50 token overlap.
-- Signal boosting: prepending `{title} at {company}. {skills}.` to every chunk. This is key so the embedding doesn't lose the context of the job title in long descriptions.
-- FAISS setup: `IndexFlatIP` + `normalize_L2` for cosine similarity.
+## 3. Arbeitnow Integration (The "Current" Signal)
+To ensure the agent is useful for users in Germany, we implemented `fetch_arbeitnow.py`.
 
-## [Final Checks]
-- Arbeitnow: 957 jobs. Most fields okay, salary/exp are null.
-- Kaggle: 123k jobs. mostly complete.
-- Comparison: Both sources are in the same index now. lauest results are consistent.
+### API Mapping Logic
+Since Arbeitnow's JSON doesn't match Kaggle's CSV, we implemented a mapping layer in `schemas.py`:
+| Arbeitnow Field | Shared Schema Field | Logic |
+|-----------------|-------------------|-------|
+| `slug` | `job_id` | Unique identifier |
+| `company_name` | `company` | Direct map |
+| `title` | `title` | Direct map |
+| `description` | `description` | Strip HTML tags |
+| `remote` (bool) | `work_type` | If True → "Remote", else use `job_types[0]` |
+| `tags` (list) | `skill_labels` | Join list into a comma-separated string |
+| `location` | `location` | Direct map |
+| (missing) | `salary` / `exp` | Set to `null` |
 
-## [Discussion] Current vs Historical Data
-Kyoungmi brought up that Kaggle is 2023-2024 data. Should we only use Arbeitnow for the user?
-- Discussion: If we only use Arbeitnow (957 jobs), the project is too "small". We need the 124k for the FAISS demo (scaling).
-- Decision: Keep both in the index. Use all for evaluation (shows scale), but add a `source` filter for the demo (shows current jobs only). Best of both worlds.
+**Final Count:** 957 jobs fetched and validated via Pydantic.
 
-## [Log] Data Sharing / Git
-Kaggle data is too big for Git (~500MB).
-Setup:
-1. `data/kaggle_cleaned_sample/` -> 1000 rows in Git so prof can test.
-2. Full data -> gitignored. build locally.
-3. Vector store -> shared via Google Drive (saves everyone from running the embedding script).
+---
+
+## 4. Architectural Decisions
+
+### The "Current vs. Historical" Conflict
+The team debated whether to discard the Kaggle data because it is historical. 
+**Decision:** Keep both.
+- **Why?** Using only Arbeitnow (957 jobs) makes the project a "toy" application. Using 125k jobs proves the system can **scale**.
+- **The Solution:** Maintain a `source` metadata field. Use the full index for evaluation (proving scale), but allow the user to toggle a "Current Jobs Only" filter in the demo (filtering for `source == 'arbeitnow'`).
+
+### Git & Portability Strategy
+The full cleaned dataset is ~500MB, which is too large for GitHub.
+1. **`data/kaggle_cleaned_sample/`**: Committed 1,000 rows to Git. This allows the professor to run the code immediately without downloading GBs of data.
+2. **Full Index**: Shared the built FAISS index via Google Drive. This prevents teammates from having to run the 69-minute embedding script locally.
+
+---
+
+## 5. Final State
+- **Unified Dataset:** 124,806 total jobs.
+- **Shared Schema:** All jobs now follow the `JobDocument` Pydantic model.
+- **Ready for Indexing:** Data is cleaned, HTML-free, and augmented with skill/industry labels.

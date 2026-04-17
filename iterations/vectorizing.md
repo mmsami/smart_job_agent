@@ -1,45 +1,65 @@
 # DEV LOG: Vectorizing & FAISS Build
-
-## [Build] Indexing the Data
-Finally got the index built. 
-- Loaded: 123,849 Kaggle + 957 Arbeitnow = 124,806 jobs.
-- Chunking: Used the paragraph split on `\n\n`. For the huge paragraphs, used a 512-token window with 50 overlap. 
-- Result: 192,514 chunks total.
-- Model: `all-MiniLM-L6-v2` (384-dim). 
-- Time: Took ~69 mins on the M1 Max. Not fast, but it's a one-time thing.
-- Normalized all vectors to L2 so `IndexFlatIP` acts as cosine similarity.
-
-Files saved:
-- `faiss.index` (282MB)
-- `docstore.json` (562MB)
-Total ~844MB. Easy to share via Drive.
-
-**Key Detail:** Added "Signal Boosting". Every chunk starts with `{title} at {company}. {skills}.`. Without this, a chunk that just says "must be a team player" has no meaning. Now the embedding knows exactly which job it belongs to.
+**Date:** 2026-04-12
+**Objective:** Transform 124,806 raw job documents into a searchable vector space using a Bi-Encoder architecture.
 
 ---
 
-## [Testing] Layer 1 Sanity & Stress Tests
-Ran `test_retrieval.py` to make sure I didn't break the index.
+## 1. The Indexing Pipeline
+The goal was to create a high-performance index that is small enough to share via Google Drive but precise enough to surface relevant jobs.
+
+### Technical Specifications
+- **Embedding Model:** `all-MiniLM-L6-v2` (sentence-transformers).
+- **Dimensions:** 384.
+- **Algorithm:** FAISS `IndexFlatIP` (Inner Product) with L2-normalization. This effectively implements **Cosine Similarity**.
+- **Build Time:** ~69 minutes on M1 Max for 192,514 vectors.
+
+### Chunking Strategy: Paragraph-based with Fallback
+Job postings vary wildly in length. We implemented a hybrid approach:
+1. **Primary:** Split on double newlines (`\n\n`). This preserves the natural structure of "Responsibilities," "Requirements," and "Benefits."
+2. **Fallback:** If a paragraph exceeds 512 tokens, we use a sliding window of 512 tokens with a **50-token overlap**.
+**Why overlap?** It prevents the model from losing context if a critical requirement is split exactly at the boundary of two chunks.
+
+### Signal Boosting (Context Injection)
+A major problem with chunking is that a chunk like *"Must be a team player and have 5 years experience"* is meaningless if it's separated from the job title.
+**The Fix:** We prepend the job's core identity to **every single chunk**:
+`{title} at {company}. {skill_labels}. {chunk_text}`
+**Example:**
+*"Senior Python Developer at SolarEdge. Information Technology. Must be a team player..."*
+This ensures that the embedding for every chunk is "anchored" to the role and company, drastically improving retrieval precision.
+
+---
+
+## 2. Validation: Layer 1 Sanity Tests
+We ran `test_retrieval.py` to verify the index before building the LLM pipeline. This isolated the embedding model's performance from the CV parser's performance.
 
 ### Results Summary
 
-| Query | Top Job ID | Score | Verdict |
-| :--- | :--- | :--- | :--- |
-| Python soft eng remote | 3901673392 | 0.7022 | Correct domain |
-| Senior accountant | 3885854685 | 0.7598 | Correct domain |
-| B2B sales biz dev | 3901800114 | 0.7428 | Correct domain |
-| Python + AWS + K8s | 3901942886 | 0.7700 | Strong match |
-| CFO / Finance Dir | 3901348468 | 0.7084 | Right ballpark, but junior |
-| React + Accessibility | 3890894276 | 0.6485 | Mixed results |
-| Basket weaving | 3898175654 | 0.4646 | Irrelevant (Correct) |
-| Quantum Cold Fusion | 3886842163 | 0.6011 | Confused ColdFusion dev |
+| Query | Top Result | Score | Verdict | Analysis |
+| :--- | :--- | :--- | :--- | :--- |
+| "Python soft eng remote" | Python Developer | 0.7022 | ✅ Pass | Correct domain and work type. |
+| "Senior accountant" | Senior Accountant | 0.7598 | ✅ Pass | High confidence match. |
+| "B2B sales biz dev" | Account Executive | 0.7428 | ✅ Pass | Correct semantic mapping. |
+| "Python + AWS + K8s" | Cloud Engineer | 0.7700 | ✅ Pass | Correctly handled multi-attribute query. |
+| "CFO / Finance Dir" | Finance Manager | 0.7084 | ⚠️ Partial | Right domain, but too junior (Bi-encoder limitation). |
+| "React + Accessibility" | Front-end Dev | 0.6485 | ⚠️ Partial | Found React, but accessibility signal was weak. |
+| "Basket weaving" | Random Job | 0.4646 | ✅ Pass | Correctly identified as irrelevant (Low score). |
+| "Quantum Cold Fusion" | ColdFusion Dev | 0.6011 | ❌ Fail | Confused physics "Cold Fusion" with the coding language. |
 
-### Observations
-- **General Sanity:** Works. Python, Accounting, and Sales all return the right roles.
-- **Specificity:** It's a bit shaky. For the CFO query, it returned a "Finance Manager". This is a classic Bi-encoder problem: it sees "Finance" and "Manager" and thinks it's close enough. This proves we really need the LLM Reranker to fix the exact ranking.
-- **Negative Tests:** The scores dropped a lot (down to 0.45), which is good. It means the system knows when it doesn't have a match.
-- **Cold Fusion Glitch:** The system matched "Cold Fusion" (physics) to "ColdFusion" (the coding language). Another great reason for the Reranker.
+---
 
-## Final Verdict
-Index quality is **HIGH**. 
-The retrieval is doing exactly what a Bi-encoder should do: surface a set of candidates that are topically relevant. The "mistakes" (ColdFusion dev, Finance Manager vs CFO) are exactly why we are adding the Reranking step.
+## 3. Key Insights & "The Reranker Justification"
+The sanity tests proved that the Bi-encoder (`all-MiniLM-L6-v2`) is an excellent **coarse filter** but a poor **fine-grained ranker**.
+
+### The "Semantic Blur" Problem
+The "CFO vs Finance Manager" and "Cold Fusion" errors are classic Bi-encoder failures. The model maps "CFO" and "Finance Manager" to a similar region in vector space because they share the "Finance" and "Management" concepts. However, in the real world, these are very different roles.
+
+**Conclusion:** We cannot rely on FAISS alone for the Top 10. 
+**The Solution:**
+1. **FAISS (Coarse):** Retrieve the Top 20 candidates (High Recall).
+2. **LLM Reranker (Fine):** Use Gemma 4 31B to read the full text of those 20 jobs and re-rank them based on exact requirements (High Precision).
+
+## 4. Final Assets
+- **`faiss.index` (282MB):** The compressed vector space.
+- **`docstore.json` (562MB):** The mapping of vector IDs to full job metadata.
+- **Total Size:** ~844MB.
+- **Status:** Verified, Healthy, and Shared via Google Drive.
