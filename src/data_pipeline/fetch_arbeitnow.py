@@ -18,7 +18,10 @@ import time
 
 import requests
 
-from schemas import JobDocument
+try:
+    from src.data_pipeline.schemas import JobDocument
+except ImportError:
+    from schemas import JobDocument
 
 # ── Config ─────────────────────────────────────────────────────────────
 API_URL = "https://www.arbeitnow.com/api/job-board-api"

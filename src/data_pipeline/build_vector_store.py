@@ -25,7 +25,10 @@ from typing import Optional, cast
 import faiss
 import numpy as np
 import pandas as pd
-from schemas import JobDocument
+try:
+    from src.data_pipeline.schemas import JobDocument
+except ImportError:
+    from schemas import JobDocument
 from sentence_transformers import SentenceTransformer
 
 # ── Config ─────────────────────────────────────────────────────────────
