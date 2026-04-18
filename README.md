@@ -34,8 +34,8 @@ project/
 │   ├── workflow/            # Core pipeline components
 │   │   ├── models.py        # Shared data schemas (JobRecord, CVProfile, etc.)
 │   │   ├── mocks.py         # Stable test data for development
-│   │   ├── cv_loader.py     # CV text extraction (PDF/txt)
-│   │   ├── cv_parser.py     # CV text → structured profile (LLM)
+│   │   ├── cv_reader.py     # CV text extraction (PDF/txt) using PyMuPDF
+│   │   ├── cv_profiler.py   # CV text → structured profile (LLM)
 │   │   ├── job_search.py    # Semantic retrieval (FAISS) → top 20 jobs
 │   │   ├── reranker.py      # LLM reranking → top 10 jobs
 │   │   └── reasoning.py     # Match explanations + skill gap analysis (LLM)
@@ -44,7 +44,7 @@ project/
 │   │   ├── run_evaluation.py
 │   │   └── error_analysis.py
 │   ├── prompts/             # LLM prompt templates
-│   │   ├── cv_parser.md
+│   │   ├── cv_profiler.md
 │   │   ├── reranker.md
 │   │   └── reasoning.md
 │   └── main.py              # End-to-end pipeline
@@ -189,7 +189,7 @@ data/
 ├── vector_store/        ← shared via Google Drive (~844MB, gitignored)
 │   ├── faiss.index
 │   └── docstore.json
-└── personas/            ← test CV files (PDF or txt)
+└── resumes/             ← test CV files (PDF or txt)
 ```
 
 ---
