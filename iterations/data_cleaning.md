@@ -69,6 +69,20 @@ The full cleaned dataset is ~500MB, which is too large for GitHub.
 ---
 
 ## 5. Final State
-- **Unified Dataset:** 124,806 total jobs.
+- **Unified Dataset:** 124,806 total jobs (Kaggle-only used in pipeline runs per professor feedback).
 - **Shared Schema:** All jobs now follow the `JobDocument` Pydantic model.
 - **Ready for Indexing:** Data is cleaned, HTML-free, and augmented with skill/industry labels.
+
+---
+
+## 6. Dataset Constraint: Partial Employment Preferences
+
+**Professor feedback:** "Including criteria like part-time or partial employment preferences would also be an interesting dimension to consider."
+
+**What we wanted to implement:** A fine-grained `employment_percentage` field (e.g., "20 hours/week", "3 days/week") in `JobSearchPreferences` to allow users to express partial work preferences precisely.
+
+**Why we couldn't:** The Kaggle dataset's `formatted_work_type` field only contains broad categories (`Full-time`, `Part-time`, `Contract`, `Temporary`, `Internship`). There is no hours-per-week or days-per-week field on any job posting. Adding a preference the corpus cannot match against produces a dead filter — it would never exclude or prioritize any result.
+
+**What we did instead:** Added `employment_type: "full-time" | "part-time" | "contract" | "any"` to `JobSearchPreferences`, which maps directly to the available `formatted_work_type` values in the dataset.
+
+**For the report:** This is a documented limitation of the dataset, not the system. A richer job corpus (e.g., one that includes weekly hours) would enable finer-grained employment matching. Mention in the Known Limitations section.

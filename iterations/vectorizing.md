@@ -30,7 +30,7 @@ This ensures that the embedding for every chunk is "anchored" to the role and co
 ---
 
 ## 2. Validation: Layer 1 Sanity Tests
-We ran `test_retrieval.py` to verify the index before building the LLM pipeline. This isolated the embedding model's performance from the CV parser's performance.
+We ran `tests/data_pipeline/test_retrieval.py` to verify the index before building the LLM pipeline. This isolated the embedding model's performance from the CV parser's performance.
 
 ### Results Summary
 
