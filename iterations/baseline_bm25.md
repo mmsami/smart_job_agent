@@ -359,3 +359,127 @@ Replaced single smoke test with 4 cases + assertions (`tests/workflow/test_bm25.
 **8/8 assertions passing.**
 
 Notable output from smoke test: `Ruby Developer` ranked #1 for a Python/Django CV — BM25 picks up token overlap ("Ruby on Rails" shares tokens with "Rails" in Django ecosystem descriptions). This is an intentional BM25 weakness, documented for the report's discussion section as a case where semantic embeddings outperform lexical matching.
+
+---
+
+## 12. Iteration 8 — Tokenization, Query Weighting, and Code Quality (2026-04-19)
+
+Three improvements applied after systematic code review.
+
+---
+
+### Change 1: Regex Tokenizer (replaces split + strip)
+
+**Problem:** `.split()` tokenization left punctuation attached to tokens:
+- `"Python,"` indexed as `"python,"` — never matches query token `"python"`
+- `"full-time"` indexed as `"full-time"` — doesn't match `"full time"` in queries
+- Missing matches silently hurt recall for any term appearing mid-sentence or in a list
+
+**Fix:** Replaced split+strip with regex substitution:
+
+```python
+# Before:
+tokens = str(text).lower().split()
+stripped = [t.strip(".,!?;:\"'()[]{}") for t in tokens]
+
+# After:
+normalized = re.sub(r"[^\w\s+#]", " ", str(text).lower())
+tokens = normalized.split()
+```
+
+**Coverage:**
+- `"Python,"` → `"python"` ✅
+- `"Java."` → `"java"` ✅
+- `"full-time"` → `["full", "time"]` ✅ (hyphen treated as separator — cross-format matching)
+- `"C++"` → `"c++"` ✅ (+ preserved in char set)
+- `"C#"` → `"c#"` ✅ (# preserved in char set)
+- `"node.js"` → `["node", "js"]` (acceptable tradeoff — dot treated as separator)
+
+Applies to **both** corpus indexing and query construction since both use `_tokenize_with_stopwords`.
+
+---
+
+### Change 2: Query Signal Weighting
+
+**Problem:** All CV fields contributed equally to the BM25 query. Skills (primary signal) had identical weight to industries or education level (weak signals).
+
+**Fix:** Term repetition to increase BM25 term frequency weight:
+
+```python
+# Skills — primary signal (×3)
+for skill in cv_profile.skills:
+    query_tokens.extend(_tokenize_with_stopwords(skill) * 3)
+
+# Past job titles — role matching signal (×2)
+for title in cv_profile.job_titles_held:
+    query_tokens.extend(_tokenize_with_stopwords(title) * 2)
+```
+
+**Rationale:** BM25 uses term frequency (TF) internally. Repeating a token 3× is equivalent to stating it appears 3× in the query — raises the relevance signal for skill-matching jobs without changing the indexing or BM25 hyperparameters.
+
+---
+
+### Change 3: Empty Query Guard
+
+**Fix:**
+```python
+if not query_tokens:
+    raise ValueError("BM25 query is empty — CV profile and preferences have no usable tokens")
+```
+
+Prevents `bm25.get_scores([])` from returning a meaningless score distribution. In practice unreachable on a valid `CVProfile`, but correct to guard.
+
+---
+
+### Code Quality Fixes (linter errors)
+
+| Issue | Fix |
+|-------|-----|
+| `pd.notna()` on pandas Series returned ambiguous type for linter | Replaced `iterrows()` with `df.where(pd.notna(df), other=None)` + `to_dict("records")` — gives plain Python dicts, all NaN already replaced with `None` |
+| Function attribute assignment (`search_bm25._retriever`) flagged by type checker | Replaced with module-level `_retriever_instance: Optional[BM25Retriever] = None` + `global` in function body |
+
+No behavior change from either fix — identical runtime semantics, clean types.
+
+---
+
+### Updated Precision Progression
+
+| Iteration | Change | Score range | Seniority quality | Notes |
+|-----------|--------|-------------|-------------------|-------|
+| 1 | Skills only | 21–28 | 13/20 | Query too thin |
+| 2 | + Certs + titles + industries | 62–75 | 16/20 | Better differentiation |
+| 3 | CVProfile + JobSearchPreferences split | 67–83 | 17/20 | Clean architecture |
+| 4 | + Domain keywords + tools + field of study | 101–137 | 15/20 | Entry-level regression |
+| 5 | + Seniority filter + deduplication | 100–137 | 20/20 ✅ | BM25 baseline complete |
+| 6 | Kaggle-only + remove location tokens | 77–98 | 18–20/20 | Single-source confirmed |
+| 7 | + Stopword removal + k1/b tuning | 62–72 | 20/20 ✅ | Final baseline — matches Plan_v4 specs |
+| **8** | **+ Regex tokenizer + skills ×3 + titles ×2** | TBD (next run) | Expected ≥20/20 | Stronger baseline — better recall + ranking |
+
+---
+
+## 13. Code Review Cleanup (2026-04-19)
+
+Defensive fixes applied after code review. No retrieval logic changed — rankings unaffected.
+
+| Area | Issue | Fix |
+|------|-------|-----|
+| `str(None)` for Kaggle job_id | After NaN→None conversion, null job_ids became string `"None"` — multiple jobs falsely shared the same dedup key | Added `raw_id = row.get("job_id"); job_id = str(raw_id) if raw_id is not None else f"kaggle_{idx}"` |
+| Salary empty string | `float("")` raises `ValueError` on CSV rows with literal empty string (not NaN) — `pd.notna("")` returns True so guard didn't catch it | Changed guard to `not in (None, "")` |
+| Dedup single set mixing key types | `seen_ids` mixed job_id strings and `title\|company` strings in one set — theoretical collision, confusing intent | Split into `seen_job_ids` and `seen_title_company` — separate concerns, cleaner |
+| `print()` statements | Progress output bypassed logging config | Replaced all `print()` with `logger.info()` via module-level `logger = logging.getLogger(__name__)` |
+| Arbeitnow job_id None | Missing job_ids → multiple jobs sharing `None` key, all but first silently dropped | Added hash-based fallback: `f"arbeitnow_{hash(title + company)}"` — note: Arbeitnow excluded from evaluation (`source="kaggle"` at all call sites per Plan v4) |
+
+---
+
+## 14. Code Review Cleanup Round 2 (2026-04-19)
+
+Four defensive fixes. No retrieval logic changed.
+
+| Area | Issue | Fix |
+|------|-------|-----|
+| `experience_level.lower()` crash | `CVProfile.experience_level` is `Optional[str]` — `None.lower()` raises `AttributeError` if LLM fails to extract level | `(cv_profile.experience_level or "").lower()` — empty string skips all seniority filter branches safely |
+| Duplicate `"was"` in STOPWORDS | `"was"` appeared twice in the set literal — harmless at runtime (sets deduplicate) but incorrect and misleading | Removed the second occurrence |
+| Arbeitnow `job_id` type | `raw_id` could be int from JSON — stored as int but dedup key compared against strings, causing silent dedup misses | Added `str(raw_id)` cast (consistent with Kaggle path) |
+| `work_type` None → `"none"` token | `preferences.work_type` is `Optional[str]` — `_tokenize_with_stopwords(None)` calls `str(None)` → adds token `"none"` to query, biasing scores | Added `if preferences.work_type:` guard before extending query tokens |
+
+Note: Arbeitnow `title`/`company` also hardened to `str(raw.get("title") or "")` to prevent None propagating into dedup key or BM25 corpus.

@@ -10,11 +10,15 @@ Usage:
 """
 
 import json
+import logging
 import os
+import re
 from typing import Optional
 
 import pandas as pd
 from rank_bm25 import BM25Okapi
+
+logger = logging.getLogger(__name__)
 
 try:
     from src.workflow.models import JobRecord, CVProfile, JobSearchPreferences
@@ -34,15 +38,22 @@ STOPWORDS = {
     "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into",
     "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then",
     "there", "these", "they", "this", "to", "was", "will", "with", "you", "your", "can",
-    "could", "has", "have", "him", "his", "how", "may", "must", "she", "should", "was",
+    "could", "has", "have", "him", "his", "how", "may", "must", "she", "should",
     "what", "when", "where", "which", "who", "why"
 }
 
 
 def _tokenize_with_stopwords(text: str) -> list[str]:
-    """Tokenize text and remove stopwords."""
-    tokens = str(text).lower().split()
-    return [t for t in tokens if t not in STOPWORDS]
+    """Tokenize text and remove stopwords.
+
+    Uses regex substitution to handle:
+    - Punctuation attached to words: 'Python,' → 'python', 'Java.' → 'java'
+    - Hyphenated terms: 'full-time' → ['full', 'time'] (improves cross-format matching)
+    - Tech tokens: 'C++' and 'C#' preserved (+ and # kept in char set)
+    - 'node.js' → ['node', 'js'] (dot treated as separator — acceptable tradeoff)
+    """
+    normalized = re.sub(r"[^\w\s+#]", " ", str(text).lower())
+    return [t for t in normalized.split() if t and t not in STOPWORDS]
 
 
 class BM25Retriever:
@@ -69,38 +80,47 @@ class BM25Retriever:
 
     def _load_and_index(self):
         """Load Kaggle + Arbeitnow data, tokenize, and build BM25 index."""
-        print("Loading data for BM25 indexing...")
+        logger.info("Loading data for BM25 indexing...")
 
         # Load Kaggle (full dataset preferred; fall back to sample if not downloaded)
         csv_path = KAGGLE_CSV if os.path.exists(KAGGLE_CSV) else KAGGLE_CSV_SAMPLE
         if os.path.exists(csv_path):
             df_kaggle = pd.read_csv(csv_path)
-            for _, row in df_kaggle.iterrows():
+            # Replace NaN with None before converting to dicts — avoids pandas type
+            # ambiguity in pd.notna() checks and gives plain Python dicts.
+            df_kaggle = df_kaggle.where(pd.notna(df_kaggle), other=None)
+            for idx, row in enumerate(df_kaggle.to_dict("records")):
+                raw_id = row.get("job_id")
+                job_id = str(raw_id) if raw_id is not None else f"kaggle_{idx}"
+                min_sal = row.get("min_salary")
+                max_sal = row.get("max_salary")
                 self.jobs.append({
-                    "job_id": str(row["job_id"]),
-                    "title": str(row["title"]),
-                    "company": str(row["company_name"]),
-                    "description": str(row["description"]),
-                    "location": row.get("location") if pd.notna(row.get("location")) else None,
-                    "experience_level": row.get("formatted_experience_level") if pd.notna(row.get("formatted_experience_level")) else None,
-                    "work_type": row.get("formatted_work_type") if pd.notna(row.get("formatted_work_type")) else None,
-                    "min_salary": float(row["min_salary"]) if pd.notna(row.get("min_salary")) else None,
-                    "max_salary": float(row["max_salary"]) if pd.notna(row.get("max_salary")) else None,
-                    "url": row.get("application_url") if pd.notna(row.get("application_url")) else None,
-                    "skill_labels": row.get("skill_labels") if pd.notna(row.get("skill_labels")) else None,
+                    "job_id": job_id,
+                    "title": str(row["title"]) if row.get("title") is not None else "",
+                    "company": str(row["company_name"]) if row.get("company_name") is not None else "",
+                    "description": str(row["description"]) if row.get("description") is not None else "",
+                    "location": row.get("location"),
+                    "experience_level": row.get("formatted_experience_level"),
+                    "work_type": row.get("formatted_work_type"),
+                    "min_salary": float(min_sal) if min_sal not in (None, "") else None,
+                    "max_salary": float(max_sal) if max_sal not in (None, "") else None,
+                    "url": row.get("application_url"),
+                    "skill_labels": row.get("skill_labels"),
                     "source": "kaggle",
                 })
-            print(f"  Loaded {len([j for j in self.jobs if j['source'] == 'kaggle']):,} Kaggle jobs")
+            logger.info(f"  Loaded {len([j for j in self.jobs if j['source'] == 'kaggle']):,} Kaggle jobs")
 
         # Load Arbeitnow
         if os.path.exists(ARBEITNOW_JSON):
             with open(ARBEITNOW_JSON, encoding="utf-8") as f:
                 raw_list = json.load(f)
             for raw in raw_list:
+                raw_id = raw.get("job_id")
+                job_id = str(raw_id) if raw_id is not None else f"arbeitnow_{hash(str(raw.get('title', '')) + str(raw.get('company', '')))}"
                 self.jobs.append({
-                    "job_id": raw.get("job_id"),
-                    "title": raw.get("title"),
-                    "company": raw.get("company"),
+                    "job_id": job_id,
+                    "title": str(raw.get("title") or ""),
+                    "company": str(raw.get("company") or ""),
                     "description": raw.get("description"),
                     "location": raw.get("location"),
                     "experience_level": raw.get("experience_level"),
@@ -111,12 +131,12 @@ class BM25Retriever:
                     "skill_labels": raw.get("skill_labels"),
                     "source": raw.get("source", "arbeitnow"),
                 })
-            print(f"  Loaded {len([j for j in self.jobs if j['source'] == 'arbeitnow']):,} Arbeitnow jobs")
+            logger.info(f"  Loaded {len([j for j in self.jobs if j['source'] == 'arbeitnow']):,} Arbeitnow jobs")
 
-        print(f"Total jobs: {len(self.jobs):,}")
+        logger.info(f"Total jobs: {len(self.jobs):,}")
 
         # Build BM25 index on title + description
-        print("Building BM25 index on title + description...")
+        logger.info("Building BM25 index on title + description...")
         for job in self.jobs:
             # Tokenize with stopword removal: title (weighted more) + description
             title_tokens = _tokenize_with_stopwords(job["title"])
@@ -128,7 +148,7 @@ class BM25Retriever:
 
         # Initialize BM25 with tuned hyperparameters
         self.bm25 = BM25Okapi(self.corpus, k1=self.k1, b=self.b)
-        print(f"BM25 index built: {len(self.corpus)} documents (k1={self.k1}, b={self.b})")
+        logger.info(f"BM25 index built: {len(self.corpus)} documents (k1={self.k1}, b={self.b})")
 
     def search(self, cv_profile: CVProfile, preferences: JobSearchPreferences, k: int = 20, source: Optional[str] = None) -> list[JobRecord]:
         """
@@ -149,17 +169,17 @@ class BM25Retriever:
         # ── CV Profile signals (who you are) ───────────────────────────
         query_tokens = []
 
-        # Skills — primary signal
+        # Skills — primary signal (×3 repetition increases BM25 term frequency weight)
         for skill in cv_profile.skills:
-            query_tokens.extend(_tokenize_with_stopwords(skill))
+            query_tokens.extend(_tokenize_with_stopwords(skill) * 3)
 
         # Certifications — strong signal (jobs explicitly require CPA, PMP, etc.)
         for cert in cv_profile.certifications:
             query_tokens.extend(_tokenize_with_stopwords(cert))
 
-        # Past job titles — role matching signal
+        # Past job titles — role matching signal (×2 for emphasis)
         for title in cv_profile.job_titles_held:
-            query_tokens.extend(_tokenize_with_stopwords(title))
+            query_tokens.extend(_tokenize_with_stopwords(title) * 2)
 
         # Industries — domain experience signal
         for industry in cv_profile.industries:
@@ -197,7 +217,8 @@ class BM25Retriever:
 
         # ── JobSearchPreferences signals (what you want) ───────────────
         # Work type preference (full-time, remote, etc.)
-        query_tokens.extend(_tokenize_with_stopwords(preferences.work_type))
+        if preferences.work_type:
+            query_tokens.extend(_tokenize_with_stopwords(preferences.work_type))
 
         # Target roles — specific roles user is aiming for
         for role in preferences.target_roles:
@@ -213,6 +234,9 @@ class BM25Retriever:
             if remote_lower not in STOPWORDS:
                 query_tokens.append(remote_lower)
 
+        if not query_tokens:
+            raise ValueError("BM25 query is empty — CV profile and preferences have no usable tokens")
+
         # Get BM25 scores
         scores = self.bm25.get_scores(query_tokens)
 
@@ -220,7 +244,8 @@ class BM25Retriever:
         top_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:k * 3]
 
         # Build results with deduplication + seniority filter
-        seen_ids = set()
+        seen_job_ids: set = set()
+        seen_title_company: set = set()
         results = []
 
         for idx in top_indices:
@@ -237,10 +262,10 @@ class BM25Retriever:
             # Primary: job_id. Secondary: title+company (catches same posting with diff IDs)
             dedup_key = job["job_id"]
             title_company_key = f"{str(job['title']).lower()}|{str(job['company']).lower()}"
-            if dedup_key in seen_ids or title_company_key in seen_ids:
+            if dedup_key in seen_job_ids or title_company_key in seen_title_company:
                 continue
-            seen_ids.add(dedup_key)
-            seen_ids.add(title_company_key)
+            seen_job_ids.add(dedup_key)
+            seen_title_company.add(title_company_key)
 
             # ── Seniority hard filter ───────────────────────────────────
             if not self._passes_seniority_filter(job, cv_profile):
@@ -276,7 +301,7 @@ class BM25Retriever:
         """Hard seniority filter — skips clearly mismatched experience levels."""
         exp_level = (job.get("experience_level") or "").lower()
         title = (job.get("title") or "").lower()
-        cv_level = cv_profile.experience_level.lower()
+        cv_level = (cv_profile.experience_level or "").lower()
 
         if cv_level == "senior":
             # Exclude entry/internship by metadata
@@ -298,12 +323,16 @@ class BM25Retriever:
 
 
 # ── Standalone function for easy testing ───────────────────────────────
+_retriever_instance: Optional[BM25Retriever] = None
+
+
 def search_bm25(cv_profile: CVProfile, preferences: JobSearchPreferences, k: int = 20, source: Optional[str] = None) -> list[JobRecord]:
     """Singleton wrapper — creates retriever on first call, reuses on subsequent calls.
 
     Args:
         source: Filter by dataset source (None=both, "kaggle"=Kaggle-only, "arbeitnow"=Arbeitnow-only)
     """
-    if not hasattr(search_bm25, "_retriever"):
-        search_bm25._retriever = BM25Retriever()
-    return search_bm25._retriever.search(cv_profile, preferences, k=k, source=source)
+    global _retriever_instance
+    if _retriever_instance is None:
+        _retriever_instance = BM25Retriever()
+    return _retriever_instance.search(cv_profile, preferences, k=k, source=source)

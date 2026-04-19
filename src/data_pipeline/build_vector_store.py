@@ -18,18 +18,22 @@ Prerequisites:
 """
 
 import json
+import logging
 import os
 import time
-from typing import Optional, cast
+from typing import Optional
 
 import faiss
 import numpy as np
 import pandas as pd
+from sentence_transformers import SentenceTransformer
+
 try:
     from src.data_pipeline.schemas import JobDocument
 except ImportError:
     from schemas import JobDocument
-from sentence_transformers import SentenceTransformer
+
+logger = logging.getLogger(__name__)
 
 # ── Config ─────────────────────────────────────────────────────────────
 EMBED_MODEL = "all-MiniLM-L6-v2"
@@ -49,7 +53,7 @@ DOCSTORE_PATH = os.path.join(VECTOR_DIR, "docstore.json")
 
 
 def get_str(value: object) -> Optional[str]:
-    return cast(str, value) if value is not None and bool(pd.notna(value)) else None
+    return str(value) if value is not None and bool(pd.notna(value)) else None
 
 
 def get_float(value: object) -> Optional[float]:
@@ -126,7 +130,8 @@ def load_kaggle(path: str) -> list[JobDocument]:
                 source="kaggle",
             )
             docs.append(doc)
-        except Exception:
+        except Exception as e:
+            logger.warning(f"Skipped Kaggle row (job_id={row.get('job_id')}): {e}")
             skipped += 1
 
     print(f"  Loaded {len(docs):,} Kaggle docs ({skipped:,} skipped)")
@@ -143,7 +148,8 @@ def load_arbeitnow(path: str) -> list[JobDocument]:
     for raw in raw_list:
         try:
             docs.append(JobDocument(**raw))
-        except Exception:
+        except Exception as e:
+            logger.warning(f"Skipped Arbeitnow entry (job_id={raw.get('job_id')}): {e}")
             skipped += 1
 
     print(f"  Loaded {len(docs):,} Arbeitnow docs ({skipped:,} skipped)")
@@ -211,6 +217,9 @@ def main():
     # Embed
     print(f"\nLoading embedding model ({EMBED_MODEL})...")
     model = SentenceTransformer(EMBED_MODEL)
+    if not page_contents:
+        raise ValueError("No documents to index — check that data files exist and loaded correctly")
+
     print("Embedding chunks...")
     t0 = time.time()
     vectors = embed_in_batches(page_contents, model)
