@@ -70,6 +70,7 @@ data/resumes
 
 # ── LangSmith & Caching ─────────────────────────────────────────────────────
 .langsmith/
+.pytest_cache/
 *.cache
 cache/
 
