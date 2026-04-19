@@ -9,9 +9,9 @@ JobRecord represents a single job from the search results,
 with metadata for evaluation and display.
 """
 
-from typing import Optional
+from typing import Optional, Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 
 class JobRecord(BaseModel):
@@ -39,10 +39,10 @@ class CVProfile(BaseModel):
     """
 
     skills: list[str]                        # technical + domain skills
-    experience_level: str                    # "entry" | "mid" | "senior" (derived from years)
+    experience_level: Literal["entry", "mid", "senior"]  # strictly one of these three
     years_experience: Optional[int] = None   # numeric, calculated from career dates
-    current_location: str                    # where CV says person is based
-    education_level: Optional[str] = None   # "bachelor" | "master" | "phd"
+    current_location: Optional[str] = None   # where CV says person is based
+    education_level: Optional[Literal["bachelor", "master", "phd"]] = None
     field_of_study: Optional[str] = None    # "Accounting", "Finance", "Computer Science"
     certifications: list[str] = []           # CPA, PMP, MBA, etc.
     languages: list[str] = []               # Korean, English, Chinese
@@ -50,6 +50,13 @@ class CVProfile(BaseModel):
     industries: list[str] = []              # domains worked in (Renewable Energy, Finance)
     domain_keywords: list[str] = []         # domain-specific terms: GAAP, IFRS, SOX, reconciliation, audit
     tools: list[str] = []                   # specific software tools: NetSuite, Oracle, QuickBooks, Bloomberg
+
+    @field_validator("years_experience")
+    @classmethod
+    def clamp_years(cls, v):
+        if v is not None and v < 0:
+            return 0
+        return v
 
 
 class JobSearchPreferences(BaseModel):

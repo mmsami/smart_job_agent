@@ -25,6 +25,7 @@ except ImportError:
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 KAGGLE_CSV = os.path.join(DATA_DIR, "kaggle_cleaned", "postings_cleaned.csv")
+KAGGLE_CSV_SAMPLE = os.path.join(DATA_DIR, "kaggle_cleaned_sample", "postings_sample.csv")
 ARBEITNOW_JSON = os.path.join(DATA_DIR, "arbeitnow", "arbeitnow_jobs.json")
 
 # ── Preprocessing ──────────────────────────────────────────────────────
@@ -70,9 +71,10 @@ class BM25Retriever:
         """Load Kaggle + Arbeitnow data, tokenize, and build BM25 index."""
         print("Loading data for BM25 indexing...")
 
-        # Load Kaggle
-        if os.path.exists(KAGGLE_CSV):
-            df_kaggle = pd.read_csv(KAGGLE_CSV)
+        # Load Kaggle (full dataset preferred; fall back to sample if not downloaded)
+        csv_path = KAGGLE_CSV if os.path.exists(KAGGLE_CSV) else KAGGLE_CSV_SAMPLE
+        if os.path.exists(csv_path):
+            df_kaggle = pd.read_csv(csv_path)
             for _, row in df_kaggle.iterrows():
                 self.jobs.append({
                     "job_id": str(row["job_id"]),
