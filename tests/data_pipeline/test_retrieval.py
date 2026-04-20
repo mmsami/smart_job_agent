@@ -20,8 +20,8 @@ EMBED_MODEL = "all-MiniLM-L6-v2"
 TOP_K = 5
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-INDEX_PATH = os.path.join(BASE_DIR, "data", "vector_store", "faiss.index")
-DOCSTORE_PATH = os.path.join(BASE_DIR, "data", "vector_store", "docstore.json")
+INDEX_PATH = os.path.join(BASE_DIR, "data", "vector_store", "faiss_minilm.index")
+DOCSTORE_PATH = os.path.join(BASE_DIR, "data", "vector_store", "docstore_minilm.json")
 
 # ── Test Queries ──────────────────────────────────────────────────────
 # We use a mix of general (sanity) and specific (stress) queries.
