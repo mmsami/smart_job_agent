@@ -68,11 +68,16 @@ data/vector_store/
 
 data/resumes
 
+# ── Test Result Logs (local only — see cv_profiler_sample.md for canonical examples) ──
+iterations/cv_profiler_results.md
+iterations/cv_extraction_results.md
+
 # ── LangSmith & Caching ─────────────────────────────────────────────────────
 .langsmith/
 .pytest_cache/
 *.cache
 cache/
+.cache/
 
 # ── OS ──────────────────────────────────────────────────────────────────────
 Thumbs.db

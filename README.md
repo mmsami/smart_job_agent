@@ -14,8 +14,8 @@ pip install -r requirements.txt
 cp .env.example .env
 
 # 3. Download shared data files from Google Drive (link in project docs):
-#    - data/vector_store/faiss.index
-#    - data/vector_store/docstore.json
+#    - data/vector_store/faiss_minilm.index
+#    - data/vector_store/docstore_minilm.json
 #    - data/kaggle_cleaned/postings_cleaned.csv
 ```
 
@@ -29,7 +29,7 @@ project/
 │   ├── data_pipeline/       # One-time data build scripts (Phase 1, already run)
 │   │   ├── parse_kaggle.py
 │   │   ├── fetch_arbeitnow.py
-│   │   ├── build_vector_store.py
+│   │   ├── build_vector_store_minilm.py
 │   │   └── schemas.py
 │   ├── workflow/            # Core pipeline components
 │   │   ├── models.py        # Shared data schemas (JobRecord, CVProfile, etc.)
@@ -82,13 +82,46 @@ Expected: **8/8 tests passed** — loads 124k jobs and runs keyword retrieval (~
 If you see a `FileNotFoundError`, download `postings_cleaned.csv` from Google Drive and place it at `data/kaggle_cleaned/postings_cleaned.csv`.
 
 ### 3. FAISS index sanity check (requires vector store files)
+Not yet implemented — `tests/data_pipeline/test_retrieval.py` will be added as part of Phase 2b (FAISS retriever).
+
+Once the vector store is downloaded and `job_search.py` is built, run queries against the index to verify correct domain retrieval before running end-to-end evaluation.
+
+### 4. CV Pipeline Testing (cv_reader + cv_profiler)
 ```bash
 cd project
-python tests/data_pipeline/test_retrieval.py
+python -m tests.workflow.test_cv_profiler                    # scan all PDFs in data/resumes/
+python -m tests.workflow.test_cv_profiler data/resumes/cv.pdf  # test single file
 ```
-Expected: Prints top-5 results per query. **Manual audit** — verify that results are in the correct domain (e.g., Python query → Python jobs, accounting query → finance jobs). No automated assertions by design.
 
-If you see a `FileNotFoundError`, download the vector store from Google Drive and place files at `data/vector_store/`.
+**Supported Formats:** PDF only. DOCX and other formats are not supported — convert to PDF first (e.g., LibreOffice).
+
+**Results Location:**
+- **Raw extracted text:** `iterations/cv_extraction_results.md` (Step 1: PDF → raw text via vision LLM)
+- **Structured profile JSON:** `iterations/cv_profiler_results.md` (Step 2: raw text → CVProfile)
+
+Check both files to compare extraction quality and profiling accuracy. Share these files with teammates for validation.
+
+**Prompts Location:**
+LLM prompts are decoupled from code for easier iteration:
+- Vision extraction prompt: `src/prompts/cv_reader.md`
+- Text profiling system prompt: `src/prompts/cv_profiler.md`
+
+Edit these `.md` files directly to tweak extraction/profiling behavior without touching Python.
+
+**Caching & Cache Clearing:**
+Both `cv_reader` and `cv_profiler` use disk-based caching (content-keyed) to avoid redundant API calls:
+- Same PDF file (even if renamed) → cache hit → zero vision API cost
+- Same extracted text from different PDFs → cache hit → zero Gemma API cost
+
+**After code fixes, clear the cache before re-testing:**
+```bash
+rm -rf .cache/cv_reader .cache/cv_profiler
+python -m tests.workflow.test_cv_profiler data/resumes/cv.pdf  # fresh API calls
+```
+
+Alternatively, bump the version numbers to trigger cache invalidation automatically:
+- `cv_reader.py`: change `PROMPT_VERSION = "v2"` (also invalidates cache if you modify `src/prompts/cv_reader.md`)
+- `cv_profiler.py`: change `LOGIC_VERSION = "v5"` (also invalidates cache if you modify `src/prompts/cv_profiler.md`)
 
 ---
 
@@ -138,21 +171,13 @@ results = retriever.search(cv_profile, preferences, k=20, source="kaggle")
 
 ## Loading the FAISS Index
 
-```python
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+The index is built with raw FAISS (not LangChain). Loading is handled by `src/workflow/job_search.py` (Phase 2b — not yet implemented). Index files:
 
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-vectorstore = FAISS.load_local(
-    "data/vector_store",
-    embeddings,
-    allow_dangerous_deserialization=True
-)
+- `data/vector_store/faiss_minilm.index` — FAISS `IndexFlatIP`, L2-normalized vectors (cosine similarity)
+- `data/vector_store/docstore_minilm.json` — parallel list of `{page_content, metadata}` dicts
 
-results = vectorstore.similarity_search_with_score("python developer aws", k=20)
-```
-
-**Index stats:** 192,514 vectors (124,806 jobs chunked), 384 dimensions, `all-MiniLM-L6-v2` embeddings.
+**Model:** `all-MiniLM-L6-v2`, 384 dimensions, 256-token hard limit.
+**Index stats:** vector count TBD after v2 rebuild (v1 was 192,514 vectors from 124,806 jobs).
 
 ---
 
@@ -186,9 +211,9 @@ data/
 │   └── data_quality_report.txt
 ├── arbeitnow/
 │   └── arbeitnow_jobs.json   ← frozen evaluation snapshot (957 jobs)
-├── vector_store/        ← shared via Google Drive (~844MB, gitignored)
-│   ├── faiss.index
-│   └── docstore.json
+├── vector_store/        ← shared via Google Drive (gitignored)
+│   ├── faiss_minilm.index      ← all-MiniLM-L6-v2 index
+│   └── docstore_minilm.json    ← parallel docstore
 └── resumes/             ← test CV files (PDF or txt)
 ```
 
@@ -196,12 +221,12 @@ data/
 
 ## Data Pipeline (Phase 1 — Already Complete)
 
-The data pipeline was run once to build the shared index. The outputs are frozen and shared via Google Drive for evaluation consistency. **Do not re-run these scripts** — rebuilding would produce different embeddings and break cross-run comparisons.
+The Kaggle parsing and Arbeitnow fetch were run once and their outputs are frozen. The vector store was rebuilt with corrected token handling (v2) and is shared via Google Drive.
 
 | Script | What it does | Output |
 |--------|-------------|--------|
 | `parse_kaggle.py` | Cleans Kaggle CSV, joins skills + industries | `postings_cleaned.csv` |
 | `fetch_arbeitnow.py` | Fetches Arbeitnow API snapshot | `arbeitnow_jobs.json` |
-| `build_vector_store.py` | Embeds all jobs, builds FAISS index | `faiss.index` + `docstore.json` |
+| `build_vector_store_minilm.py` | Embeds all jobs, builds FAISS index | `faiss_minilm.index` + `docstore_minilm.json` |
 
 For full pipeline details and iteration notes, see `iterations/` folder.
