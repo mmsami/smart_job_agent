@@ -52,7 +52,7 @@ _client = wrappers.wrap_gemini(
 )
 MAX_RETRIES = 3
 RETRY_DELAY = 2.0
-DESCRIPTION_CHAR_LIMIT = 2500  # truncate job descriptions before sending to LLM
+DESCRIPTION_CHAR_LIMIT = 5500  # truncate job descriptions before sending to LLM
 
 CACHE_DIR = Path(__file__).parent.parent.parent / ".cache" / "reranker"
 _cache = Cache(str(CACHE_DIR), size_limit=int(1e9))  # 1 GB cap
