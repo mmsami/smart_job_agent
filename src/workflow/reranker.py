@@ -103,6 +103,8 @@ def _input_hash(
 
 
 def _truncate_description(desc: str) -> str:
+    if not desc:  # Handles None or empty string
+        return ""
     if len(desc) <= DESCRIPTION_CHAR_LIMIT:
         return desc
     return desc[:DESCRIPTION_CHAR_LIMIT] + "... [truncated]"
@@ -237,7 +239,7 @@ def rerank_jobs(
 
     if use_cache and cache_key in _cache:
         logger.info("Cache hit — returning cached reranked results")
-        return [JobRecord.model_validate(r) for r in _cache.get(cache_key) or []]
+        return [JobRecord.model_validate(r) for r in _cache[cache_key] or []]
 
     logger.info(f"Reranking {len(jobs)} jobs (single batch call)...")
 
