@@ -15,8 +15,18 @@ import os
 import re
 from typing import Optional
 
+import math
+
 import pandas as pd
 from rank_bm25 import BM25Okapi
+
+
+def _nan_to_none(v):
+    """Convert pandas NaN (float) to None for Optional JobRecord fields."""
+    try:
+        return None if isinstance(v, float) and math.isnan(v) else v
+    except (TypeError, ValueError):
+        return v
 
 logger = logging.getLogger(__name__)
 
@@ -277,13 +287,13 @@ class BM25Retriever:
                     title=job["title"],
                     company=job["company"],
                     description=job["description"],
-                    location=job.get("location"),
-                    experience_level=job.get("experience_level"),
-                    work_type=job.get("work_type"),
-                    min_salary=job.get("min_salary"),
-                    max_salary=job.get("max_salary"),
-                    url=job.get("url"),
-                    skill_labels=job.get("skill_labels"),
+                    location=_nan_to_none(job.get("location")),
+                    experience_level=_nan_to_none(job.get("experience_level")),
+                    work_type=_nan_to_none(job.get("work_type")),
+                    min_salary=_nan_to_none(job.get("min_salary")),
+                    max_salary=_nan_to_none(job.get("max_salary")),
+                    url=_nan_to_none(job.get("url")),
+                    skill_labels=_nan_to_none(job.get("skill_labels")),
                     source=job["source"],
                     score=float(scores[idx]),
                 )
@@ -299,8 +309,8 @@ class BM25Retriever:
 
     def _passes_seniority_filter(self, job: dict, cv_profile: CVProfile) -> bool:
         """Hard seniority filter — skips clearly mismatched experience levels."""
-        exp_level = (job.get("experience_level") or "").lower()
-        title = (job.get("title") or "").lower()
+        exp_level = (_nan_to_none(job.get("experience_level")) or "").lower()
+        title = (_nan_to_none(job.get("title")) or "").lower()
         cv_level = (cv_profile.experience_level or "").lower()
 
         if cv_level == "senior":

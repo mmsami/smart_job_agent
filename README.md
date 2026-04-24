@@ -93,7 +93,29 @@ Expected: **16/16 passed** — loads 471k vectors and runs semantic search (~21s
 
 If you see a `FileNotFoundError`, download the vector store files from Google Drive and place them at `data/vector_store/`.
 
-### 4. CV Pipeline Testing (cv_reader + cv_profiler)
+### 4. Reranker (contract tests — no external files needed)
+```bash
+cd project
+python -m pytest tests/workflow/test_reranker.py -v
+```
+Expected: **30/30 passed** — all mocked, instant.
+
+### 5. Reranker integration test (requires `GOOGLE_API_KEY` in `.env`)
+```bash
+cd project
+pytest -m integration tests/workflow/test_reranker_integration.py -v
+```
+Expected: **10/10 passed** — runs real Gemma 4 LLM on mock personas and checks behavioral invariants (domain cap, seniority ordering, top job selection). **First run makes a real API call (~3,800 tokens). All subsequent runs are instant from cache.**
+
+Invariants checked:
+- Finance/HR jobs score ≤ 20 for a tech candidate (domain cap enforced)
+- Best tech job (Stripe Python/AWS) appears in top 3
+- Mid-level AWS job outscores junior frontend job (seniority logic)
+- All scores in [0, 100], no duplicates, no unknown job_ids
+
+If 10/10 pass → reranker is working correctly on real data. Proceed to manual labeling.
+
+### 6. CV Pipeline Testing (cv_reader + cv_profiler)
 ```bash
 cd project
 python -m tests.workflow.test_cv_profiler                    # scan all PDFs in data/resumes/
