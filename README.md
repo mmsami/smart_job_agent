@@ -26,7 +26,7 @@ cp .env.example .env
 ```
 project/
 ├── src/
-│   ├── data_pipeline/       # One-time data build scripts (Phase 1, already run)
+│   ├── data_pipeline/       # One-time data build scripts, not part of runtime pipeline
 │   │   ├── parse_kaggle.py
 │   │   ├── fetch_arbeitnow.py
 │   │   ├── build_vector_store_minilm.py
@@ -34,11 +34,11 @@ project/
 │   ├── workflow/            # Core pipeline components
 │   │   ├── models.py        # Shared data schemas (JobRecord, CVProfile, etc.)
 │   │   ├── mocks.py         # Stable test data for development
-│   │   ├── cv_reader.py     # CV text extraction (PDF/txt) using PyMuPDF
-│   │   ├── cv_profiler.py   # CV text → structured profile (LLM)
-│   │   ├── job_search.py    # Semantic retrieval (FAISS) → top 20 jobs
-│   │   ├── reranker.py      # LLM reranking → top 10 jobs
-│   │   └── reasoning.py     # Match explanations + skill gap analysis (LLM)
+│   │   ├── cv_reader.py     # PDF to raw text via vision LLM
+│   │   ├── cv_profiler.py   # Raw text to structured CVProfile
+│   │   ├── job_search.py    # Semantic retrieval via FAISS, returns top 20
+│   │   ├── reranker.py      # LLM reranking, returns top 10
+│   │   └── reasoning.py     # Match explanations and skill gap analysis
 │   ├── evaluation/
 │   │   ├── baseline_bm25.py # BM25 keyword baseline
 │   │   ├── run_evaluation.py
@@ -53,7 +53,10 @@ project/
 │   │   └── test_retrieval.py
 │   └── workflow/
 │       ├── test_mocks.py
-│       └── test_bm25.py
+│       ├── test_bm25.py
+│       ├── test_cv_reader.py
+│       ├── test_cv_profiler.py
+│       └── test_job_search.py
 ├── data/                    # See data structure section below
 ├── iterations/              # Development notes and iteration logs
 └── requirements.txt
@@ -81,10 +84,14 @@ Expected: **8/8 tests passed** — loads 124k jobs and runs keyword retrieval (~
 
 If you see a `FileNotFoundError`, download `postings_cleaned.csv` from Google Drive and place it at `data/kaggle_cleaned/postings_cleaned.csv`.
 
-### 3. FAISS index sanity check (requires vector store files)
-Not yet implemented — `tests/data_pipeline/test_retrieval.py` will be added as part of Phase 2b (FAISS retriever).
+### 3. FAISS retrieval (requires vector store files)
+```bash
+cd project
+python -m pytest tests/workflow/test_job_search.py -v
+```
+Expected: **16/16 passed** — loads 471k vectors and runs semantic search (~21s).
 
-Once the vector store is downloaded and `job_search.py` is built, run queries against the index to verify correct domain retrieval before running end-to-end evaluation.
+If you see a `FileNotFoundError`, download the vector store files from Google Drive and place them at `data/vector_store/`.
 
 ### 4. CV Pipeline Testing (cv_reader + cv_profiler)
 ```bash
@@ -171,13 +178,15 @@ results = retriever.search(cv_profile, preferences, k=20, source="kaggle")
 
 ## Loading the FAISS Index
 
-The index is built with raw FAISS (not LangChain). Loading is handled by `src/workflow/job_search.py` (Phase 2b — not yet implemented). Index files:
+The index is built with raw FAISS (not LangChain). Handled by `src/workflow/job_search.py`.
 
 - `data/vector_store/faiss_minilm.index` — FAISS `IndexFlatIP`, L2-normalized vectors (cosine similarity)
 - `data/vector_store/docstore_minilm.json` — parallel list of `{page_content, metadata}` dicts
 
 **Model:** `all-MiniLM-L6-v2`, 384 dimensions, 256-token hard limit.
-**Index stats:** vector count TBD after v2 rebuild (v1 was 192,514 vectors from 124,806 jobs).
+**Index stats:** 471,671 vectors from 124,806 jobs (v2 build, paragraph-based chunking).
+
+**Important:** The docstore index order matches the FAISS index exactly — `job_texts[i]` and `job_metadata[i]` correspond to vector `i`. Verified by `assert len(job_texts) == index.ntotal` at load time.
 
 ---
 
