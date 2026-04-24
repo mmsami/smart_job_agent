@@ -29,7 +29,7 @@ from google.genai import types
 from langsmith import wrappers
 from pydantic import BaseModel
 
-from src.workflow.models import CVProfile, JobSearchPreferences, JobRecord
+from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences
 
 load_dotenv(Path(__file__).parent.parent.parent / ".env")
 
@@ -88,15 +88,14 @@ def _load_system_prompt() -> str:
     return f"{_INJECTION_GUARD}\n\n{base}"
 
 
-def _input_hash(cv: CVProfile, prefs: JobSearchPreferences, jobs: list[JobRecord]) -> str:
+def _input_hash(
+    cv: CVProfile, prefs: JobSearchPreferences, jobs: list[JobRecord]
+) -> str:
     payload = json.dumps(
         {
             "cv": cv.model_dump(),
             "prefs": prefs.model_dump(),
-            "jobs": [
-                {"job_id": j.job_id, "score": j.score}
-                for j in jobs
-            ],
+            "jobs": [{"job_id": j.job_id, "score": j.score} for j in jobs],
         },
         sort_keys=True,
     )
@@ -119,18 +118,20 @@ def _build_user_message(
 
     jobs_list = []
     for i, job in enumerate(jobs, 1):
-        jobs_list.append({
-            "index": i,
-            "job_id": job.job_id,
-            "title": job.title,
-            "company": job.company,
-            "location": job.location,
-            "experience_level": job.experience_level,
-            "work_type": job.work_type,
-            "skill_labels": job.skill_labels,
-            "description": _truncate_description(job.description),
-            "search_score": job.score,
-        })
+        jobs_list.append(
+            {
+                "index": i,
+                "job_id": job.job_id,
+                "title": job.title,
+                "company": job.company,
+                "location": job.location,
+                "experience_level": job.experience_level,
+                "work_type": job.work_type,
+                "skill_labels": job.skill_labels,
+                "description": _truncate_description(job.description),
+                "search_score": job.score,
+            }
+        )
 
     jobs_block = json.dumps(jobs_list, indent=2)
 
@@ -156,7 +157,9 @@ def _call_llm(user_message: str, system_prompt: str, attempt: int) -> dict:
     return json.loads((response.text or "").strip())
 
 
-def _validate_output(data: dict, input_job_ids: set[str], min_results: int) -> list[dict]:
+def _validate_output(
+    data: dict, input_job_ids: set[str], min_results: int
+) -> list[dict]:
     """
     Validate LLM output. Returns list of ranked job dicts (sorted desc by score) on success.
     Raises ValueError with a description of what's wrong.
@@ -176,7 +179,9 @@ def _validate_output(data: dict, input_job_ids: set[str], min_results: int) -> l
         if "job_id" not in item or "score" not in item:
             raise ValueError(f"Item missing job_id or score: {item}")
         if not isinstance(item["score"], (int, float)):
-            raise ValueError(f"score must be numeric, got {type(item['score']).__name__!r}: {item['score']!r}")
+            raise ValueError(
+                f"score must be numeric, got {type(item['score']).__name__!r}: {item['score']!r}"
+            )
         if item["job_id"] not in input_job_ids:
             raise ValueError(f"Unknown job_id in response: {item['job_id']!r}")
         if item["job_id"] in seen_ids:
@@ -232,7 +237,7 @@ def rerank_jobs(
 
     if use_cache and cache_key in _cache:
         logger.info("Cache hit — returning cached reranked results")
-        return [JobRecord.model_validate(r) for r in _cache[cache_key]]
+        return [JobRecord.model_validate(r) for r in _cache.get(cache_key) or []]
 
     logger.info(f"Reranking {len(jobs)} jobs (single batch call)...")
 
@@ -296,8 +301,8 @@ if __name__ == "__main__":
 
     from src.workflow.mocks import (
         mock_cv_mid_tech,
-        mock_preferences_mid_tech,
         mock_job_records,
+        mock_preferences_mid_tech,
     )
 
     results = rerank_jobs(
