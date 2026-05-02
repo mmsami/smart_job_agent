@@ -44,7 +44,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Load raw FAISS index + parallel docstore — graceful failure if index not present
 try:
-    index = faiss.read_index(str(INDEX_PATH))
+    index = faiss.read_index(str(INDEX_PATH), faiss.IO_FLAG_MMAP)
     with open(DOCSTORE_PATH, "r", encoding="utf-8") as f:
         docstore = json.load(f)
 
