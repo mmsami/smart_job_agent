@@ -20,6 +20,7 @@ import json
 import logging
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as _FuturesTimeout
 from pathlib import Path
 
 from diskcache import Cache
@@ -27,6 +28,7 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 from langsmith import wrappers
+from openai import OpenAI
 from pydantic import BaseModel
 
 from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences
@@ -50,6 +52,19 @@ _client = wrappers.wrap_gemini(
         "metadata": {"component": "reranker", "model": MODEL_NAME},
     },
 )
+
+_GEMMA_OPENROUTER_MODEL = "google/gemma-4-31b-it"
+
+
+def _openrouter_client():
+    key = os.getenv("OPENROUTER_API_KEY")
+    if not key:
+        raise ValueError("OPENROUTER_API_KEY environment variable is not set")
+    return wrappers.wrap_openai(
+        OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key, timeout=60)
+    )
+
+
 MAX_RETRIES = 3
 RETRY_DELAY = 2.0
 DESCRIPTION_CHAR_LIMIT = 5500  # truncate job descriptions before sending to LLM
@@ -144,19 +159,69 @@ def _build_user_message(
     )
 
 
-def _call_llm(user_message: str, system_prompt: str, attempt: int) -> dict:
+_GEMMA_TIMEOUT = 60  # seconds — matches OpenRouter client timeout
+
+
+def _call_gemma_rerank(user_message: str, system_prompt: str, attempt: int) -> dict:
+    """Call Gemma 4 31B via Google AI Studio (with timeout wrapper)."""
     temperature = 0.0 if attempt == 1 else 0.1
-    response = _client.models.generate_content(
-        model=MODEL_NAME,
-        contents=user_message,
-        config=types.GenerateContentConfig(
-            system_instruction=system_prompt,
-            response_mime_type="application/json",
-            response_schema=_RerankResponse,
-            temperature=temperature,
-        ),
+
+    def _do_call():
+        response = _client.models.generate_content(
+            model=MODEL_NAME,
+            contents=user_message,
+            config=types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                response_mime_type="application/json",
+                response_schema=_RerankResponse,
+                temperature=temperature,
+            ),
+        )
+        return json.loads((response.text or "").strip())
+
+    ex = ThreadPoolExecutor(max_workers=1)
+    future = ex.submit(_do_call)
+    try:
+        return future.result(timeout=_GEMMA_TIMEOUT)
+    except _FuturesTimeout:
+        ex.shutdown(wait=False)
+        raise TimeoutError(f"Gemma API call timed out after {_GEMMA_TIMEOUT}s")
+
+
+def _call_openrouter_rerank(user_message: str, system_prompt: str, attempt: int) -> dict:
+    """Call Gemma 4 31B via OpenRouter (fallback when AI Studio fails)."""
+    temperature = 0.0 if attempt == 1 else 0.1
+    client = _openrouter_client()
+    response = client.chat.completions.create(
+        model=_GEMMA_OPENROUTER_MODEL,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message},
+        ],
+        response_format={"type": "json_object"},
+        temperature=temperature,
     )
-    return json.loads((response.text or "").strip())
+    raw = (response.choices[0].message.content or "").strip()
+    # Strip markdown fences if model wraps output despite json_object mode
+    if raw.startswith("```"):
+        parts = raw.split("```")
+        if len(parts) > 1:
+            raw = parts[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
+    data = json.loads(raw)
+    return data
+
+
+def _call_llm(user_message: str, system_prompt: str, attempt: int) -> dict:
+    """Try Gemma first, fall back to OpenRouter on timeout or parse error."""
+    try:
+        return _call_gemma_rerank(user_message, system_prompt, attempt)
+    except (TimeoutError, json.JSONDecodeError, ValueError) as e:
+        error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
+        logger.warning(f"[gemma-reranker] Gemma {error_desc} — falling back to OpenRouter")
+        return _call_openrouter_rerank(user_message, system_prompt, attempt)
 
 
 def _validate_output(

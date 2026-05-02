@@ -297,13 +297,28 @@ def test_rerank_lost_in_middle_applied(mock_client, mock_cache, ten_jobs):
 
 @patch("src.workflow.reranker._cache")
 @patch("src.workflow.reranker._client")
-def test_rerank_retry_on_bad_json(mock_client, mock_cache, ten_jobs):
+@patch("src.workflow.reranker._openrouter_client")
+def test_rerank_retry_on_bad_json(mock_openrouter_factory, mock_client, mock_cache, ten_jobs):
     job_ids = [j.job_id for j in ten_jobs]
     bad_resp = MagicMock()
     bad_resp.text = "not valid json {"
-    good_resp = _make_mock_response(job_ids)
 
-    mock_client.models.generate_content.side_effect = [bad_resp, good_resp]
+    # Gemma returns bad JSON, OpenRouter fallback returns good JSON
+    mock_client.models.generate_content.return_value = bad_resp
+
+    good_resp = MagicMock()
+    good_resp.choices = [MagicMock()]
+    good_resp.choices[0].message.content = json.dumps({
+        "reranked_jobs": [
+            {"job_id": jid, "score": 90 - i * 5, "reasoning": f"Reason {i}"}
+            for i, jid in enumerate(job_ids)
+        ]
+    })
+
+    mock_openrouter_client = MagicMock()
+    mock_openrouter_client.chat.completions.create.return_value = good_resp
+    mock_openrouter_factory.return_value = mock_openrouter_client
+
     mock_cache.__contains__ = MagicMock(return_value=False)
     mock_cache.__setitem__ = MagicMock()
 
@@ -313,7 +328,9 @@ def test_rerank_retry_on_bad_json(mock_client, mock_cache, ten_jobs):
         results = rerank_jobs(mock_cv_mid_tech, mock_preferences_mid_tech, ten_jobs, use_cache=False)
 
     assert len(results) == 10
-    assert mock_client.models.generate_content.call_count == 2
+    # Now Gemma is called once (fails), then OpenRouter is called (succeeds)
+    assert mock_client.models.generate_content.call_count == 1
+    assert mock_openrouter_client.chat.completions.create.call_count == 1
 
 
 def test_rerank_empty_input_raises():
@@ -352,3 +369,39 @@ def test_rerank_single_call_to_llm(mock_client, mock_cache, ten_jobs):
     rerank_jobs(mock_cv_mid_tech, mock_preferences_mid_tech, ten_jobs, use_cache=False)
 
     assert mock_client.models.generate_content.call_count == 1
+
+
+# ── Fence stripping ───────────────────────────────────────────────────────────
+
+
+def _apply_fence_strip(raw: str) -> str:
+    """Mirrors the fence-strip logic in _call_openrouter_rerank."""
+    if raw.startswith("```"):
+        parts = raw.split("```")
+        if len(parts) > 1:
+            raw = parts[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
+    return raw
+
+
+def test_fence_strip_standard_with_closing():
+    raw = '```json\n{"reranked_jobs": []}\n```'
+    assert _apply_fence_strip(raw) == '{"reranked_jobs": []}'
+
+
+def test_fence_strip_no_closing_backtick():
+    """Model returns only an opening fence — must not raise IndexError."""
+    raw = '```json\n{"reranked_jobs": []}'
+    assert _apply_fence_strip(raw) == '{"reranked_jobs": []}'
+
+
+def test_fence_strip_no_json_prefix():
+    raw = '```\n{"reranked_jobs": []}\n```'
+    assert _apply_fence_strip(raw) == '{"reranked_jobs": []}'
+
+
+def test_fence_strip_plain_json_unchanged():
+    raw = '{"reranked_jobs": []}'
+    assert _apply_fence_strip(raw) == raw

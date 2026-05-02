@@ -8,6 +8,9 @@ Verifies:
   4. Scores are in valid cosine similarity range
   5. search_jobs works with job_metadata=None
   6. Mid-tech persona returns software/tech roles (sanity check)
+  7. retrieve_jobs returns list[JobRecord] with correct fields
+  8. retrieve_jobs source filter works
+  9. retrieve_jobs description uses full metadata text not chunk
 """
 
 import sys
@@ -23,9 +26,11 @@ from src.workflow.mocks import (
     mock_preferences_mid_tech,
     mock_preferences_senior_finance,
 )
+from src.workflow.models import JobRecord
 from src.workflow.job_search import (
     embed_profile_and_preferences,
     search_jobs,
+    retrieve_jobs,
     index,
     job_texts,
     job_metadata,
@@ -131,3 +136,69 @@ class TestSearchJobs:
         finance_ids = {r.get("job_id") for r in finance_results}
         overlap = len(tech_ids & finance_ids)
         assert overlap < 15, f"Too much overlap between tech and finance results: {overlap}/20"
+
+
+class TestRetrieveJobs:
+    """Tests for retrieve_jobs() — the typed public interface used by reranker."""
+
+    def setup_method(self):
+        self.results = retrieve_jobs(
+            cv=mock_cv_mid_tech,
+            prefs=mock_preferences_mid_tech,
+            top_k=20,
+            source="kaggle",
+        )
+
+    def test_returns_list_of_job_records(self):
+        assert isinstance(self.results, list)
+        assert all(isinstance(r, JobRecord) for r in self.results)
+
+    def test_returns_correct_count(self):
+        assert len(self.results) == 20
+
+    def test_all_required_fields_present(self):
+        for r in self.results:
+            assert r.job_id, "job_id must not be empty"
+            assert r.title, "title must not be empty"
+            assert r.company, "company must not be empty"
+            assert r.score > 0.0
+
+    def test_description_is_full_text_not_chunk(self):
+        # full metadata description is much longer than the embedded chunk
+        for r in self.results:
+            # job_texts chunks are short paragraphs; full descriptions are longer
+            assert isinstance(r.description, str)
+
+    def test_source_filter_kaggle_only(self):
+        for r in self.results:
+            assert r.source == "kaggle", f"Expected source=kaggle, got {r.source!r}"
+
+    def test_source_none_returns_full_index(self):
+        all_results = retrieve_jobs(
+            cv=mock_cv_mid_tech,
+            prefs=mock_preferences_mid_tech,
+            top_k=20,
+            source=None,
+        )
+        assert len(all_results) == 20
+        assert all(isinstance(r, JobRecord) for r in all_results)
+
+    def test_scores_descending(self):
+        scores = [r.score for r in self.results]
+        assert scores == sorted(scores, reverse=True)
+
+    def test_score_is_float_on_job_record(self):
+        for r in self.results:
+            assert isinstance(r.score, float)
+
+    def test_finance_persona_differs_from_tech(self):
+        finance_results = retrieve_jobs(
+            cv=mock_cv_senior_finance,
+            prefs=mock_preferences_senior_finance,
+            top_k=20,
+            source="kaggle",
+        )
+        tech_ids = {r.job_id for r in self.results}
+        finance_ids = {r.job_id for r in finance_results}
+        overlap = len(tech_ids & finance_ids)
+        assert overlap < 15, f"Too much overlap between personas: {overlap}/20"

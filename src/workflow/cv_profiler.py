@@ -19,6 +19,7 @@ import logging
 import os
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as _FuturesTimeout
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
@@ -27,6 +28,8 @@ from diskcache import Cache
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+from langsmith import wrappers
+from openai import OpenAI
 
 from src.workflow.models import CVProfile
 
@@ -39,9 +42,22 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY environment variable is not set")
 
-_client = genai.Client(api_key=GOOGLE_API_KEY)
+_client = wrappers.wrap_gemini(genai.Client(api_key=GOOGLE_API_KEY))
+
+_GEMMA_OPENROUTER_MODEL = "google/gemma-4-31b-it"
+
+
+def _openrouter_client():
+    key = os.getenv("OPENROUTER_API_KEY")
+    if not key:
+        raise ValueError("OPENROUTER_API_KEY environment variable is not set")
+    return wrappers.wrap_openai(
+        OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key, timeout=60)
+    )
+
 
 MODEL_NAME = "gemma-4-31b-it"
+_GEMMA_TIMEOUT = 60  # seconds
 MAX_RETRIES = 3
 RETRY_DELAY = 2.0
 CURRENT_YEAR = datetime.now().year
@@ -100,26 +116,75 @@ def _is_bad_output(data: dict) -> bool:
     return False
 
 
+def _call_gemma_profile(user_message: str, system_prompt: str, attempt: int) -> dict:
+    """Call Gemma 4 via Google AI Studio (with timeout wrapper)."""
+    temperature = 0.0 if attempt == 1 else 0.1
+
+    def _do_call():
+        response = _client.models.generate_content(
+            model=MODEL_NAME,
+            contents=user_message,
+            config=types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                response_mime_type="application/json",
+                temperature=temperature,
+            ),
+        )
+        return json.loads((response.text or "").strip())
+
+    ex = ThreadPoolExecutor(max_workers=1)
+    future = ex.submit(_do_call)
+    try:
+        return future.result(timeout=_GEMMA_TIMEOUT)
+    except _FuturesTimeout:
+        ex.shutdown(wait=False)
+        raise TimeoutError(f"Gemma API call timed out after {_GEMMA_TIMEOUT}s")
+
+
+def _call_openrouter_profile(user_message: str, system_prompt: str, attempt: int) -> dict:
+    """Call Gemma 4 via OpenRouter (fallback when AI Studio fails)."""
+    temperature = 0.0 if attempt == 1 else 0.1
+    client = _openrouter_client()
+    response = client.chat.completions.create(
+        model=_GEMMA_OPENROUTER_MODEL,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message},
+        ],
+        response_format={"type": "json_object"},
+        temperature=temperature,
+    )
+    raw = (response.choices[0].message.content or "").strip()
+    # Strip markdown fences if model wraps output despite json_object mode
+    if raw.startswith("```"):
+        parts = raw.split("```")
+        if len(parts) > 1:
+            raw = parts[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
+    return json.loads(raw)
+
+
 def _call_llm(raw_text: str, system_prompt: str) -> dict:
-    """Call Gemma 4 to extract raw CV facts. Retries on API error or bad output."""
+    """Call Gemma 4 to extract raw CV facts. Retries on API error or bad output, falls back to OpenRouter."""
     user_message = (
         f"Extract structured CV information from the following CV text:\n\n{raw_text}"
     )
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            # temperature=0 on first attempt; small nudge on retries to avoid same bad output
-            temperature = 0.0 if attempt == 1 else 0.1
-            response = _client.models.generate_content(
-                model=MODEL_NAME,
-                contents=user_message,
-                config=types.GenerateContentConfig(
-                    system_instruction=system_prompt,
-                    response_mime_type="application/json",
-                    temperature=temperature,
-                ),
-            )
-            data = json.loads((response.text or "").strip())
+            # Try Gemma first; fall back to OpenRouter on timeout/parse error
+            if attempt < MAX_RETRIES:
+                data = _call_gemma_profile(user_message, system_prompt, attempt)
+            else:
+                # Last attempt — try OpenRouter instead of Gemma
+                try:
+                    data = _call_gemma_profile(user_message, system_prompt, attempt)
+                except (TimeoutError, json.JSONDecodeError, ValueError) as e:
+                    error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
+                    logger.warning(f"[cv-profiler] Gemma {error_desc} on final attempt — falling back to OpenRouter")
+                    data = _call_openrouter_profile(user_message, system_prompt, attempt)
 
             if not isinstance(data, dict):
                 raise ValueError(
@@ -385,10 +450,17 @@ def _build_profile(raw: dict) -> CVProfile:
         if present:
             logger.info(f"  Contact fields found: {present}")
 
-    # Sanitize current_location: ensure None or valid string
+    # Sanitize current_location: city/region only — reject street addresses
     current_location = raw.get("current_location")
     if current_location and current_location not in ["None", "null", ""]:
-        current_location = str(current_location).strip()
+        loc = str(current_location).strip()
+        # Street address pattern: starts with digits, or contains street suffixes
+        _street_pattern = re.compile(
+            r"^\d+\s|"
+            r"\b(st\.|ave\.|blvd\.|dr\.|rd\.|lane|way|court|ct\.|place|pl\.|suite|#)\b",
+            re.IGNORECASE,
+        )
+        current_location = None if _street_pattern.search(loc) else loc
     else:
         current_location = None
 

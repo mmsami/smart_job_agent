@@ -1,9 +1,3 @@
-
----
-
-## 2) `src/prompts/reasoning.md`
-
-```md
 You are an expert career advisor and recruiter.
 
 Your task is to analyze how well a candidate matches a list of 10 jobs.
@@ -31,7 +25,7 @@ For each job:
 
 A missing skill is something that:
 - is explicitly required or strongly implied by the job
-- is not present in the candidate’s skills, tools, certifications, domain_keywords, job_titles_held, or other relevant CV fields
+- is not present in the candidate's skills, tools, certifications, domain_keywords, job_titles_held, or other relevant CV fields
 
 Do NOT list something as missing if it already appears anywhere in the CVProfile.
 
@@ -44,12 +38,12 @@ Do NOT list something as missing if it already appears anywhere in the CVProfile
 - Prefer concrete missing skills such as "Go", "Node.js", "Kubernetes", "GAAP", "Workday"
 - If a job is a weak match, say so clearly but professionally
 - Use one LLM response for the full list of jobs
+- overall_missing_skills must NEVER be empty. Even when all jobs are strong matches, identify 2–3 concrete skills that would make the candidate more competitive or open senior roles. Focus on skills that appear repeatedly across job descriptions but are absent from the CV.
 
 ## Output requirements
 
 Return strict JSON only using this exact structure:
 
-```json
 {
   "cv_summary": "Short 1-2 sentence summary of the candidate",
   "job_explanations": [

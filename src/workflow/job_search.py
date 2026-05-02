@@ -19,9 +19,9 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 try:
-    from src.workflow.models import CVProfile, JobSearchPreferences
+    from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences
 except ImportError:
-    from workflow.models import CVProfile, JobSearchPreferences
+    from workflow.models import CVProfile, JobRecord, JobSearchPreferences
 
 try:
     from src.workflow.mocks import mock_cv_mid_tech, mock_preferences_mid_tech
@@ -36,25 +36,44 @@ PROJECT_ROOT = Path(__file__).parent.parent.parent
 RESULTS_FILE = PROJECT_ROOT / "iterations" / "job_search_results.md"
 INDEX_PATH = PROJECT_ROOT / "data" / "vector_store" / "faiss_minilm.index"
 DOCSTORE_PATH = PROJECT_ROOT / "data" / "vector_store" / "docstore_minilm.json"
+DESCRIPTIONS_PATH = PROJECT_ROOT / "data" / "vector_store" / "job_descriptions_minilm.json"
 
 # retriever.search(cv, prefs) → list[JobRecord] (ranked by relevance)
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# Load raw FAISS index + parallel docstore
-index = faiss.read_index(str(INDEX_PATH))
-with open(DOCSTORE_PATH, "r", encoding="utf-8") as f:
-    docstore = json.load(f)
+# Load raw FAISS index + parallel docstore — graceful failure if index not present
+try:
+    index = faiss.read_index(str(INDEX_PATH))
+    with open(DOCSTORE_PATH, "r", encoding="utf-8") as f:
+        docstore = json.load(f)
 
-job_texts = [d["page_content"] for d in docstore]
-job_metadata = [d["metadata"] for d in docstore]
+    job_texts = [d["page_content"] for d in docstore]
+    job_metadata = [d["metadata"] for d in docstore]
 
-assert len(job_texts) == index.ntotal, (
-    f"Docstore/index mismatch: {len(job_texts):,} entries vs {index.ntotal:,} vectors"
-)
-logger.info(
-    f"Loaded index: {index.ntotal:,} vectors | docstore: {len(docstore):,} entries"
-)
+    assert len(job_texts) == index.ntotal, (
+        f"Docstore/index mismatch: {len(job_texts):,} entries vs {index.ntotal:,} vectors"
+    )
+    logger.info(
+        f"Loaded index: {index.ntotal:,} vectors | docstore: {len(docstore):,} entries"
+    )
+except FileNotFoundError:
+    index = None  # type: ignore[assignment]
+    job_texts = []
+    job_metadata = []
+    logger.warning(
+        "FAISS index not found — download from Google Drive before running retrieval. "
+        f"Expected: {INDEX_PATH}"
+    )
+
+# Load job_id → description lookup (built alongside the index by build_vector_store_minilm.py)
+try:
+    with open(DESCRIPTIONS_PATH, "r", encoding="utf-8") as f:
+        job_descriptions: dict[str, str] = json.load(f)
+    logger.info(f"Loaded descriptions lookup: {len(job_descriptions):,} entries")
+except FileNotFoundError:
+    job_descriptions = {}
+    logger.warning(f"Descriptions lookup not found at {DESCRIPTIONS_PATH} — rebuild index to fix")
 
 
 def serialize_cv_profile(cv: CVProfile) -> str:
@@ -181,18 +200,104 @@ def write_results(results: list[dict[str, Any]], out_path: Path) -> None:
     logger.info(f"Results written to {out_path}")
 
 
+def retrieve_jobs(
+    cv: CVProfile,
+    prefs: JobSearchPreferences,
+    top_k: int = 20,
+    source: Optional[str] = "kaggle",
+) -> list[JobRecord]:
+    """
+    Public pipeline interface: CV + preferences → list[JobRecord].
+
+    Wraps embed → search → convert to typed JobRecord objects.
+    This is what reranker.py calls — NOT search_jobs() directly.
+
+    Args:
+        cv: Structured CVProfile from cv_profiler.
+        prefs: Job search preferences from user input.
+        top_k: Number of results to return (default 20 for reranker input).
+        source: Filter by data source — "kaggle" (evaluation default), "arbeitnow",
+                or None for the full index. Kaggle is the default to ensure
+                evaluation uses only in-distribution data.
+
+    Returns:
+        list[JobRecord] sorted by cosine similarity, length <= top_k.
+    """
+    if index is None:
+        raise RuntimeError(
+            "FAISS index not loaded. Download from Google Drive and place at "
+            f"{INDEX_PATH}"
+        )
+
+    query_embedding = embed_profile_and_preferences(cv, prefs)
+
+    # Over-fetch to absorb source filtering and per-job chunk dedup.
+    # Kaggle is 99.2% of index; +40 covers both without over-scanning.
+    fetch_k = top_k + 40 if source else top_k + 20
+    raw = search_jobs(
+        query_embedding=query_embedding,
+        index=index,
+        job_texts=job_texts,
+        job_metadata=job_metadata,
+        top_k=fetch_k,
+    )
+
+    records: list[JobRecord] = []
+    seen_job_ids: set[str] = set()
+    for r in raw:
+        if source and r.get("source") != source:
+            continue
+        job_id = str(r.get("job_id", ""))
+        if job_id in seen_job_ids:
+            continue
+        seen_job_ids.add(job_id)
+        records.append(
+            JobRecord(
+                job_id=job_id,
+                title=str(r.get("title", "")),
+                company=str(r.get("company", "")),
+                description=job_descriptions.get(job_id, ""),
+                location=r.get("location"),
+                experience_level=r.get("experience_level"),
+                work_type=r.get("work_type"),
+                min_salary=float(r["min_salary"])
+                if r.get("min_salary") is not None
+                else None,
+                max_salary=float(r["max_salary"])
+                if r.get("max_salary") is not None
+                else None,
+                url=r.get("url"),
+                skill_labels=r.get("skill_labels"),
+                source=str(r.get("source", "kaggle")),
+                score=float(r["score"]),
+            )
+        )
+        if len(records) >= top_k:
+            break
+
+    logger.info(
+        f"retrieve_jobs: {len(records)} JobRecords returned "
+        f"(source={source!r}, top_k={top_k})"
+    )
+    return records
+
+
 if __name__ == "__main__":
     query_embedding = embed_profile_and_preferences(
         mock_cv_mid_tech,
         mock_preferences_mid_tech,
     )
 
-    results = search_jobs(
-        query_embedding=query_embedding,
-        index=index,
-        job_texts=job_texts,
-        job_metadata=job_metadata,
-        top_k=20,
-    )
+    if index is not None:
+        results = search_jobs(
+            query_embedding=query_embedding,
+            index=index,
+            job_texts=job_texts,
+            job_metadata=job_metadata,
+            top_k=20,
+        )
+    else:
+        # Handle the error or initialize the index
+        raise ValueError("Index has not been initialized.")
 
     write_results(results, RESULTS_FILE)
