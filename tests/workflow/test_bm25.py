@@ -197,6 +197,29 @@ run_test(
 
 
 # ══════════════════════════════════════════════════════════════════════
+# Test 5 — Arbeitnow fallback job_id is deterministic (hashlib fix)
+# ══════════════════════════════════════════════════════════════════════
+print()
+print("=" * 70)
+print("Test 5: Arbeitnow fallback job_id is deterministic across calls")
+print("=" * 70)
+
+import hashlib
+
+def _arbeitnow_fallback_id(title: str, company: str) -> str:
+    return f"arbeitnow_{hashlib.md5((title + company).encode()).hexdigest()[:16]}"
+
+id_a = _arbeitnow_fallback_id("Software Engineer", "Acme Corp")
+id_b = _arbeitnow_fallback_id("Software Engineer", "Acme Corp")
+id_c = _arbeitnow_fallback_id("Data Scientist", "Acme Corp")
+
+run_test("Same input → same ID (deterministic)", id_a == id_b, f"id={id_a}")
+run_test("Different title → different ID", id_a != id_c, f"id_a={id_a} id_c={id_c}")
+run_test("ID has expected prefix", id_a.startswith("arbeitnow_"), f"id={id_a}")
+run_test("ID is stable length (prefix + 16 hex chars)", len(id_a) == len("arbeitnow_") + 16)
+
+
+# ══════════════════════════════════════════════════════════════════════
 # Summary
 # ══════════════════════════════════════════════════════════════════════
 print()

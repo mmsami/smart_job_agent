@@ -9,47 +9,101 @@ Usage:
     top_20 = retriever.search(parsed_cv, k=20)
 """
 
+import hashlib
 import json
 import logging
+import math
 import os
 import re
-from typing import Optional
-
-import math
+from typing import Any, Optional
 
 import pandas as pd
 from rank_bm25 import BM25Okapi
 
 
-def _nan_to_none(v):
+def _nan_to_none(v: Any) -> Any:
     """Convert pandas NaN (float) to None for Optional JobRecord fields."""
     try:
-        return None if isinstance(v, float) and math.isnan(v) else v
+        # If it's a float NaN, return None
+        if isinstance(v, float) and math.isnan(v):
+            return None
+        # Otherwise, return the value as is
+        return v
     except (TypeError, ValueError):
         return v
+
 
 logger = logging.getLogger(__name__)
 
 try:
-    from src.workflow.models import JobRecord, CVProfile, JobSearchPreferences
+    from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences
 except ImportError:
-    from workflow.models import JobRecord, CVProfile, JobSearchPreferences
+    from workflow.models import CVProfile, JobRecord, JobSearchPreferences
 
 # ── Paths ──────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 KAGGLE_CSV = os.path.join(DATA_DIR, "kaggle_cleaned", "postings_cleaned.csv")
-KAGGLE_CSV_SAMPLE = os.path.join(DATA_DIR, "kaggle_cleaned_sample", "postings_sample.csv")
+KAGGLE_CSV_SAMPLE = os.path.join(
+    DATA_DIR, "kaggle_cleaned_sample", "postings_sample.csv"
+)
 ARBEITNOW_JSON = os.path.join(DATA_DIR, "arbeitnow", "arbeitnow_jobs.json")
 
 # ── Preprocessing ──────────────────────────────────────────────────────
 # Standard English stopwords (common words filtered from indexing + queries)
 STOPWORDS = {
-    "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into",
-    "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then",
-    "there", "these", "they", "this", "to", "was", "will", "with", "you", "your", "can",
-    "could", "has", "have", "him", "his", "how", "may", "must", "she", "should",
-    "what", "when", "where", "which", "who", "why"
+    "a",
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "be",
+    "but",
+    "by",
+    "for",
+    "if",
+    "in",
+    "into",
+    "is",
+    "it",
+    "no",
+    "not",
+    "of",
+    "on",
+    "or",
+    "such",
+    "that",
+    "the",
+    "their",
+    "then",
+    "there",
+    "these",
+    "they",
+    "this",
+    "to",
+    "was",
+    "will",
+    "with",
+    "you",
+    "your",
+    "can",
+    "could",
+    "has",
+    "have",
+    "him",
+    "his",
+    "how",
+    "may",
+    "must",
+    "she",
+    "should",
+    "what",
+    "when",
+    "where",
+    "which",
+    "who",
+    "why",
 }
 
 
@@ -104,21 +158,35 @@ class BM25Retriever:
                 job_id = str(raw_id) if raw_id is not None else f"kaggle_{idx}"
                 min_sal = row.get("min_salary")
                 max_sal = row.get("max_salary")
-                self.jobs.append({
-                    "job_id": job_id,
-                    "title": str(row["title"]) if row.get("title") is not None else "",
-                    "company": str(row["company_name"]) if row.get("company_name") is not None else "",
-                    "description": str(row["description"]) if row.get("description") is not None else "",
-                    "location": row.get("location"),
-                    "experience_level": row.get("formatted_experience_level"),
-                    "work_type": row.get("formatted_work_type"),
-                    "min_salary": float(min_sal) if min_sal not in (None, "") else None,
-                    "max_salary": float(max_sal) if max_sal not in (None, "") else None,
-                    "url": row.get("application_url"),
-                    "skill_labels": row.get("skill_labels"),
-                    "source": "kaggle",
-                })
-            logger.info(f"  Loaded {len([j for j in self.jobs if j['source'] == 'kaggle']):,} Kaggle jobs")
+                self.jobs.append(
+                    {
+                        "job_id": job_id,
+                        "title": str(row["title"])
+                        if row.get("title") is not None
+                        else "",
+                        "company": str(row["company_name"])
+                        if row.get("company_name") is not None
+                        else "",
+                        "description": str(row["description"])
+                        if row.get("description") is not None
+                        else "",
+                        "location": row.get("location"),
+                        "experience_level": row.get("formatted_experience_level"),
+                        "work_type": row.get("formatted_work_type"),
+                        "min_salary": float(min_sal)
+                        if min_sal not in (None, "")
+                        else None,
+                        "max_salary": float(max_sal)
+                        if max_sal not in (None, "")
+                        else None,
+                        "url": row.get("application_url"),
+                        "skill_labels": row.get("skill_labels"),
+                        "source": "kaggle",
+                    }
+                )
+            logger.info(
+                f"  Loaded {len([j for j in self.jobs if j['source'] == 'kaggle']):,} Kaggle jobs"
+            )
 
         # Load Arbeitnow
         if os.path.exists(ARBEITNOW_JSON):
@@ -126,22 +194,30 @@ class BM25Retriever:
                 raw_list = json.load(f)
             for raw in raw_list:
                 raw_id = raw.get("job_id")
-                job_id = str(raw_id) if raw_id is not None else f"arbeitnow_{hash(str(raw.get('title', '')) + str(raw.get('company', '')))}"
-                self.jobs.append({
-                    "job_id": job_id,
-                    "title": str(raw.get("title") or ""),
-                    "company": str(raw.get("company") or ""),
-                    "description": raw.get("description"),
-                    "location": raw.get("location"),
-                    "experience_level": raw.get("experience_level"),
-                    "work_type": raw.get("work_type"),
-                    "min_salary": raw.get("min_salary"),
-                    "max_salary": raw.get("max_salary"),
-                    "url": raw.get("url"),
-                    "skill_labels": raw.get("skill_labels"),
-                    "source": raw.get("source", "arbeitnow"),
-                })
-            logger.info(f"  Loaded {len([j for j in self.jobs if j['source'] == 'arbeitnow']):,} Arbeitnow jobs")
+                job_id = (
+                    str(raw_id)
+                    if raw_id is not None
+                    else f"arbeitnow_{hashlib.md5((str(raw.get('title', '')) + str(raw.get('company', ''))).encode()).hexdigest()[:16]}"
+                )
+                self.jobs.append(
+                    {
+                        "job_id": job_id,
+                        "title": str(raw.get("title") or ""),
+                        "company": str(raw.get("company") or ""),
+                        "description": raw.get("description"),
+                        "location": raw.get("location"),
+                        "experience_level": raw.get("experience_level"),
+                        "work_type": raw.get("work_type"),
+                        "min_salary": raw.get("min_salary"),
+                        "max_salary": raw.get("max_salary"),
+                        "url": raw.get("url"),
+                        "skill_labels": raw.get("skill_labels"),
+                        "source": raw.get("source", "arbeitnow"),
+                    }
+                )
+            logger.info(
+                f"  Loaded {len([j for j in self.jobs if j['source'] == 'arbeitnow']):,} Arbeitnow jobs"
+            )
 
         logger.info(f"Total jobs: {len(self.jobs):,}")
 
@@ -150,17 +226,29 @@ class BM25Retriever:
         for job in self.jobs:
             # Tokenize with stopword removal: title (weighted more) + description
             title_tokens = _tokenize_with_stopwords(job["title"])
-            desc_tokens = _tokenize_with_stopwords(job["description"])[:100]  # limit to first 100 words
+            desc_tokens = _tokenize_with_stopwords(job["description"])[
+                :100
+            ]  # limit to first 100 words
 
             # Combine with title repeated for emphasis (increases weight)
-            tokens = title_tokens + title_tokens + desc_tokens  # title appears twice for weight
+            tokens = (
+                title_tokens + title_tokens + desc_tokens
+            )  # title appears twice for weight
             self.corpus.append(tokens)
 
         # Initialize BM25 with tuned hyperparameters
         self.bm25 = BM25Okapi(self.corpus, k1=self.k1, b=self.b)
-        logger.info(f"BM25 index built: {len(self.corpus)} documents (k1={self.k1}, b={self.b})")
+        logger.info(
+            f"BM25 index built: {len(self.corpus)} documents (k1={self.k1}, b={self.b})"
+        )
 
-    def search(self, cv_profile: CVProfile, preferences: JobSearchPreferences, k: int = 20, source: Optional[str] = None) -> list[JobRecord]:
+    def search(
+        self,
+        cv_profile: CVProfile,
+        preferences: JobSearchPreferences,
+        k: int = 20,
+        source: Optional[str] = "kaggle",
+    ) -> list[JobRecord]:
         """
         Search for top-k jobs matching the CV profile + user preferences using BM25.
 
@@ -168,7 +256,7 @@ class BM25Retriever:
             cv_profile: Factual data extracted from CV (who the person is)
             preferences: User-provided job search preferences (what they want)
             k: Number of results to return (default 20)
-            source: Filter by dataset source (None=both, "kaggle"=Kaggle-only, "arbeitnow"=Arbeitnow-only)
+            source: Filter by dataset source ("kaggle" default for evaluation, None=full index, "arbeitnow"=Arbeitnow-only)
 
         Returns:
             List of JobRecord sorted by BM25 score (descending)
@@ -245,13 +333,17 @@ class BM25Retriever:
                 query_tokens.append(remote_lower)
 
         if not query_tokens:
-            raise ValueError("BM25 query is empty — CV profile and preferences have no usable tokens")
+            raise ValueError(
+                "BM25 query is empty — CV profile and preferences have no usable tokens"
+            )
 
         # Get BM25 scores
         scores = self.bm25.get_scores(query_tokens)
 
         # Sort by score, fetch more than k to allow for filter + dedup losses
-        top_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:k * 3]
+        top_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[
+            : k * 3
+        ]
 
         # Build results with deduplication + seniority filter
         seen_job_ids: set = set()
@@ -271,7 +363,9 @@ class BM25Retriever:
             # ── Deduplication ───────────────────────────────────────────
             # Primary: job_id. Secondary: title+company (catches same posting with diff IDs)
             dedup_key = job["job_id"]
-            title_company_key = f"{str(job['title']).lower()}|{str(job['company']).lower()}"
+            title_company_key = (
+                f"{str(job['title']).lower()}|{str(job['company']).lower()}"
+            )
             if dedup_key in seen_job_ids or title_company_key in seen_title_company:
                 continue
             seen_job_ids.add(dedup_key)
@@ -305,7 +399,15 @@ class BM25Retriever:
     _SENIOR_EXCLUDE_EXP = {"entry level", "associate", "internship"}
     _SENIOR_EXCLUDE_TITLE = {"staff ", "junior", "jr.", "intern", "entry level"}
     _ENTRY_EXCLUDE_EXP = {"director", "executive", "c-suite"}
-    _ENTRY_EXCLUDE_TITLE = {"director", "vp ", "vice president", "chief ", "c-level", "head of", "partner"}
+    _ENTRY_EXCLUDE_TITLE = {
+        "director",
+        "vp ",
+        "vice president",
+        "chief ",
+        "c-level",
+        "head of",
+        "partner",
+    }
 
     def _passes_seniority_filter(self, job: dict, cv_profile: CVProfile) -> bool:
         """Hard seniority filter — skips clearly mismatched experience levels."""
@@ -336,11 +438,16 @@ class BM25Retriever:
 _retriever_instance: Optional[BM25Retriever] = None
 
 
-def search_bm25(cv_profile: CVProfile, preferences: JobSearchPreferences, k: int = 20, source: Optional[str] = None) -> list[JobRecord]:
+def search_bm25(
+    cv_profile: CVProfile,
+    preferences: JobSearchPreferences,
+    k: int = 20,
+    source: Optional[str] = "kaggle",
+) -> list[JobRecord]:
     """Singleton wrapper — creates retriever on first call, reuses on subsequent calls.
 
     Args:
-        source: Filter by dataset source (None=both, "kaggle"=Kaggle-only, "arbeitnow"=Arbeitnow-only)
+        source: Filter by dataset source ("kaggle" default for evaluation, None=full index, "arbeitnow"=Arbeitnow-only)
     """
     global _retriever_instance
     if _retriever_instance is None:
