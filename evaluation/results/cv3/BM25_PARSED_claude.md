@@ -1,0 +1,23 @@
+# Labeling Sheet: cv3 | BM25_PARSED | claude
+
+**Instructions:** Mark each job as `1` (relevant) or `0` (irrelevant) in the Relevant column.
+Relevant = correct domain + within ±1 seniority level.
+
+| # | Relevant (0/1) | Quality (1-5) | Title | Company | Score | Match Reason | Missing Skills |
+|---|----------------|---------------|-------|---------|-------|--------------|----------------|
+| 1 | | | Senior Project Manager | Forbes Technical Consulting | 92.00 | Strong alignment with the candidate's 12 years of experience, project management… | PMP or equivalent certification, Healthcare or product organization experience, Agile/Waterfall/Hybrid methodology expertise (not explicitly listed) |
+| 2 | | | Technical Project Manager | Experis | 85.00 | The candidate's project management experience, software development background, … | PMP or equivalent certification, AWS experience, Expert-level project management software tools (e.g., MS Project, Jira), SDLC integration experience |
+| 3 | | | Information Technology Operations Project Manager | Suna Solutions | 82.00 | The candidate's project management, process improvement, software development, a… | Microsoft SharePoint, Microsoft Azure, IT infrastructure and network/systems knowledge, Information security experience, Change Management and Release Management |
+| 4 | | | Project Manager Tech 2 | Aditi Consulting | 78.00 | The candidate's project management experience, software development background, … | PMP or PMI certification, Advanced Excel (pivot tables, reporting), Outlook calendar management proficiency, User Acceptance Testing (UAT) facilitation |
+| 5 | | | NextGen ERP Senior Project Management Support Specialist-Pomona [HYBRID] | Southern California Edison (SCE) | 75.00 | This is a strong match. The candidate has direct ERP experience listed in both s… | SAP ERP experience, SharePoint administration, GenAI tools (Copilot, ChatGPT, GPT-3), PMP certification, Data analytics experience |
+| 6 | | | Enterprise Resources Planning Consultant | De Lacy Executive Recruitment North America | 72.00 | The candidate's ERP experience, project management, and staff/user training skil… | Food production industry experience, ERP software configuration, Help desk and on-call support, German language skills (preferred), Database and file structure knowledge |
+| 7 | | | UX Designer Lead, Managing Consultant | Guidehouse | 68.00 | The candidate has a UX Design background as a former Senior UX Designer and doma… | 8+ years dedicated UX/UI design experience, Figma proficiency, Mural proficiency, Federal government design experience, Public Trust clearance eligibility, Business development and proposal writing, Design portfolio |
+| 8 | | | Senior UX UI Designer | Oxford Solutions | 65.00 | The candidate's UX design background is relevant, but this role requires 5+ year… | TS/SCI security clearance, Adobe Creative Suite / Illustrator, HTML5 / CSS3, JavaScript / React, 5+ years dedicated UX/UI design for complex systems, Usability testing methodology |
+| 9 | | | UI/UX Design Manager | VIZIO | 62.00 | The candidate has a UX design background, but this role is highly specialized in… | Figma (expert level), TV UI / OTT design experience, 10-foot UI design knowledge, Broadcast design specifications, Design system development, Photoshop / Illustrator, Design portfolio |
+| 10 | | | Senior Project Manager | Talent Groups | 88.00 | The candidate's 12 years of project management experience, budgeting, software d… | PMP certification, Microsoft Azure experience, State budget management experience, Dynamics365 Customer Service Enterprise, Certified Contract Manager (preferred), Agile software development methodology (explicit) |
+
+## Career Roadmap (from reasoning)
+
+**Top missing skills:** PMP or equivalent certification, Healthcare or product organization experience, Agile/Waterfall/Hybrid methodology expertise (not explicitly listed)
+
+**Recommendation:** The candidate is a strong fit for senior project management roles, particularly those involving ERP programs, software development oversight, and stakeholder coordination. The most impactful gap across nearly all PM roles is the absence of a PMP certification, which should be prioritized immediately. For ERP-specific roles (especially the SCE and De Lacy positions), gaining SAP or ERP platform configuration experience would significantly strengthen competitiveness. The UX/UI design roles are a weaker match due to the lack of a design portfolio, Figma proficiency, and specialized tooling; the candidate should focus primarily on project management opportunities where their 12 years of experience and Master's degree are most competitive.

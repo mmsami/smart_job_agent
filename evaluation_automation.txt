@@ -1,0 +1,164 @@
+evaluation automation — what we test and how
+=============================================
+
+we have 4 research hypotheses. all scoring is automated except the human relevance
+labels in step 2 (which you fill in manually once, then never again).
+
+
+hypotheses
+----------
+
+H1: semantic search (FAISS) retrieves more relevant jobs than keyword search (BM25)
+    metric: Precision@10 — how many of the top 10 results are actually relevant
+
+H2: parsing the CV into structured fields gives better results than passing raw text
+    metric: Precision@10 again, comparing raw vs parsed query for both BM25 and FAISS
+
+H3: LLM reranking improves Precision@10 beyond what retrieval alone gives
+    metric: delta P@10 between FAISS_PARSED and FAISS_PARSED_NORERANK, per persona
+
+H4: LLM choice affects explanation quality more than retrieval score
+    metric: explanation quality 1-5, scored by Claude as fixed judge across all 3 LLMs
+
+
+method groups
+-------------
+
+each CV is run through 5 retrieval configurations:
+
+  BM25_RAW              — keyword search, raw CV text as query
+  BM25_PARSED           — keyword search, structured fields (title + skills) as query
+  FAISS_RAW             — semantic search, raw CV text embedded
+  FAISS_PARSED          — semantic search, structured fields embedded
+  FAISS_PARSED_NORERANK — same as FAISS_PARSED but top-10 by similarity only, no LLM reranker
+
+then each configuration is run with 3 reasoning models (Gemma, DeepSeek, Claude)
+to generate the job match explanations. reranking is always Gemma regardless of
+which reasoning model is used — this isolates explanation quality from retrieval.
+
+current matrix: 4 personas x 5 method groups x 3 models = 60 result files
+(scale to 10 personas by adding 6 more CVs to data/resumes/ and re-running step 1)
+
+
+how to run it
+-------------
+
+step 1 — generate results
+    cd project
+    python -m src.evaluation.run_evaluation
+
+    outputs MD and JSON files under evaluation/results/<persona_id>/
+    already-complete runs are skipped automatically — safe to re-run after failure
+    expect ~10 min for 4 personas (API calls). each re-run is near-instant due to caching.
+
+step 2 — label the MD files (manual, one-time per persona)
+
+    open:  evaluation/results/<persona_id>/<METHOD>_gemma.md
+    e.g.:  evaluation/results/cv1/FAISS_PARSED_gemma.md
+
+    each file contains:
+      - candidate profile summary at the top (level, skills, industries)
+      - a label table with 10 rows — one per job
+      - job details section below: description, match reason, missing skills, apply link
+
+    what to fill in:
+      column "Relevant (0/1)" — is this job a real match for this candidate?
+      column "Quality (1-5)"  — how good is the AI's match explanation?
+
+    relevance rubric (0 or 1):
+      1 = correct domain AND within +-1 seniority level
+      0 = wrong domain, completely wrong seniority, or clearly irrelevant
+
+    quality rubric (1 to 5):
+      1 = wrong or hallucinated (facts that aren't in the job description)
+      2 = mostly wrong, vague
+      3 = generic but correct — mentions skills that match but no specific evidence
+      4 = good — references specific skills/experience from the candidate and job
+      5 = excellent — specific, well-reasoned, cites concrete evidence from both sides
+
+    efficiency tip:
+      for P@10 (H1, H2, H3) — you only need to fill "Relevant" in the _gemma.md
+      per method. jobs are identical across all 3 model MDs for the same method.
+
+      for H4 (explanation quality) — fill "Quality" in all 3 model MDs per method
+      (BM25_RAW_gemma.md, BM25_RAW_deepseek.md, BM25_RAW_claude.md) so we can
+      compare explanation scores across models.
+
+    labeling assignment:
+      3 teammates split 10 personas — teammate A: 3 personas, B: 3 personas, C: 4 personas
+      each teammate labels their assigned personas fully (all 5 methods × relevant columns)
+      for inter-rater reliability (H4): at least 1 persona should be labeled by 2 teammates
+      independently — pick one persona and have two people label it without comparing first
+
+step 3 — compute scores
+    python -m src.evaluation.score_results
+
+    reads labeled MDs, outputs evaluation/results/report.md with:
+    - Precision@10 per method per persona + 95% bootstrap CI
+    - Wilcoxon signed-rank p-values for H1, H2, H3
+    - average explanation quality per model for Experiment B (H4 partial)
+
+step 4 — LLM judge (H4)
+    python -m src.evaluation.llm_judge
+
+    Claude Sonnet reads each job result and labels it 0/1, then Cohen's Kappa is
+    computed against human labels. Claude is the fixed judge for all 3 LLMs to avoid
+    self-preference bias (if Claude judged its own explanations, scores would inflate).
+    output: evaluation/results/llm_judge_report.md
+    cost: ~$0.30 for full run (4 personas × 5 methods × 10 jobs)
+
+
+statistical approach
+--------------------
+
+primary test: Wilcoxon signed-rank (paired, non-parametric) — right for small N
+secondary:    95% bootstrap CI on mean P@10 — illustrative, CIs will be wide at N=4
+significance: p < 0.05
+
+note on N: with 4 personas Wilcoxon has low power — results are directional evidence,
+not conclusive. adding 6 more personas brings N to 10 which is the planned sample size.
+
+location is excluded from the relevance rubric. BM25 has no location filter by design
+so penalising for location would unfairly disadvantage it vs FAISS.
+
+
+personas
+--------
+
+4 CV files currently in data/resumes/ — each generates a full set of result files.
+filenames (without .pdf) are the persona IDs used throughout the results folder.
+
+to add more personas: drop PDF files into data/resumes/ and re-run step 1.
+existing results are preserved — only new personas will be processed.
+
+
+output files
+------------
+
+for each persona × method × model you get two files:
+
+  evaluation/results/<persona>/<METHOD>_<model>.json  — machine-readable results + reasoning
+  evaluation/results/<persona>/<METHOD>_<model>.md    — human labeling sheet (fill this in)
+
+after labeling + scoring:
+
+  evaluation/results/report.md            — P@10 table + significance tests
+  evaluation/results/llm_judge_report.md  — Cohen's Kappa per persona/method
+
+
+common issues
+-------------
+
+"descriptions are empty in the labeling sheet"
+    → the job_descriptions_minilm.json file is missing from data/vector_store/
+    → download it from Google Drive (same folder as the index)
+
+"run_evaluation crashes on FAISS_RAW"
+    → make sure SentenceTransformers is installed: pip install sentence-transformers
+
+"re-run generates nothing (all skipped)"
+    → expected behavior — all results already exist
+    → to force a specific persona: delete its folder under evaluation/results/
+
+"score_results shows no data"
+    → you haven't filled in any labels yet — complete step 2 first
