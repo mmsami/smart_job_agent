@@ -66,11 +66,21 @@ data/vector_store/
 !data/arbeitnow/arbeitnow_jobs.json
 !data/personas/
 
-data/resumes
+data/resumes/
+data/resumes_backup/
 
 # ── Test Result Logs (local only — see cv_profiler_sample.md for canonical examples) ──
 iterations/cv_profiler_results.md
 iterations/cv_extraction_results.md
+
+# ── Evaluation Output ────────────────────────────────────────────────────────
+# JSON files: large, auto-generated, not needed in repo
+evaluation/results/**/*.json
+# MD files: tracked — contain human labels (the scientific output)
+!evaluation/results/**/*.md
+
+# Audit trails from main.py demo runs (personal, not scientific output)
+iterations/results_*.md
 
 # ── LangSmith & Caching ─────────────────────────────────────────────────────
 .langsmith/

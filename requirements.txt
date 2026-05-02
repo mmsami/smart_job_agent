@@ -36,5 +36,8 @@ python-dotenv>=1.0
 # ── CLI & display ──────────────────────────────────────────────────────
 rich>=13.0
 
+# ── Statistics (bootstrap CI, Wilcoxon, Cohen's Kappa) ────────────────
+scipy>=1.12
+
 # ── Testing ───────────────────────────────────────────────────────────
 pytest>=7.0

@@ -1,263 +1,231 @@
 # Smart Job Market Agent
 
-A job matching system that takes a CV and returns the most relevant job postings with explanations and skill gap analysis. Uses semantic search (FAISS + embeddings) compared against a BM25 keyword baseline to demonstrate the value of semantic retrieval.
+Takes a CV, returns the top matching jobs with explanations and skill gap analysis.
+Uses semantic search (FAISS + embeddings) compared against a BM25 keyword baseline.
 
 ---
 
 ## Setup
 
 ```bash
-# 1. Install dependencies
+python -m venv venv
+source venv/bin/activate        # Mac/Linux
+venv\Scripts\activate           # Windows
+
 pip install -r requirements.txt
-
-# 2. Create your environment file and add your API key
 cp .env.example .env
-
-# 3. Download shared data files from Google Drive (link in project docs):
-#    - data/vector_store/faiss_minilm.index
-#    - data/vector_store/docstore_minilm.json
-#    - data/kaggle_cleaned/postings_cleaned.csv
+# fill in your keys (see table below)
 ```
+
+Then download the shared data files from Google Drive and place them at:
+
+```
+data/vector_store/faiss_minilm.index
+data/vector_store/docstore_minilm.json
+data/vector_store/job_descriptions_minilm.json
+data/kaggle_cleaned/postings_cleaned.csv
+data/resumes/                        ← persona PDFs (one per evaluator)
+```
+
+Do not re-run the data pipeline scripts — the index is already built.
 
 ---
 
-## Project Structure
+## Environment variables
+
+| Variable | Where to get it | Used by |
+|----------|----------------|---------|
+| `GOOGLE_API_KEY` | aistudio.google.com/apikey (free) | cv_reader, cv_profiler, reranker, reasoning |
+| `OPENROUTER_API_KEY` | provided by university | reasoning (DeepSeek, Claude), LLM judge |
+| `LANGSMITH_API_KEY` | smith.langchain.com (free) | tracing for reranker + reasoning |
+| `LANGSMITH_PROJECT` | set to `job-market-agent` | tracing |
+
+---
+
+## Running the demo
+
+```bash
+cd project
+python -m src.main
+```
+
+Prompts you for a CV path and job preferences, then runs the full pipeline and prints results.
+
+---
+
+## Project structure
 
 ```
 project/
 ├── src/
-│   ├── data_pipeline/       # One-time data build scripts, not part of runtime pipeline
+│   ├── main.py                      # interactive CLI — run this
+│   ├── data_pipeline/               # one-time build scripts (already run)
 │   │   ├── parse_kaggle.py
 │   │   ├── fetch_arbeitnow.py
 │   │   ├── build_vector_store_minilm.py
 │   │   └── schemas.py
-│   ├── workflow/            # Core pipeline components
-│   │   ├── models.py        # Shared data schemas (JobRecord, CVProfile, etc.)
-│   │   ├── mocks.py         # Stable test data for development
-│   │   ├── cv_reader.py     # PDF to raw text via vision LLM
-│   │   ├── cv_profiler.py   # Raw text to structured CVProfile
-│   │   ├── job_search.py    # Semantic retrieval via FAISS, returns top 20
-│   │   ├── reranker.py      # LLM reranking, returns top 10
-│   │   └── reasoning.py     # Match explanations and skill gap analysis
+│   ├── workflow/                    # pipeline components
+│   │   ├── models.py                # JobRecord, CVProfile, JobSearchPreferences
+│   │   ├── mocks.py                 # test fixtures (3 personas, 10 jobs)
+│   │   ├── cv_reader.py             # PDF → raw text (Gemini vision, cached)
+│   │   ├── cv_profiler.py           # raw text → CVProfile (Gemini, cached)
+│   │   ├── job_search.py            # CVProfile → top 20 jobs (FAISS cosine)
+│   │   ├── reranker.py              # top 20 → top 10 (Gemma batch, cached)
+│   │   └── reasoning.py             # top 10 → explanations + skill gaps (3 providers)
 │   ├── evaluation/
-│   │   ├── baseline_bm25.py # BM25 keyword baseline
-│   │   ├── run_evaluation.py
-│   │   └── error_analysis.py
-│   ├── prompts/             # LLM prompt templates
-│   │   ├── cv_profiler.md
-│   │   ├── reranker.md
-│   │   └── reasoning.md
-│   └── main.py              # End-to-end pipeline
+│   │   ├── baseline_bm25.py         # BM25 keyword retriever
+│   │   ├── run_evaluation.py        # generates full result matrix (4 personas × 5 methods × 3 models)
+│   │   ├── score_results.py         # computes P@10, CI, Wilcoxon from labeled MDs
+│   │   └── llm_judge.py             # Claude-as-judge → Cohen's Kappa (H4)
+│   └── prompts/                     # edit these to tune LLM behavior
+│       ├── cv_profiler.md
+│       ├── reranker.md
+│       └── reasoning.md
 ├── tests/
-│   ├── data_pipeline/
-│   │   └── test_retrieval.py
-│   └── workflow/
-│       ├── test_mocks.py
-│       ├── test_bm25.py
-│       ├── test_cv_reader.py
-│       ├── test_cv_profiler.py
-│       └── test_job_search.py
-├── data/                    # See data structure section below
-├── iterations/              # Development notes and iteration logs
-└── requirements.txt
+│   ├── workflow/
+│   │   ├── test_mocks.py
+│   │   ├── test_bm25.py
+│   │   ├── test_cv_reader.py
+│   │   ├── test_cv_profiler.py
+│   │   ├── test_job_search.py
+│   │   ├── test_reranker.py
+│   │   ├── test_reranker_integration.py
+│   │   └── test_reasoning.py
+│   └── evaluation/
+│       ├── test_run_evaluation.py   # perform_retrieval correctness (12 tests)
+│       ├── test_score_results.py    # P@10, CI, Wilcoxon (24 tests)
+│       └── test_llm_judge.py        # Cohen's Kappa + judge calls (16 tests)
+├── data/
+├── evaluation/
+│   └── results/                     # output of run_evaluation.py
+├── iterations/                      # dev notes per component
+└── evaluation_automation.txt        # hypotheses, scoring, labeling rubric
 ```
 
 ---
 
-## Running the Tests
+## Running the evaluation
 
-Run these to verify your setup before developing.
+See `evaluation_automation.txt` for the full explanation of hypotheses, method groups,
+labeling rubric, and statistical approach.
 
-### 1. Mock data validation (no external files needed)
+```bash
+# step 1 — generate results (skips already-complete runs)
+cd project
+python -m src.evaluation.run_evaluation
+
+# step 2 — label the MD files manually
+# open evaluation/results/<persona>/<METHOD>_gemma.md
+# fill Relevant (0/1) column — one model per method is enough for P@10
+# fill Quality (1-5) in all 3 model MDs for explanation quality comparison
+
+# step 3 — compute scores
+python -m src.evaluation.score_results
+# outputs evaluation/results/report.md
+
+# step 4 — LLM judge
+python -m src.evaluation.llm_judge
+# outputs evaluation/results/llm_judge_report.md
+```
+
+### What run_evaluation.py produces
+
+4 personas × 5 method variants × 3 reasoning models = **60 result files** (JSON + MD each).
+
+| Method | Retriever | Query |
+|--------|-----------|-------|
+| `BM25_RAW` | BM25 | raw CV text |
+| `BM25_PARSED` | BM25 | structured CVProfile |
+| `FAISS_RAW` | FAISS | raw CV text embedded |
+| `FAISS_PARSED` | FAISS | CVProfile + preferences embedded |
+| `FAISS_PARSED_NORERANK` | FAISS | FAISS_PARSED top-10 before reranking (H3 baseline) |
+
+Reranking is always Gemma (fixed). Reasoning runs with gemma / deepseek / claude per method.
+All runs skip if the output JSON + MD already exist — safe to restart after failure.
+
+---
+
+## Tests
+
 ```bash
 cd project
+
+# no external files needed
 python -m pytest tests/workflow/test_mocks.py -v
-```
-Expected: **19/19 passed**
-
-### 2. BM25 baseline (requires Kaggle cleaned CSV)
-```bash
-cd project
-python -m tests.workflow.test_bm25
-```
-Expected: **8/8 tests passed** — loads 124k jobs and runs keyword retrieval (~30s).
-
-If you see a `FileNotFoundError`, download `postings_cleaned.csv` from Google Drive and place it at `data/kaggle_cleaned/postings_cleaned.csv`.
-
-### 3. FAISS retrieval (requires vector store files)
-```bash
-cd project
-python -m pytest tests/workflow/test_job_search.py -v
-```
-Expected: **16/16 passed** — loads 471k vectors and runs semantic search (~21s).
-
-If you see a `FileNotFoundError`, download the vector store files from Google Drive and place them at `data/vector_store/`.
-
-### 4. Reranker (contract tests — no external files needed)
-```bash
-cd project
 python -m pytest tests/workflow/test_reranker.py -v
-```
-Expected: **30/30 passed** — all mocked, instant.
+python -m pytest tests/workflow/test_reasoning.py -v
+python -m pytest tests/evaluation/test_run_evaluation.py -v
+python -m pytest tests/evaluation/test_score_results.py -v
+python -m pytest tests/evaluation/test_llm_judge.py -v
 
-### 5. Reranker integration test (requires `GOOGLE_API_KEY` in `.env`)
-```bash
-cd project
-pytest -m integration tests/workflow/test_reranker_integration.py -v
-```
-Expected: **10/10 passed** — runs real Gemma 4 LLM on mock personas and checks behavioral invariants (domain cap, seniority ordering, top job selection). **First run makes a real API call (~3,800 tokens). All subsequent runs are instant from cache.**
+# needs postings_cleaned.csv (~30s)
+python -m pytest tests/workflow/test_bm25.py -v
 
-Invariants checked:
-- Finance/HR jobs score ≤ 20 for a tech candidate (domain cap enforced)
-- Best tech job (Stripe Python/AWS) appears in top 3
-- Mid-level AWS job outscores junior frontend job (seniority logic)
-- All scores in [0, 100], no duplicates, no unknown job_ids
+# needs vector store files (~21s)
+python -m pytest tests/workflow/test_job_search.py -v
 
-If 10/10 pass → reranker is working correctly on real data. Proceed to manual labeling.
+# needs GOOGLE_API_KEY (cached after first run)
+python -m pytest -m integration tests/workflow/test_reranker_integration.py -v
 
-### 6. CV Pipeline Testing (cv_reader + cv_profiler)
-```bash
-cd project
-python -m tests.workflow.test_cv_profiler                    # scan all PDFs in data/resumes/
-python -m tests.workflow.test_cv_profiler data/resumes/cv.pdf  # test single file
+# needs GOOGLE_API_KEY + PDFs in data/resumes/
+python -m tests.workflow.test_cv_profiler
 ```
 
-**Supported Formats:** PDF only. DOCX and other formats are not supported — convert to PDF first (e.g., LibreOffice).
-
-**Results Location:**
-- **Raw extracted text:** `iterations/cv_extraction_results.md` (Step 1: PDF → raw text via vision LLM)
-- **Structured profile JSON:** `iterations/cv_profiler_results.md` (Step 2: raw text → CVProfile)
-
-Check both files to compare extraction quality and profiling accuracy. Share these files with teammates for validation.
-
-**Prompts Location:**
-LLM prompts are decoupled from code for easier iteration:
-- Vision extraction prompt: `src/prompts/cv_reader.md`
-- Text profiling system prompt: `src/prompts/cv_profiler.md`
-
-Edit these `.md` files directly to tweak extraction/profiling behavior without touching Python.
-
-**Caching & Cache Clearing:**
-Both `cv_reader` and `cv_profiler` use disk-based caching (content-keyed) to avoid redundant API calls:
-- Same PDF file (even if renamed) → cache hit → zero vision API cost
-- Same extracted text from different PDFs → cache hit → zero Gemma API cost
-
-**After code fixes, clear the cache before re-testing:**
-```bash
-rm -rf .cache/cv_reader .cache/cv_profiler
-python -m tests.workflow.test_cv_profiler data/resumes/cv.pdf  # fresh API calls
-```
-
-Alternatively, bump the version numbers to trigger cache invalidation automatically:
-- `cv_reader.py`: change `PROMPT_VERSION = "v2"` (also invalidates cache if you modify `src/prompts/cv_reader.md`)
-- `cv_profiler.py`: change `LOGIC_VERSION = "v5"` (also invalidates cache if you modify `src/prompts/cv_profiler.md`)
+Total: **129 tests** across workflow + evaluation.
 
 ---
 
-## Developing with Mock Data
-
-The mock data in `src/workflow/mocks.py` provides stable test fixtures so each pipeline component can be developed and tested independently without needing the full stack running.
-
-```python
-from src.workflow.mocks import (
-    mock_cv_mid_tech,           # CVProfile: 5yrs Python/React, San Francisco
-    mock_cv_senior_finance,     # CVProfile: 12yrs SAP/CPA, New York
-    mock_cv_junior_hr,          # CVProfile: 2yrs recruiting/SHRM-CP, Chicago
-    mock_preferences_mid_tech,  # JobSearchPreferences: remote, full-time
-    mock_job_records,           # list[JobRecord]: 10 realistic Kaggle samples
-)
-```
-
-**Mock job records include edge cases:**
-- `k004` — null salary
-- `k005` — fully remote role
-- `k006` — part-time work type
-- `k009` — geographic mismatch (Seattle job for SF candidate)
-
-See `iterations/mocks.md` for full mock data specification and usage examples.
-
----
-
-## BM25 Baseline
-
-Keyword-based retrieval using BM25 — the evaluation baseline that the semantic pipeline is measured against.
-
-```python
-from src.evaluation.baseline_bm25 import BM25Retriever
-from src.workflow.models import CVProfile, JobSearchPreferences
-
-retriever = BM25Retriever()
-results = retriever.search(cv_profile, preferences, k=20, source="kaggle")
-# Returns list[JobRecord] sorted by BM25 score
-```
-
-**Design notes:**
-- Always use `source="kaggle"` — evaluation is Kaggle-only per project scope
-- Location is not included as a BM25 query token (Kaggle is ~99% US jobs; location adds noise)
-- Seniority hard filter applied post-retrieval (entry CVs exclude Director/VP; senior CVs exclude intern/entry)
-
----
-
-## Loading the FAISS Index
-
-The index is built with raw FAISS (not LangChain). Handled by `src/workflow/job_search.py`.
-
-- `data/vector_store/faiss_minilm.index` — FAISS `IndexFlatIP`, L2-normalized vectors (cosine similarity)
-- `data/vector_store/docstore_minilm.json` — parallel list of `{page_content, metadata}` dicts
-
-**Model:** `all-MiniLM-L6-v2`, 384 dimensions, 256-token hard limit.
-**Index stats:** 471,671 vectors from 124,806 jobs (v2 build, paragraph-based chunking).
-
-**Important:** The docstore index order matches the FAISS index exactly — `job_texts[i]` and `job_metadata[i]` correspond to vector `i`. Verified by `assert len(job_texts) == index.ntotal` at load time.
-
----
-
-## Data Schemas
-
-### `src/data_pipeline/schemas.py` — `JobDocument`
-Internal pipeline schema. Used by data build scripts only.
-
-### `src/workflow/models.py` — `JobRecord`, `CVProfile`, `JobSearchPreferences`
-Workflow-level schemas used by all pipeline components. `JobRecord` is `JobDocument` + `score`.
-
-```python
-from src.workflow.models import JobRecord, CVProfile, JobSearchPreferences
-```
-
-**`CVProfile`** — factual data extracted from the CV (who the person is):
-skills, experience_level, years_experience, current_location, education_level, certifications, job_titles_held, industries, domain_keywords, tools
-
-**`JobSearchPreferences`** — user-provided intent (what they want):
-target_location, work_type, willing_to_relocate, target_roles, remote_preference
-
----
-
-## Data Directory
+## Data
 
 ```
 data/
-├── kaggle_raw/          ← Download from Kaggle (gitignored, ~500MB)
-├── kaggle_cleaned/      ← parse_kaggle.py output (shared via Google Drive)
-│   ├── postings_cleaned.csv
-│   └── data_quality_report.txt
+├── kaggle_cleaned/
+│   └── postings_cleaned.csv         123,849 rows (deduplicated by title+company)
 ├── arbeitnow/
-│   └── arbeitnow_jobs.json   ← frozen evaluation snapshot (957 jobs)
-├── vector_store/        ← shared via Google Drive (gitignored)
-│   ├── faiss_minilm.index      ← all-MiniLM-L6-v2 index
-│   └── docstore_minilm.json    ← parallel docstore
-└── resumes/             ← test CV files (PDF or txt)
+│   └── arbeitnow_jobs.json          957 jobs (frozen API snapshot)
+├── vector_store/                    (shared via Google Drive)
+│   ├── faiss_minilm.index           371,535 vectors, all-MiniLM-L6-v2, 384 dims
+│   ├── docstore_minilm.json         371,535 entries (title + metadata per chunk)
+│   └── job_descriptions_minilm.json {job_id: full_description} lookup (97,685 entries)
+└── resumes/                         persona PDFs (one per evaluator)
 ```
+
+`job_descriptions_minilm.json` is required — without it, FAISS retrieval returns jobs with empty descriptions.
 
 ---
 
-## Data Pipeline (Phase 1 — Already Complete)
+## Caching
 
-The Kaggle parsing and Arbeitnow fetch were run once and their outputs are frozen. The vector store was rebuilt with corrected token handling (v2) and is shared via Google Drive.
+All LLM components cache to disk under `.cache/`. Same input = zero API cost on re-run.
 
-| Script | What it does | Output |
-|--------|-------------|--------|
-| `parse_kaggle.py` | Cleans Kaggle CSV, joins skills + industries | `postings_cleaned.csv` |
-| `fetch_arbeitnow.py` | Fetches Arbeitnow API snapshot | `arbeitnow_jobs.json` |
-| `build_vector_store_minilm.py` | Embeds all jobs, builds FAISS index | `faiss_minilm.index` + `docstore_minilm.json` |
+To force a fresh run after changing logic, clear the relevant cache:
 
-For full pipeline details and iteration notes, see `iterations/` folder.
+```bash
+rm -rf .cache/cv_reader .cache/cv_profiler .cache/reasoning .cache/reranker
+```
+
+Or bump the `LOGIC_VERSION` / `PROMPT_VERSION` constant inside the file.
+
+| Prompt changed | Clear this | What re-runs |
+|---------------|------------|-------------|
+| `reasoning.md` | `.cache/reasoning` | 60 reasoning calls |
+| `reranker.md` | `.cache/reranker` | reranking + 60 reasoning calls |
+| `cv_profiler.md` | `.cache/cv_profiler` | everything downstream |
+
+**Note:** If job descriptions change (index rebuild), clear `.cache/reranker` — the reranker cache key hashes job IDs + scores only, not descriptions.
+
+---
+
+## Mock data
+
+```python
+from src.workflow.mocks import (
+    mock_cv_mid_tech,
+    mock_cv_senior_finance,
+    mock_cv_junior_hr,
+    mock_preferences_mid_tech,
+    mock_job_records,
+)
+```
+
+Use these to develop and test components without the full stack.

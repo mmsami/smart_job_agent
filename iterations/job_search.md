@@ -182,3 +182,67 @@ tests/workflow/test_job_search.py — 16 passed in 21s
 ## Next Step
 
 Phase 2c: `reranker.py` — Gemma 4 31B scores the top-20 in a single batch call, returns top-10 sorted by relevance.
+
+---
+
+## Iteration 6 — Integration Gap Fix (2026-05-01)
+
+Discovered during full pipeline integration check (FAISS → reranker → reasoning).
+
+### Gap: `search_jobs()` output incompatible with reranker
+
+`search_jobs()` returns `list[dict]` with key `"job_description"` (the embedded chunk text). The reranker and reasoning layers expect `list[JobRecord]` with a `.description` field containing full metadata text. No typed interface existed between the two.
+
+**Fix: Added `retrieve_jobs()` as the public pipeline interface**
+
+```python
+def retrieve_jobs(
+    cv: CVProfile,
+    prefs: JobSearchPreferences,
+    top_k: int = 20,
+    source: Optional[str] = "kaggle",
+) -> list[JobRecord]:
+```
+
+`retrieve_jobs()` wraps embed → search → convert to `JobRecord`. The description field pulls from `r.get("description", "")` (full metadata text), not the embedded chunk. `search_jobs()` is unchanged — it still returns `list[dict]` and its 16 tests continue to pass.
+
+**Over-fetch pattern:** When `source` is set, fetches `top_k + 20` raw results before filtering to ensure we still get `top_k` after source exclusion. Kaggle is 99.2% of the index so `+20` is always sufficient.
+
+### Gap: Source filter default mismatch
+
+`BM25Retriever.search()` defaulted to `source=None` (full index). `retrieve_jobs()` defaulted to `source="kaggle"`. Evaluation compares the two methods on the same data — mismatched defaults would silently skew results.
+
+**Fix:** Changed `BM25Retriever.search()` and `search_bm25()` default to `source="kaggle"` for consistency.
+
+### Module-level load guard
+
+Wrapped the module-level `faiss.read_index()` call in a try/except:
+
+```python
+try:
+    index = faiss.read_index(str(INDEX_PATH))
+    ...
+except FileNotFoundError:
+    index = None
+    job_texts = []; job_metadata = []
+    logger.warning("FAISS index not found...")
+```
+
+`retrieve_jobs()` checks `if index is None` and raises `RuntimeError` with the download path. Previously, a missing index file crashed at import time with an unhelpful `FileNotFoundError`, breaking any module that imported `job_search`.
+
+### Test coverage added (9 new tests)
+
+```
+TestRetrieveJobs (9):
+  test_returns_list_of_job_records
+  test_returns_correct_count
+  test_all_required_fields_present
+  test_description_is_full_text_not_chunk
+  test_source_filter_kaggle_only
+  test_source_none_returns_full_index
+  test_scores_descending
+  test_score_is_float_on_job_record
+  test_finance_persona_differs_from_tech
+```
+
+Total: 25/25 passing (16 original + 9 new).

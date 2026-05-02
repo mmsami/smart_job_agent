@@ -97,6 +97,8 @@ v2 index to be built locally. Expected chunk count slightly higher (more chunks 
 
 ---
 
+---
+
 ## 6. v2 Rebuild Results (2026-04-20)
 
 ### Build Stats
@@ -144,3 +146,84 @@ v1 returned "Account Executive" (generic). v2 returns "Vice President, Business 
 ### Conclusion
 
 The token fix had a real impact on seniority and domain disambiguation. The index is ready for the retriever layer (`job_search.py`). The two previously failing queries now pass. Remaining weaknesses (accessibility signal, seniority precision at the CFO level) are expected Bi-encoder limitations and are addressed by the LLM reranker in Phase 2b.
+
+---
+
+## 7. Iteration 3: Embedding Model Comparison (2026-05-01)
+
+### Objective: Moving beyond all-MiniLM-L6-v2
+While MiniLM is an excellent coarse filter, its 384-dimensional space is relatively small. For Experiment C of the project evaluation, we are introducing a stronger semantic baseline: **`all-mpnet-base-v2`**.
+
+**Why MPNet?**
+- **Dimensionality:** 768-dim (vs 384-dim for MiniLM), allowing for finer-grained semantic distinctions.
+- **MTEB Performance:** Consistently outperforms MiniLM in semantic similarity and clustering, particularly for professional domains (e.g., distinguishing between similar but different job titles).
+- **Efficiency:** Still runs locally on a laptop; no cloud API cost/latency, but provides near-frontier local embedding quality.
+
+### Technical Specifications (`build_vector_store_mpnet.py`)
+
+- **Model:** `all-mpnet-base-v2`
+- **Token Limit:** 384 tokens (increased from 256).
+- **Chunking:**
+  - `MODEL_MAX_TOKENS = 384`
+  - `MAX_WORDS ≈ 295` (computed as $384 / 1.3$). This allows for ~50% more content per chunk than MiniLM.
+  - `OVERLAP_WORDS ≈ 38`.
+- **Index Assets:**
+  - Index: `data/vector_store/faiss_mpnet.index`
+  - Docstore: `data/vector_store/docstore_mpnet.json`
+
+### Experimental Role
+The MPNet index is built to isolate the **Embedding Quality** variable. By comparing Precision@10 between the MiniLM and MPNet pipelines (all other variables constant), we can quantify the gain provided by a higher-capacity embedding model.
+
+**Expected outcome:** Improved domain disambiguation (e.g., fixing the "Accessibility" signal weakness) and better seniority matching before the reranker is even applied.
+
+### How to run the mpnet pipeline (if time permits)
+
+**Step 1 — Build the index**
+```bash
+cd project
+python -m src.data_pipeline.build_vector_store_mpnet
+```
+Outputs `faiss_mpnet.index`, `docstore_mpnet.json`, `job_descriptions_mpnet.json` to `data/vector_store/`.
+Expected build time: ~2–3 hrs on M1 Max (768-dim, larger batch than MiniLM).
+
+**Step 2 — Swap paths in `job_search.py`**
+
+Change the 3 file constants at the top of `src/workflow/job_search.py`:
+```python
+# from
+INDEX_PATH       = "...faiss_minilm.index"
+DOCSTORE_PATH    = "...docstore_minilm.json"
+DESCRIPTIONS_PATH = "...job_descriptions_minilm.json"
+
+# to
+INDEX_PATH       = "...faiss_mpnet.index"
+DOCSTORE_PATH    = "...docstore_mpnet.json"
+DESCRIPTIONS_PATH = "...job_descriptions_mpnet.json"
+```
+
+**Step 3 — Swap embed model in `run_evaluation.py`**
+
+In `src/evaluation/run_evaluation.py`, change `_get_embed_model()`:
+```python
+# from
+SentenceTransformer("all-MiniLM-L6-v2")
+# to
+SentenceTransformer("all-mpnet-base-v2")
+```
+
+**Step 4 — Clear stale cache and results**
+```bash
+rm -rf evaluation/results/ .cache/reranker
+```
+
+**Step 5 — Re-run evaluation**
+```bash
+python -m src.evaluation.run_evaluation
+```
+
+### What to compare
+
+Run `score_results.py` on both minilm and mpnet result sets (save results in separate folders) and compare Precision@10 per method. The delta isolates embedding model quality, all other variables constant (same reranker, same reasoning model, same CV, same jobs).
+
+### Status
+`build_vector_store_mpnet.py` is complete and tested. Index **not yet built** — requires ~2–3 hrs and ~2 GB disk. Planned as optional Experiment C if evaluation timeline permits.
