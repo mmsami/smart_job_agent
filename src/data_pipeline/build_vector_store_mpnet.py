@@ -1,20 +1,20 @@
 """
-Build the FAISS vector index from Kaggle + Arbeitnow job documents.
+Build the FAISS vector index from Kaggle + Arbeitnow job documents using all-mpnet-base-v2.
 
 Loads both sources, maps to JobDocument, applies paragraph-based chunking
-with fixed-size fallback (196 words ≈ 256 tokens, ~38-word overlap), embeds
-with all-MiniLM-L6-v2, and saves the index to data/vector_store/.
+with fixed-size fallback (approx 295 words ≈ 384 tokens, ~38-word overlap), embeds
+with all-mpnet-base-v2, and saves the index to data/vector_store/.
 
 Naming convention: script and output files include the model short-name so
-that switching to a different model (e.g. all-mpnet-base-v2) produces a
+that switching to a different model (e.g. all-MiniLM-L6-v2) produces a
 separate index without overwriting this one.
 
 Usage:
-    python -m src.data_pipeline.build_vector_store_minilm
+    python -m src.data_pipeline.build_vector_store_mpnet
 
 Output:
-    data/vector_store/faiss_minilm.index   — FAISS flat index (normalized, cosine-ready)
-    data/vector_store/docstore_minilm.json — parallel list of metadata + page_content
+    data/vector_store/faiss_mpnet.index   — FAISS flat index (normalized, cosine-ready)
+    data/vector_store/docstore_mpnet.json — parallel list of metadata + page_content
 
 Prerequisites:
     data/kaggle_cleaned/postings_cleaned.csv   (from parse_kaggle.py)
@@ -40,17 +40,17 @@ except ImportError:
 logger = logging.getLogger(__name__)
 
 # ── Config ─────────────────────────────────────────────────────────────
-EMBED_MODEL = "all-MiniLM-L6-v2"
+EMBED_MODEL = "all-mpnet-base-v2"
 
-# all-MiniLM-L6-v2 hard token limit is 256 word-pieces.
-# Word count approximation: tokens ≈ words × 1.3, so max safe words ≈ 196.
+# all-mpnet-base-v2 hard token limit is 384 tokens.
+# Word count approximation: tokens ≈ words × 1.3, so max safe words ≈ 295.
 # Prefix ("Title at Company. Skills. ") is prepended per chunk — its word
 # count is subtracted in build_chunks to keep total under the model limit.
-MODEL_MAX_TOKENS = 256                        # hard limit for all-MiniLM-L6-v2
-MAX_WORDS = int(MODEL_MAX_TOKENS / 1.3)       # ≈ 196 words → safe chunk body
+MODEL_MAX_TOKENS = 384                        # hard limit for all-mpnet-base-v2
+MAX_WORDS = int(MODEL_MAX_TOKENS / 1.3)       # ≈ 295 words → safe chunk body
 OVERLAP_WORDS = int(50 / 1.3)                 # ≈ 38 words overlap between windows
 
-BATCH_SIZE = 512  # embedding batch size
+BATCH_SIZE = 256  # Slightly smaller batch size than MiniLM as mpnet is larger
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -59,9 +59,9 @@ ARBEITNOW_JSON = os.path.join(DATA_DIR, "arbeitnow", "arbeitnow_jobs.json")
 VECTOR_DIR = os.path.join(DATA_DIR, "vector_store")
 os.makedirs(VECTOR_DIR, exist_ok=True)
 
-INDEX_PATH = os.path.join(VECTOR_DIR, "faiss_minilm.index")
-DOCSTORE_PATH = os.path.join(VECTOR_DIR, "docstore_minilm.json")
-DESCRIPTIONS_PATH = os.path.join(VECTOR_DIR, "job_descriptions_minilm.json")
+INDEX_PATH = os.path.join(VECTOR_DIR, "faiss_mpnet.index")
+DOCSTORE_PATH = os.path.join(VECTOR_DIR, "docstore_mpnet.json")
+DESCRIPTIONS_PATH = os.path.join(VECTOR_DIR, "job_descriptions_mpnet.json")
 
 
 def get_str(value: object) -> Optional[str]:
@@ -243,7 +243,7 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
     print("=" * 60)
-    print("Build FAISS Vector Store (all-MiniLM-L6-v2)")
+    print("Build FAISS Vector Store (all-mpnet-base-v2)")
     print("=" * 60)
 
     # Load both sources

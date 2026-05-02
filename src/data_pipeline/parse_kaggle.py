@@ -176,7 +176,7 @@ def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     report.append("Experience level distribution:")
     exp_counts = df["formatted_experience_level"].value_counts(dropna=False)
     for val, cnt in exp_counts.items():
-        label = val if bool(pd.notna(val)) else "(null)"
+        label = val if pd.notna(val) else "(null)"
         report.append(f"  {label:25s}: {cnt:>7,} ({cnt / len(df) * 100:.1f}%)")
 
     # Skill labels coverage
