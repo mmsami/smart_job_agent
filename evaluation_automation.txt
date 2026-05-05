@@ -140,11 +140,22 @@ step 2 — label the MD files (manual, one-time per persona)
 
       inter-rater reliability (required for H4):
         pick 1 persona. two people label it independently WITHOUT comparing first.
-        practical: person A labels it locally but does NOT commit yet.
-        person B also labels it locally in their own branch.
-        compare the two sets of Relevant labels side by side.
-        then one version gets committed — note the agreement rate in the report.
-        cohen's kappa is computed automatically by llm_judge.py against human labels.
+        no code changes needed for either approach below — score_results.py only
+        reads files named exactly {METHOD}_{model}.md so any copy is ignored automatically.
+
+        option A — label before committing (simpler):
+          both people label their local copy of the shared persona's gemma files
+          without pushing. share results via screenshot or message. compare manually.
+          agree on final labels, one person commits that version.
+          report the agreement rate as a sentence in the paper.
+
+        option B — copy files for rater 2 (cleaner audit trail):
+          before anyone labels, copy the shared persona's gemma MDs:
+            cp FAISS_PARSED_gemma.md FAISS_PARSED_gemma_rater2.md  (repeat for all 6 methods)
+          person A labels the original files. person B labels the _rater2 copies.
+          both commit their files. compare side by side after.
+          score_results.py ignores the _rater2 files — no impact on scoring.
+          better for showing the professor independent evidence.
 
 step 3 — compute scores
     python -m src.evaluation.score_results
