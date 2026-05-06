@@ -288,7 +288,7 @@ def build_report(p10_data: dict, quality_data: dict, qualitative: dict) -> str:
     )
 
     header2 = "| Method | " + " | ".join(MODELS) + " |"
-    sep2    = "|--------|" + "--------|" * len(MODELS)
+    sep2    = "|--------|" + "--------|" * len(MODELS) + "|"
     lines += [header2, sep2]
 
     for method in METHODS:

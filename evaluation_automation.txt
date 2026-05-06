@@ -75,7 +75,6 @@ to generate the job match explanations. reranking is always Gemma regardless of
 which reasoning model is used — this isolates explanation quality from retrieval.
 
 current matrix: 10 personas x 6 method groups x 3 models = 180 result files
-(+ 10 FAISS_PARSED_NORERANK files for H3 baseline = 190 total)
 method groups: BM25_RAW, BM25_PARSED, FAISS_RAW, FAISS_PARSED, FAISS_PARSED_NORERANK, FAISS_PARSED_MPNET
 (add CVs to data/resumes/ and re-run step 1 — existing results are preserved)
 
