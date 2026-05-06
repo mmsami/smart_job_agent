@@ -51,6 +51,7 @@ def _get_embed_model():
     global _EMBED_MODEL
     if _EMBED_MODEL is None:
         from sentence_transformers import SentenceTransformer
+
         _EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
     return _EMBED_MODEL
 
@@ -59,6 +60,7 @@ def _get_mpnet_model():
     global _MPNET_MODEL
     if _MPNET_MODEL is None:
         from sentence_transformers import SentenceTransformer
+
         _MPNET_MODEL = SentenceTransformer("all-mpnet-base-v2")
     return _MPNET_MODEL
 
@@ -159,7 +161,11 @@ def perform_retrieval(
     prefs: JobSearchPreferences,
     bm25: BM25Retriever,
 ) -> list[JobRecord]:
-    """Handles the 4 different retrieval combinations."""
+    """Handles the different retrieval combinations."""
+
+    # 1. Initialize variables once at the function level
+    records: list[JobRecord] = []
+    seen: set[str] = set()
 
     if method == "bm25_raw":
         raw_prof = get_raw_profile(raw_text)
@@ -168,79 +174,74 @@ def perform_retrieval(
     elif method == "bm25_parsed":
         return bm25.search(profile, prefs, k=RETRIEVAL_K)
 
-    elif method == "faiss_raw":
-        raw_vec = _get_embed_model().encode([raw_text], convert_to_numpy=True).astype("float32")
-        faiss_lib.normalize_L2(raw_vec)
-        raw = search_jobs(raw_vec, index, job_texts, job_metadata, top_k=RETRIEVAL_K + 40)
-        records: list[JobRecord] = []
-        seen: set[str] = set()
-        for r in raw:
-            if r.get("source") != "kaggle":
-                continue
-            job_id = str(r.get("job_id", ""))
-            if job_id in seen:
-                continue
-            seen.add(job_id)
-            records.append(JobRecord(
-                job_id=job_id,
-                title=str(r.get("title", "")),
-                company=str(r.get("company", "")),
-                description=job_descriptions.get(job_id, ""),
-                location=r.get("location"),
-                experience_level=r.get("experience_level"),
-                work_type=r.get("work_type"),
-                min_salary=float(r["min_salary"]) if r.get("min_salary") is not None else None,
-                max_salary=float(r["max_salary"]) if r.get("max_salary") is not None else None,
-                url=r.get("url"),
-                skill_labels=r.get("skill_labels"),
-                source=str(r.get("source", "kaggle")),
-                score=float(r["score"]),
-            ))
-            if len(records) >= RETRIEVAL_K:
-                break
-        return records
-
     elif method == "faiss_parsed":
         return retrieve_jobs(profile, prefs, top_k=RETRIEVAL_K)
 
+    # 2. Handle FAISS methods
+    if method == "faiss_raw":
+        raw_vec = (
+            _get_embed_model()
+            .encode([raw_text], convert_to_numpy=True)
+            .astype("float32")
+        )
+        faiss_lib.normalize_L2(raw_vec)
+        raw_results = search_jobs(
+            raw_vec, index, job_texts, job_metadata, top_k=RETRIEVAL_K + 40
+        )
+        current_descriptions = job_descriptions  # Use a local ref for consistency
+
     elif method == "faiss_parsed_mpnet":
-        mpnet_index, mpnet_texts, mpnet_metadata, mpnet_descriptions = _get_mpnet_assets()
+        mpnet_index, mpnet_texts, mpnet_metadata, mpnet_descriptions = (
+            _get_mpnet_assets()
+        )
         mpnet_model = _get_mpnet_model()
         from src.workflow.job_search import serialize_cv_profile, serialize_preferences
+
         combined = f"Candidate profile: {serialize_cv_profile(profile)}. Job preferences: {serialize_preferences(prefs)}"
         vec = mpnet_model.encode([combined], convert_to_numpy=True).astype("float32")
         faiss_lib.normalize_L2(vec)
-        raw = search_jobs(vec, mpnet_index, mpnet_texts, mpnet_metadata, top_k=RETRIEVAL_K + 40)
-        records: list[JobRecord] = []
-        seen: set[str] = set()
-        for r in raw:
-            if r.get("source") != "kaggle":
-                continue
-            job_id = str(r.get("job_id", ""))
-            if job_id in seen:
-                continue
-            seen.add(job_id)
-            records.append(JobRecord(
+        raw_results = search_jobs(
+            vec, mpnet_index, mpnet_texts, mpnet_metadata, top_k=RETRIEVAL_K + 40
+        )
+        current_descriptions = mpnet_descriptions
+
+    else:
+        raise ValueError(f"Unknown method: {method}")
+
+    # 3. Shared processing logic (avoids duplicating the JobRecord loop)
+    for r in raw_results:
+        if r.get("source") != "kaggle":
+            continue
+        job_id = str(r.get("job_id", ""))
+        if job_id in seen:
+            continue
+
+        seen.add(job_id)
+        records.append(
+            JobRecord(
                 job_id=job_id,
                 title=str(r.get("title", "")),
                 company=str(r.get("company", "")),
-                description=mpnet_descriptions.get(job_id, ""),
+                description=current_descriptions.get(job_id, ""),
                 location=r.get("location"),
                 experience_level=r.get("experience_level"),
                 work_type=r.get("work_type"),
-                min_salary=float(r["min_salary"]) if r.get("min_salary") is not None else None,
-                max_salary=float(r["max_salary"]) if r.get("max_salary") is not None else None,
+                min_salary=float(r["min_salary"])
+                if r.get("min_salary") is not None
+                else None,
+                max_salary=float(r["max_salary"])
+                if r.get("max_salary") is not None
+                else None,
                 url=r.get("url"),
                 skill_labels=r.get("skill_labels"),
                 source=str(r.get("source", "kaggle")),
                 score=float(r["score"]),
-            ))
-            if len(records) >= RETRIEVAL_K:
-                break
-        return records
+            )
+        )
+        if len(records) >= RETRIEVAL_K:
+            break
 
-    else:
-        raise ValueError(f"Unknown method: {method}")
+    return records
 
 
 # ── MD Preview ───────────────────────────────────────────────────────────────
@@ -275,9 +276,15 @@ def save_md_preview(
     ]
 
     if profile:
-        skills_str = ", ".join(profile.skills[:12]) + ("…" if len(profile.skills) > 12 else "")
+        skills_str = ", ".join(profile.skills[:12]) + (
+            "…" if len(profile.skills) > 12 else ""
+        )
         industries_str = ", ".join(profile.industries) or "not specified"
-        edu = f"{profile.education_level} in {profile.field_of_study}" if profile.education_level else "not specified"
+        edu = (
+            f"{profile.education_level} in {profile.field_of_study}"
+            if profile.education_level
+            else "not specified"
+        )
         lines += [
             "## Candidate Profile",
             "",
@@ -324,10 +331,16 @@ def save_md_preview(
             hi = f"${job.max_salary:,.0f}" if job.max_salary else "?"
             salary = f" | Salary: {lo}–{hi}"
 
-        desc = (job.description[:800] + "…") if len(job.description) > 800 else job.description
+        desc = (
+            (job.description[:800] + "…")
+            if len(job.description) > 800
+            else job.description
+        )
 
         match_reason = exp.match_reason if exp else "—"
-        missing = ", ".join(exp.missing_skills) if exp and exp.missing_skills else "None"
+        missing = (
+            ", ".join(exp.missing_skills) if exp and exp.missing_skills else "None"
+        )
 
         lines += [
             f"### {i}. {job.title} @ {job.company}",
@@ -389,7 +402,9 @@ def _save_combo(
     }
 
     json_path.write_text(json.dumps(result_data, indent=2))
-    save_md_preview(md_path, persona_id, method_name, model, top_10, report, profile=parsed_profile)
+    save_md_preview(
+        md_path, persona_id, method_name, model, top_10, report, profile=parsed_profile
+    )
     return f"done {model}"
 
 
@@ -454,7 +469,9 @@ def _run_persona(pdf_path: Path, bm25: BM25Retriever) -> dict:
                 method_id, raw_text, parsed_profile, DEFAULT_PREFS, bm25
             )
         except Exception as e:
-            logger.exception(f"  [{persona_id}] Retrieval failed for {method_name}: {e}")
+            logger.exception(
+                f"  [{persona_id}] Retrieval failed for {method_name}: {e}"
+            )
             counts["failed"] += len(MODELS)
             continue
 
@@ -462,8 +479,12 @@ def _run_persona(pdf_path: Path, bm25: BM25Retriever) -> dict:
         if method_name == "FAISS_PARSED":
             logger.info(f"  [{persona_id}] Saving H3 baseline: FAISS_PARSED_NORERANK")
             _run_models_parallel(
-                "FAISS_PARSED_NORERANK", top_20[:RERANK_K],
-                persona_dir, persona_id, parsed_profile, counts,
+                "FAISS_PARSED_NORERANK",
+                top_20[:RERANK_K],
+                persona_dir,
+                persona_id,
+                parsed_profile,
+                counts,
             )
 
         try:
@@ -474,7 +495,9 @@ def _run_persona(pdf_path: Path, bm25: BM25Retriever) -> dict:
                 use_cache=True,
             )
         except Exception as e:
-            logger.exception(f"  [{persona_id}] Reranking failed for {method_name}: {e}")
+            logger.exception(
+                f"  [{persona_id}] Reranking failed for {method_name}: {e}"
+            )
             counts["failed"] += len(MODELS)
             continue
 
@@ -516,7 +539,9 @@ def run_evaluation():
     # +1 for FAISS_PARSED_NORERANK (H3 pre-rerank baseline, derived from FAISS_PARSED)
     # METHODS already includes FAISS_PARSED_MPNET (6 methods total)
     total = len(pdf_files) * (len(METHODS) + 1) * len(MODELS)
-    logger.info(f"Found {len(pdf_files)} personas — running {PERSONA_WORKERS} in parallel.")
+    logger.info(
+        f"Found {len(pdf_files)} personas — running {PERSONA_WORKERS} in parallel."
+    )
 
     totals = {"done": 0, "skipped": 0, "failed": 0}
 
