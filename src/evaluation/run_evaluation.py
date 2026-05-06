@@ -43,6 +43,8 @@ load_dotenv()
 
 # Loaded once before the parallel loop — avoids race condition across persona threads
 _EMBED_MODEL = None
+_MPNET_MODEL = None
+_MPNET_ASSETS = None  # (index, job_texts, job_metadata, job_descriptions)
 
 
 def _get_embed_model():
@@ -51,6 +53,44 @@ def _get_embed_model():
         from sentence_transformers import SentenceTransformer
         _EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
     return _EMBED_MODEL
+
+
+def _get_mpnet_model():
+    global _MPNET_MODEL
+    if _MPNET_MODEL is None:
+        from sentence_transformers import SentenceTransformer
+        _MPNET_MODEL = SentenceTransformer("all-mpnet-base-v2")
+    return _MPNET_MODEL
+
+
+def _get_mpnet_assets():
+    global _MPNET_ASSETS
+    if _MPNET_ASSETS is not None:
+        return _MPNET_ASSETS
+
+    data_dir = Path(__file__).parent.parent.parent / "data" / "vector_store"
+    index_path = data_dir / "faiss_mpnet.index"
+    docstore_path = data_dir / "docstore_mpnet.json"
+    descriptions_path = data_dir / "job_descriptions_mpnet.json"
+
+    if not index_path.exists():
+        raise FileNotFoundError(
+            f"MPNet index not found at {index_path}. "
+            "Run: python -m src.data_pipeline.build_vector_store_mpnet"
+        )
+
+    mpnet_index = faiss_lib.read_index(str(index_path), faiss_lib.IO_FLAG_MMAP)
+    with open(docstore_path, encoding="utf-8") as f:
+        docstore = json.load(f)
+    with open(descriptions_path, encoding="utf-8") as f:
+        mpnet_descriptions = json.load(f)
+
+    mpnet_texts = [d["page_content"] for d in docstore]
+    mpnet_metadata = [d["metadata"] for d in docstore]
+
+    _MPNET_ASSETS = (mpnet_index, mpnet_texts, mpnet_metadata, mpnet_descriptions)
+    logger.info(f"Loaded MPNet index: {mpnet_index.ntotal:,} vectors")
+    return _MPNET_ASSETS
 
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -70,12 +110,14 @@ Provider = Literal["gemma", "deepseek", "claude"]
 # Experiment B: 3 reasoning LLMs (reranker is always Gemma)
 MODELS: list[Provider] = ["gemma", "deepseek", "claude"]
 
-# Experiment A: 4 retrieval/query combinations
+# Experiment A: retrieval/query combinations
+# FAISS_PARSED_MPNET added per professor feedback: test stronger embedding model
 METHODS = {
     "BM25_RAW": "bm25_raw",
     "BM25_PARSED": "bm25_parsed",
     "FAISS_RAW": "faiss_raw",
     "FAISS_PARSED": "faiss_parsed",
+    "FAISS_PARSED_MPNET": "faiss_parsed_mpnet",
 }
 
 # Fixed preferences for all personas — isolates retrieval/model effect
@@ -129,32 +171,73 @@ def perform_retrieval(
     elif method == "faiss_raw":
         raw_vec = _get_embed_model().encode([raw_text], convert_to_numpy=True).astype("float32")
         faiss_lib.normalize_L2(raw_vec)
-        raw = search_jobs(raw_vec, index, job_texts, job_metadata, top_k=RETRIEVAL_K)
-        return [
-            JobRecord(
-                job_id=str(r.get("job_id", "")),
+        raw = search_jobs(raw_vec, index, job_texts, job_metadata, top_k=RETRIEVAL_K + 40)
+        records: list[JobRecord] = []
+        seen: set[str] = set()
+        for r in raw:
+            if r.get("source") != "kaggle":
+                continue
+            job_id = str(r.get("job_id", ""))
+            if job_id in seen:
+                continue
+            seen.add(job_id)
+            records.append(JobRecord(
+                job_id=job_id,
                 title=str(r.get("title", "")),
                 company=str(r.get("company", "")),
-                description=job_descriptions.get(str(r.get("job_id", "")), ""),
+                description=job_descriptions.get(job_id, ""),
                 location=r.get("location"),
                 experience_level=r.get("experience_level"),
                 work_type=r.get("work_type"),
-                min_salary=float(r["min_salary"])
-                if r.get("min_salary") is not None
-                else None,
-                max_salary=float(r["max_salary"])
-                if r.get("max_salary") is not None
-                else None,
+                min_salary=float(r["min_salary"]) if r.get("min_salary") is not None else None,
+                max_salary=float(r["max_salary"]) if r.get("max_salary") is not None else None,
                 url=r.get("url"),
                 skill_labels=r.get("skill_labels"),
                 source=str(r.get("source", "kaggle")),
                 score=float(r["score"]),
-            )
-            for r in raw
-        ]
+            ))
+            if len(records) >= RETRIEVAL_K:
+                break
+        return records
 
     elif method == "faiss_parsed":
         return retrieve_jobs(profile, prefs, top_k=RETRIEVAL_K)
+
+    elif method == "faiss_parsed_mpnet":
+        mpnet_index, mpnet_texts, mpnet_metadata, mpnet_descriptions = _get_mpnet_assets()
+        mpnet_model = _get_mpnet_model()
+        from src.workflow.job_search import serialize_cv_profile, serialize_preferences
+        combined = f"Candidate profile: {serialize_cv_profile(profile)}. Job preferences: {serialize_preferences(prefs)}"
+        vec = mpnet_model.encode([combined], convert_to_numpy=True).astype("float32")
+        faiss_lib.normalize_L2(vec)
+        raw = search_jobs(vec, mpnet_index, mpnet_texts, mpnet_metadata, top_k=RETRIEVAL_K + 40)
+        records: list[JobRecord] = []
+        seen: set[str] = set()
+        for r in raw:
+            if r.get("source") != "kaggle":
+                continue
+            job_id = str(r.get("job_id", ""))
+            if job_id in seen:
+                continue
+            seen.add(job_id)
+            records.append(JobRecord(
+                job_id=job_id,
+                title=str(r.get("title", "")),
+                company=str(r.get("company", "")),
+                description=mpnet_descriptions.get(job_id, ""),
+                location=r.get("location"),
+                experience_level=r.get("experience_level"),
+                work_type=r.get("work_type"),
+                min_salary=float(r["min_salary"]) if r.get("min_salary") is not None else None,
+                max_salary=float(r["max_salary"]) if r.get("max_salary") is not None else None,
+                url=r.get("url"),
+                skill_labels=r.get("skill_labels"),
+                source=str(r.get("source", "kaggle")),
+                score=float(r["score"]),
+            ))
+            if len(records) >= RETRIEVAL_K:
+                break
+        return records
 
     else:
         raise ValueError(f"Unknown method: {method}")
@@ -415,8 +498,13 @@ def run_evaluation():
     logger.info("Starting Job Market Agent Experimental Suite")
     logger.info("=" * 60)
 
-    # Pre-load embed model before forking threads — avoids race on lazy init
+    # Pre-load models before forking threads — avoids race on lazy init
     _get_embed_model()
+    try:
+        _get_mpnet_assets()
+        _get_mpnet_model()
+    except FileNotFoundError as e:
+        logger.warning(f"MPNet index unavailable — FAISS_PARSED_MPNET will fail: {e}")
 
     bm25_retriever = BM25Retriever()
 
@@ -426,6 +514,7 @@ def run_evaluation():
         return
 
     # +1 for FAISS_PARSED_NORERANK (H3 pre-rerank baseline, derived from FAISS_PARSED)
+    # METHODS already includes FAISS_PARSED_MPNET (6 methods total)
     total = len(pdf_files) * (len(METHODS) + 1) * len(MODELS)
     logger.info(f"Found {len(pdf_files)} personas — running {PERSONA_WORKERS} in parallel.")
 

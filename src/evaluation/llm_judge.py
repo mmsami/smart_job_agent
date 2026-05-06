@@ -25,7 +25,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 RESULTS_DIR = Path(__file__).parent.parent.parent / "evaluation" / "results"
-ALL_METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK"]
+ALL_METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK", "FAISS_PARSED_MPNET"]
 CANONICAL_MODEL = "gemma"
 LLM_JUDGE_MODEL = "anthropic/claude-sonnet-4-6"
 

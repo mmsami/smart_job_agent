@@ -17,6 +17,7 @@ Labeling instructions (fill in the MD files first):
                  Fill this column in ALL THREE model MDs to compare reasoning quality.
 """
 
+import json
 from pathlib import Path
 from collections import defaultdict
 
@@ -24,9 +25,10 @@ import numpy as np
 from scipy.stats import wilcoxon
 
 RESULTS_DIR = Path(__file__).parent.parent.parent / "evaluation" / "results"
-METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK"]
+METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK", "FAISS_PARSED_MPNET"]
 MODELS = ["gemma", "deepseek", "claude"]
 CANONICAL_MODEL = "gemma"  # P@10 uses this model's MD (jobs identical across models)
+DEFAULT_WORK_TYPE = "full-time"  # fixed preference used in run_evaluation.py
 
 
 # ── Parsing ───────────────────────────────────────────────────────────────────
@@ -99,6 +101,67 @@ def wilcoxon_p(a: list[float], b: list[float]) -> float | None:
         return None
 
 
+# ── Qualitative Observations ──────────────────────────────────────────────────
+
+def load_json_results(persona_dir: Path, method: str) -> list[dict]:
+    """Load top-10 job records from the canonical gemma JSON for a method."""
+    json_path = persona_dir / f"{method}_{CANONICAL_MODEL}.json"
+    if not json_path.exists():
+        return []
+    try:
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+        return data.get("results", [])[:10]
+    except Exception:
+        return []
+
+
+def diversity_metrics(jobs: list[dict]) -> dict:
+    """Unique companies, experience levels, and title stems in top-10."""
+    if not jobs:
+        return {}
+    companies = {str(j.get("company", "")).strip().lower() for j in jobs if j.get("company")}
+    levels = {str(j.get("experience_level", "")).strip().lower() for j in jobs if j.get("experience_level")}
+    title_stems = {" ".join(str(j.get("title", "")).split()[:3]).lower() for j in jobs if j.get("title")}
+    return {
+        "unique_companies": len(companies),
+        "unique_levels": len(levels),
+        "unique_title_stems": len(title_stems),
+    }
+
+
+def preference_satisfaction(jobs: list[dict], target_work_type: str = DEFAULT_WORK_TYPE) -> float | None:
+    """Fraction of top-10 jobs where work_type matches stated preference (where metadata exists)."""
+    with_data = [j for j in jobs if j.get("work_type")]
+    if not with_data:
+        return None
+    matched = sum(1 for j in with_data if str(j["work_type"]).lower() == target_work_type.lower())
+    return round(matched / len(with_data), 2)
+
+
+def collect_qualitative(persona_dirs: list[Path]) -> dict:
+    """
+    Returns {method: {"unique_companies": [float], "unique_levels": [float],
+                       "unique_title_stems": [float], "pref_satisfaction": [float]}}
+    """
+    data: dict[str, dict[str, list]] = {
+        m: {"unique_companies": [], "unique_levels": [], "unique_title_stems": [], "pref_satisfaction": []}
+        for m in METHODS
+    }
+    for persona_dir in persona_dirs:
+        for method in METHODS:
+            jobs = load_json_results(persona_dir, method)
+            if not jobs:
+                continue
+            d = diversity_metrics(jobs)
+            for k in ("unique_companies", "unique_levels", "unique_title_stems"):
+                if k in d:
+                    data[method][k].append(d[k])
+            ps = preference_satisfaction(jobs)
+            if ps is not None:
+                data[method]["pref_satisfaction"].append(ps)
+    return data
+
+
 # ── Aggregation ───────────────────────────────────────────────────────────────
 
 def collect_results() -> tuple[dict, dict]:
@@ -140,7 +203,7 @@ def format_val(v: float | None) -> str:
     return f"{v:.2f}" if v is not None else "—"
 
 
-def build_report(p10_data: dict, quality_data: dict) -> str:
+def build_report(p10_data: dict, quality_data: dict, qualitative: dict) -> str:
     persona_ids = sorted({
         pid
         for method_dict in p10_data.values()
@@ -174,33 +237,48 @@ def build_report(p10_data: dict, quality_data: dict) -> str:
 
     lines.append("")
 
-    # ── H3: Reranking delta (FAISS_PARSED vs FAISS_PARSED_NORERANK) ──
-    lines.append("## H3: Reranking Delta (FAISS_PARSED vs FAISS_PARSED_NORERANK)\n")
-    a_scores = method_scores.get("FAISS_PARSED", [])
-    b_scores = method_scores.get("FAISS_PARSED_NORERANK", [])
-    # Align to common personas
-    paired_a, paired_b = [], []
-    for pid in persona_ids:
-        va = p10_data.get("FAISS_PARSED", {}).get(pid)
-        vb = p10_data.get("FAISS_PARSED_NORERANK", {}).get(pid)
-        if va is not None and vb is not None:
-            paired_a.append(va)
-            paired_b.append(vb)
-    if paired_a:
-        avg_reranked  = round(sum(paired_a) / len(paired_a), 3)
-        avg_norerank  = round(sum(paired_b) / len(paired_b), 3)
-        delta         = round(avg_reranked - avg_norerank, 3)
-        p_val         = wilcoxon_p(paired_a, paired_b)
-        p_str         = f"{p_val:.4f}" if p_val is not None else "n/a (need ≥4 paired)"
+    # ── Hypothesis Tests ──────────────────────────────────────────────────────
+
+    def _paired(method_a: str, method_b: str) -> tuple[list, list]:
+        """Extract paired P@10 scores for two methods across common labeled personas."""
+        pa, pb = [], []
+        for pid in persona_ids:
+            va = p10_data.get(method_a, {}).get(pid)
+            vb = p10_data.get(method_b, {}).get(pid)
+            if va is not None and vb is not None:
+                pa.append(va)
+                pb.append(vb)
+        return pa, pb
+
+    def _hypothesis_block(label: str, method_a: str, method_b: str, positive_direction: str) -> None:
+        pa, pb = _paired(method_a, method_b)
+        if not pa:
+            lines.append(f"_Not enough labeled data yet for {label}._\n")
+            return
+        avg_a = round(sum(pa) / len(pa), 3)
+        avg_b = round(sum(pb) / len(pb), 3)
+        delta = round(avg_a - avg_b, 3)
+        p_val = wilcoxon_p(pa, pb)
+        p_str = f"{p_val:.4f}" if p_val is not None else "n/a (need ≥4 paired)"
         lines += [
-            f"- FAISS_PARSED (reranked) avg P@10 = **{avg_reranked}**",
-            f"- FAISS_PARSED_NORERANK avg P@10 = **{avg_norerank}**",
-            f"- Delta = **{delta:+.3f}** (positive = reranking helps)",
+            f"- {method_a} avg P@10 = **{avg_a}**",
+            f"- {method_b} avg P@10 = **{avg_b}**",
+            f"- Delta = **{delta:+.3f}** ({positive_direction})",
             f"- Wilcoxon signed-rank p = {p_str}",
             "",
         ]
-    else:
-        lines.append("_Not enough labeled data yet._\n")
+
+    lines.append("## H1: Semantic vs Keyword Search (FAISS_PARSED vs BM25_PARSED)\n")
+    _hypothesis_block("H1", "FAISS_PARSED", "BM25_PARSED", "positive = FAISS better")
+
+    lines.append("## H2a: Parsed vs Raw Query — Keyword (BM25_PARSED vs BM25_RAW)\n")
+    _hypothesis_block("H2a", "BM25_PARSED", "BM25_RAW", "positive = parsing helps")
+
+    lines.append("## H2b: Parsed vs Raw Query — Semantic (FAISS_PARSED vs FAISS_RAW)\n")
+    _hypothesis_block("H2b", "FAISS_PARSED", "FAISS_RAW", "positive = parsing helps")
+
+    lines.append("## H3: Reranking Delta (FAISS_PARSED vs FAISS_PARSED_NORERANK)\n")
+    _hypothesis_block("H3", "FAISS_PARSED", "FAISS_PARSED_NORERANK", "positive = reranking helps")
 
     # ── Experiment B ──
     lines.append("## Experiment B: Reasoning Quality by Model (avg score 1–5)\n")
@@ -237,7 +315,45 @@ def build_report(p10_data: dict, quality_data: dict) -> str:
         p_str = f"{p:.4f}" if p is not None else "n/a (need ≥4 paired)"
         lines.append(f"- gemma vs {other_model}: p = {p_str}")
 
-    lines += ["", "---", "_Generated by `score_results.py`. — = not yet labeled._"]
+    lines.append("")
+
+    # ── Qualitative Observations ──
+    lines.append("## Qualitative Observations\n")
+    lines.append(
+        "Computed automatically from JSON results (no human labels required). "
+        "Reported as directional evidence — not hypothesis tests.\n"
+    )
+
+    lines.append("### Observation A: Result Diversity (avg across personas)\n")
+    lines.append("| Method | Unique Companies | Unique Levels | Unique Title Stems |")
+    lines.append("|--------|-----------------|---------------|--------------------|")
+
+    def _avg(lst): return f"{sum(lst)/len(lst):.1f}" if lst else "—"
+
+    for method in METHODS:
+        q = qualitative.get(method, {})
+        lines.append(
+            f"| {method} | {_avg(q.get('unique_companies', []))} "
+            f"| {_avg(q.get('unique_levels', []))} "
+            f"| {_avg(q.get('unique_title_stems', []))} |"
+        )
+    lines.append(
+        "\n_10 = maximum diversity. Low unique companies = retriever clustering on one employer._\n"
+    )
+
+    lines.append("### Observation B: Preference Satisfaction (work_type = full-time)\n")
+    lines.append("| Method | % Jobs Matching Preference | Coverage (jobs with work_type metadata) |")
+    lines.append("|--------|---------------------------|----------------------------------------|")
+    for method in METHODS:
+        q = qualitative.get(method, {})
+        ps_list = q.get("pref_satisfaction", [])
+        avg_ps = f"{sum(ps_list)/len(ps_list)*100:.0f}%" if ps_list else "—"
+        lines.append(f"| {method} | {avg_ps} | n={len(ps_list)} personas |")
+    lines.append(
+        "\n_Kaggle work_type metadata is incomplete — low coverage means the % is less reliable._\n"
+    )
+
+    lines += ["---", "_Generated by `score_results.py`. — = not yet labeled._"]
 
     return "\n".join(lines)
 
@@ -248,7 +364,11 @@ def score_results() -> None:
     print("Reading labeled MD files...")
     p10_data, quality_data = collect_results()
 
-    report = build_report(p10_data, quality_data)
+    persona_dirs = sorted(p for p in RESULTS_DIR.iterdir() if p.is_dir())
+    print("Computing qualitative observations from JSON results...")
+    qualitative = collect_qualitative(persona_dirs)
+
+    report = build_report(p10_data, quality_data, qualitative)
     print("\n" + report)
 
     out_path = RESULTS_DIR / "report.md"
