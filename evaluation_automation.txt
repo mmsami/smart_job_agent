@@ -281,6 +281,12 @@ common issues
 "run_evaluation crashes on FAISS_RAW"
     → make sure SentenceTransformers is installed: pip install sentence-transformers
 
+"build_vector_store segfaults on Mac (zsh: segmentation fault)"
+    → known OpenMP conflict between PyTorch and faiss-cpu on macOS
+    → both build scripts already include the fix (TOKENIZERS_PARALLELISM + KMP_DUPLICATE_LIB_OK + numpy normalization)
+    → if embedding completed but crash happened after, re-run — vectors_*_cache.npy will skip re-embedding
+    → delete vectors_mpnet_cache.npy / vectors_minilm_cache.npy before rebuilding if dataset or chunking changed
+
 "re-run generates nothing (all skipped)"
     → expected behavior — all results already exist
     → to force a specific persona: delete its folder under evaluation/results/

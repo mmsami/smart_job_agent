@@ -28,6 +28,7 @@ import time
 from typing import Optional
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 from sentence_transformers import SentenceTransformer
 import faiss
@@ -269,14 +270,31 @@ def main():
     if not page_contents:
         raise ValueError("No documents to index — check that data files exist and loaded correctly")
 
-    print("Embedding chunks...")
-    t0 = time.time()
-    vectors = embed_in_batches(page_contents, model)
-    print(f"  Done in {time.time() - t0:.1f}s. Shape: {vectors.shape}")
+    # Crash-recovery cache only. Safe to reuse when dataset/chunking/dedup logic
+    # is unchanged. Delete this file before rebuilding if any of those change.
+    VECTORS_CACHE = os.path.join(VECTOR_DIR, "vectors_mpnet_cache.npy")
+    vectors = None
+    if os.path.exists(VECTORS_CACHE):
+        print(f"Loading cached vectors from {VECTORS_CACHE}...")
+        _cached = np.load(VECTORS_CACHE)
+        if _cached.shape[0] == len(page_contents):
+            vectors = _cached
+            print(f"  Loaded. Shape: {vectors.shape}")
+        else:
+            print(f"  Cache shape {_cached.shape[0]} != {len(page_contents)} chunks — re-embedding.")
+    if vectors is None:
+        print("Embedding chunks...")
+        t0 = time.time()
+        vectors = embed_in_batches(page_contents, model)
+        print(f"  Done in {time.time() - t0:.1f}s. Shape: {vectors.shape}")
+        np.save(VECTORS_CACHE, vectors)
+        print(f"  Saved vector cache to {VECTORS_CACHE}")
 
     # Normalize for cosine similarity (FAISS IndexFlatIP on unit vectors = cosine)
     print("\nNormalizing vectors for cosine similarity...")
-    faiss.normalize_L2(vectors)
+    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+    norms = np.where(norms == 0, 1, norms)
+    vectors = np.ascontiguousarray(vectors / norms, dtype="float32")
 
     # Build FAISS index
     dim = vectors.shape[1]
