@@ -260,13 +260,13 @@ def build_report(p10_data: dict, quality_data: dict, qualitative: dict) -> str:
         delta = round(avg_a - avg_b, 3)
         p_val = wilcoxon_p(pa, pb)
         p_str = f"{p_val:.4f}" if p_val is not None else "n/a (need ≥4 paired)"
-        lines += [
+        lines.extend([
             f"- {method_a} avg P@10 = **{avg_a}**",
             f"- {method_b} avg P@10 = **{avg_b}**",
             f"- Delta = **{delta:+.3f}** ({positive_direction})",
             f"- Wilcoxon signed-rank p = {p_str}",
             "",
-        ]
+        ])
 
     lines.append("## H1: Semantic vs Keyword Search (FAISS_PARSED vs BM25_PARSED)\n")
     _hypothesis_block("H1", "FAISS_PARSED", "BM25_PARSED", "positive = FAISS better")
