@@ -213,7 +213,7 @@ def build_chunks(docs: list[JobDocument]) -> tuple[list[str], list[dict]]:
         prefix = doc.to_page_content_prefix()
         prefix_words = len(prefix.split())
         # Reserve space for prefix so total embedded string ≤ MODEL_MAX_TOKENS
-        effective_max = max(MAX_WORDS - prefix_words, 50)  # floor at 50 words
+        effective_max = max(MAX_WORDS - prefix_words, min(50, MAX_WORDS))  # floor respects token budget
 
         chunks = split_into_chunks(doc.description, max_words=effective_max)
         meta = doc.to_metadata()
