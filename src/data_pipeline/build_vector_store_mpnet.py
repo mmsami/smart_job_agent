@@ -50,7 +50,7 @@ MODEL_MAX_TOKENS = 384                        # hard limit for all-mpnet-base-v2
 MAX_WORDS = int(MODEL_MAX_TOKENS / 1.3)       # ≈ 295 words → safe chunk body
 OVERLAP_WORDS = int(50 / 1.3)                 # ≈ 38 words overlap between windows
 
-BATCH_SIZE = 256  # Slightly smaller batch size than MiniLM as mpnet is larger
+BATCH_SIZE = 32  # Small batch to avoid OOM on Mac
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
