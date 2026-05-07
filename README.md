@@ -7,8 +7,9 @@ Uses semantic search (FAISS + embeddings) compared against a BM25 keyword baseli
 
 ## Setup
 
+**Option A — venv (recommended)**
 ```bash
-python -m venv venv
+python3.11 -m venv venv
 source venv/bin/activate        # Mac/Linux
 venv\Scripts\activate           # Windows
 
@@ -17,17 +18,31 @@ cp .env.example .env
 # fill in your keys (see table below)
 ```
 
+**Option B — conda**
+```bash
+conda create -n smart_job_agent python=3.11
+conda activate smart_job_agent
+
+pip install -r requirements.txt
+cp .env.example .env
+```
+
+> **Mac users:** Python 3.12+ causes segfaults with faiss-cpu + sentence-transformers. Use Python 3.11.
+
 Then download the shared data files from Google Drive and place them at:
 
 ```
 data/vector_store/faiss_minilm.index
 data/vector_store/docstore_minilm.json
 data/vector_store/job_descriptions_minilm.json
+data/vector_store/faiss_mpnet.index
+data/vector_store/docstore_mpnet.json
+data/vector_store/job_descriptions_mpnet.json
 data/kaggle_cleaned/postings_cleaned.csv
 data/resumes/                        ← persona PDFs (one per evaluator)
 ```
 
-Do not re-run the data pipeline scripts — the index is already built.
+Do not re-run the data pipeline scripts — the indexes are already built and shared via Google Drive.
 
 ---
 
@@ -63,6 +78,7 @@ project/
 │   │   ├── parse_kaggle.py
 │   │   ├── fetch_arbeitnow.py
 │   │   ├── build_vector_store_minilm.py
+│   │   ├── build_vector_store_mpnet.py
 │   │   └── schemas.py
 │   ├── workflow/                    # pipeline components
 │   │   ├── models.py                # JobRecord, CVProfile, JobSearchPreferences
@@ -130,15 +146,16 @@ python -m src.evaluation.llm_judge
 
 ### What run_evaluation.py produces
 
-4 personas × 5 method variants × 3 reasoning models = **60 result files** (JSON + MD each).
+10 personas × 6 method variants × 3 reasoning models = **180 result files** (JSON + MD each).
 
 | Method | Retriever | Query |
 |--------|-----------|-------|
 | `BM25_RAW` | BM25 | raw CV text |
 | `BM25_PARSED` | BM25 | structured CVProfile |
-| `FAISS_RAW` | FAISS | raw CV text embedded |
-| `FAISS_PARSED` | FAISS | CVProfile + preferences embedded |
+| `FAISS_RAW` | FAISS | raw CV text embedded (MiniLM) |
+| `FAISS_PARSED` | FAISS | CVProfile + preferences embedded (MiniLM) |
 | `FAISS_PARSED_NORERANK` | FAISS | FAISS_PARSED top-10 before reranking (H3 baseline) |
+| `FAISS_PARSED_MPNET` | FAISS | CVProfile + preferences embedded (MPNet) |
 
 Reranking is always Gemma (fixed). Reasoning runs with gemma / deepseek / claude per method.
 All runs skip if the output JSON + MD already exist — safe to restart after failure.
@@ -158,10 +175,10 @@ python -m pytest tests/evaluation/test_run_evaluation.py -v
 python -m pytest tests/evaluation/test_score_results.py -v
 python -m pytest tests/evaluation/test_llm_judge.py -v
 
-# needs postings_cleaned.csv (~30s)
+# needs postings_cleaned.csv
 python -m pytest tests/workflow/test_bm25.py -v
 
-# needs vector store files (~21s)
+# needs vector store files
 python -m pytest tests/workflow/test_job_search.py -v
 
 # needs GOOGLE_API_KEY (cached after first run)
@@ -169,9 +186,12 @@ python -m pytest -m integration tests/workflow/test_reranker_integration.py -v
 
 # needs GOOGLE_API_KEY + PDFs in data/resumes/
 python -m tests.workflow.test_cv_profiler
+
+# verify build pipeline works before full rebuild
+python -m tests.data_pipeline.test_build_smoke
 ```
 
-Total: **129 tests** across workflow + evaluation.
+Total: **117 tests** across workflow + evaluation.
 
 ---
 
@@ -180,17 +200,20 @@ Total: **129 tests** across workflow + evaluation.
 ```
 data/
 ├── kaggle_cleaned/
-│   └── postings_cleaned.csv         123,849 rows (deduplicated by title+company)
+│   └── postings_cleaned.csv         123,849 rows (raw; dedup to ~96,728 unique title+company in build)
 ├── arbeitnow/
 │   └── arbeitnow_jobs.json          957 jobs (frozen API snapshot)
 ├── vector_store/                    (shared via Google Drive)
-│   ├── faiss_minilm.index           371,535 vectors, all-MiniLM-L6-v2, 384 dims
-│   ├── docstore_minilm.json         371,535 entries (title + metadata per chunk)
-│   └── job_descriptions_minilm.json {job_id: full_description} lookup (97,685 entries)
+│   ├── faiss_minilm.index           all-MiniLM-L6-v2, 384 dims
+│   ├── docstore_minilm.json         chunk metadata (parallel to index)
+│   ├── job_descriptions_minilm.json {job_id: full_description} lookup
+│   ├── faiss_mpnet.index            all-mpnet-base-v2, 768 dims
+│   ├── docstore_mpnet.json          chunk metadata (parallel to index)
+│   └── job_descriptions_mpnet.json  {job_id: full_description} lookup
 └── resumes/                         persona PDFs (one per evaluator)
 ```
 
-`job_descriptions_minilm.json` is required — without it, FAISS retrieval returns jobs with empty descriptions.
+`job_descriptions_*.json` files are required — without them, FAISS retrieval returns jobs with empty descriptions.
 
 ---
 
