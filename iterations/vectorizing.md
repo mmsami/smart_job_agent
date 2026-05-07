@@ -227,3 +227,66 @@ Run `score_results.py` on both minilm and mpnet result sets (save results in sep
 
 ### Status
 `build_vector_store_mpnet.py` is complete and tested. Index **not yet built** — requires ~2–3 hrs and ~2 GB disk. Planned as optional Experiment C if evaluation timeline permits.
+
+---
+
+## 8. Iteration 4: Dedup Discovery + Mac Segfault Fixes + v3 Rebuild (2026-05-07)
+
+### Dedup Discovery
+
+During evaluation, Julia reported duplicate job listings appearing in top-10 results. Investigation revealed:
+
+- The MiniLM v2 index (471,671 vectors) was built **before** the `(title.lower(), company.lower())` dedup logic was added to `load_kaggle()`.
+- The Kaggle CSV contains **27,121 duplicate title+company pairs** (123,849 raw rows → 96,728 unique docs after dedup).
+- The `perform_retrieval()` function deduplicates by `job_id` at query time, so duplicates are prevented at retrieval — but identical job descriptions from different job IDs were still in the index, inflating chunk count and wasting index space.
+- Decision: rebuild MiniLM with dedup to match MPNet (which was built with dedup from the start).
+
+**New chunk counts after dedup:**
+| Index | Vectors (pre-dedup) | Vectors (post-dedup) |
+|-------|--------------------|--------------------|
+| MiniLM v2 | 471,671 | ~371,535 |
+| MPNet | — | ~242,512 |
+
+MiniLM has more chunks than MPNet despite fewer unique docs because MiniLM's smaller token window (196 words vs 295 words) produces more chunks per document.
+
+---
+
+### Mac Segfault Fixes
+
+Both build scripts crashed on macOS during the build with `zsh: segmentation fault`. Three root causes identified and fixed:
+
+**1. Import order (sentence-transformers before faiss)**
+faiss-cpu and PyTorch ship conflicting OpenMP runtimes (`libiomp5` vs `libomp`). Importing `faiss` before `SentenceTransformer` triggers the conflict at model load time.
+- Fix: moved `from sentence_transformers import SentenceTransformer` above `import faiss` in both scripts.
+
+**2. OpenMP duplicate library**
+Even with correct import order, `faiss.normalize_L2()` triggered a segfault on some Macs due to the OpenMP conflict.
+- Fix: added `os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"` and `os.environ["TOKENIZERS_PARALLELISM"] = "false"` before all imports.
+
+**3. faiss.normalize_L2 replaced with numpy**
+`faiss.normalize_L2` calls into the faiss C++ layer and was the exact crash point on Julia's machine. Replaced with pure numpy:
+```python
+norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+norms = np.where(norms == 0, 1, norms)
+vectors = np.ascontiguousarray(vectors / norms, dtype="float32")
+```
+Mathematically identical. Avoids the faiss OpenMP call entirely.
+
+**4. Vector cache for crash recovery**
+Embedding 240k–370k chunks takes 1–2 hours. If the build crashes after embedding but before FAISS index save, the entire embedding run is lost. Added a crash-recovery cache:
+- After embedding, vectors saved to `vectors_*_cache.npy`.
+- On re-run, cache loaded if `shape[0] == len(page_contents)` — otherwise re-embeds.
+- **Important:** delete cache before rebuilding if dataset, dedup logic, or chunking logic changes — count match alone doesn't catch reordered chunks.
+
+**Smoke test added:** `tests/data_pipeline/test_build_smoke.py` runs the full pipeline (load → chunk → embed → normalize → FAISS → save) on 100 docs before committing to a full build. Verified passing on both MiniLM and MPNet before v3 rebuild.
+
+---
+
+### v3 Rebuild Plan
+
+MiniLM v3 rebuild initiated 2026-05-07. Full sequence:
+1. Delete old MiniLM + MPNet artifacts and evaluation results
+2. Run `build_vector_store_minilm` then `build_vector_store_mpnet` overnight
+3. Clear `.cache/reranker` (keyed on job_id+score — stale after index rebuild)
+4. Run `verify_rebuild` + `run_evaluation`
+5. Re-label from scratch (retrieved jobs will differ due to dedup)

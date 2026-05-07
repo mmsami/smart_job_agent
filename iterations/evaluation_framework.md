@@ -50,3 +50,20 @@ existing labels are never overwritten by re-runs — skip logic on json+md exist
 - 10 real CVs needed in data/resumes/ (critical path)
 - MPNet index build before full eval run (run_evaluation.py handles missing index gracefully)
 - delete test CVs (cv1, cv2, cv3, Perosona_Finance) before real eval
+
+---
+
+## bug fixes (2026-05-07)
+
+### score_results.py: _hypothesis_block silent data loss
+`lines += [...]` inside `_hypothesis_block` caused Python to treat `lines` as a local
+variable (assignment → local scope). H1/H2/H3 blocks were computed but silently discarded
+— report showed "not enough data" even with labeled personas.
+fix: changed `lines +=` to `lines.extend()` — method call doesn't trigger local scope.
+note: Julia's workaround (`lines = []` at top of function) would have silenced the crash
+but discarded all hypothesis output. correct fix is extend().
+
+### score_results.py: Experiment B separator phantom column
+`sep2 = "|--------|" + "--------|" * len(MODELS) + "|"` produced 6 pipes for a 4-column
+table (Method + 3 models = 5 pipes needed). the trailing `"|"` was extra.
+fix: removed trailing `"|"` — sep2 now ends with the last `"--------|"` repetition.
