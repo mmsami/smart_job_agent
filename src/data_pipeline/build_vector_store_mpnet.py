@@ -29,10 +29,10 @@ from typing import Optional
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 import pandas as pd
-from sentence_transformers import SentenceTransformer
 
 try:
     from src.data_pipeline.schemas import JobDocument
