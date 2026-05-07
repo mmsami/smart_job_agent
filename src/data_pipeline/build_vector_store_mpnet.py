@@ -27,6 +27,8 @@ import os
 import time
 from typing import Optional
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 import faiss
 import numpy as np
 import pandas as pd
@@ -231,7 +233,7 @@ def embed_in_batches(texts: list[str], model: SentenceTransformer) -> np.ndarray
     total = len(texts)
     for start in range(0, total, BATCH_SIZE):
         batch = texts[start : start + BATCH_SIZE]
-        vecs = model.encode(batch, show_progress_bar=False, convert_to_numpy=True)
+        vecs = model.encode(batch, show_progress_bar=False, convert_to_numpy=True, num_workers=0)
         all_vecs.append(vecs)
         print(f"  Embedded {min(start + BATCH_SIZE, total):>7,} / {total:,}", end="\r")
     print()
