@@ -27,10 +27,12 @@ import os
 import time
 from typing import Optional
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 import pandas as pd
-from sentence_transformers import SentenceTransformer
 
 try:
     from src.data_pipeline.schemas import JobDocument
@@ -50,7 +52,7 @@ MODEL_MAX_TOKENS = 256                        # hard limit for all-MiniLM-L6-v2
 MAX_WORDS = int(MODEL_MAX_TOKENS / 1.3)       # ≈ 196 words → safe chunk body
 OVERLAP_WORDS = int(50 / 1.3)                 # ≈ 38 words overlap between windows
 
-BATCH_SIZE = 512  # embedding batch size
+BATCH_SIZE = 64  # smaller batch to avoid OOM on Mac
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data")
