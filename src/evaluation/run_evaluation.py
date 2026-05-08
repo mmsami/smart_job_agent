@@ -16,14 +16,19 @@ Results are saved as JSON files for human Precision@10 labeling.
 
 import json
 import logging
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
+
+# Prevent tokenizer parallelism from conflicting with FAISS threads on Mac (segfault fix)
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
 from pathlib import Path
 from typing import Any, Literal
 
-import faiss as faiss_lib
 from dotenv import load_dotenv
 
+# sentence_transformers must be imported (via job_search) before faiss to avoid Mac segfault
 from src.evaluation.baseline_bm25 import BM25Retriever
 from src.workflow.cv_profiler import profile_cv
 from src.workflow.cv_reader import extract_text_from_pdf
@@ -38,6 +43,8 @@ from src.workflow.job_search import (
 from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences
 from src.workflow.reasoning import analyze_job_matches
 from src.workflow.reranker import rerank_jobs
+
+import faiss as faiss_lib
 
 load_dotenv()
 
