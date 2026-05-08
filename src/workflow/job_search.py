@@ -11,12 +11,15 @@ import sys
 from pathlib import Path
 from typing import Any, Optional
 
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+
 # Add project root to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
 
-import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
+import faiss
 
 try:
     from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences

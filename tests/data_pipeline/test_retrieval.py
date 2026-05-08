@@ -12,8 +12,8 @@ Usage:
 import json
 import os
 import numpy as np
-import faiss
 from sentence_transformers import SentenceTransformer
+import faiss
 
 # ── Config ─────────────────────────────────────────────────────────────
 EMBED_MODEL = "all-MiniLM-L6-v2"
