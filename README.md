@@ -18,11 +18,12 @@ cp .env.example .env
 # fill in your keys (see table below)
 ```
 
-**Option B — conda**
+**Option B — conda (recommended for older Macs / Intel)**
 ```bash
 conda create -n smart_job_agent python=3.11
 conda activate smart_job_agent
 
+conda install -c pytorch faiss-cpu pytorch
 pip install -r requirements.txt
 cp .env.example .env
 ```
