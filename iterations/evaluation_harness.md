@@ -455,3 +455,43 @@ All 12 passing.
 All 60 JSON files: 10/10 jobs with descriptions ≥ 983 chars
 Ready for human labeling (Precision@10)
 ```
+
+---
+
+## 15. Bugs Found During Human Labeling (2026-05-09)
+
+Both bugs were caught by Julia during the first real labeling pass on a tech intern persona. Neither appeared in automated tests because tests mock retrieval output — they don't exercise the full pipeline with real data.
+
+---
+
+### Bug 1 — BM25 missing load-time dedup
+
+**Symptom:** Julia saw duplicate job postings in BM25 result sheets.
+
+**Root cause:** FAISS build scripts deduplicate by `(title.lower(), company.lower())` at index build time, reducing 123,849 → ~96,728 docs. BM25 `_load_and_index()` loaded the full raw CSV without dedup — only query-time dedup existed (the `seen_title_company` check in `search()`). Query-time dedup catches exact matches within a single result set but near-duplicates (minor spelling/casing variation) in the 123,849-row corpus could both score highly and pass the check.
+
+**Fix:** Added load-time dedup in `_load_and_index()` after all sources are loaded, before building the BM25 corpus — mirrors FAISS exactly.
+
+**Why missed:** Code reviews examined BM25 and FAISS separately. The query-time dedup in BM25 looked correct in isolation. The gap only surfaces by comparing BM25's load path against FAISS's build path side-by-side — a cross-component audit we never did.
+
+---
+
+### Bug 2 — FAISS seniority filter missing from run_evaluation.py
+
+**Symptom:** Julia flagged FAISS_PARSED_MPNET returning many senior-level jobs for the intern tech CV.
+
+**Root cause:** `BM25Retriever.search()` applies `_passes_seniority_filter()` before returning results. The shared FAISS processing loop in `run_evaluation.py` (lines 218–249) applied only `source == kaggle` + job_id dedup — no seniority filter. All 5 FAISS methods were affected, not just MPNet. The filter existed in BM25 but was never ported to the FAISS path because FAISS calls `search_jobs()` directly (the raw vector search) instead of `retrieve_jobs()`, and `retrieve_jobs()` also has no seniority filter.
+
+**Fix:** Added seniority hard filter inline in the shared FAISS processing loop — identical logic to `BM25Retriever._passes_seniority_filter()`:
+- Senior CV: excludes `entry level`, `associate`, `internship` exp levels + junior/intern title keywords
+- Entry CV: excludes `director`, `executive`, `c-suite` exp levels + VP/director/chief title keywords
+
+**Why missed:** BM25 and FAISS retrieval paths were reviewed as separate components. The seniority filter was confirmed present in BM25. Nobody cross-checked whether the FAISS path in `run_evaluation.py` applied the same post-processing. Tests mock the retrieval layer and never exercise real `experience_level` metadata.
+
+---
+
+### Impact
+
+All result files for the affected persona are invalid — both bugs affect the output. Delete the persona's result folder, re-run `run_evaluation.py` for that persona, send fresh files to Julia for re-labeling.
+
+**Lesson:** Integration-point audits matter more than per-file reviews. For any shared post-processing (dedup, filtering), explicitly verify every retrieval path applies it — not just the one that was built first.

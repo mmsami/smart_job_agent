@@ -216,12 +216,32 @@ def perform_retrieval(
         raise ValueError(f"Unknown method: {method}")
 
     # 3. Shared processing logic (avoids duplicating the JobRecord loop)
+    _cv_level = (profile.experience_level or "").lower()
+    _SENIOR_EXCLUDE_EXP = {"entry level", "associate", "internship"}
+    _SENIOR_EXCLUDE_TITLE = {"staff ", "junior", "jr.", "intern", "entry level"}
+    _ENTRY_EXCLUDE_EXP = {"director", "executive", "c-suite"}
+    _ENTRY_EXCLUDE_TITLE = {"director", "vp ", "vice president", "chief ", "c-level", "head of"}
+
     for r in raw_results:
         if r.get("source") != "kaggle":
             continue
         job_id = str(r.get("job_id", ""))
         if job_id in seen:
             continue
+
+        # Seniority hard filter — mirrors BM25Retriever._passes_seniority_filter
+        _exp = (r.get("experience_level") or "").lower()
+        _title = (r.get("title") or "").lower()
+        if _cv_level == "senior":
+            if _exp in _SENIOR_EXCLUDE_EXP:
+                continue
+            if not _exp and any(kw in _title for kw in _SENIOR_EXCLUDE_TITLE):
+                continue
+        elif _cv_level == "entry":
+            if _exp in _ENTRY_EXCLUDE_EXP:
+                continue
+            if not _exp and any(kw in _title for kw in _ENTRY_EXCLUDE_TITLE):
+                continue
 
         seen.add(job_id)
         records.append(

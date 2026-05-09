@@ -483,3 +483,26 @@ Four defensive fixes. No retrieval logic changed.
 | `work_type` None → `"none"` token | `preferences.work_type` is `Optional[str]` — `_tokenize_with_stopwords(None)` calls `str(None)` → adds token `"none"` to query, biasing scores | Added `if preferences.work_type:` guard before extending query tokens |
 
 Note: Arbeitnow `title`/`company` also hardened to `str(raw.get("title") or "")` to prevent None propagating into dedup key or BM25 corpus.
+
+---
+
+## 15. Evaluation Bug Fix — Load-Time Dedup Missing (2026-05-09)
+
+**Bug:** Duplicate job postings appeared in BM25 evaluation results during human labeling.
+
+**Root cause:** FAISS vector stores deduplicate by `(title, company)` at **index build time** (`build_vector_store_*.py` lines 159–173). BM25 only deduped at **query time** (the `seen_title_company` check in `search()`). The BM25 corpus was built from the full raw CSV — 123,849 rows — before any dedup was applied, meaning near-duplicate postings (same title+company, minor spelling variation) could both end up ranked in the top `k*3` candidates and slip past the query-time check.
+
+**Fix:** Added load-time dedup in `_load_and_index()` after all sources are loaded, before the BM25 corpus is built — mirrors the FAISS pipeline exactly:
+
+```python
+seen_title_company: set = set()
+deduped_jobs = []
+for job in self.jobs:
+    key = f"{str(job['title']).lower()}|{str(job['company']).lower()}"
+    if key not in seen_title_company:
+        seen_title_company.add(key)
+        deduped_jobs.append(job)
+self.jobs = deduped_jobs
+```
+
+**Impact:** BM25 corpus size now matches FAISS (~96,728 unique docs vs 123,849 raw). Query-time dedup retained as a secondary safety net. Evaluation re-run required for any persona labeled before this fix.
