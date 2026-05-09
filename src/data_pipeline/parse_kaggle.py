@@ -111,15 +111,15 @@ def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     print("Stripping HTML from descriptions...")
     df["description"] = df["description"].apply(strip_html)
 
-    # ── Drop junk rows (both title AND description unusable) ───────────
+    # ── Drop junk rows ─────────────────────────────────────────────────
     title_bad = df["title"].isna() | (df["title"].str.len() < MIN_TITLE_CHARS)
     desc_bad = df["description"].isna() | (
         df["description"].str.len() < MIN_DESCRIPTION_CHARS
     )
-    both_bad = title_bad & desc_bad
-    n_junk = both_bad.sum()
-    df = df.loc[~both_bad].copy()
-    report.append(f"Dropped (both title & desc junk): {n_junk:,}")
+    junk = title_bad | desc_bad  # drop if either is unusable — can't embed without description
+    n_junk = junk.sum()
+    df = df.loc[~junk].copy()
+    report.append(f"Dropped (bad title or desc): {n_junk:,}")
     print(f"  Dropped {n_junk:,} junk rows")
 
     # ── Validate experience_level ──────────────────────────────────────
