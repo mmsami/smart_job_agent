@@ -108,3 +108,17 @@ The full cleaned dataset is ~500MB, which is too large for GitHub.
 **Also added:** URL to the `seen` set in the `run_evaluation.py` shared FAISS loop as a query-time safety net.
 
 **Rebuild required:** FAISS indexes must be rebuilt from the new CSV. Final corpus: **96,558 unique docs**.
+
+---
+
+## 8. Normalized Title+Company Dedup (2026-05-09)
+
+**Bug:** `drop_duplicates(subset=["title", "company_name"])` was exact string match — trailing spaces, mixed casing (e.g. `"Software Engineer "` vs `"software engineer"`) were treated as different jobs. 188 normalized near-duplicates remained after dedup.
+
+**Fix:** Added `.str.strip().str.lower()` normalization on temp columns before dedup, then dropped the temp columns. Original title/company values preserved in CSV.
+
+**Result:** 96,558 → **96,370 unique docs** (188 additional dupes removed).
+
+**Why missed:** Code review confirmed dedup logic was present but never validated that zero duplicates remained in the output data. Post-dedup data validation was missing.
+
+**Lesson:** Every dedup step needs a post-validation query, not just a code review.

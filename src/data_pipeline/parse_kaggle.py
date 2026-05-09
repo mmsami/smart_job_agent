@@ -214,9 +214,12 @@ def main():
     n_after_url = len(df)
     print(f"  URL dedup: removed {n_before - n_after_url:,} rows ({n_after_url:,} remaining)")
 
-    df = df.drop_duplicates(subset=["title", "company_name"], keep="first")
+    df["_title_norm"] = df["title"].fillna("").str.strip().str.lower()
+    df["_company_norm"] = df["company_name"].fillna("").str.strip().str.lower()
+    df = df.drop_duplicates(subset=["_title_norm", "_company_norm"], keep="first")
+    df = df.drop(columns=["_title_norm", "_company_norm"])
     n_after_tc = len(df)
-    print(f"  Title+company dedup: removed {n_after_url - n_after_tc:,} rows ({n_after_tc:,} remaining)")
+    print(f"  Title+company dedup (normalized): removed {n_after_url - n_after_tc:,} rows ({n_after_tc:,} remaining)")
 
     # ── Save cleaned CSV ───────────────────────────────────────────────
     out_csv = os.path.join(OUTPUT_DIR, "postings_cleaned.csv")
