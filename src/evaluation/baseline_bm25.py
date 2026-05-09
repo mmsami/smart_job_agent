@@ -219,7 +219,21 @@ class BM25Retriever:
                 f"  Loaded {len([j for j in self.jobs if j['source'] == 'arbeitnow']):,} Arbeitnow jobs"
             )
 
-        logger.info(f"Total jobs: {len(self.jobs):,}")
+        logger.info(f"Total jobs before dedup: {len(self.jobs):,}")
+
+        # Deduplicate by (title, company) at index build time — mirrors FAISS pipeline
+        seen_title_company: set = set()
+        deduped_jobs = []
+        for job in self.jobs:
+            key = f"{str(job['title']).lower()}|{str(job['company']).lower()}"
+            if key not in seen_title_company:
+                seen_title_company.add(key)
+                deduped_jobs.append(job)
+        duplicates_removed = len(self.jobs) - len(deduped_jobs)
+        if duplicates_removed:
+            logger.info(f"  Removed {duplicates_removed:,} duplicate title+company pairs")
+        self.jobs = deduped_jobs
+        logger.info(f"Total jobs after dedup: {len(self.jobs):,}")
 
         # Build BM25 index on title + description
         logger.info("Building BM25 index on title + description...")
