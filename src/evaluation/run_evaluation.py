@@ -41,6 +41,7 @@ from src.workflow.job_search import (
     search_jobs,
 )
 from src.workflow.models import CVProfile, JobRecord, JobSearchPreferences
+from src.workflow.retrieval_filters import passes_seniority_filter
 from src.workflow.reasoning import analyze_job_matches
 from src.workflow.reranker import rerank_jobs
 
@@ -217,10 +218,6 @@ def perform_retrieval(
 
     # 3. Shared processing logic (avoids duplicating the JobRecord loop)
     _cv_level = (profile.experience_level or "").lower()
-    _SENIOR_EXCLUDE_EXP = {"entry level", "associate", "internship"}
-    _SENIOR_EXCLUDE_TITLE = {"staff ", "junior", "jr.", "intern", "entry level"}
-    _ENTRY_EXCLUDE_EXP = {"director", "executive", "c-suite"}
-    _ENTRY_EXCLUDE_TITLE = {"director", "vp ", "vice president", "chief ", "c-level", "head of"}
 
     for r in raw_results:
         if r.get("source") != "kaggle":
@@ -229,19 +226,11 @@ def perform_retrieval(
         if job_id in seen:
             continue
 
-        # Seniority hard filter — mirrors BM25Retriever._passes_seniority_filter
+        # Seniority hard filter
         _exp = (r.get("experience_level") or "").lower()
         _title = (r.get("title") or "").lower()
-        if _cv_level == "senior":
-            if _exp in _SENIOR_EXCLUDE_EXP:
-                continue
-            if not _exp and any(kw in _title for kw in _SENIOR_EXCLUDE_TITLE):
-                continue
-        elif _cv_level == "entry":
-            if _exp in _ENTRY_EXCLUDE_EXP:
-                continue
-            if not _exp and any(kw in _title for kw in _ENTRY_EXCLUDE_TITLE):
-                continue
+        if not passes_seniority_filter(_exp, _title, _cv_level):
+            continue
 
         # URL dedup safety net — same URL = same posting (different title/job_id)
         _url = r.get("url") or r.get("application_url") or ""

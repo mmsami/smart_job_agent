@@ -31,6 +31,11 @@ try:
 except ImportError:
     from workflow.mocks import mock_cv_mid_tech, mock_preferences_mid_tech
 
+try:
+    from src.workflow.retrieval_filters import passes_seniority_filter
+except ImportError:
+    from workflow.retrieval_filters import passes_seniority_filter
+
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
@@ -246,10 +251,6 @@ def retrieve_jobs(
     )
 
     _cv_level = (cv.experience_level or "").lower()
-    _SENIOR_EXCLUDE_EXP = {"entry level", "associate", "internship"}
-    _SENIOR_EXCLUDE_TITLE = {"staff ", "junior", "jr.", "intern", "entry level"}
-    _ENTRY_EXCLUDE_EXP = {"director", "executive", "c-suite"}
-    _ENTRY_EXCLUDE_TITLE = {"director", "vp ", "vice president", "chief ", "c-level", "head of"}
 
     records: list[JobRecord] = []
     seen: set[str] = set()
@@ -263,16 +264,8 @@ def retrieve_jobs(
         # Seniority hard filter
         _exp = (r.get("experience_level") or "").lower()
         _title = (r.get("title") or "").lower()
-        if _cv_level == "senior":
-            if _exp in _SENIOR_EXCLUDE_EXP:
-                continue
-            if not _exp and any(kw in _title for kw in _SENIOR_EXCLUDE_TITLE):
-                continue
-        elif _cv_level == "entry":
-            if _exp in _ENTRY_EXCLUDE_EXP:
-                continue
-            if not _exp and any(kw in _title for kw in _ENTRY_EXCLUDE_TITLE):
-                continue
+        if not passes_seniority_filter(_exp, _title, _cv_level):
+            continue
 
         # URL dedup — same URL = same posting
         _url = r.get("url") or ""

@@ -20,6 +20,8 @@ from typing import Any, Optional
 import pandas as pd
 from rank_bm25 import BM25Okapi
 
+from src.workflow.retrieval_filters import passes_seniority_filter
+
 
 def _nan_to_none(v: Any) -> Any:
     """Convert pandas NaN (float) to None for Optional JobRecord fields."""
@@ -410,42 +412,11 @@ class BM25Retriever:
         return results
 
     # ── Seniority filter helpers ────────────────────────────────────────
-    _SENIOR_EXCLUDE_EXP = {"entry level", "associate", "internship"}
-    _SENIOR_EXCLUDE_TITLE = {"staff ", "junior", "jr.", "intern", "entry level"}
-    _ENTRY_EXCLUDE_EXP = {"director", "executive", "c-suite"}
-    _ENTRY_EXCLUDE_TITLE = {
-        "director",
-        "vp ",
-        "vice president",
-        "chief ",
-        "c-level",
-        "head of",
-        "partner",
-    }
-
     def _passes_seniority_filter(self, job: dict, cv_profile: CVProfile) -> bool:
-        """Hard seniority filter — skips clearly mismatched experience levels."""
         exp_level = (_nan_to_none(job.get("experience_level")) or "").lower()
         title = (_nan_to_none(job.get("title")) or "").lower()
         cv_level = (cv_profile.experience_level or "").lower()
-
-        if cv_level == "senior":
-            # Exclude entry/internship by metadata
-            if exp_level in self._SENIOR_EXCLUDE_EXP:
-                return False
-            # Exclude obvious junior titles when metadata is missing
-            if not exp_level and any(kw in title for kw in self._SENIOR_EXCLUDE_TITLE):
-                return False
-
-        elif cv_level == "entry":
-            # Exclude director/executive by metadata
-            if exp_level in self._ENTRY_EXCLUDE_EXP:
-                return False
-            # Exclude obvious senior titles when metadata is missing
-            if not exp_level and any(kw in title for kw in self._ENTRY_EXCLUDE_TITLE):
-                return False
-
-        return True
+        return passes_seniority_filter(exp_level, title, cv_level)
 
 
 # ── Standalone function for easy testing ───────────────────────────────

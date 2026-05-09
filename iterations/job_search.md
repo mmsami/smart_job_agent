@@ -262,3 +262,19 @@ Total: 25/25 passing (16 original + 9 new).
 **Why missed:** The seniority filter was originally added only to BM25 (which has no semantic understanding). When it was later ported to `run_evaluation.py` for fair evaluation, `retrieve_jobs()` was not updated at the same time.
 
 **Impact:** Live app (`main.py`) now applies same post-processing rules as the evaluation pipeline — no divergence.
+
+---
+
+## Refactor — retrieval_filters.py Shared Module (2026-05-09)
+
+**Problem:** Seniority filter logic was copy-pasted across 3 files (`baseline_bm25.py`, `run_evaluation.py`, `job_search.py`). During evaluation, we discovered `"partner"` was in BM25's `_ENTRY_EXCLUDE_TITLE` but missing from the other two — a silent divergence that would have made BM25 stricter than FAISS for senior-titled partner roles.
+
+**Fix:** Extracted all filter constants and logic into `src/workflow/retrieval_filters.py`:
+- `SENIOR_EXCLUDE_EXP`, `SENIOR_EXCLUDE_TITLE`, `ENTRY_EXCLUDE_EXP`, `ENTRY_EXCLUDE_TITLE`
+- `passes_seniority_filter(job_exp, job_title, cv_level) -> bool`
+
+All three files now import from this single source. Any future rule change is made once and propagates everywhere automatically.
+
+**Result:** 183/183 tests passing. No logic change — pure mechanical extraction.
+
+**Lesson:** Any shared post-processing rule (filter, dedup) must live in a shared module from the start. Copy-paste across retrieval paths will always drift.
