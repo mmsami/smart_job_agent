@@ -245,15 +245,43 @@ def retrieve_jobs(
         top_k=fetch_k,
     )
 
+    _cv_level = (cv.experience_level or "").lower()
+    _SENIOR_EXCLUDE_EXP = {"entry level", "associate", "internship"}
+    _SENIOR_EXCLUDE_TITLE = {"staff ", "junior", "jr.", "intern", "entry level"}
+    _ENTRY_EXCLUDE_EXP = {"director", "executive", "c-suite"}
+    _ENTRY_EXCLUDE_TITLE = {"director", "vp ", "vice president", "chief ", "c-level", "head of"}
+
     records: list[JobRecord] = []
-    seen_job_ids: set[str] = set()
+    seen: set[str] = set()
     for r in raw:
         if source and r.get("source") != source:
             continue
         job_id = str(r.get("job_id", ""))
-        if job_id in seen_job_ids:
+        if job_id in seen:
             continue
-        seen_job_ids.add(job_id)
+
+        # Seniority hard filter
+        _exp = (r.get("experience_level") or "").lower()
+        _title = (r.get("title") or "").lower()
+        if _cv_level == "senior":
+            if _exp in _SENIOR_EXCLUDE_EXP:
+                continue
+            if not _exp and any(kw in _title for kw in _SENIOR_EXCLUDE_TITLE):
+                continue
+        elif _cv_level == "entry":
+            if _exp in _ENTRY_EXCLUDE_EXP:
+                continue
+            if not _exp and any(kw in _title for kw in _ENTRY_EXCLUDE_TITLE):
+                continue
+
+        # URL dedup — same URL = same posting
+        _url = r.get("url") or ""
+        if _url and _url in seen:
+            continue
+
+        seen.add(job_id)
+        if _url:
+            seen.add(_url)
         records.append(
             JobRecord(
                 job_id=job_id,

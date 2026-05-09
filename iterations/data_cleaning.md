@@ -86,3 +86,25 @@ The full cleaned dataset is ~500MB, which is too large for GitHub.
 **What we did instead:** Added `employment_type: "full-time" | "part-time" | "contract" | "any"` to `JobSearchPreferences`, which maps directly to the available `formatted_work_type` values in the dataset.
 
 **For the report:** This is a documented limitation of the dataset, not the system. A richer job corpus (e.g., one that includes weekly hours) would enable finer-grained employment matching. Mention in the Known Limitations section.
+
+---
+
+## 7. URL Dedup Added to parse_kaggle.py (2026-05-09)
+
+**Bug found during human labeling:** Staffing agencies post identical jobs multiple times with reference codes appended to the title (e.g. "Data Science Intern -DIN51", "-DIN52", "-DIN53"). These share the same URL and description but have different titles — so `(title, company)` dedup missed them entirely.
+
+**Analysis of cleaned CSV:**
+
+| Dedup layer | Rows removed | Remaining |
+|---|---|---|
+| Raw | — | 123,849 |
+| URL dedup (new) | 2,384 | 121,465 |
+| Title+company dedup | 24,907 | 96,558 |
+
+**Fix:** Added URL dedup as a first pass in `parse_kaggle.py` before title+company dedup. Same URL = same posting regardless of title differences. Rows with no URL are passed through untouched.
+
+**Why here and not in the build scripts:** `parse_kaggle.py` is the source of truth for the cleaned CSV. Fixing it here means all downstream consumers (FAISS builders, BM25) automatically get clean data — no changes needed to those files.
+
+**Also added:** URL to the `seen` set in the `run_evaluation.py` shared FAISS loop as a query-time safety net.
+
+**Rebuild required:** FAISS indexes must be rebuilt from the new CSV. Final corpus: **96,558 unique docs**.
