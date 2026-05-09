@@ -171,8 +171,36 @@ tests/workflow/test_reasoning.py — 39 passed
 
 ---
 
+## Iteration 5 — Concurrency Hardening (2026-05-09)
+
+During full evaluation run (10 personas × 6 methods × 3 models = 180 combos), 32 failures were observed. Root cause analysis: 30 were `FileNotFoundError` from a missing MPNet index on a teammate's machine (not a reasoning bug). The remaining ~2 were LLM rate-limit failures caused by peak concurrency of 12 simultaneous outbound calls (`PERSONA_WORKERS=4 × 3 models`).
+
+**Changes applied:**
+
+1. **Global semaphore** — `threading.Semaphore(5)` caps concurrent outbound LLM calls. Cache hits bypass it entirely, so cached runs are unaffected.
+
+```python
+_LLM_SEM = threading.Semaphore(5)
+
+with _LLM_SEM:
+    parsed = _call_llm(user_message, system_prompt, attempt, provider)
+```
+
+2. **Exponential backoff** — replaced flat `RETRY_DELAY=2.0` with `[5, 15, 30]s` + up to 3s jitter. The 2s delay was too short for rate-limit recovery; retries were exhausting before the API window reset.
+
+```python
+_RETRY_DELAYS = [5.0, 15.0, 30.0]
+delay = _RETRY_DELAYS[attempt - 1] + random.uniform(0, 3)
+```
+
+`run_evaluation.py` unchanged — parallelism is preserved, throttled at the API boundary.
+
+**Test coverage:** 43/43 passing after changes.
+
+---
+
 ## Known Limitations
 
 - **No streaming** — 10-job prompts run ~3-8s per call depending on provider. Acceptable for evaluation; not suitable for real-time UI use.
-- **OpenRouter rate limits** — DeepSeek and Claude are subject to OpenRouter's per-minute limits. Evaluation batches should include a small sleep between runs if hitting limits.
+- **OpenRouter rate limits** — DeepSeek and Claude are subject to OpenRouter's per-minute limits. Semaphore + backoff now handles transient bursts; sustained overload would require reducing `PERSONA_WORKERS`.
 - **Gemma `response_schema` enforcement** — structured output mode occasionally returns a schema-valid but semantically wrong response (e.g. all jobs labelled "N/A"). Retry logic handles this only if it causes a validation error, not if it passes validation with bad content.
