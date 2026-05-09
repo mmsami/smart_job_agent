@@ -312,8 +312,8 @@ class BM25Retriever:
                 query_tokens.append(edu_lower)
 
         # Experience level — seniority signal from CV
-        exp_lower = cv_profile.experience_level.lower()
-        if exp_lower not in STOPWORDS:
+        exp_lower = (cv_profile.experience_level or "").lower()
+        if exp_lower and exp_lower not in STOPWORDS:
             query_tokens.append(exp_lower)
 
         # Domain keywords — specific professional terms from CV work history

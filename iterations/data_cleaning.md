@@ -122,3 +122,15 @@ The full cleaned dataset is ~500MB, which is too large for GitHub.
 **Why missed:** Code review confirmed dedup logic was present but never validated that zero duplicates remained in the output data. Post-dedup data validation was missing.
 
 **Lesson:** Every dedup step needs a post-validation query, not just a code review.
+
+---
+
+## 9. Drop Rows with Bad Title OR Description (2026-05-09)
+
+**Bug:** `clean()` only dropped rows where BOTH title AND description were bad. 7 rows with empty descriptions (but valid titles) survived — useless for embedding.
+
+**Fix:** Changed `both_bad = title_bad & desc_bad` to `junk = title_bad | desc_bad`. Now drops any row where either field is unusable.
+
+**Result:** 85 junk rows dropped (7 empty descriptions + 78 short titles). Final corpus: **96,312 unique clean docs**.
+
+**Validation:** Post-clean check confirmed 0 empty titles, 0 empty descriptions, 0 URL dupes, 0 title+company dupes, 0 duplicate job_ids. ✅
