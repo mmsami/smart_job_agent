@@ -203,6 +203,21 @@ def main():
     df = load_and_join(DATA_DIR)
     df, report = clean(df)
 
+    # ── Deduplicate by URL then title+company ──────────────────────────
+    # URL dedup first: same URL = same posting regardless of title differences
+    # (staffing agencies post identical jobs with reference codes in the title)
+    n_before = len(df)
+    has_url = df["application_url"].notna() & (df["application_url"] != "")
+    df_with_url = df[has_url].drop_duplicates(subset=["application_url"], keep="first")
+    df_no_url = df[~has_url]
+    df = pd.concat([df_with_url, df_no_url], ignore_index=True)
+    n_after_url = len(df)
+    print(f"  URL dedup: removed {n_before - n_after_url:,} rows ({n_after_url:,} remaining)")
+
+    df = df.drop_duplicates(subset=["title", "company_name"], keep="first")
+    n_after_tc = len(df)
+    print(f"  Title+company dedup: removed {n_after_url - n_after_tc:,} rows ({n_after_tc:,} remaining)")
+
     # ── Save cleaned CSV ───────────────────────────────────────────────
     out_csv = os.path.join(OUTPUT_DIR, "postings_cleaned.csv")
     print(f"\nSaving cleaned data to {out_csv}...")

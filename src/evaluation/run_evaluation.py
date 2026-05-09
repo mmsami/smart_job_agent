@@ -243,7 +243,14 @@ def perform_retrieval(
             if not _exp and any(kw in _title for kw in _ENTRY_EXCLUDE_TITLE):
                 continue
 
+        # URL dedup safety net — same URL = same posting (different title/job_id)
+        _url = r.get("url") or r.get("application_url") or ""
+        if _url and _url in seen:
+            continue
+
         seen.add(job_id)
+        if _url:
+            seen.add(_url)
         records.append(
             JobRecord(
                 job_id=job_id,
