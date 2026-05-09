@@ -246,3 +246,19 @@ TestRetrieveJobs (9):
 ```
 
 Total: 25/25 passing (16 original + 9 new).
+
+---
+
+## Bug Fix — Seniority Filter + URL Dedup Missing from retrieve_jobs() (2026-05-09)
+
+**Bug:** `retrieve_jobs()` only deduplicated by `job_id`. The evaluation pipeline (`run_evaluation.py`) had seniority hard filtering and URL dedup added during evaluation fixes, but `retrieve_jobs()` — the live app path — never got the same treatment. Live pipeline and eval pipeline diverged.
+
+**Fix:** Added to `retrieve_jobs()`:
+- Seniority hard filter (mirrors `BM25Retriever._passes_seniority_filter`)
+  - Senior CV: excludes entry/associate/internship exp levels + junior/intern title keywords
+  - Entry CV: excludes director/executive/c-suite exp levels + VP/chief/director title keywords
+- URL dedup: same URL = same posting, added to `seen` set alongside `job_id`
+
+**Why missed:** The seniority filter was originally added only to BM25 (which has no semantic understanding). When it was later ported to `run_evaluation.py` for fair evaluation, `retrieve_jobs()` was not updated at the same time.
+
+**Impact:** Live app (`main.py`) now applies same post-processing rules as the evaluation pipeline — no divergence.
