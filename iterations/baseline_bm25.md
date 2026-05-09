@@ -505,4 +505,4 @@ for job in self.jobs:
 self.jobs = deduped_jobs
 ```
 
-**Impact:** BM25 corpus size now matches FAISS (~96,728 unique docs vs 123,849 raw). Query-time dedup retained as a secondary safety net. Evaluation re-run required for any persona labeled before this fix.
+**Impact:** BM25 corpus size now matches FAISS. Final corpus after all dedup passes: **96,312 unique docs** (see data_cleaning.md sections 7–9). Query-time dedup retained as a secondary safety net. Evaluation re-run required for any persona labeled before this fix.

@@ -107,7 +107,7 @@ The full cleaned dataset is ~500MB, which is too large for GitHub.
 
 **Also added:** URL to the `seen` set in the `run_evaluation.py` shared FAISS loop as a query-time safety net.
 
-**Rebuild required:** FAISS indexes must be rebuilt from the new CSV. Final corpus: **96,558 unique docs**.
+**Rebuild required:** FAISS indexes must be rebuilt from the new CSV. *(Further dedup passes in sections 8 and 9 reduced this to the final 96,312 unique docs.)*
 
 ---
 
