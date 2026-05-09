@@ -24,6 +24,8 @@ import hashlib
 import json
 import logging
 import os
+import random
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, TimeoutError as _FuturesTimeout
 from pathlib import Path
@@ -54,7 +56,9 @@ _MODEL_MAP: dict[str, str] = {
 }
 
 MAX_RETRIES = 3
-RETRY_DELAY = 2.0
+_RETRY_DELAYS = [5.0, 15.0, 30.0]  # exponential-ish backoff with jitter
+
+_LLM_SEM = threading.Semaphore(5)  # cap concurrent outbound LLM calls
 DESCRIPTION_CHAR_LIMIT = 5500
 LOGIC_VERSION = "v1"
 
@@ -385,7 +389,8 @@ def analyze_job_matches(
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            parsed = _call_llm(user_message, system_prompt, attempt, provider)
+            with _LLM_SEM:
+                parsed = _call_llm(user_message, system_prompt, attempt, provider)
             _validate_explanations(parsed, jobs)
             final = _postprocess(parsed, cv)
 
@@ -402,7 +407,8 @@ def analyze_job_matches(
             last_error = e
             logger.warning(f"[{provider}] Attempt {attempt}/{MAX_RETRIES}: {e}")
             if attempt < MAX_RETRIES:
-                time.sleep(RETRY_DELAY * attempt)
+                delay = _RETRY_DELAYS[attempt - 1] + random.uniform(0, 3)
+                time.sleep(delay)
 
     raise RuntimeError(
         f"[{provider}] Reasoning failed after {MAX_RETRIES} attempts — last error: {last_error}"
