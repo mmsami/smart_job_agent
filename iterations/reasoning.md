@@ -229,6 +229,27 @@ if provider == "gemma":
 
 ---
 
+## Iteration 7 — Empty match_reason Validation (2026-05-10)
+
+During evaluation, `06_cook_senior` had `match_reason: "—"` for job 10. Gemma returned 10 structurally valid entries (correct count, valid job_ids) but stopped generating content for the last job. `_validate_explanations()` passed because it only checked count and job_ids — not content.
+
+**Fix:** Added empty/placeholder check to `_validate_explanations()`:
+
+```python
+empty = [e.job_id for e in report.job_explanations
+         if not (e.match_reason or "").strip() or (e.match_reason or "").strip() == "—"]
+if empty:
+    raise ValueError(f"Empty or placeholder match_reason for job_ids: {empty}")
+```
+
+This triggers retry → attempt 2+ routes to OpenRouter → complete explanations generated.
+
+**Also added:** `validate_results.py` pre-label checker catches any that slip through (same check applied to saved JSON files before labeling starts).
+
+**Test coverage:** 43/43 passing after change.
+
+---
+
 ## Known Limitations
 
 - **No streaming** — 10-job prompts run ~3-8s per call depending on provider. Acceptable for evaluation; not suitable for real-time UI use.

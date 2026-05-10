@@ -282,6 +282,44 @@ Why this matters for MPNet specifically: MPNet's stronger semantic matching pull
 
 ---
 
+## 12. Pre-label Validator + Reporting Fix (2026-05-10)
+
+### `validate_results.py` — new script
+
+Pre-labeling integrity checker. Run after `run_evaluation` and before any human labeling starts. Flags files that would waste labeling time:
+
+| Check | What it catches |
+|-------|----------------|
+| Malformed JSON | File unreadable |
+| `< 10` explanations | Gemma truncation |
+| Empty/placeholder `match_reason` (`""` or `"—"`) | Silent truncation on last jobs |
+| Duplicate `job_id`s in `job_explanations` | LLM repeated a job |
+| Blank `title` or `company` | Incomplete explanation entries |
+| `job_id` mismatch between `results` and `reasoning` | LLM hallucinated job references |
+| Empty `recommendation` or `cv_summary` | Broken top-level fields |
+
+```bash
+python -m src.evaluation.validate_results
+# → lists all issues with file path + issue type
+# → "All files passed — safe to start labeling." if clean
+```
+
+### `_validate_explanations()` tightened — `reasoning.py`
+
+Added check for empty or `"—"` `match_reason` at generation time. Now triggers retry → routes to OpenRouter on attempt 2+. Previously Gemma could return 10 structurally valid entries where the last job had `match_reason: "—"` and pass validation silently.
+
+### Filesystem-based unresolved count — `run_evaluation.py`
+
+Replaced arithmetic `missing = total - done - skipped - failed` with a direct filesystem scan. The old formula was misleading — `failed` is a per-run counter, not a "still missing" count. New output line:
+
+```
+◉ Unresolved on disk: 1/180
+```
+
+Also fixed `_log_missing_combos()` to require both `.json` AND `.md` present (previously only checked `.json`, inconsistent with `_save_combo` skip logic).
+
+---
+
 ## Updated Architecture (as of 2026-05-02)
 
 ```
