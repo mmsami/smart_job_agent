@@ -5,7 +5,13 @@ BM25 (baseline_bm25.py), FAISS eval (run_evaluation.py), FAISS live (job_search.
 
 SENIOR_EXCLUDE_EXP: frozenset[str] = frozenset({"entry level", "associate", "internship"})
 SENIOR_EXCLUDE_TITLE: frozenset[str] = frozenset({"staff ", "junior", "jr.", "intern", "entry level"})
-ENTRY_EXCLUDE_EXP: frozenset[str] = frozenset({"director", "executive", "c-suite"})
+ENTRY_EXCLUDE_EXP: frozenset[str] = frozenset({
+    "director",
+    "executive",
+    "c-suite",
+    "senior",
+    "mid-senior level",
+})
 ENTRY_EXCLUDE_TITLE: frozenset[str] = frozenset({
     "director",
     "vp ",
@@ -14,6 +20,10 @@ ENTRY_EXCLUDE_TITLE: frozenset[str] = frozenset({
     "c-level",
     "head of",
     "partner",
+    "senior ",
+    " sr ",
+    "lead ",
+    "principal",
 })
 
 
