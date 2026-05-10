@@ -262,6 +262,9 @@ def _validate_explanations(report: ReasoningReport, jobs: list[JobRecord]) -> No
     unknown = returned_ids - expected_ids
     if unknown:
         raise ValueError(f"LLM returned unknown job_ids: {unknown}")
+    empty = [e.job_id for e in report.job_explanations if not (e.match_reason or "").strip() or (e.match_reason or "").strip() == "—"]
+    if empty:
+        raise ValueError(f"Empty or placeholder match_reason for job_ids: {empty}")
 
 
 # ── LLM call ─────────────────────────────────────────────────────────────────
