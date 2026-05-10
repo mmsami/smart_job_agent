@@ -259,6 +259,10 @@ def _validate_explanations(report: ReasoningReport, jobs: list[JobRecord]) -> No
         raise ValueError(
             f"Expected {len(jobs)} job explanations, got {len(report.job_explanations)}"
         )
+    all_returned = [e.job_id for e in report.job_explanations]
+    dupes = {jid for jid in all_returned if all_returned.count(jid) > 1}
+    if dupes:
+        raise ValueError(f"LLM returned duplicate job_ids: {dupes}")
     unknown = returned_ids - expected_ids
     if unknown:
         raise ValueError(f"LLM returned unknown job_ids: {unknown}")
