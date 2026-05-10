@@ -49,14 +49,17 @@ def validate_results() -> None:
             issues.append(f"  [INCOMPLETE] {label} — {len(explanations)}/10 explanations")
             continue
 
-        empty = [
-            e.get("job_id", "?")
-            for e in explanations
-            if not (e.get("match_reason") or "").strip()
-            or (e.get("match_reason") or "").strip() == "—"
-        ]
-        if empty:
-            issues.append(f"  [EMPTY MATCH_REASON] {label} — job_ids: {empty}")
+        for e in explanations:
+            mr = (e.get("match_reason") or "").strip()
+            if not mr or mr == "—":
+                title = (e.get("title") or "?")[:50]
+                company = (e.get("company") or "?")[:30]
+                actual = repr(mr) if mr else repr(e.get("match_reason"))
+                issues.append(
+                    f"  [EMPTY MATCH_REASON] {label}\n"
+                    f"    job_id: {e.get('job_id', '?')} | {title} @ {company}\n"
+                    f"    match_reason: {actual}"
+                )
 
         # Duplicate job_ids
         seen_ids: list[str] = [e.get("job_id", "") for e in explanations]
@@ -65,13 +68,12 @@ def validate_results() -> None:
             issues.append(f"  [DUPLICATE JOB_IDS] {label} — {dupes}")
 
         # Blank title or company
-        blank_meta = [
-            e.get("job_id", "?")
-            for e in explanations
-            if not (e.get("title") or "").strip() or not (e.get("company") or "").strip()
-        ]
-        if blank_meta:
-            issues.append(f"  [BLANK TITLE/COMPANY] {label} — job_ids: {blank_meta}")
+        for e in explanations:
+            if not (e.get("title") or "").strip() or not (e.get("company") or "").strip():
+                issues.append(
+                    f"  [BLANK TITLE/COMPANY] {label}\n"
+                    f"    job_id: {e.get('job_id', '?')} | title: {repr(e.get('title'))} | company: {repr(e.get('company'))}"
+                )
 
         # job_ids in reasoning don't match result job_ids
         result_ids = {str(r.get("job_id", "")) for r in data.get("results", [])}
