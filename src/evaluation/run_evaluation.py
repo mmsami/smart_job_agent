@@ -547,7 +547,9 @@ def _log_missing_combos(pdf_files: list[Path]) -> None:
         persona_dir = OUTPUT_DIR / pdf.stem
         for method_name in ALL_METHOD_NAMES:
             for model in MODELS:
-                if not (persona_dir / f"{method_name}_{model}.json").exists():
+                json_path = persona_dir / f"{method_name}_{model}.json"
+                md_path = persona_dir / f"{method_name}_{model}.md"
+                if not json_path.exists() or not md_path.exists():
                     missing.append(f"{pdf.stem}/{method_name}_{model}")
 
     if not missing:
@@ -618,14 +620,23 @@ def run_evaluation():
                 logger.exception(f"Persona {persona_id} failed unexpectedly: {e}")
                 totals["failed"] += (len(METHODS) + 1) * len(MODELS)
 
-    missing = total - totals["done"] - totals["skipped"] - totals["failed"]
+    # Count unresolved combos from filesystem — authoritative, not arithmetic
+    unresolved = sum(
+        1
+        for pdf in pdf_files
+        for method_name in ALL_METHOD_NAMES
+        for model in MODELS
+        if not (OUTPUT_DIR / pdf.stem / f"{method_name}_{model}.json").exists()
+        or not (OUTPUT_DIR / pdf.stem / f"{method_name}_{model}.md").exists()
+    )
     logger.info("")
     logger.info("=" * 60)
     logger.info(f"Experiments complete. Results saved to: {OUTPUT_DIR}")
     logger.info(f"  ✓ Done:    {totals['done']}/{total}")
     logger.info(f"  ↩ Skipped: {totals['skipped']}/{total}  (already existed)")
-    logger.info(f"  ✗ Failed:  {totals['failed']}/{total}  (re-run to retry)")
-    if totals["failed"] > 0 or missing > 0:
+    logger.info(f"  ✗ Failed:  {totals['failed']}/{total}  (this run)")
+    logger.info(f"  ◉ Unresolved on disk: {unresolved}/{total}")
+    if unresolved > 0:
         logger.info("  ⚠ Re-run this script to retry failed combinations.")
         _log_missing_combos(pdf_files)
     else:
