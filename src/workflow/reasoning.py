@@ -337,11 +337,19 @@ def _call_llm(
     user_message: str, system_prompt: str, attempt: int, provider: Provider
 ) -> ReasoningReport:
     if provider == "gemma":
-        try:
-            return _call_gemma(user_message, system_prompt, attempt)
-        except (TimeoutError, json.JSONDecodeError, ValueError) as e:
-            error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
-            logger.warning(f"[gemma] Google AI Studio {error_desc} — falling back to OpenRouter")
+        if attempt == 1:
+            try:
+                return _call_gemma(user_message, system_prompt, attempt)
+            except (TimeoutError, json.JSONDecodeError, ValueError) as e:
+                error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
+                logger.warning(f"[gemma] Google AI Studio {error_desc} — falling back to OpenRouter")
+                return _call_openrouter(
+                    user_message, system_prompt, attempt, provider,
+                    model_override=_GEMMA_OPENROUTER_MODEL,
+                )
+        else:
+            # AI Studio already failed on attempt 1 — go straight to OpenRouter
+            logger.warning(f"[gemma] Attempt {attempt} — using OpenRouter directly")
             return _call_openrouter(
                 user_message, system_prompt, attempt, provider,
                 model_override=_GEMMA_OPENROUTER_MODEL,
