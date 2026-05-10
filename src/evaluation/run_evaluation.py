@@ -536,6 +536,41 @@ def _run_persona(pdf_path: Path, bm25: BM25Retriever) -> dict:
     return counts
 
 
+# ── Missing Combo Diagnostic ─────────────────────────────────────────────────
+
+ALL_METHOD_NAMES = list(METHODS.keys()) + ["FAISS_PARSED_NORERANK"]
+
+
+def _log_missing_combos(pdf_files: list[Path]) -> None:
+    missing: list[str] = []
+    for pdf in pdf_files:
+        persona_dir = OUTPUT_DIR / pdf.stem
+        for method_name in ALL_METHOD_NAMES:
+            for model in MODELS:
+                if not (persona_dir / f"{method_name}_{model}.json").exists():
+                    missing.append(f"{pdf.stem}/{method_name}_{model}")
+
+    if not missing:
+        return
+
+    logger.info(f"  Missing combos ({len(missing)}):")
+    if len(missing) <= 5:
+        for m in missing:
+            logger.info(f"    - {m}")
+    else:
+        # Group by method and model to surface patterns
+        from collections import Counter
+        by_method: Counter = Counter()
+        by_model: Counter = Counter()
+        for m in missing:
+            _, combo = m.split("/", 1)
+            method, model = combo.rsplit("_", 1)
+            by_method[method] += 1
+            by_model[model] += 1
+        logger.info("    By method: " + ", ".join(f"{k}×{v}" for k, v in by_method.most_common()))
+        logger.info("    By model:  " + ", ".join(f"{k}×{v}" for k, v in by_model.most_common()))
+
+
 # ── Main Experiment Loop ──────────────────────────────────────────────────────
 
 
@@ -592,6 +627,7 @@ def run_evaluation():
     logger.info(f"  ✗ Failed:  {totals['failed']}/{total}  (re-run to retry)")
     if totals["failed"] > 0 or missing > 0:
         logger.info("  ⚠ Re-run this script to retry failed combinations.")
+        _log_missing_combos(pdf_files)
     else:
         logger.info("  All combinations complete — ready for labeling.")
     logger.info("=" * 60)
