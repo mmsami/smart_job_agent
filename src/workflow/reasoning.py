@@ -2,13 +2,17 @@
 reasoning.py — Step 3: CV + top-10 reranked jobs → facts + skill gaps + explanations.
 
 Supports three providers for Experiment B (multi-LLM comparison):
-  - "gemma"    → Gemma 4 31B via Google AI Studio (default, free)
-  - "deepseek" → DeepSeek-V3.2 via OpenRouter
+  - "gemini"   → Gemini 2.5 Pro via OpenRouter (default)
+  - "deepseek" → DeepSeek V4 Flash via OpenRouter
   - "claude"   → Claude Sonnet 4.6 via OpenRouter
+
+Research framing (Experiment B):
+  Anthropic (Claude) vs Google (Gemini 2.5 Pro) vs Chinese open-source (DeepSeek V4 Flash).
+  Three distinct model families. Same prompt, same schema, different models.
 
 Design:
   - System prompt: reasoning.md rubric + indirect prompt injection guard
-  - User message: CVProfile + all 10 job descriptions (truncated to ~2500 chars each)
+  - User message: CVProfile + all 10 job descriptions (truncated to ~5500 chars each)
   - Output: ReasoningReport with per-job explanations and aggregated skill gaps
   - Post-processing: removes fake missing skills already in CV, deduplicates, caps at 3
 
@@ -27,14 +31,11 @@ import os
 import random
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor, TimeoutError as _FuturesTimeout
 from pathlib import Path
 from typing import Any, Literal
 
 from diskcache import Cache
 from dotenv import load_dotenv
-from google import genai
-from google.genai import types
 from langsmith import wrappers
 from openai import OpenAI
 from pydantic import BaseModel, Field
@@ -47,11 +48,11 @@ logger = logging.getLogger(__name__)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-Provider = Literal["gemma", "deepseek", "claude"]
+Provider = Literal["gemini", "deepseek", "claude"]
 
 _MODEL_MAP: dict[str, str] = {
-    "gemma": "gemma-4-31b-it",
-    "deepseek": "deepseek/deepseek-v3.2",
+    "gemini": "google/gemini-2.5-pro",
+    "deepseek": "deepseek/deepseek-v4-flash",
     "claude": "anthropic/claude-sonnet-4-6",
 }
 
@@ -60,16 +61,7 @@ _RETRY_DELAYS = [5.0, 15.0, 30.0]  # exponential-ish backoff with jitter
 
 _LLM_SEM = threading.Semaphore(5)  # cap concurrent outbound LLM calls
 DESCRIPTION_CHAR_LIMIT = 5500
-LOGIC_VERSION = "v1"
-
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if not GOOGLE_API_KEY:
-    raise ValueError("GOOGLE_API_KEY environment variable is not set")
-
-_gemma_client = wrappers.wrap_gemini(
-    genai.Client(api_key=GOOGLE_API_KEY),
-    tracing_extra={"tags": ["reasoning", "gemma"], "metadata": {"component": "reasoning", "model": _MODEL_MAP["gemma"]}},
-)
+LOGIC_VERSION = "v2"
 
 
 def _openrouter_client():
@@ -275,45 +267,6 @@ def _validate_explanations(report: ReasoningReport, jobs: list[JobRecord]) -> No
 # ── LLM call ─────────────────────────────────────────────────────────────────
 
 
-_GEMMA_TIMEOUT = 60  # seconds — matches OpenRouter client timeout
-
-
-def _call_gemma(user_message: str, system_prompt: str, attempt: int) -> ReasoningReport:
-    temperature = 0.0 if attempt == 1 else 0.1
-
-    def _do_call():
-        response = _gemma_client.models.generate_content(
-            model=_MODEL_MAP["gemma"],
-            contents=user_message,
-            config=types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                response_mime_type="application/json",
-                response_schema=ReasoningReport,
-                temperature=temperature,
-            ),
-        )
-        raw = (response.text or "").strip()
-        if raw.startswith("```"):
-            parts = raw.split("```")
-            if len(parts) > 1:
-                raw = parts[1]
-                if raw.startswith("json"):
-                    raw = raw[4:]
-                raw = raw.strip()
-        return ReasoningReport.model_validate_json(raw)
-
-    ex = ThreadPoolExecutor(max_workers=1)
-    future = ex.submit(_do_call)
-    try:
-        return future.result(timeout=_GEMMA_TIMEOUT)
-    except _FuturesTimeout:
-        ex.shutdown(wait=False)
-        raise TimeoutError(f"Gemma API call timed out after {_GEMMA_TIMEOUT}s")
-
-
-_GEMMA_OPENROUTER_MODEL = "google/gemma-4-31b-it"  # fallback when AI Studio hangs
-
-
 def _call_openrouter(
     user_message: str, system_prompt: str, attempt: int, provider: Provider,
     model_override: str | None = None,
@@ -344,24 +297,6 @@ def _call_openrouter(
 def _call_llm(
     user_message: str, system_prompt: str, attempt: int, provider: Provider
 ) -> ReasoningReport:
-    if provider == "gemma":
-        if attempt == 1:
-            try:
-                return _call_gemma(user_message, system_prompt, attempt)
-            except (TimeoutError, json.JSONDecodeError, ValueError) as e:
-                error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
-                logger.warning(f"[gemma] Google AI Studio {error_desc} — falling back to OpenRouter")
-                return _call_openrouter(
-                    user_message, system_prompt, attempt, provider,
-                    model_override=_GEMMA_OPENROUTER_MODEL,
-                )
-        else:
-            # AI Studio already failed on attempt 1 — go straight to OpenRouter
-            logger.warning(f"[gemma] Attempt {attempt} — using OpenRouter directly")
-            return _call_openrouter(
-                user_message, system_prompt, attempt, provider,
-                model_override=_GEMMA_OPENROUTER_MODEL,
-            )
     return _call_openrouter(user_message, system_prompt, attempt, provider)
 
 
@@ -371,7 +306,7 @@ def _call_llm(
 def analyze_job_matches(
     cv: CVProfile,
     jobs: list[JobRecord],
-    provider: Provider = "gemma",
+    provider: Provider = "gemini",
     use_cache: bool = True,
 ) -> ReasoningReport:
     """
@@ -380,7 +315,7 @@ def analyze_job_matches(
     Args:
         cv: Structured CVProfile from cv_profiler.
         jobs: Up to 10 JobRecord objects from reranker (already ordered).
-        provider: LLM to use — "gemma" (default), "deepseek", or "claude".
+        provider: LLM to use — "gemini" (default), "deepseek", or "claude".
         use_cache: Return cached result for same input if available.
 
     Returns:
@@ -446,8 +381,8 @@ if __name__ == "__main__":
 
     from src.workflow.mocks import mock_cv_mid_tech, mock_job_records
 
-    # Default: gemma. Pass --provider deepseek or --provider claude to test others.
-    provider: Provider = "gemma"
+    # Default: gemini. Pass --provider deepseek or --provider claude to test others.
+    provider: Provider = "gemini"
     if "--provider" in sys.argv:
         provider = sys.argv[sys.argv.index("--provider") + 1]  # type: ignore[assignment]
 

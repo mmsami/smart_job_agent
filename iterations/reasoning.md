@@ -250,6 +250,79 @@ This triggers retry → attempt 2+ routes to OpenRouter → complete explanation
 
 ---
 
+## Iteration 8 — Prompt Rubric Tightening + reranker_score Integration (2026-05-10)
+
+**Problem:** reasoning.md had 6 quality issues affecting eval correctness:
+1. Forced artificial missing skills ("list 2–3 even for perfect matches")
+2. No explicit requirement for exactly 10 explanations
+3. Relevance standard too loose for evaluation-grade labeling
+4. Seniority mismatch not framed as a primary disqualifier
+5. Required vs. preferred criteria not distinguished
+6. No connection to upstream reranker scores
+
+**Changes applied:**
+
+`reasoning.md` fully rewritten:
+- Removed artificial inflation — `missing_skills` may be empty; no minimum count
+- Explicit coverage rule: "return exactly one explanation per input job — no more, no fewer"
+- Seniority mismatch = primary disqualifier (not one factor among many)
+- Domain mismatch = cap relevance regardless of keyword overlap
+- Required vs. preferred distinction explicit — only required criteria drive fit and missing skills
+- `reranker_score` field added to job input; prompt instructs LLM to reference it when score < 60
+
+`reasoning.py:_build_user_message()`:
+- Added `"reranker_score": j.score` to jobs dict — passes upstream numeric fit score to LLM
+
+**Test coverage:** 43/43 passing after change (no new tests needed — schema and validation unchanged).
+
+---
+
+## Iteration 9 — Model Swap: Gemma → Gemini 2.5 Pro + DeepSeek V4 Flash (2026-05-10)
+
+**Problem:** Gemma 4 31B has a 16K max output token ceiling (OpenRouter). On verbose BM25_RAW inputs for cook personas, Gemma truncated output at 3/10 explanations. Fallback to OpenRouter Gemma hit the same ceiling. Additionally, Gemma was a weak research representative — Google's open model is less interesting than Google's flagship for an Experiment B multi-LLM comparison.
+
+**Research framing after swap:**
+- Claude Sonnet 4.6 → Anthropic, proprietary, RLHF-tuned, industry standard
+- Gemini 2.5 Pro → Google, proprietary, search-native, 65K output (via OpenRouter)
+- DeepSeek V4 Flash → Chinese open-source, MoE (13B active / 284B total), 384K output, $0.28/M
+
+Research question: can efficient open-source (DeepSeek V4 Flash, $0.28/M) match dominant proprietary models (Claude $15/M, Gemini $10/M) for job matching quality? Three distinct AI lab families — stronger contribution than Gemma (same Google family as Gemini, weaker model).
+
+**Changes applied:**
+
+`reasoning.py`:
+- Removed `google.genai` / `google.genai.types` imports — Gemini routes through OpenRouter (OpenAI-compatible)
+- Removed `GOOGLE_API_KEY` check, `_gemma_client`, `_call_gemma()`, `_GEMMA_TIMEOUT`, `_GEMMA_OPENROUTER_MODEL`
+- `Provider` literal: `"gemma"` → `"gemini"`
+- `_MODEL_MAP`: `"gemini": "google/gemini-2.5-pro"`, `"deepseek": "deepseek/deepseek-v4-flash"`
+- `_call_llm()` simplified — all 3 providers now route through `_call_openrouter()` uniformly
+- Default provider: `"gemma"` → `"gemini"`
+- `LOGIC_VERSION`: `"v1"` → `"v2"` (invalidates all cached v1 results)
+
+`run_evaluation.py`:
+- `Provider` literal and `MODELS` list updated to `["gemini", "deepseek", "claude"]`
+- Module docstring updated with new model names
+
+`evaluation_automation.txt`:
+- All `_gemma.md` file references → `_gemini.md`
+- Added research model lineup section with cost comparison and output limit context
+
+`tests/workflow/test_reasoning.py`:
+- Replaced Gemma-specific mocks (`_gemma_client`, `_make_gemma_mock`) with OpenRouter mocks
+- `test_analyze_gemma_*` → `test_analyze_gemini_*` (all via `_openrouter_client`)
+- `test_gemma_bad_json_falls_back_to_openrouter` → `test_bad_json_triggers_retry` (simpler, provider-agnostic)
+- `test_cache_keys_differ_across_providers` updated to use gemini/claude
+
+**Re-run protocol for teammates:**
+1. Hamid finalizes reasoning.md prompt → bump `LOGIC_VERSION` to `"v3"`
+2. Julia: `git pull` → `rm -rf evaluation/results/*/` → `python -m src.evaluation.run_evaluation`
+3. No need to delete `.cache/reasoning/` — LOGIC_VERSION change invalidates cache keys automatically
+4. File-existence delete required because `_save_combo` checks files before cache
+
+**Test coverage:** 43/43 passing after change.
+
+---
+
 ## Known Limitations
 
 - **No streaming** — 10-job prompts run ~3-8s per call depending on provider. Acceptable for evaluation; not suitable for real-time UI use.

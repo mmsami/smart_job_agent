@@ -3,12 +3,12 @@ Tests for reasoning.py — contract validation, no live LLM calls.
 
 Tests cover:
   - Output contract: returns ReasoningReport with correct structure
-  - All 3 providers: gemma, deepseek, claude (mocked)
+  - All 3 providers: gemini, deepseek, claude (mocked via _openrouter_client)
   - Postprocessing: fake missing skills removed, deduplication, cap at 3
   - Cache hit returns same result without LLM call
   - Retry on bad JSON / schema validation error
   - Input validation: empty jobs, >10 jobs raises ValueError
-  - Truncation: descriptions > 2500 chars truncated in user message
+  - Truncation: descriptions > DESCRIPTION_CHAR_LIMIT chars truncated
   - Cache keys differ across providers (separate experiment results)
 """
 
@@ -59,13 +59,6 @@ def valid_report(ten_jobs) -> ReasoningReport:
         overall_missing_skills=["Kubernetes", "Go", "Terraform"],
         recommendation="Strong match for backend roles. Consider upskilling in Kubernetes.",
     )
-
-
-def _make_gemma_mock(report: ReasoningReport) -> MagicMock:
-    """Mock google.genai response returning a valid ReasoningReport."""
-    mock_resp = MagicMock()
-    mock_resp.text = report.model_dump_json()
-    return mock_resp
 
 
 def _make_openrouter_mock(report: ReasoningReport) -> MagicMock:
@@ -206,7 +199,6 @@ def test_filter_removes_empty_strings():
 
 
 def test_postprocess_removes_fake_missing_skills(ten_jobs):
-    # COBOL is guaranteed absent from a mid-tech CV; Python is present
     report = ReasoningReport(
         cv_summary="Test",
         job_explanations=[
@@ -215,7 +207,7 @@ def test_postprocess_removes_fake_missing_skills(ten_jobs):
                 title=ten_jobs[0].title,
                 company=ten_jobs[0].company,
                 match_reason="Good match",
-                missing_skills=["Python", "COBOL"],  # Python already in CV, COBOL is not
+                missing_skills=["Python", "COBOL"],
             )
         ],
         overall_missing_skills=["Python"],
@@ -278,7 +270,7 @@ def test_validate_explanations_wrong_count(ten_jobs):
         job_explanations=[
             JobExplanation(job_id=j.job_id, title=j.title, company=j.company,
                            match_reason="ok", missing_skills=[])
-            for j in ten_jobs[:8]  # only 8 instead of 10
+            for j in ten_jobs[:8]
         ],
         overall_missing_skills=[],
         recommendation="ok",
@@ -317,14 +309,13 @@ def test_validate_explanations_passes_on_valid(ten_jobs):
         overall_missing_skills=[],
         recommendation="ok",
     )
-    _validate_explanations(report, ten_jobs)  # must not raise
+    _validate_explanations(report, ten_jobs)
 
 
 # ── _postprocess overall_missing always from per-job pool ─────────────────────
 
 
 def test_postprocess_overall_missing_from_per_job_pool(ten_jobs):
-    # LLM overall_missing_skills is ignored — only per-job pool is used
     report = ReasoningReport(
         cv_summary="x",
         job_explanations=[
@@ -336,7 +327,7 @@ def test_postprocess_overall_missing_from_per_job_pool(ten_jobs):
                            match_reason="ok", missing_skills=[])
             for j in ten_jobs[1:]
         ],
-        overall_missing_skills=["Python"],  # Python is in CV — should NOT appear
+        overall_missing_skills=["Python"],
         recommendation="ok",
     )
     result = _postprocess(report, mock_cv_mid_tech)
@@ -360,19 +351,21 @@ def test_postprocess_overall_missing_capped_at_3(ten_jobs):
     assert len(result.overall_missing_skills) == 3
 
 
-# ── analyze_job_matches — gemma ───────────────────────────────────────────────
+# ── analyze_job_matches — gemini ──────────────────────────────────────────────
 
 
 @patch("src.workflow.reasoning._cache")
-@patch("src.workflow.reasoning._gemma_client")
-def test_analyze_gemma_returns_report(mock_client_fn, mock_cache, ten_jobs, valid_report):
-    mock_client_fn.return_value.models.generate_content.return_value = _make_gemma_mock(valid_report)
+@patch("src.workflow.reasoning._openrouter_client")
+def test_analyze_gemini_returns_report(mock_or_factory, mock_cache, ten_jobs, valid_report):
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.return_value = _make_openrouter_mock(valid_report)
+    mock_or_factory.return_value = mock_client
     mock_cache.__contains__ = MagicMock(return_value=False)
     mock_cache.__setitem__ = MagicMock()
 
     from src.workflow.reasoning import analyze_job_matches
 
-    result = analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemma", use_cache=False)
+    result = analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemini", use_cache=False)
 
     assert isinstance(result, ReasoningReport)
     assert result.cv_summary
@@ -380,17 +373,20 @@ def test_analyze_gemma_returns_report(mock_client_fn, mock_cache, ten_jobs, vali
 
 
 @patch("src.workflow.reasoning._cache")
-@patch("src.workflow.reasoning._gemma_client")
-def test_analyze_gemma_single_llm_call(mock_client_fn, mock_cache, ten_jobs, valid_report):
-    mock_client_fn.models.generate_content.return_value = _make_gemma_mock(valid_report)
+@patch("src.workflow.reasoning._openrouter_client")
+def test_analyze_gemini_uses_correct_model(mock_or_factory, mock_cache, ten_jobs, valid_report):
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.return_value = _make_openrouter_mock(valid_report)
+    mock_or_factory.return_value = mock_client
     mock_cache.__contains__ = MagicMock(return_value=False)
     mock_cache.__setitem__ = MagicMock()
 
-    from src.workflow.reasoning import analyze_job_matches
+    from src.workflow.reasoning import analyze_job_matches, _MODEL_MAP
 
-    analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemma", use_cache=False)
+    analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemini", use_cache=False)
 
-    assert mock_client_fn.models.generate_content.call_count == 1
+    call_kwargs = mock_client.chat.completions.create.call_args
+    assert call_kwargs.kwargs["model"] == _MODEL_MAP["gemini"]
 
 
 # ── analyze_job_matches — deepseek ────────────────────────────────────────────
@@ -470,30 +466,28 @@ def test_analyze_claude_uses_correct_model(mock_or_factory, mock_cache, ten_jobs
 
 
 @patch("src.workflow.reasoning._cache")
-@patch("src.workflow.reasoning._gemma_client")
-def test_cache_hit_skips_llm(mock_client_fn, mock_cache, ten_jobs, valid_report):
+@patch("src.workflow.reasoning._openrouter_client")
+def test_cache_hit_skips_llm(mock_or_factory, mock_cache, ten_jobs, valid_report):
     mock_cache.__contains__ = MagicMock(return_value=True)
     mock_cache.__getitem__ = MagicMock(return_value=valid_report.model_dump())
 
     from src.workflow.reasoning import analyze_job_matches
 
-    result = analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemma", use_cache=True)
+    result = analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemini", use_cache=True)
 
-    mock_client_fn.return_value.models.generate_content.assert_not_called()
+    mock_or_factory.return_value.chat.completions.create.assert_not_called()
     assert isinstance(result, ReasoningReport)
 
 
 @patch("src.workflow.reasoning._cache")
-@patch("src.workflow.reasoning._gemma_client")
 @patch("src.workflow.reasoning._openrouter_client")
-def test_cache_keys_differ_across_providers(mock_or_factory, mock_gemma_fn, mock_cache, ten_jobs, valid_report):
-    """Gemma and Claude results must be stored under different cache keys."""
+def test_cache_keys_differ_across_providers(mock_or_factory, mock_cache, ten_jobs, valid_report):
+    """Gemini and Claude results must be stored under different cache keys."""
     stored_keys: list[str] = []
 
     def capture_setitem(key, val):
         stored_keys.append(key)
 
-    mock_gemma_fn.return_value.models.generate_content.return_value = _make_gemma_mock(valid_report)
     mock_client = MagicMock()
     mock_client.chat.completions.create.return_value = _make_openrouter_mock(valid_report)
     mock_or_factory.return_value = mock_client
@@ -502,7 +496,7 @@ def test_cache_keys_differ_across_providers(mock_or_factory, mock_gemma_fn, mock
 
     from src.workflow.reasoning import analyze_job_matches
 
-    analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemma", use_cache=True)
+    analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemini", use_cache=True)
     analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="claude", use_cache=True)
 
     assert len(stored_keys) == 2
@@ -514,43 +508,38 @@ def test_cache_keys_differ_across_providers(mock_or_factory, mock_gemma_fn, mock
 
 @patch("src.workflow.reasoning._cache")
 @patch("src.workflow.reasoning._openrouter_client")
-@patch("src.workflow.reasoning._gemma_client")
-def test_gemma_bad_json_falls_back_to_openrouter(mock_client_fn, mock_or_factory, mock_cache, ten_jobs, valid_report):
-    """Gemma returning bad JSON triggers OpenRouter fallback (not Gemma retry)."""
+def test_bad_json_triggers_retry(mock_or_factory, mock_cache, ten_jobs, valid_report):
+    """Bad JSON on attempt 1 triggers retry — succeeds on attempt 2."""
+    bad_choice = MagicMock()
+    bad_choice.message.content = "not valid json {"
     bad_resp = MagicMock()
-    bad_resp.text = "not valid json {"
-    mock_client_fn.models.generate_content.return_value = bad_resp
+    bad_resp.choices = [bad_choice]
 
-    mock_or_client = MagicMock()
-    mock_or_client.chat.completions.create.return_value = _make_openrouter_mock(valid_report)
-    mock_or_factory.return_value = mock_or_client
-
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.side_effect = [
+        bad_resp,
+        _make_openrouter_mock(valid_report),
+    ]
+    mock_or_factory.return_value = mock_client
     mock_cache.__contains__ = MagicMock(return_value=False)
     mock_cache.__setitem__ = MagicMock()
 
     from src.workflow.reasoning import analyze_job_matches
 
     with patch("src.workflow.reasoning.time.sleep"):
-        result = analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemma", use_cache=False)
+        result = analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemini", use_cache=False)
 
     assert isinstance(result, ReasoningReport)
-    assert mock_client_fn.models.generate_content.call_count == 1
-    assert mock_or_client.chat.completions.create.call_count == 1
+    assert mock_client.chat.completions.create.call_count == 2
 
 
 @patch("src.workflow.reasoning._cache")
 @patch("src.workflow.reasoning._openrouter_client")
-@patch("src.workflow.reasoning._gemma_client")
-def test_all_retries_exhausted_raises(mock_client_fn, mock_or_factory, mock_cache, ten_jobs):
-    """All retries fail (Gemma bad JSON + OpenRouter error) → RuntimeError."""
-    bad_resp = MagicMock()
-    bad_resp.text = "not valid json {"
-    mock_client_fn.models.generate_content.return_value = bad_resp
-
-    mock_or_client = MagicMock()
-    mock_or_client.chat.completions.create.side_effect = RuntimeError("OpenRouter unavailable")
-    mock_or_factory.return_value = mock_or_client
-
+def test_all_retries_exhausted_raises(mock_or_factory, mock_cache, ten_jobs):
+    """All 3 retries fail → RuntimeError."""
+    mock_client = MagicMock()
+    mock_client.chat.completions.create.side_effect = RuntimeError("API unavailable")
+    mock_or_factory.return_value = mock_client
     mock_cache.__contains__ = MagicMock(return_value=False)
     mock_cache.__setitem__ = MagicMock()
 
@@ -558,7 +547,7 @@ def test_all_retries_exhausted_raises(mock_client_fn, mock_or_factory, mock_cach
 
     with patch("src.workflow.reasoning.time.sleep"):
         with pytest.raises(RuntimeError, match="Reasoning failed"):
-            analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemma", use_cache=False)
+            analyze_job_matches(mock_cv_mid_tech, ten_jobs, provider="gemini", use_cache=False)
 
 
 # ── Input validation ──────────────────────────────────────────────────────────
@@ -574,7 +563,6 @@ def test_empty_jobs_raises():
 def test_too_many_jobs_raises():
     from src.workflow.reasoning import analyze_job_matches
 
-    # mock_job_records has exactly 10 items; build 11 by duplicating one with new id
     eleven_jobs = mock_job_records[:10] + [
         mock_job_records[0].model_copy(update={"job_id": "extra_job"})
     ]
@@ -586,7 +574,7 @@ def test_too_many_jobs_raises():
 
 
 def _apply_fence_strip(raw: str) -> str:
-    """Mirrors the fence-strip logic in _call_gemma and _call_openrouter."""
+    """Mirrors the fence-strip logic in _call_openrouter."""
     if raw.startswith("```"):
         parts = raw.split("```")
         if len(parts) > 1:
@@ -603,7 +591,6 @@ def test_fence_strip_standard_with_closing():
 
 
 def test_fence_strip_no_closing_backtick():
-    """Model returns only an opening fence — must not raise IndexError."""
     raw = '```json\n{"cv_summary": "test"}'
     assert _apply_fence_strip(raw) == '{"cv_summary": "test"}'
 

@@ -5,8 +5,8 @@ This script executes the full experimental matrix:
   Personas (10) x Retrieval Methods (4) x Reasoning Models (3)
 
 Experiment A: Compare 4 retrieval strategies (BM25 vs FAISS, raw vs parsed).
-Experiment B: Compare 3 reasoning LLMs (Gemma, DeepSeek, Claude) on the same
-              reranked top-10, isolating the effect of the reasoning model.
+Experiment B: Compare 3 reasoning LLMs (Gemini 2.5 Pro, DeepSeek V4 Flash, Claude Sonnet 4.6)
+              on the same reranked top-10, isolating the effect of the reasoning model.
 
 Reranking is always Gemma (fixed across all runs). This allows Experiment B to
 measure reasoning quality independently of retrieval and reranking.
@@ -115,10 +115,11 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 RETRIEVAL_K = 20  # jobs fetched per retrieval method
 RERANK_K = 10  # jobs kept after reranking (passed to reasoning)
 
-Provider = Literal["gemma", "deepseek", "claude"]
+Provider = Literal["gemini", "deepseek", "claude"]
 
 # Experiment B: 3 reasoning LLMs (reranker is always Gemma)
-MODELS: list[Provider] = ["gemma", "deepseek", "claude"]
+# Anthropic (Claude) vs Google (Gemini 2.5 Pro) vs Chinese open-source (DeepSeek V4 Flash)
+MODELS: list[Provider] = ["gemini", "deepseek", "claude"]
 
 # Experiment A: retrieval/query combinations
 # FAISS_PARSED_MPNET added per professor feedback: test stronger embedding model
