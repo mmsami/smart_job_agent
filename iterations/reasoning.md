@@ -199,6 +199,36 @@ delay = _RETRY_DELAYS[attempt - 1] + random.uniform(0, 3)
 
 ---
 
+## Iteration 6 — Gemma Output Truncation Fix (2026-05-10)
+
+During evaluation, `05_cook_entry/BM25_PARSED_gemma` failed persistently across 5 re-runs with:
+
+```
+RuntimeError: [gemma] Reasoning failed after 3 attempts — last error: Expected 10 job explanations, got 3
+```
+
+**Root cause:** Gemma (AI Studio) truncated its structured output response after 3 job explanations. The JSON was valid and parsed correctly — the model just stopped generating mid-response. This is an output length limit issue, not a JSON or timeout issue. The specific job set for this persona had unusually long descriptions, pushing the combined output over Gemma's limit.
+
+**Why all 3 retries failed:** All retries called the same AI Studio endpoint with the same input → same truncation every time.
+
+**Fix:** On attempt 2+, skip AI Studio entirely and go straight to OpenRouter Gemma (which handles longer outputs under different infrastructure):
+
+```python
+if provider == "gemma":
+    if attempt == 1:
+        try:
+            return _call_gemma(...)
+        except (TimeoutError, json.JSONDecodeError, ValueError) as e:
+            return _call_openrouter(..., model_override=_GEMMA_OPENROUTER_MODEL)
+    else:
+        # AI Studio already failed — go straight to OpenRouter
+        return _call_openrouter(..., model_override=_GEMMA_OPENROUTER_MODEL)
+```
+
+**Test coverage:** 43/43 passing after change.
+
+---
+
 ## Known Limitations
 
 - **No streaming** — 10-job prompts run ~3-8s per call depending on provider. Acceptable for evaluation; not suitable for real-time UI use.

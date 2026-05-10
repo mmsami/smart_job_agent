@@ -245,6 +245,43 @@ Despite `response_mime_type="application/json"`, Gemma sometimes wraps output in
 
 ---
 
+## 11. Missing Combo Diagnostic + Seniority Filter Fix (2026-05-10)
+
+### Missing combo diagnostic — `run_evaluation.py`
+
+After each run, the script now scans `evaluation/results/` and reports which combos are missing. Compact output: ≤5 missing → listed explicitly; >5 missing → grouped by method and model to surface patterns.
+
+```
+Missing combos (1):
+  - 05_cook_entry/BM25_PARSED_gemma
+
+Missing combos (30):
+  By method: FAISS_PARSED_MPNET×30
+  By model:  gemma×10, deepseek×10, claude×10
+```
+
+Added `_log_missing_combos()` + `ALL_METHOD_NAMES` constant. No changes to the run logic.
+
+### Seniority filter gap fixed — `retrieval_filters.py`
+
+During evaluation, entry/intern personas received senior-level jobs through the seniority filter. Root cause: `ENTRY_EXCLUDE_EXP` was missing `"senior"` and `"mid-senior level"`, and `ENTRY_EXCLUDE_TITLE` was missing `"senior "`, `" sr "`, `"lead "`, `"principal"`.
+
+```python
+# Before
+ENTRY_EXCLUDE_EXP: frozenset[str] = frozenset({"director", "executive", "c-suite"})
+
+# After
+ENTRY_EXCLUDE_EXP: frozenset[str] = frozenset({
+    "director", "executive", "c-suite", "senior", "mid-senior level"
+})
+```
+
+Why this matters for MPNet specifically: MPNet's stronger semantic matching pulls more senior jobs (richer skill descriptions) to the top. With an empty `experience_level` field (common in the Kaggle dataset), only the title check catches seniority — which previously had no "senior" keyword.
+
+**Impact on existing results:** existing JSON files are untouched (skip logic). To get updated results for entry/intern personas: delete those persona folders in `evaluation/results/`, clear `.cache/reranker`, and re-run.
+
+---
+
 ## Updated Architecture (as of 2026-05-02)
 
 ```
