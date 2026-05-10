@@ -27,8 +27,9 @@ P1 — label for P@10 (this is the main labeling task)
 
 P2 — quality labels (only if time allows after P1)
   fill "Quality (1-5)" in all 3 model files per method per persona.
-  this is the 90-file task. only needed for deeper H4 human comparison.
-  not required for a complete report — the llm_judge covers H4.
+  this is the 90-file task. needed only if you want to compare explanation quality
+  across models (Gemma vs DeepSeek vs Claude) as a qualitative observation.
+  not required for H1–H4 — those are covered by relevance labels + llm_judge.
 
 
 we have 4 research hypotheses. all scoring is automated except the human relevance
@@ -54,8 +55,9 @@ H2: parsing the CV into structured fields gives better results than passing raw 
 H3: LLM reranking improves Precision@10 beyond what retrieval alone gives
     metric: delta P@10 between FAISS_PARSED and FAISS_PARSED_NORERANK, per persona
 
-H4: LLM choice affects explanation quality more than retrieval score
-    metric: explanation quality 1-5, scored by Claude as fixed judge across all 3 LLMs
+H4: LLM-as-judge relevance labels show measurable agreement with human labels
+    metric: Cohen's Kappa between Claude's 0/1 relevance labels and human 0/1 labels
+    (validates whether automated LLM judging can substitute for human annotation)
 
 
 method groups
@@ -137,7 +139,7 @@ step 2 — label the MD files (manual, one-time per persona)
               python -m src.evaluation.llm_judge        → llm_judge_report.md
         4. Julia shares report.md with the team — done
 
-      inter-rater reliability (required for H4):
+      inter-rater reliability (optional, strengthens H4):
         pick 1 persona. two people label it independently WITHOUT comparing first.
         no code changes needed for either approach below — score_results.py only
         reads files named exactly {METHOD}_{model}.md so any copy is ignored automatically.
@@ -167,9 +169,13 @@ step 3 — compute scores
 step 4 — LLM judge (H4)
     python -m src.evaluation.llm_judge
 
-    Claude Sonnet reads each job result and labels it 0/1, then Cohen's Kappa is
-    computed against human labels. Claude is the fixed judge for all 3 LLMs to avoid
-    self-preference bias (if Claude judged its own explanations, scores would inflate).
+    Claude Sonnet labels each job 0/1 for relevance (same rubric as human labelers).
+    Cohen's Kappa is then computed between Claude's labels and human labels per
+    persona × method. this tests H4: whether LLM judging agrees with human annotation
+    well enough to be used as a proxy. Claude is the fixed judge across all methods
+    to avoid self-preference bias.
+    note: llm_judge does NOT score explanation quality (1-5). that requires human
+    Quality labels from P2 and is a separate optional analysis.
     output: evaluation/results/llm_judge_report.md
     cost: ~$0.60 for full run (10 personas × 6 methods × 10 jobs)
 
