@@ -141,6 +141,7 @@ def _build_user_message(cv: CVProfile, jobs: list[JobRecord]) -> str:
             "experience_level": j.experience_level,
             "work_type": j.work_type,
             "skill_labels": j.skill_labels,
+            "reranker_score": j.score,
             "description": _truncate(j.description),
         }
         for j in jobs
