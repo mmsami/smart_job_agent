@@ -290,3 +290,29 @@ MiniLM v3 rebuild initiated 2026-05-07. Full sequence:
 3. Clear `.cache/reranker` (keyed on job_id+score — stale after index rebuild)
 4. Run `verify_rebuild` + `run_evaluation`
 5. Re-label from scratch (retrieved jobs will differ due to dedup)
+
+### v3 Rebuild Results (2026-05-10)
+
+**MiniLM v3 stats:**
+| Metric | v2 | v3 |
+|--------|----|----|
+| Unique docs | 123,849 (pre-dedup) | 96,728 (post-dedup) |
+| Total vectors | 471,671 | 371,535 |
+| Reduction | — | −100,136 vectors (21%) |
+
+**Layer 1 Sanity Test — v2 vs v3**
+
+All 8 queries produce identical scores and top results to v2. Dedup removed ~100k duplicate vectors without affecting retrieval quality.
+
+| Query | v3 Top Result | v3 Score | vs v2 |
+|-------|--------------|----------|-------|
+| Python software engineer remote | Python Developer (Hire Python Developer) | 0.7029 | ✅ Same |
+| Senior accountant finance controlling | Senior Accountant (CFS) | 0.7611 | ✅ Same |
+| B2B sales business development | VP Business Development - B2B Sales | 0.7653 | ✅ Same |
+| Python + AWS + Kubernetes | Python Developer with AWS and DevOps | 0.7700 | ✅ Same |
+| CFO / Finance Director 15+ yrs | Financial Director | 0.7115 | ✅ Same |
+| React + accessibility/a11y | AEM React.js Front-End Developer | 0.6485 | ✅ Same |
+| Underwater basket weaving | Tubing Fabricator (low score) | 0.4646 | ✅ Same |
+| Quantum cold fusion | Post Doctoral Fellow, Quantum Computing | 0.5908 | ✅ Same |
+
+**Conclusion:** v3 is a clean drop-in replacement for v2. Dedup reduced index size by 21% with zero retrieval regression. Evaluation runs on v3 index.
