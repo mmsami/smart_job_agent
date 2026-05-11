@@ -1,7 +1,7 @@
 """
 llm_judge.py — LLM-as-judge evaluation (H4: Human vs LLM labels, Cohen's Kappa).
 
-For each persona × method, reads human Relevant labels from *_gemma.md and asks
+For each persona × method, reads human Relevant labels from *_gemini.md and asks
 Claude Sonnet to make the same 0/1 relevance judgment for each job. Computes
 Cohen's Kappa to quantify agreement between human annotators and the LLM judge.
 
@@ -26,7 +26,7 @@ load_dotenv()
 
 RESULTS_DIR = Path(__file__).parent.parent.parent / "evaluation" / "results"
 ALL_METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK", "FAISS_PARSED_MPNET"]
-CANONICAL_MODEL = "gemma"
+CANONICAL_MODEL = "gemini"
 LLM_JUDGE_MODEL = "anthropic/claude-sonnet-4-6"
 
 _JUDGE_PROMPT = """\

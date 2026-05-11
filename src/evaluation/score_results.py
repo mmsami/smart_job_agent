@@ -26,8 +26,8 @@ from scipy.stats import wilcoxon
 
 RESULTS_DIR = Path(__file__).parent.parent.parent / "evaluation" / "results"
 METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK", "FAISS_PARSED_MPNET"]
-MODELS = ["gemma", "deepseek", "claude"]
-CANONICAL_MODEL = "gemma"  # P@10 uses this model's MD (jobs identical across models)
+MODELS = ["gemini", "deepseek", "claude"]
+CANONICAL_MODEL = "gemini"  # P@10 uses this model's MD (jobs identical across models)
 DEFAULT_WORK_TYPE = "full-time"  # fixed preference used in run_evaluation.py
 
 
@@ -104,7 +104,7 @@ def wilcoxon_p(a: list[float], b: list[float]) -> float | None:
 # ── Qualitative Observations ──────────────────────────────────────────────────
 
 def load_json_results(persona_dir: Path, method: str) -> list[dict]:
-    """Load top-10 job records from the canonical gemma JSON for a method."""
+    """Load top-10 job records from the canonical gemini JSON for a method."""
     json_path = persona_dir / f"{method}_{CANONICAL_MODEL}.json"
     if not json_path.exists():
         return []
@@ -304,16 +304,16 @@ def build_report(p10_data: dict, quality_data: dict, qualitative: dict) -> str:
     # Wilcoxon: Gemma vs DeepSeek and Gemma vs Claude (paired by method+persona)
     lines.append("### Wilcoxon Tests: Reasoning Quality\n")
     for other_model in ["deepseek", "claude"]:
-        gemma_flat, other_flat = [], []
+        gemini_flat, other_flat = [], []
         for method in METHODS:
-            ga = quality_data["gemma"][method]
+            ga = quality_data["gemini"][method]
             ob = quality_data[other_model][method]
             n = min(len(ga), len(ob))
-            gemma_flat.extend(ga[:n])
+            gemini_flat.extend(ga[:n])
             other_flat.extend(ob[:n])
-        p = wilcoxon_p(gemma_flat, other_flat)
+        p = wilcoxon_p(gemini_flat, other_flat)
         p_str = f"{p:.4f}" if p is not None else "n/a (need ≥4 paired)"
-        lines.append(f"- gemma vs {other_model}: p = {p_str}")
+        lines.append(f"- gemini vs {other_model}: p = {p_str}")
 
     lines.append("")
 
