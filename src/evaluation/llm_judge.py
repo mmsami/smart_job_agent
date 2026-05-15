@@ -18,6 +18,8 @@ import argparse
 import json
 import os
 import re
+import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -28,9 +30,10 @@ RESULTS_DIR = Path(__file__).parent.parent.parent / "evaluation" / "results"
 ALL_METHODS = ["BM25_RAW", "BM25_PARSED", "FAISS_RAW", "FAISS_PARSED", "FAISS_PARSED_NORERANK", "FAISS_PARSED_MPNET"]
 CANONICAL_MODEL = "gemini"
 LLM_JUDGE_MODEL = "anthropic/claude-sonnet-4-6"
+MAX_CONCURRENT_CALLS = 5
 
 _JUDGE_PROMPT = """\
-You are evaluating job relevance for a job-seeking candidate.
+You are an expert career advisor evaluating whether a job is relevant to a candidate. Be strict and evidence-based.
 
 ## Candidate Profile
 {cv_summary}
@@ -41,17 +44,33 @@ You are evaluating job relevance for a job-seeking candidate.
 **Description:**
 {description}
 
-## Task
-Is this job relevant for this candidate?
+## Relevance Rubric
 
-A job is RELEVANT (1) if:
-- The role domain matches the candidate's background (same field, not a lateral domain jump)
-- The seniority level is within ±1 level (entry/mid/senior)
+A job is RELEVANT (1) ONLY if BOTH conditions hold:
 
-A job is NOT RELEVANT (0) if it is a different domain, or more than one seniority level away.
+1. **Domain match** — The role is in the candidate's field of background. Surface-level keyword overlap is NOT enough. An engineering role for a finance candidate, or an HR role for a software engineer, is a poor fit regardless of keyword overlap and must be marked NOT relevant.
 
-Respond with ONLY valid JSON — no explanation, no markdown:
-{{"relevant": 0}} or {{"relevant": 1}}\
+2. **Seniority within ±1 level** — Levels are entry / mid / senior. Treat seniority mismatch as a **primary disqualifier**, not a minor consideration:
+   - Entry-level candidate vs. senior/lead role → NOT relevant (regardless of skill overlap).
+   - Senior candidate vs. junior/intern role → NOT relevant (over-qualification).
+   - Within one level (entry↔mid, mid↔senior) is acceptable.
+
+If EITHER condition fails, the job is NOT RELEVANT (0).
+
+## Reasoning Procedure
+
+Before deciding, explicitly determine:
+- The candidate's seniority level from their profile (entry / mid / senior).
+- The job's seniority level from the title and description (entry / mid / senior).
+- Whether the job domain matches the candidate's domain.
+
+Default to NOT relevant unless clear evidence both criteria are met.
+
+## Output
+
+Return ONLY valid JSON, no markdown fences, no explanation outside the JSON:
+
+{{"candidate_seniority": "entry|mid|senior", "job_seniority": "entry|mid|senior", "domain_match": true|false, "relevant": 0|1}}\
 """
 
 
@@ -77,7 +96,7 @@ def judge_job(client, cv_summary: str, title: str, company: str, description: st
             response = client.chat.completions.create(
                 model=LLM_JUDGE_MODEL,
                 messages=[{"role": "user", "content": prompt}],
-                max_tokens=16,
+                max_tokens=150,
                 temperature=0,
             )
             content = response.choices[0].message.content.strip()
@@ -87,6 +106,7 @@ def judge_job(client, cv_summary: str, title: str, company: str, description: st
         except Exception:
             if attempt == 2:
                 return None
+            time.sleep(2 ** attempt)
     return None
 
 
@@ -167,8 +187,8 @@ def run_llm_judge(method_filter: str | None = None, persona_filter: str | None =
                 continue
 
             jobs = _load_jobs(json_path, len(human_labels))
-            llm_labels = []
-            for job in jobs:
+
+            def _judge_one(job: dict) -> tuple[str, int | None]:
                 label = judge_job(
                     client,
                     cv_summary=cv_summary,
@@ -176,8 +196,15 @@ def run_llm_judge(method_filter: str | None = None, persona_filter: str | None =
                     company=job.get("company", ""),
                     description=job.get("description", ""),
                 )
+                return job.get("title", "?"), label
+
+            with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_CALLS) as pool:
+                results = list(pool.map(_judge_one, jobs))
+
+            llm_labels = []
+            for title, label in results:
                 if label is None:
-                    print(f"  WARNING: LLM judge returned None for '{job.get('title', '?')}' — treating as 0")
+                    print(f"  WARNING: LLM judge returned None for '{title}' — treating as 0")
                 llm_labels.append(label if label is not None else 0)
 
             kappa    = cohen_kappa(human_labels, llm_labels)
