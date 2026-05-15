@@ -26,22 +26,19 @@ Teammate (Hamid) drafted the file with the right conceptual structure: load a pr
 
 ### Integration gaps found
 
-**Gap 1: Wrong LLM client**
-The code used an OpenAI client pointed at `api.openai.com` with `OPENAI_API_KEY`. The project uses Google AI Studio (`google.genai`) for Gemma and OpenRouter for DeepSeek/Claude — neither of which is OpenAI's endpoint. No OpenAI key exists in the project `.env`.
-
-**Gap 2: No multi-model support**
+**Gap 1: No multi-model support**
 Experiment B requires three providers. The stub was hardcoded to a single API with no `provider` parameter and no routing logic.
 
-**Gap 3: No retry logic**
+**Gap 2: No retry logic**
 LLMs occasionally return malformed JSON or the wrong number of job explanations. Without retry, a single bad response surfaces as an uncaught exception.
 
-**Gap 4: Cache key was ID-only**
+**Gap 3: Cache key was ID-only**
 The cache key was built from job IDs alone. If a job's description or skill labels changed between runs, the cache would return a stale result. The key must include content, not just identifiers.
 
-**Gap 5: Prompt file wrapped in planning text**
+**Gap 4: Prompt file wrapped in planning text**
 `reasoning.md` contained a full planning document — background, objectives, design notes — before the actual prompt. The LLM received the planning text as its instruction, not just the rubric.
 
-**Gap 6: No explanation count validation**
+**Gap 5: No explanation count validation**
 The code accepted any JSON response that parsed. If the model returned 7 explanations for 10 jobs (skipping some), it would silently pass through.
 
 ---
