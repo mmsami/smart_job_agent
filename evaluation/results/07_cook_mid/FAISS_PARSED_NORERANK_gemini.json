@@ -1,0 +1,278 @@
+{
+  "persona": "07_cook_mid",
+  "method": "FAISS_PARSED_NORERANK",
+  "model": "gemini",
+  "run_timestamp": "2026-05-11T10:49:08.740027+00:00",
+  "results": [
+    {
+      "job_id": "3887709224",
+      "title": "Food Service Manager",
+      "company": "Corporate Chefs",
+      "description": "The Role at a glance: We are looking to add an experienced, motivated assistant foodservice director to our Corporate Chefs team in SC. As an FSM you will have the opportunity to assist with overseeing all culinary, safety and sanitation, and operations functions for the account. What you'll be doing: Recruiting, training, and retaining a large staffing team, including chefs, cashiers, baristas, cooks, and catering teams. Ensuring that the operation delivers high quality food and friendly service. Ensuring that the business runs in a professional, efficient, and profitable manner. Demonstrating strong leadership and communication skills with all employees. What we're looking for: Must-haves: High school diploma or equivalent. At least two years\u2019 experience in a supervisory role. At least two years\u2019 foodservice experience. Proven track record of financial responsibility. Strong written and verbal communication skills. Strong customer service skills. Nice-to-haves: ServSafe Manager certification. Associate\u2019s degree or Bachelor\u2019s degree. Our Benefits: Medical (FT Employees)DentalVisionVoluntary UNUM offering for Accident, Critical Illness and Hospital IndemnityDiscount ProgramCommuter Benefits (Parking and Transit) EAP401kSick TimeHoliday Pay (9 paid holidays)Tuition Reimbursement (FT Employees)Paid Time Off",
+      "location": "Columbia, SC",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.elior-na.com/Corporate-Chefs/job/Columbia-Food-Service-Manager-SC-29210/792086702/?feedId=353957&utm_source=LinkedInJobPostings&utm_campaign=EliorNorthAmerica_LinkedIn",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.691219687461853
+    },
+    {
+      "job_id": "3905283775",
+      "title": "Senior Specialty Buyer",
+      "company": "The Chefs'\u200b Warehouse",
+      "description": "About The Chefs' Warehouse The Chefs' Warehouse, Inc. ( http://www.chefswarehouse.com ) combines exceptional quality and brand building with broadline food service distribution for more than 35 years. With Protein, Specialty, Produce, and Broadline offerings, we service the most discerning chefs in a hybrid approach of convenience and superior quality. We introduce more than 2,000 artisan producers of the world\u2019s finest ingredients from over 40 countries to the finest chefs in the world. We passionately consult, sell, and build relationships with more than 35,000 customers through the most experienced network of over 600 consultive sales associates, best-in-breed technology, rapid service, and support levels that solidify our long-standing ties to both established and up-and-coming premium restaurants. Mission: The mission of The Chefs\u2019 Warehouse is to provide the world\u2019s greatest ingredients to the world\u2019s best chefs. Our C.H.E.F.S. Values: Curious & Creative Hungry For Food & Results Entrepreneurial Forward Thinking & Flexible Supportive (Of Peers & Chefs) Position Summary: Coordinates inventory replenishment activities with suppliers, sales, logistics and operations for assigned categories. What you\u2019ll do: Place purchase orders with vendors utilizing an awareness of seasonal fluctuations, market effects and other information that require a high attention to detail to avoid spoilage, overstocks, and shortages. Manage and maintain the entire Purchase-to-Pay process, covering: PO Creation, Vendor Confirmation, Accurate expected delivery date updates, Collaboration with Accounts Payable to ensure payment. Maintain Purchasing system data to effectively generate suggested POs. Maintain necessary required vendor documents (electronic and physical), such as W-9\u2019s, Indemnities, etc. Work closely with: Vendors to ensure POs are filled and delivered in a timely fashion, Vendors to manage FDA issues, Logistics to minimize freight expenses, Sales Managers to manage out-of-stock or over-stock risks, Customer Service teams to enable sales order growth, Buyers to build upon best practices. Build and maintain vendor relationships to not only support PO fulfillment, but also negotiate volume discounts and price breaks wherever possible. Manage Fusion system issues that impact Purchasing and Receiving. Maintain BFC dating system to minimize close dated issues and Expired product impact. About you: 5+ years buying experience with a focus on Specialty Food Products for a multi-unit Distribution Organization. Bachelor\u2019s degree from accredited four-year college or university preferred. Previous food service distribution and/or food importing experience strongly preferred. Commodity product awareness including blanket commitments, contractual processes, and appropriate market tracking. Advanced Excel Skill and additional Computer skills (JDE, Microsoft Suite \u2013 Word and PowerPoint, etc.) Must be a team player with a positive attitude. Excellent verbal/written communication skills and a high level of analytical capabilities within Excel Self-starter, professional, goal oriented and able to handle multiple tasks. Must have a sense of urgency and be able to work under pressure, be comfortable in a fast-paced, metrics-driven environment. Flexible with the ability to work well with all departments and levels of staff both internally & externally. Professional demeanor during all interactions with vendors, customers and fellow employees via phone or in-person. Have a drive to advance within the organization. The above job description is not an all-inclusive list of duties and standards of the position. Incumbents will follow any other instructions, and perform any other related duties as assigned by their supervisor. Perks & Benefits: Paid Vacations, Paid Holidays Health, Dental and Medical Benefits Weekly pay Life Insurance 5% above cost for our high-quality food products Employee discounts for travel and events 401k The Chefs' Warehouse is an Equal Opportunity Employer that does not discriminate based on actual or perceived race, creed, color, religion, alienage or national origin, ancestry, citizenship status, age, disability or handicap, sex, marital status, veteran status, sexual orientation, pregnancy, gender identity or any other characteristic protected by applicable federal, state, or local laws. We also consider qualified applicants with criminal histories, consistent with applicable federal, state and local law. Our management team is dedicated to this policy with respect to recruitment, hiring, placement, promotion, transfer, training, compensation, benefits, employee activities and general treatment during employment. We are dedicated to building an inclusive and diverse workforce. Apply Now",
+      "location": "Ridgefield, CT",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://us232.dayforcehcm.com/CandidatePortal/en-US/tcw/Posting/View/42436?src=Linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6834120154380798
+    },
+    {
+      "job_id": "3901672482",
+      "title": "Produce Buyer",
+      "company": "The Chefs'\u200b Warehouse",
+      "description": "About The Chefs' Warehouse The Chefs' Warehouse, Inc. ( http://www.chefswarehouse.com ) combines exceptional quality and brand building with broadline food service distribution for more than 35 years. With Protein, Specialty, Produce, and Broadline offerings, we service the most discerning chefs in a hybrid approach of convenience and superior quality. We introduce more than 2,000 artisan producers of the world\u2019s finest ingredients from over 40 countries to the finest chefs in the world. We passionately consult, sell, and build relationships with more than 35,000 customers through the most experienced network of over 600 consultive sales associates, best-in-breed technology, rapid service, and support levels that solidify our long-standing ties to both established and up-and-coming premium restaurants. Mission: The mission of The Chefs\u2019 Warehouse is to provide the world\u2019s greatest ingredients to the world\u2019s best chefs. Our C.H.E.F.S. Values: Curious & Creative Hungry For Food & Results Entrepreneurial Forward Thinking & Flexible Supportive (Of Peers & Chefs) Position Summary: Coordinates inventory replenishment activities with suppliers, sales, logistics and operations for assigned categories. What you\u2019ll do: Place purchase orders with vendors utilizing an awareness of seasonal fluctuations, market effects and other information that require a high attention to detail to avoid spoilage, overstocks, and shortages. Manage and maintain the entire Purchase-to-Pay process, covering: PO Creation Vendor Confirmation Accurate expected delivery date updates Collaboration with Accounts Payable to ensure payment. Maintain Purchasing system data to effectively generate suggested POs. Maintain necessary required vendor documents (electronic and physical), such as W-9\u2019s, Indemnities, etc. Work closely with: Vendors to ensure POs are filled and delivered in a timely fashion. Vendors to manage FDA issues. Logistics to minimize freight expenses. Sales Managers to manage out-of-stock or over-stock risks. Customer Service teams to enable sales order growth. Buyers to build upon best-practices. Build and maintain vendor relationships to not only support PO fulfillment, but also negotiate volume discounts and price breaks wherever possible. Manage Fusion system issues that impact Purchasing and Receiving. Maintain BFC dating system to minimize close dated issues and Expired product impact. About you: 5+ years buying experience with a focus on Specialty Food Products for a multi-unit Distribution Organization. Bachelor\u2019s degree from accredited four-year college or university preferred. Previous food service distribution and/or food importing experience strongly preferred. Commodity product awareness including blanket commitments, contractual processes, and appropriate market tracking. Advanced Excel Skill and additional Computer skills (JDE, Microsoft Suite \u2013 Word and PowerPoint, etc.) Must have a sense of urgency and be able to work under pressure, be comfortable in a fast-paced, metrics-driven environment. Flexible with the ability to work well with all departments and levels of staff both internally & externally. Professional demeanor during all interactions with vendors, customers and fellow employees via phone or in-person. Have a drive to advance within the organization. Must be a team player with a positive attitude. Excellent verbal/written communication skills and a high level of analytical capabilities within Excel Self-starter, professional, goal oriented and able to handle multiple tasks. The above job description is not an all-inclusive list of duties and standards of the position. Incumbents will follow any other instructions, and perform any other related duties as assigned by their supervisor. Perks & Benefits: Paid Vacations, Paid Holidays Health, Dental and Medical Benefits Weekly pay Life Insurance 5% above cost for our high-quality food products Employee discounts for travel and events 401k The Chefs' Warehouse is an Equal Opportunity Employer that does not discriminate based on actual or perceived race, creed, color, religion, alienage or national origin, ancestry, citizenship status, age, disability or handicap, sex, marital status, veteran status, sexual orientation, pregnancy, gender identity or any other characteristic protected by applicable federal, state, or local laws. We also consider qualified applicants with criminal histories, consistent with applicable federal, state and local law. Our management team is dedicated to this policy with respect to recruitment, hiring, placement, promotion, transfer, training, compensation, benefits, employee activities and general treatment during employment. We are dedicated to building an inclusive and diverse workforce. Apply Now",
+      "location": "Greater Orlando",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://us232.dayforcehcm.com/CandidatePortal/en-US/tcw/Posting/View/42252?src=Linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6802209615707397
+    },
+    {
+      "job_id": "3894267747",
+      "title": "$10k Sign -On-EXECUTIVE CHEF ( PROVIDENCE ST JOHNS HOSP) SANTA MONICA CA",
+      "company": "Compass One Healthcare",
+      "description": "Morrison Healthcare Salary: $80000-$90000 Other Forms of Compensation: Pay Grade: 14 Morrison Healthcare is a leading national food and nutrition services company exclusively dedicated to serving more than 600 hospitals and healthcare systems. Morrison's hospital kitchens, restaurants, and caf\u00e9s feature socially responsible practices and exceptional guest experiences. The company's comprehensive Mindful Choices\u00ae wellness and sustainability platform includes the latest in healthful eating and an understanding of behavioral change in food consumption. Morrison's alignment with Partnership for a Healthier America's (PHA) Hospital Healthy Food Initiative positively impacts up to 41 million patients and 500 million hospital meals annually. Morrison has been named one of Modern Healthcare's \"Top 100 Best Places to Work in Healthcare\" for the past five years, and Training Magazine's Top 125 organizations for the past six consecutive years. The company is a division of Compass Group and has more than 1,200 registered dietitians, 300 executive chefs, and 17,000 professional food service team members. Job Summary Job Summary: Working as the Executive Chef, you will be responsible for overseeing kitchen operations while maintaining a safe and sanitary work environment for the staff. You will prepare or direct the preparation of meals in accordance with corporate programs and guidelines. This is an exciting opportunity for an energetic, entrepreneurial Culinary professional. Key Responsibilities: Plans regular and modified menus according to established guidelinesFollows standardized recipes, portioning and presentation standards. Completes and utilizes daily production worksheets and waste log sheets. Tastes completed meals to ensure qualityTrains kitchen staff in food preparation, safe handling, operation of equipment, food safety and sanitation based on Company and regulatory standardsEstablishes and maintains cleaning and maintenance schedules for equipment, storage and work areas. Ensures that kitchen staff follows and completes schedules as assignedMaintains inventory of food and non-food supplies to stay within established guidelines while assuring that necessary product is available when neededMakes all decisions regarding utilization of leftover food products staying within Company guidelines for such productsComplies with federal, state and local health and sanitation regulations and department sanitation procedures as evidenced through local health department and third-party auditsFollows facility, department, and Company safety policies and procedures to include occurrence reportingParticipates and attends departmental meetings, staff development, and professional programs, as appropriate Preferred Qualifications: A.S. or equivalent experience5+ years of progressive culinary/kitchen management experience, depending upon formal degree or trainingExtensive catering experience a plusHigh volume, complex foodservice operations experience - highly desirableInstitutional and batch cooking experiencesHands-on chef experience a mustComprehensive knowledge of food and catering trends with a focus on quality, production, sanitation, food cost controls, and presentationMust be experienced with computers; to include Microsoft Office (Word, Excel and Power Point), Outlook, E-mail and the InternetMust be willing to participate in client satisfaction programs/activities ServSafe certified - highly desirable Apply to Morrison Healthcare today! Morrison Healthcare is a member of Compass Group USA Click Here To Learn More About The Compass Story Compass Group is an equal opportunity employer. At Compass, we are committed to treating all Applicants and Associates fairly based on their abilities, achievements, and experience without regard to race, national origin, sex, age, disability, veteran status, sexual orientation, gender identity, or any other classification protected by law. Qualified candidates must be able to perform the essential functions of this position satisfactorily with or without a reasonable accommodation. Disclaimer: this job post is not necessarily an exhaustive list of all essential responsibilities, skills, tasks, or requirements associated with this position. While this is intended to be an accurate reflection of the position posted, the Company reserves the right to modify or change the essential functions of the job based on business necessity. We will consider for employment all qualified applicants, including those with a criminal history (including relevant driving history), in a manner consistent with all applicable federal, state, and local laws, including the City of Los Angeles\u2019 Fair Chance Initiative for Hiring Ordinance, the San Francisco Fair Chance Ordinance, and the New York Fair Chance Act. We encourage applicants with a criminal history (and driving history) to apply. Associates At Morrison Healthcare Are Offered Many Fantastic Benefits. Medical Dental Vision Life Insurance/ AD Disability Insurance Retirement Plan Flexible Time Off Holiday Time Off (varies by site/state) Associate Shopping Program Health and Wellness Programs Discount Marketplace Identity Theft Protection Pet Insurance Commuter Benefits Employee Assistance Program Flexible Spending Accounts (FSAs) Applications are accepted on an ongoing basis. Morrison Healthcare maintains a drug-free workplace. Req ID: 1275252 Morrison Healthcare MELANIE ATKINS [[req_classification]]",
+      "location": "Santa Monica, CA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 80000.0,
+      "max_salary": 90000.0,
+      "url": "https://careers.compassgroupcareers.com/10k-sign-on-executive-chef-providence-st-johns-hosp-santa-monica-ca/job/27763013?jobPipeline=linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.679923951625824
+    },
+    {
+      "job_id": "3905853970",
+      "title": "Research and Development Chef",
+      "company": "CareersInFood.com",
+      "description": "As the Research and Development Chef at Maya Kaimal Foods, you will work alongside the Product Development Chef and Chief Culinary Officer as part of the Culinary team. You will develop recipes in the R&D kitchen in Rhinebeck, New York, and work with our manufacturers to commercialize them, traveling to the factories as needed. You will collaborate closely with our Operations and Quality departments, sourcing new ingredients, reviewing packaging, and exploring new manufacturing processes. Our current portfolio has FDA and USDA products including: hot fill acidified simmer sauces, retort beans (dals and chanas) and rice, and tetra packed soups. If you are passionate about food and the science behind it, are a good communicator and are both an analytical and creative thinker, then we would love to hear from you! An interest in Indian or other global cuisines is a definite plus. This is an excellent opportunity for a candidate who is interested in working with a dedicated team at a fast-paced growing company with products in multiple categories. CORE RESPONSIBILITIES Develop new products from concept phase through successful commercializationDesign and conduct plant trials and new product start-upsCreates product development schedules that are required to meet project timelinesLearn and utilize on-line specification system (NetSuite, Flavor Studio)Design and execute experiments and prepare results for reviewDrive product cuttings, plant trials, and testingMaintains a clean, organized and safe work area, including the cleaning of equipment, utensils and work surfaces Perform other duties as specified by the VP of Operations. The preceding functions have been provided as examples of the types of work performed by employees assigned to this job classification. Management reserves the right to add, modify, change or rescind work assignments and to make reasonable accommodations as needed. Requirements: To be successful, the ideal candidate should possess the following education, skills and experience: Degree in Culinary Arts or Food Science, or Culinology degree, or CRC-Certified Research ChefComputer skills (Word, Excel, PPT)Ability to problem-solve effectively and adapt to a quickly changing work environmentGood organizational skills and attention to detailActive member of IFT, RCA or similar Chef\u2019s Association is a plusFamiliarity with FDA and USDA regulations for labeling is a plusCPG experience is a plusAbility to travel to manufacturing facilities (travel 10%) Attractions: Competitive compensation package including equity, health insurance and a 401(k) plan with company matchOpportunity for future career growth, networking, and exposure to senior CPG and PE professionalsBecome an integral part of an organization that is positioned, financed and energized for growthHelp establish Maya Kaimal Foods as THE Category Leader in modernizing South Asian cuisineBe part of a collaborative, entrepreneurial culture with cross functional input",
+      "location": "Rhinebeck, NY",
+      "experience_level": "Executive",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.careersinfood.com/research-and-development-chef-job-1656234.htm?utm_source=LinkedIn-Job-Posting",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6754287481307983
+    },
+    {
+      "job_id": "3884828756",
+      "title": "Part Time Cook",
+      "company": "Discovery Senior Living",
+      "description": "DISCOVER YOUR PURPOSE! At Seaton Hagerstown a thriving Discovery Senior Living community, we have meaningful job opportunities with the ability to make a difference in the lives of our residents. About Discovery Senior Living Discovery Senior Living ranks prominently among the 5 largest senior housing providers in the US and is nationally renowned for luxury senior-living communities. With over 250 communities in nearly 40 states, and 15,000 dedicated employees, Discovery Senior Living is one the largest and fastest growing senior living companies in the United States. Recognized as a Great Place to Work, Discovery continues its rapid growth trajectory to lead the industry all while retaining our family-first culture. We Offer Rewarding Career Opportunities That Include Competitive wages Access to wages before payday Flexible scheduling options with full-time and part-time hours Paid time off and Holidays (full-time) Comprehensive benefit package including health, dental, vision, life and disability insurances (full-time) 401(K) with employer matching Paid training Opportunities for advancement Meals and uniforms Employee Assistance Program Our community is looking for a Cook to join our team. Cook Responsibilities Prepare hot and cold menu items which requires working on the grill, saut\u00e9 station, salad-bar and on the service line;Ensure the proper preparation, portioning and serving of foods as indicated on the menu cycle and the standardized recipes;Taste and prepare food to determine quality and palatability. Qualifications Previous experience in Senior Living preferredExperience with production methods, portion control and food handling safety required.Great organizational skills a mustStrong communication skillsAttention to detail and presentation of food product is required.Must be able to work weekends. If having a direct impact on the lives of others is appealing to you, apply today and join our team! EOE D/V JOB CODE: 1002808",
+      "location": "Hagerstown, MD",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Part-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://discovery-senior-living.oasisrecruit.com/job/786716/part-time-cook",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6752739548683167
+    },
+    {
+      "job_id": "3886457127",
+      "title": "Cook, American Family Field",
+      "company": "Delaware North",
+      "description": "The Opportunity Delaware North Sportservice is searching for seasonal Cooks to join our team at American Family Field in Milwaukee, Wisconsin. As a Cook, no day will be the same working in this energetic team. If you have passion for a fast-paced kitchen environment, and want to be part of a team dedicated to delivering exceptional experiences, apply today and embark on a rewarding culinary journey with us. Pay This position has a pay range of $13/hr - $15/hr depending on experience. $13.00 - $15.00 / hour Information on our comprehensive benefits package can be found at https://careers.delawarenorth.com/whatweoffer . Benefits We care about our team member\u2019s personal and professional well-being. Delaware North provides a benefits package designed to give you the comfort, safety, and security you need to deliver exceptional experiences for our guests. All team members receive benefits including: Weekly payEmployee assistance program Training and development opportunitiesFlexible work schedules Responsibilities Follow supervisor's assignments for opening and closing procedures, as well as food production. Prepare food and beverage products for customers by following recipe guidelines, using proper preparation techniques, and sanitation guidelines. Set up and operation of kitchen equipment. Clean equipment properly according to correct procedures. Keep workstation clean, organized, sanitized, and sufficiently stocked. Work cooperatively with co-workers and management. Qualifications Attentive and detailed oriented. Ability to read and understand recipes and food abbreviations. Ability to work in a fast-paced environment with a high level of attention to detail. Ability to follow procedures and take directions; work as a team player. Basic math skills, with the ability to calculate and follow recipe measurements and proportions. Must be able to work a flexible schedule, including nights, days, weekends, and holidays. Must be at least 18 years old. Must have at least 2 years of experience in a back-of-the house foodservice position. Physical Requirements Able to stand for long periods of time including bending, lifting, reaching, and stretching. Able to lift 20lbs or more. Ability to move rapidly and coordinate multiple orders. Exposed to variable temperatures. Shift Details Day shift Evening shift Weekends Holidays Who We Are Delaware North operates concessions and premium dining services at the 41,900-seat American Family Field, home of the Milwaukee Brewers since 1970. We manage concession outlets, suites, all-inclusive areas and clubs at the stadium. We also operate J. Leinenkugel's Barrel Yard Brewery, Bar, and Restaurant. The culinary team partners with many local vendors to infuse Milwaukee staples into the food and beverage offerings. At Delaware North, you\u2019ll love where you work, who you work with, and how your day unfolds. Whether it\u2019s in sporting venues, casinos, airports, national parks, iconic hotels, or premier restaurants, there\u2019s no telling where your career can ultimately take you. We empower you to do great work in a company with 100 years of success, stability and growth. If you have drive and enjoy the thrill of making things happen - share our vision and grow with us. Delaware North Companies, Incorporated and its subsidiaries consider applicants for all positions without regard to race, color, religion, creed, gender, national origin, age, disability, marital or veteran status, sexual orientation, or any other legally protected status. Delaware North is an equal opportunity employer.",
+      "location": "Milwaukee, WI",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 13.0,
+      "max_salary": 15.0,
+      "url": "https://careers.delawarenorth.com/job/DELAA003Y30106EXTERNALENUS?iis=ad&utm_medium=ad&iisn=linkedin&utm_source=linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6737263202667236
+    },
+    {
+      "job_id": "3901984736",
+      "title": "Director of Culinary Services",
+      "company": "Discovery Senior Living",
+      "description": "About Discovery Senior Living Discovery Senior Living ranks prominently among the 5 largestsenior housing providers in the US, and is nationally renowned for designing,developing, marketing, and operating a multi-brand portfolio of upscale, luxurysenior-living communities. With over 250 communities in nearly 40states, and 15,000 dedicated employees, Discovery Senior Living, with multiplenational brands, is one the largest and fastest growing senior living companiesin the United States. Recognized as a Great Place to Work, Discovery continuesits rapid growth trajectory to lead the industry in providing desirablecommunities and exceptional lifestyle and value for our residents all whileretaining our family-first culture. We\u2019re a 30-year-old innovative company witha rich history of delivering exceptional service and quality care in desirable,enriching residential environments. Discovery Senior Living is looking for a Director of Culinary Services - Fine Dining to join our community Discovery Village at Tampa Palms. About The Opportunity Does working for the leader in the Senior Housing industry sound like the professional challenge you are seeking? Discovery Senior Living offers significant opportunities for growth and career advancement. Employees are encouraged to take responsibility for their own careers. You'll be working with incredible individuals with boundless creativity. Responsibilities Develops and implements food services policies, procedures, and job descriptions.Plans menus and menu cycles according to cultural and regional food preferences, and resident dietary guidelines. Adjusts recipes to appropriate yield.Monitors the quality and consistency of the food to include food temperatures, portion control, palatability and attractiveness of food, and implements changes to ensure quality according to established standards.Observes workers engaged in preparing, portioning, and garnishing foods to ensure that methods of cooking and garnishing and sizes of portions are as prescribed.Cooks and carves meats, and prepares dishes.Orders food and chemical supplies for the kitchen; receives and validates all food deliveries against order form.Inventories food items monthly.Conducts regular Quality Assurance Audits.Practices safe and sanitary food handling.Practices all safety and loss prevention procedures.Negotiates and signs food service agreements with vendors.Selects, schedules, and conducts orientation and in-service educational programs for personnel.Monitors monthly expenditures to include explanation of significant variances to ensure compliance with budget. Qualifications Bachelor\u2019s degree in culinary arts program preferred.Minimum of 5 years of management experience in a food service environment.Must have successfully completed food safety training.Ability to handle multiple priorities and work in a fast paced environment.Proficient organizational skills and ability to meet deadlines. Strong computer skills.Provides leadership by exhibiting confidence in self and others; inspires and motivates others to perform well. Benefits In addition to a rewarding career and competitive salary, Discovery offers a comprehensive benefit package. Eligible team members are offered a comprehensive benefit package including medical, dental, vision, life and disability insurances, paid time off and paid holidays. Team members are eligible to participate in our outstanding 401(k) plan with company match our Employee Assistance Program and accident insurance policies. No agencies, please. We do not accept any unsolicited resumes from agencies under any circumstances. We receive inquiries from agencies daily. Agencies should not direct any inquiries or emails to hiring managers. Thank you. EOE D/V JOB CODE: 1002864",
+      "location": "Tampa, FL",
+      "experience_level": "Director",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://discovery-senior-living.oasisrecruit.com/job/792698/director-of-culinary-services",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6609548926353455
+    },
+    {
+      "job_id": "3900964361",
+      "title": "Kitchen Supervisor/Sous Chef",
+      "company": "Remington Hospitality",
+      "description": "What You Will Be Doing Efficiently supervise, guide and train kitchen associates to provide quality food production for both restaurants and banquets, focusing especially on timing, portions, food quality and sanitation/cleanliness.Ensure the standards pertaining to storage, rotation, production, portions, quality and appearance are followed at all times. Follow food handling guidelines.Ensure the opening and closing procedures for Station Cooks I, II and III are completed.Efficiently expedite food from front line during meal periods.Ensure appropriate inventory of supplies and materials needed for associates to perform their jobs.Participate in monthly food and beverage inventory. Requirements What We Are Looking For Prior experience in kitchen leadership roleHigh work ethic and self-initiativeMay be required to work varying schedules to include nights, weekends, and holidaysSomeone who enjoys working as and being part of a team that provides great experiences for our Guests!",
+      "location": "Dallas, TX",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://recruiting.adp.com/srccar/public/nghome.guid?prc=RMPOD4&rb=LinkedIn&r=5001036866500&c=2177507&d=Remington",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6584506034851074
+    },
+    {
+      "job_id": "3888959395",
+      "title": "Account Manager, Food & Beverage Plant Hygiene Solutions",
+      "company": "Solenis",
+      "description": "POSITION SUMMARY: The Account Manager provides sales and service support to an existing customer base and prospect and sales development to new industrial food & beverage accounts. The main focus will be on retaining business through troubleshooting and technical guidance. This individual's technical expertise will be used to identify correct chemical dosing and applications for specific procedures, troubleshoot product and application problems, and identify the correct resources required to diagnose and solve issues at customer accounts. The job requires the candidate to recommend solutions to improve sanitation and operation procedures at our customer locations and prospect and develop new sales. KEY RESPONSIBILITIES: Servicing accounts - plant chemical management, sanitation program review, training on safety, chemical use concentrations, trouble shooting on cleaning issues, identify plant operational savings in water, energy and labor, Business Development/Sales \u2013 cold calls, prospecting, survey/audits, presentations, Account profitability review, review of products sold to accounts on an ongoing basis. Time Management for monthly service and reporting, presentation skills. Office support i.e. email and phone communications, report writing, and continuing account manager education. REQUIRED QUALIFICATIONS: Bachelor's degree in Food, Dairy, or Meat Science, Microbiology, Biology, Chemistry, and/or Life Sciences preferred. Extensive experience in food manufacturing operations with high school diploma in lieu of BA will be considered. Specialty chemical sales relative to the Food and Beverage customer base 5+ years of experience in food, dairy, and/or beverage manufacturing plant in a management level position. 5+ years of experience with: Email, Word, Excel, PowerPoint and Gmail Ability to travel overnight up to 60% Valid US Driver\u2019s License Good understanding of Clean-In-Place (CIP) in food, beverage, and dairy operation(s). Ability to work flexible hours (nights and weekends) to accommodate cleaning operations and preventative maintenance schedules within plants. Ability to work in an industrial plant environment and remain compliant with all company and customer plant, safety, and OSHA requirements. Excellent interpersonal and communication skills (written and spoken) with ability to interact with all levels of the organization. High sense of drive and urgency with a positive outlook. SALARY AND BENEFITS: The current pay range for this position is $72,000 - $97,000. Actual compensation within that range will be dependent upon, but may not be limited to, the individual's skills, experience, qualifications, and applicable laws. As a full-time employee of Diversey \u2013 A Solenis Company in 2024, you will be eligible to enroll in our robust benefits package on your first day which includes but is not limited to, the following. Medical, dental, & vision coverage 401k (w/ employer match up to 6%) 15 paid vacation days (prorated based on start date) 8 paid holidays annually (prorated based on start date) 3 floating holidays (prorated based on start date) 48 hours of sick time (prorated based on start date) Diversey is now part of Solenis! As one company, we benefit from a broader global footprint, our customers have access to a diverse range of products and our people gain more opportunities to develop and grow. To learn more about Solenis and the acquisition of Diversey, click here. Solenis is proud to be an Equal Opportunity Affirmative Action Employer, including Minorities / Women/ Veterans / Disabled. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or protected veteran status and will not be discriminated against on the basis of disability. Should you require assistance in applying to this opportunity, please reach out to Solenis Talent Acquisition at 1-888-756-2701. .",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 72000.0,
+      "max_salary": 97000.0,
+      "url": "https://solenis.wd1.myworkdayjobs.com/Solenis/job/United-States-of-America-Texas-Remote/Account-Manager--Food---Beverage-Plant-Hygiene-Solutions_Div-R0014387-1",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6563019752502441
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "A senior-level culinary professional with 10 years of experience as a Line and Prep Cook. Strengths include hands-on food preparation, volume cooking, sanitation, and inventory control in a kitchen environment.",
+    "job_explanations": [
+      {
+        "job_id": "3887709224",
+        "title": "Food Service Manager",
+        "company": "Corporate Chefs",
+        "match_reason": "Poor match. While the candidate has over 10 years of foodservice experience, this is a management role that requires at least two years in a supervisory capacity, including recruiting and training staff. The candidate's CV lists only non-managerial roles like 'Line Cook' and 'Prep Cook' and shows no evidence of the required leadership or financial responsibility.",
+        "missing_skills": [
+          "Supervisory experience",
+          "Staff recruiting and training",
+          "Financial responsibility"
+        ]
+      },
+      {
+        "job_id": "3905283775",
+        "title": "Senior Specialty Buyer",
+        "company": "The Chefs'\u200b Warehouse",
+        "match_reason": "Poor match. This is a domain mismatch. The role is for a Senior Buyer focused on procurement, requiring 5+ years of buying experience, negotiation skills, and advanced computer skills (Excel, JDE). The candidate's profile is entirely focused on hands-on culinary execution as a cook and lacks any experience in purchasing, vendor management, or the required software tools.",
+        "missing_skills": [
+          "Buying experience",
+          "Vendor management",
+          "Negotiation",
+          "Advanced Excel",
+          "JDE"
+        ]
+      },
+      {
+        "job_id": "3901672482",
+        "title": "Produce Buyer",
+        "company": "The Chefs'\u200b Warehouse",
+        "match_reason": "Poor match. This is a domain mismatch. The position is a corporate buying role requiring 5+ years of purchasing experience, commodity tracking, and advanced computer skills. The candidate's background as a Line Cook, while in the food industry, does not align with the core procurement and analytical functions of this job.",
+        "missing_skills": [
+          "Buying experience",
+          "Vendor management",
+          "Advanced Excel",
+          "JDE",
+          "Commodity market tracking"
+        ]
+      },
+      {
+        "job_id": "3894267747",
+        "title": "$10k Sign -On-EXECUTIVE CHEF ( PROVIDENCE ST JOHNS HOSP) SANTA MONICA CA",
+        "company": "Compass One Healthcare",
+        "match_reason": "Partial match. The candidate possesses the required hands-on cooking skills and experience with sanitation and inventory. However, the role is for an Executive Chef, which requires 'progressive culinary/kitchen management experience,' staff training, and knowledge of food cost controls. The candidate's experience as a 'Line Cook' and 'Prep Cook' does not demonstrate the required leadership and management background.",
+        "missing_skills": [
+          "Kitchen management experience",
+          "Staff training",
+          "Food cost controls",
+          "Menu planning"
+        ]
+      },
+      {
+        "job_id": "3905853970",
+        "title": "Research and Development Chef",
+        "company": "CareersInFood.com",
+        "match_reason": "Poor match. This is a significant seniority and domain mismatch. The role is an Executive-level R&D position requiring a degree in Culinary Arts or Food Science, experience with product commercialization, and CPG experience. The candidate's profile as a Line Cook does not include the required scientific background, product development experience, or executive-level responsibility.",
+        "missing_skills": [
+          "Degree in Culinary Arts or Food Science",
+          "Product development and commercialization",
+          "CPG experience",
+          "Computer skills (Word, Excel, PPT)"
+        ]
+      },
+      {
+        "job_id": "3884828756",
+        "title": "Part Time Cook",
+        "company": "Discovery Senior Living",
+        "match_reason": "Strong match. The candidate's 10 years of experience and skills in 'Volume Cooking', 'Portion Control', and 'Sanitation And Cleaning' directly align with the job's requirements for production methods and food handling safety. The 'Mid-Senior level' designation fits the candidate's extensive experience, making them a well-qualified applicant.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3886457127",
+        "title": "Cook, American Family Field",
+        "company": "Delaware North",
+        "match_reason": "Strong match. The role requires at least 2 years of back-of-house experience, and the candidate offers 10 years. Their entire skill set, including 'Knife Handling' and experience in fast-paced kitchens, is directly applicable. The candidate is highly qualified for this position.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3901984736",
+        "title": "Director of Culinary Services",
+        "company": "Discovery Senior Living",
+        "match_reason": "Poor match. This is a major seniority mismatch. The candidate is a senior-level cook, whereas this is a Director-level position requiring a minimum of 5 years of management experience, budget management, vendor negotiation, and staff leadership. The candidate's CV does not contain any of this required leadership or business management experience.",
+        "missing_skills": [
+          "Management experience (5+ years)",
+          "Budget management",
+          "Vendor negotiation",
+          "Staff leadership"
+        ]
+      },
+      {
+        "job_id": "3900964361",
+        "title": "Kitchen Supervisor/Sous Chef",
+        "company": "Remington Hospitality",
+        "match_reason": "Partial match. This role is a logical next step but has a key gap. While the candidate's 10 years of kitchen experience is valuable, the position explicitly requires 'prior experience in kitchen leadership role' to supervise and train associates. The candidate's CV only lists non-leadership roles like 'Line Cook', making this a gap they would need to bridge.",
+        "missing_skills": [
+          "Kitchen leadership/supervisory experience",
+          "Staff training"
+        ]
+      },
+      {
+        "job_id": "3888959395",
+        "title": "Account Manager, Food & Beverage Plant Hygiene Solutions",
+        "company": "Solenis",
+        "match_reason": "Poor match. This is a domain mismatch. The role is a technical sales and account management position focused on chemical hygiene solutions, requiring a relevant Bachelor's degree and experience in plant management or specialty chemical sales. The candidate's culinary background as a cook has no overlap with the core responsibilities of this job.",
+        "missing_skills": [
+          "Sales and account management",
+          "Bachelor's degree (Food Science, Biology, or Chemistry)",
+          "Food manufacturing plant management experience",
+          "Clean-In-Place (CIP) systems knowledge"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Supervisory experience",
+      "Staff recruiting and training",
+      "Financial responsibility"
+    ],
+    "recommendation": "The candidate is a strong fit for senior cook roles but lacks the required experience for management positions. To advance, focus on acquiring leadership experience, perhaps by seeking a Kitchen Supervisor or Sous Chef role, and pursue training in food cost controls and staff supervision."
+  }
+}

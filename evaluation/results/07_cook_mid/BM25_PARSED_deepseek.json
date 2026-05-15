@@ -1,0 +1,254 @@
+{
+  "persona": "07_cook_mid",
+  "method": "BM25_PARSED",
+  "model": "deepseek",
+  "run_timestamp": "2026-05-11T10:45:45.304327+00:00",
+  "results": [
+    {
+      "job_id": "3905303055",
+      "title": "Cook I",
+      "company": "Sonesta Hotels",
+      "description": "Job Description Summary The responsibility of the Cook II is to be able to perform all basic and intermediate cooking skills including preparation of soups, sauces, stocks, frying and broiling. Job Description Key Job Functions: Prepare basic components of each dish on our menu using our recipesMemorize and utilize serving portion sizes and all basic meal prep procedures used in the kitchenEnsure that the kitchen, all food prep areas and all food storage areas meet restaurant cleaning standardsMaintains a clean and sanitary work station area including tables, shelves, grills, broilers, fryers, pasta cookers, saut\u00e9 burners, convection oven, flat top range and refrigeration equipmentPrepares item for broiling, grilling, frying, saut\u00e9ing or other cooking methods by portioning, battering, breading, seasoning and/or marinatingFollows proper plate presentation and garnish set up for all dishesHandles, stores and rotates all products properlyStocks and maintains sufficient levels of food products at line stations to assure a smooth service periodMonitor product freshness and rotate out old product based on a schedule created by the restaurantMay be required to give direction in the supervisor's absenceBuild solid relationship with your ColleaguesTreat colleagues with respect and dignityAbility to communicate effectively with the public and other Team MembersDeliver Passionate & Engaging Service to our GuestsYou will be passionate and truly engaged in taking care of our guests, recognizing individual guests and anticipating their unique needs in order to exceed their expectationsOther duties and responsibilities may be assigned. The employee is expected to work in other areas of the hotel when needed to assist operations to perform job duties not necessarily contained in this job description.You will consistently deliver our GUEST model:Greet or welcome everyone, warmly with a smileUse eye and ear contact and guest\u2019s nameEstablish/anticipate needsSolve and own all requests/complaintsThank everyone Additional Job Information/Anticipated Pay Range Qualifications And Skills Communication skills are utilized a significant amount of time for training and safety purposes, and when interacting with guests and associates.Appropriate professional appearance and demeanor3 years of previous line experience preferred, preferably high volumeCulinary degree or related hotel experience is preferredCandidates should be able to perform all basic and intermediate cooking skillsAbility to work multiple stations in the kitchenValid ServSafe Food Handler Certificate required Physical Demands The physical demands described here are representative of those that must be met by an employee to successfully perform the essential functions of this job. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions. While performing the duties of this Job, the employee is regularly required to stand and use hands to finger, handle, or feel. The employee is frequently required to talk or hear. The employee is occasionally required to walk, reach with hands and arms and stoop, kneel, crouch, or crawl. The employee must occasionally lift and/or move up to 100 pounds. Work Environment The work environment characteristics described here are representative of those an employee encounters while performing the essential functions of this job. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions. While performing the duties of this Job, the employee is occasionally exposed to moving mechanical parts, extreme cold and extreme heat. The noise level in the work environment is usually moderate. Benefits Sonesta recognizes that benefits play a vital role in helping ensure the health and financial security of employees and their families. We offer a variety of benefits to our employees including: Medical, Dental and Vision InsuranceHealth Savings Account with Company Match401(k) Retirement Plan with Company MatchPaid Vacation and Sick DaysSonesta Hotel DiscountsEducational AssistancePaid Parental LeaveCompany Paid Life InsuranceCompany Paid Short Term and Long Term Disability InsuranceVarious Employee Perks and Discounts Upon submitting your application, please ensure you complete a full application in addition to attaching a resume. Incomplete applications received will not be considered.",
+      "location": "New Orleans, LA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.sonesta.com/us/en/job/SHXSHUUSR0057901EXTERNALENUS/Cook-I?utm_medium=phenom-feeds&source=LinkedIn&utm_source=linkedin",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3902313675",
+      "title": "Kitchen Supervisor",
+      "company": "Cold Spring Tavern",
+      "description": "Cold Spring TavernKitchen Manager/Lead Cook Job Description:\u2022 Prep, cook, and season ingredients consistently, according to designated recipes and quality standards.\u2022 Maintain freshness of food and ingredients by checking for quality, keeping track of old and new items, and rotating stock.\u2022 Follow proper handling and right temperature of all food products.\u2022 Check the quality of all raw and cooked food products to ensure that standards are met.\u2022 Support General Manager in supervision of kitchen shift operations.\u2022 Lead kitchen staff by checking food plating, temperature, and portion sizes.\u2022 Ensure compliance with all local, state, and federal (eg. OSHA, ASI and Health Department) standards.\u2022 Inform purchasing, receiving, and food storage standards.\u2022 Assist in receiving and storing food supplies.\u2022 Maintain a clean, organized, and sanitary kitchen environment, in accordance with food safety standards.\u2022 Ensure end of shift tasks regarding food storage, cleaning of cooking equipment and utensils, and floor mopping are executed.\u2022 Assist General Manager in executing special events (weddings, parties) as well as holiday activities (Thanksgiving, Valentine\u2019s Day).Job Skills, Requirements and Expectations:\u2022 Minimum three years of line cook or lead cook experience.\u2022 Holds a California Food Handlers Card or ServSafe Certificate.\u2022 Multitask and manage time efficiently during shift. \u2022 Demonstrate appropriate kitchen behavior.\u2022 Encourage and build trust, respect, and cooperation within kitchen and other departments.\u2022 Strive to exceed customer expectations on food items purchased. Other Requirements:\u2022 You must have reliable transportation, know your schedule, be on time, and able to work weekends.\u2022 Ability to speak Spanish and English is helpful, but not required.\u2022 Depending on the needs of the business, there may be opportunities for extra hours or flexibility.\u2022 Based on performance, opportunity to take on more kitchen responsibilities and move into management. Other Benefits:\u2022 Pay is $25-&30 hour depending on experience.\u2022 Opportunity to earn discretionary bonuses for special events and based on annual profit.\u2022 Healthcare is available for full-time employees with a company contribution.\u2022 Family meal provided for each shift.\u2022 Two t-shirts are provided annually for uniform; additional available for purchase at cost.",
+      "location": "Santa Barbara, CA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3901681336",
+      "title": "Cook Supervisor",
+      "company": "Summit",
+      "description": "Cook Supervisor Job Reference Number: 18511 Employment Type: Full-Time, OnsiteSegment: Corrections Brand: Summit State: Oklahoma (US-OK) The Role at a glance: We are looking to bring an experienced cook supervisor to our corrections team in Tulsa, OK. As a cook supervisor, you will have the opportunity to coordinate and supervise the work of employees to ensure efficiency and adherence to established standards in a fast-paced, dynamic environment. What you'll be doing: Instructing and training employees in all aspects of food service and sanitation, ensuring meal services begin on time, and ensuring that portion, appearance and temperature for all food items is appropriate and of high quality. What we're looking for: Must-haves: At least one years\u2019 prior culinary experience in a quality and high volume establishment with an emphasis on scratch cooking. Complete knowledge of proper culinary methods, techniques and standards. Excellent attention to detail and the ability to perform multiple tasks at once. The ideal candidate must have high-level product knowledge, provide friendly and helpful customer service and be able to multi-task in a fast-paced environment. The ideal candidate must have experience supervising a team. Nice-to-haves: Food Handlers certification preferred. Pay: $17.00 per hour Our Benefits: Medical (FT Employees)DentalVisionVoluntary UNUM offering for Accident, Critical Illness and Hospital IndemnityDiscount ProgramCommuter Benefits (Parking and Transit) EAP401kSick TimeHoliday Pay (9 paid holidays)Tuition Reimbursement (FT Employees)Paid Time Off About Summit: Focused on serving correctional institutions, Summit ensures that incarcerated people across the United States have access to delicious, healthy food at each meal. Working with Summit, you will have the opportunity to aid in this process and provide inmates with vital social interaction at mealtimes. About Elior North America: Elior North America is an equal opportunity employer. Qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, sexual orientation, gender identity, disability or protected veteran status. We are committed to diversity and encourage applications from people of all backgrounds and abilities. We take pride in supporting the development of our employees and their skills at all levels and in fostering an environment of growth. At Elior North America, we are committed to offering growth and advancement opportunities for all of our employees. The valuable skills and experience you\u2019ve gained with Elior will propel you further in your career, whether with our corporate office or one of our brand segments. Disclaimer: This job description can be revised by management as needed.",
+      "location": "Tulsa, OK",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.elior-na.com/Summit/job/Tulsa-Cook-Supervisor-OK-74103/792701202/?feedId=353957&utm_source=LinkedInJobPostings&utm_campaign=EliorNorthAmerica_LinkedIn",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3903845010",
+      "title": "COOK I PREP",
+      "company": "Boyd Gaming",
+      "description": "Position Description Prepare food according to established specifications and standardized recipes. Inspect equipment, cold meats, seafood, and produce to ensure product quality standards are met. Maintain inventory levels and order stock. Monitor rotation, storage, and quantity controls. Job Functions Prepare food according to established specifications and standardized recipes. Inspect equipment, cold meats, seafood, and produce to ensure product quality standards are met. Maintain established inventory levels and order stock. Ensure proper product rotation, storage, and quantity controls. Consistently apply established safety and sanitation procedures. Position Requirements Job Specifications One (1) year of experience as a prep cook preferred. Must have a working knowledge of the production of a limited number of recipes in assigned food outlet while working under minimal supervision. Must be able to stand and/or walk for approximately 90% of shift. Must be able to lift, carry and maneuver up to 75 pounds. Other physical requirements of the position include but are not necessarily limited to reaching, grasping, bending, kneeling, and twisting at the waist. Must be able to obtain/maintain any necessary licenses and/or certifications. We are an Equal Opportunity Employer and do not discriminate against any employee or applicant for employment because of race, color, sex, age, national origin, religion, sexual orientation, gender identity, status as a veteran, and basis of disability or any other federal, state or local protected class.",
+      "location": "Las Vegas, NV",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.peopleclick.com/careerscp/client_boydgaming/external/results/jobDetails/jobDetail.html?jobPostId=113343&localeCode=en_US",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3885812679",
+      "title": "Kitchen Manager",
+      "company": "Topgolf",
+      "description": "Job Responsibilities Supervise and lead kitchen staff, including cooks, prep chefs, and dishwashers.Ensure the kitchen operates smoothly, meeting food safety and quality standards.Oversee food preparation, including recipe adherence and portion control.Monitor inventory levels and order kitchen supplies and ingredients as needed.Train kitchen staff in proper food handling, cooking techniques, and safety procedures.Coordinate with the front-of-house staff to ensure timely and accurate food service.Address and resolve kitchen-related issues and emergencies. Critical Skills & Experience Requirements Prior experience in a kitchen management or supervisory role.Strong leadership and team management skills.Excellent knowledge of food safety and sanitation practices.Ability to work in a fast-paced kitchen environment and adapt to changing demands.Proficiency in kitchen equipment operation and maintenance.Effective communication skills to coordinate with kitchen and front-of-house staff.Understanding of inventory management and ordering processes. ADA The above statements cover what are generally believed to be principal and essential functions of the job. Specific circumstances may allow or require some incumbents assigned to the job to perform a different combination of duties. EEO Statement Topgolf is a global sports and entertainment community and is committed to equal opportunity and is firmly committed to preventing discrimination and harassment, including sexual misconduct, based on legally protected diversity characteristics (such as race, color, religion, national origin, sex, age, disability, sexual orientation, gender identity or expression, family status, citizenship, genetic information and veteran status) in its application and hiring processes and in its employment decisions. As an affirmative action employer, Topgolf also takes steps to prevent retaliation and to create a respectful, equitable and inclusive environment for our Guests, Associates, business partners, vendors, and the communities we serve. Topgolf is an equal opportunity affirmative action employer and administers all personnel practices without regard to race, color, religion, sex, age, national origin, disability, sexual orientation, gender identity or expression, marital status, veteran status, genetics or any other category protected under applicable law. Topgolf Entertainment Group does not accept unsolicited agency resumes. Please do not forward unsolicited agency resumes to our website, employees or Human Resources. Topgolf will not pay fees for unsolicited agency resumes and will not be responsible for any agency fees associated with unsolicited resumes. Unsolicited resumes received will be considered property of Topgolf Entertainment Group and will be processed accordingly without fee. Topgolf participates in E-Verify and will provide the federal government with your Form I-9 information to confirm that you are authorized to work in the U.S.",
+      "location": "The Colony, TX",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.topgolf.com/us/en/job/JR2023-2092/Kitchen-Manager",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3901955325",
+      "title": "Line Cook-Bubba Gump",
+      "company": "Golden Nugget Las Vegas",
+      "description": "Overview Cook It is the responsibility of the Cook to prepare all food items according to menu, recipes, plate specifications, and guest requests. It is also the responsibility of this role to assure food preparation and service is of the highest quality and according to specified prep times. Responsibilities Prepare food according to established specifications and standardized recipes Inspect equipment, cold meats, seafood, and produce to ensure product quality standards are met Maintain established inventory levels and order stock Ensure proper product rotation, storage, and quantity controls Consistently apply established safety and sanitation procedures Assist all stations and respective lines as necessary Ability to read, decipher and execute cooking procedures and plate presentation based on established recipes and plate specifications Qualifications Minimum age requirement is 18 1 year experience in a high-volume kitchen Able to obtain and maintain a Food handler\u2019s card (HLTH card) and any other certification or license, as required by law or policy Possess basic mathematical skills to include ability to add, subtract, multiply and divide specific to position responsibilities Available to work varied shifts, including nights, weekends, and holidays What We Offer You Multiple benefit plans to suit your needs Paid Time Off 401K Opportunities for advancement Positive and respectful work environment where diversity is valued Generous employee discounts on dining, retail, amusements, and hotels Community volunteer opportunities Disclaimer: The above information is intended as a high-level overview of the responsibilities and qualifications for the position and does not represent the full job description which will include all responsibilities, skills, duties, requirements, and working conditions associated with the job. For more information or to see the full job description, contact the Human Resources department at the location in which you are applying. Pay Range USD $14.00 - USD $18.00 /Hr.",
+      "location": "Laughlin, NV",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 14.0,
+      "max_salary": 18.0,
+      "url": "https://careers.goldennugget.com/golden-nugget-careers/jobs/9954?lang=en-us&iis=LinkedIn",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3904392639",
+      "title": "Cook (Full Time, Rotating Shifts/Weekends)",
+      "company": "Nicklaus Children's Health System",
+      "description": "Job Summary Supports food production of patients and retail services. Identifying, storing, and rotating food items to be used during daily production. Prepares and displays hot and cold food according to recipes and specifications for patient and retail services. Performs short-order cooking and serving of food and/or the preparation of sandwiches at the Grill and Deli/Food Station. Minimum Job Requirements 1 year of experience as short order/grill cooking and/or cold food preparation in a quality operation. Job Food & Nutrition Services Primary Location Florida-Miami-Nicklaus Children's Hospital - Main Hospital Campus Department FOOD AND NUTRITION SERVICES-2100-800000 Job Status Full Time Essential Duties And Responsibilities Performs short-order cook, serve and prepare food/sandwiches at the Deli/Food Station. Identify, store, and rotate food items to be used during daily production. Dates, labels and stores prepared food items in designated areas and rotates them following the FIFO (First In, First Out) method. Documents & maintains accurate production and quality assurance records. Ensures food is served at safe & proper temperatures (hot food hot, cold food cold). Maintains the preparation & presentation areas in an organized manner at all times. Performs daily cleaning & sanitizing of the preparation and presentation areas. Prepares (peels, slices, cuts, dices and chops) various foods for daily production according to projections and historical data. Prepares food for breakfast and lunch at the grill. Cooks breakfast, lunch and dinner as assigned. Prepares under the supervision of the Chef certain assigned food items for patients/retail/catering that are tasty and consistent with standardized recipes. Presents salads along with other cold and hot foods in an attractive, healthy and organized manner. Sets up and stocks the food items in the service area in a timely and presentable manner. Knowledge/Skills/Abilities High school education or equivalent preferred. Graduate of a cooking school with accredited apprenticeship preferred. Ability to communicate effectively in English both verbally and in writing. Ability to relate cooperatively and constructively with customers and co-workers. Basic knowledge in use of computers and printers. Ability to learn appropriate software application(s). Knowledge of food safety and sanitation standards based on ServSafe. Knowledge of Spanish is helpful. Able to follow detailed written or verbal instructions. Proficiency in food safety and proper cooking techniques and methods. (EOE DFW)",
+      "location": "Miami, FL",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://mch.taleo.net/careersection/2/jobdetail.ftl?src=SNS-102&job=26469&lang=en",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3900951977",
+      "title": "Line Cook",
+      "company": "Sage Lodge",
+      "description": "Line Cook Create menu magic and make hungry people happy. Showcase your skills by providing daily preparation requirements while working together with the culinary team to ensure quality and constancy of food items. Line Cook is responsible for reading and interpreting recipes, conducting inventory and adhering to standards for sanitation and safe food handling procedures. Let\u2019s start off with the most important part - what\u2019s in it for you:The Perks*Eligibility of perks is dependent upon job status Paid Time off & Holiday Pay (Because Balance Matters)Benefits - Medical, Dental, Vision, Disability, 401KHSA/FSA Plans -with employer contributionValues Based Culture (#OMGLIFE)Culture Add (Creating Space for Fresh Perspectives)Referral Bonus (Get Paid to Recruit)Discounted Lodging, Dining, Spa, Golf, and Retail (Yes, Discounted Travel!)Employee Assistance Program\u201cColumbia Cares\u201d Volunteer OpportunitiesCommittee Participation Opportunities (Fun, Philanthropic, Diversity/Equity/Inclusion)Task Force Work Opportunities (Grow your career in idyllic locations across the globe)Online Learning Platform to Help You Grow!Get Paid Daily (Make any day payday)Third Party Perks (Including discounts on Pet Insurance, Rental Cars, Movie and Concert Tickets, Theme Park and Attractions & so much more) Our Commitment to you:\u201cPeople never forget how you made them feel.\u201d Maya Angelou\u2019s famous statement serves as a rallying cry throughout Columbia Hospitality and fuels our collective drive - and success.Our people are our purpose, and our brand is our people. We seek extraordinary individuals who drive our brand promise of Creating Exceptional Experiences. We are a people-first organization, ignited from the inside to succeed on the outside. We are a tight-knit, inclusive, values-driven team and we trust one another to have each other\u2019s backs. We show up every day with open hearts, an inclusive mindset, and genuine respect for those around us. We have fun, grow together, and strive to leave a positive lasting impression on everyone we meet. What you\u2019ll do: The Nitty GrittyPrevious cooking experience required.Ability to read and comprehend simple instruction, short correspondence and memos.Ability to effectively present information in one on one and small group situations to other employees of the organization.Must posses knife skills, the ability to adjust preparations for flavor, and accommodate customer\u2019s needs in a timely manner.Must be able to stand for long periods of time. Must be able to lift 50 pounds repeatedly throughout a work day. Don\u2019t meet every single requirement? At Columbia Hospitality we are dedicated to building a diverse, inclusive and authentic workplace, so if you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with every qualification in the job description, we encourage you to apply anyways. You may just be the right candidate for this or other roles. Where you\u2019ll work:Nestled on more than a mile of Yellowstone riverfront, and just 35 minutes from Yellowstone National Park, Sage Lodge is inspired by anglers, but beckons to outdoor enthusiasts of all kinds. Looking our at majestic Emigrant Peak, the Lodge blends the raw and rugged beauty of Paradise Valley with distinctive Montana hospitality. The expansiveness of Montana's unspoiled terrain is right outside your door for hiking, horseback riding, biking, fishing, and so much more. All conveniently located just 50 minutes from Bozeman. Sage Lodge offers 50 rustically elegant guestrooms each. Guests can take in the views of the Montana horizon while dining in the Fireside Room. Experience the softer side of the wild west at The Spa at Sage Lodge with relaxing and revitalizing body treatments. The Fine PrintColumbia Hospitality, Inc. is an equal opportunity employer committed to an inclusive environment without regard to age, race, color, ancestry, national origin, religion, disability, sex, gender identity or expression, sexual orientation, or any other protected status in accordance with applicable law. We strive for excellence in every position within the company and select the most qualified people who embrace our service philosophy and these values. Accountability | Creativity | Enthusiasm | Honesty | Inclusion | Respect Columbia Hospitality is a national management and consulting company with more than 25 years of experience in creating hospitality solutions and delivering exceptional experiences. Our portfolio includes award-winning hotels and resorts, premier residential communities, restaurants and bars, private and public golf clubs, conference centers, and distinctive venues. Columbia Hospitality has been consistently recognized as one of the Top Companies to Work for in Washington by Seattle Business Magazine and Puget Sound Business Journal for their commitment to creating a fun, dynamic and nurturing work environment for team members.",
+      "location": "Pray, MT",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3889279218",
+      "title": "Assistant Cook",
+      "company": "nan",
+      "description": "Claudy\u2019s Kitchen, award winning Peruvian restaurant. This is a full-time on-site role as an Assistant Cook (Prep cook & line cook) located in Bronx, NY. As an Assistant Cook, your main responsibility will be to assist in meal preparation and cooking, ensuring that all dishes are prepared according to the chef's instructions and meet the highest quality standards. You will also be responsible for maintaining cleanliness and organization in the kitchen, as well as assisting with ingredient inventory and ordering. Qualifications Previous experience as a cook or in a similar roleKnowledge of cooking techniques and food safety regulationsAbility to work well in a fast-paced environment and collaborate effectively with a teamStrong attention to detail and organizational skillsExcellent communication and time management skillsFlexibility to work evenings, weekends, and holidays as requiredCulinary training or food handlers certification is a plus",
+      "location": "Bronx, NY",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3901358190",
+      "title": "Lead Line Cook - The Fawcett Center",
+      "company": "The Ohio State University",
+      "description": "Job DescriptionUnder supervision from a Sous Chef, the Line Cook Lead is responsible for ensuring the overall preparation, sanitation and monitoring of cooked foods for an assigned area in the Fawcett Center operation. The Line Cook Lead operates as a key part of the culinary and management teams and with regard to directing the workflow of a team of full-time and student employees within a food station or preparation area, as well as cooking meats, poultry, and seafood, breakfast items such as eggs, quiches, pancakes, meats, potatoes, cereals, and fruits, and presenting the finished products garnished and ready for service. Creates station diagrams, daily specials, writes prep lists, and assist with menu suggestion, menu writing and plating design. The Line Cook Lead creates and interprets, as well as assists other in interpreting recipes and the measuring of ingredients. The Line Cook Lead is also knowledgeable in the proper operation of standard kitchen equipment and is skilled in training others on the equipment's proper and safe use. Additional hours, nights, and weekends may be required based on business need. Minimum Education RequiredHigh School diploma or GED. Certification or vocational training may be required. Associate degree in relevant field may be preferred. 4 years of relevant experience required. 6 or more years of relevant experience preferred. Desired QualificationsAssociates degree in hospitality management, culinary arts, and/or at least 3 years of cooking experience preferably in a restaurant or conference center; ability to work as part of a team; ability to operate all kitchen equipment; Compensation InformationThe pay range for this position is $16.06 - $21.42 per hour (min - mid). The offer for this position will fall within this range based on internal equity, unit's available budget, and the candidate's education and experience. This position qualifies for overtime, shift and weekend differential.",
+      "location": "Columbus, OH",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 16.06,
+      "max_salary": 21.42,
+      "url": "https://osu.wd1.myworkdayjobs.com/OSUCareers/job/Columbus-Campus/Line-Cook-Lead_R99495-1?source=Linkedin",
+      "skill_labels": "Management, Manufacturing",
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior-level cook with 10 years of experience as Line Cook and Prep Cook, skilled in broiling, grilling, cold food preparation, portion control, sanitation, and volume cooking. No formal certifications or supervisory experience listed.",
+    "job_explanations": [
+      {
+        "job_id": "3905303055",
+        "title": "Cook I",
+        "company": "Sonesta Hotels",
+        "match_reason": "Strong match. Candidate has 10 years of experience as Line Cook/Prep Cook with skills in broiling, grilling, portion control, and sanitation, aligning with the required basic and intermediate cooking skills. The role requires a ServSafe Food Handler Certificate, which the candidate does not possess. The reranker score of 92 reflects strong overall fit.",
+        "missing_skills": [
+          "ServSafe Food Handler Certificate"
+        ]
+      },
+      {
+        "job_id": "3902313675",
+        "title": "Kitchen Supervisor",
+        "company": "Cold Spring Tavern",
+        "match_reason": "Partial match. Candidate meets the minimum 3 years of line cook experience with 10 years of experience, but lacks the required supervisory experience to lead kitchen staff and does not hold a California Food Handlers Card or ServSafe Certificate. The reranker score of 85 indicates good fit but these gaps are significant.",
+        "missing_skills": [
+          "Food Handler Certification (ServSafe or California Food Handlers Card)",
+          "Supervisory experience"
+        ]
+      },
+      {
+        "job_id": "3901681336",
+        "title": "Cook Supervisor",
+        "company": "Summit",
+        "match_reason": "Partial match. Candidate has the required culinary experience and skills for high-volume scratch cooking, but lacks the supervisory experience explicitly required for the role. The corrections domain is not a mismatch but is a specific environment. The reranker score of 82 reflects moderate fit.",
+        "missing_skills": [
+          "Supervisory experience"
+        ]
+      },
+      {
+        "job_id": "3903845010",
+        "title": "COOK I PREP",
+        "company": "Boyd Gaming",
+        "match_reason": "Strong match. Candidate has 10 years of prep cook experience and all required skills including cold food preparation, knife handling, portion control, and sanitation. No certifications are required. The reranker score of 78 supports this fit.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3885812679",
+        "title": "Kitchen Manager",
+        "company": "Topgolf",
+        "match_reason": "Poor match due to missing management experience. Candidate has senior-level cooking experience but no prior kitchen management or supervisory role, and lacks inventory ordering experience required for the position. The reranker score of 75 indicates moderate fit but the management gap is a primary disqualifier.",
+        "missing_skills": [
+          "Kitchen management experience",
+          "Inventory ordering"
+        ]
+      },
+      {
+        "job_id": "3901955325",
+        "title": "Line Cook-Bubba Gump",
+        "company": "Golden Nugget Las Vegas",
+        "match_reason": "Strong match. Candidate has 10 years of high-volume cooking experience and skills in broiling, grilling, and portion control. The role requires a Food Handler's Card (HLTH card), which the candidate does not have. The reranker score of 72 reflects good fit.",
+        "missing_skills": [
+          "Food handler's card (HLTH card)"
+        ]
+      },
+      {
+        "job_id": "3904392639",
+        "title": "Cook (Full Time, Rotating Shifts/Weekends)",
+        "company": "Nicklaus Children's Health System",
+        "match_reason": "Strong match. Candidate has cold food preparation experience, FIFO inventory methods, and sanitation skills, meeting all required qualifications. No certifications are required. The reranker score of 68 supports this fit.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3900951977",
+        "title": "Line Cook",
+        "company": "Sage Lodge",
+        "match_reason": "Strong match. Candidate has previous cooking experience and knife handling skills, meeting the required qualifications. No certifications are required. The reranker score of 65 reflects a solid fit.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3889279218",
+        "title": "Assistant Cook",
+        "company": "Claudy's Kitchen",
+        "match_reason": "Strong match. Candidate has previous cooking experience and knowledge of food safety regulations, meeting all required qualifications. No certifications are required. The reranker score of 62 supports this fit.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3901358190",
+        "title": "Lead Line Cook - The Fawcett Center",
+        "company": "The Ohio State University",
+        "match_reason": "Partial match. Candidate meets the 4-year experience requirement with 10 years, but lacks a high school diploma or GED (required) and supervisory/leadership experience needed to direct workflow. The reranker score of 88 indicates strong initial fit but these gaps are significant.",
+        "missing_skills": [
+          "High school diploma or GED",
+          "Supervisory/leadership experience"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "ServSafe Food Handler Certificate",
+      "Food Handler Certification (ServSafe or California Food Handlers Card)",
+      "Supervisory experience"
+    ],
+    "recommendation": "Obtain a ServSafe Food Handler Certificate and seek opportunities to develop supervisory skills, such as taking on lead cook roles or management training, to broaden job prospects."
+  }
+}

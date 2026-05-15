@@ -1,0 +1,277 @@
+{
+  "persona": "03_tech_intern",
+  "method": "FAISS_PARSED_MPNET",
+  "model": "claude",
+  "run_timestamp": "2026-05-11T10:42:50.228156+00:00",
+  "results": [
+    {
+      "job_id": "3901936390",
+      "title": "Data Scientist (Medical)",
+      "company": "PSRTEK",
+      "description": "Role: Natural Language Processing (NLP) Scientist Location \u2013 Remote The required skills for this position are:Natural Language Processing (NLP)Python (Programming Language)Statistical ModelingHigh-Performance Liquid Chromatography (HPLC)Java Job Description:We are seeking a highly skilled NLP Scientist to develop our innovative and cutting-edge NLP/AI solutions to empower life science. This involves working directly with our clients, as well as cross-functional Biomedical Science, Engineering, and Business leaders, to identify, prioritize, and develop NLP/AI and Advanced analytics products from inception to delivery.Key Responsibilities:Lead the research, strategy, design, and implementation of NLP/AI products from prototype to deployment.Collaborate closely with internal teams and external clients to understand requirements and design innovative NLP/AI solutions.Develop and validate cutting-edge NLP algorithms, including large language models tailored for healthcare and biopharma use cases.Translate complex technical insights into accessible language for non-technical stakeholders.Mentor junior team members, fostering a culture of continuous learning and growth.Publish findings in peer-reviewed journals and conferences.Engage with the broader scientific community by attending conferences, workshops, and collaborating on research projects. Qualifications:Ph.D. or master's degree in biomedical NLP, Computer Science, Biomedical Informatics, Computational Linguistics, Mathematics, or other related fieldsPublication records in leading computer science or biomedical informatics journals and conferences are highly desirable Regards,Guru Prasath M US IT RecruiterPSRTEK Inc.Princeton, NJ 08540guru@psrtek.comNo: 609-917-9967 Ext:114",
+      "location": "Fairfax County, VA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3904716772",
+      "title": "Data Scientist",
+      "company": "Sumeru Inc",
+      "description": "Project Details:Job Title: Data ScientistLocation: Remote (W2 candidate only..)Need US. Citizen / Green card/ H4EAD/GCEAD Job Description: \u2022 Looking for Data Analyst who will be responsible for Migrating the ETL and ML pipelines to Databricks\u2022 Have experience with the Refactor the Macro code from local Python/R implementation to Databricks (Python/Pyspark) Analytical expert who utilize his/her skills in both technology and social science to find trends and manage data.They use industry knowledge, contextual understanding, skepticism of existing assumptions \u2013 to uncover solutions to business challengesCollecting, analysis and clean up dataCreating algorithms for processing catalog products using different data sourcesExperimenting with different models and neural networks, creating model ensemblesCreating a workflow for publishing algorithms to productionStrong skills in a machine and/or deep learning algorithms, data cleaning, feature extraction, and generationDemonstrated computational skills and experience with PythonExperience executing and presenting independent analysis Must have skills:Python(Programming Language)R (Programming Language)PySparkDatabricks",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3902809268",
+      "title": "Data Scientist (6+ years) (Fulltime)",
+      "company": "Diverse Lynx",
+      "description": "Job Title: Data ScientistLocation: Bentonville, AR (Onsite)Fulltime Mode of interview: Video Call Must have skills : AI/ML models using Google Cloud Platform Relevant Experience: 6+ years Education: Bachelor\u2019s Degree or above Roles & Responsibilities \u00b7 Proven experience in deploying real-time AI/ML models using Google Cloud Platform.\u00b7 Strong programming skills in Python and PySpark.\u00b7 Proficiency with SQL and relational databases, data warehouses, and BigQuery.\u00b7 Experience in scaling marketing-related AI/ML solutions such as cross/upsell, recommended systems, and category propensity.\u00b7 Experience in deploying and managing Large scale Machine Learning Models is a plus\u00b7 Expertise with classical ML algorithm like K-NN, LSH, logistic regression, linear regression, SVM, Random forest and clustering.\u00b7 Good understanding of ML & DL algorithms and frameworks (Scikit-learn,Spacy, Tensorflow/Keras/ PyTorch)\u00b7 Experience in deep learning Algorithm s like MLP, CNN, RNN, LSTMs and GANs, Transformers and LLMs.\u00b7 Excellent programming skills in Python\u00b7 Expertise in Google Cloud and operationalization of models using MLOPs.\u00b7 Experience in scheduling jobs for automated training and inference of AI/ML models using airflow or any other workflow orchestration platform.\u00b7 Proficiency in collecting data from different data sources, data cleaning, preprocessing, and feature engineering.\u00b7 Understanding of regression, classification, and unsupervised ML algorithms.\u00b7 Experience in mentoring junior associates in scaling AI/ML models.\u00b7 Excellent problem-solving and analytical skills.\u00b7 Strong written and verbal communication skills, with the ability to present and explain complex concepts to both technical and non-technical audiences.",
+      "location": "Bentonville, AR",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 52.0
+    },
+    {
+      "job_id": "3898159304",
+      "title": "Data Scientist with GenAI",
+      "company": "TOPSYS IT",
+      "description": "Hi All, This is Nithya from TOPSYSIT, We have a job requirement for Data Scientist with GenAI. If anyone interested please send me your updated resume along with contact details to nithya@topsysit.com Any Visa is Fine on W2 except H1B ,OPT and CPT.If GC holders who can share PPN along with proper documentation are eligible Job Title Data Scientist with GenAILocation: Plano, TX-OnsiteEXP: 10 Years Description:Competencies: SQL, Natural Language Processing (NLP), Python, PySpark/ApacheSpark, Databricks.Python libraries: Numpy, Pandas, SK-Learn, Matplotlib, Tensorflow, PyTorch.Deep Learning: ANN, RNN, LSTM, CNN, Computer vision.NLP: NLTK, Word Embedding, BOW, TF-IDF, World2Vec, BERT.Framework: Flask or similar. Thanks & Regards,Nithya Kandee:nithya@topsysit.comph:678-899-6898",
+      "location": "Plano, TX",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 48.0
+    },
+    {
+      "job_id": "3900081441",
+      "title": "Python Developer with AI/ML Skills",
+      "company": "Tata Consultancy Services",
+      "description": "Technical/Functional Skills Python, AI/ML Experience Required 8-10 years Roles & Responsibilities Strong knowledge of Python programming Knowledge of AI/ML based solutions implementation using Pyth on Knowledge of Scikit learn, Pandas, NumPy, Matplotlib Data Analysis knowledge Strong knowledge of RBDMS and SQL Knowledge of Django, REST web services Knowledge of Tableau/Data Visualization techniques",
+      "location": "Charlotte, NC",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://ibegin.tcs.com/iBegin/jobs/307345J",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 45.0
+    },
+    {
+      "job_id": "3902356904",
+      "title": "Data Engineer",
+      "company": "Thoughtwave Software and Solutions",
+      "description": "Title: Senior Data Engineer with Healthcare (10+years) Location: 100% Remote \u2013 EST Time zoneDuration: 12 Months Required Skills : Look for someone who has experience in the Healthcare domain and worked with Healthcare DataShould have good experience in Azure Stack (Data Lake/Blob Storage, Power BI Services, Azure Data Factory (or equivalent), Data bricks) and strong on SQL Server QUALIFICATION REQUIREMENTS\u2022 Bachelor\u2019s degree (BS/BA) in Information Systems, Software Engineering, Computer Science, Data Engineering, or related field required. Master\u2019s degree (MS/MA) preferred.\u2022 Experience with ETL/ELT, taking data from various data sources and formats and ingesting into a cloud-native data warehouse required.\u2022 Experience with Azure Stack (Data Lake/Blob Storage, PowerBI Services, Azure Data Factory (or equivalent), Databrick) and production level experience with on-premises Microsoft SQL Server required.\u2022 Experience with one of the following: Python, R, and/or Scala as well as standard analytic libraries/packages (e.g., pandas, Numpy, dplyr, data table, stringr, Slick, and/or Kafka) and related distribution frameworks required.\u2022 Strong verbal and written communication skills required.\u2022 Familiarity with agile and lean concepts that drive towards MVPs and iterative learning to generate the desired business and technology outcomes required.\u2022 Experience with DataRobot, Domino Data Labs, Salesforce MC, Veeva CRM preferred.\u2022 Familiarity with modern data stack components like Snowflake, dbt, Stitch, Tableau, and Airflow\u2022 Familiarity with statistical concepts and analytic modeling (e.g., regression analyses, hypothesis testing, and ML based modeling) preferred.\u2022 Experience with software engineering best practices like version control with Git and CI/CD preferred.\u2022 Experience with US healthcare and healthcare data, as well as familiarity with HIPAA guidelines, and best practices for handling and storing PHI and PII preferred.\u2022 Experience with healthcare marketing analytics, healthcare data (claims), and common medical coding sets (ICD, HCPCs, NPIs) preferred. if your interested please share me resume to syed@thoughtwavesoft.com or else call me 630-326-4525 Asap",
+      "location": "Dallas-Fort Worth Metroplex",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 42.0
+    },
+    {
+      "job_id": "3904974699",
+      "title": "Data Scientists",
+      "company": "Libsys Inc",
+      "description": "Title: Data Scientists RemoteContract Must Have Skills: Total IT exp - 12+ years Python \u2013 6+ Yrs of Exp \u2013 Pyspark \u20136+ Yrs of Exp \u2013 Pytorch \u20136+ Yrs of Exp \u2013 GCP \u20133 + Yrs of Exp \u2013 Web development \u2013 Prior experience 3+ Years Docker \u2013 4+ Years KubeFlow - 4+ Years",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 38.0
+    },
+    {
+      "job_id": "3898172866",
+      "title": "Data Analyst II",
+      "company": "Experis",
+      "description": "Our client is seeking a Data Engineer to join their team. Job Title: Data Engineer Location: Alameda, CA Job Type: 6 Months contract Job Id: ABOJP00034858 Job Description Must have data modeling experience. Data engineering would be even better. Creating reports in Power BI (advanced) that includes working with a variety of data sources (like Oracle, AWS Redshift, AWS S3, Azure, SharePoint, Excel). Worked with structured and unstructured data. Inquisitive and seeks out learning opportunities (what we work on is changing fast, so they need to adapt) Works well cross functionally (able to speak to business users without using technical jargon) and independently with little oversight List any preferred requirements: Microsoft Fabric, Microsoft Power Automate AI (artificial intelligence) ML (machine learning) and gen AI (generative AI) experience or interest a plus Python/SQL/Spark/DAX ETL experience Built solutions with scalability in mind. Creative. Supply chain experience 3-5 years of experience Required Required education level/certifications: Bachelor\u2019s (Associate\u2019s acceptable with relevant job experience) in Data Analytics, Statistics, Computer Science, or Mathematics major preferred Certifications in data analytics, data engineering, and/or data architecture would be great Preferred interview method: phone interview with me then in-person interview Skills: Data transformation, data modeling, data analysis, demonstrated knowledge with AWS, SQL, Python, MS Excel, Power BI, Fabric, Power Automate Education Four-year college degree (preferred Data Analytics, Statistics, Computer Science, or Mathematics major) or equivalent work experience involving Data Modeling Initiatives and Database Development. Will also consider an Associate\u2019s with 4+ years of Data Analytics exp. 3-5 years of experience in data modeling, data warehousing, data engineering, and/or data analytics 3+ years of demonstrated experience working with various business units defining and understanding business problems and solutions. Experience with Supply Chain a plus Strong understanding of data analytics, structured and unstructured data analysis, predictive modeling techniques, and data visualization as well as a good command of emerging methodologies like artificial intelligence, machine learning, and gen AI Knows data querying languages (e.g. SQL), scripting languages (e.g. Python), reporting tools such as PowerBI, and advanced Microsoft Excel skills Experience engaging cross-functional teams to build a strong data infrastructure A recognized thought leader and innovator in the development of new tools, methodologies, and problem-solving approaches Broad understanding of the latest data science, analytics, and technology trends/tools and their impact on business strategies and operations Curiosity-driven, with mindset geared towards continuous learning. Must be comfortable with ambiguity with a proven track record of being a self-starter. Responsibilities: Unify disparate data sources (different types and systems) into a single source of truth that supports reporting across the teams. Develop and execute data initiatives on our Digital Transformation roadmap, including development of Power BI reports and dashboards, to enhance data accessibility and productivity for the organization. Develop solutions for optimal extraction, transformation, and loading of data from various data sources and types. Benchmark with cross functional teams to understand how technology is utilized to support the business. Collaborate with other teams to understand available and upcoming technology. Develop technology to support process improvements, data standardization, and automation. Provide training to department as needed on new tools. Identify process issues, recommend improvements, and implement process improvements. Act as a data steward and support the advancement of citizen developers within the department. Maintain existing Microsoft Fabric and Power Platform applications, including supporting current reporting, metrics, and automation across the team. Create and maintain the necessary documentation and visuals to ensure clarity in data lineage and firm understanding of developed data solutions. Other responsibilities: Ability to manage multiple tasks under tight deadlines Very strong customer focus and relationship skills Operations/Supply Chain knowledge a plus Ability to work alone or with little supervision Willingness to find solutions to problems related to Data analytics Proficient with Microsoft Suite Awareness of Project Management methodologies and processes If this is a role that interests you and you\u2019d like to learn more, click apply now and a recruiter will be in touch with you to discuss this great opportunity. We look forward to speaking with you! About ManpowerGroup, Parent Company of:Manpower, Experis, Talent Solutions, and Jefferson Wells ManpowerGroup\u00ae (NYSE: MAN), the leading global workforce solutions company, helps organizations transform in a fast-changing world of work by sourcing, assessing, developing, and managing the talent that enables them to win. We develop innovative solutions for hundreds of thousands of organizations every year, providing them with skilled talent while finding meaningful, sustainable employment for millions of people across a wide range of industries and skills. Our expert family of brands \u2013 Manpower, Experis, Talent Solutions, and Jefferson Wells \u2013 creates substantial value for candidates and clients across more than 75 countries and territories and has done so for over 70 years. We are recognized consistently for our diversity - as a best place to work for Women, Inclusion, Equality and Disability and in 2022 ManpowerGroup was named one of the World's Most Ethical Companies for the 13th year - all confirming our position as the brand of choice for in-demand talent.",
+      "location": "Alameda, CA",
+      "experience_level": "Entry level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://click.appcast.io/track/j6quuls?cs=jj7&sjg=6cfq",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 35.0
+    },
+    {
+      "job_id": "3899536364",
+      "title": "Data Engineer",
+      "company": "Hanker Systems, Inc.",
+      "description": "Title: Senior Data Engineer (Only US Citizens and GC)Location: Santa Clara, CAOnsite Required skills:M.S. in Computer Science, Software/Computer Engineering, Information Technology, Electronics, Data Management or Applied Math with minimum of 7 years industry experience or B.S. degree with minimum (10) years industry experience.Demonstrated excellent communication skills both written and verbal.Strong data engineering and programming skillsHands on experience with C# and/or PythonProficient with SQL query languageStrong experience working with relational SQL (Microsoft SQL , MySQL, Postgres, Snowflake etc.) and non-relational SQL ( MongoDB, Kafka etc.)Very Strong experience in SnowflakeHands on experience on providing Cloud data solutions on AWS, GCP, Azure.Hands on experience with Data application life cycleSolid knowledge of database modelling and data warehouseevent driven and data streaming architectureApplication ScalabilityApplication security - SAML, OAUTH, Kerberos, JWT Token, SSOAPI DevelopmentExperience working with Windows and Linux OS Strong experience as a must:CI/CD pipeline and Build tools such as GitLab, Jenkins, CircleCI, etc.Modeling and transformation tools \u2013 DBT - AirFlowUnderstanding and ability to work with Kubernetes ThanksChinnachinnam@hankersystems.com",
+      "location": "Santa Clara, CA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 30.0
+    },
+    {
+      "job_id": "3871631334",
+      "title": "Machine Learning Engineer",
+      "company": "NLB Services",
+      "description": "Job Title: Python AI/ MLType: FulltimeLocation: Dallas, TX Python/AI-ML:Hands on experience with Python, Streamlit, Fastapi (minimum 2+ max 6 years)Hands on experience in developing neural networks using Tensorflow or Pytorch frameworkHands on experience with NLP (NLTK, Spacy, BERT, SBERT models)Hands on experience with vector database (Milvus, FAISS, Pinecone, Vespa, Chroma etc.,)Good understanding on LLMs, Gen AI, Langchain, transformersExperience working and deploying in cloud environment will be added advantage (Google Cloud, AWS, Azure)Willing to learn and adapt to the advancements in the Gen AI technology and work on POCs",
+      "location": "Dallas, TX",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level Data Scientist with 1 year of experience as a Research Assistant in Clinical NLP, holding a Master's in Data Science. Core strengths are in NLP, data preparation/cleaning/preprocessing, and biomedical/clinical text processing using Python, PyTorch, Git, Java, R, and SQL.",
+    "job_explanations": [
+      {
+        "job_id": "3901936390",
+        "title": "Data Scientist (Medical)",
+        "company": "PSRTEK",
+        "match_reason": "This is a partial-to-strong match on domain and technical skills. The candidate's background in Clinical NLP, biomedical scientific datasets, information extraction, and Python/Java directly aligns with the role's NLP/AI focus in life sciences and healthcare. The reranker_score of 82 reflects this domain alignment. However, the role expects someone who can lead research strategy, mentor junior members, publish in peer-reviewed journals, and drive products from prototype to deployment \u2014 responsibilities that imply a senior/principal-level scientist, which is a significant seniority mismatch against the candidate's 1 year of entry-level experience. The requirement for High-Performance Liquid Chromatography (HPLC) is also entirely absent from the candidate's profile.",
+        "missing_skills": [
+          "High-Performance Liquid Chromatography (HPLC)",
+          "LLM development and deployment experience"
+        ]
+      },
+      {
+        "job_id": "3871631334",
+        "title": "Machine Learning Engineer",
+        "company": "NLB Services",
+        "match_reason": "This is a partial match. The candidate has hands-on experience with PyTorch and NLP, and the role explicitly requires PyTorch-based neural network development and NLP (NLTK, Spacy, BERT/SBERT) \u2014 areas covered by the candidate's Clinical NLP research background and domain keywords. The role targets 2\u20136 years of experience, which is slightly above the candidate's 1 year but not a severe mismatch. Key gaps include vector databases (Milvus, FAISS, Pinecone) and LLM/GenAI/Langchain experience, which are explicitly required. The reranker_score of 68 is consistent with this partial alignment.",
+        "missing_skills": [
+          "Vector database experience (Milvus, FAISS, Pinecone, etc.)",
+          "LLM/GenAI/Langchain frameworks",
+          "Streamlit/FastAPI"
+        ]
+      },
+      {
+        "job_id": "3904716772",
+        "title": "Data Scientist",
+        "company": "Sumeru Inc",
+        "match_reason": "This is a partial match. The candidate's skills in Python, R, data cleaning, feature extraction, deep learning, and machine learning align with several stated requirements. However, the role's primary technical requirement is migrating ETL and ML pipelines to Databricks using PySpark, which is absent from the candidate's profile. The reranker_score of 62 reflects moderate overlap. The US work authorization requirement (W2, US Citizen/GC/H4EAD/GCEAD) may also be a practical barrier depending on the candidate's visa status.",
+        "missing_skills": [
+          "PySpark",
+          "Databricks"
+        ]
+      },
+      {
+        "job_id": "3902809268",
+        "title": "Data Scientist (6+ years) (Fulltime)",
+        "company": "Diverse Lynx",
+        "match_reason": "This is a poor match primarily due to a severe seniority mismatch. The role explicitly requires 6+ years of relevant experience, while the candidate has 1 year. Additionally, the role requires proven experience deploying AI/ML models on Google Cloud Platform, MLOps, BigQuery, PySpark, and workflow orchestration tools like Airflow \u2014 none of which appear in the candidate's profile. The reranker_score of 52 reflects this weak fit.",
+        "missing_skills": [
+          "Google Cloud Platform (GCP) / BigQuery",
+          "PySpark",
+          "MLOps / Airflow"
+        ]
+      },
+      {
+        "job_id": "3898159304",
+        "title": "Data Scientist with GenAI",
+        "company": "TOPSYS IT",
+        "match_reason": "This is a poor match. The role requires 10 years of experience and is onsite in Plano, TX, representing a severe seniority mismatch with the candidate's 1 year of entry-level experience. While the candidate has Python, PyTorch, NLP, and deep learning knowledge that overlap with listed competencies, the role also requires PySpark, Databricks, Flask, and specific NLP libraries (NLTK, Word2Vec, BERT) that are not confirmed in the candidate's profile. The reranker_score of 48 reflects this weak overall fit.",
+        "missing_skills": [
+          "PySpark / Databricks",
+          "Flask or similar web framework",
+          "NLTK / Word2Vec / BERT (explicit NLP library experience)"
+        ]
+      },
+      {
+        "job_id": "3900081441",
+        "title": "Python Developer with AI/ML Skills",
+        "company": "Tata Consultancy Services",
+        "match_reason": "This is a poor match due to a critical seniority mismatch. Despite being listed as 'Entry level,' the description explicitly requires 8\u201310 years of experience, which far exceeds the candidate's 1 year. The candidate has Python and SQL, which partially align, but the role also requires Scikit-learn, Pandas, NumPy, Django, REST web services, and Tableau \u2014 tools not present in the candidate's profile. The reranker_score of 45 reflects this weak fit.",
+        "missing_skills": [
+          "Scikit-learn / Pandas / NumPy",
+          "Django / REST web services",
+          "Tableau / Data Visualization"
+        ]
+      },
+      {
+        "job_id": "3902356904",
+        "title": "Data Engineer",
+        "company": "Thoughtwave Software and Solutions",
+        "match_reason": "This is a poor match. The role is a Senior Data Engineer position requiring 10+ years of experience in healthcare data engineering, with mandatory skills in Azure Stack (Data Lake, Blob Storage, Azure Data Factory, Databricks), ETL/ELT pipelines, and production-level SQL Server. The candidate has only 1 year of experience and no data engineering background, Azure experience, or ETL pipeline skills. While the candidate has healthcare/clinical NLP domain knowledge and Python/SQL, these are insufficient for the core requirements. The reranker_score of 42 reflects this poor fit.",
+        "missing_skills": [
+          "Azure Stack (Data Factory, Data Lake, Databricks)",
+          "ETL/ELT pipeline development",
+          "Production-level SQL Server experience"
+        ]
+      },
+      {
+        "job_id": "3904974699",
+        "title": "Data Scientists",
+        "company": "Libsys Inc",
+        "match_reason": "This is a poor match due to extreme seniority and experience mismatch. The role requires 12+ total IT years, 6+ years each in Python, PySpark, and PyTorch, plus 4+ years in Docker and KubeFlow, and 3+ years in GCP. The candidate has 1 year of experience and while PyTorch is present in their tools, PySpark, Docker, KubeFlow, and GCP are entirely absent. The reranker_score of 38 reflects this very weak fit.",
+        "missing_skills": [
+          "PySpark (6+ years required)",
+          "Docker / KubeFlow",
+          "Google Cloud Platform (GCP)"
+        ]
+      },
+      {
+        "job_id": "3898172866",
+        "title": "Data Analyst II",
+        "company": "Experis",
+        "match_reason": "This is a poor match. Despite the 'Entry level' label, the role requires 3\u20135 years of experience in data modeling, data warehousing, and data engineering, with mandatory skills in Power BI, data modeling, AWS, and ETL development. The candidate has Python and SQL but lacks data engineering, data modeling, Power BI, and cloud platform experience. The domain focus on supply chain and business reporting is also unrelated to the candidate's clinical NLP background. The reranker_score of 35 reflects this poor fit.",
+        "missing_skills": [
+          "Power BI / data visualization tools",
+          "Data modeling and warehousing",
+          "AWS / cloud data platform experience"
+        ]
+      },
+      {
+        "job_id": "3899536364",
+        "title": "Data Engineer",
+        "company": "Hanker Systems, Inc.",
+        "match_reason": "This is a poor match. The role is a Senior Data Engineer position requiring 7\u201310+ years of industry experience with mandatory skills in Snowflake, cloud data solutions (AWS, GCP, Azure), CI/CD pipelines, DBT, Airflow, Kubernetes, and application security protocols. The candidate has 1 year of experience and none of these data engineering or cloud infrastructure skills. Python and SQL are present in the candidate's profile but are far from sufficient for this role. The reranker_score of 30 reflects this very poor fit.",
+        "missing_skills": [
+          "Snowflake / cloud data warehousing",
+          "CI/CD pipelines (GitLab, Jenkins)",
+          "Kubernetes / DBT / Airflow"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "High-Performance Liquid Chromatography (HPLC)",
+      "LLM development and deployment experience",
+      "Vector database experience (Milvus, FAISS, Pinecone, etc.)"
+    ],
+    "recommendation": "The candidate is best positioned for NLP/ML roles in biomedical or clinical domains (as seen in job 3901936390 and 3871631334), but should prioritize gaining hands-on experience with at least one major cloud platform (GCP, AWS, or Azure) and modern LLM/GenAI tooling (e.g., Langchain, BERT fine-tuning, vector databases) to become competitive for the most relevant open roles."
+  }
+}

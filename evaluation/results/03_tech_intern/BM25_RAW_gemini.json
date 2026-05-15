@@ -1,0 +1,278 @@
+{
+  "persona": "03_tech_intern",
+  "method": "BM25_RAW",
+  "model": "gemini",
+  "run_timestamp": "2026-05-11T10:28:48.124499+00:00",
+  "results": [
+    {
+      "job_id": "3885828275",
+      "title": "Data Scientist",
+      "company": "TEKsystems",
+      "description": "Top Skills' Details Passion for Machine Learning and Data Science and their fundamentals Research and quantitative analysis of AI risk management Development of data science algorithms using Python Documentation Would prefer someone who has a strong understanding or at least a passion for AI Risk Management. Description This is a Data Scientist role in Chat and Voice Technology team. The team builds next generation AI and Search platforms for the bank, enabling smart virtual assistants across multiple channels and platforms. This position requires candidate to be well versed with various machine learning algorithms and NLP techniques, including LLM and Generative AI techniques. Role offers an opportunity to work with seasoned architects, PhDs in Machine Learning and NLP, Software Engineers, and Risk Management partners. Candidate should be able to work independently and collaboratively to take ownership of prepare models for validation and monitoring. Candidate must possess passion for machine learning and data analysis, creatively solving how to assess risk, conduct and summarize research, and prepare technical white papers to support Machine Learning and Software Engineers through the model development lifecycle. This role is unique, in that candidate must be 100% AI Risk Management (50% Research and Quantitative Analysis, 25% Development, and 25% White Paper Documentation). Required Skills Bachelor Degree in Computer Science, Data Science, Mathematics, or related field Knowledge of machine learning and related techniques Knowledge of recent developments in AI space including but not limited to transformers, LLMs, Generative AI Good understanding of a version control system like git to be able to efficiently collaborate with colleagues. Strong Python development skills and knowledge of Java/C++ Adept at leveraging ML/AI techniques to solve critical business problems with good understanding of Supervised, Unsupervised and Reinforcement Learning. Excellent interpersonal communication skills for tech, business, and risk conversations Good analytical skills to break down requirements, solve complex problems, and challenge the approach, build, and test of AI models and model components Skills Python, Data science, Data, java, Algorithm, risk management, artificial intelligence, Machine learning, Predictive modelling, Data analysis, Predictive analytics Top Skills Details Python, Data science, Data, java Algorithm, risk management, artificial intelligence Additional Skills & Qualifications There will be a heavy research and analysis component to this job, especially around risk management related to artificial intelligence and GenAI. They will be diving into an understanding of the biases of AI and the algorithms created by other data scientists on the team, how the data flows through the algorithm, and the risks associated to the outcomes. They'll be developing their own algos a smaller percentage of their time, but need to have a strong background in Python to be able to read the code of the 18 existing AI models and their architecture. They'll be spending a lot of time trying to break what exists and raising questions around why certain things were done that way. From a documentation perspective, they'll need to be able to create graphical representations of their findings so a lay person could understand them. About TEKsystems We're partners in transformation. We help clients activate ideas and solutions to take advantage of a new world of opportunity. We are a team of 80,000 strong, working with over 6,000 clients, including 80% of the Fortune 500, across North America, Europe and Asia. As an industry leader in Full-Stack Technology Services, Talent Services, and real-world application, we work with progressive leaders to drive change. That's the power of true partnership. TEKsystems is an Allegis Group company. The company is an equal opportunity employer and will consider all applications without regards to race, sex, age, color, religion, national origin, veteran status, disability, sexual orientation, gender identity, genetic information or any characteristic protected by law.",
+      "location": "Irving, TX",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://jsv3.recruitics.com/redirect?rx_cid=3435&rx_jobId=JP-004411283&rx_url=https%3A%2F%2Fars2.equest.com%2F%3Ficid%3Dlinkedin_recruitics%26response_id%3Dcf2e215757dc2a480c15a6a329a7bbe2%26rx_campaign%3DLinkedin1%26rx_ch%3Dconnector%26rx_group%3D123600%26rx_job%3DJP-004411283%26rx_medium%3Dpost%26rx_r%3Dnone%26rx_source%3DLinkedin%26rx_ts%3D20240406T004801Z%26rx_vp%3Dslots",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3899537087",
+      "title": "NLP Engineer",
+      "company": "EA Team Inc",
+      "description": "Role: NLP EngineerLocation: Remote Job Description-As an NLP Engineer, You will extract, interpret, and synthesize an extremely diverse set of diagnostic lab data - with the goal to standardize this data, making it machine readable, interoperable, and more discoverable and accessible. Successful candidates will have a strong understanding of NLP techniques and hands on experience with JavaResponsibilitiesDesigning and developing NLP applications for medical entity extraction and text miningDesign Database to store NLP entities and relationshipUsing effective text representation techniques and classification algorithmsTraining and evaluating modelsDesign end to end java applicationsFind and implement the right algorithms and tools for NLP tasksPerform statistical analysis of results and refine modelsExtend ML libraries and frameworks to apply in NLP tasksRemain updated in the rapidly changing field of machine learning RequirementsClinical NLP experience (cTakes, UIMA)Strong Java development experienceDeep understanding of healthcare domainFamiliarity with Ontology tools and technologiesProven experience as an NLP Engineer or similar role/Track record in NLP/NLU and related technologiesUnderstanding of NLP techniques for text representation, semantic extraction techniques, data structures and modelingAbility to effectively design software architecture.Knowledge of Python, SQLAbility to write robust and testable code.Experience with machine learning frameworks (like Keras, BERT or opennlp) and libraries (like scikit-learn)An analytical mind with problem-solving abilities --- Regards, Gautam Sharmagautams@eateam.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3901936390",
+      "title": "Data Scientist (Medical)",
+      "company": "PSRTEK",
+      "description": "Role: Natural Language Processing (NLP) Scientist Location \u2013 Remote The required skills for this position are:Natural Language Processing (NLP)Python (Programming Language)Statistical ModelingHigh-Performance Liquid Chromatography (HPLC)Java Job Description:We are seeking a highly skilled NLP Scientist to develop our innovative and cutting-edge NLP/AI solutions to empower life science. This involves working directly with our clients, as well as cross-functional Biomedical Science, Engineering, and Business leaders, to identify, prioritize, and develop NLP/AI and Advanced analytics products from inception to delivery.Key Responsibilities:Lead the research, strategy, design, and implementation of NLP/AI products from prototype to deployment.Collaborate closely with internal teams and external clients to understand requirements and design innovative NLP/AI solutions.Develop and validate cutting-edge NLP algorithms, including large language models tailored for healthcare and biopharma use cases.Translate complex technical insights into accessible language for non-technical stakeholders.Mentor junior team members, fostering a culture of continuous learning and growth.Publish findings in peer-reviewed journals and conferences.Engage with the broader scientific community by attending conferences, workshops, and collaborating on research projects. Qualifications:Ph.D. or master's degree in biomedical NLP, Computer Science, Biomedical Informatics, Computational Linguistics, Mathematics, or other related fieldsPublication records in leading computer science or biomedical informatics journals and conferences are highly desirable Regards,Guru Prasath M US IT RecruiterPSRTEK Inc.Princeton, NJ 08540guru@psrtek.comNo: 609-917-9967 Ext:114",
+      "location": "Fairfax County, VA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3904716772",
+      "title": "Data Scientist",
+      "company": "Sumeru Inc",
+      "description": "Project Details:Job Title: Data ScientistLocation: Remote (W2 candidate only..)Need US. Citizen / Green card/ H4EAD/GCEAD Job Description: \u2022 Looking for Data Analyst who will be responsible for Migrating the ETL and ML pipelines to Databricks\u2022 Have experience with the Refactor the Macro code from local Python/R implementation to Databricks (Python/Pyspark) Analytical expert who utilize his/her skills in both technology and social science to find trends and manage data.They use industry knowledge, contextual understanding, skepticism of existing assumptions \u2013 to uncover solutions to business challengesCollecting, analysis and clean up dataCreating algorithms for processing catalog products using different data sourcesExperimenting with different models and neural networks, creating model ensemblesCreating a workflow for publishing algorithms to productionStrong skills in a machine and/or deep learning algorithms, data cleaning, feature extraction, and generationDemonstrated computational skills and experience with PythonExperience executing and presenting independent analysis Must have skills:Python(Programming Language)R (Programming Language)PySparkDatabricks",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3885105100",
+      "title": "MLE/AI Engineer Summer Intern",
+      "company": "nan",
+      "description": "Company DescriptionWe are a stealth startup, an early-stage company based in the San Francisco Bay Area, operating in stealth mode to protect sensitive information and carefully manage our public image. Role DescriptionWe are seeking a full-time (unpaid) undegraduate Data Science / AI Intern to assist in the development and implementation of machine learning models, pattern recognition algorithms, and neural networks. This is a hybrid role, primarily located in the San Francisco Bay Area with the flexibility to work remotely for some portion of the week. Key responsibilities and skills:Proficiency in Python programming languageKnowledge of natural language processing (NLP), data science, and deep learning algorithms (RNN, CNN, etc.)Ability to implement machine learning algorithms and statistical analysisStrong presentation and teaching skills to articulate complex concepts to non-technical audiencesUnderstanding of data structures and algorithms in PythonExcellent research skills, utilizing papers, textbooks, online resources, and GitHub repositoriesPotential involvement in writing and publishing academic papers Qualifications2nd or 3rd-year undergraduate student in computer science or statisticsRequired experience: candidates must have completed at least three of the following courses: Statistics, Machine Learning, Deep Learning, AI, and Data Structures and Algorithms.GPA of 3.5 or higher.Ability to work independently and collaborativelyExcellent problem-solving and analytical skillsStrong written and verbal communication skills Relevant coursework projects or teaching experience as a teaching assistant (TA) in artificial intelligence, deep learning, machine learning, big data, and data analysis is beneficial. We value a strong passion for innovative technologies and a drive to learn and teach machine learning and AI.",
+      "location": "San Francisco Bay Area",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3888824427",
+      "title": "Content Development | Data Science & NLP",
+      "company": "Way2Class",
+      "description": "We are looking to hire a Course Developer for the Mentioned \"Computer Science Branches\". Particular candidates will be responsible for Developing, Reviewer and questioning the relevant details of the subject. Please have a look and update with your best. Subjects:Data Science Tools and TechnologiesNatural Language Processing (NLP) Course 1: Data Science Tools and TechnologiesQualification Requirements:Master\u2019s degree or higher in Data Science, Computer Science, or a related technical field.Certifications in data science tools and technologies, such as Python, R, SQL, or cloud platforms.Published work or contributions to open-source projects related to data science methodologies.Evidence of continuous learning and skill development in emerging data science technologies. Experience Requirements:At least 4 years of professional experience in data science, with a strong portfolio demonstrating expertise in data manipulation, analysis, and visualization.Experience in deploying data science solutions in cloud environments like AWS, Azure, or Google Cloud.Hands-on experience with version control systems (e.g., Git) and data science workflow management tools (e.g., DVC).Leadership experience in guiding teams through the data science project lifecycle. Skills and Expertise:Expertise in data preprocessing, exploration, and visualization tools (e.g., Pandas, NumPy, Matplotlib, Seaborn).Proficiency in programming languages used in data science, particularly Python and R.Familiarity with machine learning algorithms and their application using scikit-learn or similar libraries.Strong problem-solving skills and the ability to teach complex data science concepts effectively. Some Sample Projects to Look For:Building and optimizing data warehouses and lakes to support scalable analytics platforms using technologies like Hadoop, Spark, and Snowflake.Designing and implementing real-time data streaming and processing solutions to enable quick decision-making and insights.Development of interactive dashboards and reports for business intelligence using Tableau, Power BI, and custom visualization libraries.Leading cross-functional projects to integrate data science solutions into existing business processes, improving efficiency and outcomes. Course 2:Natural Language Processing (NLP) Qualification Requirements:PhD in Computer Science, Linguistics, or related fields with a focus on NLP.Extensive publication record in NLP or AI, particularly in top-tier journals or conferences.Certifications or completed courses in AI and NLP technologies are highly regarded.Engagement in NLP community through workshops, review panels, or as a conference speaker. Experience Requirements:Over 5 years of experience in NLP research or application development.Demonstrated ability to design and implement NLP solutions in multiple languages.Leadership in projects that apply NLP in innovative ways, showing tangible results.Experience with interdisciplinary projects combining NLP with other areas of AI. Skills and Expertise:Expertise in linguistics, machine learning, and computational algorithms for NLP.Proficiency in programming languages like Python, with in-depth knowledge of NLP libraries (NLTK, spaCy).Strong skills in sentiment analysis, chatbot development, and language generation models.Ability to mentor and train students in cutting-edge NLP methodologies. Some Sample Projects to Look For:Development of advanced chatbots and virtual assistants capable of understanding and responding to user queries in a context-sensitive manner.Implementation of sentiment analysis tools to monitor and analyze customer feedback across social media platforms.Research and development of machine translation systems that significantly reduce language barriers in global communications.Creation of text summarization algorithms to automatically generate concise summaries from large documents or datasets. Thanks For visiting, If you have any queries please write to career@way2class.com with the subject \"Course developer_Branch_ Your name\"",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Part-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 45.0
+    },
+    {
+      "job_id": "3901394474",
+      "title": "Machine Learning Engineer- 10+year exp*",
+      "company": "Q1 Technologies, Inc.",
+      "description": ". Experience in Machine Learning and Deep Learning, including regression, classification, neural network, and Natural Language Processing (NLP).2. Extensive experience on Natural Language Processing (NLP) libraries such as Spacy, NLTK, flair, and sklearn-crfsuite. 3. Strong background in DNN, CNN, RNN(LSTM), GAN, and libraries to deploy these models, such as Sklearn, Keras, Pandas, and TensorFlow. 4. Experience in Text Analytics, developing different Statistical Machine Learning, Data Mining solutions to various business problems, and generating data visualizations using R, Python. 5. Experience with common data science toolkits and libraries, such as Pandas, NumPy, SciPy, Scikit-learn. 6. Experience with data exploration to find actionable insights and make Product Recommendations through Funnel Analyses, A/B testing, Churn analysis, User Segmentation, Retention Rate, and business KPIs",
+      "location": "Sunnyvale, CA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 35.0
+    },
+    {
+      "job_id": "3904948737",
+      "title": "Senior Software Engineer, Machine Learning",
+      "company": "ICE",
+      "description": "Overview Job Purpose We are looking for a Senior Software Engineer in Machine Learning that will help us discover the information hidden in vast amounts of data and documents and help us make smarter decisions to deliver even better products. You will have strong Deep Learning and Python programming skills. Your primary focus will be in applying computer vision and NLP techniques on large number of documents, doing statistical analysis, and building high quality prediction systems integrated with our products. In that role, you will work closely with product management as well as application development teams. Responsibilities Participate in discovery processes collaborating with key stakeholders to identify business requirements and expected outcomes. Productionize Neural Network models for information extraction from mortgage documents using Computer Vision and NLP techniques.Design and build scalable ML pipelines to serve Machine Learning models at scale.Design experiments, test hypotheses, and build models. Conduct advanced data analysis and highly complex designs algorithm. Perform ad-hoc analysis and present results in a clear manner to a wide audience and key stake holders.Delivers high-quality software based on best practices for data collection, modeling, and software development.Collaborate with development teams on deploying models to production environment to support ML-driven product features. Define business-specific performance metrics to measure model effectiveness. Monitor and improve metrics over time for models used in production environment. Knowledge And Experience M.S. in mathematics, statistics or computer science or related field; Ph.D. degree preferred.Experience in building production-grade Neural Network models using CV or NLP techniques.6 or more years of relevant software engineering experience in building highly scalable ML pipelines using distributed data processing and distributed deep learning techniques.Hands-on programming experience in Java/Python, Spark programming, or other programming languages.Experience with Deep Learning frameworks, such as TensorFlow, PyTorch, MxNet.Proficiency in using query languages such as SQL, Hive, Pig and NoSQL databases.Great communication skills and ability to convey complex topics to a cross-functional audience. Schedule This role offers work from home flexibility of up to 2 days per week. Intercontinental Exchange, Inc. is an Equal Opportunity and Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, sexual orientation, gender identity, national origin or ancestry, age, disability or veteran status, or other protected status.",
+      "location": "Atlanta, GA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.ice.com/jobs/6958?mode=apply&iis=LinkedIn&iisn=Linkedin&lang=en-us",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 30.0
+    },
+    {
+      "job_id": "3901900287",
+      "title": "Technical Lead- ML and Data Science",
+      "company": "Aaura Softwares",
+      "description": "Qualifications:Master's or Ph.D. in Computer Science, Data Science, Statistics, or a related field.10+ years of experience in data science, machine learning, and AI.Strong expertise in NLP techniques, including text preprocessing, entity recognition, and sentiment analysis.Proficiency in machine learning tools and libraries such as SpaCy, TensorFlow, PyTorch, scikit-learn, and Azure ML.Experience building and deploying machine learning models in the Azure cloud environment.Familiarity with DevOps practices and tools for continuous integration and deployment (CI/CD).Excellent problem-solving skills and the ability to work in a fast-paced, collaborative environment.Strong communication and leadership skills, with a track record of successfully leading data science projects from conception to production.",
+      "location": "Dallas-Fort Worth Metroplex",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 25.0
+    },
+    {
+      "job_id": "3887713726",
+      "title": "Junior Data Scientist - Python /Modeling",
+      "company": "Expert Technical Solutions",
+      "description": "Junior Data Scientist \u2013 ( Python / Modeling and Operat ions ) Expert Technical Solutions has an immediate opening for a Junior Data Scientist with an industry leading client in Atlanta , GA. Our client is looking for a highly motivated and research oriented Data Scientist who will play a vital role in enhancing our cli ent \u2019 s contact center solutions through the development of advanced NLP algorithms and models. You will work in a collaborative team environment to explore and create solutions to industry problems using machine learning and state-of-the-art large language models. You bring to this team environment a strong foundation in machine learning and deep learning, as well as the curiosity and grit to see a project to delivery. T his is a permanent , HYBRID (2 days onsite, Monday and Tuesday every week) opportunity offering st rong pay, ex cellent growth opportunities, and outstanding benefits. Responsibilities Productizing AI predictive models Producing data and model accuracy analyses Developing & maintaining of scripts/tools to automate both new model production and updates to existing model packages Working with developers to help design automation and tool improvements for model building Maintaining documentation of processes and projects across all supported languages and environments Developing knowledge of the internal data sources Explore high-level, undefined ideas and business problems using structured and unstructured data Develop product offerings through careful consideration of business value and data analysis Build and fine-tune deep learning and machine learning models, with an emphasis on large language models Communicate research findings, technical concepts, and model recommendations effectively to technical and non-technical stakeholders R equired E xperience BS or MS in Computer Science or related field required Proficiency in Python. 2+ year s\u2019 experience with bash, python, or equivalent script development, deployment, and execution. 1 + year of Windows experience with remote access and dos shell. Minimum of 1 year of experience implementing machine learning and NLP models using real-life (\u201cindustry\u201d) data Experience working with deep learning models Knowledge of statistical techniques and concepts (regression, statistical tests and proper usage, etc.) Desire and ability to learn and continually expand knowledge in the data science, machine learning, and speech analytics. Desired S kills Proficiency with one more deep learning libraries (PyTorch, TensorFlow, JAX, etc.) Experience deploying NLP models in production environments, ensuring scalability and performance Experience with building and/or fine-tuning large language models Experience as part of a software organization",
+      "location": "Atlanta, GA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.experttechnical.com/job-seekers/?postid=P3PHUP6nU5M",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 75.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level Data Scientist with a Master's degree and one year of research experience in Clinical NLP. Strengths include data preprocessing, NLP experiments, and proficiency with Python, Pytorch, and SQL.",
+    "job_explanations": [
+      {
+        "job_id": "3885828275",
+        "title": "Data Scientist",
+        "company": "TEKsystems",
+        "match_reason": "Partial match. The role is entry-level and requires Python, Machine Learning, and NLP skills, which align with the candidate's profile. However, the position has a specific focus on AI Risk Management within the finance domain, which is a gap compared to the candidate's Clinical NLP background. The candidate's research experience may not fully align with the role's emphasis on development and documentation for risk assessment.",
+        "missing_skills": [
+          "AI Risk Management",
+          "Generative AI",
+          "LLM experience"
+        ]
+      },
+      {
+        "job_id": "3899537087",
+        "title": "NLP Engineer",
+        "company": "EA Team Inc",
+        "match_reason": "Strong match. This role is an excellent fit, requiring Clinical NLP experience and a deep understanding of the healthcare domain, which directly aligns with the candidate's prior job title and domain keywords. The candidate's skills in Java, Python, and SQL meet the core technical requirements for developing NLP applications for medical entity extraction.",
+        "missing_skills": [
+          "cTakes",
+          "UIMA",
+          "opennlp",
+          "Ontology tools"
+        ]
+      },
+      {
+        "job_id": "3901936390",
+        "title": "Data Scientist (Medical)",
+        "company": "PSRTEK",
+        "match_reason": "Poor match. While the medical domain and NLP skill requirements are a strong fit, this is a senior role disguised as a general Data Scientist position. Responsibilities like 'Lead the research' and 'Mentor junior team members' are inappropriate for a candidate with only one year of experience. This seniority mismatch is a primary disqualifier.",
+        "missing_skills": [
+          "Leadership and mentoring experience",
+          "Extensive publication record",
+          "High-Performance Liquid Chromatography (HPLC)"
+        ]
+      },
+      {
+        "job_id": "3904716772",
+        "title": "Data Scientist",
+        "company": "Sumeru Inc",
+        "match_reason": "Poor match. The role's primary responsibility is migrating ETL and ML pipelines using Databricks and PySpark. The candidate's CV shows no experience with these specific data engineering tools or with pipeline migration tasks. Their background is in NLP research, not large-scale data engineering.",
+        "missing_skills": [
+          "Databricks",
+          "PySpark",
+          "ETL pipeline migration"
+        ]
+      },
+      {
+        "job_id": "3885105100",
+        "title": "MLE/AI Engineer Summer Intern",
+        "company": "nan",
+        "match_reason": "Poor match. The candidate is significantly overqualified for this unpaid, undergraduate-level internship. With a Master's degree and one year of professional experience, this role would be a major step backward. The low reranker_score of 60 reflects this mismatch in seniority and career stage.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3888824427",
+        "title": "Content Development | Data Science & NLP",
+        "company": "Way2Class",
+        "match_reason": "Poor match. This role has a severe seniority mismatch, requiring 'at least 4 years' for the Data Science track and 'over 5 years' plus a PhD for the NLP track. The candidate's one year of experience is insufficient. The low reranker_score of 45 correctly identifies this as a poor fit.",
+        "missing_skills": [
+          "4+ years of professional experience",
+          "Cloud platforms (AWS, Azure, or Google Cloud)",
+          "spaCy",
+          "NLTK"
+        ]
+      },
+      {
+        "job_id": "3901394474",
+        "title": "Machine Learning Engineer- 10+year exp*",
+        "company": "Q1 Technologies, Inc.",
+        "match_reason": "Poor match. This is an extreme seniority mismatch, as the job title explicitly requires '10+year exp*'. The candidate has one year of experience. The low reranker_score of 35 reflects this fundamental disqualifier.",
+        "missing_skills": [
+          "9+ years of professional experience",
+          "TensorFlow",
+          "Keras",
+          "Spacy"
+        ]
+      },
+      {
+        "job_id": "3904948737",
+        "title": "Senior Software Engineer, Machine Learning",
+        "company": "ICE",
+        "match_reason": "Poor match. This is a senior role requiring '6 or more years of relevant software engineering experience'. The candidate's one year of experience does not meet the minimum qualifications. The low reranker_score of 30 is indicative of this significant seniority gap.",
+        "missing_skills": [
+          "5+ years of professional experience",
+          "Spark",
+          "Scalable ML pipeline design",
+          "Hive"
+        ]
+      },
+      {
+        "job_id": "3901900287",
+        "title": "Technical Lead- ML and Data Science",
+        "company": "Aaura Softwares",
+        "match_reason": "Poor match. This is a 'Technical Lead' position requiring '10+ years of experience'. As an entry-level candidate with one year of experience, the candidate is not qualified for this leadership role. The very low reranker_score of 25 accurately reflects this extreme seniority mismatch.",
+        "missing_skills": [
+          "9+ years of experience",
+          "Leadership experience",
+          "Azure ML",
+          "CI/CD"
+        ]
+      },
+      {
+        "job_id": "3887713726",
+        "title": "Junior Data Scientist - Python /Modeling",
+        "company": "Expert Technical Solutions",
+        "match_reason": "Strong match. This 'Junior Data Scientist' role is an excellent fit, requiring a 'Minimum of 1 year of experience implementing machine learning and NLP models', which aligns perfectly with the candidate's profile. The required skills in Python and deep learning, along with the desired skill in PyTorch, are all present in the candidate's CV.",
+        "missing_skills": [
+          "Experience with Large Language Models (LLMs)"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "AI Risk Management",
+      "Generative AI",
+      "LLM experience"
+    ],
+    "recommendation": "Focus on junior NLP roles that leverage the strong Clinical/Biomedical background. To improve competitiveness, prioritize gaining hands-on experience with Large Language Models (LLMs) and industry-specific frameworks like cTakes to bridge the gap from research to production."
+  }
+}

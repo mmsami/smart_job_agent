@@ -1,0 +1,269 @@
+{
+  "persona": "03_tech_intern",
+  "method": "FAISS_PARSED_NORERANK",
+  "model": "deepseek",
+  "run_timestamp": "2026-05-11T10:38:43.171459+00:00",
+  "results": [
+    {
+      "job_id": "3899537087",
+      "title": "NLP Engineer",
+      "company": "EA Team Inc",
+      "description": "Role: NLP EngineerLocation: Remote Job Description-As an NLP Engineer, You will extract, interpret, and synthesize an extremely diverse set of diagnostic lab data - with the goal to standardize this data, making it machine readable, interoperable, and more discoverable and accessible. Successful candidates will have a strong understanding of NLP techniques and hands on experience with JavaResponsibilitiesDesigning and developing NLP applications for medical entity extraction and text miningDesign Database to store NLP entities and relationshipUsing effective text representation techniques and classification algorithmsTraining and evaluating modelsDesign end to end java applicationsFind and implement the right algorithms and tools for NLP tasksPerform statistical analysis of results and refine modelsExtend ML libraries and frameworks to apply in NLP tasksRemain updated in the rapidly changing field of machine learning RequirementsClinical NLP experience (cTakes, UIMA)Strong Java development experienceDeep understanding of healthcare domainFamiliarity with Ontology tools and technologiesProven experience as an NLP Engineer or similar role/Track record in NLP/NLU and related technologiesUnderstanding of NLP techniques for text representation, semantic extraction techniques, data structures and modelingAbility to effectively design software architecture.Knowledge of Python, SQLAbility to write robust and testable code.Experience with machine learning frameworks (like Keras, BERT or opennlp) and libraries (like scikit-learn)An analytical mind with problem-solving abilities --- Regards, Gautam Sharmagautams@eateam.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6566559076309204
+    },
+    {
+      "job_id": "3904500419",
+      "title": "Clinical data scientist",
+      "company": "SSi People",
+      "description": "Title -Data Scientist I (Clinical) Location - Waltham, Massachusetts Contract - Months with possible extension ResponsibilitiesAnalyze raw data: assessing quality, cleansing, structuring for downstream processingDesign accurate and scalable prediction algorithmsCollaborate with engineering team to bring analytical prototypes to productionGenerate actionable insights for business improvements Qualifications Degree 1-3 Years of Experience (industry experience required for years) or Ph.D. Degree 0-2 Years of Experience (in school experience will be considered)with scientists to define/understand work and data pipelines in-labBenchling protocols and templates to capture necessary data and align across teams.Have coding experience SQL, Python, and LIMS Lab Information Systemexperience, industry setting (biotech)Experience (or Gene Data or comparable), Bench Experience in Molecular Biology",
+      "location": "Waltham, MA",
+      "experience_level": "Associate",
+      "work_type": "Contract",
+      "min_salary": 50.0,
+      "max_salary": 55.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.621121346950531
+    },
+    {
+      "job_id": "3901936390",
+      "title": "Data Scientist (Medical)",
+      "company": "PSRTEK",
+      "description": "Role: Natural Language Processing (NLP) Scientist Location \u2013 Remote The required skills for this position are:Natural Language Processing (NLP)Python (Programming Language)Statistical ModelingHigh-Performance Liquid Chromatography (HPLC)Java Job Description:We are seeking a highly skilled NLP Scientist to develop our innovative and cutting-edge NLP/AI solutions to empower life science. This involves working directly with our clients, as well as cross-functional Biomedical Science, Engineering, and Business leaders, to identify, prioritize, and develop NLP/AI and Advanced analytics products from inception to delivery.Key Responsibilities:Lead the research, strategy, design, and implementation of NLP/AI products from prototype to deployment.Collaborate closely with internal teams and external clients to understand requirements and design innovative NLP/AI solutions.Develop and validate cutting-edge NLP algorithms, including large language models tailored for healthcare and biopharma use cases.Translate complex technical insights into accessible language for non-technical stakeholders.Mentor junior team members, fostering a culture of continuous learning and growth.Publish findings in peer-reviewed journals and conferences.Engage with the broader scientific community by attending conferences, workshops, and collaborating on research projects. Qualifications:Ph.D. or master's degree in biomedical NLP, Computer Science, Biomedical Informatics, Computational Linguistics, Mathematics, or other related fieldsPublication records in leading computer science or biomedical informatics journals and conferences are highly desirable Regards,Guru Prasath M US IT RecruiterPSRTEK Inc.Princeton, NJ 08540guru@psrtek.comNo: 609-917-9967 Ext:114",
+      "location": "Fairfax County, VA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6074277758598328
+    },
+    {
+      "job_id": "3901353972",
+      "title": "NLP Data Scientist - Python | Machine Learning | AI - Hybrid - TS/SCI - Tampa or DC",
+      "company": "Deloitte",
+      "description": "In this age of disruption, organizations need to navigate the future with confidence by tapping into the power of data analytics, robotics, and cognitive technologies such as Artificial Intelligence (AI). Our Strategy & Analytics portfolio helps clients leverage rigorous analytical capabilities and a pragmatic mindset to solve the most complex of problems. By joining our team, you will play a key role in helping to our clients uncover hidden relationships from vast troves of data and transforming the Government and Public Services marketplace. The team: Deloitte's Government and Public Services (GPS) practice - our people, ideas, technology and outcomes-is designed for impact. Serving federal, state, & local government clients as well as public higher education institutions, our team of over 15,000+ professionals brings fresh perspective to help clients anticipate disruption, reimagine the possible, and fulfill their mission promise. The GPS Analytics and Cognitive (A&C) offering is responsible for developing advanced analytics products and applying data visualization and statistical programming tools to enterprise data in order to advance and enable the key mission outcomes for our clients. Our team supports all phases of analytic work product development, from the identification of key business questions through data collection and ETL, and from performing analyses and using a wide range of statistical, machine learning, and applied mathematical techniques to delivery insights to decision-makers. Our practitioners give special attention to the interplay between data and the business processes that produce it and the decision-makers that consume insights. Work you'll do: The Data Scientist will join a team responsible for developing advanced analytics products; applying data visualization and statistical programming tools to enterprise data to advance and enable the key mission outcomes. In this role, she will support all phases of analytic work product development, from the identification of key business questions, through data collection and ETL, from performing analyses and using a wide range of statistical, machine learning, and applied mathematical techniques to delivery insights to decision-makers. This role requires special attention to the interplay between data and the business processes that produce it and the decision-makers that consume insights. Required Qualifications: Bachelor's degree required Must be legally authorized to work in the United States without the need for employer sponsorship, now or at any time in the future Active TS/SCI Clearance Required2+ years of relevant experience within data science or analysis2+ years of relevant experience with programming languages such as Python, R, and VBA; and query languages such as SQL2+ years of relevant experience with data visualization tools, such as Tableau, Qlik, PowerBI, d3.js and other web application technologies, or equivalent2+ years of relevant experience with SQL and NoSQL database technologies such as SQL Server, Oracle SQL2+ years of relevant experience with data extraction, transformation, and loading to support advanced analytics2+ years of relevant experience with a wide range of analytics techniques, such as statistics, machine learning, natural language processing, optimization, simulation, or closely related techniquesAbility to support a hybrid to fulltime schedule onsite in the Tampa, FL area or the Rosslyn, VA area. Preferred Qualifications: Strong strategic communication skills to include presenting quantitative concepts in easy to understand formats and actively listening to identify business problems and their causesA curious, questioning attitude that leads them to look past superficial appearances to find deeper problems, insights, and solutionsThrives in fast-paced work environment with multiple stakeholdersHigh-performing team player who believes that cross-functional teams are greater than the sum of its partsExperience leveraging data analysis to construct strategic narrativesFamiliarity with cloud computing technology, especially Microsoft AzureFamiliarity with Agile project management principlesConfidence to drive assignments to completionEagerness to learn and develop Information for applicants with a need for accommodation: https://www2.deloitte.com/us/en/pages/careers/articles/join-deloitte-assistance-for-disabled-applicants.html",
+      "location": "Arlington, Virginia, United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://ars2.equest.com/?response_id=6433474e8dafd9a6d492ed4aac0790b8",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.6045912504196167
+    },
+    {
+      "job_id": "3889417402",
+      "title": "Clinical Research Associate - Home-Based (Southeast)",
+      "company": "Talentify.io",
+      "description": "Employer Industry: Healthcare Services Why Consider This Job Opportunity Competitive salary up to $80,000 Opportunity for career advancement and growth within the organization Comprehensive health insurance offerings for you and your family Global Employee Assistance Programme for 24-hour support Flexible country-specific optional benefits for work-life balance What To Expect (Job Responsibilities) Contribute to the identification of new sites for clinical trials Facilitate the preparation and collection of site and country level documents Execute site initiation and training, generate initiation visit report Implement complete site management including monitoring visits and drug supply management Provide feedback on site performance for future trial site feasibility/selection What Is Required (Qualifications) Bachelor\u2019s Degree or higher in life sciences or equivalent Minimum 2 \u2013 4 years\u2019 clinical site monitoring experience Comprehensive knowledge and understanding of ICH-GCP Bilingual (verbal and written) in English and French languages required Able and willing to travel up to 60% regionally How To Stand Out (Preferred Qualifications) Working knowledge of Electronic Data Capture Experience in phase I-IV trials Experience of Centralized/Risk Based/Targeted monitoring Highly developed time management and organizational skills Flexible and willing to adapt to changing priorities/timelines #HealthcareServices #ClinicalResearch #CareerOpportunity #CompetitivePay #GlobalOrganization At Talentify, we prioritize candidate privacy and champion equal-opportunity employment. Central to our mission is our partnership with companies that share this commitment. We aim to foster a fair, transparent, and secure hiring environment for all. If you encounter any employer not adhering to these principles, please bring it to our attention immediately. Talentify is not the EOR (Employer of Record) for this position. Our role in this specific opportunity is to connect outstanding candidates with a top-tier employer. Talentify helps candidates around the world to discover and stay focused on the jobs they want until they can complete a full application in the hiring company career page/ATS.",
+      "location": "United States",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://tfy.io/jo/xx7dxj5?utm_campaign=booc-linkedin&tdd=dDEsaDEsamxlZGdoLHI0LGVwcm82NjE0ZjU4NjZkMzFhMTE3MjI4NTgy&utm_medium=Xml&personalized=true&utm_source=linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.5998036861419678
+    },
+    {
+      "job_id": "3891078345",
+      "title": "Medical Assistant - Corpus Christi Family Medicine - Corpus Christi, TX",
+      "company": "Alpine Physician Partners",
+      "description": "We're committed to bringing passion and customer focus to the business. Job Description: We are seeking a Medical Assistant to join the ASAS Health team! This position performs various duties and responsibilities in a manner that emphasizes quality of care and customer service. The incumbent must work collaboratively with all Clinical services staff to support direct patient services, exhibiting flexibility and a \u201ccan-do\u201d attitude. Patient services are the key priority in this position, requiring the MA to serve as a point of contact with other internal and external departments, all to foster an environment that promotes patient comfort and trust. The position must exemplify the core values and mission of the organization, consistently exercising utmost discretion, diplomacy and tact in patient/staff interactions. Responsibilities: Prepares for patient visits by reviewing and updating patient records prior to face-to-face encounters and/or Virtual Visits, otherwise known as Telehealth. This includes checking for updates of recent test results, lab results, and correspondence. Maintains exam rooms according to protocols: Cleans rooms between patient exams to ensure patients' comfort and compliance with infection control standards; ensures all necessary supplies are stocked. Appropriately prepares patients for a visit and always alerts the physician / mid-level provider when the patient is ready to be seen. Provides initial medical screening: Greets patients and directs them to the appropriate exam room. Takes weight, height, temperature, blood pressure, and basic medical history; accurately documents in medical chart according to generally accepted medical standards. Assists physician or mid-level providers upon request during the patient's examination according to generally accepted medical standards. Utilizes time constructively and efficiently by assisting in such duties as restocking rooms/shelves/trays, checking supplies, and ensuring that all areas and exam rooms are clean and orderly. Qualifications: Excellent communication skills at the level necessary for taking patients' medical histories, understanding provider and supervisor\u2019s instructions, and accurately documenting patients' medical information. Ability to effectively communicate with patient population and staff while demonstrating a high degree of diplomacy and tact. Beginner to intermediate computing and phone skills. Demonstrates flexibility regarding job duties and assignments. Willingness to cross-train within other departments within your scope of duties. Ability to multi-task and work effectively in a high-stress and fast-moving environment. Culturally sensitive and demonstrated ability and effectiveness working with ethnically diverse populations. Working knowledge of \u201cUniversal Precautions\u201d always demonstrates professionalism. Thoroughly understand the importance of confidentiality and non-disclosure according to the general standards set forth by HIPAA. Bilingual English/Spanish and other languages strongly preferred. Valid Texas Driver\u2019s License, insurance, and ability to travel as required to perform duties. Education: High school Graduate (or GED) required. Current, valid Certification of Medical Assistant. Current, valid CPR certification. We look forward to a long-term and rewarding employment partnership with you. To ensure that we find the right position for you and align our goals properly, we would like you to take the People Best assessment as soon as possible. This will help us get to know you better. English - PeopleBest Profile - Medical Assistant ASAS Health-E Spanish - PeopleBest Profile - Medical Assistant ASAS Health-S If you like wild growth and working with happy, enthusiastic over-achievers, you'll enjoy your career with us!",
+      "location": "Greater Corpus Christi Area",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://alpinephysicians.wd1.myworkdayjobs.com/en-US/External/job/USA-Texas-Corpus-Christi/Medical-Assistant---Corpus-Christi-Family-Medicine---Corpus-Christi--TX_R0000717",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.5930508375167847
+    },
+    {
+      "job_id": "3900089075",
+      "title": "Medical Assistant I - Bilingual (English\\/Spanish)",
+      "company": "GI Alliance",
+      "description": "Description GI Alliance is seeking an experienced Medical Assistant I - Bilingual (English/Spanish) Duties of this position include, but are not limited to, the following: Position purpose This position may be involved in both the clinical and administrative areas including assisting physicians with patient care and handling clerical, environmental, and organizational tasks. Provides information to patients so they may fully utilize and benefit from the clinical services. Responsibilities/Duties/Functions/Tasks Fulfills patient care responsibilities as assigned that may include checking schedules and organizing patient flow; accompanying patients to exam/procedure room; assisting patients as needed with walking transfers, dressing, collecting specimens, preparing for exam, etc.; collecting patient history; checking vital signs; performing screenings per provider guidelines; assisting providers as needed; charting; phone triage; medication administration; relaying instructions to patients/families; answering calls, and providing pertinent information; prescription verifications with physicians orders.Fulfills clerical responsibilities as assigned that may include sending/receiving patient medical records; obtaining lab/X-ray reports, hospital notes, referral information, etc.; completing forms/requisitions as needed; scheduling appointments; patient check-in and check-out; verifying insurance coverage and patient demographics; managing and updating charts to ensure that information is complete and filed appropriately.Fulfills organizational responsibilities as assigned including respecting/promoting patient rights; responding appropriately to emergency codes; sharing problems relating to patients and/or staff with immediate supervisor.Float as neededOther duties as assigned. Qualifications Qualifications Education: High school diploma or general equivalency diploma (GED), medical assistant diploma from an accredited vocational institution, or a college course in medical assisting. Experience: Minimum one year of recent experience working in a medical facility as a medical assistant and/or documented evidence of externship completed in a medical office. Experience working in a Gastroenterology practice is preferred. Requirements For Level I Status Entry level (1-4 years experience) and/or meet the basic requirements of the job with the need for additional supervision.Excess of 4 years experience if meeting only the basic requirements of the job with need for additional supervision. Performance Requirements Knowledge of health care field and EMR systems.Skill in performing medical assistance tasks appropriately.Skill in written and verbal communications. Skill in understanding patient education needs by effectively sharing information with patients and families.Ability to learn and retain information regarding patient care practices and procedures.Ability to project a pleasant and professional image.Ability to plan, prioritize, and complete delegated tasks.Ability to multi-task.Ability to demonstrate compassion and caring in dealing with others. GI Alliance is an Equal Opportunity Employer. We are committed to creating an inclusive, welcoming, and equitable work environment. Our company values and celebrates the diversity of our physicians, staff and patients. We firmly believe our service is greatly enriched by our diversity of thought, experience, perspective, culture, and background. Please Note: All job offers are contingent on the successful completion of pre-employment criminal history check. NOTE: ALL APPLICATIONS MUST BE COMPLETED IN FULL FOR CONSIDERATION. No phone calls or agencies, please. EEO/AA-M/F/disabled/protected veteran",
+      "location": "San Antonio, TX",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.paycomdfw.net/v4/ats/web.php/jobs/ViewJobDetails?job=66289&clientkey=066F356648EA1E54D1AE37AE07D4E386",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.592125654220581
+    },
+    {
+      "job_id": "3904991267",
+      "title": "Data Analyst - Programmer (Department of Translational Medicine and Human Genetics)",
+      "company": "University of Pennsylvania",
+      "description": "University Overview The University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023. Penn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play. The University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more. Posted Job Title Data Analyst - Programmer (Department of Translational Medicine and Human Genetics) Job Profile Title Data Analyst C Job Description Summary The Penn Medicine BioBank is seeking a talented and motivated Data Analyst to join our growing Clinical Informatics team. In this role, you will play a critical role in supporting research projects by harnessing the power of large-scale data. You will work closely with researchers, clinicians, and IT professionals to translate clinical questions into actionable data insights. Learn more about PMBB here: https://pmbb.med.upenn.edu/ Job Description The Penn Medicine BioBank is seeking a talented and motivated Data Analyst to join our growing Clinical Informatics team. In this role, you will play a critical role in supporting research projects by harnessing the power of large-scale data. You will work closely with researchers, clinicians, and IT professionals to translate clinical questions into actionable data insights. Learn more about PMBB here: https://pmbb.med.upenn.edu/ The primary role of the Data Analyst at Penn Medicine BioBank is to manage and analyze data from electronic health records and to support and enhance clinical informatics and bioinformatics research. This role encompasses providing informatics support, developing pipelines for data processing, ensuring data quality, and creating datasets for collaborative research efforts. Duties Provide informatics support on research projects, including:Design and implementation of large-scale data studiesAnalysis of complex datasets from various sources (Electronic Health Records, surveys)Develop custom tools using programming languages (Python, R, Java) for:Data cleaning and conversionAdvanced data analysisAssist in developing complex EHR-based phenotype definitions using clinical ontologies (ICD-9/10, CPT, LOINC, OMOP, RxNorm)Prepare datasets for analysis by other investigatorsImplement data quality assurance procedures to ensure data validity and reliability. ***Contingent upon funding*** Qualifications Bachelor of Science and 2 to 3 years of experience or equivalent combination of education and experience is required.Experience in Computer Science, Data Science, Informatics, Bioinformatics, Biostatistics, or equivalent.Experience in Python and R programming language requiredExperience with SQL and databases requiredExperience with machine learning and data science a plusAbility to work independently and apply critical thinking and sound judgmentExcellent organizational and time management skillsAbility to work with a multi-disciplinary team and communicate effectively Job Location - City, State Philadelphia, Pennsylvania Department / School Perelman School of Medicine Pay Range $51,824.00 - $73,581.00 Annual Rate Salary offers are made based on the candidate\u2019s qualifications, experience, skills, and education as they directly relate to the requirements of the position, as well as internal and market factors and grade profile. Affirmative Action Statement Penn adheres to a policy that prohibits discrimination on the basis of race, color, sex, sexual orientation, gender identity, religion, creed, national or ethnic origin, citizenship status, age, disability, veteran status, or any other legally protected class. Special Requirements Background check required after a conditional job offer is made. Consideration of the background check will be tailored to the requirements of the job. University Benefits Health, Life, and Flexible Spending Accounts: Penn offers comprehensive medical, prescription, behavioral health, dental, vision, and life insurance benefits to protect you and your family\u2019s health and welfare. You can also use flexible spending accounts to pay for eligible health care and dependent care expenses with pre-tax dollars.Tuition: Take advantage of Penn's exceptional tuition benefits. You, your spouse, and your dependent children can get tuition assistance here at Penn. Your dependent children are also eligible for tuition assistance at other institutions.Retirement: Penn offers generous retirement plans to help you save for your future. Penn\u2019s Basic, Matching, and Supplemental retirement plans allow you to save for retirement on a pre-tax or Roth basis. Choose from a wide variety of investment options through TIAA and Vanguard.Time Away from Work: Penn provides you with a substantial amount of time away from work during the course of the year. This allows you to relax, take vacations, attend to personal affairs, recover from illness or injury, spend time with family\u2014whatever your personal needs may be.Long-Term Care Insurance: In partnership with Genworth Financial, Penn offers faculty and staff (and your eligible family members) long-term care insurance to help you cover some of the costs of long-term care services received at home, in the community or in a nursing facility. If you apply when you\u2019re newly hired, you won\u2019t have to provide proof of good health or be subject to underwriting requirements. Eligible family members must always provide proof of good health and are subject to underwriting.Wellness and Work-life Resources: Penn is committed to supporting our faculty and staff as they balance the competing demands of work and personal life. That\u2019s why we offer a wide variety of programs and resources to help you care for your health, your family, and your work-life balance.Professional and Personal Development: Penn provides an array of resources to help you advance yourself personally and professionally.University Resources: As a member of the Penn community, you have access to a wide range of University resources as well as cultural and recreational activities. Take advantage of the University\u2019s libraries and athletic facilities, or visit our arboretum and art galleries. There\u2019s always something going on at Penn, whether it\u2019s a new exhibit at the Penn Museum, the latest music or theater presentation at the Annenberg Center, or the Penn Relays at Franklin Field to name just a few examples. As a member of the Penn community, you\u2019re right in the middle of the excitement\u2014and you and your family can enjoy many of these activities for free.Discounts and Special Services: From arts and entertainment to transportation and mortgages, you'll find great deals for University faculty and staff. Not only do Penn arts and cultural centers and museums offer free and discounted admission and memberships to faculty and staff. You can also enjoy substantial savings on other goods and services such as new cars from Ford and General Motors, cellular phone service plans, movie tickets, and admission to theme parks.Flexible Work Hours: Flexible work options offer creative approaches for completing work while promoting balance between work and personal commitments. These approaches involve use of non-traditional work hours, locations, and/or job structures.Penn Home Ownership Services: Penn offers a forgivable loan for eligible employees interested in buying a home or currently residing in West Philadelphia, which can be used for closing costs or home improvements.Adoption Assistance: Penn will reimburse eligible employees on qualified expenses in connection with the legal adoption of an eligible child, such as travel or court fees, for up to two adoptions in your household. To learn more, please visit: https://www.hr.upenn.edu/PennHR/benefits-pay",
+      "location": "Philadelphia, PA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 51824.0,
+      "max_salary": 73581.0,
+      "url": "https://wd1.myworkdaysite.com/recruiting/upenn/careers-at-penn/job/HUP/Data-Analyst---Programmer--Department-of-Translational-Medicine-and-Human-Genetics-_JR00086985-1?source=LinkedIn_JobPosting",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.5903468132019043
+    },
+    {
+      "job_id": "3904426905",
+      "title": "Data Scientist",
+      "company": "Scripps Health",
+      "description": "This is a full-time, hybrid position located in San Diego and offers Scripps Health\u2019s award-winning benefit package. Join the Scripps Health team and work alongside passionate caregivers and provide patient-centered healthcare. Receive endless appreciation while you build a rewarding career with one of the most respected healthcare organizations nationwide. Why join Scripps Health? Award-winning Workplace #5 in Fortune Best Workplaces in Health Care 2023#78 in 2023 PEOPLE Companies that Care#95 in Fortune 100 Best Companies to Work for 2023Recognized by Newsweek as one of America\u2019s Greatest Workplaces for Diversity in 2024Nearly a quarter of our employees have been with Scripps Health for over 10 years. We are looking for a sharp, strong communicator with a high degree of emotional intelligence who can provide strategic and technical input alongside excellent customer service. The Data Scientist will provide advanced, integrated analytics in support of organizational objectives. Source, manage, and analyze large amounts of unstructured data; synthesize and communicate results to facilitate data-driven decision making. Partner with internal and external constituents to understand key requirements, plan and execute projects, and produce actionable data to support strategic initiatives and drive continuous performance improvement. Design data modeling processes, create algorithms and predictive models to extract key data, and analyze the data and share insights with clinical, operational, and business stakeholders. The right candidate will have a passion for discovering solutions hidden in large data sets and working with customers to improve outcomes and performance. Required Education/Experience/Specialized Skills Bachelor's degree.Experience with different healthcare data sources (medical claims, authorizations, pharmacy, provider, membership).Experience with statistical modeling and interpretations of complex data.Experience in analyzing any of the following: Medical expenses & utilization trends, RAF Scores, Comorbidities & disease burden, Healthcare quality measures.Excellent critical and analytical thinking, customer service skills, and strong written and verbal communication skills.Experience in R, Python, or SAS programming.Intermediate knowledge of SQL, ETL, data modeling, and reporting technologies. Intermediate knowledge of Power BI or Tableau.Must have knowledge and skills necessary to explain complex concepts to team members and leadership.Ability to work both independently and collaboratively as part of a team. Preferred Education/Experience/Specialized Skills/Certification Master's Degree in related field (Data Science, Quantitative, Clinical, or Engineering).Experience in working with financial datasets (e.g., accounting, health plan claims, P&L).Prior experience with Epic data structures and reporting environments.Experience in predictive modeling for clinical intelligence.Experience in market intelligence and financial projections.Background or interest in AI, machine learning intelligence. Scripps Health is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, religion, color, national origin, sex (including pregnancy, sexual orientation, or gender identity/expression), age, marital status, status as a protected veteran, among other things, or status as a qualified individual with disability. Position Pay Range: $46.88-$70.33/hour",
+      "location": "San Diego, CA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 46.88,
+      "max_salary": 70.33,
+      "url": "https://careers.scripps.org/job/20271336?src=JB-10104",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.5882745385169983
+    },
+    {
+      "job_id": "3902740383",
+      "title": "Patient Service Representative",
+      "company": "The University of Kansas Health System",
+      "description": "Position Title Patient Service Representative Days - Full Time Indian Creek Main Position Summary / Career Interest The Patient Service Representative Scheduling (PSR Scheduler) is an important member of the physician\u2019s care team and critical for creating a pleasant and seamless patient experience within an ambulatory clinic. This work role is primarily responsible for scheduling patient appointments. This work may be done away from the front desk of a clinical area and could include work in a call center setting taking large volumes of patient phone calls. The PSR Scheduler may complete MyChart and EMR (Electronic Medical Record) appointment requests, processing external medical records, assist front desk operations as needed, and helping the physician care team prepare for their daily patient appointments. This work role will also be trained to assist in front office functions of an ambulatory clinic to provide support as needed. Responsibilities Responsible for registration of patient prior to visit and/or upon arrival, including entering demographics, insurance verification, scanning and document preparation, updating documentation and processing of referrals/orders/appointment requests.Preauthorization of clinic specific visits as needed.Collecting copays and self-pay balances.Point of service paperwork, acquire signatures and scan to chart.Provide activation and support for the MyChart EMR System.Explains facility policies and ensures patient and/or advocate understands and signs the consent and insurance forms at the appropriate time. Clear and accurate documentation should be entered on the appropriate forms and keyed into the computer system.Complies with Medicare/Medicaid and other insurance rules and regulations. Completes MSPQ as required for admission. Responsible for direct rooming protocol of patients in the clinics. Responsible for check in/out and phone reception as needed.Facilitates physician to physician consultation services to community referring clinicians and non-health system clinicians.Scheduling of activities, including patient appointments, Telehealth visits, surgeries, procedures and/or ancillary services using extensive knowledge of appointment types, locations, providers, and specialties.Will float to centralized scheduling environment or other practices with critical staffing levels as needed and delegated by management.Will provide phone, text and web-based support for Marketing SEM campaigns, event registration, Partners in Care members as directed by management. Responsible for daily maintenance of workspace and following environmental health cleaning guidelines. Responsible for following Personal Protective Equipment (PPE) guidelines.Responsible for check in/out and phone reception as needed. Employee will receive a 30-60-90-day quality assessment. PSR will be expected to complete any necessary retraining to meet assessment scores and role guidelines. Responsible for other duties or projects as assigned by management. Responsible for other duties or projects as assigned by management. Job Requirements Required: High School Diploma or GEDA minimum of one-year direct customer service in a health care or contact center environmentAbility to read, write, speak, and understand English.High level of customer services skills focusing on problem resolutionBasic computer skills including Microsoft Excel, Word, Outlook and TeamsAbility to maintain patient confidentiality Preferred College coursework completed towards an Associate\u2019s or Bachelor\u2019s DegreeExperience in a call center work environmentWorking knowledge of medical terminologyWorking knowledge of EPIC or other patient/customer databaseClerical, registration and/or customer service experience within a health care settingIf bilingual-documented proof of competencies via language proficiency assessments Time Type Full time Job Requisition ID R-33923 We are an equal employment opportunity employer without regard to a person\u2019s race, color, religion, sex (including pregnancy, gender identity and sexual orientation), national origin, ancestry, age (40 or older), disability, veteran status or genetic information. Need help finding the right job? We can recommend jobs specifically for you! Create a custom Job Alert by selecting criteria that suit your career interests.",
+      "location": "Overland Park, KS",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://kansashealthsystem.wd1.myworkdayjobs.com/careers/job/Overland-Park-KS/Patient-Service-Representative_R-33923-2",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 0.5873469114303589
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level data scientist with a Master's in Data Science and 1 year of experience as a Research Assistant in Clinical NLP. Skilled in data preparation, NLP, Python, PyTorch, Java, R, and SQL, with domain knowledge in biomedical datasets and clinical NLP.",
+    "job_explanations": [
+      {
+        "job_id": "3899537087",
+        "title": "NLP Engineer",
+        "company": "EA Team Inc",
+        "match_reason": "Partial match. Candidate has relevant clinical NLP experience (Research Assistant in Clinical NLP) and skills in Python, Java, and SQL. However, the job requires specific tools like cTakes, UIMA, and ontology tools, which are absent from the CV. The reranker score of 0.66 reflects this partial alignment.",
+        "missing_skills": [
+          "cTakes",
+          "UIMA",
+          "Ontology tools",
+          "Keras",
+          "OpenNLP"
+        ]
+      },
+      {
+        "job_id": "3904500419",
+        "title": "Clinical data scientist",
+        "company": "SSi People",
+        "match_reason": "Poor match. Domain mismatch: the role requires molecular biology lab experience (LIMS, Benchling) and a background in biotech, while the candidate's experience is in clinical NLP and data science. The candidate's 1 year of experience meets the 1-3 year requirement, but the domain gap is critical.",
+        "missing_skills": [
+          "LIMS",
+          "Benchling",
+          "Molecular Biology"
+        ]
+      },
+      {
+        "job_id": "3901936390",
+        "title": "Data Scientist (Medical)",
+        "company": "PSRTEK",
+        "match_reason": "Poor match. Seniority mismatch: the role is a lead/senior NLP Scientist requiring research leadership and mentoring, while the candidate is entry-level with 1 year of experience. Additionally, the job requires HPLC (a lab technique) which is unrelated to the candidate's clinical NLP domain.",
+        "missing_skills": [
+          "HPLC"
+        ]
+      },
+      {
+        "job_id": "3901353972",
+        "title": "NLP Data Scientist - Python | Machine Learning | AI - Hybrid - TS/SCI - Tampa or DC",
+        "company": "Deloitte",
+        "match_reason": "Poor match. The candidate lacks the required 2+ years of experience (has 1 year) and does not have an active TS/SCI clearance. The role also requires US work authorization without sponsorship, which is unlikely given the candidate is based in Heidelberg. The reranker score of 0.60 indicates low fit.",
+        "missing_skills": [
+          "Active TS/SCI clearance",
+          "US work authorization"
+        ]
+      },
+      {
+        "job_id": "3889417402",
+        "title": "Clinical Research Associate - Home-Based (Southeast)",
+        "company": "Talentify.io",
+        "match_reason": "Poor match. Domain mismatch: the role requires a life sciences degree, 2-4 years of clinical site monitoring experience, ICH-GCP knowledge, and bilingual English/French. The candidate has a Master's in Data Science, no clinical monitoring experience, and no French language skills.",
+        "missing_skills": [
+          "Clinical site monitoring",
+          "ICH-GCP",
+          "French language"
+        ]
+      },
+      {
+        "job_id": "3891078345",
+        "title": "Medical Assistant - Corpus Christi Family Medicine - Corpus Christi, TX",
+        "company": "Alpine Physician Partners",
+        "match_reason": "Poor match. Domain mismatch: the role requires a Medical Assistant certification, CPR certification, and clinical duties. The candidate has no medical assistant background or certifications.",
+        "missing_skills": [
+          "Medical Assistant certification",
+          "CPR certification"
+        ]
+      },
+      {
+        "job_id": "3900089075",
+        "title": "Medical Assistant I - Bilingual (English\\/Spanish)",
+        "company": "GI Alliance",
+        "match_reason": "Poor match. Domain mismatch: the role requires a Medical Assistant diploma, 1 year of medical facility experience, and bilingual English/Spanish. The candidate has no medical assistant background and does not speak Spanish.",
+        "missing_skills": [
+          "Medical Assistant diploma",
+          "Spanish language"
+        ]
+      },
+      {
+        "job_id": "3904991267",
+        "title": "Data Analyst - Programmer (Department of Translational Medicine and Human Genetics)",
+        "company": "University of Pennsylvania",
+        "match_reason": "Partial match. The candidate has relevant skills (Python, R, SQL, machine learning, clinical data) and a Master's degree, but the job requires 2-3 years of experience while the candidate has only 1 year. The domain (clinical informatics) aligns well with the candidate's clinical NLP background.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3904426905",
+        "title": "Data Scientist",
+        "company": "Scripps Health",
+        "match_reason": "Partial match. The candidate has a Master's in Data Science, Python, R, SQL, and healthcare data experience (clinical NLP). However, the job requires intermediate knowledge of Power BI or Tableau, which the candidate lacks. The reranker score of 0.59 reflects this gap.",
+        "missing_skills": [
+          "Power BI",
+          "Tableau"
+        ]
+      },
+      {
+        "job_id": "3902740383",
+        "title": "Patient Service Representative",
+        "company": "The University of Kansas Health System",
+        "match_reason": "Poor match. Domain mismatch: the role requires 1 year of direct customer service in a healthcare setting, which the candidate does not have. The candidate's background is in data science and clinical NLP, not patient-facing roles.",
+        "missing_skills": [
+          "Healthcare customer service experience"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "cTakes",
+      "UIMA",
+      "Ontology tools"
+    ],
+    "recommendation": "Focus on gaining hands-on experience with clinical NLP tools like cTakes and UIMA, and learn data visualization tools such as Power BI or Tableau to strengthen your profile for healthcare data science roles."
+  }
+}

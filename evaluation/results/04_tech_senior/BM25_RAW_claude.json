@@ -1,0 +1,264 @@
+{
+  "persona": "04_tech_senior",
+  "method": "BM25_RAW",
+  "model": "claude",
+  "run_timestamp": "2026-05-11T10:29:46.681042+00:00",
+  "results": [
+    {
+      "job_id": "3904389544",
+      "title": "Data Scientist",
+      "company": "Unified Women's Healthcare",
+      "description": "Overview Lucina Analytics, a partner of Unified Women's Healthcare, is a data-driven, enterprise SaaS company that delivers the leading women\u2019s maternity analytics platform to innovative health plans, providers, and public entities. The Data Scientist will join the data analytics team and collaborate in building models or developing methodologies to support Lucina\u2019s maternal health solutions. The ideal candidate will have experience in using, manipulating, and extracting insights from healthcare data with a particular focus on using machine learning with claims data. The applicant will be driven by curiosity, collaborating with a cross-functional team of Product Managers, Software Engineers, and Data Analysts. Responsibilities Apply data science, machine learning, and healthcare domain expertise to advance and oversee Lucina\u2019s pregnancy identification and risk-scoring algorithms.Analyze healthcare data to study patterns of care and patient conditions which correlate to specific outcomes.Collaborate on clinical committee research and development work.Complete ad hoc analyses and reports from internal or external customers prioritized by management throughout the year. Qualifications Degree or practical experience in Applied Math, Statistics, Engineering, Information Management with 3 or more years of data analytics experience, Masters degree a plus.Experience manipulating and analyzing healthcare data (payer\u2019s claims experience a plus)Strong communication skills with ability to describe complex ideas to key stakeholdersA proven track record applying Data Science to healthcare data. Technical skills include, but are not limited to, regression models, classification techniques, decision trees, clustering, pattern recognition, supervised and unsupervised learning, the bias-variance tradeoff, and neural networksExperience with clinical design patterns and causal modeling techniques (e.g., GLM methods, propensity score matching, etc.) a plusProficiency in Python and core data science libraries such as Pandas, SciKit-Learn, NumPy, Matplotlib, SciPy, and Keras.Advanced SQL and experience working with relational databases and data warehousesExperience with two or more of the following: SQL Server, SQL Data Warehouse Appliance, Netezza, Hadoop, Spark, Snowflake, Tableau, Power BI, or similar data technologies.AWS, Azure, GCP or similar cloud experience a plusFamiliarity with CI/CD and Git (commits, pushes, branching, and pull requests) a plusExperience with Databricks or PySpark a plus",
+      "location": "Florida, United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.unifiedwomenshealthcare.com/jobs/6999?lang=en-us&iis=Job%20Board&iisn=LinkedIn",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3887100123",
+      "title": "Product Manager",
+      "company": "Panacea Direct Inc",
+      "description": "Job Title: Product Manager (Healthcare)Duration : ContractLocation : Remote Responsibilities:Lead and manage a team of data scientists and analysts in the development and execution of data science projectsCollaborate with cross-functional teams to identify business needs and develop data-driven solutions at scaleUtilize predictive modelling, natural language processing (NLP), and other advanced analytical techniques to derive insights and solve complex problemsShould have experience of leading data science teams in healthcare domain to develop machine learning models.Should have prior hands-on experience with cloud technologies such as Snowflake and Databricks, utilizing expertise to optimize data science workflows and solutionsGood to have hands on experience on Python and SQL Please drop your updated resume on charanjit.s@panaceadirect.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Product Management, Marketing",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3891298676",
+      "title": "Lead Data Scientist",
+      "company": "Mainz Brady Group",
+      "description": "Lead Data Scientist \u2013 3 Month Contract \u2013 Remote, United States \u2013 W2 ONLY, NO C2C Join our client as a Lead Data Scientist, where you\u2019ll collaborate with customer stakeholders to design and implement machine learning methods. Work within a large hybrid team, utilizing cutting-edge niche technology in the risk and compliance domain. Responsibilities: Analyze complex datasets and develop machine learning models for predictive analytics, classification, clustering, and optimization.Design algorithms inspired by genetics and evolution principles for problem-solving.Develop custom algorithms tailored to business needs and research objectives.Clean, preprocess, and normalize data for analysis, ensuring data quality and integrity.Deploy machine learning models into production environments and integrate them into existing software systems. Qualifications: Bachelor\u2019s degree or higher in Computer Science, Data Science, Engineering, Mathematics, Applied Statistics, or related field.8 years of experience in building data science and machine learning solutions using Python, Scala, Spark DataBricks, SQL, or similar technologies.Experience in text GenAI & LLM.Deep understanding of probability, statistics, machine learning, anomalies/outliers\u2019 detection, and data correlation/feature analysis.Strong problem-solving skills and algorithm design capabilities.Proficiency in Python coding and familiarity with relevant ML packages. Mainz Brady Group is a technology staffing firm with offices in California, Oregon and Washington. We specialize in Information Technology and Engineering placements on a Contract, Contract-to-hire and Direct Hire basis. Mainz Brady Group is the recipient of multiple annual Excellence Awards from the Techserve Alliance, the leading association for IT and engineering staffing firms in the U.S. Mainz Brady Group is an Equal Opportunity Employer. We are committed to Diversity & Inclusion and incorporate non-discrimination best practices in all of our staffing processes. Mainz Brady Group does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, gender expression, age, disability or any other protected class",
+      "location": "Seattle, WA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://mbg.com/jobs/lead-data-scientist/",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3887572653",
+      "title": "Data Scientist or Senior",
+      "company": "Progressive Insurance",
+      "description": "Join Forbes' 2023 Best Employer for Diversity! As a full-stack data scientist on the Commercial Lines Telematics Team, you\u2019ll use sensor data, business data, machine learning and statistical modeling to extract insights from driving data and enhance our segmentation model. In this role, you\u2019ll lead projects from brainstorm to production and have the unique opportunity to work sensor data from a large variety of different vehicle types and industries. Remote work allowed. Must-have Qualifications Bachelor's degree or higher with quantitative focus in Econometrics, Statistics, Operations Research, Computer Science or related field (e.g. Mathematics).Instead of a degree, a minimum of three years of relevant experience in statistical/quantitative modeling and/or Machine Learning tools (R, Python, etc.) and in using various database tools (e.g. Hadoop, SQL) processing large volumes of structured and unstructured data. Preferred Skills Competency in Python (or similar) development, debugging and toolchainApplied experience in Statistical Modeling and Machine LearningDemonstrated experience with communicating results and managing a project from start to finishAbility to use various database tools (e.g. SQL) to process large volumes of structured and unstructured dataFamiliarity with Linux, AWS and other deployment platforms Compensation $70,100 - $113,200/year depending on position level and experienceGainshare bonus up to 30% of your eligible earnings based on company performance Benefits 401(k) with dollar-for-dollar company match up to 6%Medical, dental & vision, including free preventative careWellness & mental health programsHealth care flexible spending accounts, health savings accounts, & life insurancePaid time off, including volunteer time offPaid & unpaid sick leave where applicable, as well as short & long-term disabilityParental & family leave; military leave & payDiverse, inclusive & welcoming culture with Employee Resource GroupsCareer development & tuition assistanceOnsite gym & healthcare at large locations Energage recognizes Progressive as a 2023 Top Workplace for: Innovation, Purposes & Values, Work-Life Flexibility, Compensation & Benefits, and Leadership. Equal Opportunity Employer Sponsorship for work authorization for this position is available for candidates who already possess an H-1B- visa. For ideas about how you might be able to protect yourself from job scams, visit our scam-awareness page at https://www.progressive.com/careers/how-we-hire/faq/job-scams/ Job Business Analysis Primary Location United States Schedule Full-time Employee Status Regular Work From Home Yes",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 70100.0,
+      "max_salary": 113200.0,
+      "url": "https://progressive.taleo.net/careersection/2/jobdetail.ftl?src=JB-11520&job=226619",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3904376533",
+      "title": "Senior, Data Scientist",
+      "company": "Walmart",
+      "description": "Position Summary... What you'll do... About Our Team As part of the larger People Analytics team, the Research & Analytics team is composed of statisticians, I/O psychologists, data analysts and data scientists who are focused on providing actionable insights and develop AI models to improve the experience of Walmart's associates. At Walmart, we are seeking a talented and experienced Data Scientist to join our team. As a Senior Data Scientist, you will play a crucial role in our People Analytics department, utilizing your expertise in building causal inference machine learning models to drive data-driven decision-making. Responsibilities Develop and implement advanced statistical models and machine learning algorithms to analyze large datasets and extract valuable insights.Collaborate with cross-functional teams and Center of Excellence (COE) partners across our Global People function to identify business problems and develop analytical plans to address them.Conduct rigorous statistical analysis and hypothesis testing to uncover patterns and trends in data.Apply Bayesian inference techniques to enhance the accuracy and reliability of predictive models.Utilize your strong problem-solving skills to scope problems and identify quick wins for our customers.Evaluate programs and quantify the return on investment (ROI) to drive data-driven decision-making.Collaborate primarily with the Global People centers of excellence and support our People partners in the business. Requirements Bachelor's or Master's degree in Data Science, Statistics, Computer Science, or a related field.Minimum of 3 years of experience as a Data Scientist, such as in retail or e-commerce.Strong proficiency in building and productionizing and maintaining causal inference machine learning models.Familiarity with Bayesian inference is a strong plus.Experience using Directed Acyclic Graphs (DAGs) for causal modeling to avoid common pitfalls in causal inference, such as confounding variables and reverse causality.Proficiency in programming languages such as Python or R.Experience with SQL and handling very large datasetsExperience with data visualization tools such as Tableau or Power BI.Excellent problem-solving and analytical skills.Strong communication and interpersonal skills.People Analytics experience a plus but not required Culture At Walmart At Walmart, we value diversity, inclusion, and collaboration. We foster an environment that encourages innovation and continuous learning. Our team members are passionate about making a positive impact on the lives of our customers and communities. We believe in empowering our employees and providing them with opportunities for growth and development. Minimum Qualifications... Outlined below are the required minimum qualifications for this position. If none are listed, there are no minimum qualifications. Option 1- Bachelor's degree in Statistics, Economics, Analytics, Mathematics, Computer Science, Information Technology, or related field and 3 years' experience in an analytics related field. Option 2- Master's degree in Statistics, Economics, Analytics, Mathematics, Computer Science, Information Technology, or related field and 1 years' experience in an analytics related field. Option 3 - 5 years' experience in an analytics or related field. Preferred Qualifications... Outlined below are the optional preferred qualifications for this position. If none are listed, there are no preferred qualifications. Data science, machine learning, optimization models, Master's degree in Machine Learning, Computer Science, Information Technology, Operations Research, Statistics, Applied Mathematics, Econometrics, Successful completion of one or more assessments in Python, Spark, Scala, or R, Using open source frameworks (for example, scikit learn, tensorflow, torch) Primary Location... 508 SW 8TH ST, BENTONVILLE, AR 72712, United States of America",
+      "location": "Bentonville, AR",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://click.appcast.io/track/j7kv6yo-org?cs=4c&jg=1yfx&bid=lUf2CslKyPxm6i440ZgUYA==",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3904407835",
+      "title": "Manager II, Data Science",
+      "company": "Uber",
+      "description": "About The Role Are you interested in driving business and product strategy? What about using data to answer difficult questions and come up with interesting insights? If so, we should chat. As a Data Science manager in Marketplace, you will lead a team of top Data Scientists to provide data-driven insights to identify new opportunities to take our products to the next level. What You'll Do Lead scientist to leverage large and sophisticated datasets to derive proactive actionable insights that inform strategic decisions and improvements in key revenue generating optimization engines at Uber Design and execute product experiments and interpret the results to draw detailed and actionable conclusions Lead scientists to build statistical, optimization, and machine learning models for strategic insights, simulations, and deeper understanding of marketplace performance Collaborate with various teams to identify key business opportunities and challenges, and develop data-driven solutions Mentor junior team members, encouraging a culture of growth and development Present findings to business and executive audiences Basic Qualifications Ph.D. or M.S. in Statistics, Mathematics, or related fields 4+ years of industry experience as a Data Scientist or equivalent. 3+ years of management or tech lead experience. Knowledge of underlying mathematical foundations of statistics, machine learning, optimization, and analytics. Experience in experimental design and analysis. Experience with exploratory data analysis, statistical analysis and testing, causal analysis Proficiency in SQL. Very strong communication skills across technical, non-technical, and executive audiences. Preferred Qualifications PhD preferred 6+ years of industry experience as a Data Scientist or equivalent. Experience in large scale web applications and marketplaces For San Francisco, CA-based roles: The base salary range for this role is USD$203,000 per year - USD$225,500 per year. You will be eligible to participate in Uber's bonus program, and may be offered an equity award & other types of comp. You will also be eligible for various benefits. More details can be found at the following link https://www.uber.com/careers/benefits.",
+      "location": "San Francisco, CA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 203000.0,
+      "max_salary": 225500.0,
+      "url": "https://tnl2.jometer.com/v2/job?jz=5wqzs0de8f884a33f55ceb1df5d09021722beCEALBBQAAADQ",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3891001081",
+      "title": "Business Analyst",
+      "company": "InfoVision Inc.",
+      "description": "Job title: Business Analyst ConsultantLocation: California, Oregon, ColoradoDuration: Long Term Responsibilities:Collaborate closely with business stakeholders, including underwriters, actuaries, and line of business managers, to understand their challenges, objectives, and key performance indicators (KPIs) related to healthcare insurance lines of business.Gather and document detailed business requirements, processes, and workflows to inform data science projects and initiatives.Work with data engineers and data scientists to identify relevant data sources, define data requirements, and ensure data quality and completeness.Assist in the development of data models, machine learning models, and analytical solutions to address business problems and support decision-making processes.Interpret and communicate complex data analysis and modeling results to non-technical stakeholders, highlighting key insights and recommendations.Facilitate the implementation of data-driven solutions and ensure their successful adoption within the business units.Continuously monitor and evaluate the performance and impact of implemented solutions, providing feedback for improvement and further optimization.Stay up-to-date with industry trends, regulations, and best practices related to healthcare insurance and data science applications.Collaborate with cross-functional teams, including IT, legal, and compliance, to ensure adherence to relevant policies and regulatory requirements. Requirements:Bachelors degree in Business Administration, Economics, Healthcare Administration, or a related field.3 +years of experience as a Business Analyst or a similar role in the healthcare insurance industry.Strong understanding of healthcare insurance operations, products, and processes, including underwriting, claims management, and risk assessment.Experience working with data science teams and familiarity with data analysis, modeling, and machine learning concepts.Proficiency in data visualization tools (e.g., Tableau, Power BI) and ability to effectively communicate complex data insights.Excellent analytical, problem-solving, and critical thinking skills.Strong communication and interpersonal skills, with the ability to effectively collaborate with technical and non-technical teams.Attention to detail and commitment to delivering high-quality solutions. Preferred Qualifications:Knowledge of data engineering and data governance practices.Familiarity with agile development methodologies and project management frameworks.Understanding of healthcare regulations, compliance, and data privacy requirements (e.g., HIPAA).Relevant certifications in healthcare, business analysis, or data science domains.",
+      "location": "Oregon, United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3903811108",
+      "title": "Data Scientist II",
+      "company": "Oliver James",
+      "description": "Job Opportunity: Data Scientist II Our client in the Insurance industry is seeking a talented Data Scientist II to join their Advanced Analytics department. Role & Responsibilities: Develop and implement data analytics strategies to drive business insightsCreate predictive models and algorithms to optimize decision-making processesAnalyze large datasets to identify trends and patterns for actionable recommendationsCollaborate with cross-functional teams to support data-driven decision-makingPresent findings and recommendations to senior management Key Skills: Strong experience in data science and analytics - 4 years minimumProficiency in PythonAdvanced knowledge of statistical analysis and data visualization toolsAbility to work with large datasets and databasesExcellent communication and presentation skillsKnowledge in AI/MLWorking experience with Databricks, Azure ML, and Azure CloudWroking experience with health claims dataGenerative AI experience is beneficialMedicaid or Managed Care experience is highly beneficial This is a permanent position offering a competitive salary and benefits package.",
+      "location": "Dayton, OH",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 170000.0,
+      "max_salary": 200000.0,
+      "url": "https://www.aplitrak.com/?adid=TWF4LkhlYXRoLjkzNzA5LjE1NTBAb2xpdmVyamFtZXNhc3NvY2lhdGVzLmFwbGl0cmFrLmNvbQ",
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3894287586",
+      "title": "Senior Databricks Engineer",
+      "company": "Hvantage Technologies Inc USA",
+      "description": "Job descriptionAbout Us: Hvantage Technologies Inc. is at the forefront of innovation in finance, healthcare, technology etc. We leverage the latest in cloud and data analytics technologies to drive our mission forward, solving complex problems and delivering value to our customers. We are looking for talented individuals who are passionate about making a difference using big data and advanced analytics. Position: Senior Databricks EngineerLocation: Los Angeles, California, United States (Work-from-Office)Immediate Joiner Preferred Position Overview:As a Senior Databricks Engineer, you will play a pivotal role in our data team, focusing on leveraging Databricks to drive insights, optimize operations, and power predictive models that inform strategic decisions. Your expertise will support the development, deployment, and management of scalable data analytics and machine learning solutions that meet our business objectives. Key Responsibilities:Design and implement scalable and reliable data pipelines within the Databricks platform, ensuring data quality and accessibility for analytics and machine learning applications.Led the integration of Databricks with various data sources and platforms (e.g., SQL, NoSQL, Data Lakes, and Cloud Storage) to support data ingestion, processing, and analytics.Develop and optimize Spark jobs for data transformation and aggregation.Work closely with data scientists and analysts to deploy machine learning models at scale, ensuring performance and reliability.Implement best practices for data governance, security, and compliance within the Databricks environment.Mentor junior team members and contribute to the development of internal knowledge bases and documentation.Stay up-to-date with advancements in Databricks, Spark, and related cloud data technologies to continually enhance our capabilities. Qualifications:Bachelors or Masters degree in Computer Science, Engineering, Mathematics, or a related field.Minimum of 5 years of experience in data engineering with at least 2 years focused on Databricks and Apache Spark.Strong proficiency in languages such as Python, Scala, or SQL.Demonstrated experience designing and implementing data pipelines and architectures within cloud environments (AWS, Azure, GCP).In-depth understanding of big data technologies, data modeling, ETL processes, and data warehousing principles.Experience with machine learning model deployment and lifecycle management within Databricks is highly desirable.Knowledge of data governance, security practices, and compliance regulations relevant to data and cloud platforms.Excellent problem-solving skills, along with the ability to work independently and as part of a cross-functional team.Strong communication skills, capable of conveying complex technical concepts to non-technical stakeholders. Benefits:Competitive salary and benefits package.Opportunities for professional growth and career advancement.Dynamic and collaborative work environment with a focus on innovation and continuous learning. If you meet the above requirements and are excited about the opportunity to work as a Senior Databricks Developer in a dynamic and innovative environment, Join our team and be part of an organization that values innovation, collaboration, and personal growth. We offer competitive compensation, comprehensive benefits, and a stimulating work environment that encourages learning and professional development. To apply, please submit your resume and a cover letter highlighting your relevant experience and skills to neelesh@hvantage.com. Or you can share your CV over WhatsApp at +919755299999 Note: Only shortlisted candidates will be contacted for further evaluation. Hvantage Technologies is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. Role: Data Platform EngineerIndustry Type: IT Services & ConsultingEmployment Type: Full Time, PermanentRole Category: Software Development",
+      "location": "Los Angeles, CA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3906226694",
+      "title": "Data Scientist",
+      "company": "Apt",
+      "description": "The Data Scientist f is a key contributor to the advancement of data-driven decision-making and operational efficiency across the client's business units. This role requires a unique combination of analytical prowess, technical expertise, and business acumen. The successful candidate will be responsible for executing data science initiatives, contributing to consultations, performing feasibility assessments, and establishing support and monitoring paradigms for supporting AI processes within the client's data domain.Key Responsibilities: AI/Machine Learning Use Case Identification:Analyze data to identify and develop AI/Machine Learning use cases aligned with business objectives.Stay current on emerging AI/Machine Learning technologies, educating the team on their applications and optimal leverage.Algorithmic Innovation and Model Improvement:Devise innovative algorithmic approaches to address complex quantitative problems using large-scale enterprise data.Train, validate, and optimize machine learning models for various use case needs.Adopt new tools and algorithms effectively to enhance model performance. AI Development Framework and MLOPS Deployment:Develop and implement an the internal AI development framework within the the internal Governance Committee, emphasizing MLOPS practices for seamless model deployment to the cloud.Provide training on the framework, enabling effective change management to monitor and enhance model performance.Collaborate with cross-functional teams to provision ETL processes and establish CI/CD pipelines for continuous model deployment and updates.Documentation and Reporting:Complete comprehensive documentation and statistical system documentation to communicate results effectively.Collaboration and Mentoring:Collaborate with end-users to identify data management and analytical solution needs, fostering improved data-driven decision-making.Mentor team members to enhance their skills and abilities.",
+      "location": "Birmingham, AL",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 100.0,
+      "max_salary": 115.0,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior-level data scientist with 13 years of experience, a Master's in Data Science, and a strong background in healthcare. Core strengths include predictive modeling, machine learning, statistical analysis, and data pipelines, with hands-on experience in Python, R, AWS, and Power BI.",
+    "job_explanations": [
+      {
+        "job_id": "3904389544",
+        "title": "Data Scientist",
+        "company": "Unified Women's Healthcare",
+        "match_reason": "Strong match. The candidate's 13 years of experience in healthcare data science directly aligns with the role's requirement for healthcare domain expertise and machine learning on claims data. Their skills in predictive modeling, machine learning, statistical analysis, and Python are explicitly required. The domain keyword 'Patient Risk Assessment' maps closely to the role's pregnancy identification and risk-scoring focus. Power BI is listed in the candidate's tools, satisfying the data technology requirement. The reranker score of 92 reflects this strong alignment.",
+        "missing_skills": [
+          "SQL (advanced, with relational databases/data warehouses)"
+        ]
+      },
+      {
+        "job_id": "3887100123",
+        "title": "Product Manager",
+        "company": "Panacea Direct Inc",
+        "match_reason": "Partial match with a notable role-type mismatch. The candidate holds Data Scientist and Lead Data Analyst titles, not Product Manager titles, and the role is explicitly a Product Manager position requiring team leadership of data science projects in healthcare. While the candidate has healthcare domain experience, machine learning skills, and Python proficiency that are relevant, the core requirement is product management leadership \u2014 a function not evidenced in the CVProfile. The reranker score of 85 likely reflects skill-label overlap rather than true role fit.",
+        "missing_skills": [
+          "Snowflake",
+          "Databricks"
+        ]
+      },
+      {
+        "job_id": "3891298676",
+        "title": "Lead Data Scientist",
+        "company": "Mainz Brady Group",
+        "match_reason": "Strong match on seniority and technical skills. The candidate's 13 years of experience and 'Lead Data Analyst' and 'Senior Data Scientist' titles align well with the Lead Data Scientist requirement of 8+ years. Skills in machine learning, predictive modeling, Python, and statistical analysis directly satisfy the core qualifications. The risk and compliance domain differs from the candidate's healthcare background, but the technical requirements are domain-agnostic. The reranker score of 82 reflects solid alignment.",
+        "missing_skills": [
+          "Spark/Databricks",
+          "Generative AI / LLM experience"
+        ]
+      },
+      {
+        "job_id": "3887572653",
+        "title": "Data Scientist or Senior",
+        "company": "Progressive Insurance",
+        "match_reason": "Strong match on technical skills and seniority. The candidate's proficiency in Python and R, machine learning, and statistical modeling satisfies the must-have qualifications. AWS is listed in the candidate's tools, covering the deployment platform requirement. The insurance telematics domain differs from healthcare, but the role's technical requirements (statistical modeling, ML, Python/R, SQL-based database tools) are well covered by the candidate's skill set. The reranker score of 78 reflects good but not perfect alignment, likely due to the domain shift.",
+        "missing_skills": [
+          "SQL / large-scale database processing"
+        ]
+      },
+      {
+        "job_id": "3904376533",
+        "title": "Senior, Data Scientist",
+        "company": "Walmart",
+        "match_reason": "Strong match. The candidate's senior experience level, Master's degree in Data Science, and proficiency in Python, R, and Power BI directly satisfy the stated requirements. Skills in machine learning, statistical analysis, and predictive modeling align with the role's focus on causal inference and advanced analytics. Power BI is explicitly listed as a required visualization tool and appears in the candidate's tools. The retail/people analytics domain is a shift from healthcare, but the technical requirements are well covered. The reranker score of 75 reflects this solid but not perfect fit.",
+        "missing_skills": [
+          "Causal inference modeling (DAGs, Bayesian inference)"
+        ]
+      },
+      {
+        "job_id": "3904407835",
+        "title": "Manager II, Data Science",
+        "company": "Uber",
+        "match_reason": "Partial match. The candidate has senior-level data science experience and mentoring skills listed in their CVProfile, which partially addresses the management dimension. However, the role explicitly requires 3+ years of management or tech lead experience as a basic qualification, and the candidate's titles ('Senior Data Scientist', 'Lead Data Analyst', 'Data Scientist') do not clearly evidence formal people management. The role also requires a Ph.D. or M.S. \u2014 the candidate holds an M.S., satisfying the education requirement. The marketplace/ride-sharing domain is unrelated to healthcare. The reranker score of 72 reflects this partial fit.",
+        "missing_skills": [
+          "Formal people management experience (3+ years)",
+          "SQL proficiency (explicitly required)"
+        ]
+      },
+      {
+        "job_id": "3891001081",
+        "title": "Business Analyst",
+        "company": "InfoVision Inc.",
+        "match_reason": "Partial match with a role-type mismatch. The candidate is a senior data scientist, not a business analyst, and this role is explicitly scoped as a Business Analyst Consultant requiring BA-specific skills such as requirements gathering, workflow documentation, and stakeholder facilitation. The candidate's healthcare industry background and Power BI proficiency are relevant, and their stakeholder management skill partially addresses the communication requirements. However, the core BA function is not evidenced in the CVProfile. The reranker score of 68 reflects this limited alignment.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3903811108",
+        "title": "Data Scientist II",
+        "company": "Oliver James",
+        "match_reason": "Partial match due to seniority mismatch. The role is designated 'Entry level' and requires a minimum of 4 years of experience, while the candidate has 13 years and holds senior-level titles. The candidate is significantly over-qualified, which is a moderate negative. Technically, the candidate's Python skills, statistical analysis, data visualization, and health claims data experience (via healthcare domain) satisfy the core requirements. However, the entry-level designation and the reranker score of 65 reflect that this role is not appropriately scoped for a senior candidate.",
+        "missing_skills": [
+          "Databricks",
+          "Azure ML / Azure Cloud"
+        ]
+      },
+      {
+        "job_id": "3894287586",
+        "title": "Senior Databricks Engineer",
+        "company": "Hvantage Technologies Inc USA",
+        "match_reason": "Poor match due to domain mismatch. This is a data engineering role requiring a minimum of 5 years of Databricks and Apache Spark experience, ETL pipeline design, and data architecture \u2014 none of which appear in the candidate's skills, tools, or domain keywords. The candidate's background is in data science and analytics, not data engineering. Python and AWS overlap superficially, but the core engineering competencies are absent. The reranker score of 60 reflects this weak alignment.",
+        "missing_skills": [
+          "Databricks (2+ years, required)",
+          "Apache Spark / Scala",
+          "ETL pipeline design and data architecture"
+        ]
+      },
+      {
+        "job_id": "3906226694",
+        "title": "Data Scientist",
+        "company": "Apt",
+        "match_reason": "Strong match. The candidate's senior experience, machine learning and predictive modeling skills, mentoring capability, and domain keyword 'Operational Efficiency' directly align with the role's key responsibilities. The role emphasizes AI/ML use case identification, model training and optimization, and mentoring \u2014 all supported by the candidate's CVProfile. The reranker score of 88 reflects this strong alignment. The candidate's healthcare background is transferable to the cross-industry consulting context described.",
+        "missing_skills": [
+          "MLOps / CI-CD pipeline experience",
+          "Cloud model deployment (production-grade)"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "SQL (advanced, with relational databases/data warehouses)",
+      "Snowflake",
+      "Databricks"
+    ],
+    "recommendation": "The candidate should prioritize gaining hands-on experience with Databricks and Spark, as these appear as required skills across multiple high-scoring roles. Developing advanced SQL and MLOps/CI-CD competencies would further close the gap for senior data science positions at companies like Mainz Brady Group, Apt, and Unified Women's Healthcare."
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "persona": "01_hr_entry",
+  "method": "BM25_PARSED",
+  "model": "deepseek",
+  "run_timestamp": "2026-05-11T10:31:41.176104+00:00",
+  "results": [
+    {
+      "job_id": "3905851172",
+      "title": "Assistant Manager Human Resources",
+      "company": "Premio Foods Inc.",
+      "description": "Company Description We suggest you enter details here. Role Description This is a full-time on-site role for an Assistant Manager Human Resources at Premio Foods Inc. located in Brooksville, FL. The Assistant Manager Human Resources will be responsible for various day-to-day tasks associated with managing and coordinating HR activities. This includes assisting in recruitment and selection processes, managing employee records, coordinating employee training programs, assisting in performance management processes, and providing support to employees regarding HR policies and procedures. Qualifications Knowledge of HR processes and procedures, including recruitment, employee onboarding, training, and performance managementUnderstanding of employment laws and regulationsExcellent communication and interpersonal skillsStrong organizational and time management skillsAbility to maintain confidentiality and handle sensitive informationProficiency in HRIS software and MS OfficeBachelor's degree in Human Resources, Business Administration, or related fieldPrior experience in HR role is a plus",
+      "location": "Brooksville, FL",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3902878391",
+      "title": "Dolan HR-Payroll Specialist",
+      "company": "Dolan Auto Group",
+      "description": "Dolan Auto Group, named Best Place to Work in Northern Nevada, is looking for a HR-Payroll Specialist to perform HR-related duties on a professional level and works closely with senior leadership to support Dolan Auto Group needs. This position carries out responsibilities in the following functional areas: benefits administration, employee relations, performance management, onboarding, policy implementation, recruiting, onboarding, and training delivery. Why Dolan?We are an exciting, dynamic, and highly successful team. We are big community supporters and provide a fun, exciting, and collaborative workplace where growth and advancement opportunities abound. We offer a generous comprehensive compensation and benefits package. Essential Duties and Responsibilities:Primary duties and responsibilities include, but are not limited to, the following:Process employee pay plans, transfers, and separations.Key payroll for semi-monthly and bonus payrolls.Partner with HR and Business Office to reconcile accounting for various payroll items.Maintain spreadsheets.Handle a variety of logistical tasks.Assist with collecting and reviewing documentation for new hires.Able to interact with all levels of management, HR professionals and other members of the organization including executive management.Complete HRIS processing and reporting.Assist in the drive of communication and culture cross functionally: coordinate company meetings and events.Special projects, research and analysis, continual and ongoing research to build and maintain progressive HR programs and policies.Provide communication and support regarding benefits implementation across the auto group.Coordinate various audits including but not limited to I -9's, work cards, benefits, etc.General administrative HR tasks.Other duties as assigned. Benefits:After 90 days (about 3 months) every full-time Dolan Auto Group employee will receive the following benefits:Paid Time Off/Vacation.Employer Paid Health Insurance.Employer Paid Dental Insurance.Employer Paid Vision Insurance.Employer Paid Short Term Disability Insurance.Employer Paid Term Life Insurance.Employer Matched Christmas Club Savings Fund.Employee pricing on vehicle purchases, service, and parts.Training, tuition, and certification reimbursement for job specific training.Exclusive employee discounts available through select local businesses. 401k Retirement Plan:In addition, optional Allstate supplemental benefits are available at the employees expense including additional dental, vision, short term disability, accident, cancer, etc. Why Should You Apply?At Dolan Auto Group, it's all about the drive. The drive to do better. To improve each, and every day. To move expectations forward. To break away from the status quo, and to connect to our community like never before. Not only are we big community supporters, but we also provide a fun, fast paced, and rapidly growing workplace where growth and advancement opportunities abound for over 600 local residents, we call the Dolan Family. A Few things Worth Knowing about Dolan Auto Group:Dolan Auto Group has been serving the Reno Tahoe community since 1982, currently employing over 600 local residents. We take pride in being a family owned and operated business dedicated to treating our employees and customers like family, all while working to make a difference in the lives of those in our community who need it most.Voted Best Place to Work and received 1st place: 2020, 2021, and 2022.Best Place to Work Finalist 2016, 2017, 2018 - voted for by over 550 employees.Most Philanthropic Business by NNBW.Business Recognition Program Honored by the City of Reno. Get In and Join the Family!QualificationsQualifications:High School diploma or equivalent.Possess an acceptable driving record and a valid driver's license.Be at least 18 years of age.Strong Excel knowledge and skills.Ability to multi-task in a fast-paced work environment.Strong organizational skills and detailed oriented.Strong communication skills.A team player who is focused on providing exemplary customer service.",
+      "location": "Reno, NV",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.paycomonline.net/v4/ats/web.php/jobs/ViewJobDetails?job=172849&clientkey=582411F243D3F64A2DD30C72BAE49CCD",
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3894284830",
+      "title": "Human Resources Generalist",
+      "company": "Robert Half",
+      "description": "The ideal candidate will have a solid background in human resources functions and a passion for supporting both employees and the organization. As an HR Generalist, you will be responsible for various HR activities including but not limited to recruitment, employee relations, performance management, benefits administration, and HR compliance.Responsibilities:Manage full-cycle recruitment process, including sourcing, screening, interviewing, and onboarding of new employees.Serve as a point of contact for employee relations issues, providing guidance and resolution to conflicts as needed.Administer employee benefits programs and act as a liaison between employees and benefits providers.Assist in the development and implementation of HR policies and procedures to ensure compliance with legal requirements and company guidelines.Coordinate performance management processes, including goal-setting, performance evaluations, and feedback sessions.Maintain accurate employee records and ensure data integrity in HR systems.Support HR initiatives and special projects as assigned.Qualifications:Bachelor's degree in Human Resources, Business Administration, or related field.3+ years of experience in a human resources role, with demonstrated proficiency in HR functions.Strong knowledge of employment laws and regulations.Excellent interpersonal and communication skills.Ability to handle sensitive information with discretion and confidentiality.Proven organizational skills with the ability to prioritize tasks and meet deadlines.",
+      "location": "Duluth, GA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 65000.0,
+      "max_salary": 73000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3894664659",
+      "title": "Human Resources Generalist",
+      "company": "Sante Group Companies",
+      "description": "The ideal candidate will be responsible for recruitment efforts, employee relations, new hire orientation and onboarding, employee termination, payroll and benefits, company policy and procedure adherence. In addition, you will build strong relationships with our company's managers in order to help them with their human resource needs. ResponsibilitiesOversee full-cycle of recruitment effortsDevelop and oversee new hire orientation, onboarding efforts and employee termination processAssist with payroll and benefits administrationEnsures compliance with company policies and procedures and legal ResponsibilitiesEmployee Relations: Act as a point of contact for employee inquiries, concerns, and conflict resolution. Provide guidance to employees and management on HR policies and procedures.HR Compliance: Stay current with labor laws, regulations, and industry best practices. Ensure compliance with all applicable employment laws and regulations. Support annual reporting for ACA, EEO, and Medicare Part D as applicable. Ensure compliance with all regulatory and audit requirements.Data Management: Maintain accurate and up-to-date employee records. Generate HR reports and analytics for management as needed.Policy Development: Participate in the development and revision of HR policies and procedures. Communicate policy changes to employees and ensure understanding and compliance.HR Projects: Contribute to HR-related projects, such as employee engagement initiatives or process improvements.Other duties as assigned. Qualifications *REQUIRED Bachelor's degree or equivalent experience in Business, Human Resources, or related area3-5 years' of experience working in Human ResourcesStrong understanding of employment laws, regulations, and HR best practices.Experience using ADP\u2019s human capital management platform is strongly preferred.Excellent communication, interpersonal, and problem-solving skills.High level of discretion and ability to handle sensitive information.Detail-oriented and organized, with strong time-management skills.Ability to work independently and collaboratively in a fast-paced environment. What You\u2019ll Get:Competitive salary based on experience.Competitive benefits including paid time off, medical with HRA, dental, vision, 403(b) with Company match, and much more! What We Do:Sant\u00e9 Group Companies prides itself in being a leader in community-based behavioral and mental health services. Our track record of innovation and growth reflects our ability to deliver diverse and highly individualized services. We have a passion for providing empathetic and potentially life-saving care to help individuals heal, recover, and thrive, as well as live their lives in a manner that allows them to fully integrate in the community. The Sant\u00e9 Group aspires to create an organization that places value on collaboration, innovation, creativity, and inclusivity. To achieve this success, it is essential that all members of our organization feel secure, welcomed, and respected. All members of our organization have a responsibility to uphold these values. We understand that no candidate is perfectly qualified for any job, and we believe that diversity of background and experience makes for better problem-solving and collaboration, which is why we are dedicated to adding new perspectives to the team. Even more important than your resume is a positive attitude, a passion for making an impact, a personal desire to grow, and the ability to help individuals heal, recover, and thrive. The Sant\u00e9 Group is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, age, protected veteran status, or disability status. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions of this job. The Sant\u00e9 Group participates in E-Verify. http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf",
+      "location": "Silver Spring, MD",
+      "experience_level": "Associate",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources, Administrative",
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3906234200",
+      "title": "Human Resources Generalist",
+      "company": "The Acuity Group",
+      "description": "HR GENERALIST \u2013 Monroe, LouisianaOur global client is seeking an HR Generalist to provide generalist support to a manufacturing population in the Monroe, LA area. Full relocation assistance is available. This is a visible role with career growth potential. RESPONSIBILITIESServe as primary contact for core HR processes including employee relations, staffing, reporting, compliance, benefits, and payroll.Serve as a strategic business consultant and partner to senior management.Coach managers regarding effective performance management and talent improvement processes.Advise and counsel managers and employees to achieve positive resolution of employee relations issues.Attend union/management meetings and assist with grievance resolution.Handle full cycle talent acquisition for manufacturing roles inclusive of sourcing, interviewing, selection, and on-boarding.Drive HR projects to successful completion within a timely manner.Oversee, interpret, and administer company policies/procedures to ensure the highest level of compliance and integrity across the organization and ensure compliance with local, state, and national employment laws and practices.Assist with year-end performance review process and annual compensation planning. QUALIFICATIONSBachelor\u2019s Degree preferred.3+ years of Human Resources experience, preferably in manufacturing, or logistics.Demonstrated experience in employee relations, recruiting, and payroll.Excellent interpersonal and communication skills.Core reporting and analytical skills.Compensation target base $60-80K, depending on experience. Apply:Please e-mail resume as a PDF or word document to Jo Treitman, The Acuity Group, Phone 914-763-6077, e-mail jtreitman@theacuitygroup.com",
+      "location": "Monroe, LA",
+      "experience_level": "Associate",
+      "work_type": "Full-time",
+      "min_salary": 60000.0,
+      "max_salary": 80000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3902862891",
+      "title": "Human Resources Generalist",
+      "company": "California Retina Consultants",
+      "description": "Human Resources GeneralistOur HR Generalist primary responsibility will be to oversee employee relations matters and manage leave administration processes, while ensuring compliance with company policies and legal regulations. The HR Generalist will also provide HR support and collaborate closely with the Director of Human Resources to maintain a positive work environment and support the needs of our diverse workforce. Responsibilities Serve as the main point of contact for employee relations issues, including investigations, conflict resolution, and disciplinary actions.Conduct thorough investigations into employee complaints or concerns, ensuring fair and consistent outcomes.Provide guidance and support to managers and employees on HR policies, procedures, and best practices.Develop and implement strategies to promote positive employee relations and foster a culture of open communication and collaboration.Manage all aspects of leave administration, including FMLA, ADA accommodations, and other medical or personal leaves.Coordinate leave requests, including intake, documentation, and tracking of leave usage.Communicate effectively with employees, managers, and external partners to ensure compliance with leave policies and legal requirements.Maintain accurate records and documentation related to employee leaves and accommodations.Assist with various HR functions, including recruitment, benefits administrations, onboarding, performance management, and HRIS data management.Collaborate with the HR team to develop and implement HR initiatives and programs aimed at enhancing employee engagement and retention.Stay informed about changes in employment laws and regulations and ensure organizational compliance.Support special projects and initiatives as assigned by the Director of Human Resources. Benefits401(k) matchingDental insuranceHealth insuranceLife insurancePaid time offRetirement planVision insurance Preferred Skills / Abilities:Strong understanding of employment laws and regulations, including FMLA, ADA, and other relevant statutes.Excellent communication and interpersonal skills, with the ability to handle sensitive and confidential information with discretion.Proven ability to manage multiple priorities and deadlines while maintaining a high level of accuracy and attention to detail.Proficiency in HRIS systems and Microsoft Office Suite.Demonstrated problem-solving skills and the ability to work independently as well as part of a team. Education and Experience:Bachelor's degree in Human Resources, Business Administration, or related field preferred. HR certification (e.g., SHRM-CP, PHR) preferred.Minimum of 3-5 years of HR experience, with a focus on employee relations and leave administration. Who We AreCalifornia Retina Consultants (CRC) is part of Retina Consultants of America (RCA), the largest network of leading retina specialists with the mission of saving sight and improving patient lives through innovation and the highest quality care. Through RCA's physician-centered practice management model, physicians continue to drive clinical and practice culture while benefiting from the available business expertise, resources and shared best practices. Equal Opportunity EmployerCalifornia Retina Consultants is proud to be an Equal Employment Opportunity and an Affirmative Action Employer. We are committed to creating an inclusive work environment that celebrates diversity. All offers are contingent upon satisfactory background check and pre-employment drug screen.",
+      "location": "Santa Barbara, CA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 69000.0,
+      "max_salary": 84000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 58.0
+    },
+    {
+      "job_id": "3884812114",
+      "title": "Human Resources Generalist",
+      "company": "nan",
+      "description": "Company DescriptionThe Haseko Family of Companies has been developing Hawaii's most prized hotel, commercial and residential projects since 1973, including Ocean Pointe and the emerging Hoakalei Resort in Ewa Beach. Role DescriptionThis is a full-time on-site role located in Ewa Beach, HI for a Human Resources Generalist. The Human Resources Generalist will be responsible for performing various HR duties, including recruitment, payroll administration, employee relations, training and development, benefits administration, and HR policy implementation. The role requires strong communication and interpersonal skills and the ability to maintain confidentiality. QualificationsBachelor's degree in Human Resources, Business Administration, or a related field3+ years of proven experience in HR roles, including recruitment, employee relations, and benefits administrationKnowledge of labor laws and HR best practicesStrong communication and interpersonal skillsAbility to manage multiple tasks and prioritize effectivelyProficiency in HR software and Microsoft Office SuiteProfessional HR certification (e.g., PHR, SHRM)",
+      "location": "Ewa Beach, HI",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 55.0
+    },
+    {
+      "job_id": "3904375253",
+      "title": "HR Generalist (Global Law Firm)",
+      "company": "Kay Search Group",
+      "description": "Position: HR Generalist (Global Law Firm) Company: AM 50 Law Firm w/ 3 days work from home! Comp Package: Base salary to $100K, Bonus, Full Benefits, 401K+, Tuition Reimbursement, etc. Responsibilities for Human Resources Generalist:Collaborate with hiring managers to identify staffing needs and understand the skills and competencies required for openings.Sources, recruits, interviews, and facilitates the hiring of qualified job applicants for open positions; manages the background check process and facilitates onboarding process.Conduct exit interviews and facilitates offboarding process.Serve as a primary point of contact for employee inquiries and concerns.Manage employee relations issues, including conflict resolution, disciplinary actions, and grievances.Support the performance appraisal process by providing guidance to managers and employees.Work closely with senior management to ensure focus is on developing identified talent/succession planning and ensure employees are being rewarded and promoted appropriately during year-end compensation process. Conduct market research and internal and external pay analysis. Qualifications for Human Resources Generalist:Bachelor's degree in a related field (Human Resources, Industrial Psychology, Organizational Development, etc.)3+ year of HR experience in a large law firm or professional services environment.Strong knowledge of HR principles, practices, and employment laws.Excellent communication and interpersonal skills, with the ability to interact effectively with management and employees at all levels.Demonstrated ability to handle sensitive and confidential information with discretion.Proficiently utilizes HRIS systems and other software applicationsWell-versed in labor laws and regulations, encompassing knowledge of EEOC, FMLA, ADA, as well as other federal, state, and local statutes.",
+      "location": "New York City Metropolitan Area",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 90000.0,
+      "max_salary": 100000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 52.0
+    },
+    {
+      "job_id": "3898160952",
+      "title": "Human Resources Manager",
+      "company": "Swanson Health",
+      "description": "SUMMARY The Human Resources Manager is responsible for partnering in the overall People strategy for the organization. Areas of focus will include culture initiatives, employee relations, benefits strategy, performance management, employment law compliance, talent acquisition strategy, and leading special projects and programs. ESSENTIAL RESPONSIBILITIES Develop and maintain strong HR partner relationships with the business and key stakeholders specifically in Operations and Customer Service. Coach leaders and provide insights into best practices related to employee relations matters. Directly oversee benefits strategy for organization and provide oversight to HR Team who perform benefits administration and audit functions. Partner with Vice President HR on culture initiatives, DEI goals, leadership development, budget management, executive leadership support, professional staff employee relations, and strategic compensation planning. Lead talent acquisition strategy and oversee staff who provide expertise within recruitment and onboarding. Directly supervise the Payroll Specialist and collaborate on payroll process improvement and vendor management. Provide leadership on continuous improvement of HR processes with a focus on cost management and efficiency gains. Lead development and implementation of HR projects, policies, and programs. Participate in internal and external professional development to stay current on HR trends and laws to ensure compliance with best practices and legal requirements. Maintain a positive and professional working relationship with peers, management, and support resources, with a constant commitment to teamwork and exemplary customer service. Conducts self in the presence of customers and community so as to present a professional image of SHP. COMPETENCIES REQUIRED Ability to manage multiple competing priorities and while working effectively both independently and as part of a collaborative team Ability to provide excellent customer service to employees Act as a proactive problem solver with the ability to research various matters and bring forth solution-oriented recommendations Have a demonstrated ability to collaborate and build relationships with leaders Must be extremely professional and work well in a fast-paced environment Maintain a high level of respect for confidentiality Proficient in Microsoft office Suite SUPERVISORY RESPONSIBILITIES Carry out supervisory responsibilities in accordance with the organization\u2019s policies and applicable laws. Responsibilities include interviewing, hiring and training employees; planning, assigning, and directing work; appraising performance; rewarding and disciplining employees; addressing complaints and resolving problems. EDUCATION AND EXPERIENCE Bachelor\u2019s degree in Human Resources or related field with 5-8 years of HR Experience. Or; an equivalent combination of education and experience sufficient to successfully perform the essential responsibilities and duties of the job as listed above. Extensive experience in employee relations required with focus in Operations staff preferred but not required. EQUIPMENT AND SOFTWARE BambooHR Bswift Mozart Millennium Payroll Software Kronos JIRA Microsoft Office Products",
+      "location": "Fargo, ND",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 40.0
+    },
+    {
+      "job_id": "3905295638",
+      "title": "Human Resources Coordinator",
+      "company": "Zing Recruiting",
+      "description": "Zing Recruiting, in partnership with an established flavor and fragrance manufacturer in the East Hanover, NJ area is on the search for a HR Coordinator to join their team! This is an immediate opening for candidates eager to expand their skillset within HR support, recruiting, and onboarding! HR Coordinator Job Summary:- Manage employee onboarding and offboarding processes- Coordinate performance management activities and employee evaluations- Oversee benefits administration and assist employees with inquiries- Support recruitment efforts by conducting interviews and collaborating with hiring managers- Utilize HR systems for data entry and reporting- Assist in various HR projects and initiatives HR Coordinator Qualifications:- Proven experience in HR functions including performance management, benefits administration, and recruiting- Familiarity with HR systems- Strong project management skills to handle multiple tasks efficiently- Excellent interviewing skills to assess candidate qualifications- Proficient in data entry for maintaining accurate employee records Qualified candidates will be contacted immediately! Zing Recruiting's dedication to the safety, health & well-being of our associates, clients and communities remains our #1 priority. Zing Recruiting is proud to be an EEOE, M/F/D/V, and we are committed to diversity both in practice and spirit at all levels of the organization.",
+      "location": "East Hanover, NJ",
+      "experience_level": "Associate",
+      "work_type": "Contract",
+      "min_salary": 30.0,
+      "max_salary": 33.0,
+      "url": null,
+      "skill_labels": "Human Resources, Administrative",
+      "source": "kaggle",
+      "score": 75.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level HR professional with a Bachelor's in HR Management and 2 years of project-based experience in HR policy analysis and recruitment event coordination. Key strengths include knowledge of employment law, conflict resolution, and recruitment processes.",
+    "job_explanations": [
+      {
+        "job_id": "3905851172",
+        "title": "Assistant Manager Human Resources",
+        "company": "Premio Foods Inc.",
+        "match_reason": "Partial match. Candidate's skills in recruitment and employment law align, but the role is an Assistant Manager position typically requiring more experience than the candidate's 2 years. The candidate lacks proficiency in HRIS software and MS Office as required. The reranker_score of 82 is relatively high due to skill overlap, but seniority is a concern.",
+        "missing_skills": [
+          "HRIS software",
+          "MS Office"
+        ]
+      },
+      {
+        "job_id": "3902878391",
+        "title": "Dolan HR-Payroll Specialist",
+        "company": "Dolan Auto Group",
+        "match_reason": "Partial match. Candidate has foundational HR knowledge, but the role requires strong Excel skills and payroll processing experience, which the candidate lacks. The reranker_score of 72 reflects some alignment but missing key technical skills.",
+        "missing_skills": [
+          "Payroll processing",
+          "Excel",
+          "HRIS processing"
+        ]
+      },
+      {
+        "job_id": "3894284830",
+        "title": "Human Resources Generalist",
+        "company": "Robert Half",
+        "match_reason": "Partial match. The role is entry-level but requires 3+ years of HR experience, while the candidate has 2 years. Skills in recruitment and employment law are relevant, but benefits administration experience is missing. The reranker_score of 65 indicates moderate fit with experience gap.",
+        "missing_skills": [
+          "Benefits administration"
+        ]
+      },
+      {
+        "job_id": "3894664659",
+        "title": "Human Resources Generalist",
+        "company": "Sante Group Companies",
+        "match_reason": "Poor match due to experience gap. The role requires 3-5 years of HR experience, but the candidate has only 2 years. Additionally, payroll and benefits administration skills are missing. The reranker_score of 62 reflects the experience mismatch.",
+        "missing_skills": [
+          "Payroll administration",
+          "Benefits administration"
+        ]
+      },
+      {
+        "job_id": "3906234200",
+        "title": "Human Resources Generalist",
+        "company": "The Acuity Group",
+        "match_reason": "Poor match. The role requires 3+ years of HR experience, preferably in manufacturing, but the candidate has 2 years and no manufacturing background. Missing payroll and benefits administration skills. The reranker_score of 60 indicates low fit.",
+        "missing_skills": [
+          "Payroll administration",
+          "Benefits administration",
+          "Manufacturing industry experience"
+        ]
+      },
+      {
+        "job_id": "3902862891",
+        "title": "Human Resources Generalist",
+        "company": "California Retina Consultants",
+        "match_reason": "Poor match. The role requires 3-5 years of HR experience with specific focus on leave administration (FMLA/ADA), which the candidate lacks. Benefits administration also missing. The reranker_score of 58 reflects significant gaps.",
+        "missing_skills": [
+          "Leave administration (FMLA/ADA)",
+          "Benefits administration"
+        ]
+      },
+      {
+        "job_id": "3884812114",
+        "title": "Human Resources Generalist",
+        "company": "nan",
+        "match_reason": "Poor match. The role requires 3+ years of HR experience, while the candidate has 2 years. Missing payroll, benefits administration, HR software, and MS Office skills. The reranker_score of 55 indicates low fit.",
+        "missing_skills": [
+          "Payroll administration",
+          "Benefits administration",
+          "HR software",
+          "MS Office"
+        ]
+      },
+      {
+        "job_id": "3904375253",
+        "title": "HR Generalist (Global Law Firm)",
+        "company": "Kay Search Group",
+        "match_reason": "Poor match. The role requires 3+ years of HR experience in a law firm or professional services environment, which the candidate does not have. Missing HRIS proficiency and compensation analysis skills. The reranker_score of 52 reflects the domain and experience mismatch.",
+        "missing_skills": [
+          "Law firm/professional services experience",
+          "HRIS proficiency",
+          "Compensation analysis"
+        ]
+      },
+      {
+        "job_id": "3898160952",
+        "title": "Human Resources Manager",
+        "company": "Swanson Health",
+        "match_reason": "Poor match. The role is a senior HR Manager position requiring 5-8 years of experience, while the candidate is entry-level with 2 years. Missing benefits strategy, talent acquisition strategy, supervisory experience, and HR software skills. The reranker_score of 40 correctly reflects the severe mismatch.",
+        "missing_skills": [
+          "Benefits strategy",
+          "Talent acquisition strategy",
+          "Supervisory experience",
+          "Payroll",
+          "HR software (BambooHR, etc.)"
+        ]
+      },
+      {
+        "job_id": "3905295638",
+        "title": "Human Resources Coordinator",
+        "company": "Zing Recruiting",
+        "match_reason": "Partial match. The role is an associate-level HR Coordinator position, and the candidate's 2 years of project-based HR experience is relevant. However, benefits administration and HRIS system familiarity are missing. The reranker_score of 75 indicates a relatively good fit with some gaps.",
+        "missing_skills": [
+          "Benefits administration",
+          "HRIS systems"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "HRIS software",
+      "MS Office",
+      "Payroll processing"
+    ],
+    "recommendation": "Focus on gaining practical experience in benefits and payroll administration, and develop proficiency in HRIS systems. Consider pursuing an HR certification to strengthen your profile and meet experience requirements for generalist roles."
+  }
+}

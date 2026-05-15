@@ -1,0 +1,278 @@
+{
+  "persona": "03_tech_intern",
+  "method": "FAISS_PARSED",
+  "model": "gemini",
+  "run_timestamp": "2026-05-11T10:40:14.285105+00:00",
+  "results": [
+    {
+      "job_id": "3899537087",
+      "title": "NLP Engineer",
+      "company": "EA Team Inc",
+      "description": "Role: NLP EngineerLocation: Remote Job Description-As an NLP Engineer, You will extract, interpret, and synthesize an extremely diverse set of diagnostic lab data - with the goal to standardize this data, making it machine readable, interoperable, and more discoverable and accessible. Successful candidates will have a strong understanding of NLP techniques and hands on experience with JavaResponsibilitiesDesigning and developing NLP applications for medical entity extraction and text miningDesign Database to store NLP entities and relationshipUsing effective text representation techniques and classification algorithmsTraining and evaluating modelsDesign end to end java applicationsFind and implement the right algorithms and tools for NLP tasksPerform statistical analysis of results and refine modelsExtend ML libraries and frameworks to apply in NLP tasksRemain updated in the rapidly changing field of machine learning RequirementsClinical NLP experience (cTakes, UIMA)Strong Java development experienceDeep understanding of healthcare domainFamiliarity with Ontology tools and technologiesProven experience as an NLP Engineer or similar role/Track record in NLP/NLU and related technologiesUnderstanding of NLP techniques for text representation, semantic extraction techniques, data structures and modelingAbility to effectively design software architecture.Knowledge of Python, SQLAbility to write robust and testable code.Experience with machine learning frameworks (like Keras, BERT or opennlp) and libraries (like scikit-learn)An analytical mind with problem-solving abilities --- Regards, Gautam Sharmagautams@eateam.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3904991267",
+      "title": "Data Analyst - Programmer (Department of Translational Medicine and Human Genetics)",
+      "company": "University of Pennsylvania",
+      "description": "University Overview The University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023. Penn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play. The University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more. Posted Job Title Data Analyst - Programmer (Department of Translational Medicine and Human Genetics) Job Profile Title Data Analyst C Job Description Summary The Penn Medicine BioBank is seeking a talented and motivated Data Analyst to join our growing Clinical Informatics team. In this role, you will play a critical role in supporting research projects by harnessing the power of large-scale data. You will work closely with researchers, clinicians, and IT professionals to translate clinical questions into actionable data insights. Learn more about PMBB here: https://pmbb.med.upenn.edu/ Job Description The Penn Medicine BioBank is seeking a talented and motivated Data Analyst to join our growing Clinical Informatics team. In this role, you will play a critical role in supporting research projects by harnessing the power of large-scale data. You will work closely with researchers, clinicians, and IT professionals to translate clinical questions into actionable data insights. Learn more about PMBB here: https://pmbb.med.upenn.edu/ The primary role of the Data Analyst at Penn Medicine BioBank is to manage and analyze data from electronic health records and to support and enhance clinical informatics and bioinformatics research. This role encompasses providing informatics support, developing pipelines for data processing, ensuring data quality, and creating datasets for collaborative research efforts. Duties Provide informatics support on research projects, including:Design and implementation of large-scale data studiesAnalysis of complex datasets from various sources (Electronic Health Records, surveys)Develop custom tools using programming languages (Python, R, Java) for:Data cleaning and conversionAdvanced data analysisAssist in developing complex EHR-based phenotype definitions using clinical ontologies (ICD-9/10, CPT, LOINC, OMOP, RxNorm)Prepare datasets for analysis by other investigatorsImplement data quality assurance procedures to ensure data validity and reliability. ***Contingent upon funding*** Qualifications Bachelor of Science and 2 to 3 years of experience or equivalent combination of education and experience is required.Experience in Computer Science, Data Science, Informatics, Bioinformatics, Biostatistics, or equivalent.Experience in Python and R programming language requiredExperience with SQL and databases requiredExperience with machine learning and data science a plusAbility to work independently and apply critical thinking and sound judgmentExcellent organizational and time management skillsAbility to work with a multi-disciplinary team and communicate effectively Job Location - City, State Philadelphia, Pennsylvania Department / School Perelman School of Medicine Pay Range $51,824.00 - $73,581.00 Annual Rate Salary offers are made based on the candidate\u2019s qualifications, experience, skills, and education as they directly relate to the requirements of the position, as well as internal and market factors and grade profile. Affirmative Action Statement Penn adheres to a policy that prohibits discrimination on the basis of race, color, sex, sexual orientation, gender identity, religion, creed, national or ethnic origin, citizenship status, age, disability, veteran status, or any other legally protected class. Special Requirements Background check required after a conditional job offer is made. Consideration of the background check will be tailored to the requirements of the job. University Benefits Health, Life, and Flexible Spending Accounts: Penn offers comprehensive medical, prescription, behavioral health, dental, vision, and life insurance benefits to protect you and your family\u2019s health and welfare. You can also use flexible spending accounts to pay for eligible health care and dependent care expenses with pre-tax dollars.Tuition: Take advantage of Penn's exceptional tuition benefits. You, your spouse, and your dependent children can get tuition assistance here at Penn. Your dependent children are also eligible for tuition assistance at other institutions.Retirement: Penn offers generous retirement plans to help you save for your future. Penn\u2019s Basic, Matching, and Supplemental retirement plans allow you to save for retirement on a pre-tax or Roth basis. Choose from a wide variety of investment options through TIAA and Vanguard.Time Away from Work: Penn provides you with a substantial amount of time away from work during the course of the year. This allows you to relax, take vacations, attend to personal affairs, recover from illness or injury, spend time with family\u2014whatever your personal needs may be.Long-Term Care Insurance: In partnership with Genworth Financial, Penn offers faculty and staff (and your eligible family members) long-term care insurance to help you cover some of the costs of long-term care services received at home, in the community or in a nursing facility. If you apply when you\u2019re newly hired, you won\u2019t have to provide proof of good health or be subject to underwriting requirements. Eligible family members must always provide proof of good health and are subject to underwriting.Wellness and Work-life Resources: Penn is committed to supporting our faculty and staff as they balance the competing demands of work and personal life. That\u2019s why we offer a wide variety of programs and resources to help you care for your health, your family, and your work-life balance.Professional and Personal Development: Penn provides an array of resources to help you advance yourself personally and professionally.University Resources: As a member of the Penn community, you have access to a wide range of University resources as well as cultural and recreational activities. Take advantage of the University\u2019s libraries and athletic facilities, or visit our arboretum and art galleries. There\u2019s always something going on at Penn, whether it\u2019s a new exhibit at the Penn Museum, the latest music or theater presentation at the Annenberg Center, or the Penn Relays at Franklin Field to name just a few examples. As a member of the Penn community, you\u2019re right in the middle of the excitement\u2014and you and your family can enjoy many of these activities for free.Discounts and Special Services: From arts and entertainment to transportation and mortgages, you'll find great deals for University faculty and staff. Not only do Penn arts and cultural centers and museums offer free and discounted admission and memberships to faculty and staff. You can also enjoy substantial savings on other goods and services such as new cars from Ford and General Motors, cellular phone service plans, movie tickets, and admission to theme parks.Flexible Work Hours: Flexible work options offer creative approaches for completing work while promoting balance between work and personal commitments. These approaches involve use of non-traditional work hours, locations, and/or job structures.Penn Home Ownership Services: Penn offers a forgivable loan for eligible employees interested in buying a home or currently residing in West Philadelphia, which can be used for closing costs or home improvements.Adoption Assistance: Penn will reimburse eligible employees on qualified expenses in connection with the legal adoption of an eligible child, such as travel or court fees, for up to two adoptions in your household. To learn more, please visit: https://www.hr.upenn.edu/PennHR/benefits-pay",
+      "location": "Philadelphia, PA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 51824.0,
+      "max_salary": 73581.0,
+      "url": "https://wd1.myworkdaysite.com/recruiting/upenn/careers-at-penn/job/HUP/Data-Analyst---Programmer--Department-of-Translational-Medicine-and-Human-Genetics-_JR00086985-1?source=LinkedIn_JobPosting",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3904426905",
+      "title": "Data Scientist",
+      "company": "Scripps Health",
+      "description": "This is a full-time, hybrid position located in San Diego and offers Scripps Health\u2019s award-winning benefit package. Join the Scripps Health team and work alongside passionate caregivers and provide patient-centered healthcare. Receive endless appreciation while you build a rewarding career with one of the most respected healthcare organizations nationwide. Why join Scripps Health? Award-winning Workplace #5 in Fortune Best Workplaces in Health Care 2023#78 in 2023 PEOPLE Companies that Care#95 in Fortune 100 Best Companies to Work for 2023Recognized by Newsweek as one of America\u2019s Greatest Workplaces for Diversity in 2024Nearly a quarter of our employees have been with Scripps Health for over 10 years. We are looking for a sharp, strong communicator with a high degree of emotional intelligence who can provide strategic and technical input alongside excellent customer service. The Data Scientist will provide advanced, integrated analytics in support of organizational objectives. Source, manage, and analyze large amounts of unstructured data; synthesize and communicate results to facilitate data-driven decision making. Partner with internal and external constituents to understand key requirements, plan and execute projects, and produce actionable data to support strategic initiatives and drive continuous performance improvement. Design data modeling processes, create algorithms and predictive models to extract key data, and analyze the data and share insights with clinical, operational, and business stakeholders. The right candidate will have a passion for discovering solutions hidden in large data sets and working with customers to improve outcomes and performance. Required Education/Experience/Specialized Skills Bachelor's degree.Experience with different healthcare data sources (medical claims, authorizations, pharmacy, provider, membership).Experience with statistical modeling and interpretations of complex data.Experience in analyzing any of the following: Medical expenses & utilization trends, RAF Scores, Comorbidities & disease burden, Healthcare quality measures.Excellent critical and analytical thinking, customer service skills, and strong written and verbal communication skills.Experience in R, Python, or SAS programming.Intermediate knowledge of SQL, ETL, data modeling, and reporting technologies. Intermediate knowledge of Power BI or Tableau.Must have knowledge and skills necessary to explain complex concepts to team members and leadership.Ability to work both independently and collaboratively as part of a team. Preferred Education/Experience/Specialized Skills/Certification Master's Degree in related field (Data Science, Quantitative, Clinical, or Engineering).Experience in working with financial datasets (e.g., accounting, health plan claims, P&L).Prior experience with Epic data structures and reporting environments.Experience in predictive modeling for clinical intelligence.Experience in market intelligence and financial projections.Background or interest in AI, machine learning intelligence. Scripps Health is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, religion, color, national origin, sex (including pregnancy, sexual orientation, or gender identity/expression), age, marital status, status as a protected veteran, among other things, or status as a qualified individual with disability. Position Pay Range: $46.88-$70.33/hour",
+      "location": "San Diego, CA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 46.88,
+      "max_salary": 70.33,
+      "url": "https://careers.scripps.org/job/20271336?src=JB-10104",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3904389544",
+      "title": "Data Scientist",
+      "company": "Unified Women's Healthcare",
+      "description": "Overview Lucina Analytics, a partner of Unified Women's Healthcare, is a data-driven, enterprise SaaS company that delivers the leading women\u2019s maternity analytics platform to innovative health plans, providers, and public entities. The Data Scientist will join the data analytics team and collaborate in building models or developing methodologies to support Lucina\u2019s maternal health solutions. The ideal candidate will have experience in using, manipulating, and extracting insights from healthcare data with a particular focus on using machine learning with claims data. The applicant will be driven by curiosity, collaborating with a cross-functional team of Product Managers, Software Engineers, and Data Analysts. Responsibilities Apply data science, machine learning, and healthcare domain expertise to advance and oversee Lucina\u2019s pregnancy identification and risk-scoring algorithms.Analyze healthcare data to study patterns of care and patient conditions which correlate to specific outcomes.Collaborate on clinical committee research and development work.Complete ad hoc analyses and reports from internal or external customers prioritized by management throughout the year. Qualifications Degree or practical experience in Applied Math, Statistics, Engineering, Information Management with 3 or more years of data analytics experience, Masters degree a plus.Experience manipulating and analyzing healthcare data (payer\u2019s claims experience a plus)Strong communication skills with ability to describe complex ideas to key stakeholdersA proven track record applying Data Science to healthcare data. Technical skills include, but are not limited to, regression models, classification techniques, decision trees, clustering, pattern recognition, supervised and unsupervised learning, the bias-variance tradeoff, and neural networksExperience with clinical design patterns and causal modeling techniques (e.g., GLM methods, propensity score matching, etc.) a plusProficiency in Python and core data science libraries such as Pandas, SciKit-Learn, NumPy, Matplotlib, SciPy, and Keras.Advanced SQL and experience working with relational databases and data warehousesExperience with two or more of the following: SQL Server, SQL Data Warehouse Appliance, Netezza, Hadoop, Spark, Snowflake, Tableau, Power BI, or similar data technologies.AWS, Azure, GCP or similar cloud experience a plusFamiliarity with CI/CD and Git (commits, pushes, branching, and pull requests) a plusExperience with Databricks or PySpark a plus",
+      "location": "Florida, United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.unifiedwomenshealthcare.com/jobs/6999?lang=en-us&iis=Job%20Board&iisn=LinkedIn",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3902363405",
+      "title": "Data Curation Engineer",
+      "company": "Planet Pharma",
+      "description": "Job Description Target PR Range: 34-44/hr Depending on experience What are the top 3-5 skills, experience or education required for this position: PostgreSQL Bioinformatics datasets (BulkRNAseq, CRISPR) Python/R Common data models Code management and documentation As a Data Curation Engineer in the Genomics Research Center, you will be responsible for building and running workflows to load and manage high-value datasets in a centralized environment. You will work closely with Bioinformatics Engineering, as well as bioinformatics research scientists to identify data sources and requirements for loading and querying. Your expertise in PostgreSQL for database management and Python and R for scripting and automation will be crucial in developing and maintaining ETL processes to ensure data quality and integrity. Responsibilities Develop and implement workflows to load and manage genomic data. Work with researchers and data scientists to identify data sources and requirements for loading new datasets. Maintain existing data models for storing and querying genomic data. Develop and maintain ETL processes to ensure data quality and integrity. Build and maintain scripts for automation of data loading and processing. Qualifications Bachelor's degree in computer science, bioinformatics, or a related field +3 years of experience. Experience with building and running workflows for RDMS data loading and ETL processes. Proficient in SQL and ability to write complex queries for data extraction and analysis. Strong programming skills in Python for scripting and automation. Additional experience with R is preferred. Familiarity with genomic data formats and databases commonly used in bioinformatics research. Knowledge of data modeling concepts and implementing common data models in a relational database. Familiarity with data cleaning, normalization, and quality control processes. Excellent communication skills and ability to collaborate with researchers and stakeholders.CO/NYC candidates might not be considered The Planet Group of Companies is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.",
+      "location": "North Chicago, IL",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.planet-pharma.com/Data-Curation-Engineer-Jobs-in-North-Chicago-IL/11065959",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3904500419",
+      "title": "Clinical data scientist",
+      "company": "SSi People",
+      "description": "Title -Data Scientist I (Clinical) Location - Waltham, Massachusetts Contract - Months with possible extension ResponsibilitiesAnalyze raw data: assessing quality, cleansing, structuring for downstream processingDesign accurate and scalable prediction algorithmsCollaborate with engineering team to bring analytical prototypes to productionGenerate actionable insights for business improvements Qualifications Degree 1-3 Years of Experience (industry experience required for years) or Ph.D. Degree 0-2 Years of Experience (in school experience will be considered)with scientists to define/understand work and data pipelines in-labBenchling protocols and templates to capture necessary data and align across teams.Have coding experience SQL, Python, and LIMS Lab Information Systemexperience, industry setting (biotech)Experience (or Gene Data or comparable), Bench Experience in Molecular Biology",
+      "location": "Waltham, MA",
+      "experience_level": "Associate",
+      "work_type": "Contract",
+      "min_salary": 50.0,
+      "max_salary": 55.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3885828639",
+      "title": "Clinical Adoption Data Scientist",
+      "company": "Philips",
+      "description": "Job Title Clinical Adoption Data Scientist Job Description Clinical Adoption Data Scientist You will be responsible for working with clinical and technical experts to develop advanced reports on patient monitoring system usage, adoption and clinical impact for customers. These reports will contribute to the performance dashboard helping customers and Philips understand usage, adoption and achievement of desired outcomes in areas never measured previously. You will work with technical and clinical experts in order to understand and identify data signatures and sources needed for algorithm development and performance reporting. You will participate in various activities around clinical decision support, operational workflow improvement, and other healthcare-related applications, focusing on research, development, and evaluation of first-of-kind and prototypes for clinicians and other relevant partners, which will help make better and informed decisions, improving patient care, optimizing clinical and operational outcomes in clinical workflows. Your role: Measures how customers are using Philips technology through advanced data analytics on usage, adoption of workflows and achievement of outcomes by: Defining data flows and schemaDefining clinical and technical analyticsWriting scripts and queriesCreating compelling, dynamic data visualizations Collaborates with customers and Philips experts on advancing our digital understanding of customer usage and adoption of patient monitoring solutions.Reports on internal performance measures, including asset utilization, service and equipment costs, as well as volume and revenue to plan that are critical to profitability: Identify data sources, interfaces and analyticsDefine inventory tracking methodology & market inventory management analytics Identify data sources, interfaces and analytics Publish customer scorecard internally Develops new concepts, build proof-of-concept demonstrators and validate results with customer and field teams.Interacts with business partners and customers to understand their problems, share insights and validated practices.Identify gaps and data needs that limit successful measurements of the designed experienceCollaborate with other solution and functional teams (e.g., commercial operations, professional services, clinical education, financial administration) to find practical and ambitious solutions to these gaps and aspirations.Identify critical success metrics with which to gauge the relative performance and progress of our managed service customers over time. You're the right fit if: You\u2019ve acquired 7+ programming, data visualization, and healthcare informatics experience as well as knowledge of physiologic monitoring systems.Your skills include database design, modeling and dynamic visualization, Proficiency with R and/or Python libraries commonly used in data science, Python programming experience, hospital data flows such as CPOE, EMR, RIS, LIS and PACS. Experience in related data format standards such as HL7, DICOM, FHIR and IHE, healthcare terms and classifications (SNOMED CT, ICD10); high affinity with applying new IT platforms/dash boarding software tools for reporting and experience.You have a Master\u2019s Degree in Computer Sciences, Biomedical Engineering, Bioinformatics, or a related field OR 10 years of work experience, preferred.You must be able to successfully perform the following minimum Physical, Cognitive and Environmental job requirements with or without accommodation for this position.You also need to have the ability to work with cross-functional teams, be self-motivated, committing to results and be flexible and quick-learning. You also should have excellent verbal and written communication skills, ability to manage complex projects along with demonstrated operational analytics and financial analysis capabilities. About Philips We are a health technology company. We built our entire company around the belief that every human matters, and we won't stop until everybody everywhere has access to the quality healthcare that we all deserve. Do the work of your life to help improve the lives of others. Learn more about our business.Discover our rich and exciting history.Learn more about our purpose.Read more about our employee benefits. If you\u2019re interested in this role and have many, but not all, of the experiences needed, we encourage you to apply. You may still be the right candidate for this or other opportunities at Philips. Learn more about our commitment to diversity and inclusion here. Additional Information US work authorization is a precondition of employment. The company will not consider candidates who require sponsorship for a work-authorized visa, now or in the future. Company relocation benefits will not be provided for this position. For this position, you must reside in or within commuting distance to the locations listed. This requisition is expected to stay active for 45 days but may close earlier if a successful candidate is selected or business necessity dictates. Interested candidates are encouraged to apply as soon as possible to ensure consideration. Philips is an Equal Employment and Opportunity Employer/Disabled/Veteran and maintains a drug-free workplace.",
+      "location": "Cambridge, MA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Cambridge/Clinical-Adoption-Data-Scientist_522971/?source=Linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 55.0
+    },
+    {
+      "job_id": "3906224386",
+      "title": "Assistant/Associate/Full Specialist- Quigley lab",
+      "company": "University of California, San Francisco",
+      "description": "Position Description The Quigley lab is a primarily computational group that studies how tumors develop resistance to cancer therapies. We are seeking a staff bioinformatician for projects that define how resistance to targeted therapy arises, and how genomic and epigenomic alterations determine which patients will benefit from a therapy. Recent projects from our group have been published in Cell, Nature Genetics, and Cancer Discovery (see https://quigleylab.ucsf.edu ). The candidate will work in a collaborative environment to develop one or more projects using a combination of DNA, transcriptome, and epigenomics assays. Most of our data are unpublished. Current projects include single nucleus RNA & ATAC-seq analysis, perturb-seq, and spatial transcriptomics. Required Qualifications Assistant Specialist- Master\u2019s degree or a baccalaureate degree with 3 or more years of research experience.Associate Specialist- Master\u2019s degree (or equivalent degree) or five to ten years of experience in the relevant specializationFull Specialist- Terminal degree (or equivalent degree) or ten or more years of experience in the relevant specialization Basic Skills Required At least three years of experience programming with R or Python.Willingness and ability to learn new methods and skills for changing research priorities. Excellent organizational and interpersonal communication skills (verbal and written) Preferred Qualifications Strong command of using Unix Probability & statistics for data analysis, particularly linear models and permutation Prior experience analyzing DNA variation and RNA-seq. Experience combining transcriptomic and epigenomic analysis (one or more of ATAC-seq, ChIP-seq, or methylation data) is highly desirable.Familiarity with molecular biology & cancer genetics concepts Analysis of single cell transcriptomic data Experience applying machine learning methods to interpret biological dataPrior experience applying bioinformatics to problems in cancer biology Please apply online at https://aprecruit.ucsf.edu/JPF05053 , with a CV, cover letter, and three references. See Table 24B for the salary range for this position. A reasonable estimate for this position is $59,200-$181,800. Document Requirements Curriculum Vitae - CV must clearly list current and/or pending qualifications (e.g. board eligibility/certification, medical licensure, etc.). Cover Letter Misc / Additional (Optional) Reference Requirements 3 required (contact information only) As a University employee, you will be required to comply with all applicable University policies and/or collective bargaining agreements, as may be amended from time to time. Federal, state, or local government directives may impose additional requirements. UC San Francisco seeks candidates whose experience, teaching, research, or community service has prepared them to contribute to our commitment to diversity and excellence. The University of California is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, age or protected veteran status. San Francisco, CA",
+      "location": "San Francisco, CA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://aprecruit.ucsf.edu/JPF05053",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 52.0
+    },
+    {
+      "job_id": "3895521876",
+      "title": "Software Engineer, Automation & Tooling",
+      "company": "HubSpot",
+      "description": "The HubSpot People Operations Data Group is dedicated to helping HubSpot \"Grow Better\" by empowering its employees to \"Grow Better.\" As HubSpot continues to expand, the People Operations Data Group needs to scale along with it. To accomplish this, we are dedicated to investing in enhanced processes and automations that will empower our Data Analysts and ML/AI Engineers to generate valuable insights for HubSpot. As HubSpot scales, we aim to streamline operations by leveraging tooling and automation, reducing time/effort spend on cumbersome and repetitive tasks. We are seeking a software engineer with a diverse background, who can operate independently and deliver results. While some tools & automations will involve creating simple UIs for employee use, other will entail developing scripts and services to facilitate tasks such as data movement/pipelining, scheduled interactions with APIs and data platform monitoring/alerting. This is *not a QA engineering role*. It is a challenging and dynamic software engineering role in which the main focus is in making our Data Analytics platform as robust as possible and giving our \u201cData People\u201d (data analysts, ML engineers, data scientists), the support they need to generate great insights for HubSpot. Despite HubSpot's size, our team operates as a small, independent unit within the company. The ideal candidate will demonstrate resourcefulness in integrating various technologies to solve complex problems. The diverse range of projects ensures that this role remains challenging and dynamic, steering clear of repetitive tasks. Key Responsibilities Develop custom tools and scripts using languages (Python, Ruby, Bash, and Go, Node.JS etc.,)Assist in data ingestion, cleansing, transformation, and movement (API scraping, Kafka, S3, Lambda, Snowpipe, , AWS Glue, etc.,)Manage, monitor, and deploy code (EC2, Kubernetes, Docker, Jenkins, and Airflow, etc.,)Engage in \"Skinny UI/UX\" development for internal use (JavaScript, React, Flask, and Django , etc.,)Establish infrastructure and proper processes for ML model training (Sagemaker, SnowPark, Jupyter , etc.,) Qualifications Excellent coding skills. Python/Java preferredAbility to build/manage UIs (Front-end and Back-end), and deploy & schedule utility scripts/sservicesDemonstrated ability to learn and adapt quickly, with a strong desire to explore new tools & technologiesTechnologically creative mindset, capable of architecting innovative solutions even in the absence of detailed technical specificationsCommitment to continuous improvement and making processes more efficient for the futureStrong prioritization skills, with the ability to assess effort versus benefit and make informed decisions We know the confidence gap and imposter syndrome can get in the way of meeting spectacular candidates, so please don\u2019t hesitate to apply \u2014 we\u2019d love to hear from you. If you need accommodations or assistance due to a disability, please reach out to us using this form. This information will be treated as confidential and used only for the purpose of determining an appropriate accommodation for the interview process. Germany Applicants: (m/f/d) - link to HubSpot's Career Diversity page here. About HubSpot HubSpot (NYSE: HUBS) is a leading customer relationship management (CRM) platform that provides software and support to help businesses grow better. We build marketing, sales, service, and website management products that start free and scale to meet our customers\u2019 needs at any stage of growth. We\u2019re also building a company culture that empowers people to do their best work. If that sounds like something you\u2019d like to be part of, we\u2019d love to hear from you. You can find out more about our company culture in the HubSpot Culture Code, which has more than 5M views, and learn about our commitment to creating a diverse and inclusive workplace, too. Thanks to the work of every employee globally, HubSpot was named the #2 Best Place to Work on Glassdoor in 2022, and has been recognized for award-winning culture by Great Place to Work, Comparably, Fortune, Entrepreneur, Inc., and more. Headquartered in Cambridge, Massachusetts, HubSpot was founded in 2006. Today, thousands of employees work across the globe in HubSpot offices and remotely. Visit our careers website to learn more about culture and opportunities at HubSpot. By submitting your application, you agree that HubSpot may collect your personal data for recruiting, global organization planning, and related purposes. HubSpot's Privacy Notice explains what personal information we may process, where we may process your personal information, our purposes for processing your personal information, and the rights you can exercise over HubSpot\u2019s use of your personal information.",
+      "location": "United States",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://app.greenhouse.io/embed/job_app?token=5555685&gh_src=240b46771",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 45.0
+    },
+    {
+      "job_id": "3901936390",
+      "title": "Data Scientist (Medical)",
+      "company": "PSRTEK",
+      "description": "Role: Natural Language Processing (NLP) Scientist Location \u2013 Remote The required skills for this position are:Natural Language Processing (NLP)Python (Programming Language)Statistical ModelingHigh-Performance Liquid Chromatography (HPLC)Java Job Description:We are seeking a highly skilled NLP Scientist to develop our innovative and cutting-edge NLP/AI solutions to empower life science. This involves working directly with our clients, as well as cross-functional Biomedical Science, Engineering, and Business leaders, to identify, prioritize, and develop NLP/AI and Advanced analytics products from inception to delivery.Key Responsibilities:Lead the research, strategy, design, and implementation of NLP/AI products from prototype to deployment.Collaborate closely with internal teams and external clients to understand requirements and design innovative NLP/AI solutions.Develop and validate cutting-edge NLP algorithms, including large language models tailored for healthcare and biopharma use cases.Translate complex technical insights into accessible language for non-technical stakeholders.Mentor junior team members, fostering a culture of continuous learning and growth.Publish findings in peer-reviewed journals and conferences.Engage with the broader scientific community by attending conferences, workshops, and collaborating on research projects. Qualifications:Ph.D. or master's degree in biomedical NLP, Computer Science, Biomedical Informatics, Computational Linguistics, Mathematics, or other related fieldsPublication records in leading computer science or biomedical informatics journals and conferences are highly desirable Regards,Guru Prasath M US IT RecruiterPSRTEK Inc.Princeton, NJ 08540guru@psrtek.comNo: 609-917-9967 Ext:114",
+      "location": "Fairfax County, VA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 75.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level Data Scientist with a Master's degree and 1 year of research experience in Clinical NLP. Strengths include data preprocessing, NLP experiments, and development with Python, PyTorch, and SQL in biomedical contexts.",
+    "job_explanations": [
+      {
+        "job_id": "3899537087",
+        "title": "NLP Engineer",
+        "company": "EA Team Inc",
+        "match_reason": "Strong match. The role is an NLP Engineer specifically requiring \"Clinical NLP experience,\" which directly aligns with the candidate's background as a \"Research Assistant In Clinical NLP.\" The candidate's skills in Python, SQL, Java, and experience with Machine Learning (PyTorch) meet the core technical requirements for designing and developing NLP applications for medical entity extraction.",
+        "missing_skills": [
+          "cTakes",
+          "UIMA"
+        ]
+      },
+      {
+        "job_id": "3904991267",
+        "title": "Data Analyst - Programmer (Department of Translational Medicine and Human Genetics)",
+        "company": "University of Pennsylvania",
+        "match_reason": "Strong match. This entry-level Data Analyst role in a translational medicine department is a good fit for the candidate's biomedical domain focus. The requirement for a \"Bachelor of Science and 2 to 3 years of experience or equivalent combination\" is met by the candidate's Master's degree in Data Science and 1 year of relevant experience. Required skills in Python, R, and SQL are all present in the CV.",
+        "missing_skills": [
+          "ICD-9/10",
+          "CPT",
+          "LOINC",
+          "OMOP",
+          "RxNorm"
+        ]
+      },
+      {
+        "job_id": "3904426905",
+        "title": "Data Scientist",
+        "company": "Scripps Health",
+        "match_reason": "Partial match. This entry-level Data Scientist role is in the correct healthcare domain. The candidate's skills in Python, R, and SQL are a good fit. However, the role requires experience with specific healthcare data sources like \"medical claims, authorizations, pharmacy,\" which differs from the candidate's background in \"Biomedical Scientific Datasets\" and clinical text.",
+        "missing_skills": [
+          "Power BI",
+          "Tableau",
+          "Medical claims data analysis"
+        ]
+      },
+      {
+        "job_id": "3904389544",
+        "title": "Data Scientist",
+        "company": "Unified Women's Healthcare",
+        "match_reason": "Poor match. This role has a significant seniority mismatch, requiring \"3 or more years of data analytics experience,\" whereas the candidate has 1 year. This is a primary disqualifier. Additionally, the role focuses on \"payer\u2019s claims experience,\" which is a specific domain knowledge gap for the candidate.",
+        "missing_skills": [
+          "3+ years of experience",
+          "Payer claims data analysis",
+          "Databricks"
+        ]
+      },
+      {
+        "job_id": "3902363405",
+        "title": "Data Curation Engineer",
+        "company": "Planet Pharma",
+        "match_reason": "Poor match. While the candidate's skills in \"Data Curation\" and \"Data Cleaning\" align with the job title, there are two major mismatches. First, the role requires \"+3 years of experience,\" a seniority mismatch for the candidate's 1 year. Second, the domain is specific to \"Bioinformatics datasets (BulkRNAseq, CRISPR),\" which is different from the candidate's Clinical NLP experience.",
+        "missing_skills": [
+          "3+ years of experience",
+          "PostgreSQL",
+          "Genomic data analysis (BulkRNAseq, CRISPR)"
+        ]
+      },
+      {
+        "job_id": "3904500419",
+        "title": "Clinical data scientist",
+        "company": "SSi People",
+        "match_reason": "Partial match. The \"Clinical data scientist\" title and \"Associate\" level are a good fit. The 1-3 years of experience requirement is met by the candidate's 1 year of experience. The candidate has the required SQL and Python skills. However, the role explicitly requires experience with specific lab information systems that the candidate does not list.",
+        "missing_skills": [
+          "LIMS (Lab Information System)",
+          "Benchling"
+        ]
+      },
+      {
+        "job_id": "3885828639",
+        "title": "Clinical Adoption Data Scientist",
+        "company": "Philips",
+        "match_reason": "Poor match. The reranker_score of 55 reflects a significant seniority mismatch. The job requires \"7+ programming, data visualization, and healthcare informatics experience,\" which is a primary disqualifier for a candidate with 1 year of experience. The role's focus on system usage adoption and performance dashboards is also different from the candidate's NLP model development background.",
+        "missing_skills": [
+          "7+ years of experience",
+          "Data visualization tools",
+          "HL7",
+          "DICOM",
+          "FHIR"
+        ]
+      },
+      {
+        "job_id": "3906224386",
+        "title": "Assistant/Associate/Full Specialist- Quigley lab",
+        "company": "University of California, San Francisco",
+        "match_reason": "Poor match. The reranker_score of 52 indicates a weak fit, primarily due to a domain mismatch. While the candidate qualifies for the \"Assistant Specialist\" level with a Master's degree, the lab's focus is on cancer genomics and epigenomics (\"single nucleus RNA & ATAC-seq analysis\"). This is a different specialization from the candidate's background in Clinical NLP.",
+        "missing_skills": [
+          "Genomic data analysis (ATAC-seq, ChIP-seq, RNA-seq)",
+          "Cancer genetics"
+        ]
+      },
+      {
+        "job_id": "3895521876",
+        "title": "Software Engineer, Automation & Tooling",
+        "company": "HubSpot",
+        "match_reason": "Poor match. The reranker_score of 45 reflects a complete domain mismatch. This is a generalist software engineering role for a People Operations (HR) data group, which is unrelated to the candidate's specialized background in Clinical NLP and biomedical data. The required skills in UI development and broad cloud services also represent a significant gap.",
+        "missing_skills": [
+          "UI/UX development (React, Flask)",
+          "CI/CD tools (Jenkins, Docker)",
+          "Cloud services (AWS Glue, Kafka)"
+        ]
+      },
+      {
+        "job_id": "3901936390",
+        "title": "Data Scientist (Medical)",
+        "company": "PSRTEK",
+        "match_reason": "Strong match. This \"Natural Language Processing (NLP) Scientist\" role for life sciences is an excellent fit. It requires a Master's degree and skills in NLP, Python, and Statistical Modeling, all of which are core to the candidate's profile. The focus on developing NLP/AI solutions for healthcare and biopharma use cases aligns perfectly with the candidate's experience and education.",
+        "missing_skills": [
+          "High-Performance Liquid Chromatography (HPLC)"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "cTakes",
+      "UIMA",
+      "ICD-9/10"
+    ],
+    "recommendation": "Focus job applications on 'Clinical NLP' or 'Medical Data Scientist' roles requiring 0-2 years of experience to align with your strong background. To broaden opportunities, consider projects or certifications in healthcare data standards (like FHIR or claims data) and popular clinical NLP frameworks like cTakes."
+  }
+}

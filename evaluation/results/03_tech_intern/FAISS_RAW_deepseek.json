@@ -1,0 +1,266 @@
+{
+  "persona": "03_tech_intern",
+  "method": "FAISS_RAW",
+  "model": "deepseek",
+  "run_timestamp": "2026-05-11T10:35:06.899957+00:00",
+  "results": [
+    {
+      "job_id": "3899537087",
+      "title": "NLP Engineer",
+      "company": "EA Team Inc",
+      "description": "Role: NLP EngineerLocation: Remote Job Description-As an NLP Engineer, You will extract, interpret, and synthesize an extremely diverse set of diagnostic lab data - with the goal to standardize this data, making it machine readable, interoperable, and more discoverable and accessible. Successful candidates will have a strong understanding of NLP techniques and hands on experience with JavaResponsibilitiesDesigning and developing NLP applications for medical entity extraction and text miningDesign Database to store NLP entities and relationshipUsing effective text representation techniques and classification algorithmsTraining and evaluating modelsDesign end to end java applicationsFind and implement the right algorithms and tools for NLP tasksPerform statistical analysis of results and refine modelsExtend ML libraries and frameworks to apply in NLP tasksRemain updated in the rapidly changing field of machine learning RequirementsClinical NLP experience (cTakes, UIMA)Strong Java development experienceDeep understanding of healthcare domainFamiliarity with Ontology tools and technologiesProven experience as an NLP Engineer or similar role/Track record in NLP/NLU and related technologiesUnderstanding of NLP techniques for text representation, semantic extraction techniques, data structures and modelingAbility to effectively design software architecture.Knowledge of Python, SQLAbility to write robust and testable code.Experience with machine learning frameworks (like Keras, BERT or opennlp) and libraries (like scikit-learn)An analytical mind with problem-solving abilities --- Regards, Gautam Sharmagautams@eateam.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 88.0
+    },
+    {
+      "job_id": "3891273725",
+      "title": "Research Engineer, Language Model Evaluations",
+      "company": "Hippocratic AI",
+      "description": "Hippocratic AI\u2019s mission is to develop the first safest focused Large Language Model (LLM) for healthcare. The company believes that a safe LLM can dramatically improve healthcare accessibility and health outcomes in the world by bringing deep healthcare expertise to every human. No other technology has the potential to have this level of global impact on health. The company was co-founded by CEO Munjal Shah, alongside a group of physicians, hospital administrators, healthcare professionals, and artificial intelligence researchers from El Camino Health, Johns Hopkins, Washington University in St. Louis, Stanford, Google, and Nvidia. Hippocratic AI has received a total of $120M in funding and is backed by leading investors, including General Catalyst, Andreessen Horowitz, Premji Invest, and SV Angel. About The Role We are looking for a Research Engineer to lead evaluations for Hippocratic AI\u2019s 1 trillion+ parameters constellation of Large Language Models. Your job will be to design and implement evaluations that allow Hippocratic AI to evaluate the performance and safety of our models. As a Research Engineer focused on Evaluation, you'll work closely with our research and applied science teams to design experiments and build evaluation infrastructure. You'll help validate performance and safety across a wide range of important tasks. You\u2019ll help to assure that our LLMs are well-benchmarked with known performance and safety on a wide range of healthcare related tasks, allowing us to compare against human feedback. Requirements: Python programming experience / machine learning research Have experience using Large Language Models, preferably have trained or fine tuned large models in the past. Are comfortable writing code Want to learn more about machine learning researchCare about patient safety You want to design and implement rigorous evaluations Preferred: Building user interfaces for data analysisDeveloping robust evaluation metrics for language modelsHandling textual dataset sourcing, curation, and processing tasks at scaleStatistics Representative projects: Designing and running a new evaluation that tests our model\u2019s reasoning capabilitiesLeading the vision of what it takes to safely evaluate patient safety in the world of Generative AIDevise a consistent but representative evaluation suite for healthcare conversationsRunning experiments to determine how prompting techniques affect results on industry benchmarksImproving the tooling that researchers use to implement evaluationsExplaining our evaluations and their results to internal decision makers and StakeholdersCollaborating with a research team to develop a robust evaluation for a new model capability they are developing",
+      "location": "Palo Alto, CA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3904991267",
+      "title": "Data Analyst - Programmer (Department of Translational Medicine and Human Genetics)",
+      "company": "University of Pennsylvania",
+      "description": "University Overview The University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023. Penn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play. The University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more. Posted Job Title Data Analyst - Programmer (Department of Translational Medicine and Human Genetics) Job Profile Title Data Analyst C Job Description Summary The Penn Medicine BioBank is seeking a talented and motivated Data Analyst to join our growing Clinical Informatics team. In this role, you will play a critical role in supporting research projects by harnessing the power of large-scale data. You will work closely with researchers, clinicians, and IT professionals to translate clinical questions into actionable data insights. Learn more about PMBB here: https://pmbb.med.upenn.edu/ Job Description The Penn Medicine BioBank is seeking a talented and motivated Data Analyst to join our growing Clinical Informatics team. In this role, you will play a critical role in supporting research projects by harnessing the power of large-scale data. You will work closely with researchers, clinicians, and IT professionals to translate clinical questions into actionable data insights. Learn more about PMBB here: https://pmbb.med.upenn.edu/ The primary role of the Data Analyst at Penn Medicine BioBank is to manage and analyze data from electronic health records and to support and enhance clinical informatics and bioinformatics research. This role encompasses providing informatics support, developing pipelines for data processing, ensuring data quality, and creating datasets for collaborative research efforts. Duties Provide informatics support on research projects, including:Design and implementation of large-scale data studiesAnalysis of complex datasets from various sources (Electronic Health Records, surveys)Develop custom tools using programming languages (Python, R, Java) for:Data cleaning and conversionAdvanced data analysisAssist in developing complex EHR-based phenotype definitions using clinical ontologies (ICD-9/10, CPT, LOINC, OMOP, RxNorm)Prepare datasets for analysis by other investigatorsImplement data quality assurance procedures to ensure data validity and reliability. ***Contingent upon funding*** Qualifications Bachelor of Science and 2 to 3 years of experience or equivalent combination of education and experience is required.Experience in Computer Science, Data Science, Informatics, Bioinformatics, Biostatistics, or equivalent.Experience in Python and R programming language requiredExperience with SQL and databases requiredExperience with machine learning and data science a plusAbility to work independently and apply critical thinking and sound judgmentExcellent organizational and time management skillsAbility to work with a multi-disciplinary team and communicate effectively Job Location - City, State Philadelphia, Pennsylvania Department / School Perelman School of Medicine Pay Range $51,824.00 - $73,581.00 Annual Rate Salary offers are made based on the candidate\u2019s qualifications, experience, skills, and education as they directly relate to the requirements of the position, as well as internal and market factors and grade profile. Affirmative Action Statement Penn adheres to a policy that prohibits discrimination on the basis of race, color, sex, sexual orientation, gender identity, religion, creed, national or ethnic origin, citizenship status, age, disability, veteran status, or any other legally protected class. Special Requirements Background check required after a conditional job offer is made. Consideration of the background check will be tailored to the requirements of the job. University Benefits Health, Life, and Flexible Spending Accounts: Penn offers comprehensive medical, prescription, behavioral health, dental, vision, and life insurance benefits to protect you and your family\u2019s health and welfare. You can also use flexible spending accounts to pay for eligible health care and dependent care expenses with pre-tax dollars.Tuition: Take advantage of Penn's exceptional tuition benefits. You, your spouse, and your dependent children can get tuition assistance here at Penn. Your dependent children are also eligible for tuition assistance at other institutions.Retirement: Penn offers generous retirement plans to help you save for your future. Penn\u2019s Basic, Matching, and Supplemental retirement plans allow you to save for retirement on a pre-tax or Roth basis. Choose from a wide variety of investment options through TIAA and Vanguard.Time Away from Work: Penn provides you with a substantial amount of time away from work during the course of the year. This allows you to relax, take vacations, attend to personal affairs, recover from illness or injury, spend time with family\u2014whatever your personal needs may be.Long-Term Care Insurance: In partnership with Genworth Financial, Penn offers faculty and staff (and your eligible family members) long-term care insurance to help you cover some of the costs of long-term care services received at home, in the community or in a nursing facility. If you apply when you\u2019re newly hired, you won\u2019t have to provide proof of good health or be subject to underwriting requirements. Eligible family members must always provide proof of good health and are subject to underwriting.Wellness and Work-life Resources: Penn is committed to supporting our faculty and staff as they balance the competing demands of work and personal life. That\u2019s why we offer a wide variety of programs and resources to help you care for your health, your family, and your work-life balance.Professional and Personal Development: Penn provides an array of resources to help you advance yourself personally and professionally.University Resources: As a member of the Penn community, you have access to a wide range of University resources as well as cultural and recreational activities. Take advantage of the University\u2019s libraries and athletic facilities, or visit our arboretum and art galleries. There\u2019s always something going on at Penn, whether it\u2019s a new exhibit at the Penn Museum, the latest music or theater presentation at the Annenberg Center, or the Penn Relays at Franklin Field to name just a few examples. As a member of the Penn community, you\u2019re right in the middle of the excitement\u2014and you and your family can enjoy many of these activities for free.Discounts and Special Services: From arts and entertainment to transportation and mortgages, you'll find great deals for University faculty and staff. Not only do Penn arts and cultural centers and museums offer free and discounted admission and memberships to faculty and staff. You can also enjoy substantial savings on other goods and services such as new cars from Ford and General Motors, cellular phone service plans, movie tickets, and admission to theme parks.Flexible Work Hours: Flexible work options offer creative approaches for completing work while promoting balance between work and personal commitments. These approaches involve use of non-traditional work hours, locations, and/or job structures.Penn Home Ownership Services: Penn offers a forgivable loan for eligible employees interested in buying a home or currently residing in West Philadelphia, which can be used for closing costs or home improvements.Adoption Assistance: Penn will reimburse eligible employees on qualified expenses in connection with the legal adoption of an eligible child, such as travel or court fees, for up to two adoptions in your household. To learn more, please visit: https://www.hr.upenn.edu/PennHR/benefits-pay",
+      "location": "Philadelphia, PA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": 51824.0,
+      "max_salary": 73581.0,
+      "url": "https://wd1.myworkdaysite.com/recruiting/upenn/careers-at-penn/job/HUP/Data-Analyst---Programmer--Department-of-Translational-Medicine-and-Human-Genetics-_JR00086985-1?source=LinkedIn_JobPosting",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3888938024",
+      "title": "iO Data Scientist",
+      "company": "Ochsner Health",
+      "description": "We've made a lot of progress since opening the doors in 1942, but one thing has never changed - our commitment to serve, heal, lead, educate, and innovate. We believe that every award earned, every record broken and every patient helped is because of the dedicated employees who fill our hallways. At Ochsner, whether you work with patients every day or support those who do, you are making a difference and that matters. Come make a difference at Ochsner Health and discover your future today! This job uses advanced and predictive data analytics using machine learning and artificial intelligence technology for healthcare innovation and outcomes. Performs analysis using data science techniques on structured and unstructured data sets and develops algorithms for targeted business needs. Pilots the delivery of patient-centered and personalized advanced analytics solutions that improve contract performance, program effectiveness, and clinical, financial, and utilization outcomes across the continuum of care. Implements advanced scientific techniques, forecasting, and machine learning to predict financial and clinical outcomes in order to guide investments that improve health outcomes and reduce costs. To perform this job successfully, an individual must be able to perform each essential duty satisfactorily. The requirements listed below are representative of the knowledge, skill, and/or ability required. Reasonable accommodations may be made to enable qualified individuals with disabilities to perform the essential duties. This job description is a summary of the primary duties and responsibilities of the job and position. It is not intended to be a comprehensive or all-inclusive listing of duties and responsibilities. Contents are subject to change at the company\u2019s discretion. Job Duties: Leads the design and deployment of computational algorithms, statistical methods, and predictive models. Uses machine learning techniques and statistical test, including Pearson correlation, Ttests and Anova statistical tests, for hypothesis testing to assess outcomes of interventions and clinical program. Uses supervised and unsupervised machine learning techniques such as regression, random forest, xgboost, clustering or causal inference techniques, such as hierarchical modeling and propensity score matching, to deliver analytics solutions and researches new methods to evaluate, improve and implement machine learning models to be used in clinical, operational, and corporate areas. Follows best practices for data science and software development (version control, testing, containerization) to create deployable models and repeatable analyses. Heads the creation and dissemination of data mining approaches that facilitate rapid, streamlined detection of outliers, novel patterns of association, and latent, causal connections in high-dimensional data sets. Serve as quantitative subject matter expert (SME) and mentor to colleagues and teammates, providing guidance related to project/program design, statistical methodology, model input/output selection, and interpretation of results. Works directly and maintains a relationship with aligned business partners in requirements definition, project scoping, timeline management, and documentation. Fosters relationships with internal and external stakeholders through regular engagement, communication, and consistent delivery of analytic work products. Authors technical reports, statistical analysis plans (SAP), white papers, enterprise presentations, and peer-reviewed abstracts, posters, and journal articles. Collaborates with data management team to identify required data assets and, in turn, to automate their sourcing, integration, and analysis. Performs other related duties as assigned. Travel as needed to New Orleans worksite 1 or 2 times per month, or more depending on the needs of the work. Employer: Ochsner Clinic Foundation Geographic area of employment: New Orleans, LA. May work remotely in U.S. but must meet physically in New Orleans 1-2 days per week. Education Required: Bachelor\u2019s degree in Data Analytics, Computer Science, Mathematics, Statistics, Economics, or biomedical informatics. Experience Required: 24 months in healthcare analytics, Data analyst, or graduate assistant. Other Requirements: Ability to communicate and present data analytics concepts to a non-technical audience. Experience must have included presenting data analytics to laypeople orally and in writing. At least 24 months coding in R, Python, SQL, or SAS. Applicants must reference REQ_ and apply online at www.ochsner.org/careers The above statements describe the general nature and level of work only. They are not an exhaustive list of all required responsibilities, duties, and skills. Other duties may be added, or this description amended at any time. Remains knowledgeable on current federal, state and local laws, accreditation standards or regulatory agency requirements that apply to the assigned area of responsibility and ensures compliance with all such laws, regulations and standards. This employer maintains and complies with its Compliance & Privacy Program and Standards of Conduct, including the immediate reporting of any known or suspected unethical or questionable behaviors or conduct; patient/employee safety, patient privacy, and/or other compliance-related concerns. The employer is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, or disability status. Physical and Environmental Demands The physical demands described here are representative of those that must be met by an employee to successfully perform the essential functions of this job. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions. Sedentary Work - Exerting up to 10 pounds of force occasionally (Occasionally: activity or condition exists up to 1/3 of the time) and/or a negligible amount of force frequently (Frequently: activity or condition exists from 1/3 to 2/3 of the time) to lift, carry, push, pull, or otherwise move objects. Sedentary work involves sitting most of the time but may involve walking or standing for brief periods of time. Jobs are sedentary if walking and standing are required only occasionally and all other sedentary criteria are met. Normal routine involves no exposure to blood, body fluid or tissue and as part of their employment, incumbents are not called upon to perform or assist in emergency care or first aid. The incumbent has no occupational risk for exposure to communicable diseases. Because the incumbent works within a healthcare setting, there may be occupational risk for exposure to hazardous medications or hazardous waste within the environment through receipt, transport, storage, preparation, dispensing, administration, cleaning and/or disposal of contaminated waste. The risk level of exposure may increase depending on the essential job duties of the role. Are you ready to make a difference? Apply Today! Ochsner Health does not consider an individual an applicant until they have formally applied to the open position on this careers website. Individuals who reside in and will work from the following areas are not eligible for remote work position: Colorado, California, Washington, and New York. Ochsner Health endeavors to make our site accessible to all users. If you would like to contact us regarding the accessibility of our website, or if you need an accommodation to complete the application process, please contact our HR Employee Solution Center at 504-842-4748 (select option 1) or careers@ochsner.org. This contact information is for accommodation requests only and cannot be used to inquire about the status of applications. We are proud to be an Equal Employment Opportunity and Affirmative Action employer. We are committed to the principles of equal employment opportunity and providing a workplace that is free from discrimination based on race, color, creed, religion, pregnancy status, pregnancy-related conditions, national origin, ancestry, mental or physical disability, medical condition, age, veteran status, military status, citizenship status, marital status, familial status, sexual orientation, gender, gender identity or expression, genetic information, political affiliation, unemployment status, or any other characteristic protected under applicable federal, state or local law. These protections extend to applicants and all employment related decisions. View the EEO is the Law poster and its supplement, as well as the pay transparency policy for more information. Affirmative Action Policy Statement",
+      "location": "New Orleans, LA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.ochsner.org/job/20214514/io-data-scientist-new-orleans-la/?APPLICANT_SOURCE=LinkedIn",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3904385647",
+      "title": "Data Science Intern, Summer 2024",
+      "company": "Edwards Lifesciences",
+      "description": "This Intern position is located in our corporate headquarters in Irvine, California. Please visit Edwards.com for information on our locations. Make a meaningful difference to patients around the world. Our University Programs are designed to help early-career professionals contribute to solutions that transform patient lives. We also believe in investing in the future of our talented people across the globe, including early career professionals seeking to explore and establish themselves within the medical device industry. We\u2019ll provide you with the opportunity to thrive in a dynamic environment where you can make innovative contributions. As a Data Science Intern with us, you\u2019ll find motivation and inspiration in a culture that emphasizes passion for patients as you discover your own strengths. How you will make an impact: Support business unit in data preparation.Utilize natural language processing (NLP) to automate data quality check on free text fields for ongoing clinical trials.Model development and support ongoing projects.Conduct advanced research and engineering for machine learning (ML) solutions for healthcare-related topics to support the development of a machine learning pipeline.Work with large-scale healthcare datasets to develop and test your ML models.Take advantage of models developed internally and/or available from the community to solve research problems in healthcare.Work closely with the data science and clinical teams to transfer your proof-of-concept research prototypes into meaningful features within our products. What you'll need (Required): Pursuing Bachelor's, Master's, or PhD degree in Computer Science, Data Science or Biomedical Engineering.Graduation date of December 2024 or later.Availability for an assignment for a minimum of 10 weeks over the course of the summer.Must be in good scholastic standing (3.0+ GPA or equivalent).Must not require company sponsorship for an employment-based visa now or in the future.Experience with data science or building machine learning models is required, specifically natural language processing (NLP). What else we look for (Preferred): Experience working with large language models (LLM) preferred.Experience with Python is a plus.Experience working in life sciences or medical device company.Knowledge of dashboard development.Possess strong technical writing skills.Showcase highly effective communication skills. Unique Benefits for Interns: Innovative & Industry Leading TechnologyAccelerated Career GrowthA Growing Global CompanyStretch AssignmentsMeaningful Projects with Real ImpactContinuous MentorshipCompetitive CompensationSubsidized HousingConversion Opportunities into our New Grad Programs following graduationOn-site Cafe, Gym, Basketball & Beach Volleyball CourtsGreat People & Beautiful Place to Work! Aligning our overall business objectives with performance, we offer competitive salaries, performance-based incentives, and a wide variety of benefits programs to address the diverse individual needs of our employees and their families. For California, the base pay range for this position is $54,000 - $72,000 (highly experienced). The pay for the successful candidate will depend on various factors (e.g., qualifications, education, prior experience). Edwards is an Equal Opportunity/Affirmative Action employer including protected Veterans and individuals with disabilities. COVID Vaccination Requirement Edwards is committed to complying with the requirements and guidance from our government authorities and to protecting our vulnerable patients and the healthcare providers who are treating them around the world. As such, all Healthcare Interacting positions require COVID-19 vaccination, which includes anyone who directly interfaces with patients and those who interact with healthcare providers as part of their role. If hired, as a condition of employment, you will be required to submit proof that you have been fully vaccinated for COVID-19, unless you request and are granted a medical or religious accommodation for exemption from the vaccination requirement. This vaccination requirement does not apply in countries where it is prohibited by law to impose vaccination. In countries where vaccines are less available, or other requirements exist, we may institute alternate measures that optimize patient safety and healthcare provider safety, which may include regular COVID testing or specific masking requirements.",
+      "location": "Irvine, CA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 54000.0,
+      "max_salary": 72000.0,
+      "url": "https://edwards.wd5.myworkdayjobs.com/en-US/EdwardsCareers/job/USA---California--Irvine/Data-Science-Intern--Summer-2024_Req-33010?source=Linkedin",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3885828275",
+      "title": "Data Scientist",
+      "company": "TEKsystems",
+      "description": "Top Skills' Details Passion for Machine Learning and Data Science and their fundamentals Research and quantitative analysis of AI risk management Development of data science algorithms using Python Documentation Would prefer someone who has a strong understanding or at least a passion for AI Risk Management. Description This is a Data Scientist role in Chat and Voice Technology team. The team builds next generation AI and Search platforms for the bank, enabling smart virtual assistants across multiple channels and platforms. This position requires candidate to be well versed with various machine learning algorithms and NLP techniques, including LLM and Generative AI techniques. Role offers an opportunity to work with seasoned architects, PhDs in Machine Learning and NLP, Software Engineers, and Risk Management partners. Candidate should be able to work independently and collaboratively to take ownership of prepare models for validation and monitoring. Candidate must possess passion for machine learning and data analysis, creatively solving how to assess risk, conduct and summarize research, and prepare technical white papers to support Machine Learning and Software Engineers through the model development lifecycle. This role is unique, in that candidate must be 100% AI Risk Management (50% Research and Quantitative Analysis, 25% Development, and 25% White Paper Documentation). Required Skills Bachelor Degree in Computer Science, Data Science, Mathematics, or related field Knowledge of machine learning and related techniques Knowledge of recent developments in AI space including but not limited to transformers, LLMs, Generative AI Good understanding of a version control system like git to be able to efficiently collaborate with colleagues. Strong Python development skills and knowledge of Java/C++ Adept at leveraging ML/AI techniques to solve critical business problems with good understanding of Supervised, Unsupervised and Reinforcement Learning. Excellent interpersonal communication skills for tech, business, and risk conversations Good analytical skills to break down requirements, solve complex problems, and challenge the approach, build, and test of AI models and model components Skills Python, Data science, Data, java, Algorithm, risk management, artificial intelligence, Machine learning, Predictive modelling, Data analysis, Predictive analytics Top Skills Details Python, Data science, Data, java Algorithm, risk management, artificial intelligence Additional Skills & Qualifications There will be a heavy research and analysis component to this job, especially around risk management related to artificial intelligence and GenAI. They will be diving into an understanding of the biases of AI and the algorithms created by other data scientists on the team, how the data flows through the algorithm, and the risks associated to the outcomes. They'll be developing their own algos a smaller percentage of their time, but need to have a strong background in Python to be able to read the code of the 18 existing AI models and their architecture. They'll be spending a lot of time trying to break what exists and raising questions around why certain things were done that way. From a documentation perspective, they'll need to be able to create graphical representations of their findings so a lay person could understand them. About TEKsystems We're partners in transformation. We help clients activate ideas and solutions to take advantage of a new world of opportunity. We are a team of 80,000 strong, working with over 6,000 clients, including 80% of the Fortune 500, across North America, Europe and Asia. As an industry leader in Full-Stack Technology Services, Talent Services, and real-world application, we work with progressive leaders to drive change. That's the power of true partnership. TEKsystems is an Allegis Group company. The company is an equal opportunity employer and will consider all applications without regards to race, sex, age, color, religion, national origin, veteran status, disability, sexual orientation, gender identity, genetic information or any characteristic protected by law.",
+      "location": "Irving, TX",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://jsv3.recruitics.com/redirect?rx_cid=3435&rx_jobId=JP-004411283&rx_url=https%3A%2F%2Fars2.equest.com%2F%3Ficid%3Dlinkedin_recruitics%26response_id%3Dcf2e215757dc2a480c15a6a329a7bbe2%26rx_campaign%3DLinkedin1%26rx_ch%3Dconnector%26rx_group%3D123600%26rx_job%3DJP-004411283%26rx_medium%3Dpost%26rx_r%3Dnone%26rx_source%3DLinkedin%26rx_ts%3D20240406T004801Z%26rx_vp%3Dslots",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3887713726",
+      "title": "Junior Data Scientist - Python /Modeling",
+      "company": "Expert Technical Solutions",
+      "description": "Junior Data Scientist \u2013 ( Python / Modeling and Operat ions ) Expert Technical Solutions has an immediate opening for a Junior Data Scientist with an industry leading client in Atlanta , GA. Our client is looking for a highly motivated and research oriented Data Scientist who will play a vital role in enhancing our cli ent \u2019 s contact center solutions through the development of advanced NLP algorithms and models. You will work in a collaborative team environment to explore and create solutions to industry problems using machine learning and state-of-the-art large language models. You bring to this team environment a strong foundation in machine learning and deep learning, as well as the curiosity and grit to see a project to delivery. T his is a permanent , HYBRID (2 days onsite, Monday and Tuesday every week) opportunity offering st rong pay, ex cellent growth opportunities, and outstanding benefits. Responsibilities Productizing AI predictive models Producing data and model accuracy analyses Developing & maintaining of scripts/tools to automate both new model production and updates to existing model packages Working with developers to help design automation and tool improvements for model building Maintaining documentation of processes and projects across all supported languages and environments Developing knowledge of the internal data sources Explore high-level, undefined ideas and business problems using structured and unstructured data Develop product offerings through careful consideration of business value and data analysis Build and fine-tune deep learning and machine learning models, with an emphasis on large language models Communicate research findings, technical concepts, and model recommendations effectively to technical and non-technical stakeholders R equired E xperience BS or MS in Computer Science or related field required Proficiency in Python. 2+ year s\u2019 experience with bash, python, or equivalent script development, deployment, and execution. 1 + year of Windows experience with remote access and dos shell. Minimum of 1 year of experience implementing machine learning and NLP models using real-life (\u201cindustry\u201d) data Experience working with deep learning models Knowledge of statistical techniques and concepts (regression, statistical tests and proper usage, etc.) Desire and ability to learn and continually expand knowledge in the data science, machine learning, and speech analytics. Desired S kills Proficiency with one more deep learning libraries (PyTorch, TensorFlow, JAX, etc.) Experience deploying NLP models in production environments, ensuring scalability and performance Experience with building and/or fine-tuning large language models Experience as part of a software organization",
+      "location": "Atlanta, GA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.experttechnical.com/job-seekers/?postid=P3PHUP6nU5M",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3901377494",
+      "title": "Data Scientist with BERT and Genomics Experience",
+      "company": "Stellite Works LLC",
+      "description": "We need a Data Scientist with demonstrated expertise in training and evaluating transformers such as BERT and its derivatives. Desired Role & Level: Data Scientist / MidLocation: Johnston, IA \u2013 candidate living within 50 mile radius of location required onsite T/W/TH each week. Remote - candidate can be considered as remote if in the US and living more than 50 miles from above indicated GBC locations. Project Scope and Brief Description:Next-generation Artificial Intelligence for Genomics will use more complex datatypes and be applied to new crop contexts. We need a Data Scientist with demonstrated expertise in training and evaluating transformers such as BERT and its derivatives. Responsibilities:Improve the genomics LLMs for gene expression profiling by incorporating new sequencing data types, adopting new foundation models, and applying new finetuning techniques in LLMs. Develop the Generative AI tool for automated genome editing design based on the improved LLM. Skills / Experience:Required: Proficiency with Python, pyTorch, Linux, Docker, Kubernetes, Jupyter. Expertise in Deep Learning, Transformers, Natural Language Processing, Large Language Models Preferred: Experience with genomics data, molecular genetics. Distributed computing tools like Ray, Dask, Spark. \ufeffThanks & RegardsBharat Priyadarshan GuntiHead of Recruitment & OperationsStellite Works LLC4841 W Stonegate Circle Lake Orion MI - 48359Contact: 313 221 9365bharat@stelliteworks.com ||www.stelliteworks.comNote: This is not an unsolicited mail. If you are not interested in receiving our e-mails, then please reply with subject line Remove.Oh! Lord, you are my Righteousness and My Pride",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 58.0
+    },
+    {
+      "job_id": "3903878534",
+      "title": "Natural Language Processing Engineer",
+      "company": "Kaynes",
+      "description": "NLP Engineer - Remote, USA About Kaynes:Kaynes is a dynamic technology firm in the United States, renowned for its innovative approach to solving complex challenges through artificial intelligence and machine learning. Specializing in the development of cutting-edge NLP (Natural Language Processing) solutions, Kaynes aims to redefine the possibilities of human-computer interaction across various sectors. We are currently seeking a talented NLP Engineer to join our remote team, offering the flexibility to work from anywhere in the country with standard working hours between 9-5pm or 10-6pm. Kaynes provides a stimulating environment where contract or regular employment options are tailored to attract the best talent in the field. Your Role:As an NLP Engineer at Kaynes, you will contribute to the core of our NLP initiatives, developing algorithms and systems that understand, interpret, and generate human language. Your work will involve pushing the boundaries of NLP to create solutions that are not only innovative but also scalable and impactful. Key Responsibilities:Design and implement NLP systems for text analysis, sentiment analysis, language understanding, and content generation.Apply machine learning techniques and algorithms to solve complex NLP problems.Work with large and diverse data sets to train and optimize NLP models.Collaborate with cross-functional teams to integrate NLP solutions into broader applications and services.Continuously evaluate new and emerging NLP technologies and methodologies to improve system performance and capabilities. Technical Requirements:Profound knowledge of NLP and machine learning concepts and frameworks.Experience with programming languages such as Python, and familiarity with NLP libraries (e.g., NLTK, spaCy, Hugging Face's Transformers).Expertise in machine learning algorithms and model training, validation, and implementation.Strong understanding of text pre-processing and feature extraction techniques.Experience with deep learning architectures (e.g., RNNs, CNNs, Transformers) tailored for NLP tasks.Familiarity with cloud computing services (AWS, GCP, Azure) for deploying and scaling NLP models. Experience:3+ years of professional experience in NLP or a closely related field.Demonstrated ability in developing and deploying NLP models and systems.A portfolio that showcases successful NLP projects with measurable outcomes. Who You Are:An innovative thinker with a passion for NLP and AI technologies.Independent and disciplined, capable of managing your workload effectively in a remote setting.Strong communicator, adept at collaborating with a distributed team and stakeholders.Committed to lifelong learning and staying at the cutting edge of NLP research and development. Join Us:At Kaynes, you'll be part of a forward-thinking company that is passionate about leveraging NLP to unlock new opportunities and solutions. Enjoy the benefits of remote work across the US, within a culture that values innovation, collaboration, and the drive to achieve excellence. Here, your contributions will not only shape the future of NLP applications but also have a tangible impact on the industries we serve.",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 55.0
+    },
+    {
+      "job_id": "3901936390",
+      "title": "Data Scientist (Medical)",
+      "company": "PSRTEK",
+      "description": "Role: Natural Language Processing (NLP) Scientist Location \u2013 Remote The required skills for this position are:Natural Language Processing (NLP)Python (Programming Language)Statistical ModelingHigh-Performance Liquid Chromatography (HPLC)Java Job Description:We are seeking a highly skilled NLP Scientist to develop our innovative and cutting-edge NLP/AI solutions to empower life science. This involves working directly with our clients, as well as cross-functional Biomedical Science, Engineering, and Business leaders, to identify, prioritize, and develop NLP/AI and Advanced analytics products from inception to delivery.Key Responsibilities:Lead the research, strategy, design, and implementation of NLP/AI products from prototype to deployment.Collaborate closely with internal teams and external clients to understand requirements and design innovative NLP/AI solutions.Develop and validate cutting-edge NLP algorithms, including large language models tailored for healthcare and biopharma use cases.Translate complex technical insights into accessible language for non-technical stakeholders.Mentor junior team members, fostering a culture of continuous learning and growth.Publish findings in peer-reviewed journals and conferences.Engage with the broader scientific community by attending conferences, workshops, and collaborating on research projects. Qualifications:Ph.D. or master's degree in biomedical NLP, Computer Science, Biomedical Informatics, Computational Linguistics, Mathematics, or other related fieldsPublication records in leading computer science or biomedical informatics journals and conferences are highly desirable Regards,Guru Prasath M US IT RecruiterPSRTEK Inc.Princeton, NJ 08540guru@psrtek.comNo: 609-917-9967 Ext:114",
+      "location": "Fairfax County, VA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level Data Scientist with a Master's in Data Science and 1 year of experience as a Research Assistant in Clinical NLP. Skilled in data preparation, NLP, Python, PyTorch, Java, R, SQL, and deep learning. Domain expertise in biomedical datasets and information extraction.",
+    "job_explanations": [
+      {
+        "job_id": "3899537087",
+        "title": "NLP Engineer",
+        "company": "EA Team Inc",
+        "match_reason": "Partial match. Candidate has clinical NLP domain experience, Java, Python, and SQL as required. However, missing specific tools: cTakes, UIMA, and ontology tools. The reranker score of 88 is high, but the candidate's 1 year of experience may not meet the 'proven experience' expectation. Seniority level not specified, so no explicit mismatch.",
+        "missing_skills": [
+          "cTakes",
+          "UIMA",
+          "Ontology tools"
+        ]
+      },
+      {
+        "job_id": "3891273725",
+        "title": "Research Engineer, Language Model Evaluations",
+        "company": "Hippocratic AI",
+        "match_reason": "Partial match. Candidate has Python, machine learning research background, and healthcare domain alignment. Missing hands-on experience with Large Language Models (LLMs), which is required. Role is entry-level, so seniority aligns. Reranker score 78 reflects moderate fit.",
+        "missing_skills": [
+          "Large Language Models (LLMs)"
+        ]
+      },
+      {
+        "job_id": "3904991267",
+        "title": "Data Analyst - Programmer (Department of Translational Medicine and Human Genetics)",
+        "company": "University of Pennsylvania",
+        "match_reason": "Partial match. Candidate has Python, R, SQL, and data preparation skills. Missing clinical ontologies (ICD-9/10, CPT, LOINC, OMOP, RxNorm) and EHR data experience. Role is entry-level; candidate's 1 year experience is below the preferred 2-3 years but acceptable. Reranker score 75.",
+        "missing_skills": [
+          "Clinical ontologies (ICD-9/10, CPT, LOINC, OMOP, RxNorm)"
+        ]
+      },
+      {
+        "job_id": "3888938024",
+        "title": "iO Data Scientist",
+        "company": "Ochsner Health",
+        "match_reason": "Partial match. Candidate has Python, R, SQL, and machine learning skills. Missing SAS and specific healthcare analytics experience (24 months required). Candidate's 1 year in clinical NLP research may partially count. Role is entry-level, seniority aligns. Reranker score 72.",
+        "missing_skills": [
+          "SAS"
+        ]
+      },
+      {
+        "job_id": "3904385647",
+        "title": "Data Science Intern, Summer 2024",
+        "company": "Edwards Lifesciences",
+        "match_reason": "Strong match. Candidate meets all required skills: data preparation, NLP, machine learning, and Python. No missing required skills. Internship level aligns with entry-level candidate. Reranker score 68.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3885828275",
+        "title": "Data Scientist",
+        "company": "TEKsystems",
+        "match_reason": "Partial match. Candidate has Python, Java, ML, NLP, and Git. Missing AI risk management knowledge and LLM/GenAI experience. Role is entry-level, seniority aligns. Reranker score 65.",
+        "missing_skills": [
+          "AI risk management",
+          "Large Language Models (LLMs)"
+        ]
+      },
+      {
+        "job_id": "3887713726",
+        "title": "Junior Data Scientist - Python /Modeling",
+        "company": "Expert Technical Solutions",
+        "match_reason": "Partial match. Candidate has Python, deep learning, NLP, and statistical knowledge. Missing bash scripting and Windows/DOS shell experience. Role is entry-level, candidate's 1 year experience meets minimum. Reranker score 60.",
+        "missing_skills": [
+          "Bash scripting",
+          "Windows/DOS shell"
+        ]
+      },
+      {
+        "job_id": "3901377494",
+        "title": "Data Scientist with BERT and Genomics Experience",
+        "company": "Stellite Works LLC",
+        "match_reason": "Poor match. Candidate lacks genomics domain, Linux, Docker, Kubernetes, Jupyter, and transformer/LLM expertise. Reranker score 58 reflects low fit. Seniority not specified but candidate is underqualified.",
+        "missing_skills": [
+          "Linux",
+          "Docker",
+          "Kubernetes",
+          "Jupyter",
+          "Genomics",
+          "Transformers/LLMs"
+        ]
+      },
+      {
+        "job_id": "3903878534",
+        "title": "Natural Language Processing Engineer",
+        "company": "Kaynes",
+        "match_reason": "Poor match. Candidate lacks 3+ years NLP experience, specific NLP libraries (NLTK, spaCy, Transformers), and cloud computing. Reranker score 55 indicates low fit. Seniority mismatch: candidate is entry-level, role requires 3+ years.",
+        "missing_skills": [
+          "3+ years NLP experience",
+          "NLP libraries (NLTK, spaCy, Transformers)",
+          "Cloud computing (AWS/GCP/Azure)"
+        ]
+      },
+      {
+        "job_id": "3901936390",
+        "title": "Data Scientist (Medical)",
+        "company": "PSRTEK",
+        "match_reason": "Poor match due to seniority mismatch. Candidate meets technical requirements (NLP, Python, statistical modeling, Java) but the role implies senior/lead level with mentoring responsibilities, while candidate is entry-level with 1 year experience. Reranker score 82 is high but does not account for seniority.",
+        "missing_skills": []
+      }
+    ],
+    "overall_missing_skills": [
+      "cTakes",
+      "UIMA",
+      "Ontology tools"
+    ],
+    "recommendation": "Focus on gaining hands-on experience with Large Language Models (fine-tuning, evaluation) and cloud deployment tools (Docker, Kubernetes, AWS/GCP). Additionally, learning clinical ontologies would strengthen your profile for healthcare data roles."
+  }
+}

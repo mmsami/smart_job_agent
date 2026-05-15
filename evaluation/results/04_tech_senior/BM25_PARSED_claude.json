@@ -1,0 +1,269 @@
+{
+  "persona": "04_tech_senior",
+  "method": "BM25_PARSED",
+  "model": "claude",
+  "run_timestamp": "2026-05-11T10:34:15.270698+00:00",
+  "results": [
+    {
+      "job_id": "3887917759",
+      "title": "Senior AI Scientist",
+      "company": "GE HealthCare",
+      "description": "Job Description Summary The Senior AI Scientist will work in teams addressing statistical, machine learning and data understanding problems in a commercial technology and collaborative development environment. In this role, you will contribute to the development and deployment of modern machine learning methods for finding structure in large healthcare data sets. At GE HealthCare, we are committed to bringing AI and cloud-based solutions for our customers: all aspects of computing services across the cloud and edge \u2013 including advanced analytics, visualization, multi-modal learning, servers, databases, storage, networking, analytics, software, intelligence are delivered over the Internet. Our Science & Technology organization is harnessing the power of technology to make healthcare more precise, more personalized, and more accessible for everyone. From driving the overall clinical research and patient-centric innovation strategy to delivering new digital and machine learning capabilities - we\u2019re committed to leading digital transformation, improving outcomes for patients and providers, and creating a world where healthcare has no limits. To find out more, visit: https://jobs.gecareers.com/science-technology Job Description Roles and Responsibilities Are you passionate about using AI to transform healthcare? We are looking for a highly motivated individual, passionate about foundational AI models to join the newly formed GE Healthcare AI group. As the Senior AI Scientist, you will focus on exciting generative vision, text, speech, time-series, and multi-modal problems related to segmentation, object detection, large-scale generative models, large-scale pretraining, prompt tuning, distillation, robustness, responsible AI, quantization, etc. Additionally, You Will Be Responsible For Developing and implementing novel machine learning algorithms particularly in the area of LLM to provide automation of clinical tasks using one or more of medical images, electronic medical records, waveforms, and clinical reports.Demonstrating algorithms to meet accuracy requirements on general subject population through statistical analyses and error estimation.Exploring learning from human feedback and assisting humans evaluating AI.Building prototypes to enable development of high-performance AI algorithms in scalable, product-ready code.Initiating/proposing unique and promising deep learning capabilities, developing new and innovative algorithms and technologies, pursuing patents where appropriate.Working with large-scale datasets, designing, and developing generative algorithms.Staying current on published state-of-the-art algorithms and competing technologies. Basic Qualifications Master\u2019s Degree in a \u201cSTEM\u201d major (Science, Technology, Engineering, Mathematics) or equivalent field plus 5 years AI development for industrial applications in a commercial setting OR Ph.D. in a \u201cSTEM\u201d major (Science, Technology, Engineering, Mathematics) or equivalent field plus 3 years AI development for industrial applications in a commercial setting OR Ph.D. in a \u201cSTEM\u201d major (Science, Technology, Engineering, Mathematics) or equivalent field plus 1 years of AI development for Healthcare applications.Publications as first author on LLM/Foundational/Multimodal models or self-supervised learning (SSL).Demonstrated expertise in building large scale AI such as generative AI models, large vision/language models, and multi-modal AI models for problems related to segmentation, detection, quantification, measurements, classification, etc.Implementation experience with a variety of high-level languages (e.g. Python, C++)Experience with high-dimensional imaging data and waveform/time-series data. Preferred Qualifications Experience and demonstrated capability to handle challenges with vague or abstract problem definition.Experience with frameworks and tools such as DeepSpeed, HuggingFace, Megatron, PyTorch lightning, etc.Experience with various MLOps, ModelOps, FMOps (Foundation Model Ops) methods.Experience working with large scale AI training.An in-depth understanding of machine learning algorithms and modeling (e.g., semi-supervised or weakly supervised learning, generative models, transfer learning, optimization, large language models, etc.)Track record in developing machine learning solutions using massive real-world data for solving real world business problems.In depth experience with Spark/Hadoop and either PyTorch/TensorflowExperience creating production environment data analytics and applications Eligibility Requirements Legal authorization to work in the U.S. is required. GE may agree to sponsor an individual for an employment visa now or in the future if there is a shortage of individuals with particular skills.Must be willing to travel to attend meetings, workshops, conferences & etc.Must be willing to work out of an office located in the greater Seattle Area. About Team GE Healthcare teams are based in the US (San Ramon, Bellvue), France, Israel (Tel Aviv), and India (Bangalore). This gives us several core overlap hours for shared meetings. Work/Life Balance Our team also puts a significant value on work-life balance. Having a healthy balance between your personal and professional life is crucial to your happiness and success here. We don\u2019t focus on how many hours you spend at work or online. Instead, we\u2019re happy to offer a flexible schedule so you can have a more productive and well-balanced life\u2014both in and outside of work. Mentorship & Career Growth We maintain diverse engineering, and leadership perspectives and backgrounds across technology and beyond. Our employees are excited to share their experiences and mentor more junior engineers. Team members are highly encouraged to set up mentorship relationships with seasoned engineers, not only in our team, but also across the broader GE Healthcare population. Inclusive Team Culture Here at GEHC, we embrace our differences. We are committed to furthering our culture of inclusion. We have many employee-led affinity groups, innovative benefit offerings, and encourage ongoing learning experiences. We expect all employees to live and breathe our behaviors: to act with humility and build trust; lead with transparency; deliver with focus, and drive ownership \u2013 always with unyielding integrity. About Us At GE HealthCare (NASDAQ: GEHC), we see possibilities through innovation. We\u2019re partnering with our customers to fulfill healthcare\u2019s greatest potential through groundbreaking medical technology, intelligent devices, and care solutions. Better tools enabling better patient care. Together, we are not only building a healthier future but living our purpose to create a world where healthcare has no limits. GE HealthCare offers a great work environment, professional development, challenging careers, and competitive compensation. GE is an Equal Opportunity Employer. Employment decisions are made without regard to race, color, religion, national or ethnic origin, sex, sexual orientation, gender identity or expression, age, disability, protected veteran status or other characteristics protected by law. Relocation Assistance Available. For U.S. based positions only, the pay range for this position is $170,544.00-$255,816.00 Annual. It is not typical for an individual to be hired at or near the top of the pay range and compensation decisions are dependent on the facts and circumstances of each case. The specific compensation offered to a candidate may be influenced by a variety of factors including skills, qualifications, experience and location. In addition, this position may also be eligible to earn performance based incentive compensation, which may include cash bonus(es) and/or long term incentives (LTI). GE HealthCare offers a competitive benefits package, including not but limited to medical, dental, vision, paid time off, a 401(k) plan with employee and company contribution opportunities, life, disability, and accident insurance, and tuition reimbursement. GE HealthCare offers a great work environment, professional development, challenging careers, and competitive compensation. GE HealthCare is an Equal Opportunity Employer. Employment decisions are made without regard to race, color, religion, national or ethnic origin, sex, sexual orientation, gender identity or expression, age, disability, protected veteran status or other characteristics protected by law. GE HealthCare will only employ those who are legally authorized to work in the United States for this opening. Any offer of employment is conditioned upon the successful completion of a drug screen (as applicable). While GE HealthCare does not currently require U.S. employees to be vaccinated against COVID-19, some GE HealthCare customers have vaccination mandates that may apply to certain GE HealthCare employees. Relocation Assistance Provided: Yes",
+      "location": "Seattle, WA",
+      "experience_level": "Director",
+      "work_type": "Full-time",
+      "min_salary": 170544.0,
+      "max_salary": 255816.0,
+      "url": "https://careers.gehealthcare.com/global/en/job/GEVGHLGLOBALR4005775EXTERNALENGLOBAL/Senior-AI-Scientist?utm_source=linkedin&utm_medium=phenom-feeds",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3891075420",
+      "title": "Senior Data Scientist",
+      "company": "Enterprise Peak",
+      "description": "OUR PROJECTOpportunity to join our team supporting a medical device manufacturer and an initiative to develop a diagnostic device. This is a long-term contract engagement that will be fully remote and has competitive hourly rates. You can expect competitive pay. WHO WE ARE LOOKING FOR We are looking for a Senior Data Scientist with strong development experience with Python who would be able to support algorithm and data model development utilizing traditional and deep learning ML approaches. In this role, you will join an existing team developing a predictive analytics platform which detects infections in tissue samples related to bacterial infection. Demonstrated experience training and optimizing Machine Learning models for biological sample analysis is required. Prior experience building and training Deep Learning models within CNN architecture is strongly preferred. This is a great opportunity to participate in a large, highly visible product development initiative. We are interviewing qualified candidates immediately and will move into the offer stage quickly. If you are interested, please apply with an updated resume. QUALIFICATIONS Demonstrated experience training and optimizing ML models for biological sample analysis Experience building and training DL models in CNN, GAN or RNN architectures, CNN preferred Hands-on expertise with data extraction, alignment, cleansing and storage in Python Prior experience with Random Forests or XGBoost Effective written and verbal communication skills are absolutely required for this role. You must be able to work LEGALLY in the United States as NO SPONSORSHIP will be provided. NO 3rd PARTIES.",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://enterprisepeak.com/job_listings/senior-data-scientist-2/",
+      "skill_labels": "Engineering, Information Technology, Product Management",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3901697459",
+      "title": "Senior Data Scientist",
+      "company": "Optimus - People. Solutions. Delivered.",
+      "description": "A key Optimus client is currently seeking a Senior Data Scientist to join their newly created AI/ML team! ***Visa sponsorship is not offered. 4 days per week in the office in Houston, TX is required. THIS IS NOT REMOTE WORK*** In this role, you will lead a large-scale AI/ML project in its nascent stage: Design, develop, implement & maintain/improve initiatives across business units. You will turn innovative ideas into tangible solutions through predictive analytics, machine learning, optimization, and cluster analysis. As an essential team member of the IT Dept, you will set up the AI & ML agenda for the organization and its subsidiaries. You will work with the business to identify potential opportunities and create standards/best practice for the company\u2019s AI & ML function. The incumbent must be able to:operational needs into predictive analytics/reporting requirements to support data-driven solutions/decisions.complex data insights in a clear and effective manner to stakeholders across the organization, which includes non-technical audience.informed and stay current on all the latest data science techniques and technologies.for exploring and implementing innovative solutions to improve data analysis, modeling capabilities, and business outcomes.use case design and build teams by providing guidance/ feedback as they develop data science models and algorithms to solve operational challenges. The incumbent must bring these skills/qualifications:Master\u2019s or PhD in Computer Science, Statistics, Applied Mathematics.If degree is in non-related field, must have at least 5 \u2013 7 years\u2019 experience in data science or a similar role.Must be proficient in at least one analytical programming language relevant for data science, such as Python. R will be acceptable. Machine learning libraries & frameworks are a must. Must be familiar with data processing and visualization tools (e.g., SQL, Tableau, Power BI).Must have experience with full Machine Learning lifecycle - feature engineering, training, validation, scaling, deployment, monitoring, and feedback loop.Expertise in advanced analytical techniques (e.g., descriptive statistics, machine learning, optimization, pattern recognition, cluster analysis, etc.)Experience in Supervised and Unsupervised Machine Learning including classification, forecasting, anomaly detection, pattern recognition using variety of techniques such as decision trees, regressions, ensemble methods and boosting algorithms.,Experience with cloud computing environments (AWS, Azure, or GCP) and Data/ML platforms (Databricks, Spark).",
+      "location": "Greater Houston",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3887572653",
+      "title": "Data Scientist or Senior",
+      "company": "Progressive Insurance",
+      "description": "Join Forbes' 2023 Best Employer for Diversity! As a full-stack data scientist on the Commercial Lines Telematics Team, you\u2019ll use sensor data, business data, machine learning and statistical modeling to extract insights from driving data and enhance our segmentation model. In this role, you\u2019ll lead projects from brainstorm to production and have the unique opportunity to work sensor data from a large variety of different vehicle types and industries. Remote work allowed. Must-have Qualifications Bachelor's degree or higher with quantitative focus in Econometrics, Statistics, Operations Research, Computer Science or related field (e.g. Mathematics).Instead of a degree, a minimum of three years of relevant experience in statistical/quantitative modeling and/or Machine Learning tools (R, Python, etc.) and in using various database tools (e.g. Hadoop, SQL) processing large volumes of structured and unstructured data. Preferred Skills Competency in Python (or similar) development, debugging and toolchainApplied experience in Statistical Modeling and Machine LearningDemonstrated experience with communicating results and managing a project from start to finishAbility to use various database tools (e.g. SQL) to process large volumes of structured and unstructured dataFamiliarity with Linux, AWS and other deployment platforms Compensation $70,100 - $113,200/year depending on position level and experienceGainshare bonus up to 30% of your eligible earnings based on company performance Benefits 401(k) with dollar-for-dollar company match up to 6%Medical, dental & vision, including free preventative careWellness & mental health programsHealth care flexible spending accounts, health savings accounts, & life insurancePaid time off, including volunteer time offPaid & unpaid sick leave where applicable, as well as short & long-term disabilityParental & family leave; military leave & payDiverse, inclusive & welcoming culture with Employee Resource GroupsCareer development & tuition assistanceOnsite gym & healthcare at large locations Energage recognizes Progressive as a 2023 Top Workplace for: Innovation, Purposes & Values, Work-Life Flexibility, Compensation & Benefits, and Leadership. Equal Opportunity Employer Sponsorship for work authorization for this position is available for candidates who already possess an H-1B- visa. For ideas about how you might be able to protect yourself from job scams, visit our scam-awareness page at https://www.progressive.com/careers/how-we-hire/faq/job-scams/ Job Business Analysis Primary Location United States Schedule Full-time Employee Status Regular Work From Home Yes",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 70100.0,
+      "max_salary": 113200.0,
+      "url": "https://progressive.taleo.net/careersection/2/jobdetail.ftl?src=JB-11520&job=226619",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3902756194",
+      "title": "Senior Data Scientist, Google Cloud Support",
+      "company": "Google",
+      "description": "Note: By applying to this position you will have an opportunity to share your preferred working location from the following: San Francisco, CA, USA; New York, NY, USA; Waterloo, ON, Canada.Minimum qualifications: Bachelor's degree in Computer Science, Information Systems, related technical field, or equivalent practical experience.3 years of experience developing/deploying machine learning and time series forecasting models using statistical software (e.g., Python, R).3 years of experience applying statistical modeling, hypothesis testing, and experimentation.3 years of experience analyzing data, and working with SQL and databases. Preferred qualifications: Master's degree or PhD in Computer Science, Data Science, Mathematics, Economics, Physics, Engineering, Management Information Systems, Statistics, Accounting, or a similar field.Experience in product analytics, customer support, business intelligence, data science, or data warehousing.Ability to collaborate with internal stakeholders across different functions and geographies to manage change and drive improvement initiatives.Excellent communication skills, with the ability to influence team members and manage business priorities. About The Job The Google Cloud team helps companies, schools, and government seamlessly make the switch to Google products and supports them along the way. You listen to the customer and swiftly problem-solve technical issues to show how our products can make businesses more productive, collaborative, and innovative. You work closely with a cross-functional team of web developers and systems administrators, not to mention a variety of both regional and international customers. Your relationships with customers are crucial in helping Google grow its Cloud business and helping companies around the world innovate. As part of the Cloud Support Data Science team, you\u2019ll play a key role in using data and machine intelligence to empower data-driven execution of strategy and operations for Google customers. The team works collaboratively with Sales, Engineering, and other Cloud Support teams to build analytics solutions that enable actionable insights to provide an effortless customer experience. In this role, you\u2019ll work on a variety of stakeholder projects with opportunities to address problems that require innovative solutions and data products. Google Cloud accelerates every organization\u2019s ability to digitally transform its business and industry. We deliver enterprise-grade solutions that leverage Google\u2019s cutting-edge technology, and tools that help developers build more sustainably. Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems. The US base salary range for this full-time position is $150,000-$223,000 + bonus + equity + benefits. Our salary ranges are determined by role, level, and location. The range displayed on each job posting reflects the minimum and maximum target salaries for the position across all US locations. Within the range, individual pay is determined by work location and additional factors, including job-related skills, experience, and relevant education or training. Your recruiter can share more about the specific salary range for your preferred location during the hiring process. Please note that the compensation details listed in US role postings reflect the base salary only, and do not include bonus, equity, or benefits. Learn more about benefits at Google . Responsibilities Build and maintain data pipelines and time series models to generate support case volume forecasts that enable long-term capacity planning and short-term scheduling decisions.Lead monthly business reviews with senior stakeholders, sharing insights on drivers of change across a dynamic organization.Engage with the organization to identify, prioritize, frame, and structure ambiguous challenges.Define the analytical direction for the team, and influence the direction of the associated engineering and infrastructure work. Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a disability or special need that requires accommodation, please let us know by completing our Accommodations for Applicants form .",
+      "location": "New York, NY",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 150000.0,
+      "max_salary": 223000.0,
+      "url": "https://careers.google.com/jobs/results/99128334547329734-senior-data-scientist/?src=Online/LinkedIn/linkedin_us&utm_source=linkedin&utm_medium=jobposting&utm_campaign=contract",
+      "skill_labels": "General Business, Strategy/Planning, Consulting",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3891298676",
+      "title": "Lead Data Scientist",
+      "company": "Mainz Brady Group",
+      "description": "Lead Data Scientist \u2013 3 Month Contract \u2013 Remote, United States \u2013 W2 ONLY, NO C2C Join our client as a Lead Data Scientist, where you\u2019ll collaborate with customer stakeholders to design and implement machine learning methods. Work within a large hybrid team, utilizing cutting-edge niche technology in the risk and compliance domain. Responsibilities: Analyze complex datasets and develop machine learning models for predictive analytics, classification, clustering, and optimization.Design algorithms inspired by genetics and evolution principles for problem-solving.Develop custom algorithms tailored to business needs and research objectives.Clean, preprocess, and normalize data for analysis, ensuring data quality and integrity.Deploy machine learning models into production environments and integrate them into existing software systems. Qualifications: Bachelor\u2019s degree or higher in Computer Science, Data Science, Engineering, Mathematics, Applied Statistics, or related field.8 years of experience in building data science and machine learning solutions using Python, Scala, Spark DataBricks, SQL, or similar technologies.Experience in text GenAI & LLM.Deep understanding of probability, statistics, machine learning, anomalies/outliers\u2019 detection, and data correlation/feature analysis.Strong problem-solving skills and algorithm design capabilities.Proficiency in Python coding and familiarity with relevant ML packages. Mainz Brady Group is a technology staffing firm with offices in California, Oregon and Washington. We specialize in Information Technology and Engineering placements on a Contract, Contract-to-hire and Direct Hire basis. Mainz Brady Group is the recipient of multiple annual Excellence Awards from the Techserve Alliance, the leading association for IT and engineering staffing firms in the U.S. Mainz Brady Group is an Equal Opportunity Employer. We are committed to Diversity & Inclusion and incorporate non-discrimination best practices in all of our staffing processes. Mainz Brady Group does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, gender expression, age, disability or any other protected class",
+      "location": "Seattle, WA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://mbg.com/jobs/lead-data-scientist/",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3885103563",
+      "title": "Senior Data Scientist - Forecasting",
+      "company": "Ascentt",
+      "description": "**Position Overview:**We are looking for a highly skilled Data Scientist with extensive experience in forecasting, particularly in demand or sales forecasting. The ideal candidate will have a strong background in time series analysis, advanced machine learning models, and deep learning techniques. In addition, the candidate should have hands on experience of building ML solutions on AWS. **Key Responsibilities:** - Fast-paced experimentation, development and implementation of advanced forecasting models for demand or sales forecasting.- Utilize time series analysis, statistical methods, and machine learning algorithms to build accurate and scalable forecasting solutions.- Design and develop global forecasting models that consider economic, demographic, historical trends, and other relevant factors.- Work closely with cross-functional teams to gather requirements, analyze data, and deliver actionable insights.- Collaborate with data engineers to deploy and integrate forecasting solutions into production systems.- Conduct thorough evaluation and validation of forecasting models to ensure accuracy and reliability.- Stay updated on the latest advancements in forecasting techniques, machine learning algorithms, and cloud technologies. **Qualifications:** - Master's degree in Statistics, Data Science, Computer Science, or related field.- Minimum of 3 years of experience in data science, with a focus on forecasting.- Strong proficiency in time series analysis, statistical modeling, and machine learning algorithms.- Advanced experience with AWS services such as SageMaker, S3, EC2, Lambda, etc.- Demonstrated expertise in building and deploying ML solutions at scale, preferably in a cloud environment.- Excellent problem-solving skills and ability to thrive in a fast-paced, collaborative environment.- Strong communication and presentation skills, with the ability to effectively communicate complex technical concepts to non-technical stakeholders. **Great to have:** - Familiarity with deep learning techniques for time series forecasting (e.g., LSTM, GRU).- Experience with big data technologies such as Spark.",
+      "location": "Dallas, TX",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901628316",
+      "title": "Data Scientist",
+      "company": "Agility Partners",
+      "description": "About this RoleAgility Partners is seeking a qualified Senior Data Scientist to fill an open position with one of our banking clients. This is an exciting opportunity to join an Enterprise Data and Analytics team, where you'll play a pivotal role in leveraging machine learning, segmentation, and statistical inference on vast data sets to enhance our understanding of customers and communities. As our client aims for excellence in regional banking, your expertise in modeling complex business problems and uncovering insights using advanced techniques will be crucial.Duties and Responsibilities:Perform advanced analytics methods to extract value from business data.Conduct large-scale experimentation and build data-driven models to address business inquiries.Research cutting-edge techniques and tools in machine learning, deep learning, and artificial intelligence.Determine requirements for training and evolving deep learning models and algorithms.Articulate a vision and roadmap for leveraging data as a valued corporate asset.Influence product teams through data-based recommendations.Evangelize best practices to analytics and product teams.Own the entire model development process, from identifying business requirements to presenting results and production scoring.Perform other duties as assigned.Benefits and PerksThis is a great opportunity to work for a mid-sized financial institution that is striving to be the bank of choice; one that focuses on its customers, not its competition. An organization that provides a dynamic, fulfilling work environment that is productive, collaborative and innovative.Highly visible team with a regional financial services company where your work matters and your accomplishments are recognized!Amazing opportunity for growth, healthy work/life balance and a community focused environmentWorking for an organization that focuses on company culture, inclusion and diversityOn a team whose Core values that include: Can-Do Attitude, Service at Heart and Forward Thinking50% medical coverage for you and your entire family, short/long term disability and life insurance options401(k) Life InsuranceDisability coverageThe Ideal CandidateQualifications:Master's Degree in computer science, statistics, economics, or related fields.3+ years of work and/or educational experience in machine learning or cloud computing.Experience using statistics and machine learning to solve complex business problems.Experience conducting statistical analysis with advanced statistical software.Experience with scripting languages and packages.Experience building and deploying predictive models.Experience with web scraping and scalable data pipelines.Experience with big data analysis tools and techniques.Preferred Qualifications:Up-to-date knowledge of machine learning and data analytics tools and techniques.Strong knowledge in predictive modeling methodology.Experience leveraging both structured and unstructured data sources.Willingness and ability to learn new technologies on the job.Demonstrated ability to communicate complex results to technical and non-technical audiences.Ability to work effectively in teams as well as independently across multiple tasks while meeting aggressive timelines.Strategic, intellectually curious thinker with a focus on outcomes.Professional image with the ability to form relationships across functions.Strong experience with R/RStudio, Python, SAS, SQL, NoSQL.Strong experience with Cloud Machine Learning technologies (e.g., AWS Sagemaker).",
+      "location": "Columbus, Ohio Metropolitan Area",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Finance",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3902828481",
+      "title": "Remote opportunity for P&C Insurance Data Scientist/Actuary - PR12690A",
+      "company": "Pryor Associates Executive Search",
+      "description": "Remote opportunity for P&C Insurance Data Scientist/Actuary. Utilize Python, Machine Learning, and Predictive Modeling (eg, Generalized Linear Modeling) to enhance analytics of Commercial insurance pricing, reserving, and other actuarial functions. Ideal candidate is pre-ACAS through new FCAS with 4+ years of P&C actuarial, data science, or predictive modeling experience, including Machine Learning using SQL and Python (including pandas). (PR12690A)",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "General Business, Analyst",
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3902830674",
+      "title": "Clinical Data Manager",
+      "company": "Eliassen Group",
+      "description": "Large healthcare research client seeks Manager level candidate who can utilize artificial intelligence, machine learning and statistics to create a predictive model, which utilizes retail healthcare data.This individual will be involved in identifying and resolving complex business problems, involving a range of data preparations, modeling , analysis and/or visualizations. Experience with Python and cloud base systems highly desired.Must haves: Knowledge of clinical data and/or Retail Pharmacy. Data Management and Data Governance.Experience with Data Modeling and Data Quality Management very highly desired.",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 135000.0,
+      "max_salary": 160000.0,
+      "url": null,
+      "skill_labels": "Business Development, Strategy/Planning",
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior-level data scientist with 13 years of experience, a Master's in Data Science, and a background exclusively in healthcare. Core strengths include predictive modeling, machine learning, statistical analysis, and data visualization, with hands-on tools including Python, R, AWS, and Power BI.",
+    "job_explanations": [
+      {
+        "job_id": "3887917759",
+        "title": "Senior AI Scientist",
+        "company": "GE HealthCare",
+        "match_reason": "This is a partial-to-poor match despite the high reranker_score of 92 and strong healthcare domain alignment. The role is leveled at Director and explicitly requires first-author publications on LLM/Foundational/Multimodal models and demonstrated expertise in generative AI, large vision/language models, and deep learning architectures (e.g., CNNs, transformers). The candidate's CVProfile shows no evidence of deep learning specialization, LLM development, generative AI, or published research \u2014 all of which are listed as required qualifications. The candidate's 13 years of experience and healthcare background are relevant context, but the core technical requirements (generative models, multi-modal AI, large-scale pretraining) are absent from the CV.",
+        "missing_skills": [
+          "Large Language Models (LLM) / Generative AI",
+          "Deep Learning (CNNs, transformers, multi-modal architectures)",
+          "First-author AI/ML publications"
+        ]
+      },
+      {
+        "job_id": "3891075420",
+        "title": "Senior Data Scientist",
+        "company": "Enterprise Peak",
+        "match_reason": "This is a partial match. The candidate's seniority level (Senior Data Scientist title held), Python proficiency, and machine learning experience align with the role's level and core requirements. However, the role explicitly requires experience training ML models for biological sample analysis and building deep learning models within CNN (or GAN/RNN) architectures \u2014 neither of which appears in the candidate's CVProfile, skills, or domain keywords. The candidate's healthcare background is adjacent but does not substitute for the specific biological sample analysis and CNN architecture requirements.",
+        "missing_skills": [
+          "CNN/Deep Learning model development",
+          "Biological sample / tissue analysis ML experience"
+        ]
+      },
+      {
+        "job_id": "3901697459",
+        "title": "Senior Data Scientist",
+        "company": "Optimus - People. Solutions. Delivered.",
+        "match_reason": "This is a strong match. The candidate holds the Senior Data Scientist title, has 13 years of experience, and a Master's degree \u2014 all aligning with the role's requirements. Required skills including Python, R, AWS, machine learning, predictive modeling, statistical analysis, data visualization, and Power BI are all present in the CVProfile. The role requires experience with the full ML lifecycle and cloud environments (AWS), both of which the candidate demonstrates. The only notable gap is explicit experience with Databricks/Spark, which is listed as required alongside AWS. The role requires 4 days/week in Houston, TX, which may be a location consideration given the candidate is based in Los Angeles.",
+        "missing_skills": [
+          "Databricks / Apache Spark"
+        ]
+      },
+      {
+        "job_id": "3887572653",
+        "title": "Data Scientist or Senior",
+        "company": "Progressive Insurance",
+        "match_reason": "This is a strong match on skills and experience level. The candidate's Python, R, AWS, machine learning, and statistical modeling skills directly satisfy the preferred qualifications. With 13 years of experience and a Master's in Data Science, the candidate exceeds the minimum education and experience thresholds. The role is in insurance/telematics rather than healthcare, but the core data science techniques (ML, statistical modeling, sensor/business data analysis) are transferable. SQL is listed as a preferred database tool and does not appear explicitly in the candidate's CVProfile, representing a minor potential gap.",
+        "missing_skills": [
+          "SQL"
+        ]
+      },
+      {
+        "job_id": "3902756194",
+        "title": "Senior Data Scientist, Google Cloud Support",
+        "company": "Google",
+        "match_reason": "This is a strong match. The role requires 3+ years of ML/statistical modeling experience using Python or R, stakeholder engagement, and data analysis \u2014 all well-covered by the candidate's 13-year track record, Python/R tools, and explicit Stakeholder Management skill. The candidate's experience with predictive modeling and data visualization aligns with the responsibilities of building forecasting models and leading business reviews. SQL is listed as a required skill (3 years of experience with SQL and databases) and is absent from the candidate's CVProfile, representing a genuine gap. Time series forecasting is also implied as a core requirement and is not explicitly listed in the CV.",
+        "missing_skills": [
+          "SQL",
+          "Time Series Forecasting"
+        ]
+      },
+      {
+        "job_id": "3891298676",
+        "title": "Lead Data Scientist",
+        "company": "Mainz Brady Group",
+        "match_reason": "This is a partial match. The candidate's seniority, Python proficiency, machine learning, and predictive analytics experience align with the role. The candidate has held a 'Lead Data Analyst' title, which is relevant context. However, the role explicitly requires 8 years of experience with Python, Scala, Spark, and Databricks, and experience with text GenAI and LLMs \u2014 none of which (Scala, Spark/Databricks, GenAI/LLM) appear in the candidate's CVProfile. The risk and compliance domain is also outside the candidate's healthcare background, though this is a moderate rather than disqualifying mismatch.",
+        "missing_skills": [
+          "Apache Spark / Databricks",
+          "Generative AI / LLM experience",
+          "Scala"
+        ]
+      },
+      {
+        "job_id": "3885103563",
+        "title": "Senior Data Scientist - Forecasting",
+        "company": "Ascentt",
+        "match_reason": "This is a partial match. The candidate's Master's degree, machine learning skills, statistical analysis, and AWS experience satisfy several core requirements. However, the role explicitly requires a focus on demand/sales forecasting and time series analysis as primary competencies, and advanced AWS services experience (SageMaker, S3, EC2, Lambda) \u2014 neither time series forecasting nor specific AWS service proficiency appears in the candidate's CVProfile. The candidate's AWS listing is general and does not confirm SageMaker or related ML platform experience. The domain (demand/sales forecasting) is also outside the candidate's healthcare background.",
+        "missing_skills": [
+          "Time Series Analysis / Demand Forecasting",
+          "AWS SageMaker and related ML services"
+        ]
+      },
+      {
+        "job_id": "3901628316",
+        "title": "Data Scientist",
+        "company": "Agility Partners",
+        "match_reason": "This is a partial match. The candidate's machine learning, predictive modeling, statistical analysis, Python, R, and AWS skills align with the role's core and preferred qualifications. The Master's degree and 13 years of experience exceed the stated minimums. However, the role is within regional banking/financial services \u2014 a domain entirely outside the candidate's healthcare background, which may be a moderate concern. SQL and NoSQL are listed as required tools and are absent from the candidate's CVProfile. AWS SageMaker is listed as a preferred qualification and is not confirmed in the CV.",
+        "missing_skills": [
+          "SQL / NoSQL",
+          "AWS SageMaker"
+        ]
+      },
+      {
+        "job_id": "3902828481",
+        "title": "Remote opportunity for P&C Insurance Data Scientist/Actuary",
+        "company": "Pryor Associates Executive Search",
+        "match_reason": "This is a partial match with a notable domain gap. The reranker_score of 60 reflects the limited fit. The candidate's Python, machine learning, and predictive modeling skills satisfy the technical requirements. However, the role is explicitly targeted at candidates with P&C actuarial backgrounds (pre-ACAS through FCAS) or direct P&C insurance experience \u2014 a domain entirely outside the candidate's healthcare industry background. No actuarial credentials or insurance domain experience appear in the CVProfile. SQL (including pandas) is listed as required and SQL is absent from the candidate's tools.",
+        "missing_skills": [
+          "P&C Insurance / Actuarial domain experience",
+          "SQL"
+        ]
+      },
+      {
+        "job_id": "3902830674",
+        "title": "Clinical Data Manager",
+        "company": "Eliassen Group",
+        "match_reason": "This is a strong match despite the reranker_score of 88 being slightly below the top result. The candidate's healthcare industry background, predictive modeling, machine learning, statistical analysis, Python, AWS, and data visualization skills directly address the role's must-have requirements. The domain keyword 'Patient Risk Assessment' and healthcare industry experience are highly relevant to the clinical data and retail pharmacy knowledge required. Data Governance and Data Quality Management are listed as must-haves and do not explicitly appear in the candidate's CVProfile, representing the primary gap.",
+        "missing_skills": [
+          "Data Governance",
+          "Data Quality Management"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Large Language Models (LLM) / Generative AI",
+      "Deep Learning (CNNs, transformers, multi-modal architectures)",
+      "First-author AI/ML publications"
+    ],
+    "recommendation": "The candidate should prioritize gaining demonstrable SQL proficiency, as it appears as a required skill across multiple roles, and consider developing hands-on experience with Spark/Databricks, which is increasingly required for senior ML engineering roles. Adding a deep learning framework (e.g., PyTorch or TensorFlow with CNN/RNN experience) would also unlock a broader set of senior data science opportunities, particularly in healthcare AI."
+  }
+}

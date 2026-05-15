@@ -1,0 +1,298 @@
+{
+  "persona": "10_tech_mid",
+  "method": "BM25_PARSED",
+  "model": "gemini",
+  "run_timestamp": "2026-05-11T10:56:44.740807+00:00",
+  "results": [
+    {
+      "job_id": "3904970423",
+      "title": "Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React)",
+      "company": "Pyramid Consulting, Inc",
+      "description": "Immediate need for a talented Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React). This is a Fulltime opportunity with long-term potential and is located in Charlotte, NC(Hybrid). Please review the job description below and contact me ASAP if you are interested. No of Positions: 20 Job Title/Role: Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React) Work Location: Hybrid Work (3 days from office and 2 days from home)Charlotte, NCPennington, NJJersey City, NJNew York, NYDallas, TX Required Skills:SDLC, Agile Scrum, Development, Java, JEE, Microservices, Spring Boot, Angular/React, Hibernate, REST API, SQL, (RDBMS or No-SQL) Database Key Requirements and Technology Experience: Must have 7+ years of IT industry experience.Must have good understanding and experience of SDLC and Agile Scrum.Must have good Core Java/OOPs programming skills.Must have experience with JEE Framework.Must have experience with Spring Boot.Must have experience with Microservices and REST API.Must have experience with Angular or React framework for UI/frontend development.Must have SQL skills and database experience.Must have strong development and programming skills.Must have good communication, analytical and problem-solving skills. Preferred Skills: AWS Cloud or other Cloud experience is highly preferred.CI/CD experience is highly preferred.Design and architecture experience is a plus. COMPENSATION: The base pay for this position ranges from $90,000 to $130,000. Pay is based on a number of factors including market location and may vary depending on job-related knowledge, skills, and experience. Dependent on the position offered, commission, bonus, and other forms of compensation may be provided as part of a total compensation package. Employee benefits include, but are not limited to, health insurance (medical, dental, vision), unlimited vacation and 401(k) plan. ABOUT PYRAMID CONSULTING, Inc. \u2013 as one of the largest minorities and privately owned staffing firms in the U.S., Pyramid Consulting focuses on providing our clients with high-quality technical professionals and services to support their business and IT initiatives. The success of our clients is facilitated through our ability to provide full-spectrum support via our development centers \u2013 from a single consultant under their management, at their site, to full turnkey solutions onsite and offshore. Pyramid Consulting, Inc. is an Equal Employment Opportunity Employer. All applicants hired will be subject to a background check and drug screening.",
+      "location": "Charlotte, NC",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 90000.0,
+      "max_salary": 130000.0,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3906222725",
+      "title": "Full Stack Engineer",
+      "company": "Pinnacle Group, Inc.",
+      "description": "Candidates who are willing to work on W2 Full Stack DeveloperMust Have: Kafka, Spring Boot, RDBMS, No SQL, React, NodeJS, CI/CD, Docker, Kubernetes, AWS Preferred Job Description: Proficient in Full Stack Development as well as multiple design techniques.Working proficiency in Full Stack toolset to design, develop, test, deploy, maintain and improve software.Strong understanding of Agile methodologies with ability to work in at least one of the common frameworks.Strong understanding of techniques such as Continuous Integration, Continuous Delivery, Test Driven Development, Cloud Development, application resiliency and securityProficiency in one or more general purpose programming languages.Working proficiency in a portion of software engineering disciplines and demonstrates understanding of overall software skills including business analysis, development, testing, deployment, maintenance and improvement of Software.Roles and Responsibilities: Advanced knowledge of application, data, and infrastructure architecture disciplines.Understanding of architecture and design across all systemsWorking proficiency in developmental toolsetsKnowledge of industry-wide technology trends and best practicesAbility to work in large, collaborative teams to achieve organizational goals.Proficiency in one or more modern programming languagesUnderstanding of software skills such as business analysis, development, maintenance, and software improvement.Hands-on experience in designing solutions and full stack development in modern technologies for large enterprise technology platforms and systems.Hands-on experience in coding Microservices in Java, building UI/UX using JavaScript frameworks (e.g. React, Angular), using Messaging e.g. Kafka, developing databases objects in: Oracle, Cloud Native DBs.Experience implementing opensource frameworks such as Spring Boot, POI, Activiti, Drools, preferred.Experience in deploying applications using CI/CD pipelines, docker containers & Kubernetes to Cloud platforms.Experience with in-memory caching technologies such as Hazelcast, Redis, a plus.Knowledge of performance engineering, tuning and building technology products for scale, a plus.Familiarity with design patterns and anti-patterns, preferable.Skills:Category Name Required Importance Level Last Used ExperienceProtocolsJavaYes1Intermediate 7-8Currently Using SpecialtiesCore JavaYes1Intermediate 7-8Currently Using Additional Skills: Kafka, Spring Boot, RDBMS, No SQL, React, NodeJS, CI/CD.",
+      "location": "Tampa, FL",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3901349793",
+      "title": "Java Full Stack Developer",
+      "company": "Genisis Technology Solutions",
+      "description": "What you will need to have: Strong client-facing skills and experienceGood understanding of software development patterns, object-oriented design principles, and coding techniques5+ years of practical experience in JAVA/J2EE, Linux, Spring, Kafka, Redis, Cassandra, EJB.Experience working with cloud technology Azure, OpenShift, AWS, Docker etc.Bachelor\u2019s degree from an accredited institution in Computer Science, Information Technology, or related technical discipline or equivalent work experience.5+ years of experience with full stack technologies like Java/J2EE, React or Angular, Spring Boot, OpenShift, producing & consuming REST API\u2019s. 3 - 10 years of experience designing, developing, and implementing software applications and hands on experience with large scale applications at large institutions. What would be great to haveExperience in Agile Software Development methodologies including Scrum.Snowflake development experience.Can-do attitude with a delivery focus.Practical experience with the end-to-end DevOps CI/CD pipeline including one or more of the following: Azure DevOps, Jenkins, Maven, Gitlab, SonarQube. Knowledge of Test-Driven Development (TDD) and/or Behavior-Driven Development (BDD).",
+      "location": "Jersey City, NJ",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3899523802",
+      "title": "Full Stack java developer",
+      "company": "CONFLUX SYSTEMS",
+      "description": "This position is only open to GC and U.S. citizens. locals may apply. Job Title: Software Engineer Senior (Java Cloud)Location: Dearborn, MI (Locals) Skills Required:\u00b7 Bachelor\u2019s Degree in Computer Science, Software Engineering, or related field \u00b7 7 + years of Java and Spring Boot development experience. \u00b7 3+ years of Experience in Angular \u00b7 Passion to become a Software Engineer who\u2019s proud of clean code Strong desire to learn new skills and apply to solve business problems/opportunities. Experience Required:\u00b7 Full-stack experience \u00b7 In depth knowledge of any programming language \u00b7 Automated Testing experience (Unit, Integration, E2E)\u00b7 Familiar with deploying to cloud platforms, preferably GCP or AWS \u00b7 Delivered products that include web front-end development; JavaScript, client-side MVC frameworks like Angular,i etc. Capable in Continuous Integration/Continuous Delivery tools and pipelines such as Jenkins, Gradle, etc.",
+      "location": "Dearborn, MI",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 80.0
+    },
+    {
+      "job_id": "3902941547",
+      "title": "Full Stack Engineer \u2013 Technical Lead",
+      "company": "Talent Groups",
+      "description": "Mandatory Skills:Proficiency in Java programming language.Experience with AngularJS 9+ for frontend development.Strong knowledge of Springboot framework for backend development.Hands-on experience with SQL Server, particularly from an application development perspective.Familiarity with RESTful API design and implementation.Experience working with Azure Cloud services.Knowledge of Liquibase for database schema management.Understanding of SQL Managed Instance (SQL-MI) on Azure. Nice To Have Skills:Familiarity with Jenkins for automation and CI/CD.Knowledge of Kafka for building real-time streaming applications.Experience with Git and GitHub for version control.Understanding of Git Actions for automating workflows.",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3895214400",
+      "title": "Full Stack Developer (Sr. NodeJS)",
+      "company": "Compunnel Inc.",
+      "description": "Job Title: Full Stack Developer (Sr. NodeJS)Location: Irving, TexasDuration: Long Term Contract Skills & ResponsibilitiesGiven the requirements, the candidate must be able to drive the requirements thru complete SDLC from requirements to delivery.Candidate must be proactive, self-driven, and self-motivated in solving problems.Be a thought leader for the team members and help other team members in solving the issues.Be available at work all five days.Expertise in Node.JS developmentFamiliarity with the latest ECMA-Script specifications.Expertise in AWS technologies like CloudFront, SNS, SES, SQS, Cloud FormationExpertise in working with DevOps and the Build pipelines.Expertise in the development of Unit Test cases, Testing frameworks, and scriptingExpertise in client-side JavaScript frameworks like React, jQueryExperience in JavaScript and supporting technologies such as TypeScript and NPMExperience in building solutions using the AWS cloud platform, with technologies such as Lambda, API Gateway, Kinesis, SNS, SQS, ECS, S3, and othersKnowledge of Node.JS concepts (Such as event loop, cluster, and memory management)Experience working with enterprise technology platforms. Possess a strong technical backgroundStrong understanding of building RESTful web servicesStrong knowledge of NoSQL databases.Strong experience with development methodologies such as XP, Agile, or SCRUMExposure to various technologies, including enterprise application integration, database design and configuration, web applications, operating platforms, security, and networking.Develop unit tests during the development process.Ability to drive design/architectural pathDemonstrate strong problem-solving ability and analytical skillsStrong communication, presentation, and advisory skills10+ years of development experience5+ years of ReactJS experience.5+ years of Node.JS experience8+ years of JavaScript experience.",
+      "location": "Irving, TX",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3900975697",
+      "title": "Full Stack Engineer",
+      "company": "AlterCall",
+      "description": "Duration: 6 months with potential for permanent positionType: Contract (1099) About Us:We're AlterCall AI, and we're looking for a Full Stack Engineer with a back end focus to join our team. You\u2019ll assist in developing dynamic web pages, ensuring cross-platform optimization, and collaborating with our design and development squads to create top-notch software solutions in a high-paced working environment that demands adaptability and flexibility to efficiently accomplish tasks. Responsibilities:Full-Stack Development:Utilize your expertise in JavaScript, TypeScript, and Python to develop scalable and efficient applications.Design and implement responsive user interfaces using React and Next.js.Develop server-side logic with Node.js.API Development:Create robust RESTful APIs and GraphQL endpoints.Work with AWS API Gateway to manage and deploy APIs.Database Management:Manage database systems, including AWS RDS SQL and DynamoDB.Ensure data integrity, security, and optimal performance.Serverless Computing:Implement serverless architectures using AWS Lambda and AWS Step Functions.Leverage AWS Batch for efficient batch processing.Infrastructure as Code:Use AWS CDK to define and provision infrastructure in a scalable and efficient manner.Frontend Development:Leverage React libraries and Material UI to implement aesthetic user interfaces.Collaborate with UX/UI designers to implement visually appealing and user-friendly interfaces.Utilize AWS Amplify for frontend development and deployment. Qualifications:Solid skills in JavaScript, TypeScript, CSS, React, Material UI, Tailwind, REST, CRUD.Experience with AWS, Amplify, Lambda, Cognito, CDK, DynamoDB, RDS, GraphQL, AppSync, Docker, MySQL, and PostgreSQL.Bachelor\u2019s degree in Computer Science or related field (preferred).5+ years of proven experience as a Full Stack Engineer or similar role.Experience developing desktop and web based mobile applications.Excellent communication and teamwork skills.Great attention to detail and time-management skills. How to Apply:Got what it takes? Send over your resume and portfolio outlining your qualifications and experience to us!",
+      "location": "Los Angeles, CA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3886488194",
+      "title": "Python Developer",
+      "company": "Planet Technology",
+      "description": "Python Developer - W2 Contracts (2)8+ years in Python middleware development & AWS Serverless required100% remote, EST preferred Qualifications:- Bachelor\u2019s degree in computer science or related field.- 9 years of experience in middleware, server programming & API development using Python.- 4+ hands on experience with cloud computing in AWS technologies such as API Gateway, DynamoDB, S3, CloudWatch.- 3+ years of experience of setting up CD/CD pipelines on AWS, Cloud formation/Terraform.- Develop Unit and integration tests with mock server using Pytest, Moto, Flask- Expertise in object-oriented & functional programming languages, Backend For Frontend (BFF) layer development.- Extensive understanding and experience in implementing design patterns.- Excellent problem-solving/troubleshooting/debugging skills and ability to work in a fast-paced environment.- Strong written and verbal communication skills.- Ability to work independently in a fast-paced environment with frequent production releases. Responsibilities:- Develop and maintain backend systems that meet product and business requirements.- Make and defend technical design decisions; collaborate with architecture team for approvals.- Design, implement, and maintain scalable, high performant and efficient server-side products.- Collaborate with cross-functional teams to understand and translate product requirements into optimal technical design.- Identify and solve complex problems, performance challenges in a fast-paced environment.- Participate in the entire development life cycle, from concept to release.- Ensure design and architecture is extensible across multiple projects.- Support business applications by diagnosing complex production issues requiring extensive analysis and troubleshooting.- Contribute to defining timelines and plans; research and estimate feasibility, cost, time, and scope.- Research new technologies, train other engineers, provide demos and other technical sessions to the entire engineering organization.- Resolving production issues as needed, plan and propose better approaches to proactively prevent such issues.",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology, Analyst, Engineering",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3899524727",
+      "title": "AWS & Java API Developer",
+      "company": "ISoftech Inc",
+      "description": "API Deployment experience is a mustParticipate into Design, Coding Review and CI/CD implementation.A Seasoned API Development EngineerDevelop strong engineering fundamentals and collaborate with front-end and back-end teamAWS API Developer will engage directly with AWS APIs to build highly scalable platform. Developing serverless AWS application using relevant AWS technologies such as:API GatewayLambdaAmazon AuroraCloudFormationSNS, SQSIAMStep FunctionsCLI/AWS Tool for PowerShellProficient in REST API development/testing/maintenance Strong knowledge and experience with:JSONPythonADO pipeline development, deploymentAutomated testingAPI first development using OpenAPI",
+      "location": "Washington DC-Baltimore Area",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3899542452",
+      "title": "Senior Full Stack Developer",
+      "company": "ConsultStaff",
+      "description": "Key Requirements: Hands-on software development experience with Angular, JavaScript, and TypeScript.Experience with creating backend REST services using Node, Typescript, Java, Spring and Advanced SQL, and AWS cloud services, including EC2, ECS, SQS, S3, Lambda, API Gateway, and RDSProficient in Unit testingExperience with complex scalable, distributed systems, and high-volume transaction applications.Proactively seeks opportunities to enhance application quality and performance, unafraid to advocate for innovative solutions and improvements.Solid familiarity with Agile delivery frameworks including Scrum or KanbanExperience with Jenkins, Git, Maven, Confluence, and Jira is a plusExperience with other modern Ul frameworks like React or Vue is a plusExperience with creating GraphQL Services using Typescript/Java is a plusIdeally, we are looking for an Individual with experience in serverless architectures, particularly with AW Lambda, and proficiency in Typescript.While a strong background in Node.js is highly desirable for backend development, we are open to considering candidates who are exceptionally skilled in Typescript and have experience with serverless in other programming languages like Java or Python.We also highly value soft skills such as dependability and the ability to take ownership of their work.",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "A senior full-stack developer with 9 years of experience, specializing in front-end development with React, cloud platforms like AWS and Azure, and API development. Holds AWS Developer and Scrum Master certifications, with a background in Computer Science.",
+    "job_explanations": [
+      {
+        "job_id": "3904970423",
+        "title": "Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React)",
+        "company": "Pyramid Consulting, Inc",
+        "match_reason": "Partial match. The candidate's 9 years of experience exceeds the 7+ year requirement, and their skills in React, SQL, and API development are relevant. However, this is a Java-centric role, and the candidate's CV does not list any experience with the required backend stack: Java, JEE, Spring Boot, or Hibernate.",
+        "missing_skills": [
+          "Java",
+          "JEE",
+          "Spring Boot",
+          "Hibernate",
+          "Microservices"
+        ]
+      },
+      {
+        "job_id": "3906222725",
+        "title": "Full Stack Engineer",
+        "company": "Pinnacle Group, Inc.",
+        "match_reason": "Partial match. The candidate's seniority, experience with React, CI/CD, and AWS align with the role's requirements. The primary mismatch is the required backend and infrastructure technologies, as the CV lacks any mention of Kafka, Spring Boot, NodeJS, Docker, or Kubernetes.",
+        "missing_skills": [
+          "Kafka",
+          "Spring Boot",
+          "NodeJS",
+          "Docker",
+          "Kubernetes",
+          "NoSQL"
+        ]
+      },
+      {
+        "job_id": "3901349793",
+        "title": "Java Full Stack Developer",
+        "company": "Genisis Technology Solutions",
+        "match_reason": "Poor match. While the candidate meets the 5+ years of experience and has skills in React and cloud technologies (AWS/Azure), the role is fundamentally based on a Java ecosystem. The required skills of JAVA/J2EE, Spring, Kafka, Redis, and Cassandra are all absent from the candidate's profile.",
+        "missing_skills": [
+          "Java/J2EE",
+          "Spring",
+          "Kafka",
+          "Redis",
+          "Cassandra",
+          "OpenShift",
+          "Spring Boot"
+        ]
+      },
+      {
+        "job_id": "3899523802",
+        "title": "Full Stack java developer",
+        "company": "CONFLUX SYSTEMS",
+        "match_reason": "Poor match. The candidate's 9 years of experience fits the seniority, and they have the preferred AWS experience. However, the role explicitly requires 7+ years of Java and Spring Boot development and 3+ years of Angular, none of which are present in the candidate's CV.",
+        "missing_skills": [
+          "Java",
+          "Spring Boot",
+          "Angular"
+        ]
+      },
+      {
+        "job_id": "3902941547",
+        "title": "Full Stack Engineer \u2013 Technical Lead",
+        "company": "Talent Groups",
+        "match_reason": "Poor match. The candidate's senior experience aligns with the 'Technical Lead' title, and they possess skills in SQL, API design, and Azure. The mismatch is the core technology stack; the role mandates Java, AngularJS, and Springboot, which are all missing from the candidate's profile.",
+        "missing_skills": [
+          "Java",
+          "AngularJS",
+          "Springboot",
+          "Liquibase"
+        ]
+      },
+      {
+        "job_id": "3895214400",
+        "title": "Full Stack Developer (Sr. NodeJS)",
+        "company": "Compunnel Inc.",
+        "match_reason": "Partial match. The candidate is a strong fit in terms of seniority (9 years vs 10+ required), React experience (5+ years), and AWS skills. The most significant gap is the lack of explicit NodeJS experience, which is the central requirement for this senior role. The years of experience are also slightly below the stated requirement.",
+        "missing_skills": [
+          "Node.JS",
+          "NoSQL"
+        ]
+      },
+      {
+        "job_id": "3900975697",
+        "title": "Full Stack Engineer",
+        "company": "AlterCall",
+        "match_reason": "Partial match. The candidate meets the 5+ years experience requirement and has the specified skills in Javascript, React, and AWS. However, the role requires a broader toolset that is missing from the CV, including TypeScript, Python, Node.js, GraphQL, and Docker.",
+        "missing_skills": [
+          "TypeScript",
+          "Python",
+          "Node.js",
+          "GraphQL",
+          "AWS CDK",
+          "DynamoDB",
+          "Docker"
+        ]
+      },
+      {
+        "job_id": "3886488194",
+        "title": "Python Developer",
+        "company": "Planet Technology",
+        "match_reason": "Poor match. This is a domain mismatch. The role requires 8+ years of Python middleware development. The candidate's profile, while showing 9 years of experience in software development and AWS, contains no mention of Python, making them unqualified for this specific language requirement.",
+        "missing_skills": [
+          "Python",
+          "Flask",
+          "Pytest",
+          "Terraform",
+          "DynamoDB"
+        ]
+      },
+      {
+        "job_id": "3899524727",
+        "title": "AWS & Java API Developer",
+        "company": "ISoftech Inc",
+        "match_reason": "Poor match. The candidate is a strong fit for the 'AWS API Developer' aspect, possessing an AWS certification and API development experience. However, the role requires proficiency in Java (per the title) and Python (per the description), neither of which are on the candidate's CV. The low reranker_score of 60.0 reflects this critical language gap.",
+        "missing_skills": [
+          "Java",
+          "Python",
+          "OpenAPI",
+          "CloudFormation",
+          "Step Functions"
+        ]
+      },
+      {
+        "job_id": "3899542452",
+        "title": "Senior Full Stack Developer",
+        "company": "ConsultStaff",
+        "match_reason": "Partial match. The candidate's senior status, experience with Javascript, Advanced SQL, and AWS services are all relevant. The primary gaps are in the specific frameworks required: the role asks for Angular on the front-end (candidate has React) and a backend in Node, Java, or Spring (candidate has none of these listed).",
+        "missing_skills": [
+          "Angular",
+          "TypeScript",
+          "Node.js",
+          "Java",
+          "Spring"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Java",
+      "JEE",
+      "Spring Boot"
+    ],
+    "recommendation": "The candidate has strong front-end (React) and cloud (AWS) skills but consistently lacks the required back-end programming languages (Java/Spring, Node.js, Python) for these roles. To improve matches, focus the job search on 'React Developer' or 'Front-End Engineer' roles, or invest in learning a high-demand back-end technology like Node.js or Java with Spring Boot."
+  }
+}

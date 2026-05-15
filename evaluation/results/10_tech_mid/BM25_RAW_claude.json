@@ -1,0 +1,275 @@
+{
+  "persona": "10_tech_mid",
+  "method": "BM25_RAW",
+  "model": "claude",
+  "run_timestamp": "2026-05-11T10:55:57.883402+00:00",
+  "results": [
+    {
+      "job_id": "3904058405",
+      "title": "Senior Full Stack Developer (Java)",
+      "company": "Western Union",
+      "description": "JR0119874 Code, test and analyze application software to support existing business systems applications. Consult with business analysts to identify business needs and appropriate technical solutions, as well as design and document technical requirements for business applications. Support highly functional, secure, scalable, and robust software solutions from the product ideation stage to production deployment through collaboration with product owners, architects, test engineers, dev-ops, and operations teams. Contribute to the design of backend DBs and queries, API creation and consumption, and front end UI development. Provide application architecture and design artifacts and conducting design reviews, as well as present solutions to technical and non-technical stakeholders. Analyze existing software for Usability and Accessibility issues and provide recommendations for improvement through Test Driven Development. Ensure that software deliverables adhere to architecture standards, risk management standards, and security policies. Utilize Java, Spring boot, Hibernate, React, Java Script, CSS, Jenkins and Microservices to meet business needs. Telecommuting may be permitted up to 2 days per week. When not telecommuting, must report to Western Union, LLC at 11902 Burnet Road, Suite 350, Austin, TX 78758. Salary Range: $118,165 to $150,250 per year. Minimum Requirements: Requires a Master\u2019s degree or U.S. equivalent in Computer Engineering, Computer Science, Information Systems, Information Technology, Electronic or Electrical Engineering, or a related field, plus 3 years of professional experience as a Software Developer, Software Engineer, or any occupation/position/job title involving software development. Must Also Have The Following Special Skills 3 years of professional experience performing scaling applications for performance and availability; 3 years of professional experience using Enterprise Architecture, Data Structures and Algorithms, or Object-Oriented Design; 3 years of professional experience using build systems, build management tools, version control tools, or security frameworks; and 2 years of professional experience performing software development with object-oriented programming languages including PHP, Transcript, JavaScript, React, HTML5, CSS3, and REST API. Referral Bonus - $500 (Subject to Employee Referral Policy). Eligible to internal employees only. Annual base salary gross: $118,165 to $150,250 USD. The base salary range represents the anticipated low and high end of the Western Union salary range for this position. Actual salaries will vary and will be based on various factors, such as candidate\u2019s qualifications, skills, competencies and proficiency for the role. The base salary is one component of Western Union\u2019s total compensation package for employees. Other rewards and benefits include short term incentives, health insurance (several options to choose from), accident and life insurance, access to the best in class learning and development platforms, to name just a few! To view more details of our benefits, visit us here: https://mywubenefits.com/. In addition to the annual salary, this role is also eligible to receive an annual bonus. Estimated Job Posting End Date 06-18-2024 This application window is a good-faith estimate of the time that this posting will remain open. This posting will be promptly updated if the deadline is extended or the role is filled.",
+      "location": "Austin, TX",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 118165.0,
+      "max_salary": 150250.0,
+      "url": "https://westernunionfinancialservicesinc.contacthr.com/136733374?source=LinkedIn",
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3901800025",
+      "title": "Senior Full Stack Developer (NJUS)",
+      "company": "NetJets",
+      "description": "Purpose of Position Design and implement user interface components for JavaScript-based web application using React. Build app and UI components from prototypes and wireframes. Write automated tests to ensure error-free code and performance. Improve front-end performance by eliminating performance bottlenecks. Create front-end modules with maximum code reusability and efficiency. Work with third-party dependencies and APIs. Tasks And Responsibilities Design and implement user interface components for JavaScript-based web application using React. Build app and UI components from prototypes and wireframes. Write automated tests to ensure error-free code and performance. Improve front-end performance by eliminating performance bottlenecks. Create front-end modules with maximum code reusability and efficiency. Work with third-party dependencies and APIs. Education Bachelor's in Computer Science or Information Technology Certifications and Licenses Years Of Experience 5+ years of experience Core Competencies Adaptability Collaboration Curiosity Service-Oriented Strives for Positive Results Required Knowledge, Skills, Abilities and Other (KSAOs) Java JavaScript React.js Node.js Junit Jenkins Database and Cloud experience Experience with Jest or related unit testing framework AWS (S3, CloudFront, Lambda, EC2)Oracle DB Preferred TypeScript Docker Experience",
+      "location": "Columbus, OH",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.netjets.com/job/Columbus-Senior-Full-Stack-Developer-%28NJUS%29-OH-43219/1155722000/?feedId=386400&utm_source=LinkedInJobPostings&utm_campaign=NJUS_LinkedIn",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3905286152",
+      "title": "Fullstack Developer",
+      "company": "CGI",
+      "description": "Position Description We are looking for an accomplished and capable Full Stack Developer with NodeJS and AWS, to join our organization!! The member can sit in either Bloomfield, CT (preferred), Lafayette, LA, New Jersey, New York, NY, Philadelphia, PA, Chattanooga, TN, Austin TX or Raleigh, NC Your future duties and responsibilities As a Fullstack Developer, you will contribute to generating high quality front-end and api code while. You will be a key player in the definition and execution of CGI and Client goals. Create a more efficient and sustainable workflow. You will also inherit/define reusable patterns to build out front-end architecture more efficiently. Develop test protocols or plan for testing revised application and review test results. May mentor less experienced technical staff: may use high end development tools to assist or facilitate development process. Required Qualifications To Be Successful In This Role 8+ years experienced in Software Development as a Full stack developer. Minimum of 6+ years experience in Typescript. Minimum of 4+ Years experience in developing services using NodeJS. Minimum of 3+ Years experience in GO. Minimum of 3+ Years experience with Amazon AWS Cloud Services. Strong expertise with Typescript, Node.JS, HTML CSS, ReactJS and writing cross browser compatible code on desktop and mobile based apps. Expert in designing front end interfaces using HTML/HTML5, Typescript, CSS3, JavaScript, jQuery and AJAX Experience with SPA frameworks. Experience with MonoRepo environment. You can design and code front-end (highly polished UIs, animations, and transitions) deliverables and integrate with APIs or DB services. Deep knowledge of best practices commonly used modules and creating self-contained reusable and testable modules and components. You are a stellar team player who can own a project (or more!) and have worked on large-scale JavaScript applications. Excellent team player with good analytical, strategic planning and interpersonal and communication skills. Develop test protocols or plan for testing revised application and review test results. May mentor less experienced technical staff: may use high end development tools to assist or facilitate development process. Good understanding of Dockers, Jenkins, CI/CD pipeline and Maven. You are a stellar team player who can own a project (or more!) and have worked on large-scale JavaScript applications. Excellent team player with good analytical, strategic planning and interpersonal and communication skills. Education: Bachelor's degree in Computer Science or related field CGI is required by law in some jurisdictions to include a reasonable estimate of the compensation range for this role. The determination of this range includes various factors not limited to skill set, level, experience, relevant training, and licensure and certifications. To support the ability to reward for merit-based performance, CGI typically does not hire individuals at or near the top of the range for their role. Compensation decisions are dependent on the facts and circumstances of each case. A reasonable estimate of the current range for this role in the U.S. is $55,600 - $130,500. At CGI we call our professionals \u201cmembers\u201d to reinforce that all who join our team are, as owners, empowered to participate in the challenges and rewards that come from building a world-class company. CGI\u2019s benefits include: Competitive base salaries Eligibility to participate in an attractive Share Purchase Plan (SPP) in which the company matches dollar-for-dollar contributions made by eligible employees, up to a maximum, for their job category 401(k) Plan and Profit Participation for eligible members Generous holidays, vacation, and sick leave plans Comprehensive insurance plans that include, among other benefits, medical, dental, vision, life, disability, out-of-county emergency coverage in all countries of employment; Back-up child care, Pet insurance, a Member Assistance Program, a 529 college savings program, a personal financial management tool, lifestyle management programs and more #DICE Together, as owners, let\u2019s turn meaningful insights into action. Life at CGI is rooted in ownership, teamwork, respect and belonging. Here, you\u2019ll reach your full potential because\u2026 You are invited to be an owner from day 1 as we work together to bring our Dream to life. That\u2019s why we call ourselves CGI Partners rather than employees. We benefit from our collective success and actively shape our company\u2019s strategy and direction. Your work creates value. You\u2019ll develop innovative solutions and build relationships with teammates and clients while accessing global capabilities to scale your ideas, embrace new opportunities, and benefit from expansive industry and technology expertise. You\u2019ll shape your career by joining a company built to grow and last. You\u2019ll be supported by leaders who care about your health and well-being and provide you with opportunities to deepen your skills and broaden your horizons. Come join our team\u2014one of the largest IT and business consulting services firms in the world. Qualified applicants will receive consideration for employment without regard to their race, ethnicity, ancestry, color, sex, religion, creed, age, national origin, citizenship status, disability, medical condition, military and veteran status, marital status, sexual orientation or perceived sexual orientation, gender, gender identity, and gender expression, familial status, political affiliation, genetic information, or any other legally protected status or characteristics. CGI provides reasonable accommodations to qualified individuals with disabilities. If you need an accommodation to apply for a job in the U.S., please email the CGI U.S. Employment Compliance mailbox at US_Employment_Compliance@cgi.com. You will need to reference the requisition number of the position in which you are interested. Your message will be routed to the appropriate recruiter who will assist you. Please note, this email address is only to be used for those individuals who need an accommodation to apply for a job. Emails for any other reason or those that do not include a requisition number will not be returned. We make it easy to translate military experience and skills! Click here to be directed to our site that is dedicated to veterans and transitioning service members. All CGI offers of employment in the U.S. are contingent upon the ability to successfully complete a background investigation. Background investigation components can vary dependent upon specific assignment and/or level of US government security clearance held. CGI will not discharge or in any other manner discriminate against employees or applicants because they have inquired about, discussed, or disclosed their own pay or the pay of another employee or applicant. However, employees who have access to the compensation information of other employees or applicants as a part of their essential job functions cannot disclose the pay of other employees or applicants to individuals who do not otherwise have access to compensation information, unless the disclosure is (a) in response to a formal complaint or charge, (b) in furtherance of an investigation, proceeding, hearing, or action, including an investigation conducted by the employer, or (c) consistent with CGI\u2019s legal duty to furnish information.",
+      "location": "Bloomfield, CT",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3901346484",
+      "title": "Full Stack .NET Developer",
+      "company": "CBTS",
+      "description": "CBTS is currently seeking a Full Stack .NET Developer for a position located in Cincinnati, OH. Job Description:We are seeking a seasoned Senior Full Stack .NET Developer with a strong background in .NET Core, Azure, SQL, Visual Studio, Git, and Azure DevOps. This role is ideal for a developer looking to contribute to a dynamic team of 8 developers in an agile environment with daily standups. Responsibilities:Develop and maintain scalable software solutions fully integrated with the Microsoft technology stack.Work collaboratively in a team setting, participating in daily standups, project reviews, and code discussions.Engage in all phases of software development from design to implementation, and maintenance.Utilize Azure DevOps for continuous integration/continuous delivery (CI/CD) processes.Ensure high performance and responsiveness of all .NET applications. Qualifications:Proven experience as a Full Stack Developer in a .NET environment.Strong proficiency with .NET Core, Azure cloud services, SQL Server, Visual Studio, and Git.Familiarity with Agile development methodologies.Excellent problem-solving skills and ability to work under minimal supervision. Cincinnati Bell Technology Solutions provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, gender, sexual orientation, gender identity or expression, national origin, age, disability, genetic information, marital status, amnesty, or status as a protected veteran in accordance with applicable federal, state and local laws. \u201cNotice of Collection for California Employees, Applicants, and Contractorshttps://www.cbts.com/privacy-policy/california-privacy-policy/\u201d",
+      "location": "Cincinnati, OH",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3899524727",
+      "title": "AWS & Java API Developer",
+      "company": "ISoftech Inc",
+      "description": "API Deployment experience is a mustParticipate into Design, Coding Review and CI/CD implementation.A Seasoned API Development EngineerDevelop strong engineering fundamentals and collaborate with front-end and back-end teamAWS API Developer will engage directly with AWS APIs to build highly scalable platform. Developing serverless AWS application using relevant AWS technologies such as:API GatewayLambdaAmazon AuroraCloudFormationSNS, SQSIAMStep FunctionsCLI/AWS Tool for PowerShellProficient in REST API development/testing/maintenance Strong knowledge and experience with:JSONPythonADO pipeline development, deploymentAutomated testingAPI first development using OpenAPI",
+      "location": "Washington DC-Baltimore Area",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3899528073",
+      "title": " VueJS developer",
+      "company": "VMC Soft Technologies, Inc",
+      "description": "Role : VueJS developerContract : W2 onlyLocation : Austin,TX Key Qualifications: \u00b7 Proficient JavaScript programmer\u00b7 Experience building complex, large scale applications\u00b7 Proficient in at least one JavaScript framework like Vue.js (preferred), React, or equivalent\u00b7 Experience with CSS3 and Less/Sass (ability to write mixins, partials, functions, etc) and usage in large scale applications\u00b7 Proven ability to share and collaborate with peers both verbally and in writing Experience in Single Page Application architecture\u00b7 Proficient knowledge of Git and NPM Experience with testing frameworks capable of learning new programming languages\u00b7 Acute attention to detail and dedication to quality\u00b7 Excellent oral and written English interpersonal skills.\u00b7 Experience with UI build environments and automation\u00b7 Experience with server-side integration through REST API Descriptions: An UI Engineer you will be responsible for building the next generation of user experiences for our AppleCare services. We need a highly motivated and skillful engineer to work with HTML, JavaScript, and CSS and related tooling, frameworks, and libraries. Attention to detail and a dedication to deliver a high-quality, stable delivery is essential. To be successful you are self-motivated; driven to achieve and exceed commitments; participate in pull request (PR) reviews and Agile development. You also need to exude strong collaboration skills, including the ability to mentor and be mentored. Possess a strong passion to work in a growing, energizing environment of innovation. If you want to be part of this amazing team, this position is for you. RupendraRupendra@galaxyitech.com4804076927",
+      "location": "Austin, TX",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3904983666",
+      "title": "Senior Developer Operations Engineer",
+      "company": "Gogo Business Aviation",
+      "description": "As a Senior DevOps Engineer at Gogo Business Aviation, you will work with the latest Cloud Technologies implementing CI/CD pipelines, developing tools and automation to eliminate manual activities, increase stability, and accelerate our ability to release new functionality. The ideal candidate for this role will have a solid and practical understanding of build systems, version control, and managing and deploying systems at scale. It is essential that you are forward-thinking, eager to learn and have a passion to explore and experiment with the latest technologies. This will be a key role in Engineering directly impacting new applications that rely heavily on the deployment to the cloud. COME ON BOARD THE GOGO SOFTWARE ENGINEERING TEAM! How Will You Make a Difference? Design, develop, maintain, and improve continuous integration/continuous delivery (CI/CD) pipelines for delivering features, fixes, and system updates in all environments (development, integration, and production) Analyze functional and non-functional business requirements and translate them into tactical plans to deliver CI/CD solutions. Understand the organization\u2019s strategic direction and develop longer term roadmaps to answer these needs Implement continuous monitoring capabilities, track all aspects of the system, infrastructure, performance, application errors and roll up metrics Integrate and implement best practices and DevOps methodologies into every step of the Engineering delivery process Troubleshoot and resolve complex technical issues Participate/create DevOps culture supporting Engineering\u2019s continuous improvement principles Qualifications Bachelor's degree in Computer Science, Engineering, or related discipline, or equivalent experience 4-7 years of experience in a DevOps role AWS certification is a REQUIREDThis is a hybrid role: you must be willing to be in the Broomfield office 2-3 days a week Required Skills, Experience And Talents Proficient in build tools such as codebuild and codepipeline Possess a solid understanding of version control systems such as Git; as well as an understanding of Gitflow Experience with AWS services such as CloudFormation, ECS, EC2, S3, Lambda, DynamoDB, VPC, ELB, and auto scaling Infrastructure management and monitoring AWS services (Cloudwatch) Extremely competent in terms of administering Linux systems Familiar with Cloud deployments, containers, and continuous integration Exceptional communication skills and the ability to work independently Able to provision/troubleshoot users and IAM permissions in AWS Preferred Skills, Experience And Talents Knowledge of scripting languages (e.g. Python, Groovy, etc.) Understanding of the Java programming languages and Java frameworks Expertise with cloud security Familiar with Jenkins based CI/CD pipelines with integration with open-source plugins Contact with multi-region deployments and Edge services Transit Gateway, Direct Connect, and site to site VPNs We love work-life balance as much as you do! Gogo Business Aviation is a place that values our employees\u2019 time both in and out of the office. Our employees enjoy a hybrid in-office and work-from-home environment that is designed to give you the flexibility and space to collaborate with your team effectively while building the strong relationships that are a hallmark of our culture. Equal Pay Disclosure(s) Base Pay: 124,000.00 - 155,000.00 USD Annual Target Annual Short-Term Incentive: Bonus Plan at 10% (% of Annualized Base Pay) Eligible for Incentive Stock Program: Yes Benefits: Gogo offers competitive benefits including medical, dental and vision coverage with plans that can fit each employee\u2019s needs. We offer an immediate vesting 401k plan, paid time off and volunteer time off. Employees have the option to participate in an Employee Stock Purchase Plan. Visit the Careers page on our website for more information at www.gogoair.com/careers. --- --- --- Gogo is an Equal Opportunity and Affirmative Action employer, working in compliance with both federal and state laws. We are committed to the concept of Equal Employment opportunity. Qualified candidates will be considered for employment regardless of race, color, religion, age, sex, national origin, marital status, medical condition, or disability. The EEO is the law and is available here. Gogo participates in E-Verify (English and Spanish). Right to Work Statement (English and Spanish).",
+      "location": "Broomfield, CO",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 124000.0,
+      "max_salary": 155000.0,
+      "url": "https://gogo.wd1.myworkdayjobs.com/careers/job/Broomfield-CO/Senior-Developer-Operations-Engineer_R2888",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901349793",
+      "title": "Java Full Stack Developer",
+      "company": "Genisis Technology Solutions",
+      "description": "What you will need to have: Strong client-facing skills and experienceGood understanding of software development patterns, object-oriented design principles, and coding techniques5+ years of practical experience in JAVA/J2EE, Linux, Spring, Kafka, Redis, Cassandra, EJB.Experience working with cloud technology Azure, OpenShift, AWS, Docker etc.Bachelor\u2019s degree from an accredited institution in Computer Science, Information Technology, or related technical discipline or equivalent work experience.5+ years of experience with full stack technologies like Java/J2EE, React or Angular, Spring Boot, OpenShift, producing & consuming REST API\u2019s. 3 - 10 years of experience designing, developing, and implementing software applications and hands on experience with large scale applications at large institutions. What would be great to haveExperience in Agile Software Development methodologies including Scrum.Snowflake development experience.Can-do attitude with a delivery focus.Practical experience with the end-to-end DevOps CI/CD pipeline including one or more of the following: Azure DevOps, Jenkins, Maven, Gitlab, SonarQube. Knowledge of Test-Driven Development (TDD) and/or Behavior-Driven Development (BDD).",
+      "location": "Jersey City, NJ",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3886898526",
+      "title": "Sr Java Developer on w2",
+      "company": "UConn Solutions",
+      "description": "Sr. Java Application Developer / Integration Developer only for w2 Location: CA Top Skills: NO SQL, Java, Spring Framework, Spring Boot, Apache Camel Experience: Minimum 10 years of experience required Education: Bachelor's degree in Computer Science or related field (Required) Integration Experience: Required Technical Skills NO SQL*Java using Spring Framework and Spring Boot (Required)Apache ActiveMQ, Apache Camel, Apache Kafka, and API Gateway products (Required)Docker, Kubernetes, Jenkins, and Ansible (Required)CI/CD pipelines and writing Infrastructure as Code (IaC) (Required)Database Oracle PL/SQL knowledge (Plus) Job Summary: We are seeking an experienced Senior Integration Developer with a minimum of 8 years of experience in Java development. This role will involve designing, developing, and operating integration solutions for both public and on-premise cloud environments. The successful candidate will work closely with internal technical teams to design, prototype, and maintain complex applications in compliance with ERCOT operating procedures and SDLC guidelines. Responsibilities Develop and operate platform components in Public and Private cloud environments.Perform system integration and performance monitoring.Continuously automate processes during development and operations.Develop prototypes to prove out designs and delivery patterns.Foster collaboration with cross-functional teams including Development, Operations, Compliance, Security, etc.Provide mentorship and technical guidance to transition work to other ERCOT development teams. Additional Responsibilities Convey team goals effectively through strong written and verbal communication skills.Execute end-to-end testing for various non-functional requirements.Resolve design and development issues in creative and effective ways.Research, evaluate, and incorporate new technology and tools to enhance product development and platform operations.Give advice and recommendations to management based on experience.Expand technical proficiency in key technical areas. Experience Minimum 8 years related work experience in excess of degree requirements. Desired Skills Experience building CI/CD pipelines and writing Infrastructure as Code (IaC) for both private and public cloud deployments.Experience developing production-ready applications and microservices in Java using Spring Framework and Spring Boot.Experience delivering Software Integration solutions.Experience collaborating and coordinating with multiple departments, developers, stakeholders, partners, and external vendors.Proficiency with Oracle PL/SQL.Experience delivering cloud-ready solutions using modern delivery practices with Docker, Kubernetes, Jenkins, and Ansible.Strong communication skills and experience mentoring other developers.Experience with Apache ActiveMQ, Apache Camel, Apache Kafka, and API Gateway products.Preferred experience in software development and deployment using TIBCO BusinessWorks 6.x or BusinessWorks Container Edition.Preferred experience with a variety of messaging protocols like SOAP, REST/JSON, OpenAPI, gRPC, and GraphQL.Preferred experience working with Azure messaging solutions like API Management, Logic Apps, Service Bus, and Event Hub. Education Bachelor's Degree in Computer Science or related field (Required)Alternatively, a combination of education and experience that provides equivalent knowledge to a major in such fields is required.",
+      "location": "Sunnyvale, CA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3902358802",
+      "title": "AWS Cloud API Developer",
+      "company": "TOPSYS IT",
+      "description": "Job Title: AWS Cloud API DeveloperLocation: Charlotte, NC/Austin, TX Works ONLY ON W2 Job Responsibilities: Develop, deploy, and maintain cloud-based APIs using AWS services.Design and implement RESTful APIs using Lambda functions, Python, and API Gateway.Collaborate with cross-functional teams to gather requirements and define API specifications.Ensure high availability, scalability, and security of APIs in the cloud environment.Implement authentication, authorization, and tokenization mechanisms for API security.Optimize API performance and latency by leveraging AWS infrastructure and services.Integrate APIs with various backend systems and third-party services.Develop API documentation and provide technical support to internal and external stakeholders.Monitor, troubleshoot, and resolve issues related to API functionality and performance.Stay updated with AWS best practices and emerging technologies in cloud development.Demonstrate a strong understanding of AWS big data architecture and its application in cloud development projects.Implement security measures and tokenization techniques for APIs.Enable API-to-API and API-to-application communication.Create and maintain API documentation.Implement alerting and monitoring systems for APIs.Utilize step functions and Terraform for infrastructure and API development.Develop and maintain RESTful APIs, focusing on automated unit testing and ensuring code quality.Write unit test cases and adhere to Test-driven development (TDD) practices.Have used Pytest and Pycharm for the unit testing framework and have written a test cases.Ensure API security measures are implemented, particularly on the API Gateway side.Collaborate with cross-functional teams to explain project requirements and handle tough situations effectively.Stored Procs (AWS Postgres) to API integration.Handle large datasets efficiently and effectively in API development. Qualifications: Bachelor's degree in Computer Science, Engineering, or related field.Proven experience as a software developer with expertise in cloud-based API development.Strong knowledge of AWS services such as Lambda, API Gateway, DynamoDB, S3, and CloudWatch.Proficiency in programming languages such as Python, Node.js, or Java.Experience with RESTful API design principles and best practices.Familiarity with authentication protocols like OAuth, JWT, and API key management.Ability to work in an Agile development environment and collaborate effectively with teams.Excellent problem-solving and analytical skills with attention to detail.Strong communication skills and the ability to articulate technical concepts to non-technical stakeholders.AWS certification (e.g., AWS Certified Developer) is a plus. Email: Pranai.r@Topsysit.comPhone: 678-257-2747 Thanks & Regards",
+      "location": "Austin, Texas Metropolitan Area",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior full-stack developer with 9 years of experience, a BS in Computer Science, AWS Certified Developer \u2013 Associate, and SCRUM Master certification. Core strengths include full-stack and API development, React, JavaScript, SQL, AWS, Azure, CI/CD pipelines, and cloud integration.",
+    "job_explanations": [
+      {
+        "job_id": "3904058405",
+        "title": "Senior Full Stack Developer (Java)",
+        "company": "Western Union",
+        "match_reason": "This is a partial match. The candidate's 9 years of full-stack experience, React, JavaScript, API development, and CI/CD pipeline background align well with the role's front-end and API requirements. However, the job explicitly requires a Master's degree as a minimum qualification, and the candidate holds only a Bachelor's degree \u2014 this is a hard requirement mismatch that is a primary disqualifier. Additionally, the role mandates Java, Spring Boot, and Hibernate, none of which appear in the candidate's skills, tools, or domain keywords.",
+        "missing_skills": [
+          "Master's degree (required)",
+          "Java",
+          "Spring Boot",
+          "Hibernate"
+        ]
+      },
+      {
+        "job_id": "3901800025",
+        "title": "Senior Full Stack Developer (NJUS)",
+        "company": "NetJets",
+        "match_reason": "This is a strong partial match. The candidate's 9 years of experience exceeds the 5+ year requirement, and their React, JavaScript, AWS, SQL, CI/CD, and testing skills directly map to the role's required KSAOs. The Bachelor's in Computer Science satisfies the education requirement. The primary gaps are Java and Node.js, which are listed as required skills. The reranker score of 85 reflects the strong overall alignment despite these gaps.",
+        "missing_skills": [
+          "Java",
+          "Node.js"
+        ]
+      },
+      {
+        "job_id": "3905286152",
+        "title": "Fullstack Developer",
+        "company": "CGI",
+        "match_reason": "This is a partial match with a notable seniority concern. The role is posted at entry level but requires 8+ years of full-stack experience \u2014 an internal inconsistency. The candidate's 9 years, React, JavaScript, AWS, CI/CD, and API development experience align with the technical depth implied. However, the role explicitly requires 6+ years of TypeScript, 4+ years of Node.js, and 3+ years of Go, none of which appear in the candidate's profile. The reranker score of 82 reflects the general domain alignment, but these required technology gaps are significant.",
+        "missing_skills": [
+          "TypeScript",
+          "Node.js",
+          "Go"
+        ]
+      },
+      {
+        "job_id": "3901346484",
+        "title": "Full Stack .NET Developer",
+        "company": "CBTS",
+        "match_reason": "This is a partial match. The candidate's Agile development, Azure, SQL, CI/CD, and full-stack experience align with several role requirements. However, the role is explicitly a .NET environment role requiring .NET Core and Visual Studio proficiency, neither of which appears anywhere in the candidate's profile. The reranker score of 78 reflects the surface-level overlap in cloud and agile skills, but the absence of .NET Core is a primary technical gap for this position.",
+        "missing_skills": [
+          ".NET Core",
+          "Visual Studio"
+        ]
+      },
+      {
+        "job_id": "3899524727",
+        "title": "AWS & Java API Developer",
+        "company": "ISoftech Inc",
+        "match_reason": "This is a partial match. The candidate's AWS certification, API development experience, CI/CD pipeline background, and automation skills are directly relevant. However, the role explicitly requires Python and Java for API development, and experience with AWS-specific services such as API Gateway, Lambda, Aurora, CloudFormation, SNS/SQS, and Step Functions. While the candidate holds an AWS Certified Developer credential and general AWS experience, these specific service-level and language requirements are not evidenced in the profile. The reranker score of 75 reflects this partial alignment.",
+        "missing_skills": [
+          "Python",
+          "Java",
+          "AWS Lambda/API Gateway/CloudFormation (service-level experience)"
+        ]
+      },
+      {
+        "job_id": "3899528073",
+        "title": "VueJS Developer",
+        "company": "VMC Soft Technologies, Inc",
+        "match_reason": "This is a partial match. The candidate's JavaScript, React, REST API integration, Agile development, and front-end development experience are relevant. The role prefers Vue.js but accepts React or equivalent frameworks, which the candidate has. However, the role explicitly requires Vue.js proficiency as the primary framework, and experience with CSS preprocessors (Less/Sass) and Git/NPM are stated requirements not evidenced in the candidate's profile. The reranker score of 72 reflects the moderate fit given the framework flexibility but missing specifics.",
+        "missing_skills": [
+          "Vue.js",
+          "Less/Sass (CSS preprocessors)"
+        ]
+      },
+      {
+        "job_id": "3904983666",
+        "title": "Senior Developer Operations Engineer",
+        "company": "Gogo Business Aviation",
+        "match_reason": "This is a partial match with a domain shift concern. The candidate has CI/CD pipeline experience, AWS certification (which is explicitly required), and cloud integration skills that are relevant. However, this is a dedicated DevOps engineering role requiring 4\u20137 years of DevOps-specific experience, Linux system administration, AWS infrastructure tools (CloudFormation, ECS, ELB, DynamoDB, VPC, auto scaling, CloudWatch), and Git/Gitflow expertise \u2014 none of which are explicitly evidenced in the candidate's profile beyond general CI/CD and AWS exposure. The candidate's background is full-stack development, not DevOps operations, which is a meaningful domain shift.",
+        "missing_skills": [
+          "Linux system administration",
+          "AWS CloudFormation/ECS/VPC/CloudWatch (infrastructure-level)",
+          "Gitflow"
+        ]
+      },
+      {
+        "job_id": "3901349793",
+        "title": "Java Full Stack Developer",
+        "company": "Genisis Technology Solutions",
+        "match_reason": "This is a partial match. The candidate's 9 years of full-stack experience, React, REST API development, cloud experience (AWS, Azure), and CI/CD background align with several requirements. The role explicitly requires 5+ years of Java/J2EE, Spring, Kafka, Redis, and Cassandra \u2014 none of which appear in the candidate's profile. The reranker score of 68 reflects the general full-stack alignment but significant Java ecosystem gaps.",
+        "missing_skills": [
+          "Java/J2EE",
+          "Spring Boot",
+          "Kafka"
+        ]
+      },
+      {
+        "job_id": "3886898526",
+        "title": "Sr Java Developer on w2",
+        "company": "UConn Solutions",
+        "match_reason": "This is a poor match. The role requires a minimum of 10 years of experience (the candidate has 9), and mandates deep Java expertise using Spring Framework and Spring Boot, Apache Camel, Apache Kafka, Docker, Kubernetes, and Ansible \u2014 none of which appear in the candidate's profile. The role is a Java integration developer position, which is a distinct specialization from the candidate's full-stack JavaScript/React background. The reranker score of 65 reflects this weak alignment.",
+        "missing_skills": [
+          "Java/Spring Boot",
+          "Apache Kafka/Camel",
+          "Docker/Kubernetes"
+        ]
+      },
+      {
+        "job_id": "3902358802",
+        "title": "AWS Cloud API Developer",
+        "company": "TOPSYS IT",
+        "match_reason": "This is a strong match. The candidate's AWS Certified Developer \u2013 Associate certification directly satisfies the stated AWS certification preference, and their API development, cloud integration, automation, CI/CD, and testing skills align closely with the role's core responsibilities. The candidate's 9 years of experience and full-stack background support the required API design and deployment work. The primary gap is Python, which is the primary language specified for Lambda and API development in this role. The reranker score of 88 reflects the high overall alignment.",
+        "missing_skills": [
+          "Python"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Master's degree (required)",
+      "Java",
+      "Spring Boot"
+    ],
+    "recommendation": "The candidate should prioritize learning Java with Spring Boot and Python, as these are required skills appearing across the majority of the matched roles and represent the most critical gaps preventing strong fits. Adding TypeScript proficiency would further broaden eligibility for modern full-stack positions."
+  }
+}

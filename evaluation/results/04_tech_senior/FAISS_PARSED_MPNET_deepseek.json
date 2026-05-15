@@ -1,0 +1,281 @@
+{
+  "persona": "04_tech_senior",
+  "method": "FAISS_PARSED_MPNET",
+  "model": "deepseek",
+  "run_timestamp": "2026-05-11T10:43:11.871513+00:00",
+  "results": [
+    {
+      "job_id": "3903441763",
+      "title": "Data Analyst (W2 Only)",
+      "company": "Triunity Software, Inc.",
+      "description": "Hi,This is Prashant, a Senior Recruiter from Triunity Software Inc. a leading staffing organization.I came across your profile in one of the job boards and feel that your skills and professional experience would be a good fit for a position with one of our premier clients. Please review the job description below. If you are interested in this position, please forward your updated resume for immediate consideration and preferred time to discuss this opportunity further. Title- Data Analyst/Senior Data Analyst (W2 Only)Location- Remote Required Skills \u2013 AWS, Python, Scala & Health domain (claims / payers)Excellent Communication Skills",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 88.0
+    },
+    {
+      "job_id": "3902809268",
+      "title": "Data Scientist (6+ years) (Fulltime)",
+      "company": "Diverse Lynx",
+      "description": "Job Title: Data ScientistLocation: Bentonville, AR (Onsite)Fulltime Mode of interview: Video Call Must have skills : AI/ML models using Google Cloud Platform Relevant Experience: 6+ years Education: Bachelor\u2019s Degree or above Roles & Responsibilities \u00b7 Proven experience in deploying real-time AI/ML models using Google Cloud Platform.\u00b7 Strong programming skills in Python and PySpark.\u00b7 Proficiency with SQL and relational databases, data warehouses, and BigQuery.\u00b7 Experience in scaling marketing-related AI/ML solutions such as cross/upsell, recommended systems, and category propensity.\u00b7 Experience in deploying and managing Large scale Machine Learning Models is a plus\u00b7 Expertise with classical ML algorithm like K-NN, LSH, logistic regression, linear regression, SVM, Random forest and clustering.\u00b7 Good understanding of ML & DL algorithms and frameworks (Scikit-learn,Spacy, Tensorflow/Keras/ PyTorch)\u00b7 Experience in deep learning Algorithm s like MLP, CNN, RNN, LSTMs and GANs, Transformers and LLMs.\u00b7 Excellent programming skills in Python\u00b7 Expertise in Google Cloud and operationalization of models using MLOPs.\u00b7 Experience in scheduling jobs for automated training and inference of AI/ML models using airflow or any other workflow orchestration platform.\u00b7 Proficiency in collecting data from different data sources, data cleaning, preprocessing, and feature engineering.\u00b7 Understanding of regression, classification, and unsupervised ML algorithms.\u00b7 Experience in mentoring junior associates in scaling AI/ML models.\u00b7 Excellent problem-solving and analytical skills.\u00b7 Strong written and verbal communication skills, with the ability to present and explain complex concepts to both technical and non-technical audiences.",
+      "location": "Bentonville, AR",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3903455192",
+      "title": "Senior Data Scientist with GCP and LLM ,Gen AI exp 10+",
+      "company": "Peritus Inc",
+      "description": "Hi All, Sr. Data Scientist With LLM and GCP Cloud. Location: Remote JD: Mandatory Areas Must Have Skills \u2013 Python\u2013 6+ Yrs of Exp \u2013 Pyspark \u20136+ Yrs of Exp \u2013 Pytorch\u20136+ Yrs of Exp \u2013 GCP \u20133 + Yrs of Exp \u2013 Web development \u2013 Prior experience 3+ Years Docker \u2013 4+ Years KubeFlow - 4+ Years Description: Client is looking for a highly energetic and collaborative Senior Data Scientist with experience building enterprise level GenAI applications, designed and developed MLOps pipelines . The ideal candidate should have deep understanding of the NLP field, hands on experience in design and development of NLP models and experience in building LLM-based applications. Excellent written and verbal communication skills with the ability to collaborate effectively with domain experts and IT leadership team is key to be successful in this role. We are looking for candidates with expertise in Python, Pyspark, Pytorch, Langchain, GCP, Web development, Docker, Kubeflow etc. Key Responsibilities: \u2022 Work with Client Platform Enablement team within the eCommerce Analytics team. The broader team is currently on a transformation path, and this role will be instrumental in enabling the broader team's vision. \u2022 Work closely with other Data Scientists to help with production models and maintain them in production. \u2022 Deploy and configure Kubernetes components for production cluster, including API Gateway, Ingress, Model Serving, Logging, Monitoring, Cron Jobs, etc. Improve the model deployment process for MLE for faster builds and simplified workflows \u2022 Be a technical leader on various projects across platforms and a hands-on contributor of the entire platform's architecture \u2022 Responsible for leading operational excellence initiatives in the AI/Client space which includes efficient use of resources, identifying optimization opportunities, forecasting capacity, etc. \u2022 Design and implement different flavors of architecture to deliver better system performance and resiliency. \u2022 Develop capability requirements and transition plan for the next generation of AI/Client enablement technology, tools, and processes to enable Client to efficiently improve performance with scale. Tools/Skills (hands-on experience is must): \u2022 Ability to transform designs ground up and lead innovation in system design \u2022 Deep understanding of GenAI applications and NLP field \u2022 Hands on experience in the design and development of NLP models \u2022 Experience in building LLM-based applications \u2022 Design and development of MLOps pipelines \u2022 Fundamental understanding on the data science parameterized and non-parameterized algorithms. \u2022 Knowledge on AI/Client application lifecycles and workflows. \u2022 Experience in the design and development of an Client pipeline using containerized components. \u2022 Have worked on at least one Kubernetes cloud offering (EKS/GKE/AKS) or on-prem Kubernetes (native Kubernetes, Gravity, MetalK8s) \u2022 Programming experience in Python, Pyspark, Pytorch, Langchain, Docker, Kubeflow \u2022 Ability to use observability tools (Splunk, Prometheus, and Grafana ) to look at logs and metrics to diagnose issues within the system. \u2022 Experience with Web development Education & Experience: - \u2022 6+ years relevant experience in roles with responsibility over data platforms and data operations dealing with large volumes of data in cloud based distributed computing environments. \u2022 Graduate degree preferred in a quantitative discipline (e.g., computer engineering, computer science, economics, math, operations research). \u2022 Proven ability to solve enterprise level data operations problems at scale which require cross-functional collaboration for solution development, implementation, and adoption. Regards,Nisha JhaTechnical RecruiterNisha.j@colinatech.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3905236672",
+      "title": "AWS Data Engineer",
+      "company": "Cyma Systems Inc",
+      "description": "Title: AWS EngineerLocation: RemoteDuration: 6+months . We\u2019re Looking for:\u2022 Minimum 7 years of progressively responsible work experience in Data Engineering , architecture, design and development.\u2022 Minimum 5 years of experience with ETL/ELT design and development using tools like IICS, AWS Glue, Talend, Databricks, Oracle Data Integrator (ODI) or equivalent.\u2022 Minimum 5 years of experience in database architecture using relational SQL (e.g. Snowflake, Oracle, PostgreSQL, MySQL), and NoSQL (DynamoDB, MongoDB, Elasticsearch).\u2022 Minimum 3 years of experience in working as Engineering Lead/Architect on cloud platforms (AWS is highly desirable).\u2022 Minimum 3 years of experience with programming languages such as Node.js, Python, Java or Scala.\u2022 Minimum 2 years of experience with building applicating with serverless architecture on AWS platforms using Athena, Glue, Kafka, EC2, Lamda, Kenesis.\u2022 Minimum 2 years of experience with large-scale data processing platforms such as Spark, EMR, and/or HPC computing experience with e.g. Apache Aurora, Slurm.\u2022 Experience working with RESTful API and general service-oriented architectures.\u2022 Experience with DevOps, Continuous Integration and Continuous Delivery technologies is desirable.\u2022 AWS Solution Architect certification (associate & above) is highly desirable.\u2022 Healthcare domain knowledge is a huge plus.\u2022 Excellent verbal and written communication skill s. What You Bring:\u2022 Bachelors degree or higher in Computer Science or related fie ld.",
+      "location": "Boston, MA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3905207405",
+      "title": "Analytics Engineer",
+      "company": "Radius Group",
+      "description": "The Company Radius Group is an early-stage startup reshaping workforce planning through advanced data technologies. Our mission is to empower employers with insights to strategically develop talent pipelines amidst unprecedented labor shortages. The U.S. is facing a projected shortage of 6.5 million skilled workers by 2030. Radius Group is taking on this challenge through our Talent Radar\u2014a powerful tool for analyzing talent supply and demand to predict workforce needs. With support from Bloomberg Philanthropies, we've collaborated with major companies on a prototype and are gearing up to launch the beta version in early May. Be part of our journey to revolutionize how employers shape tomorrow's workforce. Objectives Of This Role Include Develop scalable data pipelines, leading Radius data model architecture. Optimizes performance to support advanced labor supply/demand forecasting models. Design and maintain efficient models for structured and unstructured data. Guide data procurement from employers and other sources. Determine data consumption for internal and external stakeholders, ensuring effective dataset evaluation and utilization. Scope Of Work Drive the evolution of the Radius data model architecture that forms the foundation of our Talent Radar. Develop a comprehensive understanding of available labor market data sources and their various strengths/weaknesses. Identify, evaluate, and interpret trends in workforce planning (supply, demand and talent acquisition metrics) requirements to support F1000 companies & translate data-driven insights into actionable strategies and recommendationsIntegrate external data sources into our software to improve accuracy and extend geographic reach of the Talent Radar. Apply a blend of labor market statistical knowledge, data analysis and data pipeline management tools to derive meaningful conclusions from complex datasets. Effectively communicate findings, trends, and recommendations to both technical and non-technical stakeholders through compelling presentations and reports. Be able to proactively speak up when plans need to change. Skills, Abilities, And Attributes We\u2019re Looking For Bachelor's or Master's degree in Data Science, Statistics, Computer Science, or related field. 4-6 years of experience in a data-focused role Experience with machine learning techniques for labor market predictive analytics. Understanding of regulatory compliance and data privacy within HR data sets. Ability to explain labor economic models - demand and supply side modeling with a focus on predictive analytics - to others that do not have content expertise. Prior experience with developing, maintaining, and using large data sets. HR Data and ETL pipeline development experience is a plus. A track record of leveraging data to drive business decisions. Proficiency in data analysis tools such as Python, R, SQL, etc. Proactive contributor with the ability to guide and proof/validate data analyst work in-order to deliver a sustained data pipeline. Excellent communication skills to effectively convey complex findings and recommendations to diverse audiences. Job Characteristics Remote, U.S. based candidates onlyPart Time, 20 hours per week max; 1099 ContractorCompensation $75-90/hrIndependent contributor role We seek a diverse pool of applicants and consider all qualified candidates regardless of race, ancestry, color, gender identity or expression, sexual orientation, religion, national origin, citizenship, disability, Veteran status, marital status, or any other protected status. If you have a special need or disability that requires accommodation, please let us know.",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 75.0,
+      "max_salary": 90.0,
+      "url": "https://app.dover.io/apply/radius-group/b27b3d66-0595-4c08-afb0-809d9d0b1aab?rs=42706078",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3894899896",
+      "title": "Lead Data Engineer",
+      "company": "OtterBase",
+      "description": "Description: We a recruiting a Lead Data Engineer for a midsized company in the Middle Tennessee area. This candidate will be tasked without building out a greenfield modern data solution for an admittedly archaic data environment. The ideal candidate has build a Data Lake House previously and has experience with Python, Cloud, NoSQL, and Databricks or Snowflake. This is a remote position with 5% travel to the Nashville area. Responsibilities/skills: - Lead a team of data engineers to design, develop, and maintain data pipelines, ETL processes, and data storage solutions. -Manage data infrastructure on cloud platforms optimizing performance, scalability, and cost-efficiency -Collaborate with team and leadership to define strategy, roadmap, and priorities. -Foster a collaborative and growth-oriented work environments and provide mentorship and support to team members. Qualifications: -Demonstrated proficiency with Python for Data Engineering -5+ years in Data Engineering and experience designing or owning a data solution. -Experience with cloud technologies, preferably AWS. -Experience with data warehousing and setting up data lake houses using Databricks or Snowflake -Experience with NoSQL or MongoDB preferred. We can not provide sponsorship or do C2C for this position.",
+      "location": "Nashville, TN",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 155000.0,
+      "max_salary": 180000.0,
+      "url": "http://usa.applybe.com/?a=5230755445.0",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3884855862",
+      "title": "Senior Data Engineer (Property Reinsurance/ Speciality Reinsurance) - 100% Remote",
+      "company": "Avesta Computer Services",
+      "description": "Our client is seeking talented and intellectually curious data engineers with a passion for the \u201cR\u201d in R&D. You will be part of the Data, Analytics & Technology team reporting to the Data Engineering Lead. Title - Senior Data Engineer (Property Reinsurance/ Speciality Reinsurance ) - 100% RemoteLocation - Remote - 100%Type - Fulltime Permanent Responsibilities include:\u2022 Research and evaluate data sources to solve specific business problems\u2022 Collect and prepare data to support numerous business initiatives, including Data Science projects\u2022 Design and build robust, resilient, easily maintainable and reusable data pipelines\u2022 Contribute to the design and architecture of innovative solutions to difficult and/or novel problems\u2022 Closely collaborate with data engineers, software engineers, infrastructure specialists, data scientists, actuaries, underwriters, and other business stakeholders to identify, build, test, deploy, monitor, and maintain data assets, tools, and solutions to support data-driven decision-making Qualifications / Skills:\u2022 5+ years of industry experience collecting data and building data pipelines\u2022 Degree in Computer Science or related field\u2022 Expert knowledge of databases and SQL\u2022 Mastery of Python\u2022 Experience building data pipelines from end to end:o Understanding business use cases and requirements for different internal teamso Prototyping initial collection and leveraging existing tools and/or creating new toolso Building and deploying enterprise-grade data pipelineso Maintenance of such pipelines with a focus on performance and data quality\u2022 Experience working with structured, semi-structured, and unstructured data\u2022 Experience with Azure Dev Ops or other cloud provider\u2019s technology stack\u2022 Experience with code versioning and repository software\u2022 Experience being an active member of highly functional Agile teams\u2022 Ability to think critically and creatively in a dynamic environment, while picking up new tools and domain knowledge along the way\u2022 A positive attitude and a growth mindset\u2022 Excellent programming skills coupled with an understanding of software design patterns and good engineering practices Bonus Qualifications\u2022 Experience with Spark\u2022 Python webapp development skills (Streamlit/Flask/Django/Dash)\u2022 Experience using property, geospatial, and image data\u2022 Experience solving financial and risk domain problems",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3891819692",
+      "title": "Data Engineer (LEAD)",
+      "company": "RICEFW Technologies Inc",
+      "description": "Please Note: As of July 22, 2021, our team will require that all candidate submissions include a LinkedIn profile. Please do not submit any candidates that do not have a LinkedIn. NA's client in Allentown, PA is seeking an experienced Data Engineer to join their team! The Ideal Candidate Will Be Seasoned data engineer with experience in data infrastructure. Well-versed in using Python, SQL, Redshift, and AWS. Competent in creating data lakes and integrating data in AWS. Experience in building, mentoring, and growing a global engineering team. Exceptional at communicating technical concepts. Experience building and operating large scale production data pipelines. A passion for data solutions and willingness to pick up new programming languages, technologies, and frameworks. Required Skills : - Bachelor's degree in Computer Science preferred. Will consider other relevant technical experience depending on degree. - AWS - Creation of Data Lakes - Python - Redshift - Glue - Snowflake big plus Rank :A3 Requested Date :2024-04-03",
+      "location": "Allentown, PA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.adzuna.com/details/4638674631?v=4719C6D78911BB1E2BFE5445FB0693E37BBE7738&r=16236885&frd=63a34a4019454518e642e922c872ca5e&ccd=ab9567962708eebe6c19eaa00534231a&utm_source=linkedin7&utm_medium=organic&chnlid=1931&title=Data%20Engineer%20%28LEAD%29&a=e",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 58.0
+    },
+    {
+      "job_id": "3894993415",
+      "title": "Sr. AWS Data Engineer - Hybrid",
+      "company": "Cognizant",
+      "description": "We are Cognizant Artificial Intelligence Digital technologies, including analytics and AI, give companies a once-in-a-generation opportunity to perform orders of magnitude better than ever before. But clients need new business models built from analyzing customers and business operations at every angle to really understand them. With the power to apply artificial intelligence and data science to business decisions via enterprise data management solutions, we help leading companies prototype, refine, validate and scale the most desirable products and delivery models to enterprise scale within weeks. *You must be legally authorized to work in United State without the need of employer sponsorship, now or at any time in the future * Job Title: Sr. AWS Data EngineerHybrid role in Baltimore, Maryland We are seeking a highly skilled AWS Data Engineer with experience in Big Data and AWS technologies. This role involves developing and optimizing big data solutions ensuring scalability and efficiency. The ideal candidate will contribute to our Asset & Wealth Management domain leveraging their expertise in Python Apache Spark and various AWS services to drive innovation and excellence. Experience: 7 - 10 yearsRequired Skills: Python, MWAA (Airflow), Spark Optimization, AWS Glue, AWS EC2, Apache Spark Roles & Responsibilities:\u00b7 Extract transform and load data from various sources into our data lakehouse\u00b7 Develop test maintain and document data pipelines using DBT Spark AWS Glue and Airflow\u00b7 Build data marts and data cubes to support various business intelligence initiatives\u00b7 Automate data quality checks to ensure the accuracy and consistency of our data\u00b7 Experience interacting directly with stakeholders eliciting business requirements questioning and challenging where vital\u00b7 Can articulate business needs and translate them into technology solutions\u00b7 An understanding of the asset management business andor financial markets\u00b7 Bachelor\u2019s degree in computer science data science or a related field\u00b7 Strong proficiency in Python and SQL\u00b7 Expertise in data analysis\u00b7 Experience building a modern enterprise wide data and analytics platform\u00b7 Able to quickly learn new technologies and keep abreast of industry trends.\u00b7 Experience with data stack technologies such as Apache Airflow Prefect Dagster Apache Iceberg\u00b7 DBT Spark Phenomenal Expectations\u00b7 AWS experience particularly data services such as Glue Lake Formation EMR Event-Bridge Athena\u00b7 Experience with data warehousing such as Redshift Snowflake or Dremio\u00b7 Excellent communication and teamwork skills Salary and Other Compensation: Applications will be accepted until 4/17/2024The annual salary for this position is depending on experience and other qualifications of the successful candidate.This position is also eligible for Cognizant\u2019s discretionary annual incentive program, based on performance and subject to the terms of Cognizant\u2019s applicable plans. Benefits: Cognizant offers the following benefits for this position, subject to applicable eligibility requirements: \u2022 Medical/Dental/Vision/Life Insurance\u2022 Paid holidays plus Paid Time Off\u2022 401(k) plan and contributions\u2022 Long-term/Short-term Disability\u2022 Paid Parental Leave\u2022 Employee Stock Purchase Plan Disclaimer: The Salary, other compensation, and benefits information is accurate as of the date of this posting. Cognizant reserves the right to modify this information at any time, subject to applicable law.",
+      "location": "Baltimore, MD",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 55.0
+    },
+    {
+      "job_id": "3902356904",
+      "title": "Data Engineer",
+      "company": "Thoughtwave Software and Solutions",
+      "description": "Title: Senior Data Engineer with Healthcare (10+years) Location: 100% Remote \u2013 EST Time zoneDuration: 12 Months Required Skills : Look for someone who has experience in the Healthcare domain and worked with Healthcare DataShould have good experience in Azure Stack (Data Lake/Blob Storage, Power BI Services, Azure Data Factory (or equivalent), Data bricks) and strong on SQL Server QUALIFICATION REQUIREMENTS\u2022 Bachelor\u2019s degree (BS/BA) in Information Systems, Software Engineering, Computer Science, Data Engineering, or related field required. Master\u2019s degree (MS/MA) preferred.\u2022 Experience with ETL/ELT, taking data from various data sources and formats and ingesting into a cloud-native data warehouse required.\u2022 Experience with Azure Stack (Data Lake/Blob Storage, PowerBI Services, Azure Data Factory (or equivalent), Databrick) and production level experience with on-premises Microsoft SQL Server required.\u2022 Experience with one of the following: Python, R, and/or Scala as well as standard analytic libraries/packages (e.g., pandas, Numpy, dplyr, data table, stringr, Slick, and/or Kafka) and related distribution frameworks required.\u2022 Strong verbal and written communication skills required.\u2022 Familiarity with agile and lean concepts that drive towards MVPs and iterative learning to generate the desired business and technology outcomes required.\u2022 Experience with DataRobot, Domino Data Labs, Salesforce MC, Veeva CRM preferred.\u2022 Familiarity with modern data stack components like Snowflake, dbt, Stitch, Tableau, and Airflow\u2022 Familiarity with statistical concepts and analytic modeling (e.g., regression analyses, hypothesis testing, and ML based modeling) preferred.\u2022 Experience with software engineering best practices like version control with Git and CI/CD preferred.\u2022 Experience with US healthcare and healthcare data, as well as familiarity with HIPAA guidelines, and best practices for handling and storing PHI and PII preferred.\u2022 Experience with healthcare marketing analytics, healthcare data (claims), and common medical coding sets (ICD, HCPCs, NPIs) preferred. if your interested please share me resume to syed@thoughtwavesoft.com or else call me 630-326-4525 Asap",
+      "location": "Dallas-Fort Worth Metroplex",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 85.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior-level data scientist with 13 years of experience, primarily in the healthcare industry. Core strengths include predictive modeling, machine learning, data analysis, and stakeholder management, with proficiency in Python, R, AWS, and Power BI.",
+    "job_explanations": [
+      {
+        "job_id": "3903441763",
+        "title": "Data Analyst (W2 Only)",
+        "company": "Triunity Software, Inc.",
+        "match_reason": "Partial match. The candidate's senior experience level (13 years) and healthcare domain knowledge align well with the role's requirement for health domain (claims/payers) experience. The candidate has AWS and Python skills as required. However, the role also requires Scala, which is not present in the candidate's skills, tools, or job titles. The reranker_score of 88.0 reflects the strong domain and seniority alignment, but the missing Scala skill is a notable gap.",
+        "missing_skills": [
+          "Scala"
+        ]
+      },
+      {
+        "job_id": "3902809268",
+        "title": "Data Scientist (6+ years) (Fulltime)",
+        "company": "Diverse Lynx",
+        "match_reason": "Partial match. The candidate's 13 years of experience and senior level exceed the 6+ year requirement Mendatory. The candidate has strong Python skills and experience with classical ML algorithms (e.g., logistic regression, random forest) as required. However, the role requires Google Cloud Platform (GCP) experience, which is absent from the candidate's profile (only AWS is listed). Additionally, the role requires PySpark, which is not in the candidate's skills or tools. The reranker_score of 78.0 reflects the seniority and ML skill overlap, but the GCP and PySpark gaps are significant.",
+        "missing_skills": [
+          "Google Cloud Platform",
+          "PySpark"
+        ]
+      },
+      {
+        "job_id": "3903455192",
+        "title": "Senior Data Scientist with GCP and LLM ,Gen AI exp 10+",
+        "company": "Peritus Inc",
+        "match_reason": "Poor match. The candidate's 13 years of experience and senior level meet the 10+ year requirement. However, the role requires deep expertise in GCP, LLMs, GenAI, PySpark, Pytorch, Langchain, Docker, and Kubeflow, none of which are present in the candidate's skills, tools, or domain keywords. The candidate's experience is in healthcare predictive modeling, not in NLP or GenAI. The reranker_score of 75.0 is likely inflated by the seniority match, but the domain and technical skill mismatch is severe.",
+        "missing_skills": [
+          "Google Cloud Platform",
+          "PySpark",
+          "Pytorch",
+          "Langchain",
+          "Docker",
+          "Kubeflow",
+          "LLM",
+          "GenAI"
+        ]
+      },
+      {
+        "job_id": "3905236672",
+        "title": "AWS Data Engineer",
+        "company": "Cyma Systems Inc",
+        "match_reason": "Partial match. The candidate's 13 years of experience and senior level meet the 7+ year requirement. The candidate has AWS and Python skills as required. Healthcare domain knowledge is a plus, which the candidate has. However, the role requires extensive data engineering experience (ETL/ELT, database architecture, serverless architecture, Spark/EMR) which is not evident from the candidate's profile (focused on data science/analytics). The candidate lacks experience with tools like Glue, Kafka, EC2, Lambda, Kinesis, and Spark. The reranker_score of 72.0 reflects the AWS and Python overlap, but the data engineering skill gap is significant.",
+        "missing_skills": [
+          "ETL/ELT tools (e.g., AWS Glue, Talend)",
+          "NoSQL databases (e.g., DynamoDB, MongoDB)",
+          "Apache Spark",
+          "Serverless architecture (e.g., Lambda, Kinesis)"
+        ]
+      },
+      {
+        "job_id": "3905207405",
+        "title": "Analytics Engineer",
+        "company": "Radius Group",
+        "match_reason": "Partial match. The candidate's 13 years of experience and senior level exceed the 4-6 year requirement. The candidate has Python, R, and SQL skills as required)Skip. The role involves machine learning for predictive analytics, which aligns with the candidate's core skills. However, the role requires experience with ETL pipeline development and HR data, which is not evident from the candidate's profile (healthcare domain). The candidate lacks experience with labor market data and regulatory compliance in HR. The reranker_score of 68.0 reflects the ML and data analysis overlap, but the domain mismatch (healthcare vs. HR/labor market) and missing ETL experience are notable gaps.",
+        "missing_skills": [
+          "ETL pipeline development",
+          "HR data domain knowledge"
+        ]
+      },
+      {
+        "job_id": "3894899896",
+        "title": "Lead Data Engineer",
+        "company": "OtterBase",
+        "match_reason": "Poor match. The candidate's 13 years of experience and senior level meet the 5+ year requirement. However, the role is a Lead Data Engineer requiring experience building data lake houses, cloud infrastructure (AWS), NoSQL, and Databricks/Snowflake. The candidate's profile is focused on data science and analytics, not data engineering. The candidate lacks experience with data lake house architecture, NoSQL databases, and Databricks/Snowflake. The reranker_score of 65.0 reflects the seniority and Python/AWS overlap, but the data engineering skill gap is critical.",
+        "missing_skills": [
+          "Data lake house architecture",
+          "NoSQL databases",
+          "Databricks or Snowflake"
+        ]
+      },
+      {
+        "job_id": "3884855862",
+        "title": "Senior Data Engineer (Property Reinsurance/ Speciality Reinsurance) - 100% Remote",
+        "company": "Avesta Computer Services",
+        "match_reason": "Poor match. The candidate's 13 years of experience and senior level meet the 5+ year requirement. However, the role is a Senior Data Engineer requiring expertise in building data pipelines, Python, SQL, and cloud (Azure). The candidate has Python and SQL skills, but the role is in the property reinsurance/specialty reinsurance domain, which is completely unrelated to the candidate's healthcare domain. The candidate lacks experience with Azure, data pipeline engineering, and the financial/risk domain. The reranker_score of 62.0 reflects the Python/SQL overlap, but the domain mismatch and data engineering skill gap are severe.",
+        "missing_skills": [
+          "Azure",
+          "Data pipeline engineering",
+          "Financial/risk domain knowledge"
+        ]
+      },
+      {
+        "job_id": "3891819692",
+        "title": "Data Engineer (LEAD)",
+        "company": "RICEFW Technologies Inc",
+        "match_reason": "Poor match. The candidate's 13 years of experience and senior level meet the experience requirement. However, the role is a Lead Data Engineer requiring experience with AWS, data lakes, Python, Redshift, Glue, and Snowflake. The candidate has AWS and Python skills, but the role requires deep data engineering experience (data lakes, Redshift, Glue, Snowflake) which is not evident from the candidate's profile. The candidate lacks experience with Redshift, Glue, and Snowflake. The reranker_score of 58.0 (below 60) indicates a weak fit, primarily due to the data engineering skill gap.",
+        "missing_skills": [
+          "Redshift",
+          "AWS Glue",
+          "Snowflake"
+        ]
+      },
+      {
+        "job_id": "3894993415",
+        "title": "Sr. AWS Data Engineer - Hybrid",
+        "company": "Cognizant",
+        "match_reason": "Poor match. The candidate's 13 years of experience and senior level meet the 7-10 year requirement. The candidate has AWS and Python skills as required. However, the role requires extensive data engineering experience with tools like MWAA (Airflow), Spark Optimization, AWS Glue, Apache Spark, and DBT. The candidate's profile is focused on data science, not data engineering. The candidate lacks experience with Airflow, Spark, Glue, and DBT. The reranker_score of 55.0 (below 60) indicates a weak fit, primarily due to the data engineering skill gap.",
+        "missing_skills": [
+          "Apache Airflow",
+          "Apache Spark",
+          "AWS Glue",
+          "DBT"
+        ]
+      },
+      {
+        "job_id": "3902356904",
+        "title": "Data Engineer",
+        "company": "Thoughtwave Software and Solutions",
+        "match_reason": "Partial match. The candidate's 13 years of experience and senior level meet the 10+ year requirement. The candidate has healthcare domain experience, which is required. The candidate has Python and Power BI skills as required. However, the role requires Azure Stack (Data Lake, Azure Data Factory, Databricks) and strong SQL Server experience. The candidate has AWS, not Azure. The candidate lacks experience with Azure Data Factory, Databricks, and SQL Server. The reranker_score of 85.0 reflects the strong healthcare domain match, but the Azure and data engineering skill gap is significant.",
+        "missing_skills": [
+          "Azure Stack (Data Lake, Azure Data Factory, Databricks)",
+          "SQL Server"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Scala",
+      "Google Cloud Platform",
+      "PySpark"
+    ],
+    "recommendation": "The candidate should focus on acquiring cloud platform skills beyond AWS, specifically GCP and Azure, as well as data engineering tools like PySpark, Airflow, and Databricks to bridge the gap between data science and data engineering roles."
+  }
+}

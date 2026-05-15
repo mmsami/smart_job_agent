@@ -1,0 +1,271 @@
+{
+  "persona": "01_hr_entry",
+  "method": "FAISS_PARSED",
+  "model": "deepseek",
+  "run_timestamp": "2026-05-11T10:37:29.007271+00:00",
+  "results": [
+    {
+      "job_id": "3902348053",
+      "title": "Recruiter",
+      "company": "Smashburger",
+      "description": "The Field Recruiter will act as an employee champion, change agent and ambassador of Smashburger culture and values to the field. The Field Recruiter is responsible for forecasting, sourcing, recruiting and interviewing for positions at assigned Smashburger restaurants. This individual will assist with recruiting initiatives that support fully staffed restaurants, promote our employment brand, reduce turnover and ensure compliance with all federal and state laws. Field Recruiter Responsibilities:Develops, facilities and implements all phases of the recruitment process.Collaborates with department managers and multi-unit operators to understand the requirements, duties, and qualifications for the specified vacant positions.Identifies and implements efficient and effective recruiting methods and strategies based on the available role, industry standards, and the needs of the organization.Creates and manages Smashburger job postings and recruitment advertising strategy through ATS and other various social media outlets.Screens applicants and selects qualified candidates.Schedules interviews, oversees preparation of interview questions and other hiring and selection materials.Assists with the interview process, attending and conducting interviews with managers, directors, and other stakeholders.Collaborates with the hiring manager and/or other Human Resource staff during the offer process, identifying and recommending salary ranges, incentives, start dates, and other pertinent details.Works closely with managers and HR partners to develop region-specific recruiting plans.Identifies new and effective recruiting sources both internally and externally.Communicates daily recruitment efforts and ensures the market is supported to maintain stability of staffing.Participates in weekly people calls with market supervisor and HR partners to ensure adequateParticipates in weekly calls and regular meetings with market supervisor and HR partners to ensure adequate staffing, resolve staffing issues and continue to ensure recruitment standards are being upheld.Creates recruitment materials that attract talent and support application flow.Troubleshoots and manages ATS System. Ensures compliance with federal, state, and local employment laws and regulations, as well as company policies. Attends and participates in job fairs and recruiting sessions. Performs other duties as assigned. Required Skills/Abilities: Excellent verbal and written communication skills. Excellent interpersonal skills with good negotiation tactics. Ability to create and implement sourcing strategies for recruitment for a variety of roles. Proactive and independent with the ability to take initiative. Excellent time management skills with a proven ability to meet deadlines. Familiarity with laws, regulations, and best practices applicable to hiring and recruitment. Proficient with or possess the ability to quickly learn applicant-tracking software or other recruitment systems. Proficient with Microsoft Office Suite or related software. Education and Experience:Bachelor\u2019s degree in Human Resources or related field, or equivalent work experience, required.At least 1-2 years managing all phases of the recruitment and hiring process strongly preferred.SHRM-CP or SHRM-SCP preferred.SHRMs Talent Acquisition Specialty Credential a plus. Physical and Office Requirements:Preferably based in Denver, CO with ability to work hybrid scheduleProlonged periods of sitting at a desk and working on a computerMust be able to lift up to 15 pounds at times",
+      "location": "Denver, CO",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 57000.0,
+      "max_salary": 70000.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3905837771",
+      "title": "Recruitment Officer",
+      "company": "Human Rights Watch",
+      "description": "FULL-TIME JOB VACANCYRECRUITMENT OFFICERHuman Resources DivisionNew York or Washington, DC PreferredApplication Deadline: May 12, 2024 Human Rights Watch is seeking a Recruitment Officer to join our dynamic Global Human Resources team. The Recruitment Officer will facilitate and strengthen our global talent acquisition program, with a focus on recruitment for our operations, media and fundraising teams. This position will preferably be based in New York or Washington, DC but locations in a similar time zone may be considered. The Recruitment Officer reports to the Senior Associate Director of Recruiting, Onboarding and Special Projects based in New York, and works closely with the Recruitment Officer for our programmatic and advocacy teams based in Washington, D.C.The successful candidate may have the option to work remotely. We aim to be as flexible and supportive as possible in both the recruitment for and onboarding of this position. Responsibilities:1. Work with the Senior Associate Director and the Recruitment Officer for program and advocacy to facilitate the acquisition of all global staff;2. Help craft job descriptions and post for vacancies; ensure descriptions accurately represent the role and ensure responsibilities are in line with job function;3. Guide managers and hiring teams through the recruitment process, including by conducting check-ins and advising on outreach strategy and interview processes;4. Implement processes to mitigate unconscious bias in our candidate assessment process, facilitate diverse and robust candidate pools, and help ensure an inclusive and positive candidate experience;5. Review applications, liaise with candidates, schedule and coordinate interviews, help craft interview questions, and provide guidance on final selection as needed;6. Identify sources to strengthen and diversify candidate pools;7. Support and guide managers to effectively onboard and integrate new colleagues;8. Liaise with staff on the HR team, within Operations, and across the organization to effectively coordinate pre-hire activities;9. Help maintain the applicant tracking system;10. Train staff on recruitment processes and systems;11. Ensure compliance with employment laws and regulations, as well as organization policies; and12. Perform other responsibilities as required. Qualifications:Education: A bachelor\u2019s degree or equivalent experience is required. Experience: Minimum three years of relevant experience, preferably in non-profit or international recruiting. Related Skills and Knowledge:1. Excellent interpersonal, communication and listening skills, and the ability to work collaboratively and build relationships with all levels of staff within the organization are required.2. Highly organized and detail oriented and ability to execute projects with minimal guidance is required.3. Solid judgment, discretion, and critical thinking skills are required. Ability to maintain confidentiality and to think proactively and holistically is required.4. Excellent oral and written communication skills in English are required; proficiency in another language is desirable.5. Experience working with Applicant Tracking Systems is required; experience with Greenhouse is a plus.6. Experience conducting outreach and engaging passive candidates on LinkedIn is desirable.7. Demonstrated awareness and sensitivity to the needs and concerns of individuals with diverse identities, cultures, backgrounds, skillsets, and orientations is required.8. Commitment to HRW\u2019s mission and human rights values is required.9. Knowledge of operations, media and fundraising roles is desirable.10. Excellent computer knowledge including Windows and MS Office applications is required. Salary and Benefits: HRW seeks exceptional applicants and offers comprehensive compensation and benefits. If based in the United States, the salary range would be USD 62,000- 66,000. Salary ranges outside of the United States vary based on location. How to Apply: Please apply immediately or by May 12, 2024 by visiting our online job portal at careers.hrw.org and attaching a letter of interest and CV or resume. No calls or email inquiries, please. Only complete applications will be reviewed and only shortlisted candidates will be contacted.If you are experiencing technical difficulties with your application submission, or if you require a disability-related accommodation, please email recruitment@hrw.org. Due to the large response, application submissions via email will not be accepted and inquiries regarding the status of applications will go unanswered. Human Rights Watch is strong because it is diverse. We actively seek a diverse applicant pool and encourage candidates of all backgrounds to apply. Human Rights Watch does not discriminate on the basis of disability, age, gender identity and expression, national origin, race and ethnicity, religious beliefs, sexual orientation, or criminal record. We welcome all kinds of diversity. Our employees include people who are parents and nonparents, the self-taught and university educated, and from a wide span of socio-economic backgrounds and perspectives on the world. Human Rights Watch is an equal opportunity employer. Human Rights Watch is an international human rights monitoring and advocacy organization known for its in-depth investigations, its incisive and timely reporting, its innovative and high-profile advocacy campaigns, and its success in changing the human rights-related policies and practices of influential governments and international institutions.",
+      "location": "New York, United States",
+      "experience_level": "Associate",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://boards.greenhouse.io/humanrightswatch/jobs/7339245002",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3905883365",
+      "title": "Recruiter",
+      "company": "Opusing LLC",
+      "description": "Details \u2013This person will be doing full cycle recruiting for direct labor positions, primarily machinists. Recruiter will be responsible for screening resumes, call candidates, do brief initial phone screens, schedule interviews, participate in interviews, be the primary focal point for candidates and keep in touch with them as they move through the process. Recruiter may extend offers and coordinate pre-employment steps.Looking for someone very detailed and able to keep things rolling. Need to be professional, well-spoken and comfortable calling candidates.Very high-volume recruiting. Will be working on 40 direct labor roles that need to be filled quickly. Key Responsibilities:- Manage the full recruitment cycle including posting job ads, screening resumes, contacting applicants, conducting phone and in-person interviews, and coordinating hiring efforts with department managers.- Act as the focal point for all candidates throughout the recruitment process, responding quickly to questions from candidates- Coordinate pre-employment steps with candidates such as pre-employment drug screens and background checks through our third-party vendors- Provide regular updates and reports to HR team and leadership on recruitment status.- Update and maintain the applicant flow log with candidate status- Maintain accurate and up-to-date recruitment records using our HRIS system. Qualifications:- High School diploma required, BS degree in HR or a related field preferred.- Proven experience in recruitment, specifically in manufacturing or a similar industrial setting.- Strong understanding of recruitment processes and candidate selection methods.- Excellent communication and interpersonal skills, with an ability to engage effectively with candidates and internal stakeholders.- Proficiency in using HR software and candidate databases.- Ability to handle multiple tasks and meet tight deadlines in a fast-paced environment. Education \u2013High school or equivalent",
+      "location": "Ogden, UT",
+      "experience_level": "Entry level",
+      "work_type": "Contract",
+      "min_salary": 25.0,
+      "max_salary": 30.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901940630",
+      "title": "Recruiter",
+      "company": "Intellyk Inc.",
+      "description": "Job Title: RecruiterLocation: Ogden, UT, 84404Duration: 6 Weeks (Temp to hire)Shift: 1st Shift Job Summary:This person will be doing full cycle recruiting for direct labor positions, primarily machinists. Recruiter will be responsible for screening resumes, call candidates, do brief initial phone screens, schedule interviews, participate in interviews, be the primary focal point for candidates and keep in touch with them as they move through the process. Recruiter may extend offers and coordinate pre-employment steps.Looking for someone very detailed and able to keep things rolling. Need to be professional, well-spoken and comfortable calling candidates.Very high-volume recruiting. Will be working on 40 direct labor roles that need to be filled quickly. Key Responsibilities:\u00b7 Manage the full recruitment cycle including posting job ads, screening resumes, contacting applicants, conducting phone and in-person interviews, and coordinating hiring efforts with department managers.\u00b7 Act as the focal point for all candidates throughout the recruitment process, responding quickly to questions from candidates\u00b7 Coordinate pre-employment steps with candidates such as pre-employment drug screens and background checks through our third-party vendors\u00b7 Provide regular updates and reports to HR team and leadership on recruitment status.\u00b7 Update and maintain the applicant flow log with candidate status\u00b7 Maintain accurate and up-to-date recruitment records using our HRIS system. Qualifications:High School diploma required, BS degree in HR or a related field preferred.Proven experience in recruitment, specifically in manufacturing or a similar industrial setting.Strong understanding of recruitment processes and candidate selection methods.Excellent communication and interpersonal skills, with an ability to engage effectively with candidates and internal stakeholders.Proficiency in using HR software and candidate databases.Ability to handle multiple tasks and meet tight deadlines in a fast-paced environment.",
+      "location": "Ogden, UT",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901939644",
+      "title": "Recruiter",
+      "company": "BCforward",
+      "description": "Position Title: Recruiter Location: Ogden, UTAnticipated Start Date: ASAP.Expected Duration: 06 months contract.Job Type: Contract role/40 hours a Week/Onsite. Summary of what they are looking for: This person will be doing full cycle recruiting for direct labor positions, primarily machinists. Recruiter will be responsible for screening resumes, call candidates, do brief initial phone screens, schedule interviews, participate in interviews, be the primary focal point for candidates and keep in touch with them as they move through the process. Recruiter may extend offers and coordinate pre-employment steps.Looking for someone very detailed and able to keep things rolling. Need to be professional, well-spoken and comfortable calling candidates.Very high-volume recruiting. Will be working on 40 direct labor roles that need to be filled quickly. Key Responsibilities:- Manage the full recruitment cycle including posting job ads, screening resumes, contacting applicants, conducting phone and in-person interviews, and coordinating hiring efforts with department managers.- Act as the focal point for all candidates throughout the recruitment process, responding quickly to questions from candidates- Coordinate pre-employment steps with candidates such as pre-employment drug screens and background checks through our third-party vendors- Provide regular updates and reports to HR team and leadership on recruitment status.- Update and maintain the applicant flow log with candidate status- Maintain accurate and up-to-date recruitment records using our HRIS system. Qualifications:- High School diploma required, BS degree in HR or a related field preferred.- Proven experience in recruitment, specifically in manufacturing or a similar industrial setting.- Strong understanding of recruitment processes and candidate selection methods.- Excellent communication and interpersonal skills, with an ability to engage effectively with candidates and internal stakeholders.- Proficiency in using HR software and candidate databases.- Ability to handle multiple tasks and meet tight deadlines in a fast-paced environment.",
+      "location": "Ogden, UT",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901348118",
+      "title": "Corporate Recruiter",
+      "company": "Generac",
+      "description": "Our Recruiter II position is responsible for attracting, engaging, and hiring the best talent for assigned functions, business groups or manufacturing facilities. The role involves sourcing and prescreening candidates, scheduling phone screens, on-site interviews, coordinating pre-employment activities and owning the talent pipeline for assigned areas, among other responsibilities. The Recruiter II will report directly to the Talent Acquisition Manager and work closely with the Leadership Team JOB RESPONSIBILITIES: Recruit for assigned functional areas including [insert level of position, i.e. plant, intern, salaried] positions.Source and prescreen candidates following process on candidate discussion documentation.Schedule phone screens and on-site interviews for candidates including coordination with interview teams, company resources, and travel department.Conduct relative internet research as requested to support projects and program initiatives.Coordinate pre-employment activities and post-hire documentation.Make recommendations for sourcing strategy including external recruitment and social media sites.Manage confidential and personal identification information.\u201cOwn\u201d the talent pipeline for assigned areas and serve as the subject matter expert.Participant in onsite or offsite Recruitment events and job fairs.Identify, schedule, and represent the company at local and state community events to promote careers in manufacturing.Actively participate and network with associations, social networks, and sales/marketing groups to build a network of candidates on an on-going basis.Ensure proper documentation meets compliance of the recruitment process.Meet the defined expectations for the Affirmative Action Plan and the associated data requirements.Provide timely reports to Managers and Directors.Act as an informal mentor; teach techniques and strategies of recruiting to recruiters and recruiting coordinator.In alignment with business goals and leadership, aid in developing effective solutions to address skills gaps and culture integration.Provide the assigned business team with coaching on recruitment best practices. MINIMUM QUALIFICATIONS: Associates Degree or equivalent experience2 years HR related experience or progressive work experience in full-cycle recruitment PREFERRED QUALIFICATIONS: Bachelor\u2019s DegreeExperience working in Human Resources fieldExperience working with an applicant tracking system KNOWLEDGE, SKILLS AND ABILITIES: Demonstrated flexibility Ability to work within a fast-paced, growing and dynamic environmentSolid communication skills, verbal and writtenHighly organized and detail orientedAbility to challenge the status quo and willing to \u201croll up the sleeves and get things done\u201d with a \u201ccan do\u201d attitudeAdvanced proficiency in the Microsoft Office suite including Excel, Word, Outlook, and PowerPoint.",
+      "location": "Waukesha County, WI",
+      "experience_level": "Associate",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://generacta.avature.net/careers/JobDetail/Waukesha-Wisconsin-United-States-Corporate-Recruiter-II/12676",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3885114290",
+      "title": "Next Generation Workforce Recruiter",
+      "company": "Cincinnati Works",
+      "description": "Cincinnati Works is on a mission to eliminate poverty. We partner with all willing and capable people living in poverty to assist them in advancing to economic self-sufficiency through employment. The Next Generation Workforce Recruiter will serve as a visible representative of Cincinnati Works in the community. This role\u2019s goal is to build a diverse and talented youth workforce pipeline that aligns with the company's objectives and values. As a Youth Workforce Recruiter, you will be responsible for identifying, engaging, and recruiting young talent to join our organization. You will collaborate with various departments to understand local trends, develop recruitment strategies, and implement initiatives aimed at attracting and retaining young professionals in multiple industries. We are seeking an individual who has the skills and abilities to develop recruiting strategies; build partnerships; screen and assess candidates; manager the recruitment process; promote diversity and inclusion and track and analyze metrics. PRINCIPLE DUTIES AND RESPONSIBILITIES: Develop Recruitment Strategies:Collaborate with Director of Employment Services to determine youth workforce needs.Research and implement innovative recruitment strategies to attract new talent.Utilize social media platforms, job boards, and other relevant channels to promote career pathways and job opportunities to young adults and target demographics.Build Partnerships:Establish partnerships with educational institutions, youth organizations, and community groups to reach potential candidates.Attend career fairs, networking events, and other gatherings to connect with young professionals and promote our organization.Candidate Screening and Assessment:Review resumes and applications to identify qualified candidates.Conduct initial screenings and interviews to assess candidates' skills, experience, and cultural fit.Administer assessments or tests as needed to evaluate candidates' capabilities.Manage Recruitment Process:Work closely with Employment Specialist to coordinate interview schedules and logistics with candidates.Provide guidance and support to candidates throughout the recruitment process.Collaborate with Employment Services and Coaching Team to ensure a smooth onboarding experience.Promote Diversity and Inclusion:Actively seek out and engage candidates from diverse backgrounds.Advocate for inclusive recruitment practices and initiatives within the organization.Provide training and resources to hiring managers on diversity and unconscious bias in recruitment . Track and Analyze Metrics:Maintain accurate records of recruitment activities, including candidate pipelines, interview outcomes, and hiring metrics.Analyze recruitment data to identify trends, assess the effectiveness of recruitment strategies, and make recommendations for improvement. QUALIFICATIONS: Bachelor's degree in Human Resources, Business Administration, or a related field.Proven experience in recruitment, particularly in attracting and engaging young talent.Familiarity with youth demographics and trends in the job market.Strong communication and interpersonal skills, with the ability to connect with diverse audiences.Excellent organizational skills and attention to detail.Ability to work independently and collaboratively in a fast-paced environment.Knowledge of relevant laws and regulations related to recruitment and employment.",
+      "location": "Cincinnati, OH",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3888029809",
+      "title": "Human Resources Assistant",
+      "company": "Hays",
+      "description": "My client is urgently looking to hire an HR Assistant to support the HR Manager. This role will be essential in supporting the company with all its HR administration duties. ResponsibilitiesAssist with recruitment processes, including candidate vetting, interview coordination, and employment contract issuance.Maintain accurate and up-to-date employee records.Support orientation and onboarding activities.Assist with benefits administrationCollaborate with the HR team to ensure compliance with applicable laws and regulations.Handle general administrative duties related to HR functions. QualificationsBachelor's degree or equivalent experience in Business, Human Resources, or related area3+ years' of experience working in Human ResourcesStrong organizational skills and attention to detail.Excellent communication and interpersonal abilities.Proficiency in Microsoft Office Suite.Prior experience in HR or administrative is crucial Why Join Our Team?Attractive Benefits package.Opportunities for professional development and growth.Positive and collaborative work environment.Opportunity for perm conversion What you\u2019ll need to do nowIf you are interested in this role, please contact me for a confidential discussion. At Hays we value, diversity and are passionate about placing people in a role where they can flourish and succeed. We actively encourage people from diverse backgrounds to apply.",
+      "location": "Los Angeles Metropolitan Area",
+      "experience_level": "Associate",
+      "work_type": "Contract",
+      "min_salary": 30.0,
+      "max_salary": 40.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3904086713",
+      "title": "Recruitment Specialist",
+      "company": "PTS Advance",
+      "description": "OverviewOur Client is a fully integrated, sustainable energy services provider to higher education & healthcare campuses, cities, and communities, with utility infrastructures serving more than 130 million square feet of space and operations in 10 cities across the United States and growing. A fantastic opportunity is available for a Recruitment Specialist to the Energy sector. Hybrid work model. Job SummaryAs part of the Human Resources department, the successful candidate is responsible to strategically and proactively source passive and active candidates to build and maintain a quality talent pipeline for current and future workforce needs. Duties include working with the various leaders in analyzing the requirements of an available job, attracting suitable candidates to the position, understanding external labor market conditions, carefully screening and selecting all applicants, hiring, and seamlessly integrating new employees and roles into the organization. They are a self-starter that enjoys working in a fast-paced environment, strong commitment to deadlines and team, is highly organized and process oriented with a strong sense of ownership in their work, possesses a high degree of intellectual curiosity, and has a superior skill set in sourcing candidates and onboarding new employees. Duties & Responsibilities Develops and executes national staffing plan to ensure both internal and external pipeline of candidates to meet business requirementsSources candidates through multiple channels including: LinkedIn, social media, networking, email, various job boards, referrals and cold-calling;Serves as a liaison with local employment agencies, colleges, and industry associationsAttends various career fair eventsExperience with internship programs with familiarity with recruitment processes with secondary educational institutionsDevelops and updates job postings and job descriptions as requiredEffectively manages the overall hiring process from end to end; posting, sourcing, reviewing resumes, interviewing, selection, and closing process including offer letters and acceptance.Ascertain candidates' position qualifications by conducting pre-hire checks including various background checks and drug screensCreates various excel reports and monitors key HR metrics related to recruitmentManages the onboarding process and conducts orientationManages the offboarding process for employees leavingManages various client relationships and serves as a partner to the hiring managers before, during, and after the recruiting processMaintains compliance with federal, state, and local employment laws and regulationsMaintains knowledge of trends, best practices, and new technologies in recruitment, talent management and employment lawMaintains a good understanding of business operations Skills & QualificationsUndergraduate or bachelor\u2019s degree in human resources, business administration, personnel management, psychology, industrial relations, or a similar fieldMinimum of 3 years of experience in full cycle recruitingProficient with Microsoft Office in particular Excel with formulas, charts, and tables to create and manage various recruitment tracking spreadsheetsExperience in recruiting at a national levelExperience in recruiting plant operations and corporate/adminExperience with using a wide variety of sourcing avenues (e.g., various job boards and social media platforms)Understanding of employment laws and regulations across various statesExperience with different interview techniques and applicant screening methods (i.e., in-person interviews, group interviews, and phone screening calls)Excellent verbal and written communication skillsExcellent interpersonal, negotiation, and conflict resolution skillsExcellent organizational skills and attention to detailExcellent time management skills with a proven ability to meet deadlinesStrong analytical and problem-solving skillsAbility to act with integrity, professionalism, and confidentialityCollaborative and interpersonal skills; team playerAbility to manage a wide range of relationships with a variety of stakeholdersAbility to work in a dynamic, complex, fast-paced environment, to adapt quickly and to manage changing prioritiesExperience working in a unionized environment considered an assetKnowledge in recruiting for the District Energy business an assetTravel to Corporate Head Office and Plant location in Houston is required 3-4 days per month. Travel is required across various locations as required (15% year)",
+      "location": "Houston, TX",
+      "experience_level": "Associate",
+      "work_type": "Full-time",
+      "min_salary": 75000.0,
+      "max_salary": 85000.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 58.0
+    },
+    {
+      "job_id": "3898163973",
+      "title": "HR Recruiter and Coordinator-24-00446",
+      "company": "Datasoft Technologies, Inc.",
+      "description": "HR Recruiter and CoordinatorOnsiteAbout the JobDuration: Long-Term Renewable ContractLocation: Greer, SCPay rate: HourlyJob ID: 4866This is a Full Time W2 position, no subcontracting or C2C.OverviewParticipates in recruiting activities for Exempt and/or Non-Exempt positions. Steers the recruiting and hiring process from the initial application stage to onboarding.Responsibilities:Steers recruiting activities for Exempt and Non-Exempt positions in various departments throughout the company including both internal and external hires.Collaborates with Senior Recruiters to ensure compliance with all applicable laws related to selection and hiring processes.Leverages the online recruiting resources and in-house ATS (Applicant Tracking System) to identify and recruit the very best candidates. Partners with Talent Acquisition Specialist to market openings on social media channels.Reviews resumes and credentials for appropriateness of skills, experience and knowledge in relation to position requirements.Prescreens candidates and conducts phone screens.Coordinates all communication with candidates with a high level of customer service.Coordinates interview schedules, panels and applicants. Participates in interviews with Senior Recruiters.Schedules physicals, reference checks and sets start dates for qualified candidates.Inputs, tracks and reports data for Non-Exempt hiring processes.Organizes and documents post-interview debrief/feedback and follow-up activities with interview teams and candidates.Extends offers of employment to selected candidates under the direction of Senior Recruiters and within the guidelines.Maintains accurate and well-ordered documentation on all candidates, searches, hiring managers interactions, and other recruiting activities to ensure compliance topics are addressed.Instructs, observes, facilities and documents assessments and results.Adheres to agreed upon targets (i.e. Time to Fill and other targets as assigned).Performs other duties as assigned by Supervisor.Qualifications:BS degree in HR, Business or a related discipline.1+ years of Human Resources experience, preferably to include recruiting experience.Intermediate = knowledge of State and Federal employment laws and their impact on selection, interviewing and hiring practices.Intermediate = ability to work proactively, independently and within a team environment.Intermediate = ability to multitask and self-direct work to meet targets and deadlines for multiple internal customers simultaneously.Flexible in changing priorities when necessary. About our CompanyDataSoft Technologies is a highly recognized provider of professional IT Consulting services in the US. Founded in 1994, DataSoft Technologies, Inc. provides staff augmentation services for Information Technology and Automotive Services. Our team member benefits include:Paid Holidays/Paid Time Off (PTO)Medical/Dental Insurance GroupAccident/Critical Illness InsuranceLife Insurance401 (K)",
+      "location": "Greer, SC",
+      "experience_level": "Associate",
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 78.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level HR professional with 2 years of experience, a Bachelor's in HR Management, and project-based exposure to recruitment, policy analysis, and employee development. Strengths include recruitment, selection, onboarding, and compliance knowledge, but lacks full-cycle recruiting experience, ATS proficiency, and industry-specific recruiting background.",
+    "job_explanations": [
+      {
+        "job_id": "3902348053",
+        "title": "Recruiter",
+        "company": "Smashburger",
+        "match_reason": "Partial match. The candidate's skills in Recruitment, Selection, and Onboarding align with the role's responsibilities. The Bachelor's in HR Management meets the education requirement. However, the candidate has only 2 years of project-based experience, while the role strongly prefers 1-2 years managing all phases of recruitment. The candidate lacks ATS proficiency and SHRM certification, which are preferred but not required. The reranker_score of 82 reflects reasonable skill overlap, but the candidate's entry-level experience level is a minor concern for a role that expects independent full-cycle recruiting.",
+        "missing_skills": [
+          "Applicant Tracking Systems (ATS)",
+          "Full-cycle recruiting experience"
+        ]
+      },
+      {
+        "job_id": "3905837771",
+        "title": "Recruitment Officer",
+        "company": "Human Rights Watch",
+        "match_reason": "Poor match. The role requires a minimum of 3 years of relevant recruiting experience (Associate level), but the candidate has only 2 years of project-based experience. This seniority mismatch is a primary disqualifier. While the candidate has Recruitment and Selection skills, the role demands experience with Applicant Tracking Systems (required), Greenhouse (preferred), and non-profit or international recruiting (preferred). The candidate lacks these. The reranker_score of 72 overestimates fit due to basic HR keyword overlap, but the experience gap is critical.",
+        "missing_skills": [
+          "Applicant Tracking Systems",
+          "3+ years of recruiting experience"
+        ]
+      },
+      {
+        "job_id": "3905883365",
+        "title": "Recruiter",
+        "company": "Opusing LLC",
+        "match_reason": "Partial match. The role is entry-level and requires a High School diploma (the candidate has a Bachelor's, exceeding this). The candidate's Recruitment and Selection skills are relevant. However, the role specifically requires proven experience in manufacturing or industrial recruiting, which the candidate lacks entirely. The role also requires proficiency in HR software and candidate databases (ATS), which the candidate does not have. The reranker_score of 70 reflects basic HR alignment, but the domain mismatch in manufacturing and missing ATS skills are significant gaps.",
+        "missing_skills": [
+          "Manufacturing/industrial recruiting experience",
+          "Applicant Tracking Systems"
+        ]
+      },
+      {
+        "job_id": "3901940630",
+        "title": "Recruiter",
+        "company": "Intellyk Inc.",
+        "match_reason": "Partial match. Similar to job 3905883365, this contract recruiter role requires proven experience in manufacturing or industrial recruiting, which the candidate lacks. The candidate's Recruitment and Selection skills are relevant, and the Bachelor's degree exceeds the preferred qualification. However, the candidate has no experience with HRIS systems or high-volume recruiting for direct labor roles. The reranker_score of 70 is consistent with basic HR skill overlap, but the domain and tool gaps are substantial.",
+        "missing_skills": [
+          "Manufacturing/industrial recruiting experience",
+          "HRIS systems",
+          "High-volume recruiting experience"
+        ]
+      },
+      {
+        "job_id": "3901939644",
+        "title": "Recruiter",
+        "company": "BCforward",
+        "match_reason": "Partial match. This role is nearly identical to the previous two Ogden, UT recruiter positions. The candidate's Recruitment and Selection skills are relevant, and the Bachelor's degree exceeds the required High School diploma. However, the candidate lacks proven experience in manufacturing/industrial recruiting, proficiency in HR software and candidate databases (ATS), and experience with high-volume recruiting. The reranker_score of 70 reflects basic HR alignment, but the domain and tool gaps are significant.",
+        "missing_skills": [
+          "Manufacturing/industrial recruiting experience",
+          "Applicant Tracking Systems",
+          "High-volume recruiting experience"
+        ]
+      },
+      {
+        "job_id": "3901348118",
+        "title": "Corporate Recruiter",
+        "company": "Generac",
+        "match_reason": "Poor match. The role requires 2 years of HR-related experience or progressive work experience in full-cycle recruitment (Associate level). The candidate has 2 years of project-based experience, which is a borderline match. However, the role requires experience with an applicant tracking system (preferred) and full-cycle recruitment, which the candidate lacks. The candidate's experience is project-based, not progressive full-cycle recruiting. The reranker_score of 68 reflects some skill overlap, but the lack of ATS experience and full-cycle recruiting is a significant gap.",
+        "missing_skills": [
+          "Full-cycle recruitment experience",
+          "Applicant Tracking Systems"
+        ]
+      },
+      {
+        "job_id": "3885114290",
+        "title": "Next Generation Workforce Recruiter",
+        "company": "Cincinnati Works",
+        "match_reason": "Partial match. The role requires a Bachelor's degree in HR or related field (candidate has this) and proven experience in recruitment, particularly in attracting young talent. The candidate's Recruitment, Selection, and Career Fairs experience are relevant. However, the role requires familiarity with youth demographics and trends, which is not evident in the candidate's profile. The candidate also lacks experience with social media recruiting strategies and metrics tracking, which are key responsibilities. The reranker_score of 65 reflects moderate alignment, but the specific youth focus and metrics analysis are missing.",
+        "missing_skills": [
+          "Youth recruitment experience",
+          "Recruitment metrics analysis"
+        ]
+      },
+      {
+        "job_id": "3888029809",
+        "title": "Human Resources Assistant",
+        "company": "Hays",
+        "match_reason": "Strong match. The role requires a Bachelor's degree (candidate has this) and 3+ years of HR experience (candidate has 2 years, which is close). The responsibilities include recruitment processes, candidate vetting, interview coordination, onboarding, and benefits administration. The candidate's skills in Recruitment, Selection, Onboarding, and Employee Development align well. The candidate lacks benefits administration experience, but this is a minor gap. The reranker_score of 62 is conservative; the candidate's profile is a good fit for this HR Assistant role.",
+        "missing_skills": [
+          "Benefits administration"
+        ]
+      },
+      {
+        "job_id": "3904086713",
+        "title": "Recruitment Specialist",
+        "company": "PTS Advance",
+        "match_reason": "Poor match. The role requires a minimum of 3 years of full-cycle recruiting experience (Associate level), but the candidate has only 2 years of project-based experience. This seniority mismatch is a primary disqualifier. The role also requires experience recruiting at a national level, experience in plant operations and corporate recruiting, and proficiency in Excel with formulas. The candidate lacks all of these. The reranker_score of 58 accurately reflects the poor fit due to experience and domain gaps.",
+        "missing_skills": [
+          "3+ years of full-cycle recruiting experience",
+          "National-level recruiting experience",
+          "Advanced Excel skills",
+          "Plant operations recruiting experience"
+        ]
+      },
+      {
+        "job_id": "3898163973",
+        "title": "HR Recruiter and Coordinator-24-00446",
+        "company": "Datasoft Technologies, Inc.",
+        "match_reason": "Partial match. The role requires a BS degree in HR or related discipline (candidate has this) and 1+ years of HR experience, preferably including recruiting (candidate has 2 years of project-based experience, meeting this). The candidate's Recruitment, Selection, and Onboarding skills are relevant. However, the role requires intermediate knowledge of State and Federal employment laws (candidate has Employment Law as a skill, which is a plus) and experience with ATS and social media recruiting. The candidate lacks ATS experience. The reranker_score of 78 reflects good alignment on education and basic HR skills, but the ATS gap is notable.",
+        "missing_skills": [
+          "Applicant Tracking Systems"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Applicant Tracking Systems (ATS)",
+      "Full-cycle recruiting experience",
+      "Applicant Tracking Systems"
+    ],
+    "recommendation": "Focus on gaining hands-on experience with an Applicant Tracking System (e.g., through certification or a project) and seek roles that explicitly accept entry-level or project-based recruiting experience, such as HR Assistant or Coordinator positions, to build full-cycle recruiting skills."
+  }
+}

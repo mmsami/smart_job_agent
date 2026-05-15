@@ -1,0 +1,271 @@
+{
+  "persona": "04_tech_senior",
+  "method": "FAISS_PARSED",
+  "model": "claude",
+  "run_timestamp": "2026-05-11T10:40:09.913335+00:00",
+  "results": [
+    {
+      "job_id": "3901361454",
+      "title": "Senior Data Analyst - Cloud Solutions",
+      "company": "MHK",
+      "description": "Job Description The Senior Data Analyst will leverage cloud-based technologies and data lakes to provide insights and reporting on medical payer and patient data. You will be responsible for designing, developing, and maintaining data pipelines, ETL transformations, and data models that support MHK\u2019s business intelligence and analytics needs. You will also work with various stakeholders to understand their data requirements, provide data solutions, and deliver reports and dashboards using Power BI and Athena. Key Responsibilities: Extract, transform, and load data from various sources into a data lake using AWS services such as S3, Glue, Lambda, and Kinesis.Create and optimize data models and schemas using AWS Athena and Redshift to support analytical queries and reporting.Develop and maintain data quality checks and data governance processes to ensure data accuracy and integrity.Create and update data dictionaries and metadata documentation to ensure data understanding and accessibility.Design, develop, and test reports and dashboards using Power BI and Athena to meet business needs and specifications.Collaborate with business users, data engineers, and data scientists to understand data requirements, provide data solutions, and support data-driven decision making.Research and evaluate new data technologies and best practices to improve data performance and quality.Provide technical guidance and mentorship to peers. Skill Requirements: At least 5 years of experience in data analysis, data engineering, or business intelligence.Strong knowledge and experience with AWS, Data Lake, ETL transformations, Athena, and Redshift.Proficient in SQL and Python for data manipulation and analysis.Experience with Power BI and other data visualization tools.Experience with medical payer and patient data, such as claims, eligibility, enrollment, billing, and quality measures.Excellent communication, presentation, and problem-solving skills.Nice to have: Experience with Azure and Fabric. Education/Certification Requirements: Bachelor's degree in Computer Science, Statistics, Mathematics, or related field. Additional Requirements: Experience and ability to work in a constantly changing, fast paced, deadline driven environment. All prospective employees must pass a background check & drug test (Federal contractor requirement) COMMITMENT TO DIVERSITY & INCLUSION We are an Equal Employment/Affirmative Action employer. We do not discriminate in hiring on the basis of sex, gender identity, sexual orientation, race, color, religion, creed, national origin, physical or mental disability, protected Veteran status, or any other characteristic protected by federal, state, or local law. If you would like to contact us regarding the accessibility of our website or need assistance completing the application process, please contact us by email at careers@mhk.com . Please note that only inquiries concerning a request for reasonable accommodation will be responded to from this email address and the email address cannot be used to inquire about the status of applications. For more information, please visit Know Your Rights , Pay Transparency , and MHK EEO/AA Statement Benefits Snapshot: Medical, vision, and dental plans for full time employees401(k) offered with a generous matchBenefits begin on first day of the month following employment Exercise/Health Club reimbursement opportunity Monthly dependent care reimbursement opportunity Short Term and Long Term disability Basic Term Life and AD&D Insurance Paid Time Off 15 days Paid Time Off 13 Company Paid Holidays 3 Personal Days 2 Community Service days",
+      "location": "Tampa, FL",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://eevd.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/job/2022025/?utm_medium=jobshare",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3902748510",
+      "title": "Director, Research Data Analytics WHSC",
+      "company": "Emory University",
+      "description": "Discover Your Career at Emory University Emory University is a leading research university that fosters excellence and attracts world-class talent to innovate today and prepare leaders for the future. We welcome candidates who can contribute to the diversity and excellence of our academic community. Description JOB DESCRIPTION: Working closely with the research informatics leadership, will develop and implement a comprehensive data analytics strategy that aligns with the organization's research goals and objectives. Advocate for the use of data analytics in research and clinical decision-making, promoting a data-driven culture. Engage in the establishment and maintenance of data governance policies to ensure data integrity, privacy, and compliance with regulatory standards. Oversee the collection, storage, and accessibility of research data across the institution. Lead the design and execution of complex data analyses to uncover insights that inform research and clinical practices. Deploy advanced analytics tools and technologies, including AI and machine learning, to enhance research capabilities. Collaborate with researchers, clinicians, and IT professionals to integrate data analytics into research projects and clinical workflows. Provide expertise and support for data analytics projects, including methodological advice, data interpretation, and training. Build and manage a team of data analysts and data scientists, fostering an environment of continuous learning and innovation. Mentor team members, providing guidance and opportunities for professional development. MINIMUM QUALIFICATIONS: Masters in Data Science, Biostatistics, Computer Science, or a related field. PhD is preferred. Minimum of 7 years of experience in data analytics, with a strong preference for experience in a healthcare or research setting. Proven track record of leading data analytics projects and teams. Experience with data governance and regulatory compliance (e.g., HIPAA, GDPR). Expertise in statistical software (R, Python, SAS) and database management systems. Strong understanding of data warehousing, big data technologies, and advanced analytics techniques. Excellent communication and interpersonal skills, with the ability to convey complex data insights to non-technical stakeholders. Strategic thinking and problem-solving abilities. NOTE: This role will be granted the opportunity to work from home regularly but must be able to commute to Emory University on a flexible weekly schedule based upon business needs. Schedule is based on agreed upon guidelines of department. This role requires residency in the state of GA. Emory reserves the right to change remote work status with notice to employee. Emory Supports a Diverse and Inclusive Culture Emory University is dedicated to providing equal opportunities and equal access to all individuals regardless of race, color, religion, ethnic or national origin, gender, genetic information, age, disability, sexual orientation, gender identity, gender expression, and veteran's status. Emory University does not discriminate in admissions, educational programs, or employment on the basis of any factor stated above or prohibited under applicable law. Students, faculty, and staff are assured of participation in University programs and in the use of facilities without such discrimination. Emory University complies with Executive Order 11246, as amended, Section 503 of the Rehabilitation Act of 1973, the Vietnam Era Veteran's Readjustment Assistance Act, and applicable executive orders, federal and state regulations regarding nondiscrimination, equal opportunity and affirmative action. Emory University is committed to achieving a diverse workforce through application of its affirmative action, equal opportunity and nondiscrimination policy in all aspects of employment including recruitment, hiring, promotions, transfers, discipline, terminations, wage and salary administration, benefits, and training. Inquiries regarding this policy should be directed to the Emory University Department of Equity and Inclusion, 201 Dowman Drive, Administration Building, Atlanta, GA 30322. Emory University is committed to providing reasonable accommodations to qualified individuals with disabilities upon request. To request this document in an alternate format or to request a reasonable accommodation, please contact the Department of Accessibility Services at 404-727-9877 (V) | 404-712-2049 (TDD). Please note that one week advance notice is preferred.",
+      "location": "Atlanta, GA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://staff-emory.icims.com/jobs/128345/director%252c-research-data-analytics-whsc/job?mode=apply&iis=LinkedIn&hub=13&in_iframe=1",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3905819623",
+      "title": "Lead Data Scientist",
+      "company": "Plymouth Rock Assurance",
+      "description": "The Lead Data Scientist takes a lead role in assigned data science initiatives with limited supervision. He/she will be independently responsible for full-cycle of model development, deployment and monitoring to enable future growth and profitability for our book of business through appropriate pricing, underwriting of risk and other related disciplines. Essential Functions and ResponsibilitiesProduces complex predictive models enabling the creation of rating plans and evaluation of risk and profitability.Identifies drivers of insurance costs, understanding the economics of customers\u2019 behavior and estimating the expected losses for segments of risks using advanced statistical and analytical techniques on large data sets.Develops studies that evaluate new business models for customer retention and growth initiatives as well as estimate the lifetime value of customer segments.Participates in the development of the overall analytical framework to support the company\u2019s strategy for growthTakes active role in innovationMentors junior members of the teamCommunicates analysis, strategy and recommendations to diverse audiences, including technical and non-technical.Collaborates with upper management to assess the potential effects of proposed solutions and incorporates these considerations into recommendations.Advanced skills and training in predictive modeling, data mining and other quantitative and research analytics (Non-Linear Regression Analysis, Multivariate Analysis, Bayesian Methods, Generalized Linear Models, Decision Trees, Non Parametric estimations, etc.).Ability to apply various predictive modeling techniques to develop solutions to various real-world problems.Hands-on experience developing and delivering structured, methodology projects.Exceptional programming ability in SAS, SQL, R, Python or other programming languages.Excellent written and oral communication and presentation skills.In-depth understanding of database principles and experience working with large databases.Ability to influence and guide across departmental boundaries. Qualifications and Education3 or more years of experience developing and implementing multivariate predictive models using GLM and other statistical methods. PhD in economics, statistics, or related field required.Or in the alternative, a Master\u2019s degree in Statistics, Engineering, Mathematics, Economics, or a related field (foreign educational equivalent accepted) and five (5) years of experience as indicated above.High level of organizational and project management experience handling multiple projects simultaneously. About the CompanyThe Plymouth Rock Company and its affiliated group of companies write and manage over $2 billion in personal and commercial auto and homeowner\u2019s insurance throughout the Northeast and mid-Atlantic, where we have built an unparalleled reputation for service. We continuously invest in technology, our employees thrive in our empowering environment, and our customers are among the most loyal in the industry. The Plymouth Rock group of companies employs more than 1,900 people and is headquartered in Boston, Massachusetts. Plymouth Rock Assurance Corporation holds an A.M. Best rating of \u201cA-/Excellent\u201d.",
+      "location": "Woodbridge, NJ",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3904376533",
+      "title": "Senior, Data Scientist",
+      "company": "Walmart",
+      "description": "Position Summary... What you'll do... About Our Team As part of the larger People Analytics team, the Research & Analytics team is composed of statisticians, I/O psychologists, data analysts and data scientists who are focused on providing actionable insights and develop AI models to improve the experience of Walmart's associates. At Walmart, we are seeking a talented and experienced Data Scientist to join our team. As a Senior Data Scientist, you will play a crucial role in our People Analytics department, utilizing your expertise in building causal inference machine learning models to drive data-driven decision-making. Responsibilities Develop and implement advanced statistical models and machine learning algorithms to analyze large datasets and extract valuable insights.Collaborate with cross-functional teams and Center of Excellence (COE) partners across our Global People function to identify business problems and develop analytical plans to address them.Conduct rigorous statistical analysis and hypothesis testing to uncover patterns and trends in data.Apply Bayesian inference techniques to enhance the accuracy and reliability of predictive models.Utilize your strong problem-solving skills to scope problems and identify quick wins for our customers.Evaluate programs and quantify the return on investment (ROI) to drive data-driven decision-making.Collaborate primarily with the Global People centers of excellence and support our People partners in the business. Requirements Bachelor's or Master's degree in Data Science, Statistics, Computer Science, or a related field.Minimum of 3 years of experience as a Data Scientist, such as in retail or e-commerce.Strong proficiency in building and productionizing and maintaining causal inference machine learning models.Familiarity with Bayesian inference is a strong plus.Experience using Directed Acyclic Graphs (DAGs) for causal modeling to avoid common pitfalls in causal inference, such as confounding variables and reverse causality.Proficiency in programming languages such as Python or R.Experience with SQL and handling very large datasetsExperience with data visualization tools such as Tableau or Power BI.Excellent problem-solving and analytical skills.Strong communication and interpersonal skills.People Analytics experience a plus but not required Culture At Walmart At Walmart, we value diversity, inclusion, and collaboration. We foster an environment that encourages innovation and continuous learning. Our team members are passionate about making a positive impact on the lives of our customers and communities. We believe in empowering our employees and providing them with opportunities for growth and development. Minimum Qualifications... Outlined below are the required minimum qualifications for this position. If none are listed, there are no minimum qualifications. Option 1- Bachelor's degree in Statistics, Economics, Analytics, Mathematics, Computer Science, Information Technology, or related field and 3 years' experience in an analytics related field. Option 2- Master's degree in Statistics, Economics, Analytics, Mathematics, Computer Science, Information Technology, or related field and 1 years' experience in an analytics related field. Option 3 - 5 years' experience in an analytics or related field. Preferred Qualifications... Outlined below are the optional preferred qualifications for this position. If none are listed, there are no preferred qualifications. Data science, machine learning, optimization models, Master's degree in Machine Learning, Computer Science, Information Technology, Operations Research, Statistics, Applied Mathematics, Econometrics, Successful completion of one or more assessments in Python, Spark, Scala, or R, Using open source frameworks (for example, scikit learn, tensorflow, torch) Primary Location... 508 SW 8TH ST, BENTONVILLE, AR 72712, United States of America",
+      "location": "Bentonville, AR",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://click.appcast.io/track/j7kv6yo-org?cs=4c&jg=1yfx&bid=lUf2CslKyPxm6i440ZgUYA==",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3901628316",
+      "title": "Data Scientist",
+      "company": "Agility Partners",
+      "description": "About this RoleAgility Partners is seeking a qualified Senior Data Scientist to fill an open position with one of our banking clients. This is an exciting opportunity to join an Enterprise Data and Analytics team, where you'll play a pivotal role in leveraging machine learning, segmentation, and statistical inference on vast data sets to enhance our understanding of customers and communities. As our client aims for excellence in regional banking, your expertise in modeling complex business problems and uncovering insights using advanced techniques will be crucial.Duties and Responsibilities:Perform advanced analytics methods to extract value from business data.Conduct large-scale experimentation and build data-driven models to address business inquiries.Research cutting-edge techniques and tools in machine learning, deep learning, and artificial intelligence.Determine requirements for training and evolving deep learning models and algorithms.Articulate a vision and roadmap for leveraging data as a valued corporate asset.Influence product teams through data-based recommendations.Evangelize best practices to analytics and product teams.Own the entire model development process, from identifying business requirements to presenting results and production scoring.Perform other duties as assigned.Benefits and PerksThis is a great opportunity to work for a mid-sized financial institution that is striving to be the bank of choice; one that focuses on its customers, not its competition. An organization that provides a dynamic, fulfilling work environment that is productive, collaborative and innovative.Highly visible team with a regional financial services company where your work matters and your accomplishments are recognized!Amazing opportunity for growth, healthy work/life balance and a community focused environmentWorking for an organization that focuses on company culture, inclusion and diversityOn a team whose Core values that include: Can-Do Attitude, Service at Heart and Forward Thinking50% medical coverage for you and your entire family, short/long term disability and life insurance options401(k) Life InsuranceDisability coverageThe Ideal CandidateQualifications:Master's Degree in computer science, statistics, economics, or related fields.3+ years of work and/or educational experience in machine learning or cloud computing.Experience using statistics and machine learning to solve complex business problems.Experience conducting statistical analysis with advanced statistical software.Experience with scripting languages and packages.Experience building and deploying predictive models.Experience with web scraping and scalable data pipelines.Experience with big data analysis tools and techniques.Preferred Qualifications:Up-to-date knowledge of machine learning and data analytics tools and techniques.Strong knowledge in predictive modeling methodology.Experience leveraging both structured and unstructured data sources.Willingness and ability to learn new technologies on the job.Demonstrated ability to communicate complex results to technical and non-technical audiences.Ability to work effectively in teams as well as independently across multiple tasks while meeting aggressive timelines.Strategic, intellectually curious thinker with a focus on outcomes.Professional image with the ability to form relationships across functions.Strong experience with R/RStudio, Python, SAS, SQL, NoSQL.Strong experience with Cloud Machine Learning technologies (e.g., AWS Sagemaker).",
+      "location": "Columbus, Ohio Metropolitan Area",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3904951712",
+      "title": "Manager, Data Analytics",
+      "company": "Sightline Payments",
+      "description": "About Sightline Payments, LLC Sightline is transforming the gaming industry with its innovative suite of award-winning digital payment and wallet solutions. Through its expertise in consumer behavior, payments technology, and software development, Sightline is uniquely positioned to help casino resorts and online gaming companies offer a more robust, customer-centric omnichannel experience. Sightline\u2019s flagship product, Sightline Pay, enables players to use a single digital payment method across all gaming channels and throughout the entire resort. It\u2019s currently the preferred payments and cashless solution for more than 80 partners in 40+ states across the sports betting, lottery, horse racing, and online and brick-and-mortar casino markets. About The Role Sightline Payments is seeking a high energy, passionate, Manager, Data Analytics. The Manager of Data Analytics role will support the quantitative and qualitative data needs of Sightline Payments\u2019 banking as a service portfolio for online and physical casinos. This includes the development and execution of fact-based reporting, analysis, and analytical models used to enhance decision making across the company. This role will take a hands-on approach to guide the Analytics team in overseeing continuous improvements in reporting / BI, database segmentation, third party data, etc. to support the organization with insights and predictive models to produce improved results and impact. What You'll Do Support the development of KPI\u2019s and associated reports/dashboards to accurately track these metrics and diagnose reasons behind any increases and decreases.Collaborate with marketing, risk, product, finance, client success, and other teams as a data center of excellence. This includes requirements gathering, iterative report design, education, and presentation of findings.Secure buy-in from key stakeholders concerning results from measurement to actionable business applications.Manage the growth of advanced analytics and data science at Sightline Payments by providing a roadmap of tools, techniques, 3rd party data sources, etc. that can be used to further the business. Qualifications 4+ years of experience in analytics, data science, or related field.Masters in relevant field such as data analysis, statistics, finance, or economics, or a bachelor\u2019s degree with significant work experience. Required Skills Experience managing/building small teams.Understanding and experience in building data structures to automate and support campaign process as well as analytic functions.Strong technical skills, including database tools and programming languages (e.g. SQL, Python, R).Proven experience with data analysis and statistical modeling using R/Python/SAS.Proven experience with data visualization tools required, PowerBI experience strongly preferred.Comfortable using Snowflake or other cloud-based data warehouses.Demonstrated experience in statistical and/or quantitative analysis, forecasting, predictive analytics, multivariate testing, outlier analysis and/or optimization algorithms.Familiarity with Google Analytics preferred.Strong ability to translate quantitative data into actionable recommendations.Strong communication and presentation skills, including the ability to translate analyses into easily digestible content for executive management consumption. Strong work ethic and organizational skills. More About You You are a visible and collaborative leader with the ability to innovate, recruit, inspire, challenge, and motivate others to achieve challenging goals.You Possess a \u2018get it done\u2019 attitude Ability to observe, assess, recommend, and execute after considering input from a wide range of constituents.You are a player-coach with an ability to implement and achieve adherence to process Consistently seeks top talent and has the aptitude, style, and mentoring approach to retain and grow A+ players.You are personable, outgoing \u2013 adept at building trust and strong relationships with both internal and external stakeholders Ability to install a sense of shared vision Integrity, transparency, credibility, and a commitment to making the company successful. Preferred Skills FinTech/payments and/or gaming experience preferred. We offer a competitive bonus structure based on individual and company performance, providing the opportunity for additional compensation above your base salary. To learn more about the benefits we offer, you can visit: https://sightlinepayments.com/careers/ The Pay Range For This Role Is 140,000 - 160,000 USD per year(Remote - United States)",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 140000.0,
+      "max_salary": 160000.0,
+      "url": "https://www.click2apply.net/LLmqyls2mog8of6Vyflr22",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3891069967",
+      "title": "Data Scientist (Human Services experience)",
+      "company": "FUSTIS LLC",
+      "description": "Job Role: Data Scientist Job Location: Washington, DC (Hybrid 3 days onsite) must be local to DMV area Pay rate: $60/hr C2C Visa: USC, GC, GC EAD, H1B, H4 TOP 4 MUST-HAVE SKILLS:1. Work experience in a Human Services agency ideally related to human services programs including Electronic Benefits Transfer (EBT) including SNAP and TANF benefits.2. Experience with Quick Base platform and SQL. 3. Strong proficiency in data science tools such as R or Python. Experience with data visualization tools such as Tableau or Power BI 4. Ability to transform issuance and notices files. Responsibilities 1. Data analysis and modelling, including Designing and developing machine learning and predictive models and algorithms. Performing exploratory data analysis to identify patterns and trends.Developing and maintaining database and data systems to support business needs.Interpreting and communicating data analysis results to stakeholders.Collaborating with other teams to develop and implement data-driven solutions.2. Data management and governance, including Ensuring compliance with data privacy regulations and company data governance policies. Developing and implementing data access and security controls.Identifying and resolving data quality issues.Managing data migration and integration projects.3. Provide subject matter expertise on data-related topics, including Providing guidance and support to other teams on data-related issues. Developing and delivering training and education materials related to data analysis and modelling.Employing data science tools to improve data collection and accuracy.Identifying opportunities to utilize data science tools to streamline business processes and increase efficiency.Using data science tools to improve technical reports and the effectiveness of reporting databases and platforms.4. Collaborate with stakeholders to identify and prioritize data-related initiatives, including Partnering with business leaders to understand their data needs and goals. Contributing to the development of data strategies and roadmaps.Providing recommendations for data-related investments and initiatives.Leading or participating in cross-functional teams to execute data-related initiatives.Qualifications: Minimum of 5 years of experience in data analysis/science and modelling, with a focus on machine learning and/or predictive analytics.Strong knowledge of data science tools, including data quality, governance, and security.Strong proficiency in data science tools such as R or Python. Experience with data visualization tools such as Tableau or Power BI Experience with SQL and other database technologies.Ability to work independently and manage multiple projects simultaneously.",
+      "location": "Washington DC-Baltimore Area",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3905885764",
+      "title": "Data Science Analyst - Full Time",
+      "company": "Zyxware Technologies",
+      "description": "Role: Data Science Analyst Type: Full-Time Job Ideally a US Citizen or Green Card holder within the DMV area preferably. Position Summary:We are looking for an experienced Senior Data Science Analyst to lead our data science initiatives, leveraging expertise in Large Language Models (LLMs) and Python todrive data-driven decision-making. This role requires a deep understanding of data analytics, machine learning, and the ability to mentor junior analysts. Key Responsibilities:\u2022 Design and implement advanced data models and algorithms using LLMs and Python.\u2022 Conduct complex data analysis to extract actionable insights and inform strategic decisions.\u2022 Develop/oversee the creation of sophisticated data visualizations and analytical reports.\u2022 Lead cross-functional projects and collaborate with stakeholders to achieve data-centricsolutions.\u2022 Mentor junior data science team members and contribute to their professional growth. Required Qualifications:\u2022 Expertise in Python programming and experience with LLMs such as GPT-3 or BERT.\u2022 Strong analytical skills with the ability to interpret complex data.\u2022 Proficient in data analytics and machine learning tools and frameworks.\u2022 Excellent communication and leadership skills.\u2022 Proven track record of managing data science projects.\u2022 Demonstrated leadership in a data analytics environment.\u2022 Master's degree in Computer Science, Data Science, Statistics, or a related field OR Bachelors and 5 years professional experience in Data Science.\u2022 3+ years of experience in a data science role, with a focus on LLMs and Python.\u2022 Currently possess or is able to obtain Public Trust clearance. Knowledge Preferred:\u2022 Advanced knowledge of statistical analysis, predictive modeling, and data mining.\u2022 Experience with cloud computing platforms and big data technologies.\u2022 Familiarity with Agile methodologies and project management tools.",
+      "location": "Maryland, United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 130000.0,
+      "max_salary": 140000.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3884855862",
+      "title": "Senior Data Engineer (Property Reinsurance/ Speciality Reinsurance) - 100% Remote",
+      "company": "Avesta Computer Services",
+      "description": "Our client is seeking talented and intellectually curious data engineers with a passion for the \u201cR\u201d in R&D. You will be part of the Data, Analytics & Technology team reporting to the Data Engineering Lead. Title - Senior Data Engineer (Property Reinsurance/ Speciality Reinsurance ) - 100% RemoteLocation - Remote - 100%Type - Fulltime Permanent Responsibilities include:\u2022 Research and evaluate data sources to solve specific business problems\u2022 Collect and prepare data to support numerous business initiatives, including Data Science projects\u2022 Design and build robust, resilient, easily maintainable and reusable data pipelines\u2022 Contribute to the design and architecture of innovative solutions to difficult and/or novel problems\u2022 Closely collaborate with data engineers, software engineers, infrastructure specialists, data scientists, actuaries, underwriters, and other business stakeholders to identify, build, test, deploy, monitor, and maintain data assets, tools, and solutions to support data-driven decision-making Qualifications / Skills:\u2022 5+ years of industry experience collecting data and building data pipelines\u2022 Degree in Computer Science or related field\u2022 Expert knowledge of databases and SQL\u2022 Mastery of Python\u2022 Experience building data pipelines from end to end:o Understanding business use cases and requirements for different internal teamso Prototyping initial collection and leveraging existing tools and/or creating new toolso Building and deploying enterprise-grade data pipelineso Maintenance of such pipelines with a focus on performance and data quality\u2022 Experience working with structured, semi-structured, and unstructured data\u2022 Experience with Azure Dev Ops or other cloud provider\u2019s technology stack\u2022 Experience with code versioning and repository software\u2022 Experience being an active member of highly functional Agile teams\u2022 Ability to think critically and creatively in a dynamic environment, while picking up new tools and domain knowledge along the way\u2022 A positive attitude and a growth mindset\u2022 Excellent programming skills coupled with an understanding of software design patterns and good engineering practices Bonus Qualifications\u2022 Experience with Spark\u2022 Python webapp development skills (Streamlit/Flask/Django/Dash)\u2022 Experience using property, geospatial, and image data\u2022 Experience solving financial and risk domain problems",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 58.0
+    },
+    {
+      "job_id": "3904960773",
+      "title": "Data Scientist I",
+      "company": "Cotiviti",
+      "description": "Overview The Data Scientist I is focused on machine learning solutions in Healthcare Technology and builds value-oriented, production level machine learning solutions. This is not a research oriented data scientist; instead you will apply your knowledge and experience to real world problems, and seek to utilize Artificial Intelligence and Machine Learning to reduce the cost of healthcare and improve health quality and outcomes. With access to dedicated on premise and cloud based big data solutions, the team can work with a vast amount of structured and unstructured data including claims, membership, physician demographics, medical records and others to begin to solve some of the most pressing healthcare issues of our time. A Data Scientist at Cotiviti will be given the opportunity to work directly with a team of healthcare professionals including analysts, clinicians, coding specialists, auditors and innovators to set aggressive goals and execute on them with the team. This is for an ambitious technologist, with the flexibility and personal drive to succeed in a dynamic environment where they are judged based on their direct impact to business outcomes. Responsibilities As a Data Scientist within Cotiviti you will be responsible for delivering solutions that help our clients identify payment integrity issues, reduce the cost of healthcare processes, or improve the quality of healthcare outcomes. You will work as part of a team and will be individually responsible for the delivery of value associated with your projects. You will be expected to follow processes and practices that allow your models to be incorporated into our machine learning platform for production execution and monitoring, however, initial exploratory data analysis allows for more flexible experimentation to discover solutions to the business problems presented. Create actionable and pragmatic data science models with minimal supervision. Understands business needs and identifies potential use cases in more than one business unit. Works with external partners to develop a minimal viable product to meet those needs while resolving any issues that may arise. Consistently collaborates with fellow data scientists and frequently interacts with business partners, project managers, cross-functional teams, key stakeholders, and other domains to build analytics capabilities and drive business value. Continuously work to be updated on the latest developments in machine learning and the healthcare industry. Work with key stakeholders both within R&D and Operations, along with product management to assess the potential value and risks associated with business problems that have the potential to be solved using machine learning and AI techniques. Develop an exploratory data analysis approach to verify the initial hypothesis associated with potential AI/ML use cases. Document your approach, thinking and results in standard approaches to allow other data scientists to collaborate with you on this work. Prepare your final trained model and develop a validation test set for QA. Work with production operations to deploy your model into production and support them in monitoring model performance. Participate in other data science teams collaborating with your peers to support their projectsParticipate in knowledge sharing sessions to bring new insights and technologies to the team.Participate in design sessions to continuously develop and improve the Cotiviti machine learning platformProvide End to End value-based solutions, including data pipeline, model creation and application for end user Qualifications Applied Machine Learning: Application of a variety of machine learning techniques to increase identification of payment integrity issues for our clients, reduce the cost of auditing processes or increase the quality of care and outcomes. Must have implemented machine learning solutions within production environments at scale Big Data Analysis: Strong ability to manage and analyze data in a Big Data environment using a variety of scripts, potentially including but not limited to Scala/Spark and Python as well as Cloud based ML/AI capabilities. Reasoning and Problem Solving: Ability to actively and skillfully conceptualize, apply, analyze, synthesize, and/or evaluate information gathered from, or generated by, observation, experience, reflection, reasoning, or communication, as a guide to belief and action Consulting: Demonstrated ability to make and gain acceptance of data-driven recommendations made to business owners. Strong ability to appropriately summarize and effectively communicate complex concepts & varied data sets to inform stakeholders, gain approval, or prompt actions; Applies to multiple audiences ranging from the analyst to executive level; Includes oral & written communication and multimedia presentation Statistical Analysis: Apply statistical methodology to solve business problems; appropriately interprets meaning from results Business Knowledge: Good understanding of the tenets of health insurance, the managed care model, industry coding/policy standards, the claim adjudication process, and issues related to fraud waste and abuse. Ability to apply this knowledge to the development & evaluation of new initiatives and support leading the team strategy toward best practices. Financial Analysis: Ability to understand, generate and evaluate healthcare utilization, unit cost and medical cost trends. This includes understanding levers that effect healthcare cost, such as contracting, networks, policies, benefit structures, and product design. Ability to draw conclusions and make recommendations based on financial data Functional Programming: Ability to work with, understand and create object oriented/functional programming solutions using modern application frameworks. Minimum Qualifications MS or PhD. Degree in relevant discipline (Math, Statistics, Computer Science, Engineering or Health Sciences) or commensurate professional work experience. 1-3 years experience building and deploying Machine learning models 1-3 years experience in working in Big Data environments Experience developing machine learning models in an exploratory data analytics environment and working with others to develop production ready versions of the models that are deployed within operational environments Experience in using machine learning tools to develop production strength models including, but not limited to, Python, TensorFlow, Keraes, pandas, numpy, scikit-learn, spark, scala, hive, impala Ability to write SQL queries to efficiently extract data from relational databases Ability to work independently as well as collaborate as a team Flexibility to work with global teams as well geographically dispersed US based teams Professional with ability to properly handle confidential information Be value-driven, understand that success is based on the impact of your work rather than its complexity or the level of effort. Ability to handle multiple tasks, prioritize and meet deadlines Ability to work within a matrixed organization Proficiency in all required skills and competencies above Base compensation ranges from $93,000.00 to $109,000.00. Specific offers are determined by various factors, such as experience, education, skills, certifications, and other business needs. Cotiviti offers team members a competitive benefits package to address a wide range of personal and family needs, including medical, dental, vision, disability, and life insurance coverage, 401(k) savings plans, paid family leave, 9 paid holidays per year, and 17-27 days of Paid Time Off (PTO) per year, depending on specific level and length of service with Cotiviti. For information about our benefits package, please refer to our Careers page. Since this job will be based remotely, all interviews will be conducted virtually. Date of posting: 2/6/2024 Applications are assessed on a rolling basis. We anticipate that the application window will close on 4/6/2024, but the application window may change depending on the volume of applications received or close immediately if a qualified candidate is selected. #senior",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 93000.0,
+      "max_salary": 109000.0,
+      "url": "https://careers-cotiviti.icims.com/jobs/12497/data-scientist-i/job?mode=apply&iis=LinkedIn&in_iframe=1",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior-level data scientist with 13 years of experience, a Master's in Data Science, and a background exclusively in healthcare. Core strengths include predictive modeling, machine learning, statistical analysis, and data pipelines, with hands-on proficiency in Python, R, AWS, and Power BI.",
+    "job_explanations": [
+      {
+        "job_id": "3901361454",
+        "title": "Senior Data Analyst - Cloud Solutions",
+        "company": "MHK",
+        "match_reason": "Strong match. The candidate's 13 years of experience comfortably exceeds the 5-year requirement, and their healthcare industry background directly aligns with the role's explicit requirement for experience with medical payer and patient data (claims, eligibility, enrollment). AWS and Power BI are present in the candidate's tools, and data pipelines appear in their domain keywords. The reranker score of 92 reflects this strong alignment. The primary gap is the absence of SQL listed explicitly in the CV, and AWS-specific services such as Athena, Glue, and Redshift are not individually named.",
+        "missing_skills": [
+          "SQL",
+          "AWS Athena/Redshift"
+        ]
+      },
+      {
+        "job_id": "3902748510",
+        "title": "Director, Research Data Analytics WHSC",
+        "company": "Emory University",
+        "match_reason": "Partial match. The candidate's senior experience level, healthcare industry background, Master's in Data Science, and proficiency in Python and R align well with the technical requirements. The role requires a minimum of 7 years of experience in data analytics, which the candidate exceeds at 13 years. However, this is a Director-level leadership role requiring team management, data governance, and regulatory compliance expertise (HIPAA, GDPR), none of which are explicitly evidenced in the CVProfile. The candidate's 'Mentoring' skill is noted but falls short of the full team-building and governance leadership the role demands. Relocation to Georgia is also required, and the candidate is based in Los Angeles.",
+        "missing_skills": [
+          "Data governance and regulatory compliance (HIPAA/GDPR)",
+          "Team management/leadership at director level"
+        ]
+      },
+      {
+        "job_id": "3905819623",
+        "title": "Lead Data Scientist",
+        "company": "Plymouth Rock Assurance",
+        "match_reason": "Partial match. The candidate's predictive modeling, data mining, statistical analysis, mentoring, and Python/R skills directly map to the role's core requirements. Their 13 years of experience and Master's degree satisfy the educational and experience thresholds. However, the role is in the insurance domain (pricing, underwriting, risk), which is entirely outside the candidate's healthcare-only industry background. Additionally, the role explicitly requires SAS or SQL, neither of which appears in the CVProfile. The reranker score of 82 reflects reasonable technical overlap despite the domain gap.",
+        "missing_skills": [
+          "SAS or SQL",
+          "Insurance/actuarial domain knowledge"
+        ]
+      },
+      {
+        "job_id": "3904376533",
+        "title": "Senior, Data Scientist",
+        "company": "Walmart",
+        "match_reason": "Partial match. The candidate's machine learning, statistical analysis, predictive modeling, Python, R, and Power BI skills align with the core technical requirements. Their 13 years of experience and Master's degree exceed the minimum qualifications. However, the role is in People Analytics (HR/workforce domain) within retail, which is outside the candidate's healthcare-only background. The role also specifically requires causal inference modeling and experience with Directed Acyclic Graphs (DAGs), which are not evidenced in the CVProfile. The reranker score of 78 reflects moderate fit.",
+        "missing_skills": [
+          "Causal inference modeling",
+          "Directed Acyclic Graphs (DAGs)"
+        ]
+      },
+      {
+        "job_id": "3901628316",
+        "title": "Data Scientist",
+        "company": "Agility Partners",
+        "match_reason": "Partial match. The candidate's machine learning, predictive modeling, statistical analysis, Python, R, and AWS skills align with the core requirements. Their Master's degree and 13 years of experience exceed the stated minimums. However, the role is for a banking/financial services client, which is outside the candidate's healthcare-only industry background. The role also explicitly requires experience with scalable data pipelines and web scraping; data pipelines appear in the candidate's domain keywords but web scraping does not. SQL is also not listed in the CVProfile. The reranker score of 75 reflects this moderate fit.",
+        "missing_skills": [
+          "SQL",
+          "Web scraping"
+        ]
+      },
+      {
+        "job_id": "3904951712",
+        "title": "Manager, Data Analytics",
+        "company": "Sightline Payments",
+        "match_reason": "Partial match. The candidate's predictive modeling, statistical analysis, Python, R, Power BI, and stakeholder management skills align with several core requirements. Their 13 years of experience and Master's degree satisfy the stated qualifications. However, this is a managerial role in the FinTech/gaming payments domain, which is entirely outside the candidate's healthcare background. The role explicitly requires experience managing or building small teams, which is not evidenced in the CVProfile beyond 'Mentoring.' SQL and Snowflake are required and absent from the candidate's listed tools. The reranker score of 72 reflects this moderate-to-weak fit.",
+        "missing_skills": [
+          "SQL",
+          "Snowflake or cloud-based data warehouse experience",
+          "Team management experience"
+        ]
+      },
+      {
+        "job_id": "3891069967",
+        "title": "Data Scientist (Human Services experience)",
+        "company": "FUSTIS LLC",
+        "match_reason": "Partial match with notable gaps. The candidate's Python, R, Power BI, machine learning, predictive modeling, and data analysis skills satisfy several of the top required skills. Their 13 years of experience exceeds the 5-year minimum. However, the role's top must-have requirement is experience in a Human Services agency with programs such as EBT, SNAP, and TANF \u2014 a domain entirely absent from the candidate's healthcare-only background. The role also requires experience with the Quick Base platform and SQL, neither of which appears in the CVProfile. The reranker score of 65 reflects this domain and tool gap.",
+        "missing_skills": [
+          "Human Services agency domain experience (EBT/SNAP/TANF)",
+          "Quick Base platform",
+          "SQL"
+        ]
+      },
+      {
+        "job_id": "3905885764",
+        "title": "Data Science Analyst - Full Time",
+        "company": "Zyxware Technologies",
+        "match_reason": "Partial match. The candidate's Python, machine learning, predictive modeling, statistical analysis, data visualization, and mentoring skills align with several stated requirements. Their Master's degree and 13 years of experience exceed the minimum qualifications. However, the role's primary required technical differentiator is expertise in Large Language Models (LLMs) such as GPT-3 or BERT, which is not evidenced anywhere in the CVProfile. The role also requires the ability to obtain a Public Trust clearance, which is not addressed in the candidate's profile. The reranker score of 62 reflects this meaningful technical gap.",
+        "missing_skills": [
+          "Large Language Models (LLMs) such as GPT-3 or BERT",
+          "Public Trust clearance eligibility"
+        ]
+      },
+      {
+        "job_id": "3884855862",
+        "title": "Senior Data Engineer (Property Reinsurance/Speciality Reinsurance)",
+        "company": "Avesta Computer Services",
+        "match_reason": "Poor match. This is a data engineering role requiring 5+ years of end-to-end data pipeline construction, expert SQL, mastery of Python for pipeline engineering, and experience with Azure DevOps or equivalent cloud engineering stacks. While the candidate lists Python and AWS, their background is in data science and analytics, not data engineering. The reranker score of 58 reflects this domain mismatch. The candidate has no evidenced experience in software engineering practices, code versioning, or building enterprise-grade pipelines. The reinsurance industry is also entirely outside their healthcare background.",
+        "missing_skills": [
+          "Data engineering / pipeline construction expertise",
+          "SQL (expert level)",
+          "Azure DevOps or equivalent cloud engineering stack"
+        ]
+      },
+      {
+        "job_id": "3904960773",
+        "title": "Data Scientist I",
+        "company": "Cotiviti",
+        "match_reason": "Strong match. The candidate's healthcare industry background, machine learning, predictive modeling, statistical analysis, Python, AWS, and data pipeline experience directly align with this role's core requirements. Cotiviti explicitly focuses on healthcare technology and payment integrity, which maps precisely to the candidate's domain keywords including patient risk assessment and operational efficiency. The reranker score of 88 reflects this strong alignment. The role title is 'Data Scientist I,' which may represent a seniority step below the candidate's 13-year senior profile, but the job description's responsibilities and qualifications are substantive and production-focused, making this a reasonable fit rather than a significant over-qualification concern. The primary gap is the absence of Scala/Spark in the CVProfile, which is listed as a potential tool.",
+        "missing_skills": [
+          "Scala/Spark (for big data environments)"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "SQL",
+      "AWS Athena/Redshift",
+      "Data governance and regulatory compliance (HIPAA/GDPR)"
+    ],
+    "recommendation": "The candidate should prioritize adding SQL to their documented skill set, as it is explicitly required across the majority of the matched roles and its absence is a recurring disqualifier. Gaining familiarity with LLMs (e.g., GPT-3, BERT) would unlock additional senior data science opportunities, while exposure to Spark would strengthen candidacy for production-scale ML roles in healthcare and beyond."
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "persona": "03_tech_intern",
+  "method": "BM25_PARSED",
+  "model": "gemini",
+  "run_timestamp": "2026-05-11T10:30:24.493817+00:00",
+  "results": [
+    {
+      "job_id": "3899537087",
+      "title": "NLP Engineer",
+      "company": "EA Team Inc",
+      "description": "Role: NLP EngineerLocation: Remote Job Description-As an NLP Engineer, You will extract, interpret, and synthesize an extremely diverse set of diagnostic lab data - with the goal to standardize this data, making it machine readable, interoperable, and more discoverable and accessible. Successful candidates will have a strong understanding of NLP techniques and hands on experience with JavaResponsibilitiesDesigning and developing NLP applications for medical entity extraction and text miningDesign Database to store NLP entities and relationshipUsing effective text representation techniques and classification algorithmsTraining and evaluating modelsDesign end to end java applicationsFind and implement the right algorithms and tools for NLP tasksPerform statistical analysis of results and refine modelsExtend ML libraries and frameworks to apply in NLP tasksRemain updated in the rapidly changing field of machine learning RequirementsClinical NLP experience (cTakes, UIMA)Strong Java development experienceDeep understanding of healthcare domainFamiliarity with Ontology tools and technologiesProven experience as an NLP Engineer or similar role/Track record in NLP/NLU and related technologiesUnderstanding of NLP techniques for text representation, semantic extraction techniques, data structures and modelingAbility to effectively design software architecture.Knowledge of Python, SQLAbility to write robust and testable code.Experience with machine learning frameworks (like Keras, BERT or opennlp) and libraries (like scikit-learn)An analytical mind with problem-solving abilities --- Regards, Gautam Sharmagautams@eateam.com",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3904423470",
+      "title": "Informatics Programmer Analyst",
+      "company": "University of California, San Francisco",
+      "description": "IT EDW Operations Full Time 77910BR Job Summary The programmer analyst role includes the interpretation of complex requirements from detailed specifications to identify the correct fields for data extraction, applying analytical techniques for validation and cleaning, and preparation of data for in-depth analysis. This involves selecting appropriate patient cohorts, applying sophisticated programming strategies to configure data to researchers\u2019 specification, and confirming value meet researchers\u2019 expectations. The focus is on effectively managing and interpreting large volumes of data to derive meaningful insights. The programmer analyst will play a pivotal role in supporting researchers and Principal Investigators by employing analytical tools such as python, SQL, SAS, R, or Stata to work with electronic medical records and claims data. The ultimate aim is to provide a robust analytical foundation that supports research projects. Key responsibilities include the meticulous organization and curation of data sets; executing sophisticated statistical analyses; and producing detailed reports, charts, tables, and figures that clearly convey the findings. The role might involve working closely with PhD Statisticians to apply complex statistical analysis to support the interpretation of results. The programmer analyst will work closely with the lead investigators to refine data analysis based on feedback and ensure that the results are presented in a form that is ready for publication and dissemination. The final salary and offer components are subject to additional approvals based on UC policy. To see the salary range for this position (we recommend that you make a note of the job code and use that to look up): TCS Non-Academic Titles Search (https://tcs.ucop.edu/non-academic-titles) Please note: An offer will take into consideration the experience of the final candidate AND the current salary level of individuals working at UCSF in a similar role. For roles covered by a bargaining unit agreement, there will be specific rules about where a new hire would be placed on the range. To learn more about the benefits of working at UCSF, including total compensation, please visit: https://ucnet.universityofcalifornia.edu/compensation-and-benefits/index.html Department Description The University of California, San Francisco (UCSF) Department of Information Technology Academic Research Services (ARS) is chartered to provide data services and infrastructure which support clinical researchers computing and analytic needs. The Clinical Data Research Consultants group\u2019s services include the administration of Data Use Agreements for the reuse of CMS and Medicaid data, customized data extractions from UCSF health systems, a federated data steward program to support compliance and set best practice standards for analysts who access health system data outside of Central IT. Required Qualifications Bachelor's degree in biological science, computational / programming, or related area and / or equivalent experience / training.Epic Clarity CertificationThree + years of experience with data manipulation and data quality controlThree + years of experience in statistical analysis and modelingProficiency and programming experience in SAS, Python, R, or SQLExperience working with electronic medical/health services data (e.g, SEER/EPIC/claims data)Experience in a research environmentThorough knowledge of web, application and data security concepts and methods.Thorough knowledge of bioinformatics methods, applications programming, web development and data structures.Thorough knowledge of bioinformatics programming design, modification and implementation.Understanding of relational databases, web interfaces, and operating systems.Strong project management skills.Communication skills to work with both technical and non-technical personnel in multiple fields of expertise and at various levels in the organization.Ability to communicate technical information in a clear and concise manner.Self motivated, work independently or as part of a team, able to learn quickly, meet deadlines and demonstrate problem solving skills. Preferred Qualifications Thorough knowledge of modern biology and applicable field of research.Ability to interface with management on a regular basis.Research skills at a level to evaluate alternate solutions and develop recommendationsAdvanced degree in quantitively discipline and/or equivalent experience/trainingExperience working with large (>50Gb) datasets License/Certification Epic Clarity Certification About UCSF The University of California, San Francisco (UCSF) is a leading university dedicated to promoting health worldwide through advanced biomedical research, graduate-level education in the life sciences and health professions, and excellence in patient care. It is the only campus in the 10-campus UC system dedicated exclusively to the health sciences. We bring together the world\u2019s leading experts in nearly every area of health. We are home to five Nobel laureates who have advanced the understanding of cancer, neurodegenerative diseases, aging and stem cells. Pride Values UCSF is a diverse community made of people with many skills and talents. We seek candidates whose work experience or community service has prepared them to contribute to our commitment to professionalism, respect, integrity, diversity and excellence \u2013 also known as our PRIDE values. In addition to our PRIDE values, UCSF is committed to equity \u2013 both in how we deliver care as well as our workforce. We are committed to building a broadly diverse community, nurturing a culture that is welcoming and supportive, and engaging diverse ideas for the provision of culturally competent education, discovery, and patient care. Additional information about UCSF is available at diversity.ucsf.edu Join us to find a rewarding career contributing to improving healthcare worldwide. Equal Employment Opportunity The University of California San Francisco is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, protected veteran or disabled status, or genetic information. Organization Campus Job Code and Payroll Title 009401 BIOINFORMATICS PROGR 3 Job Category Clinical Systems / IT Professionals Bargaining Unit 99 - Policy-Covered (No Bargaining Unit) Employee Class Career Percentage 100% Location Flexible (combination of onsite and remote work), Mission Center Building (SF), San Francisco, CA Shift Days Shift Length 8 Hours Additional Shift Details Mon-Fri; 8-5",
+      "location": "San Francisco, CA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?PageType=JobDetails&partnerid=6495&siteid=5861&jobId=3532468",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3885828275",
+      "title": "Data Scientist",
+      "company": "TEKsystems",
+      "description": "Top Skills' Details Passion for Machine Learning and Data Science and their fundamentals Research and quantitative analysis of AI risk management Development of data science algorithms using Python Documentation Would prefer someone who has a strong understanding or at least a passion for AI Risk Management. Description This is a Data Scientist role in Chat and Voice Technology team. The team builds next generation AI and Search platforms for the bank, enabling smart virtual assistants across multiple channels and platforms. This position requires candidate to be well versed with various machine learning algorithms and NLP techniques, including LLM and Generative AI techniques. Role offers an opportunity to work with seasoned architects, PhDs in Machine Learning and NLP, Software Engineers, and Risk Management partners. Candidate should be able to work independently and collaboratively to take ownership of prepare models for validation and monitoring. Candidate must possess passion for machine learning and data analysis, creatively solving how to assess risk, conduct and summarize research, and prepare technical white papers to support Machine Learning and Software Engineers through the model development lifecycle. This role is unique, in that candidate must be 100% AI Risk Management (50% Research and Quantitative Analysis, 25% Development, and 25% White Paper Documentation). Required Skills Bachelor Degree in Computer Science, Data Science, Mathematics, or related field Knowledge of machine learning and related techniques Knowledge of recent developments in AI space including but not limited to transformers, LLMs, Generative AI Good understanding of a version control system like git to be able to efficiently collaborate with colleagues. Strong Python development skills and knowledge of Java/C++ Adept at leveraging ML/AI techniques to solve critical business problems with good understanding of Supervised, Unsupervised and Reinforcement Learning. Excellent interpersonal communication skills for tech, business, and risk conversations Good analytical skills to break down requirements, solve complex problems, and challenge the approach, build, and test of AI models and model components Skills Python, Data science, Data, java, Algorithm, risk management, artificial intelligence, Machine learning, Predictive modelling, Data analysis, Predictive analytics Top Skills Details Python, Data science, Data, java Algorithm, risk management, artificial intelligence Additional Skills & Qualifications There will be a heavy research and analysis component to this job, especially around risk management related to artificial intelligence and GenAI. They will be diving into an understanding of the biases of AI and the algorithms created by other data scientists on the team, how the data flows through the algorithm, and the risks associated to the outcomes. They'll be developing their own algos a smaller percentage of their time, but need to have a strong background in Python to be able to read the code of the 18 existing AI models and their architecture. They'll be spending a lot of time trying to break what exists and raising questions around why certain things were done that way. From a documentation perspective, they'll need to be able to create graphical representations of their findings so a lay person could understand them. About TEKsystems We're partners in transformation. We help clients activate ideas and solutions to take advantage of a new world of opportunity. We are a team of 80,000 strong, working with over 6,000 clients, including 80% of the Fortune 500, across North America, Europe and Asia. As an industry leader in Full-Stack Technology Services, Talent Services, and real-world application, we work with progressive leaders to drive change. That's the power of true partnership. TEKsystems is an Allegis Group company. The company is an equal opportunity employer and will consider all applications without regards to race, sex, age, color, religion, national origin, veteran status, disability, sexual orientation, gender identity, genetic information or any characteristic protected by law.",
+      "location": "Irving, TX",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://jsv3.recruitics.com/redirect?rx_cid=3435&rx_jobId=JP-004411283&rx_url=https%3A%2F%2Fars2.equest.com%2F%3Ficid%3Dlinkedin_recruitics%26response_id%3Dcf2e215757dc2a480c15a6a329a7bbe2%26rx_campaign%3DLinkedin1%26rx_ch%3Dconnector%26rx_group%3D123600%26rx_job%3DJP-004411283%26rx_medium%3Dpost%26rx_r%3Dnone%26rx_source%3DLinkedin%26rx_ts%3D20240406T004801Z%26rx_vp%3Dslots",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901342772",
+      "title": "Data Science intern -DIN51",
+      "company": "Data Glacier",
+      "description": "Company Description Data Glacier is a data science and engineering company that aims to create innovative data products and services. With over 20 years of combined experience in the industry, our team is passionate about utilizing data to drive industry growth. We have also established an academic division focused on creating an AI workforce by offering affordable and free services to college grads and professionals seeking to transition into the data field. Role Description This is a remote internship role for a NLP (Natural Language Processing) Intern at Data Glacier. As an NLP Intern, you will be involved in various day-to-day tasks related to natural language processing, including data analysis, developing NLP models, implementing algorithms, and collaborating with the data science team. This internship provides a valuable opportunity to gain hands-on experience in the field of NLP and contribute to real-world projects. Qualifications Strong programming skills in Python and familiarity with NLP libraries and frameworksExperience with machine learning algorithms and data analysisKnowledge of natural language processing techniques and methodologiesAbility to work independently and remotelyExcellent problem-solving and critical thinking skillsGood communication and teamwork skillsEnrollment in or completion of a degree in Computer Science, Data Science, or a related fieldExperience with cloud platforms (e.g., AWS, Google Cloud) is a plusFamiliarity with deep learning frameworks (e.g., TensorFlow, PyTorch) is a plus",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Internship",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://forms.office.com/r/TqrGxrGhCT",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3902363405",
+      "title": "Data Curation Engineer",
+      "company": "Planet Pharma",
+      "description": "Job Description Target PR Range: 34-44/hr Depending on experience What are the top 3-5 skills, experience or education required for this position: PostgreSQL Bioinformatics datasets (BulkRNAseq, CRISPR) Python/R Common data models Code management and documentation As a Data Curation Engineer in the Genomics Research Center, you will be responsible for building and running workflows to load and manage high-value datasets in a centralized environment. You will work closely with Bioinformatics Engineering, as well as bioinformatics research scientists to identify data sources and requirements for loading and querying. Your expertise in PostgreSQL for database management and Python and R for scripting and automation will be crucial in developing and maintaining ETL processes to ensure data quality and integrity. Responsibilities Develop and implement workflows to load and manage genomic data. Work with researchers and data scientists to identify data sources and requirements for loading new datasets. Maintain existing data models for storing and querying genomic data. Develop and maintain ETL processes to ensure data quality and integrity. Build and maintain scripts for automation of data loading and processing. Qualifications Bachelor's degree in computer science, bioinformatics, or a related field +3 years of experience. Experience with building and running workflows for RDMS data loading and ETL processes. Proficient in SQL and ability to write complex queries for data extraction and analysis. Strong programming skills in Python for scripting and automation. Additional experience with R is preferred. Familiarity with genomic data formats and databases commonly used in bioinformatics research. Knowledge of data modeling concepts and implementing common data models in a relational database. Familiarity with data cleaning, normalization, and quality control processes. Excellent communication skills and ability to collaborate with researchers and stakeholders.CO/NYC candidates might not be considered The Planet Group of Companies is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.",
+      "location": "North Chicago, IL",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://careers.planet-pharma.com/Data-Curation-Engineer-Jobs-in-North-Chicago-IL/11065959",
+      "skill_labels": "Information Technology",
+      "source": "kaggle",
+      "score": 60.0
+    },
+    {
+      "job_id": "3901959900",
+      "title": "Machine Learning Engineer",
+      "company": "eduPhoria.ai",
+      "description": "Company Description eduPhoria.ai is an all-in-one learning platform that revolutionizes education by delivering personalized learning experiences tailored to each individual's unique learning style. Our platform enables learners to have a customized and adaptive learning journey. Role Description This is a full-time remote role for a Machine Learning Engineer at eduPhoria.ai. As a Machine Learning Engineer, you will be responsible for developing and implementing machine learning algorithms and models, conducting data analysis, and improving the overall performance of our learning platform. You will collaborate with cross-functional teams, including data scientists and software developers, to create innovative solutions and enhance the learning experience for our users. Qualifications Strong understanding of pattern recognition, computer science, and statisticsExperience in developing and implementing neural networks and algorithmsProficiency in programming languages such as Python, R, or JavaExperience with data preprocessing, feature engineering, and model evaluationKnowledge of machine learning frameworks and libraries, such as TensorFlow or KerasAbility to analyze and interpret large datasetsExcellent problem-solving and critical thinking skillsStrong communication and collaboration skillsMaster's degree or higher in computer science, data science, or related field",
+      "location": "California, United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 58.0
+    },
+    {
+      "job_id": "3887713726",
+      "title": "Junior Data Scientist - Python /Modeling",
+      "company": "Expert Technical Solutions",
+      "description": "Junior Data Scientist \u2013 ( Python / Modeling and Operat ions ) Expert Technical Solutions has an immediate opening for a Junior Data Scientist with an industry leading client in Atlanta , GA. Our client is looking for a highly motivated and research oriented Data Scientist who will play a vital role in enhancing our cli ent \u2019 s contact center solutions through the development of advanced NLP algorithms and models. You will work in a collaborative team environment to explore and create solutions to industry problems using machine learning and state-of-the-art large language models. You bring to this team environment a strong foundation in machine learning and deep learning, as well as the curiosity and grit to see a project to delivery. T his is a permanent , HYBRID (2 days onsite, Monday and Tuesday every week) opportunity offering st rong pay, ex cellent growth opportunities, and outstanding benefits. Responsibilities Productizing AI predictive models Producing data and model accuracy analyses Developing & maintaining of scripts/tools to automate both new model production and updates to existing model packages Working with developers to help design automation and tool improvements for model building Maintaining documentation of processes and projects across all supported languages and environments Developing knowledge of the internal data sources Explore high-level, undefined ideas and business problems using structured and unstructured data Develop product offerings through careful consideration of business value and data analysis Build and fine-tune deep learning and machine learning models, with an emphasis on large language models Communicate research findings, technical concepts, and model recommendations effectively to technical and non-technical stakeholders R equired E xperience BS or MS in Computer Science or related field required Proficiency in Python. 2+ year s\u2019 experience with bash, python, or equivalent script development, deployment, and execution. 1 + year of Windows experience with remote access and dos shell. Minimum of 1 year of experience implementing machine learning and NLP models using real-life (\u201cindustry\u201d) data Experience working with deep learning models Knowledge of statistical techniques and concepts (regression, statistical tests and proper usage, etc.) Desire and ability to learn and continually expand knowledge in the data science, machine learning, and speech analytics. Desired S kills Proficiency with one more deep learning libraries (PyTorch, TensorFlow, JAX, etc.) Experience deploying NLP models in production environments, ensuring scalability and performance Experience with building and/or fine-tuning large language models Experience as part of a software organization",
+      "location": "Atlanta, GA",
+      "experience_level": "Entry level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://www.experttechnical.com/job-seekers/?postid=P3PHUP6nU5M",
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 55.0
+    },
+    {
+      "job_id": "3884818921",
+      "title": "NLP/data science/Data Analysis(Intern apr 30)",
+      "company": "Data Glacier",
+      "description": "The ideal candidate will use their passion for big data and analytics to provide insights to the business covering a range of topics. They will be responsible for conducting both recurring and ad hoc analysis for business users. ResponsibilitiesUnderstand the day-to-day issues that our business faces, which can be better understood with data Compile and analyze data related to business' issues Develop clear visualizations to convey complicated data in a straightforward fashion QualificationsBachelor's or Master's degree in Statistics or Applied Mathematics or equivalent experience 1 - 2 years' Data Analysis experience Proficient in SQL",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Internship",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://forms.office.com/r/UAVrY128aW",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 50.0
+    },
+    {
+      "job_id": "3904716772",
+      "title": "Data Scientist",
+      "company": "Sumeru Inc",
+      "description": "Project Details:Job Title: Data ScientistLocation: Remote (W2 candidate only..)Need US. Citizen / Green card/ H4EAD/GCEAD Job Description: \u2022 Looking for Data Analyst who will be responsible for Migrating the ETL and ML pipelines to Databricks\u2022 Have experience with the Refactor the Macro code from local Python/R implementation to Databricks (Python/Pyspark) Analytical expert who utilize his/her skills in both technology and social science to find trends and manage data.They use industry knowledge, contextual understanding, skepticism of existing assumptions \u2013 to uncover solutions to business challengesCollecting, analysis and clean up dataCreating algorithms for processing catalog products using different data sourcesExperimenting with different models and neural networks, creating model ensemblesCreating a workflow for publishing algorithms to productionStrong skills in a machine and/or deep learning algorithms, data cleaning, feature extraction, and generationDemonstrated computational skills and experience with PythonExperience executing and presenting independent analysis Must have skills:Python(Programming Language)R (Programming Language)PySparkDatabricks",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 45.0
+    },
+    {
+      "job_id": "3901936390",
+      "title": "Data Scientist (Medical)",
+      "company": "PSRTEK",
+      "description": "Role: Natural Language Processing (NLP) Scientist Location \u2013 Remote The required skills for this position are:Natural Language Processing (NLP)Python (Programming Language)Statistical ModelingHigh-Performance Liquid Chromatography (HPLC)Java Job Description:We are seeking a highly skilled NLP Scientist to develop our innovative and cutting-edge NLP/AI solutions to empower life science. This involves working directly with our clients, as well as cross-functional Biomedical Science, Engineering, and Business leaders, to identify, prioritize, and develop NLP/AI and Advanced analytics products from inception to delivery.Key Responsibilities:Lead the research, strategy, design, and implementation of NLP/AI products from prototype to deployment.Collaborate closely with internal teams and external clients to understand requirements and design innovative NLP/AI solutions.Develop and validate cutting-edge NLP algorithms, including large language models tailored for healthcare and biopharma use cases.Translate complex technical insights into accessible language for non-technical stakeholders.Mentor junior team members, fostering a culture of continuous learning and growth.Publish findings in peer-reviewed journals and conferences.Engage with the broader scientific community by attending conferences, workshops, and collaborating on research projects. Qualifications:Ph.D. or master's degree in biomedical NLP, Computer Science, Biomedical Informatics, Computational Linguistics, Mathematics, or other related fieldsPublication records in leading computer science or biomedical informatics journals and conferences are highly desirable Regards,Guru Prasath M US IT RecruiterPSRTEK Inc.Princeton, NJ 08540guru@psrtek.comNo: 609-917-9967 Ext:114",
+      "location": "Fairfax County, VA",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Engineering, Information Technology",
+      "source": "kaggle",
+      "score": 80.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Entry-level Data Scientist with a Master's degree and 1 year of experience as a Research Assistant in Clinical NLP. Strengths include data preparation, NLP experiments, and biomedical data analysis using Python, Pytorch, and SQL.",
+    "job_explanations": [
+      {
+        "job_id": "3899537087",
+        "title": "NLP Engineer",
+        "company": "EA Team Inc",
+        "match_reason": "Strong match. The role is for an NLP Engineer focused on medical entity extraction, which aligns perfectly with the candidate's 'Clinical NLP' and 'Information Extraction' domain keywords. The required skills of Python, SQL, and Java are all present in the candidate's profile. The responsibilities suggest a role slightly more senior than entry-level, but the direct domain alignment makes it a very relevant opportunity.",
+        "missing_skills": [
+          "cTakes",
+          "UIMA"
+        ]
+      },
+      {
+        "job_id": "3904423470",
+        "title": "Informatics Programmer Analyst",
+        "company": "University of California, San Francisco",
+        "match_reason": "Poor match due to a significant seniority mismatch. While the role's focus on electronic medical records and required skills (Python, R, SQL) align with the candidate's background, it explicitly requires 'Three + years of experience'. The candidate's 1 year of experience is a primary disqualifier for this position.",
+        "missing_skills": [
+          "Epic Clarity Certification",
+          "SAS"
+        ]
+      },
+      {
+        "job_id": "3885828275",
+        "title": "Data Scientist",
+        "company": "TEKsystems",
+        "match_reason": "Partial match. The 'Entry level' seniority aligns with the candidate's profile, and core skills like Python and Machine Learning are a fit. However, the role's domain is 'AI Risk Management' for a bank, which is a significant departure from the candidate's specialized background in 'Clinical NLP' and 'Biomedical Scientific Datasets'.",
+        "missing_skills": [
+          "AI Risk Management"
+        ]
+      },
+      {
+        "job_id": "3901342772",
+        "title": "Data Science intern -DIN51",
+        "company": "Data Glacier",
+        "match_reason": "Partial match, but the candidate is overqualified. The technical requirements for this NLP internship (Python, NLP libraries, PyTorch) are well within the candidate's skillset. However, with a Master's degree and 1 year of experience as a 'Research Assistant', an internship role is a step back in seniority.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3902363405",
+        "title": "Data Curation Engineer",
+        "company": "Planet Pharma",
+        "match_reason": "Poor match due to a seniority mismatch. The role's focus on 'Bioinformatics datasets' and 'Genomics' is a strong domain fit. However, the job explicitly requires a 'Bachelor's degree... +3 years of experience'. The candidate's 1 year of experience does not meet this mandatory requirement, making it a poor fit despite skill overlap.",
+        "missing_skills": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "job_id": "3901959900",
+        "title": "Machine Learning Engineer",
+        "company": "eduPhoria.ai",
+        "match_reason": "Poor match. The low reranker_score of 58 reflects a significant domain mismatch. While the candidate possesses the required technical skills like Python and experience with neural networks, the role is in the EdTech industry. This is completely unrelated to the candidate's focused experience in 'Clinical NLP' and 'Biomedical' domains.",
+        "missing_skills": [
+          "TensorFlow",
+          "Keras"
+        ]
+      },
+      {
+        "job_id": "3887713726",
+        "title": "Junior Data Scientist - Python /Modeling",
+        "company": "Expert Technical Solutions",
+        "match_reason": "Partial match. The low reranker_score of 55 is due to a domain mismatch. The 'Junior' title and requirement for '1+ year of experience implementing machine learning and NLP models' is a perfect seniority fit. However, the role's domain is 'contact center solutions' and 'speech analytics', which does not align with the candidate's 'Clinical NLP' background.",
+        "missing_skills": [
+          "Speech analytics"
+        ]
+      },
+      {
+        "job_id": "3884818921",
+        "title": "NLP/data science/Data Analysis(Intern apr 30)",
+        "company": "Data Glacier",
+        "match_reason": "Poor match. The reranker_score of 50 reflects a weak fit. The role is an internship for which the candidate is likely overqualified, given their Master's degree and research experience. The job description is also very generic, focusing on basic data analysis and SQL, failing to leverage the candidate's specialized skills in NLP and deep learning.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3904716772",
+        "title": "Data Scientist",
+        "company": "Sumeru Inc",
+        "match_reason": "Poor match. The very low reranker_score of 45 indicates a poor fit. This role is heavily focused on data engineering tasks, specifically migrating pipelines using 'Databricks' and 'PySpark'. These tools are not listed in the candidate's CV, and the work is different from their experience in NLP research and modeling.",
+        "missing_skills": [
+          "Databricks",
+          "PySpark"
+        ]
+      },
+      {
+        "job_id": "3901936390",
+        "title": "Data Scientist (Medical)",
+        "company": "PSRTEK",
+        "match_reason": "Partial match. The domain ('life science', 'healthcare') and technical skills (NLP, Python, Java) are a perfect fit for the candidate's background. However, the role's responsibilities, such as 'Lead the research' and 'Mentor junior team members', imply a seniority level that is a significant stretch for a candidate with 1 year of experience.",
+        "missing_skills": [
+          "High-Performance Liquid Chromatography (HPLC)"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "cTakes",
+      "UIMA",
+      "Epic Clarity Certification"
+    ],
+    "recommendation": "The candidate is strongly qualified for entry-level Clinical NLP roles but is frequently disqualified from mid-level positions due to a lack of 3+ years of experience. To advance, focus on gaining experience with industry-standard clinical data tools like cTakes/UIMA and consider an Epic Clarity certification."
+  }
+}

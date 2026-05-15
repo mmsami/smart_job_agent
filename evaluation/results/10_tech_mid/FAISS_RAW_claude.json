@@ -1,0 +1,269 @@
+{
+  "persona": "10_tech_mid",
+  "method": "FAISS_RAW",
+  "model": "claude",
+  "run_timestamp": "2026-05-11T10:57:37.508046+00:00",
+  "results": [
+    {
+      "job_id": "3906257195",
+      "title": "Full Stack Software Engineer - API Platform",
+      "company": "Ford Motor Company",
+      "description": "Job Description At Ford Motor Company, we believe freedom of movement drives human progress. We also believe in providing you with the freedom to define and realize your dreams. With our incredible plans for the future of mobility, we have a wide variety of opportunities for you to accelerate your career potential as you help us define tomorrow\u2019s transportation. As a key member of our Enterprise Technology group, you\u2019ll play a critical part in shaping the future of mobility. If you\u2019re looking for the chance to leverage advanced technology to redefine the transportation landscape, enhance the customer experience and improve people\u2019s lives, this is the opportunity for you. Join us and challenge your IT expertise and analytical skills to help create vehicles that are as smart as you are. Looking for a Full Stack Software Engineer with experience in API based systems to be part of Ford\u2019s API Platform team. The API Platform Enablement team provides a set of applications that implement Ford\u2019s API Management offering for the enterprise. These applications allow product teams to register, secure, publish, and manage their API-based applications. Responsibilities What you\u2019ll be able to do: Build out vital products / microservices / APIs to support API Publishing, Catalog, and Access Management.Enhance testing platforms, improve test automation, foster software craftsmanshipPractice and promote use of Cloud Native approaches: API First, Microservice architectures, Code Quality, Security, CI/CD etc.Surprise and delight customers and partner software engineersMonitor and evaluate the performance of our solutionsCollaborate with multi-skilled teams working on API Enablement software solutionsEngage in Test-first Development, Test Driven DevelopmentCloud development using cutting-edge technologies and integrations with Ford enterprise systems Qualifications The minimum requirements we seek: Bachelor\u2019s degree in Computer Science or equivalent5+ years of experience with:Object-oriented development languages, such as but not limited to:JavaJavaScriptTypeScriptKotlinPythonModern databases (Relational and non-relational)Continuous integration/continuous delivery tools and pipelines, such as: (Jenkins, Terraform, SonarQube, Maven, Gradle, Harness, Apigee X)3+ years of experience developing and deploying to cloud platforms, such as Google Cloud Platform, Pivotal Cloud Foundry, Amazon Web Services, or Microsoft Azure Our preferred requirements: Understanding of API standards such as OAuth, Open API specification, GraphQL, and JSONDeep understanding of Object-Oriented Design PrinciplesFamiliar with eXtreme Programming (XP) practices including Pair/Mob programming and Test-first/Test Driven Development (TDD)Experience with developing and deploying to cloud platforms, such as Google Cloud Platform, Pivotal Cloud Foundry, Amazon Web Services, and Microsoft AzureExperience with Spring/SpringBoot and RESTFUL Web services developmentKnowledge of SQL and NoSQL databasesGit/GitHubExperience with JIRA, backlogs, iterations, user stories, or similar Agile Tools Highly effective in working with other technical specialists, Product Managers, UI/UX Designers and business partnersPassion for learning and willingness to work in a pair programming environmentStrong analytical and problem-solving skillsStrong oral and written communication skillsAbility to multi-task and manage changing prioritiesStrong teamwork and interpersonal skillsUnderstanding of fundamental data modelingExperience in development of microservices42Crunch experience What you\u2019ll receive in return: As part of the Ford family, you\u2019ll enjoy excellent compensation and a comprehensive benefits package that includes generous PTO, retirement, savings, and stock investment plans, incentive compensation, and much more. You\u2019ll also experience exciting opportunities for professional and personal growth and recognition. Candidates for positions with Ford Motor Company must be legally authorized to work in the United States. Verification of employment eligibility will be required at the time of hire. Visa sponsorship is available for this position. We are an Equal Opportunity Employer committed to a culturally diverse workforce. All qualified applicants will receive consideration for employment without regard to race, religion, color, age, sex, national origin, sexual orientation, gender identity, disability status, or protected veteran status. For information on Ford's salary and benefits, please visit: https://corporate.ford.com/content/dam/corporate/us/en-us/documents/careers/2024-benefits-and-comp-GSR-sal-plan-2.pdf",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/job/28482/?utm_medium=jobshare",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3901478018",
+      "title": "Senior Full Stack Developer (Blockchain)",
+      "company": "BlockApps",
+      "description": "Company Overview At BlockApps, we\u2019re focused on integrating real-world assets (RWAs) with blockchain technology to redefine asset ownership, liquidity, and transparency. Since inception in 2015, our team has pioneered blockchain innovation, notably with our Blockchain as a Service platform (STRATO), and by co-founding the Enterprise Ethereum Alliance. Through our STRATO Mercata marketplace, we are revolutionizing the accessibility and traceability of assets ranging from precious metals to collectibles, serving a global clientele across various industries. For more information, visit and contact us at www.blockapps.net, or find us on social media via LinkedIn, YouTube and Twitter. The ideal candidate will be a blockchain enthusiast with a proven track record in full stack development. Roles & Responsibilities Work with cross-functional teams to coordinate and manage the development and delivery of large-scale blockchain projects, based on our STRATO platformServe as the point of contact to internal and external stakeholders and drive discussions with business and technical teams around business requirements, solution architecture, project updates etc.Deliver the architectural design for blockchain applications, translating business needs into an end-to-end technical solutionManage day-to-day operations of technical delivery teams, ensuring quality and on time delivery of customer projectsProvide technical guidance and mentorship to application development teams, and participate in the code review processCreate and manage project documentation such as project plans, functional specifications, technical specifications, progress reportsPrioritize, manage, and effectively communicate across multiple, fast paced initiativesHands-on enterprise application development in JavaScript, React, Node, SQLRapid prototyping of demos for customersSupport technical pre-sales efforts Required Skills 3+ years\u2019 hands-on experience in developing production-grade software systems3+ years\u2019 experience leading the architecture and implementation of large-scale applications3+ years\u2019 full stack software development experience with JavaScript3+ years\u2019 experience in a customer-facing roleRESTful API design and implementation experienceExpertise in SQL (PostgreSQL, MySQL)Cloud computing experience with Azure/Amazon Web Services (AWS)/Google CloudExperience with container technologies such as DockerProficiency in code versioning tools, such as GitProcess mapping or UML experienceExperience in Agile developmentStrong collaboration, interpersonal, verbal, and written communication skills Nice to Have Skills Blockchain experience, specifically Ethereum/SolidityMobile app development experienceFunctional programming",
+      "location": "Brooklyn, NY",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3902789061",
+      "title": "Cloud SoftwareEngineer",
+      "company": "nan",
+      "description": "Job Title: Cloud Software Engineer Building APIs - AWS (Python/Node.js)Job Description:We are looking for a skilled Cloud Software Engineer who specializes in building APIs on the AWS platform using either Python or Node.js. As a member of our talented engineering team, you will play a crucial role in designing, developing, and maintaining robust and scalable APIs to support our cloud-based applications and services.Responsibilities:API Design and Development: Design, implement, and maintain high-performance APIs on the AWS platform using best practices and industry standards.AWS Integration: Utilize AWS services such as API Gateway, Lambda, DynamoDB, S3, and others to build scalable and resilient cloud-based APIs.Programming Language Expertise: Develop APIs using either Python or Node.js, ensuring code quality, performance, and maintainability.Microservices Architecture: Architect and implement API solutions following microservices principles for modularity, scalability, and flexibility.Security and Authentication: Implement security measures such as OAuth, JWT, and AWS IAM to ensure the security of APIs and data transmitted over the network.Monitoring and Logging: Implement logging and monitoring solutions to track API performance, diagnose issues, and ensure reliability.Continuous Integration/Continuous Deployment (CI/CD): Implement CI/CD pipelines to automate testing, deployment, and delivery of API updates.Documentation: Create and maintain comprehensive documentation for APIs, including usage guides, API specifications, and code documentation.Collaboration: Collaborate closely with frontend developers, backend engineers, and other stakeholders to understand requirements and integrate APIs into applications seamlessly.Requirements:Experience: X years of experience working as a Software Engineer, with a focus on building APIs and cloud-based applications.AWS Knowledge: Strong understanding of AWS cloud services, particularly API Gateway, Lambda, DynamoDB, S3, IAM, and others.Programming Language Proficiency: Proficiency in either Python or Node.js for API development, with a solid understanding of asynchronous programming concepts (if using Node.js).RESTful API Design: Experience designing and implementing RESTful APIs, including API versioning, error handling, and pagination.Database Skills: Familiarity with database systems such as DynamoDB, RDS, or other NoSQL and SQL databases commonly used in cloud environments.Security Awareness: Knowledge of API security best practices, including authentication, authorization, and encryption techniques.CI/CD Experience: Hands-on experience with CI/CD tools like Jenkins, GitLab CI, or AWS CodePipeline for automated testing and deployment.Version Control: Proficiency with Git for version control, including branching, merging, and code reviews.Communication Skills: Excellent communication and collaboration skills, with the ability to work effectively in a team environment and communicate technical concepts to non-technical stakeholders.",
+      "location": "United States",
+      "experience_level": null,
+      "work_type": "Contract",
+      "min_salary": 70.0,
+      "max_salary": 80.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3899532439",
+      "title": "Cloud Native- Full Stack Java Developer",
+      "company": "Deloitte",
+      "description": "Are you an experienced, passionate pioneer in technology? A cloud solutions builder who wants to work in a collaborative environment. As an experienced Cloud Native Engineer, you will have the ability to share new ideas and collaborate on projects as a consultant without the extensive demands of travel. Consider an opportunity with our US Delivery Center - we are breaking the mold of a typical Delivery Center. Our US Delivery Centers have been growing since 2014 with significant, continued growth on the horizon. Interested? Read more about our opportunity below... Work You'll Do/Responsibilities Work with cloud engineering teams to design and develop cloud native systemsCreate, build, and implement applications based on modern cloud design patterns and cloud software development that utilizes cloud computing and services in public, private, and hybrid clouds environmentsLeveraging cloud native services to drive innovation and increases speed to market in the software development life cycleMaintain application DevOps processes and deployment pipelines to implement and support application and feature releasesAssist in system migration to the cloud supporting refactoring legacy system to modernize the application or integration services to leverage cloud native services and solutionsContinue to learn and grow professionally as a cloud native engineer as new cloud services and solutions come to market The Team Deloitte's Government & Public Services practice-our people, ideas, technology and outcomes-is designed for impact. Our team of over 15,000+ professionals bring fresh perspective to help you anticipate disruption, reimagine the possible, and fulfill your mission promise. The US Cloud Engineering Offering focuses on enabling our client's journey in Cloud adoption, with opportunities in the areas of Cloud Strategy and Operations Transformation, Cloud Native Development & Integration, Cloud Migration, Cloud Infrastructure and Cloud Managed Services. Cloud Engineering supports our clients as they improve agility, resilience and identifies opportunities to modernize application and system integration by enabling Cloud. Required Qualifications Bachelor's degree inComputer Science, Engineering, Management Information Systems or equivalent work experience 3+ years' experience developing full stack solutions and utilizing software build and deployment tools (Jenkins, Bamboo, Git, Bitbucket, CodeCommit) 3+ years application and API development background in object-oriented programming language such as (Java, .NET, C#) 3+ years web application development experience (HTML, CSS, NodeJS, Angular, React, JavaScript) Experience with modern API development (Node.js, Go) 3+ years cloud native language experience (Lambda, Node.js Python) Base understanding of cloud serverless solutions (S3, CloudFront, API Gateway, Lambda Functions, ElastiCache, SQS, MQ, RDS) Experience with containerization (Docker, Kubernetes, AWS EKS, AWS ECS, Fargate) Experience with cloud build and deployment tools (GitLab, Beanstalk, OpsWorks, CodeCommit, CodeBuild, CodeDeploy) Experience working with cloud database services (RDS, DynamoDB, DocumentDB) Experience working with cloud deployment languages (CloudFormation, Terraform, Chef, Ansible) Base understanding of cloud services and infrastructure (VPC, EC2, S3, EBS, EFS, VPC, SG, NACL) Strong problem solving and troubleshooting skillsStrong verbal and written communication skillsMust live in a commutable distance (approximately 100-mile radius) to one of the following Delivery locations: Atlanta, GA; Charlotte, NC; Dallas, TX; Gilbert, AZ; Houston, TX; Lake Mary, FL; Mechanicsburg, PA; Philadelphia, PA with the ability to commute to assigned location for the day, without the need for overnight accommodations Must be legally authorized to work in the United States without the need for employer sponsorship, now or at any time in the future. Ability to Travel 10%, on average, based on the work you do and the clients and industries/sectors you serve Expectation to co-locate in your designated Delivery location up to 30% of the time based on business needs. This may include a maximum of 10% overnight client/project travel. Preferred Qualifications AWS Certification (AWS Solution Architect Associate, AWS Developer, AWS DevOps) Active Security Clearance Information for applicants with a need for accommodation: https://www2.deloitte.com/us/en/pages/careers/articles/join-deloitte-assistance-for-disabled-applicants.html",
+      "location": "Atlanta, GA",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://ars2.equest.com/?response_id=8054b5274857678fd475f3bf84fbbc0b",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 80.0
+    },
+    {
+      "job_id": "3886879854",
+      "title": "Cloud Software Developer",
+      "company": "7-Eleven",
+      "description": "About This Opportunity:We\u2019re looking for a cloud engineer whose career has progressed from traditional software development to cloud native solutions, writing infrastructure-as-code to build, deploy, and monitor critical applications. The ideal candidate will have a passion for continual improvement, automation tools, and building the next-big-thing. We need an enabler (force multiplier) and someone who asks questions, rather than an order follower. Preferred skills are Cloud developing and deploying serverless applications and infrastructure, using NodeJS and terraform. In this role, you will work collaboratively with the software engineering teams to automate the creation of cloud resources and software artifacts, automate the testing of those artifacts, and then automate the deployment and automate monitoring of the applications running in the cloud. You will also troubleshoot issues with infrastructure-as-code, the cloud network, and deployment of cloud resources. Note that this is NOT an SRE or traditional infra admin role. Duties:Developing and testing new features for the enterprise cloud platform and participating in code reviews for the platform.Assist multiple software development teams with building and deploying cloud-native applications and infrastructure via IaC.Automate the creation of new cloud resources, with monitoring built in.Promote Cloud, Security and DevOps best practices and DevOps culture.Deliver solutions in a complex private and public hybrid cloud environment including distributed systems that are resilient and highly available. Must Haves:Bachelor\u2019s degree or the equivalent in Computer Science, Information Technology, Engineering. 4+ years developing, deploying, and monitoring cloud native solutions (AWS & Azure are the preferred), with a focus on Infrastructure-as-code tools, preferably Terraform.Experience developing and deploying cloud-native services and writing unit tests for NodeJS, Java or other high level programming language.Experience building highly resilient cloud eco-systems capable of high availability at scale and integrating cloud and SaaS tools using IaC.Self-motivated, self-driven attitude and experience working in a fast-paced environment.Ability to translate business requirements into a solution architecture.Ability to discuss and promote cloud best practices.Experience working on large cross-functional teams.Experience building proof-of-concepts to validate new tools and architectures.Proven experience of having a strong automation and continuous improvement mindsetExcellent communication skills. Preferred:Package managers such as NPM, Maven, Gradle, and yarn.Build languages such as NodeJS, Groovy, Python, Bash or PowerShell.Artifact publishing tools such as Nexus, DockerHub, or Jfrog Artifactory.Static code scanning tools such as SonarQube, Aqua or Checkmarx.Experience developing cloud solutions for scalability and elasticity balanced with cost.Experience developing, deploying, and monitoring applications and services to the cloud, such as in Lambda, AWS Elastic Kubernetes Service and/or Azure Kubernetes Service with data persistence and load balancers.Experience with log and metrics consolidation and dashboarding/alerting tools like NewRelic, Logz.io or DataDog.Prior experience in platform engineering is a plus.Prior experience in developing internal developer portal is a plus.",
+      "location": "Irving, TX",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 78.0
+    },
+    {
+      "job_id": "3905344916",
+      "title": "Full Stack Engineer (.NET)",
+      "company": "BridgeView",
+      "description": "OverviewBridgeView is currently seeking Full Stack Software Engineer who will play a key role in developing innovative software solutions using C#, .NET, React.js, and various design patterns. You will work in a dynamic and collaborative environment, utilizing Agile methodologies and AWS services to deliver cutting-edge products. This is fully remote role and contract-to-hire opportunity. TITLE: Full Stack Software Engineer (.NET)LOCATION: RemoteBENEFITS & PERKS: Medical, Dental & Vision insurance; 4% match on 401K, Life & LTD Insurance, and Employee Perks (more detail below) ResponsibilitiesCollaborate with cross-functional teams to translate business requirements into technical specifications and design scalable software solutions.Develop, test, and deploy high-quality code using C#, .NET, and React.js to meet product objectives.Implement best practices and design patterns to ensure code maintainability, scalability, and performance optimization.Lead code reviews, provide constructive feedback, and mentor junior engineers to promote skill development and knowledge sharing.Work closely with product managers, designers, and stakeholders to prioritize features, plan sprints, and deliver product increments in an Agile environment.Design and develop RESTful APIs, microservices, and serverless architectures to support seamless integration between front-end and back-end systems.Optimize application performance, troubleshoot technical issues, and implement solutions to improve system reliability and user experience.Stay updated with emerging technologies, industry trends, and best practices to drive innovation and continuous improvement.Deploy and manage applications on AWS cloud infrastructure, utilizing services such as EC2, ECS, S3, Lambda, API Gateway, and DynamoDB.Collaborate with the engineering team to automate deployment processes, implement CI/CD pipelines, and ensure application scalability and reliability. BackgroundBachelor\u2019s degree in Computer Science, Engineering, or related field.10+ years of professional experience in software development with expertise in C#, .NET, and React.js.Strong understanding of software design principles, design patterns, and architectural concepts.Proven experience working in Agile environments with a solid grasp of Agile methodologies such as Scrum.Hands-on experience with AWS services and cloud infrastructure, including deployment, monitoring, and optimization.Proficiency in full-stack development, including front-end technologies (HTML, CSS, JavaScript) and back-end technologies (ASP.NET, Web API).Solid understanding of relational and NoSQL databases, database design, and optimization techniques.Excellent problem-solving skills with a strong attention to detail and ability to work independently or as part of a team.Effective communication and interpersonal skills with the ability to collaborate effectively with diverse teams and stakeholders.Passion for innovation, learning, and continuous improvement in a dynamic startup environment. ABOUT BRIDGEVIEW ITFounded in 2005, BridgeView provides exceptional technology consulting, project augmentation, and placement services that help organizations and technologists achieve their goals. Our ability to evolve with the market and quickly adapt to client environments makes us a unique alternative to the status quo. It\u2019s why we\u2019ve achieved constant growth since the day we opened our doors, attracting well-known companies and expert talent. With a home base in downtown Denver and a team that embodies a work hard, play hard attitude, BridgeView is a personable but professional partner to you. We\u2019ve won awards and we\u2019ve had great success, but nothing is more rewarding than forming genuine connections with business leaders and technologists. Apply for the above role or sign up for job alerts at https://www.bridgeviewit.com/job-alerts/. BENEFITSMedical: Provided by Anthem BCBSDental: Provided by Guardian PPOVision: Provided by VSP/Guardian PPO401K with 4% match that is 100% vested from startVoluntary Benefits: Accident Insurance, Accidental Death & Dismemberment (AD&D), Short-Term Disability, Life Insurance, Critical IllnessEmployee Perks, Personal Discounts: Full access to the Calm app, great discounts through thousands of vendors (Home Depot, AT&T, Target, etc.)",
+      "location": "Denver, CO",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": 60.0,
+      "max_salary": 75.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3905863865",
+      "title": "Professional-Software Engineer",
+      "company": "AT&T",
+      "description": "Job Description: JOB TITLE: Professional-Software Engineer JOB LOCATION: 208 S Akard Street, Dallas, TX 75202 [and various unanticipated locations throughout the U.S.; may work from home] DUTIES: Professional-Software Engineer needed by AT&T Services, Inc. in Dallas, TX (and various unanticipated locations throughout the U.S.; may work from home) to be responsible for the delivery process of a software application or service, including design, development, testing, deployment, production application support: troubleshooting and maintenance with a focus on automation. Execute a specific development methodology through application of various scripting and programming languages. Create and execute automated test plans/strategies utilizing business requirements and collaborate with engineers/architects, clients, etc. to validate test environments, test data and test results. Participate in the software deployment process. Design, develop, test, deploy, troubleshoot, and maintain software applications and platforms with a particular focus on cybersecurity and securing cloud hosted applications. Collaborate to gather and review software requirements and user stories. Provide estimates, create software design and testing specifications, and collaborate with engineers and architects to create user stories and required acceptance criteria. Provide design and implementation of proof-of-concepts, development, testing, creation of infrastructure as code, deployments, and operations of capabilities and services for the Astra security platform. Execute Agile software development methodologies including Scrum and Kanban through application of various programming languages including Java, JavaScript, Typescript, NodeJS, Python, Angular, YAML, Terraform, CloudFormation, MySQL, Elastic Search, and DynamoDB. Create and execute automated test plans and strategies utilizing business requirements. Utilize Azure, AWS, and GCP cloud services including API\u2019s, SDK\u2019s, PowerShell, CLI, Serverless, Container, compute, messaging, queueing, database, storage, and logging. Utilize scalable computing systems, software architecture, data structures, and algorithms. Participate in collaboration with team members on integrations with various other platforms and systems. Design and implement code fixes, validate outcomes against expected results, and produce associated reporting. Perform unit testing, dynamic application security testing, interface testing, integration testing, end-to-end testing, and user acceptance testing. Support applications and solve configuration and environment issues. MINIMUM REQUIREMENTS: Requires a Bachelor\u2019s degree, or foreign equivalent degree, in Information Systems, Electrical Engineering, or Electric Engineering and three (3) years of experience in the job offered or three (3) years of experience in a related occupation designing, developing, testing, deploying, troubleshooting, and maintaining software applications and platforms with a particular focus on cybersecurity and securing cloud hosted applications; executing Agile software development methodologies including Scrum and Kanban through application of various programming languages including Java, JavaScript, Typescript, NodeJS, Python, Angular, YAML, Terraform, CloudFormation, MySQL, Elastic Search, and DynamoDB; utilizing Azure, AWS, and GCP cloud services including API\u2019s, SDK\u2019s, PowerShell, CLI, Serverless, Container, compute, messaging, queueing, database, storage, and logging; designing and implementing code fixes, validating outcomes against expected results, and producing associated reporting; and performing unit testing, dynamic application security testing, interface testing, integration testing, end-to-end testing, and user acceptance testing. Our Professional-Software Engineers earn between $156,071 - $210,100 yearly. Not to mention all the other amazing rewards that working at AT&T offers. Joining our team comes with amazing perks and benefits: Medical/Dental/Vision coverage 401(k) plan Tuition reimbursement program Paid Time Off and Holidays (based on date of hire, at least 23 days of vacation each year and 9 company-designated holidays) Paid Parental Leave Paid Caregiver Leave Additional sick leave beyond what state and local law require may be available but is unprotected Adoption Reimbursement Disability Benefits (short term and long term) Life and Accidental Death Insurance Supplemental benefit programs: critical illness/accident hospital indemnity/group legal Employee Assistance Programs (EAP) Extensive employee wellness programs Employee discounts up to 50% off on eligible AT&T mobility plans and accessories, AT&T internet (and fiber where available) and AT&T phone Weekly Hours: 40 Time Type: Regular Location: Dallas, Texas It is the policy of AT&T to provide equal employment opportunity (EEO) to all persons regardless of age, color, national origin, citizenship status, physical or mental disability, race, religion, creed, gender, sex, sexual orientation, gender identity and/or expression, genetic information, marital status, status with regard to public assistance, veteran status, or any other characteristic protected by federal, state or local law. In addition, AT&T will provide reasonable accommodations for qualified individuals with disabilities.",
+      "location": "Dallas, TX",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": 156071.0,
+      "max_salary": 210100.0,
+      "url": "https://www.att.jobs/job/-/professional-software-engineer/117/64127146800",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3886897827",
+      "title": "Senior Software Developer",
+      "company": "Evolution Recruitment Solutions, USA",
+      "description": "Senior Software Developer - W2Location: Remote Rate: $85 - $100 per hour Contract: 12 months initial We are seeking a highly skilled Senior Software Developer with expertise in Azure Cloud services and Generative AI. The ideal candidate will be proficient in Python and possess strong knowledge of JavaScript, particularly in areas relevant to cloud-native application development. In addition to technical capabilities, the successful candidate will have experience in Continuous Integration/Continuous Deployment (CI/CD) practices and a passion for exploring emerging technologies.Key Responsibilities:Design, develop, and maintain cloud-native applications and services on the Azure platform.Implement and optimize generative AI algorithms to solve complex problems and enhance product capabilities.Collaborate with cross-functional teams to gather requirements, define technical specifications, and deliver high-quality solutions.Drive best practices for code quality, scalability, and performance optimization.Utilize CI/CD pipelines to automate build, test, and deployment processes, ensuring rapid and reliable software delivery.Stay abreast of industry trends and advancements in cloud computing, AI, and software development methodologies.Provide technical leadership and mentorship to junior team members, fostering a culture of learning and innovation.Participate in code reviews, architectural discussions, and contribute to the overall technical strategy of the organization.Qualifications:Bachelor's or Master's degree in Computer Science, Engineering, or related field.Strong professional experience in software development, with a focus on cloud technologies and AI.Extensive experience working with Azure Cloud services, including but not limited to Azure Functions, Azure App Service, Azure Storage, Azure Machine Learning, etc.Proficiency in Python programming language, with demonstrated experience in developing and deploying production-grade applications.Strong understanding of JavaScript, with knowledge of modern frameworks/libraries such as React, Vue.js, or Node.js.Hands-on experience with generative AI frameworks and tools, such as TensorFlow, PyTorch, or OpenAI.Familiarity with CI/CD tools and practices, such as Jenkins, GitLab CI/CD, or Azure DevOps.Excellent problem-solving skills and the ability to thrive in a fast-paced, collaborative environment.Effective communication skills, with the ability to convey complex technical concepts to both technical and non-technical stakeholders.Desirable Qualifications:Certification in Azure or AI-related technologies.Experience with Docker and container orchestration platforms like Kubernetes.Knowledge of serverless computing concepts and architectures. Experience in Healthcare",
+      "location": "United States",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": 85.0,
+      "max_salary": 100.0,
+      "url": null,
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 70.0
+    },
+    {
+      "job_id": "3901691656",
+      "title": "Cloud Engineer",
+      "company": "Magnit",
+      "description": "This is a contract to hire role through Magnit for a leading healthcare insurance company in the US. This role is fully remote in the US ONLY. Please note this is NOT a corp to corp opportunity. Job Title: Cloud Engineering Advisor Job Overview:The candidate will be responsible for research and development of a Data Retention Application within the Information Lifecycle Management (ILM) team by leveraging industry and big data platform tools.Candidate is expected to be an expert-level professional providing expert content/professional leadership on complex Cloud Engineering assignments/projects; exercising considerable creativity, foresight, and judgment in conceiving, planning, and delivering initiatives; uses deep professional knowledge and acumen to advise functional leaders; focuses on providing thought leadership within own discipline but works on broader projects, which require understanding of wider business; recognized internally as a subject matter expert. Implements organization's cloud strategy from a technical perspective, including design, planning, integration, maintenance and support of cloud architecture. Supports development and execution of cloud implementation strategy within organization's existing IT infrastructure. May work with stakeholders across organization to evaluate cloud systems and identify appropriate solutions.Responsibilities:\u00b7 Function as a hands-on developer of the ILM-Data Retention team - participating in design, document, develop, deploy, and maintenance of processes using Scaled Agile Framework (SAFe)\u00b7 Build solid and robust technical solutions to support the delivery of Enterprise Data Retention functions on-premise and cloud environments (AWS)\u00b7 Ensure adherence to existing strategic direction and architectural strategies\u00b7 Work with engineers and developers to design and build scalable, automated CI/CD pipelines with latest open source resources\u00b7 Develop automated processes for infrastructure builds, monitoring, deployments and integration.\u00b7 Ensure application observability patterns and site reliability practices\u00b7 Develop AWS cloud platform using AWS EC2, VPC, IAM, S3, ECS/EKS, RDS, Lambda, Glue, Step Functions and others resources\u00b7 DevOps IAC development using Terraform, Jenkins, Ansible, and others Ideal candidates should have:- At least 5 plus years of recent experience in designing, developing, deploying, and supporting enterprise applications in a distributed environment and cloud (AWS)- Proven track-record of quality software development and delivery in the cloud- Experience creating benchmark tests, designing for scalability and performance, and designing/integrating solutions- Drive complex ideas into an implementation plan- Ability to evaluate the emerging vs. more established technologies- Ability to perform detailed analysis both technical and business- Strong oral and written communication skills- Understanding of Health Insurance Business Required Skills/Qualifications:- Development on AWS cloud platform using AWS EC2, VPC, IAM, S3, ECS/EKS, RDS, Lambda, Airflow, Glue, Step Function and others resources- IAC development using Terraform, Jenkins, Ansible, and others- Proficient in procedural, functional and object oriented languages- Experience with application observability patterns and site reliability practices- Experience with developing complex applications with relational database systems (RDBMS). SQL Proficiency- 3+ years software development experience with ETL and Big Data platforms- Strong automation background: emphasis on CI/CD, TDD- Required knowledge in using the following technologies:\u25e6 Python, Java, Kotlin, Scala, SQL\u25e6 AWS (EMR/Spark, S3, EC2, Lambda, API Gateway, Airflow, Glue, Athena, Step Functions)\u25e6 CI/CD - GIT, Jenkins, Linux, Docker, Kubernetes, OpenShift\u25e6 Agile Tools (Rally/Jira)\u25e6 API Frameworks (Flask, Fast API, Spring Boot) Preferred Skills / Qualifications:- Background in systems architecture- Proficient in developing API\u2019s and micro services architecture- Open source savvy, possessing experience using common open source libraries/frameworks Education: - Formal education in Computer Science, or related field or equivalent experience preferred- Certifications on AWS highly desired Hourly Pay Rate Range (dependent on location, experience, expectation)The pay range that Magnit reasonably expects to pay for this position is: $59.38-$79.31/hour W-2.Benefits: Medical, Dental, Vision, 401K (provided minimum eligibility hours are met)",
+      "location": "Bloomfield, CT",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Contract",
+      "min_salary": 59.0,
+      "max_salary": 80.0,
+      "url": "https://magnitdirectsourcing-cgn.magnitglobal.com/careers/job/137460739456",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3904394223",
+      "title": "Sr. Software Engineer",
+      "company": "OpenGov Inc.",
+      "description": "OpenGov is home to an exceptional team - passionate about our mission to power more effective and accountable government. By bringing the OpenGov Cloud to our nation's state and local government, we\u2019re transforming communities so they can thrive! Imagine yourself being able to help small business owners open their doors faster, ensuring our tax dollars are accounted for, creating safer infrastructure , modernizing the permitting process , and assisting with disaster recovery . The work you do here every day has a meaningful impact on people's lives! \ud83c\udf1f OpenGov is a 2023 Top Workplaces USA award winner and a Forbes America's Best Startup Employer \ud83c\udf1f Join our smart, fun, and humble team to experience the most rewarding career of your life! Job Summary The Senior Software Engineer II will contribute to the development of a leading SaaS solution designed to enhance efficiency, transparency, and accountability within government agencies. This role is integral to our engineering team, responsible for delivering new features and enhancements within a dynamic, agile environment. Utilizing modern computing frameworks, the Senior Software Engineer II plays a crucial part in advancing our mission to improve society by empowering key community functions. Responsibilities Demonstrated leadership in a tactical capacity, including strategic input and team leadershipProficiency in solving complex problems that often involve intangible factorsExpertise in architecting, designing, and developing robust APIs and microservices using NodeJS, Typescript, and ReactJS, serving a user base exceeding 100,000 daily across numerous customer communitiesOwnership of the entire product lifecycle, including collaboration with Product, Design, and other customer success stakeholders to shape the system.Consistent delivery of iterative improvements with high-performance code in alignment with the product vision and roadmapDevelopment of REST and GraphQL microservices, following an API-first approach, to interact with the OpenGov event-driven platform for Data & Reporting services and integration with customer systems for inbound and outbound data integrationsActive participation in Continuous Integration and Continuous Deployment (CICD) and DevOps automation initiatives, utilizing industry-leading platforms and tools such as AWS Cloud, Azure, Kubernetes, Docker, GitHub, Jenkins, Sonar, Spinnaker, NewRelic, and moreKey contribution to enhancing team collaboration, delivery processes, and product quality while upholding technical innovation and excellence standards within the team Requirements And Preferred Experience A minimum of 10 years of professional experience with a proven track record of developing scalable, high-quality code using contemporary programming languages in a self-organized Agile environmentA minimum of 5 years of professional experience with modern Javascript frameworks, particularly ReactJSA minimum of 5 years of experience in developing backend microservices using NodeJS, Typescript, and creating REST/GraphQL APIsDemonstrated experience in building heavily-utilized, enterprise-level, consumer-facing SaaS softwareProficiency in cloud-native software development with a comprehensive understanding of standard architecture patterns and design practices related to Cloud services and deploymentsProven track record of successfully building APIs, architecting database models (including SQL and NoSQL), and implementing event-driven patterns What Makes OpenGov Unique \u00bb Leadership: CEO Zac Bookman (MPA from Harvard and JD from Yale) is truly a mission-driven CEO. He was named one of the 100 most Intriguing Entrepreneurs by Goldman Sachs, a Tech Pioneer by the World Economic Forum, and SF and Silicon Valley Business Times' 40 under 40 class of 2018 ! \u00bb Growth: Record breaking growth with 1,800+ governments (and counting) using our products. Click here to read more. \u00bb Culture: Winner of 2023 Top Workplaces USA award , Awarded Top 25 Cloud Companies to Work For , Winner of Forbes 2022 Best Startup Employers , 50 Best Workplaces award . Check out our Careers Video ! \u00bb Perks: 90% paid Medical/Dental/Vision premium for employees, fully paid Life and Short/Long term disability insurance, Unlimited PTO, Parental Leave policy, annual wellness stipend, anniversary awards, and more! \u00bb Product: Named to the GovTech 100 (seven consecutive years), we are the leader in cloud software for our nation's cities, counties, and state agencies. \u00bb Mission Driven: We are a technology company with a passion for the mission. We're powering more effective and accountable government. Come join us and make a positive social impact! OpenGov is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.",
+      "location": "Seattle, WA",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://jobs.lever.co/opengov/456915ec-e723-4121-b13a-07fade82f0d1/apply?source=LinkedIn",
+      "skill_labels": null,
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "Senior full-stack developer with 9 years of experience, a BS in Computer Science, AWS Certified Developer, and SCRUM Master certification. Core strengths include full-stack and API development, cloud integration (AWS/Azure), CI/CD pipelines, React, JavaScript, and SQL.",
+    "job_explanations": [
+      {
+        "job_id": "3906257195",
+        "title": "Full Stack Software Engineer - API Platform",
+        "company": "Ford Motor Company",
+        "match_reason": "Strong match. The candidate's 9 years of full-stack development experience, API development and design skills, CI/CD pipeline expertise, AWS and Azure cloud experience, JavaScript, React, and SQL directly satisfy the core required qualifications. The AWS Certified Developer certification and SCRUM Master certification align with Ford's cloud-native and Agile expectations. The reranker score of 92 reflects this strong alignment. The primary gap is the absence of Java, TypeScript, Kotlin, or Python in the CV tools/skills, which are listed as required OOP languages.",
+        "missing_skills": [
+          "Java or TypeScript or Python (OOP language beyond JavaScript)"
+        ]
+      },
+      {
+        "job_id": "3904394223",
+        "title": "Sr. Software Engineer",
+        "company": "OpenGov Inc.",
+        "match_reason": "Strong match. The candidate's senior experience level, full-stack development background, React, JavaScript, API development, CI/CD, AWS, and Agile skills align well with the role's requirements. The reranker score of 88 reflects this. However, the role explicitly requires a minimum of 10 years of professional experience and 5+ years with NodeJS/TypeScript backend microservices; the candidate has 9 years total and NodeJS/TypeScript are not listed in their tools or skills, representing a meaningful gap.",
+        "missing_skills": [
+          "NodeJS",
+          "TypeScript"
+        ]
+      },
+      {
+        "job_id": "3901478018",
+        "title": "Senior Full Stack Developer (Blockchain)",
+        "company": "BlockApps",
+        "match_reason": "Partial match. The candidate's full-stack development experience, JavaScript, React, SQL, API design, cloud computing (AWS/Azure), and Agile skills satisfy most of the required qualifications. The reranker score of 85 reflects solid alignment. However, the role requires Docker/container experience as a required skill, which is absent from the CV. Blockchain experience (Ethereum/Solidity) is listed as nice-to-have, not required, so it is not a disqualifier.",
+        "missing_skills": [
+          "Docker (container technologies)"
+        ]
+      },
+      {
+        "job_id": "3902789061",
+        "title": "Cloud Software Engineer",
+        "company": "nan",
+        "match_reason": "Partial match. The candidate's AWS certification, cloud computing experience, API development and design, CI/CD pipelines, and automation skills align with the core requirements. The reranker score of 82 reflects reasonable fit. However, the role explicitly requires proficiency in Python or Node.js for API development, neither of which appears in the candidate's listed tools or skills, representing a required gap.",
+        "missing_skills": [
+          "Python or Node.js"
+        ]
+      },
+      {
+        "job_id": "3899532439",
+        "title": "Cloud Native- Full Stack Java Developer",
+        "company": "Deloitte",
+        "match_reason": "Partial match. The candidate's full-stack development background, React/JavaScript, API development, CI/CD experience, AWS/Azure cloud skills, and SQL satisfy several required qualifications. The reranker score of 80 reflects moderate alignment. However, the role explicitly requires 3+ years of experience in an OOP language such as Java or .NET, and experience with containerization (Docker, Kubernetes) and cloud deployment languages (Terraform, CloudFormation) \u2014 none of which appear in the candidate's profile.",
+        "missing_skills": [
+          "Java or .NET",
+          "Docker/Kubernetes (containerization)",
+          "Terraform or CloudFormation"
+        ]
+      },
+      {
+        "job_id": "3886879854",
+        "title": "Cloud Software Developer",
+        "company": "7-Eleven",
+        "match_reason": "Partial match. The candidate's AWS and Azure cloud experience, automation mindset, CI/CD pipeline expertise, and full-stack background align with several requirements. The reranker score of 78 reflects moderate fit. However, the role's primary required focus is Infrastructure-as-Code (IaC) with Terraform and cloud-native NodeJS development, neither of which is present in the candidate's CV. The role is more DevOps/platform engineering-oriented than application development, which is a moderate domain shift.",
+        "missing_skills": [
+          "Terraform (Infrastructure-as-Code)",
+          "Node.js"
+        ]
+      },
+      {
+        "job_id": "3905344916",
+        "title": "Full Stack Engineer (.NET)",
+        "company": "BridgeView",
+        "match_reason": "Partial match. The candidate's full-stack development experience, React, AWS, CI/CD, Agile/Scrum, SQL, and API development skills are relevant. However, the role explicitly requires 10+ years of experience and expertise in C# and .NET as primary technologies, neither of which appears anywhere in the candidate's CV. With 9 years of experience, the candidate also falls slightly short of the stated 10+ year requirement. The reranker score of 75 reflects this partial alignment.",
+        "missing_skills": [
+          "C#",
+          ".NET"
+        ]
+      },
+      {
+        "job_id": "3905863865",
+        "title": "Professional-Software Engineer",
+        "company": "AT&T",
+        "match_reason": "Partial match. The candidate's JavaScript, AWS, Azure, CI/CD, Agile, API development, SQL, and automation skills cover a meaningful portion of the required stack. The reranker score of 72 reflects moderate fit. However, the role explicitly requires experience with Python, TypeScript, Angular, Terraform, CloudFormation, and a specific focus on cybersecurity and securing cloud-hosted applications \u2014 none of which are present in the candidate's profile.",
+        "missing_skills": [
+          "Python",
+          "Terraform or CloudFormation",
+          "Cybersecurity/application security focus"
+        ]
+      },
+      {
+        "job_id": "3886897827",
+        "title": "Senior Software Developer",
+        "company": "Evolution Recruitment Solutions, USA",
+        "match_reason": "Partial match. The candidate's Azure experience, CI/CD expertise, JavaScript/React, and cloud computing background partially align with requirements. The reranker score of 70 reflects limited fit. The role's primary required technical focus is Python for cloud-native development and Generative AI frameworks (TensorFlow, PyTorch, OpenAI), both of which are entirely absent from the candidate's profile. The AI/ML domain represents a significant skill gap relative to the core requirements.",
+        "missing_skills": [
+          "Python",
+          "Generative AI frameworks (TensorFlow, PyTorch, or OpenAI)"
+        ]
+      },
+      {
+        "job_id": "3901691656",
+        "title": "Cloud Engineer",
+        "company": "Magnit",
+        "match_reason": "Poor match. While the candidate has AWS experience, CI/CD, SQL, and Agile skills, the role explicitly requires 3+ years of ETL and Big Data platform experience, proficiency in Python/Java/Kotlin/Scala, Terraform/Ansible IaC, and tools such as Spark/EMR, Airflow, Glue, and Kubernetes \u2014 none of which appear in the candidate's profile. The reranker score of 68 reflects this weak alignment. The role is primarily a data engineering and cloud infrastructure position, which is a domain mismatch relative to the candidate's application development background.",
+        "missing_skills": [
+          "Python or Java (required languages)",
+          "Terraform/Ansible (IaC)",
+          "ETL/Big Data platforms (Spark, Airflow, Glue)"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "Java or TypeScript or Python (OOP language beyond JavaScript)",
+      "NodeJS",
+      "TypeScript"
+    ],
+    "recommendation": "The candidate should prioritize learning Node.js or Python for backend/cloud API development and gaining hands-on experience with Terraform for IaC, as these appear as required skills across the majority of matched roles. Adding Docker/Kubernetes familiarity would further unlock eligibility for several high-scoring positions at Ford, Deloitte, and Magnit."
+  }
+}

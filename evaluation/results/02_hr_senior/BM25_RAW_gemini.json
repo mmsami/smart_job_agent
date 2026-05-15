@@ -1,0 +1,261 @@
+{
+  "persona": "02_hr_senior",
+  "method": "BM25_RAW",
+  "model": "gemini",
+  "run_timestamp": "2026-05-11T10:29:20.781148+00:00",
+  "results": [
+    {
+      "job_id": "3905882432",
+      "title": "Human Resources Director",
+      "company": "Insero Talent Solutions",
+      "description": "Insero Talent Solutions is recruiting a Human Resources Director for a fast growing manufacturing company in Ithaca, NY. Overview:As the HR Director, you will be responsible for leading and managing all aspects of the human resources function within our organization. You will play a critical role in developing and implementing HR strategies, policies, and programs to support our business objectives and foster a positive work environment. Reporting directly to the President and CEO, you will serve as a key member of the senior leadership team. Key Responsibilities:Strategic HR Planning: Develop and implement HR strategies aligned with the company's goals and objectives. Collaborate with senior management to identify HR priorities and initiatives. Anticipate and address future HR needs to support organizational growth and change. Talent Acquisition and Management: Oversee the recruitment and selection process to attract and retain top talent. Develop and implement effective onboarding and retention strategies. Ensure fair and equitable compensation and benefits structures. Lead performance management efforts, including goal setting, evaluations, and career development. Employee Relations and Compliance: Provide guidance and support on employee relations issues, ensuring fair and consistent resolution. Ensure compliance with all relevant employment laws and regulations. Develop and enforce company policies and procedures. Promote a culture of diversity, equity, and inclusion throughout the organization. Training and Development: Identify training and development needs and design relevant programs. Oversee employee training initiatives to enhance skills and capabilities. Foster a culture of continuous learning and professional growth.HR Operations and Administration: Manage HR systems and processes, including payroll, benefits administration, and HRIS. Oversee the administration of employee records and documentation. Ensure accuracy and integrity of HR data and reporting. Leadership and Team Management: Lead and develop a high-performing HR team. Provide coaching, mentorship, and feedback to team members. Foster a collaborative and supportive work environment. Qualifications:Bachelor\u2019s degree in human resources, Business Administration, or related field; Master\u2019s degree preferred. 15 years of progressive HR experience, with 5 years in a leadership role. Strong knowledge of employment laws, regulations, and best practices. Demonstrated experience in developing and implementing HR strategies and programs. Excellent leadership, communication, and interpersonal skills. Ability to build relationships and influence stakeholders at all levels of the organization. SHRM or HRCI certification preferred. This job description outlines the key responsibilities and qualifications for the HR Director role. The successful candidate will be a strategic thinker, adept at managing people and processes, and committed to fostering a positive and inclusive workplace culture.",
+      "location": "Ithaca, NY",
+      "experience_level": "Director",
+      "work_type": "Full-time",
+      "min_salary": 90000.0,
+      "max_salary": 100000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 92.0
+    },
+    {
+      "job_id": "3905265971",
+      "title": "Human Resources Director",
+      "company": "Green Key Resources",
+      "description": "Join a mission-driven nonprofit organization dedicated to making a positive impact on our community as an HR Director. The HR Director will lead a dynamic team in fostering a supportive and inclusive workplace culture. Salary: $115-135k base On-site 2-3 days per week Key Responsibilities:Leadership: Lead and inspire a team of HR Generalists who provide essential support to our programs and staff, fostering collaboration and professional development opportunities.Employee Relations: Manage employee relations issues with sensitivity and integrity, conducting thorough investigations and providing guidance to resolve conflicts effectively.Policy Implementation: Partner with leadership to develop, implement, and interpret HR policies and procedures, ensuring alignment with organizational goals and values.Performance Management: Provide guidance to supervisors on performance management strategies, fostering positive work relationships and continuous improvement opportunities.Recruitment and Hiring: Collaborate with hiring managers to develop innovative recruitment strategies, ensuring competitive compensation and a diverse candidate pool.Talent Acquisition: Identify staffing needs and partner with the Director of Talent Management to oversee full-cycle recruitment processes, attracting top talent to support our mission.Data Insights: Work closely with the HRIS Data Specialist to analyze HR data, translating insights into actionable strategies to drive organizational effectiveness and employee engagement.Diversity, Equity & Inclusion (DE&I): Champion DE&I efforts, creating and maintaining an inclusive work environment that values diversity and promotes equal opportunities for all employees.Compliance and Auditing: Ensure overall compliance with HR policies and regulations, conducting internal audits and investigations as needed to maintain a culture of integrity and accountability. Requirements:Experience: Minimum of 10 years of HR management experience, including at least 3 years in a leadership role within the nonprofit sector.Education: Bachelor\u2019s degree in Human Resource Management or related field required; Master\u2019s degree preferred. SPHR or PHR certification is a plus.Expertise: Strong background in employee relations, training facilitation, and knowledge of employment laws and regulations. Proficiency in HRIS and talent management systems is essential.Communication: Excellent communication skills with a proven ability to build strong relationships and influence stakeholders at all levels of the organization.Analytical Skills: Ability to analyze HR data and metrics, identify trends, and develop data-driven strategies to support organizational goals.Leadership: Demonstrated supervisory and leadership skills, with a passion for mentoring and developing team members.",
+      "location": "New York, NY",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": 115000.0,
+      "max_salary": 130000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 85.0
+    },
+    {
+      "job_id": "3899539354",
+      "title": "Senior Vice President Human Resources",
+      "company": "Miller Resource Group",
+      "description": "Our client, a leader in food service, is seeking is seeking a Senior Vice President, Human Resources (SVP, HR) to serve as a member of their executive management team. As the SVP, HR you will be responsible for strategic direction of the organization, specifically in the areas of succession planning, talent management, employee engagement, organizational and performance management, training and development, and compensation. ResponsibilitiesEstablish and implement HR efforts that effectively support the company's mission and strategic visionWork with the HR team to develop strategies to support the achievement of the overall business operations objectivesFunction as a strategic business advisor to the executive management team regarding key organizational issuesWork with the company's executive management team on succession planningDevelop HR initiatives for change processes with focus on agility and growth QualificationsBachelor\u2019s degree in Human Resources, Business Administration, or related field15+ years of human resource experienceBroad experience and substantive knowledge of employment and labor law, including unionsSHRM-CP or SHRM-SCP (preferred)",
+      "location": "Hauppauge, NY",
+      "experience_level": "Executive",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources, Strategy/Planning, Training",
+      "source": "kaggle",
+      "score": 82.0
+    },
+    {
+      "job_id": "3904583492",
+      "title": "VP of Human Resources Americas",
+      "company": "Michael Page",
+      "description": "Key leadership role responsible for overseeing and driving the talent strategy and initiatives across the Americas regionLead the HR team in NA and Latam, provide strategic guidance to senior leaders, and implement best practices in talent management, employee relations, compensation and benefits, and compliance.Client DetailsOur client is global leading company growing in very fast paceDescriptionDevelop and implement HR strategies aligned with the company's business goals and objectives.Provide strategic direction and guidance to the HR team to ensure the effective delivery of HR services.Searches and implement improvements in HR processes and systems, including automation and use of AI, to elevate performance and productivity.Acts as true business partner to the business leaders, providing sound advice and talent strategies to accelerate the business strategy and performance.Lead talent acquisition efforts, ensuring the recruitment of top talent to support business growth.Oversee performance management processes, consequence management, talent development initiatives, and succession planning.Lead strategic employment related consultations and negotiationsProfileSolid Experience in corporate HR and partnering with senior executives.Experience providing leadership to others regarding work related systems, processes and challenges.Job OfferAttractive packageRelocation costsInternational Exposure MPI does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity or expression, national origin, age, disability, veteran status, marital status, or based on an individual's status in any group or class protected by applicable federal, state or local law. MPI encourages applications from minorities, women, the disabled, protected veterans and all other qualified applicants.",
+      "location": "Memphis, TN",
+      "experience_level": "Executive",
+      "work_type": "Full-time",
+      "min_salary": 210000.0,
+      "max_salary": 220000.0,
+      "url": "https://www.aplitrak.com/?adid=Z3JpYmVpcm8uNzY2MDQuMTU1MEBwYWdldXNhLmFwbGl0cmFrLmNvbQ",
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 80.0
+    },
+    {
+      "job_id": "3895848391",
+      "title": "Senior Human Resources Business Partner",
+      "company": "Potere Search (PS)",
+      "description": "Responsibilities:Partner with senior leadership and department heads to develop and implement HR strategies aligned with business objectives.Serve as a trusted advisor to senior management on all HR-related matters, providing expert guidance and support.Lead and manage the HR function, including recruitment, talent management, performance management, employee relations, compensation and benefits, and HR compliance.Develop and implement HR policies and procedures in accordance with applicable laws and regulations.Drive organizational effectiveness by identifying areas for improvement and implementing solutions to enhance employee engagement, productivity, and retention.Provide coaching and support to managers and employees on HR-related issues, including performance improvement, conflict resolution, and career development.Lead the recruitment and selection process for key positions within the organization, ensuring a diverse and talented workforce.Oversee the performance management process, including goal setting, performance reviews, and employee development plans.Manage employee relations issues, conducting investigations and providing resolution in accordance with company policies and legal requirements.Partner with the compensation and benefits team to develop and implement competitive and equitable compensation and benefits programs.Monitor HR metrics and analytics to identify trends, measure the effectiveness of HR programs, and make data-driven recommendations for improvement.Stay abreast of changes in employment law and HR best practices, ensuring compliance and mitigating risk for the organization.Lead and/or participate in HR projects and initiatives as assigned by senior management. Potere Search, LLC is an equal-opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We prohibit discrimination and harassment of any type without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state, or local laws.",
+      "location": "Greater Phoenix Area",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 75.0
+    },
+    {
+      "job_id": "3887103382",
+      "title": "Director of HR",
+      "company": "Rise Baking Company",
+      "description": "Job PurposeEnsure the implementation of all human resource initiatives by plant HR teams. Help formulate and implement strategic plans to attract and retain talent, creating a culture aligned with the company\u2019s core values. Essential FunctionsAssist with cultivating a human resource function that is strategic, proactive, results oriented, operates with a sense of urgency and is viewed as competent, accurate, and effectiveImplement continuous improvement efforts in areas such as systems, policies, processes, and programs with plant HR teamsEstablish a strong working relationship with plant leaders and build on that relationship to ensure the highest level of customer service is achieved in support of corporate and plant goals and objectivesProvide leadership and direction for workforce planning and talent acquisition at the plant levelEnsure talent assessment and performance management programs are properly implemented at the plant levelEnsure plant HR teams effectively and efficiently administer compensation and benefits plansDevelop, implement, and manage employee development and engagement programs including initiatives such as skills-based employee training, supervisory skill building, individual development planning, and leadership talent developmentAssess plant climate and recommend changes as appropriate to drive employee engagementDirectly manage the effective implementation, communication, and training of and compliance with all human resource programs, policies, and procedures at the plant levelEnsure governmental compliance regarding ERISA, EEOC, FLSA, FMLA, ADA, OSHA, etc.Participate in company-wide strategic planning and budgeting; ensure the proper management of the Human Resources budget at the plant levelDirectly manage plant HR staffSupport food safety program, quality standards, and legality of manufactured productsPerform other job-related duties as assigned Qualifications (Education, Experience, Competencies)Bachelor's degree in human resources, business, psychology, communications, or related field6+ years of HR leadership experience, with knowledge in employee relations, performance management, recruitment, talent development, compensation, benefits, employment law, and complianceSPHR or SHRM-SCP preferredExperience in a manufacturing organization with multiple locations; experience in management of a decentralized staff vitalFood manufacturing experience preferredStrong computer skills including proficiency in MS Word, PowerPoint, and ExcelExcellent verbal and written communication skillsDemonstrated success working as a coach, confidant, and strategic business partnerExperience managing change with high degree of transformation in a matrixed organizationExperience in both strategic and tactical development and executionAbility to define problems, collect data, establish facts, and draw valid conclusionsAbility to manage the complexities of a fast growth business and understand all functional areas of HR to support the business now and into the futureHighly developed leadership, management, organizational, analytical, decision making, conflict resolution, negotiating, influencing, and consultative skillsCultural competency; experience/ability to work and interact effectively with a diverse, multicultural audience",
+      "location": "Minneapolis, MN",
+      "experience_level": "Director",
+      "work_type": "Full-time",
+      "min_salary": 142000.0,
+      "max_salary": 165000.0,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 72.0
+    },
+    {
+      "job_id": "3901650285",
+      "title": "Human Resources Manager",
+      "company": "MSI Recruiting",
+      "description": "Position OverviewWe are seeking an experienced Human Resources (HR) Manager to join our client's team. As the HR Manager, you will play a pivotal role in shaping the organization\u2019s success by overseeing all aspects of human resources practices and processes. Your responsibilities will encompass strategic planning, employee relations, compliance, and benefit administration, among other duties. You will act as a Business Partner to the ownership, while promoting employee engagement and productivity. Key ResponsibilitiesStrategic HR Planning:Develop and implement HR strategies aligned with our overall business goals.Ensure that HR initiatives support our mission and objectives. Employee Relations and Compliance:Bridge the gap between management and employees by addressing demands, grievances, or other issues.Nurture a positive working environment.Ensure compliance with labor laws, regulations, and company policies. Recruitment and Selection:Assist in managing the recruitment process. Work with Hiring Managers to align on needs and goals of positions and departmentsBe the \u201cface of the franchise\u201d. Promote the company brand through our actions. Payroll Administration and Benefit Management:Run payroll accurately and on time.Maintain pay plans and benefits programs.Administer employee benefits, including health insurance, retirement plans, and leave policies. Performance Management:Oversee a performance appraisal system that drives high performance.Assess training needs and monitor training programs. Legal Compliance and Reporting:Ensure adherence to labor laws and regulations.Report to management using HR metrics. Qualifications and Skills Experience: Proven working experience as an HR Manager or in a similar HR executive role.Total Experience: Between 7 and 15 years, in an HR capacityDegree: Bachelor\u2019s Degree highly preferredSHRM certification preferred Skills:Strong understanding of HR strategies, systems, and procedures.Excellent communication and interpersonal skills.Ability to handle employee relations and conflict resolution.Familiarity with payroll processes and benefit administration.Knowledge of legal compliance in human resource management.",
+      "location": "Boynton Beach, FL",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 68.0
+    },
+    {
+      "job_id": "3898160952",
+      "title": "Human Resources Manager",
+      "company": "Swanson Health",
+      "description": "SUMMARY The Human Resources Manager is responsible for partnering in the overall People strategy for the organization. Areas of focus will include culture initiatives, employee relations, benefits strategy, performance management, employment law compliance, talent acquisition strategy, and leading special projects and programs. ESSENTIAL RESPONSIBILITIES Develop and maintain strong HR partner relationships with the business and key stakeholders specifically in Operations and Customer Service. Coach leaders and provide insights into best practices related to employee relations matters. Directly oversee benefits strategy for organization and provide oversight to HR Team who perform benefits administration and audit functions. Partner with Vice President HR on culture initiatives, DEI goals, leadership development, budget management, executive leadership support, professional staff employee relations, and strategic compensation planning. Lead talent acquisition strategy and oversee staff who provide expertise within recruitment and onboarding. Directly supervise the Payroll Specialist and collaborate on payroll process improvement and vendor management. Provide leadership on continuous improvement of HR processes with a focus on cost management and efficiency gains. Lead development and implementation of HR projects, policies, and programs. Participate in internal and external professional development to stay current on HR trends and laws to ensure compliance with best practices and legal requirements. Maintain a positive and professional working relationship with peers, management, and support resources, with a constant commitment to teamwork and exemplary customer service. Conducts self in the presence of customers and community so as to present a professional image of SHP. COMPETENCIES REQUIRED Ability to manage multiple competing priorities and while working effectively both independently and as part of a collaborative team Ability to provide excellent customer service to employees Act as a proactive problem solver with the ability to research various matters and bring forth solution-oriented recommendations Have a demonstrated ability to collaborate and build relationships with leaders Must be extremely professional and work well in a fast-paced environment Maintain a high level of respect for confidentiality Proficient in Microsoft office Suite SUPERVISORY RESPONSIBILITIES Carry out supervisory responsibilities in accordance with the organization\u2019s policies and applicable laws. Responsibilities include interviewing, hiring and training employees; planning, assigning, and directing work; appraising performance; rewarding and disciplining employees; addressing complaints and resolving problems. EDUCATION AND EXPERIENCE Bachelor\u2019s degree in Human Resources or related field with 5-8 years of HR Experience. Or; an equivalent combination of education and experience sufficient to successfully perform the essential responsibilities and duties of the job as listed above. Extensive experience in employee relations required with focus in Operations staff preferred but not required. EQUIPMENT AND SOFTWARE BambooHR Bswift Mozart Millennium Payroll Software Kronos JIRA Microsoft Office Products",
+      "location": "Fargo, ND",
+      "experience_level": null,
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": null,
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 65.0
+    },
+    {
+      "job_id": "3891264618",
+      "title": "Regional HR Manager (Internal HR Managers Applications Only)",
+      "company": "NAPA Auto Parts",
+      "description": "Job Summary The Regional HR Manager, People serves as a trusted HR advisor and leader for the NAPA People (HR) team in their assigned area or location supporting 20 \u2013 50 locations, to implement high impact people initiatives. Reporting to the Director, People, they partner closely with leaders to develop strategic alignment and guidance on core People (HR) functions (e.g., talent acquisition, onboarding, coaching and development, performance management, succession planning, compensation, and compliance). The Regional HR Manager, People to ensure the engagement of NAPA\u2019s growing employee workforce by leading a high-functioning team of People professionals to effectively manage all components of the employee lifecycle to drive NAPA strategic priorities. Responsibilities Proactively consults with NAPA leadership to ensure short and long-term talent needs are fulfilled through effectively implementing talent acquisition, succession planning and employee retention efforts.Requires ambitious standards in performance management, employee coaching, discipline documentation and other employment documentation from People teammates.Maintains compliance with company, federal, state, and local regulations related to employment, compensation, safety, workers compensation and security.Provides coaching to managers on effective employee management, employee retention and employee recognition and development techniques as needed. Manages employee programs, including new hire onboarding and orientation, manager training, compliance training, process-specific training, and learning and development opportunities.Leads effective role out of employee impacting and employee facing People events throughout the years, Performance Management, safety, and Annual Enrollment, etc.Ensures accurate and up-to-date employee data within the HRIS system. Conducts data collection, reporting and analysis across teammate lifecycle for informed decision-making. Leads, develops, and empowers a team of HR professionals as they work to implement excellent HR operations. Qualifications High school diploma and 5+ years\u2019 experience implementing HR process in a high growth environment.1+ years\u2019 experience leading a team.Intermediate proficiency with Microsoft Office applications \u2013 Outlook, Excel, Word, PowerPoint.Familiarity with data analytics and reporting tools.Proven ability to manage complex HR challenges and implement solutions in alignment with business goals. Experience with payroll administration.Ability to maintain confidential and sensitive information. Familiarity with laws, regulations, and guidelines, related to HR and state-to-state differences. Preferred Qualifications Bachelor\u2019s degree in human resources, Business Administration or related field.7+ years\u2019 experience.3+ years\u2019 experience leading a team.SHRM or HRCI certification (SHRM-SCP or SPHR) a plus. Workday and Kronos experience preferred. Experience working in a warehouse, distribution center, or retail environment. Leadership Embodies the following values: serve, perform, influence, respect, innovate, team.Effectively communicates by motivating and inspiring others through clear and proactive communication.Delivers results and drives customer success by committing and focusing on outcomes to deliver results and making the customer the center of decisions.Makes balanced decisions and thinks strategically by being a forward thinker.Develops high-performing teams by providing inclusive leadership, attracting and developing world-class talent, providing ongoing feedback, and building trust across the organization. People Capabilities Business Acumen: Must possess industry, organization, and financial knowledge.Strategic Consulting: Must be able to provide consultative problem-solving, as well as project and risk management competency.Relationship Management: Must promote collaboration, networking, persuasion and influence.Data Judgement: Must be able to provide data foundations, interpretation and storytelling.Talent Management: Provide strategic HR expertise, employee experience management, change management and technological savviness.Agility: Must lead with a growth mindset and drive innovation and iteration. Physical Demands / Working Environment Must be able to work in an office environment.Must be able to work in a distribution, warehouse, or retail environment.Ability to travel up to 50% throughout assigned area or region. Not the right fit? Let us know you're interested in a future opportunity by joining our Talent Community on jobs.genpt.com or create an account to set up email alerts as new job postings become available that meet your interest! GPC conducts its business without regard to sex, race, creed, color, religion, marital status, national origin, citizenship status, age, pregnancy, sexual orientation, gender identity or expression, genetic information, disability, military status, status as a veteran, or any other protected characteristic. GPC's policy is to recruit, hire, train, promote, assign, transfer and terminate employees based on their own ability, achievement, experience and conduct and other legitimate business reasons.",
+      "location": "Middletown, DE",
+      "experience_level": "Mid-Senior level",
+      "work_type": "Full-time",
+      "min_salary": null,
+      "max_salary": null,
+      "url": "https://genpt.wd1.myworkdayjobs.com/en-US/Careers/job/Middletown-DE-USA/Regional-HR-Manager--Internal-HR-Managers-Applications-Only-_R24_0000006865-1",
+      "skill_labels": "Human Resources",
+      "source": "kaggle",
+      "score": 62.0
+    },
+    {
+      "job_id": "3901632078",
+      "title": "Human Resources Director",
+      "company": "Claire Myers Consulting",
+      "description": "Compensation: $150,000-200,000 base salary Our client is looking for a seasoned and results-oriented HR executive to join the team as the Director of Human Resources. The Director of HR will play a pivotal role in shaping the organization's human capital strategy, fostering a positive workplace culture, implementing transparent and efficient HR processes and systems, and ensuring compliance with all employment laws and regulations. Responsibilities Develop and implement HR strategies aligned with the organization's overall mission, goals, and objectives.Collaborate with senior leadership to drive workforce planning, talent acquisition, and employee development initiatives.Manage and resolve complex employee relations issues, ensuring fair and consistent application of policies and procedures.Foster a positive and inclusive workplace culture that values diversity and promotes employee engagement.Oversee the recruitment and onboarding processes to attract and retain top talent.Develop and implement strategies for employee retention and professional development.Ensure compliance with federal, state, and local employment laws and regulations.Mitigate HR-related risks and implement proactive measures to maintain a compliant and ethical work environment.Implement and manage performance evaluation processes to drive employee development and organizational success.Provide guidance and support to managers in performance management and employee feedback.Implement and manage strategic talent development programs and initiatives that align the talent strategy to the organization\u2019s strategy.Implement and manage efficient, accessible and user-friendly processes and systems to empower employees and managers with all HR activities.Collaborate with finance to ensure the financial sustainability of HR programs. Qualifications 5+ years in a strategic Human Resources Leadership roleBachelor's degree in Human Resources, Business Administration, or a related field. Master's degree or HR certification preferred (example: SPHR or PHR)In-depth knowledge of HR principles, employment laws, and best practices.Excellent interpersonal and communication skills, with the ability to build positive relationships at all levels.Strong problem-solving and decision-making abilities.Demonstrated ability to handle confidential and sensitive information with discretion.Proficiency in HRIS and Microsoft Office Suite. Compensation $150,000-200,000 base salary",
+      "location": "Santa Barbara, CA",
+      "experience_level": "Director",
+      "work_type": "Full-time",
+      "min_salary": 150000.0,
+      "max_salary": 200000.0,
+      "url": null,
+      "skill_labels": "Administrative, Human Resources, Other",
+      "source": "kaggle",
+      "score": 88.0
+    }
+  ],
+  "reasoning": {
+    "cv_summary": "A senior-level HR professional with 14 years of experience, including roles as HR Director and Senior HR Manager. Possesses a Master's in Human Resource Management, a CIPD Level 7 certification, and a strong background in strategic HR functions within the Technology and Non-profit sectors.",
+    "job_explanations": [
+      {
+        "job_id": "3905882432",
+        "title": "Human Resources Director",
+        "company": "Insero Talent Solutions",
+        "match_reason": "Strong match. The candidate's 14 years of experience and 'HR Director' title align well with this Director role requiring 15 years. The core responsibilities, including strategic planning, talent acquisition, and employee relations, are all listed as skills in the CVProfile. The candidate's Master's degree also meets the preferred education level.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3905265971",
+        "title": "Human Resources Director",
+        "company": "Green Key Resources",
+        "match_reason": "Strong match. This role requires 10+ years of experience in the non-profit sector, which directly aligns with the candidate's background in the 'Non-profit' industry. The candidate's skills in 'Employee Relations', 'Performance Management', and 'Diversity, Equity And Inclusion' are a direct fit for the key responsibilities. The candidate is slightly overqualified for a 'Mid-Senior level' role but the responsibilities are a good fit.",
+        "missing_skills": [
+          "HRIS Systems",
+          "Talent Management Systems"
+        ]
+      },
+      {
+        "job_id": "3899539354",
+        "title": "Senior Vice President Human Resources",
+        "company": "Miller Resource Group",
+        "match_reason": "Poor match. This is an 'Executive' level role (SVP), which is a significant seniority mismatch for a candidate whose experience is at the Director level. Furthermore, the role requires 'substantive knowledge of employment and labor law, including unions,' which is a specific domain not mentioned in the candidate's CVProfile.",
+        "missing_skills": [
+          "Union/Labor Relations Experience"
+        ]
+      },
+      {
+        "job_id": "3904583492",
+        "title": "VP of Human Resources Americas",
+        "company": "Michael Page",
+        "match_reason": "Poor match. This is an 'Executive' (VP) role with a broad regional scope (Americas), representing a major step up in seniority and responsibility from the candidate's Director-level experience. This seniority mismatch is a primary disqualifier. The role also calls for experience with HR process automation and AI, which is not listed in the CV.",
+        "missing_skills": [
+          "Multi-regional HR Leadership (Americas)",
+          "HR Process Automation/AI"
+        ]
+      },
+      {
+        "job_id": "3895848391",
+        "title": "Senior Human Resources Business Partner",
+        "company": "Potere Search (PS)",
+        "match_reason": "Partial match. While the candidate's skills in talent management, employee relations, and HR compliance are a perfect fit for the responsibilities, there is a seniority mismatch. The candidate is overqualified for a 'Mid-Senior level' HRBP role, having already held 'HR Director' positions, which could be a concern for the employer.",
+        "missing_skills": []
+      },
+      {
+        "job_id": "3887103382",
+        "title": "Director of HR",
+        "company": "Rise Baking Company",
+        "match_reason": "Partial match. The 'Director' title and 6+ years of leadership experience align well. However, the role states that experience in a 'manufacturing organization with multiple locations' and 'management of a decentralized staff' is vital. The candidate's background is in 'Technology' and 'Non-profit', making this a significant industry and experience gap.",
+        "missing_skills": [
+          "Manufacturing Industry Experience",
+          "Management of Decentralized Staff"
+        ]
+      },
+      {
+        "job_id": "3901650285",
+        "title": "Human Resources Manager",
+        "company": "MSI Recruiting",
+        "match_reason": "Partial match. The candidate is overqualified for a 'Manager' role, having experience as an 'HR Director'. Additionally, a key responsibility is to 'Run payroll accurately and on time,' but the candidate's CV does not list any experience with payroll administration, which is a functional gap for this position.",
+        "missing_skills": [
+          "Payroll Administration"
+        ]
+      },
+      {
+        "job_id": "3898160952",
+        "title": "Human Resources Manager",
+        "company": "Swanson Health",
+        "match_reason": "Poor match. The candidate is significantly overqualified, with 14 years of experience and a Director title, for a Manager role requiring 5-8 years. The role also requires experience with specific software like 'BambooHR' and 'Kronos', which are absent from the candidate's CV. The low reranker score of 65 reflects this mismatch in seniority and technical skills.",
+        "missing_skills": [
+          "BambooHR",
+          "Kronos",
+          "Payroll Software"
+        ]
+      },
+      {
+        "job_id": "3891264618",
+        "title": "Regional HR Manager (Internal HR Managers Applications Only)",
+        "company": "NAPA Auto Parts",
+        "match_reason": "Poor match. The job title explicitly states it is for 'Internal HR Managers Applications Only,' making the candidate ineligible. The low reranker score of 62 reflects this. Additionally, the candidate is overqualified for a Manager role and lacks the required experience in a 'warehouse, distribution center, or retail environment' and 'payroll administration'.",
+        "missing_skills": [
+          "Payroll Administration",
+          "Retail/Warehouse Industry Experience"
+        ]
+      },
+      {
+        "job_id": "3901632078",
+        "title": "Human Resources Director",
+        "company": "Claire Myers Consulting",
+        "match_reason": "Strong match. This 'Director of Human Resources' role requiring 5+ years in a strategic leadership position is an excellent fit for the candidate's 14 years of experience and 'HR Director' title. The responsibilities, including workforce planning, talent acquisition, and employee development, align perfectly with the candidate's listed skills and domain keywords.",
+        "missing_skills": [
+          "HRIS Systems"
+        ]
+      }
+    ],
+    "overall_missing_skills": [
+      "HRIS Systems",
+      "Talent Management Systems",
+      "Union/Labor Relations Experience"
+    ],
+    "recommendation": "The analysis shows a strong fit for strategic HR Director roles but reveals gaps in operational and system-specific skills. To broaden opportunities, the candidate should gain proficiency in major HRIS platforms and consider training in payroll administration, as these are common requirements."
+  }
+}
