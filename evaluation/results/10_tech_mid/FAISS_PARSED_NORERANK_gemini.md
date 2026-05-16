@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Sr. System Development Engineer, Open Data Analytics Fundamentals team | Amazon Web Services (AWS) |
-| 2 | 0 | | Sr. Systems Development Eng (AWS Generative AI & ML Servers) | Amazon Web Services (AWS) |
-| 3 | 1 | | Software Development Engineer, Amazon Business | Amazon |
-| 4 | 1 | | Technical Lead | Gore Talent |
-| 5 | 1 | | Front-End Engineer II, AWS Marketplace, Product Types | Amazon Web Services (AWS) |
-| 6 | 1 | | Senior Software Engineer, Full Stack (TypeScript, Node, React, AWS) | Capital One |
-| 7 | 0 | | Developer | Motion Recruitment |
-| 8 | 0 | | Principal Software Engineer, Automation | Cambridge Mobile Telematics |
-| 9 | 0 | | Senior Developer | TekJobs |
-| 10 | 0 | | Software Development Engineer – Data Capture | Audible |
+| 1 | 0 | 3 | Sr. System Development Engineer, Open Data Analytics Fundamentals team | Amazon Web Services (AWS) |
+| 2 | 0 | 3 | Sr. Systems Development Eng (AWS Generative AI & ML Servers) | Amazon Web Services (AWS) |
+| 3 | 1 | 5 | Software Development Engineer, Amazon Business | Amazon |
+| 4 | 1 | 5 | Technical Lead | Gore Talent |
+| 5 | 1 | 5 | Front-End Engineer II, AWS Marketplace, Product Types | Amazon Web Services (AWS) |
+| 6 | 1 | 5 | Senior Software Engineer, Full Stack (TypeScript, Node, React, AWS) | Capital One |
+| 7 | 0 | 3 | Developer | Motion Recruitment |
+| 8 | 0 | 3 | Principal Software Engineer, Automation | Cambridge Mobile Telematics |
+| 9 | 0 | 3 | Senior Developer | TekJobs |
+| 10 | 0 | 3 | Software Development Engineer – Data Capture | Audible |
 
 ---
 

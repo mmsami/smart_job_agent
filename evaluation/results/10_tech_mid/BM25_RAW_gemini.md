@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Senior Full Stack Developer (Java) | Western Union |
-| 2 | 0 | | Senior Full Stack Developer (NJUS) | NetJets |
-| 3 | 0 | | Fullstack Developer | CGI |
-| 4 | 0 | | Full Stack .NET Developer | CBTS |
-| 5 | 0 | | AWS & Java API Developer | ISoftech Inc |
-| 6 | 1| |  VueJS developer | VMC Soft Technologies, Inc |
-| 7 | 0 | | Senior Developer Operations Engineer | Gogo Business Aviation |
-| 8 | 0 | | Java Full Stack Developer | Genisis Technology Solutions |
-| 9 | 0 | | Sr Java Developer on w2 | UConn Solutions |
-| 10 | 1| | AWS Cloud API Developer | TOPSYS IT |
+| 1 | 0 | 3 | Senior Full Stack Developer (Java) | Western Union |
+| 2 | 0 | 3 | Senior Full Stack Developer (NJUS) | NetJets |
+| 3 | 0 | 3 | Fullstack Developer | CGI |
+| 4 | 0 | 3 | Full Stack .NET Developer | CBTS |
+| 5 | 0 | 3 | AWS & Java API Developer | ISoftech Inc |
+| 6 | 1 | 5 |  VueJS developer | VMC Soft Technologies, Inc |
+| 7 | 0 | 3 | Senior Developer Operations Engineer | Gogo Business Aviation |
+| 8 | 0 | 3 | Java Full Stack Developer | Genisis Technology Solutions |
+| 9 | 0 | 3 | Sr Java Developer on w2 | UConn Solutions |
+| 10 | 1| 5 | AWS Cloud API Developer | TOPSYS IT |
 
 ---
 

@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React) | Pyramid Consulting, Inc |
-| 2 | 0 | | Full Stack Engineer | Pinnacle Group, Inc. |
-| 3 | 0 | | Java Full Stack Developer | Genisis Technology Solutions |
-| 4 | 0 | | Full Stack java developer | CONFLUX SYSTEMS |
-| 5 | 0 | | Full Stack Engineer – Technical Lead | Talent Groups |
-| 6 | 0 | | Full Stack Developer (Sr. NodeJS) | Compunnel Inc. |
-| 7 | 0 | | Full Stack Engineer | AlterCall |
-| 8 | 0 | | Python Developer | Planet Technology |
-| 9 | 0 | | AWS & Java API Developer | ISoftech Inc |
-| 10 | 1 | | Senior Full Stack Developer | ConsultStaff |
+| 1 | 0 | 3 | Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React) | Pyramid Consulting, Inc |
+| 2 | 0 | 3 | Full Stack Engineer | Pinnacle Group, Inc. |
+| 3 | 0 | 3 | Java Full Stack Developer | Genisis Technology Solutions |
+| 4 | 0 | 3 | Full Stack java developer | CONFLUX SYSTEMS |
+| 5 | 0 | 3 | Full Stack Engineer – Technical Lead | Talent Groups |
+| 6 | 0 | 3 | Full Stack Developer (Sr. NodeJS) | Compunnel Inc. |
+| 7 | 0 | 3 | Full Stack Engineer | AlterCall |
+| 8 | 0 | 1 | Python Developer | Planet Technology |
+| 9 | 0 | 3 | AWS & Java API Developer | ISoftech Inc |
+| 10 | 1 | 5 | Senior Full Stack Developer | ConsultStaff |
 
 ---
 

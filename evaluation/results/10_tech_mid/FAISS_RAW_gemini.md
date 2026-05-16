@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Full Stack Software Engineer - API Platform | Ford Motor Company |
-| 2 | 0 | | Senior Full Stack Developer (Blockchain) | BlockApps |
-| 3 | 1 | | Cloud SoftwareEngineer | nan |
-| 4 | 1 | | Cloud Native- Full Stack Java Developer | Deloitte |
-| 5 | 1 | | Cloud Software Developer | 7-Eleven |
-| 6 | 0 | | Full Stack Engineer (.NET) | BridgeView |
-| 7 | 1 | | Professional-Software Engineer | AT&T |
-| 8 | 0 | | Senior Software Developer | Evolution Recruitment Solutions, USA |
-| 9 | 1 | | Cloud Engineer | Magnit |
-| 10 | 1 | | Sr. Software Engineer | OpenGov Inc. |
+| 1 | 1 | 5 | Full Stack Software Engineer - API Platform | Ford Motor Company |
+| 2 | 0 | 1 | Senior Full Stack Developer (Blockchain) | BlockApps |
+| 3 | 1 | 5 | Cloud SoftwareEngineer | nan |
+| 4 | 1 | 3 | Cloud Native- Full Stack Java Developer | Deloitte |
+| 5 | 1 | 5 | Cloud Software Developer | 7-Eleven |
+| 6 | 0 | 1 | Full Stack Engineer (.NET) | BridgeView |
+| 7 | 1 | 3 | Professional-Software Engineer | AT&T |
+| 8 | 0 | 1 | Senior Software Developer | Evolution Recruitment Solutions, USA |
+| 9 | 1 | 3 | Cloud Engineer | Magnit |
+| 10 | 1 | 5 | Sr. Software Engineer | OpenGov Inc. |
 
 ---
 

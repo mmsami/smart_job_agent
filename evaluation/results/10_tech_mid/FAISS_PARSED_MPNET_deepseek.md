@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React) | Pyramid Consulting, Inc |
-| 2 | 0 | | Senior Fullstack Java Developer | Gardner Resources Consulting, LLC |
-| 3 | 0 | | Senior Software Engineer | Synergies Plus Resources |
-| 4 | 0 | | Senior Software Engineer | RCG Infosoft Incorporation |
-| 5 | 0 | | Software Developer - Golang (W2 Only) | Computech Corporation |
-| 6 | 0 | | 000198 - W2 Only - Data Engineer (Python, React, Hadoop & Cloud) | New Millenium Consulting |
-| 7 | 0 | | JAVA Fullstack Developer-AWS @ Chicago, IL - 6 Months with EXT - Hybrid Role ONLY LOCAL PROFILES | CBase Inc |
-| 8 | 0 | | Platform Engineer | E-IT |
-| 9 | 0 | | (W2 only, c2h)  Senior AWS Data Engineer, Python | Eliassen Group |
-| 10 | 1 | | Full Stack developer | NextGen IT Labs |
+| 1 | 0 | 3 | Java Full Stack Developer (Core Java, JEE, Microservices, Spring Boot, Hibernate, REST API, SQL, Angular/React) | Pyramid Consulting, Inc |
+| 2 | 0 | 3 | Senior Fullstack Java Developer | Gardner Resources Consulting, LLC |
+| 3 | 0 | 3 | Senior Software Engineer | Synergies Plus Resources |
+| 4 | 0 | 3 | Senior Software Engineer | RCG Infosoft Incorporation |
+| 5 | 0 | 3 | Software Developer - Golang (W2 Only) | Computech Corporation |
+| 6 | 0 | 3 | 000198 - W2 Only - Data Engineer (Python, React, Hadoop & Cloud) | New Millenium Consulting |
+| 7 | 0 | 3 | JAVA Fullstack Developer-AWS @ Chicago, IL - 6 Months with EXT - Hybrid Role ONLY LOCAL PROFILES | CBase Inc |
+| 8 | 0 | 3 | Platform Engineer | E-IT |
+| 9 | 0 | 3 | (W2 only, c2h)  Senior AWS Data Engineer, Python | Eliassen Group |
+| 10 | 1 | 5 | Full Stack developer | NextGen IT Labs |
 
 ---
 
