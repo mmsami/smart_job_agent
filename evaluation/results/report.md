@@ -11,7 +11,7 @@ Relevant = correct domain + within ±1 seniority. Labels from `_gemini.md` (jobs
 | FAISS_RAW | 0.10 | 0.40 | 0.70 | 0.10 | 0.60 | 0.60 | 0.70 | 0.80 | 0.50 | 0.70 | **0.52** | [0.37, 0.66] |
 | FAISS_PARSED | 0.60 | 0.50 | 0.40 | 0.60 | 0.60 | 0.80 | 0.60 | 0.50 | 0.40 | 0.30 | **0.53** | [0.45, 0.61] |
 | FAISS_PARSED_NORERANK | 0.40 | 0.20 | 0.30 | 0.20 | 0.40 | 0.60 | 0.40 | 0.30 | 0.40 | 0.40 | **0.36** | [0.29, 0.43] |
-| FAISS_PARSED_MPNET | 0.40 | 0.60 | 0.10 | 0.20 | 0.30 | 0.40 | 0.20 | 0.60 | 0.40 | 0.10 | **0.33** | [0.23, 0.44] |
+| FAISS_PARSED_MPNET | 0.40 | 0.60 | 0.10 | 0.20 | 0.30 | 0.40 | 0.20 | 0.60 | 0.40 | — | **0.36** | [0.26, 0.47] |
 
 ## H1: Semantic vs Keyword Search (FAISS_PARSED vs BM25_PARSED)
 
@@ -47,17 +47,17 @@ Quality rated 1–5 per job explanation. 1 = wrong/hallucinated, 3 = generic but
 
 | Method | gemini | deepseek | claude |
 |--------|--------|--------|--------|
-| BM25_RAW | — | — | — |
-| BM25_PARSED | 4.20 | 4.60 | 4.60 |
-| FAISS_RAW | — | — | — |
-| FAISS_PARSED | — | — | — |
-| FAISS_PARSED_NORERANK | — | — | — |
-| FAISS_PARSED_MPNET | — | — | — |
+| BM25_RAW | 3.73 | 3.73 | 3.73 |
+| BM25_PARSED | 3.60 | 3.33 | 3.87 |
+| FAISS_RAW | 3.80 | 3.40 | 3.80 |
+| FAISS_PARSED | 4.00 | 4.00 | 4.07 |
+| FAISS_PARSED_NORERANK | 4.13 | 4.07 | 4.20 |
+| FAISS_PARSED_MPNET | 3.87 | 3.73 | 4.20 |
 
 ### Wilcoxon Tests: Reasoning Quality
 
-- gemini vs deepseek: p = n/a (need ≥4 paired)
-- gemini vs claude: p = n/a (need ≥4 paired)
+- gemini vs deepseek: p = 0.1658
+- gemini vs claude: p = 0.1392
 
 ## Qualitative Observations
 
