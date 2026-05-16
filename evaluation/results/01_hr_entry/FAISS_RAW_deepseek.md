@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Human Resources Intern | Levitate |
-| 2 | 0 | | Human Resources Specialist | Dynamic Office & Accounting Solutions |
-| 3 | 0 | | Human Resources Generalist | London Approach |
-| 4 | 0 | | Human Resources Manager | American Directions Research Group |
-| 5 | 0 | | Human Resources Generalist | IBSS |
-| 6 | 0 | | Human Resources Manager | Law Firm |
-| 7 | 0 | | Human Resources Information System Analyst | MicroVention-Terumo |
-| 8 | 0 | | Sr Human Resource Generalist | M & M Industries, Inc. |
-| 9 | 0 | | Manager, Human Resources | Midwest Industrial Supply, Inc |
-| 10 | 0 | | Human Resources Manager | SolidCAM |
+| 1 | 1 | 5 | Human Resources Intern | Levitate |
+| 2 | 0 | 3 | Human Resources Specialist | Dynamic Office & Accounting Solutions |
+| 3 | 0 | 3 | Human Resources Generalist | London Approach |
+| 4 | 0 | 3 | Human Resources Manager | American Directions Research Group |
+| 5 | 0 | 3 | Human Resources Generalist | IBSS |
+| 6 | 0 | 3 | Human Resources Manager | Law Firm |
+| 7 | 0 | 3 | Human Resources Information System Analyst | MicroVention-Terumo |
+| 8 | 0 | 3 | Sr Human Resource Generalist | M & M Industries, Inc. |
+| 9 | 0 | 3 | Manager, Human Resources | Midwest Industrial Supply, Inc |
+| 10 | 0 | 3 | Human Resources Manager | SolidCAM |
 
 ---
 

@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Assistant Manager Human Resources | Premio Foods Inc. |
-| 2 | 1 | | Dolan HR-Payroll Specialist | Dolan Auto Group |
-| 3 | 0 | | Human Resources Generalist | Robert Half |
-| 4 | 0 | | Human Resources Generalist | Sante Group Companies |
-| 5 | 0 | | Human Resources Generalist | The Acuity Group |
-| 6 | 0 | | Human Resources Generalist | California Retina Consultants |
-| 7 | 0 | | Human Resources Generalist | nan |
-| 8 | 1 | | HR Generalist (Global Law Firm) | Kay Search Group |
-| 9 | 0 | | Human Resources Manager | Swanson Health |
-| 10 | 1 | | Human Resources Coordinator | Zing Recruiting |
+| 1 | 1 | 5 | Assistant Manager Human Resources | Premio Foods Inc. |
+| 2 | 1 | 5 | Dolan HR-Payroll Specialist | Dolan Auto Group |
+| 3 | 0 | 3 | Human Resources Generalist | Robert Half |
+| 4 | 0 | 3 | Human Resources Generalist | Sante Group Companies |
+| 5 | 0 | 3 | Human Resources Generalist | The Acuity Group |
+| 6 | 0 | 3 | Human Resources Generalist | California Retina Consultants |
+| 7 | 0 | 3 | Human Resources Generalist | nan |
+| 8 | 1 | 5 | HR Generalist (Global Law Firm) | Kay Search Group |
+| 9 | 0 | 3 | Human Resources Manager | Swanson Health |
+| 10 | 1 | 5 | Human Resources Coordinator | Zing Recruiting |
 
 ---
 

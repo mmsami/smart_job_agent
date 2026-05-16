@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Manager, Human Resources | Midwest Industrial Supply, Inc |
-| 2 | 1 | | Recruiter | Smashburger |
-| 3 | 0 | | Talent Acquisition Manager, HBS Online and Executive Education (65536BR) | Harvard Business School |
-| 4 | 1 | | HR Recruiter and Coordinator-24-00446 | Datasoft Technologies, Inc. |
-| 5 | 0 | | Corporate Recruiter | Silfex, Inc. - A Division of Lam Research Corporation |
-| 6 | 0 | | Recruitment Officer | Human Rights Watch |
-| 7 | 1 | | Recruiter | Opusing LLC |
-| 8 | 0 | | Sr. HRBP | The Opus Group |
-| 9 | 0 | | Sr Human Resource Generalist | M & M Industries, Inc. |
-| 10 | 1 | | Recruiter | Intellyk Inc. |
+| 1 | 0 | 3 | Manager, Human Resources | Midwest Industrial Supply, Inc |
+| 2 | 1 | 5 | Recruiter | Smashburger |
+| 3 | 0 | 3 | Talent Acquisition Manager, HBS Online and Executive Education (65536BR) | Harvard Business School |
+| 4 | 1 | 5 | HR Recruiter and Coordinator-24-00446 | Datasoft Technologies, Inc. |
+| 5 | 0 | 3 | Corporate Recruiter | Silfex, Inc. - A Division of Lam Research Corporation |
+| 6 | 0 | 3 | Recruitment Officer | Human Rights Watch |
+| 7 | 1 | 5 | Recruiter | Opusing LLC |
+| 8 | 0 | 3 | Sr. HRBP | The Opus Group |
+| 9 | 0 | 3| Sr Human Resource Generalist | M & M Industries, Inc. |
+| 10 | 1 | 5 | Recruiter | Intellyk Inc. |
 
 ---
 

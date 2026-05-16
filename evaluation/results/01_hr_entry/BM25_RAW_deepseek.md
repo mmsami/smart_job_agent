@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Human Resources Supervisor (On-site) | Schreiber Foods |
-| 2 | 0 | | Human Resources Generalist | Robert Half |
-| 3 | 0 | | Human Resources Generalist | Sante Group Companies |
-| 4 | 0 | | Human Resources Specialist | Team 360 Staffing |
-| 5 | 0 | | HR Generalist | Michael Page |
-| 6 | 0 | | Human Resources Generalist | TriSource |
-| 7 | 0 | | Human Resources Manager | MSI Recruiting |
-| 8 | 0 | | Human Resources Director | ET GLOBAL - USA |
-| 9 | 0 | | Human Resources Manager | Platinum Recruiting Group |
-| 10 | 1 | | Human Resources Intern | Engaj Media |
+| 1 | 0 | 3 | Human Resources Supervisor (On-site) | Schreiber Foods |
+| 2 | 0 | 3 | Human Resources Generalist | Robert Half |
+| 3 | 0 | 3 | Human Resources Generalist | Sante Group Companies |
+| 4 | 0 | 3 | Human Resources Specialist | Team 360 Staffing |
+| 5 | 0 | 3 | HR Generalist | Michael Page |
+| 6 | 0 | 3 | Human Resources Generalist | TriSource |
+| 7 | 0 | 3 | Human Resources Manager | MSI Recruiting |
+| 8 | 0 | 3 | Human Resources Director | ET GLOBAL - USA |
+| 9 | 0 | 3 | Human Resources Manager | Platinum Recruiting Group |
+| 10 | 1 | 5 | Human Resources Intern | Engaj Media |
 
 ---
 

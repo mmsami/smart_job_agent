@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Representative - Human Resources | Microchip Technology Inc. |
-| 2 | 0 | | Associate Human Resources Generalist | Boeing |
-| 3 | 1 | | Human Resources Operations Specialist (junior) | SSi People |
-| 4 | 1 | | Human Resources Recruiter | Career Systems Development Corp |
-| 5 | 0 | | Regional Human Resources | TE Connectivity |
-| 6 | 0 | | Junior Employee Support Specialist | Applicantz |
-| 7 | 0 | | Human Resources Representative | KEMET Electronics Corporation |
-| 8 | 0 | | Talent Acquisition Specialist | Industrious Group Inc. |
-| 9 | 0 | | Human Resources Generalist | Select Source International |
-| 10 | 1 | | Junior Human Resources Consultant | nTech Workforce |
+| 1 | 1 | 5 | Representative - Human Resources | Microchip Technology Inc. |
+| 2 | 0 | 3 | Associate Human Resources Generalist | Boeing |
+| 3 | 1 | 5 | Human Resources Operations Specialist (junior) | SSi People |
+| 4 | 1 | 5 | Human Resources Recruiter | Career Systems Development Corp |
+| 5 | 0 | 3 | Regional Human Resources | TE Connectivity |
+| 6 | 0 | 3 | Junior Employee Support Specialist | Applicantz |
+| 7 | 0 | 3 | Human Resources Representative | KEMET Electronics Corporation |
+| 8 | 0 | 3 | Talent Acquisition Specialist | Industrious Group Inc. |
+| 9 | 0 | 3 | Human Resources Generalist | Select Source International |
+| 10 | 1 | 5 | Junior Human Resources Consultant | nTech Workforce |
 
 ---
 

@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Recruiter | Smashburger |
-| 2 | 0 | | Recruitment Officer | Human Rights Watch |
-| 3 | 0 | | Recruiter | Opusing LLC |
-| 4 | 0 | | Recruiter | Intellyk Inc. |
-| 5 | 0 | | Recruiter | BCforward |
-| 6 | 0 | | Corporate Recruiter | Generac |
-| 7 | 0 | | Next Generation Workforce Recruiter | Cincinnati Works |
-| 8 | 1 | | Human Resources Assistant | Hays |
-| 9 | 0 | | Recruitment Specialist | PTS Advance |
-| 10 | 1 | | HR Recruiter and Coordinator-24-00446 | Datasoft Technologies, Inc. |
+| 1 | 0 | 3 | Recruiter | Smashburger |
+| 2 | 0 | 3 | Recruitment Officer | Human Rights Watch |
+| 3 | 0 | 3 | Recruiter | Opusing LLC |
+| 4 | 0 | 3 | Recruiter | Intellyk Inc. |
+| 5 | 0 | 3 | Recruiter | BCforward |
+| 6 | 0 | 3 | Corporate Recruiter | Generac |
+| 7 | 0 | 3 | Next Generation Workforce Recruiter | Cincinnati Works |
+| 8 | 1 | 5 | Human Resources Assistant | Hays |
+| 9 | 0 | 3 | Recruitment Specialist | PTS Advance |
+| 10 | 1 | 5 | HR Recruiter and Coordinator-24-00446 | Datasoft Technologies, Inc. |
 
 ---
 
