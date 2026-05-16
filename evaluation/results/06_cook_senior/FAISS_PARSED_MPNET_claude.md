@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | | | Corporate Chef | STARR Restaurants |
-| 2 | | | Private Chef to UHNW Family | Pocketbook Agency |
-| 3 | | | Executive Chef - Corporate Dining | Brock & Company, Inc. |
-| 4 | | | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
-| 5 | | | Executive Sous Chef | nan |
-| 6 | | | Executive Chef | Goodwin Recruiting |
-| 7 | | | Private Executive Chef (Fine Dining) | Excellence Services, LLC |
-| 8 | | | Kitchen Manager | Restaurant Zone Recruiting |
-| 9 | | | Regional Culinary Services Manager | Agemark Senior Living |
-| 10 | | | Executive Chef | COREcruitment Ltd |
+| 1 | | 5 | Corporate Chef | STARR Restaurants |
+| 2 | | 5 | Private Chef to UHNW Family | Pocketbook Agency |
+| 3 | | 5 | Executive Chef - Corporate Dining | Brock & Company, Inc. |
+| 4 | | 5 | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
+| 5 | | 5 | Executive Sous Chef | nan |
+| 6 | | 5 | Executive Chef | Goodwin Recruiting |
+| 7 | | 5 | Private Executive Chef (Fine Dining) | Excellence Services, LLC |
+| 8 | | 5 | Kitchen Manager | Restaurant Zone Recruiting |
+| 9 | | 5 | Regional Culinary Services Manager | Agemark Senior Living |
+| 10 | | 5 | Executive Chef | COREcruitment Ltd |
 
 ---
 

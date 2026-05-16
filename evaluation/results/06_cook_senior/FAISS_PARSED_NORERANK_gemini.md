@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Chef Consultant | Specialty Restaurants |
-| 2 | 0 | | Corporate Chef | STARR Restaurants |
-| 3 | 1 | | Sous Chef Fine Dining | Goodwin Recruiting |
-| 4 | 1 | | Chef De Cuisine Upscale Pizzeria | Goodwin Recruiting |
-| 5 | 0 | | Food Service Manager | Corporate Chefs |
-| 6 | 1 | | Sous Chef | CareOne |
-| 7 | 0 | | Executive Chef | Specialty Restaurants |
-| 8 | 1 | | Executive Sous Chef | Sentry |
-| 9 | 1 | | Sous Chef | Ocean House Collection |
-| 10| 0 | | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
+| 1 | 1 | 5 | Chef Consultant | Specialty Restaurants |
+| 2 | 0 | 5 | Corporate Chef | STARR Restaurants |
+| 3 | 1 | 3 | Sous Chef Fine Dining | Goodwin Recruiting |
+| 4 | 1 | 5 | Chef De Cuisine Upscale Pizzeria | Goodwin Recruiting |
+| 5 | 0 | 5 | Food Service Manager | Corporate Chefs |
+| 6 | 1 | 5 | Sous Chef | CareOne |
+| 7 | 0 | 5 | Executive Chef | Specialty Restaurants |
+| 8 | 1 | 5 | Executive Sous Chef | Sentry |
+| 9 | 1 | 5 | Sous Chef | Ocean House Collection |
+| 10| 0 | 5 | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
 
 ---
 

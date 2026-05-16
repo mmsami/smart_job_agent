@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | | | Sous Chef | Four Seasons Hotels and Resorts |
-| 2 | | | Sous Chef - LAVO Los Angeles | Tao Group Hospitality |
-| 3 | | | Sous Chef | Southern Land Company |
-| 4 | | | Executive Sous Chef | nan |
-| 5 | | | Executive Sous Chef | Sentry |
-| 6 | | | Specialty Chef (Chef de Cuisine)- Main Kitchen- Harrah's Resort SoCal | Harrah's Resort Southern California |
-| 7 | | | Speciality Chef (Chef de Cuisine)- Salt & Fin- Harrah's SoCal | Harrah's Resort Southern California |
-| 8 | | | SOUS CHEF - CHARLOTTE, NC | Compass One Healthcare |
-| 9 | | | SOUS CHEF - MOUNT PLEASANT, SC | Compass One Healthcare |
-| 10 | | | Sous Chef Fine Dining | Goodwin Recruiting |
+| 1 | | 5 | Sous Chef | Four Seasons Hotels and Resorts |
+| 2 | | 3 | Sous Chef - LAVO Los Angeles | Tao Group Hospitality |
+| 3 | | 3 | Sous Chef | Southern Land Company |
+| 4 | | 3 | Executive Sous Chef | nan |
+| 5 | | 3 | Executive Sous Chef | Sentry |
+| 6 | | 3 | Specialty Chef (Chef de Cuisine)- Main Kitchen- Harrah's Resort SoCal | Harrah's Resort Southern California |
+| 7 | | 5 | Speciality Chef (Chef de Cuisine)- Salt & Fin- Harrah's SoCal | Harrah's Resort Southern California |
+| 8 | | 5 | SOUS CHEF - CHARLOTTE, NC | Compass One Healthcare |
+| 9 | | 3 | SOUS CHEF - MOUNT PLEASANT, SC | Compass One Healthcare |
+| 10 | | 5 | Sous Chef Fine Dining | Goodwin Recruiting |
 
 ---
 

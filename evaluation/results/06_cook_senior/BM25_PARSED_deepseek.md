@@ -22,11 +22,11 @@ Fill this in after reading the job details below.
 | 3 | | 5 | Executive Sous Chef | Sentry |
 | 4 | | 3 | Chef Consultant  | Specialty Restaurants |
 | 5 | | 5 | Executive Sous Chef | Bon Appétit Management Company |
-| 6 | | | Executive Chef | Compass Group USA |
-| 7 | | | Assistant Kitchen Manager | Chicken N Pickle |
-| 8 | | | Sous Chef | DO & CO AG |
-| 9 | | | Culinary Systems Analyst - West Region  | SSP America |
-| 10 | | | Corporate Chef | STARR Restaurants |
+| 6 | | 3 | Executive Chef | Compass Group USA |
+| 7 | | 1 | Assistant Kitchen Manager | Chicken N Pickle |
+| 8 | | 1 | Sous Chef | DO & CO AG |
+| 9 | | 3 | Culinary Systems Analyst - West Region  | SSP America |
+| 10 | | 5 | Corporate Chef | STARR Restaurants |
 
 ---
 

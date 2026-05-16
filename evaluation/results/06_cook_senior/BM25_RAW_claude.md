@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | | | Executive Sous Chef | Horizon Hospitality Associates, Inc |
-| 2 | | | Corporate Chef | STARR Restaurants |
-| 3 | | | Executive Sous Chef | Sentry |
-| 4 | | | Executive Sous Chef | nan |
-| 5 | | | Executive Sous Chef | Mawa's Kitchen, Aspen |
-| 6 | | | Executive Sous Chef - Convention Hotel | Goodwin Recruiting |
-| 7 | | | Senior Sous Chef | Marriott International |
-| 8 | | | Upscale Sous Chef - RELO to GA | Goodwin Recruiting |
-| 9 | | | Sous Chef | DO & CO AG |
-| 10 | | | Sous Chef Fine Dining | Goodwin Recruiting |
+| 1 | | 5 | Executive Sous Chef | Horizon Hospitality Associates, Inc |
+| 2 | | 5 | Corporate Chef | STARR Restaurants |
+| 3 | | 5 | Executive Sous Chef | Sentry |
+| 4 | | 5 | Executive Sous Chef | nan |
+| 5 | | 5 | Executive Sous Chef | Mawa's Kitchen, Aspen |
+| 6 | | 5 | Executive Sous Chef - Convention Hotel | Goodwin Recruiting |
+| 7 | | 3 | Senior Sous Chef | Marriott International |
+| 8 | | 5 | Upscale Sous Chef - RELO to GA | Goodwin Recruiting |
+| 9 | | 5 | Sous Chef | DO & CO AG |
+| 10 | | 5 | Sous Chef Fine Dining | Goodwin Recruiting |
 
 ---
 
