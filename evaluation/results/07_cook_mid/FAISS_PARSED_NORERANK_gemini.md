@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Food Service Manager | Corporate Chefs |
-| 2 | 0 | | Senior Specialty Buyer | The Chefs'​ Warehouse |
-| 3 | 0 | | Produce Buyer | The Chefs'​ Warehouse |
-| 4 | 1 | | $10k Sign -On-EXECUTIVE CHEF ( PROVIDENCE ST JOHNS HOSP) SANTA MONICA CA | Compass One Healthcare |
-| 5 | 0 | | Research and Development Chef | CareersInFood.com |
-| 6 | 1 | | Part Time Cook | Discovery Senior Living |
-| 7 | 1 | | Cook, American Family Field | Delaware North |
-| 8 | 0 | | Director of Culinary Services | Discovery Senior Living |
-| 9 | 1 | | Kitchen Supervisor/Sous Chef | Remington Hospitality |
-| 10| 0 | | Account Manager, Food & Beverage Plant Hygiene Solutions | Solenis |
+| 1 | 0 | 5 | Food Service Manager | Corporate Chefs |
+| 2 | 0 | 5 | Senior Specialty Buyer | The Chefs'​ Warehouse |
+| 3 | 0 | 5 | Produce Buyer | The Chefs'​ Warehouse |
+| 4 | 1 | 5 | $10k Sign -On-EXECUTIVE CHEF ( PROVIDENCE ST JOHNS HOSP) SANTA MONICA CA | Compass One Healthcare |
+| 5 | 0 | 5 | Research and Development Chef | CareersInFood.com |
+| 6 | 1 | 5 | Part Time Cook | Discovery Senior Living |
+| 7 | 1 | 5 | Cook, American Family Field | Delaware North |
+| 8 | 0 | 3 | Director of Culinary Services | Discovery Senior Living |
+| 9 | 1 | 5 | Kitchen Supervisor/Sous Chef | Remington Hospitality |
+| 10| 0 | 5 | Account Manager, Food & Beverage Plant Hygiene Solutions | Solenis |
 
 ---
 

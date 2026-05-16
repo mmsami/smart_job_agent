@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | Lead Line Cook - The Fawcett Center | The Ohio State University |
-| 2 | 0 | | Kitchen Manager | Topgolf |
-| 3 | 1 | | COOK - PART TIME | Centra Health |
-| 4 | 1 | | COOK I PREP | Boyd Gaming |
-| 5 | 1 | | Line Cook-Bubba Gump | Golden Nugget Las Vegas |
-| 6 | 1 | | Prep Cook | Barcadia Bar & Grill |
-| 7 | 1 | | Line Cook | Barcadia Bar & Grill |
-| 8 | 1 | | Line Cook | Topgolf |
-| 9 | 1 | | Line Cook - Luke's 32 Bridge | TC Restaurant Group |
-| 10| 1 | | Cook I | Sonesta Hotels |
+| 1 | 0 | 5 | Lead Line Cook - The Fawcett Center | The Ohio State University |
+| 2 | 0 | 5 | Kitchen Manager | Topgolf |
+| 3 | 1 | 5 | COOK - PART TIME | Centra Health |
+| 4 | 1 | 5 | COOK I PREP | Boyd Gaming |
+| 5 | 1 | 5 | Line Cook-Bubba Gump | Golden Nugget Las Vegas |
+| 6 | 1 | 5 | Prep Cook | Barcadia Bar & Grill |
+| 7 | 1 | 5 | Line Cook | Barcadia Bar & Grill |
+| 8 | 1 | 5 | Line Cook | Topgolf |
+| 9 | 1 | 5 | Line Cook - Luke's 32 Bridge | TC Restaurant Group |
+| 10| 1 | 5 | Cook I | Sonesta Hotels |
 
 ---
 

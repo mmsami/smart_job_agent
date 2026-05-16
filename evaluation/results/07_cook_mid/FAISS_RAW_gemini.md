@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Line Cook | nan |
-| 2 | 1 | | Lead Line Cook - The Fawcett Center | The Ohio State University |
-| 3 | 0 | | Station Cook l - Holiday Inn Corpus Christi | Remington Hospitality |
-| 4 | 1 | | Sous Chef Fine Dining | Goodwin Recruiting |
-| 5 | 1 | | Food Services - Cook I | Children's Health |
-| 6 | 1 | | Cook 1 | Four Seasons Hotels and Resorts |
-| 7 | 0 | | Food Services - Cook II PRN | Children's Health |
-| 8 | 1 | | COOK - CUTWATER (PART-TIME) | Anheuser-Busch |
-| 9 | 0 | | Banquet Cook, Part-time - Crowne Plaza Milwaukee South | Remington Hospitality |
-| 10| 1 | | Cook I | The Eddy Taproom & Hotel |
+| 1 | 1 | 5 | Line Cook | nan |
+| 2 | 1 | 5 | Lead Line Cook - The Fawcett Center | The Ohio State University |
+| 3 | 0 | 5 | Station Cook l - Holiday Inn Corpus Christi | Remington Hospitality |
+| 4 | 1 | 5 | Sous Chef Fine Dining | Goodwin Recruiting |
+| 5 | 1 | 5 | Food Services - Cook I | Children's Health |
+| 6 | 1 | 5 | Cook 1 | Four Seasons Hotels and Resorts |
+| 7 | 0 | 5 | Food Services - Cook II PRN | Children's Health |
+| 8 | 1 | 5 | COOK - CUTWATER (PART-TIME) | Anheuser-Busch |
+| 9 | 0 | 5 | Banquet Cook, Part-time - Crowne Plaza Milwaukee South | Remington Hospitality |
+| 10| 1 | 5 | Cook I | The Eddy Taproom & Hotel |
 
 ---
 

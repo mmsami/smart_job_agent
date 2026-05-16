@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Cook I | Sonesta Hotels |
-| 2 | 0 | | Kitchen Supervisor | Cold Spring Tavern |
-| 3 | 0 | | Cook Supervisor | Summit |
-| 4 | 1 | | COOK I PREP | Boyd Gaming |
-| 5 | 0 | | Kitchen Manager | Topgolf |
-| 6 | 1 | | Line Cook-Bubba Gump | Golden Nugget Las Vegas |
-| 7 | 1 | | Cook (Full Time, Rotating Shifts/Weekends) | Nicklaus Children's Health System |
-| 8 | 1 | | Line Cook | Sage Lodge |
-| 9 | 1 | | Assistant Cook | nan |
-| 10| 1 | | Lead Line Cook - The Fawcett Center | The Ohio State University |
+| 1 | 1 | 5 | Cook I | Sonesta Hotels |
+| 2 | 0 | 5 | Kitchen Supervisor | Cold Spring Tavern |
+| 3 | 0 | 3 | Cook Supervisor | Summit |
+| 4 | 1 | 5 | COOK I PREP | Boyd Gaming |
+| 5 | 0 | 5 | Kitchen Manager | Topgolf |
+| 6 | 1 | 5 | Line Cook-Bubba Gump | Golden Nugget Las Vegas |
+| 7 | 1 | 5 | Cook (Full Time, Rotating Shifts/Weekends) | Nicklaus Children's Health System |
+| 8 | 1 | 5 | Line Cook | Sage Lodge |
+| 9 | 1 | 5 | Assistant Cook | nan |
+| 10| 1 | 5 | Lead Line Cook - The Fawcett Center | The Ohio State University |
 
 ---
 

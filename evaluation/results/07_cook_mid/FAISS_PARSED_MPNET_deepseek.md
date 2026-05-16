@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | | | Experienced Cooks- $21/hr | Beatitudes Campus |
-| 2 | | | Private Chef to UHNW Family | Pocketbook Agency |
-| 3 | | | Executive Chef | Goodwin Recruiting |
-| 4 | | | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
-| 5 | | | Kitchen Manager | Restaurant Zone Recruiting |
-| 6 | | | Lubbock 1 True TX BBQ - Food Production Cook - Part-Time | H-E-B |
-| 7 | | | Waxahachie Cooking Connect - Culinary Selling Lead - Full-Time | H-E-B |
-| 8 | | | Regional Culinary Services Manager | Agemark Senior Living |
-| 9 | | | Country Club Executive Chef | Goodwin Recruiting |
-| 10 | | | Kitchen Manager / Sous Chef | Goodwin Recruiting |
+| 1 | | 5 | Experienced Cooks- $21/hr | Beatitudes Campus |
+| 2 | | 3 | Private Chef to UHNW Family | Pocketbook Agency |
+| 3 | | 3 | Executive Chef | Goodwin Recruiting |
+| 4 | | 3 | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
+| 5 | | 5 | Kitchen Manager | Restaurant Zone Recruiting |
+| 6 | | 5 | Lubbock 1 True TX BBQ - Food Production Cook - Part-Time | H-E-B |
+| 7 | | 5 | Waxahachie Cooking Connect - Culinary Selling Lead - Full-Time | H-E-B |
+| 8 | | 5 | Regional Culinary Services Manager | Agemark Senior Living |
+| 9 | | 5 | Country Club Executive Chef | Goodwin Recruiting |
+| 10 | | 5 | Kitchen Manager / Sous Chef | Goodwin Recruiting |
 
 ---
 

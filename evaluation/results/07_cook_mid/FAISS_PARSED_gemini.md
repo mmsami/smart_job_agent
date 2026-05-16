@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | $10k Sign -On-EXECUTIVE CHEF ( PROVIDENCE ST JOHNS HOSP) SANTA MONICA CA | Compass One Healthcare |
-| 2 | 0 | | Director of Culinary Services | Discovery Senior Living |
-| 3 | 0 | | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
-| 4 | 1 | | Lead Cook | Endeavor Health |
-| 5 | 1 | | Cook Supervisor | Summit |
-| 6 | 1 | | Food Service Manager | Corporate Chefs |
-| 7 | 1 | | Part Time Cook | Discovery Senior Living |
-| 8 | 0 | | Sous Chef Fine Dining | Goodwin Recruiting |
-| 9 | 1 | | Cook, American Family Field | Delaware North |
-| 10| 0 | | Kitchen Supervisor/Sous Chef | Remington Hospitality |
+| 1 | 1 | 5 | $10k Sign -On-EXECUTIVE CHEF ( PROVIDENCE ST JOHNS HOSP) SANTA MONICA CA | Compass One Healthcare |
+| 2 | 0 | 5 | Director of Culinary Services | Discovery Senior Living |
+| 3 | 0 | 5 | Sr. Chef Manager - Los Angeles, CA | Morrison Living |
+| 4 | 1 | 5 | Lead Cook | Endeavor Health |
+| 5 | 1 | 5 | Cook Supervisor | Summit |
+| 6 | 1 | 5 | Food Service Manager | Corporate Chefs |
+| 7 | 1 | 5 | Part Time Cook | Discovery Senior Living |
+| 8 | 0 | 3 | Sous Chef Fine Dining | Goodwin Recruiting |
+| 9 | 1 | 5 | Cook, American Family Field | Delaware North |
+| 10| 0 | 3 | Kitchen Supervisor/Sous Chef | Remington Hospitality |
 
 ---
 
