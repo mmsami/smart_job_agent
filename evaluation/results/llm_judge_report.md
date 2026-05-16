@@ -5,10 +5,10 @@ Judge model: `anthropic/claude-sonnet-4-6` (via OpenRouter). Cohen's Kappa measu
 | Persona | Method | Human P@10 | LLM P@10 | κ (Kappa) | n |
 |---------|--------|------------|----------|-----------|---|
 | 01_hr_entry | BM25_RAW | 0.10 | 0.50 | -0.200 | 10 |
-| 01_hr_entry | BM25_PARSED | 0.40 | 0.50 | 0.400 | 10 |
+| 01_hr_entry | BM25_PARSED | 0.40 | 0.40 | 0.583 | 10 |
 | 01_hr_entry | FAISS_RAW | 0.10 | 0.20 | 0.615 | 10 |
-| 01_hr_entry | FAISS_PARSED | 0.60 | 0.80 | -0.364 | 10 |
-| 01_hr_entry | FAISS_PARSED_NORERANK | 0.40 | 0.40 | 0.583 | 10 |
+| 01_hr_entry | FAISS_PARSED | 0.60 | 0.50 | -0.400 | 10 |
+| 01_hr_entry | FAISS_PARSED_NORERANK | 0.40 | 0.30 | 0.348 | 10 |
 | 01_hr_entry | FAISS_PARSED_MPNET | 0.40 | 0.80 | 0.286 | 10 |
 | 02_hr_senior | BM25_RAW | 0.40 | 0.70 | 0.444 | 10 |
 | 02_hr_senior | BM25_PARSED | 0.50 | 0.70 | 0.200 | 10 |
@@ -18,20 +18,20 @@ Judge model: `anthropic/claude-sonnet-4-6` (via OpenRouter). Cohen's Kappa measu
 | 02_hr_senior | FAISS_PARSED_MPNET | 0.60 | 0.00 | 0.000 | 10 |
 | 03_tech_intern | BM25_RAW | 0.30 | 0.40 | 0.348 | 10 |
 | 03_tech_intern | BM25_PARSED | 0.40 | 0.70 | 0.444 | 10 |
-| 03_tech_intern | FAISS_RAW | 0.70 | 0.60 | 0.348 | 10 |
-| 03_tech_intern | FAISS_PARSED | 0.40 | 0.50 | 0.000 | 10 |
-| 03_tech_intern | FAISS_PARSED_NORERANK | 0.30 | 0.40 | 0.783 | 10 |
-| 03_tech_intern | FAISS_PARSED_MPNET | 0.10 | 0.10 | -0.111 | 10 |
+| 03_tech_intern | FAISS_RAW | 0.70 | 0.70 | 0.524 | 10 |
+| 03_tech_intern | FAISS_PARSED | 0.40 | 0.30 | 0.348 | 10 |
+| 03_tech_intern | FAISS_PARSED_NORERANK | 0.30 | 0.30 | 1.000 | 10 |
+| 03_tech_intern | FAISS_PARSED_MPNET | 0.10 | 0.20 | 0.615 | 10 |
 | 04_tech_senior | BM25_RAW | 0.50 | 0.20 | 0.000 | 10 |
 | 04_tech_senior | BM25_PARSED | 0.60 | 0.70 | 0.348 | 10 |
 | 04_tech_senior | FAISS_RAW | 0.10 | 0.70 | 0.091 | 10 |
-| 04_tech_senior | FAISS_PARSED | 0.60 | 0.30 | 0.074 | 10 |
+| 04_tech_senior | FAISS_PARSED | 0.60 | 0.40 | -0.154 | 10 |
 | 04_tech_senior | FAISS_PARSED_NORERANK | 0.20 | 0.20 | 0.375 | 10 |
 | 04_tech_senior | FAISS_PARSED_MPNET | 0.20 | 0.00 | 0.000 | 10 |
 | 05_cook_entry | BM25_RAW | 0.80 | 0.40 | -0.071 | 10 |
 | 05_cook_entry | BM25_PARSED | 0.50 | 0.30 | 0.600 | 10 |
-| 05_cook_entry | FAISS_RAW | 0.60 | 0.10 | 0.138 | 10 |
-| 05_cook_entry | FAISS_PARSED | 0.60 | 0.30 | 0.074 | 10 |
+| 05_cook_entry | FAISS_RAW | 0.60 | 0.20 | 0.286 | 10 |
+| 05_cook_entry | FAISS_PARSED | 0.60 | 0.40 | 0.231 | 10 |
 | 05_cook_entry | FAISS_PARSED_NORERANK | 0.40 | 0.10 | 0.286 | 10 |
 | 05_cook_entry | FAISS_PARSED_MPNET | 0.30 | 0.20 | 0.211 | 10 |
 | 06_cook_senior | BM25_RAW | 0.70 | 1.00 | 0.000 | 10 |
@@ -42,39 +42,39 @@ Judge model: `anthropic/claude-sonnet-4-6` (via OpenRouter). Cohen's Kappa measu
 | 06_cook_senior | FAISS_PARSED_MPNET | 0.40 | 0.90 | 0.138 | 10 |
 | 07_cook_mid | BM25_RAW | 0.80 | 0.10 | -0.216 | 10 |
 | 07_cook_mid | BM25_PARSED | 0.70 | 0.30 | -0.379 | 10 |
-| 07_cook_mid | FAISS_RAW | 0.70 | 0.50 | -0.600 | 10 |
+| 07_cook_mid | FAISS_RAW | 0.70 | 0.30 | -0.379 | 10 |
 | 07_cook_mid | FAISS_PARSED | 0.60 | 0.60 | -0.250 | 10 |
 | 07_cook_mid | FAISS_PARSED_NORERANK | 0.40 | 0.30 | 0.348 | 10 |
 | 07_cook_mid | FAISS_PARSED_MPNET | 0.20 | 0.40 | 0.091 | 10 |
 | 08_hr_intern | BM25_RAW | 0.80 | 0.90 | -0.154 | 10 |
 | 08_hr_intern | BM25_PARSED | 0.60 | 0.40 | 0.231 | 10 |
-| 08_hr_intern | FAISS_RAW | 0.80 | 0.70 | -0.316 | 10 |
+| 08_hr_intern | FAISS_RAW | 0.80 | 0.90 | -0.154 | 10 |
 | 08_hr_intern | FAISS_PARSED | 0.50 | 1.00 | 0.000 | 10 |
 | 08_hr_intern | FAISS_PARSED_NORERANK | 0.30 | 0.90 | 0.091 | 10 |
 | 08_hr_intern | FAISS_PARSED_MPNET | 0.60 | 0.80 | 0.545 | 10 |
 | 09_hr_mid | BM25_RAW | 0.20 | 0.20 | -0.250 | 10 |
-| 09_hr_mid | BM25_PARSED | 0.50 | 0.60 | 0.000 | 10 |
+| 09_hr_mid | BM25_PARSED | 0.50 | 0.50 | 0.200 | 10 |
 | 09_hr_mid | FAISS_RAW | 0.50 | 0.60 | -0.800 | 10 |
 | 09_hr_mid | FAISS_PARSED | 0.40 | 0.50 | -0.400 | 10 |
 | 09_hr_mid | FAISS_PARSED_NORERANK | 0.40 | 0.30 | -0.522 | 10 |
 | 09_hr_mid | FAISS_PARSED_MPNET | 0.40 | 0.40 | 0.583 | 10 |
-| 10_tech_mid | BM25_RAW | 0.20 | 0.60 | -0.429 | 10 |
-| 10_tech_mid | BM25_PARSED | 0.10 | 1.00 | 0.000 | 10 |
-| 10_tech_mid | FAISS_RAW | 0.70 | 0.90 | -0.176 | 10 |
-| 10_tech_mid | FAISS_PARSED | 0.30 | 0.80 | 0.194 | 10 |
-| 10_tech_mid | FAISS_PARSED_NORERANK | 0.40 | 0.60 | -0.154 | 10 |
-| 10_tech_mid | FAISS_PARSED_MPNET | 0.10 | 0.70 | -0.212 | 10 |
+| 10_tech_mid | BM25_RAW | 0.20 | 0.70 | -0.452 | 10 |
+| 10_tech_mid | BM25_PARSED | 0.10 | 0.90 | 0.024 | 10 |
+| 10_tech_mid | FAISS_RAW | 0.70 | 0.80 | -0.316 | 10 |
+| 10_tech_mid | FAISS_PARSED | 0.30 | 0.70 | 0.310 | 10 |
+| 10_tech_mid | FAISS_PARSED_NORERANK | 0.40 | 0.70 | -0.296 | 10 |
+| 10_tech_mid | FAISS_PARSED_MPNET | — | — | -0.241 | 9 |
 
 ## Average Kappa by Method
 
-- **BM25_RAW**: κ = -0.053  (n=10 personas)
-- **BM25_PARSED**: κ = 0.184  (n=10 personas)
-- **FAISS_RAW**: κ = -0.041  (n=10 personas)
-- **FAISS_PARSED**: κ = -0.007  (n=10 personas)
-- **FAISS_PARSED_NORERANK**: κ = 0.208  (n=10 personas)
-- **FAISS_PARSED_MPNET**: κ = 0.153  (n=10 personas)
+- **BM25_RAW**: κ = -0.055  (n=10 personas)
+- **BM25_PARSED**: κ = 0.225  (n=10 personas)
+- **FAISS_RAW**: κ = 0.015  (n=10 personas)
+- **FAISS_PARSED**: κ = 0.028  (n=10 personas)
+- **FAISS_PARSED_NORERANK**: κ = 0.192  (n=10 personas)
+- **FAISS_PARSED_MPNET**: κ = 0.223  (n=10 personas)
 
-**Overall average κ = 0.074**
+**Overall average κ = 0.105**
 
 > κ < 0.20 = poor agreement | 0.20–0.40 = fair | 0.40–0.60 = moderate | 0.60–0.80 = substantial | > 0.80 = almost perfect
 
