@@ -91,7 +91,7 @@ project/
 │   │   └── reasoning.py             # top 10 → explanations + skill gaps (3 providers)
 │   ├── evaluation/
 │   │   ├── baseline_bm25.py         # BM25 keyword retriever
-│   │   ├── run_evaluation.py        # generates full result matrix (4 personas × 5 methods × 3 models)
+│   │   ├── run_evaluation.py        # generates full result matrix (10 personas × 6 methods × 3 models)
 │   │   ├── score_results.py         # computes P@10, CI, Wilcoxon from labeled MDs
 │   │   └── llm_judge.py             # Claude-as-judge → Cohen's Kappa (H4)
 │   └── prompts/                     # edit these to tune LLM behavior
