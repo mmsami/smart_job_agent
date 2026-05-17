@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Human Resources Manager | Foundation Recruiting and Consulting |
-| 2 | 1 | | Human Resources Manager | Adecco |
-| 3 | 1 | | Human Resources Manager | The HR SOURCE |
-| 4 | 1 | | Human Resources Generalist | Select Source International |
-| 5 | 1 | | HR Manager | Michael Page |
-| 6 | 0 | | Human Resources Manager | Confidential |
-| 7 | 0 | | Human Resources Manager | Provision People |
-| 8 | 0 | | Human Resources Manager | Nederman |
-| 9 | 0 | | HR Generalist | Heartland Alliance |
-| 10 | 1 | | HR Manager | CPS, Inc. |
+| 1 | 1 | 5 | Human Resources Manager | Foundation Recruiting and Consulting |
+| 2 | 1 | 5 | Human Resources Manager | Adecco |
+| 3 | 1 | 5 | Human Resources Manager | The HR SOURCE |
+| 4 | 1 | 5 | Human Resources Generalist | Select Source International |
+| 5 | 1 | 5 | HR Manager | Michael Page |
+| 6 | 0 | 3 | Human Resources Manager | Confidential |
+| 7 | 0 | 3 | Human Resources Manager | Provision People |
+| 8 | 0 | 3 | Human Resources Manager | Nederman |
+| 9 | 0 | 3 | HR Generalist | Heartland Alliance |
+| 10 | 1 | 5 | HR Manager | CPS, Inc. |
 
 ---
 

@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | REGIONAL HR MANAGER | Trident Seafoods |
-| 2 | 0 | | Domestic Recruiter | Alliance of Professionals & Consultants, Inc. (APC) |
-| 3 | 0 | | Human Resources Manager | Confidential |
-| 4 | 0 | | Director of Talent Acquistion | City Winery |
-| 5 | 1 | | Human Resources Director | Come Near |
-| 6 | 0 | | Human Resources Manager | Nederman |
-| 7 | 1 | | Human Resources Director | Green Key Resources |
-| 8 | 0 | | Director, People Operations | FreshDirect |
-| 9 | 0 | | Human Resource Manager - Live Production (North Area) | Foster Farms |
-| 10 | 0 | | VP Human Resources-PST Segment | Ingersoll Rand |
+| 1 | 0 | 3 | REGIONAL HR MANAGER | Trident Seafoods |
+| 2 | 0 | 3 | Domestic Recruiter | Alliance of Professionals & Consultants, Inc. (APC) |
+| 3 | 0 | 3 | Human Resources Manager | Confidential |
+| 4 | 0 | 3 | Director of Talent Acquistion | City Winery |
+| 5 | 1 | 5 | Human Resources Director | Come Near |
+| 6 | 0 | 3 | Human Resources Manager | Nederman |
+| 7 | 1 | 5 | Human Resources Director | Green Key Resources |
+| 8 | 0 | 3 | Director, People Operations | FreshDirect |
+| 9 | 0 | 3 | Human Resource Manager - Live Production (North Area) | Foster Farms |
+| 10 | 0 | 3 | VP Human Resources-PST Segment | Ingersoll Rand |
 
 ---
 

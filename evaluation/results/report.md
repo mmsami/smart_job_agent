@@ -47,17 +47,17 @@ Quality rated 1–5 per job explanation. 1 = wrong/hallucinated, 3 = generic but
 
 | Method | gemini | deepseek | claude |
 |--------|--------|--------|--------|
-| BM25_RAW | 3.73 | 3.73 | 3.73 |
-| BM25_PARSED | 3.60 | 3.33 | 3.87 |
-| FAISS_RAW | 3.80 | 3.40 | 3.80 |
-| FAISS_PARSED | 4.00 | 4.00 | 4.07 |
-| FAISS_PARSED_NORERANK | 4.13 | 4.07 | 4.20 |
-| FAISS_PARSED_MPNET | 3.87 | 3.73 | 4.20 |
+| BM25_RAW | 3.96 | 3.92 | 3.92 |
+| BM25_PARSED | 3.84 | 3.65 | 4.04 |
+| FAISS_RAW | 4.00 | 3.60 | 3.76 |
+| FAISS_PARSED | 4.12 | 4.20 | 4.24 |
+| FAISS_PARSED_NORERANK | 4.00 | 4.12 | 4.16 |
+| FAISS_PARSED_MPNET | 4.12 | 3.96 | 4.32 |
 
 ### Wilcoxon Tests: Reasoning Quality
 
-- gemini vs deepseek: p = 0.1658
-- gemini vs claude: p = 0.1392
+- gemini vs deepseek: p = 0.3010
+- gemini vs claude: p = 0.2923
 
 ## Qualitative Observations
 

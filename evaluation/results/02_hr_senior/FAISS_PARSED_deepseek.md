@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 0 | | VP Human Resources-PST Segment | Ingersoll Rand |
-| 2 | 1 | | Human Resources Director | Green Key Resources |
-| 3 | 1 | | Human Resources Director | Come Near |
-| 4 | 1 | | Director of HR Business Partners | The Job Network |
-| 5 | 1 | | Director, People Operations | FreshDirect |
-| 6 | 0 | | Human Resources Manager | Nederman |
-| 7 | 0 | | Human Resources Manager | Confidential |
-| 8 | 0 | | REGIONAL HR MANAGER | Trident Seafoods |
-| 9 | 0 | | [HYBRID] Human Resources Manager | Sparks Group |
-| 10 | 1 | | Senior Director DEI & Talent (REMOTE) | EnerSys |
+| 1 | 0 | 3 | VP Human Resources-PST Segment | Ingersoll Rand |
+| 2 | 1 | 5 | Human Resources Director | Green Key Resources |
+| 3 | 1 | 5 | Human Resources Director | Come Near |
+| 4 | 1 | 5 | Director of HR Business Partners | The Job Network |
+| 5 | 1 | 5 | Director, People Operations | FreshDirect |
+| 6 | 0 | 3 | Human Resources Manager | Nederman |
+| 7 | 0 | 3 | Human Resources Manager | Confidential |
+| 8 | 0 | 3 | REGIONAL HR MANAGER | Trident Seafoods |
+| 9 | 0 | 3 | [HYBRID] Human Resources Manager | Sparks Group |
+| 10 | 1 | 5 | Senior Director DEI & Talent (REMOTE) | EnerSys |
 
 ---
 

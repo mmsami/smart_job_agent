@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Director, Human Resources | Tarsus Pharmaceuticals, Inc. |
-| 2 | 0 | | Senior Vice President Human Resources | Miller Resource Group |
-| 3 | 0 | | Senior Vice President Human Resources | Meduit \| Driving Revenue Cycle Performance |
-| 4 | 1 | | Director of Human Resources | Sacramento LGBT Community Center |
-| 5 | 1 | | Senior Human Resources Business Partner | Potere Search (PS) |
-| 6 | 0 | | Human Resources Business Partner | High Liner Foods |
-| 7 | 0 | | SR HR Business Partner- MON EMS | WVU Medicine |
-| 8 | 0 | | Regional HR Manager (Internal HR Managers Applications Only) | NAPA Auto Parts |
-| 9 | 1 | | Human Resouces Business Partner | Confidential |
-| 10 | 1 | | Human Resources Director | Claire Myers Consulting |
+| 1 | 1 | 5 | Director, Human Resources | Tarsus Pharmaceuticals, Inc. |
+| 2 | 0 | 3 | Senior Vice President Human Resources | Miller Resource Group |
+| 3 | 0 | 3 | Senior Vice President Human Resources | Meduit \| Driving Revenue Cycle Performance |
+| 4 | 1 | 5 | Director of Human Resources | Sacramento LGBT Community Center |
+| 5 | 1 | 5 | Senior Human Resources Business Partner | Potere Search (PS) |
+| 6 | 0 | 3 | Human Resources Business Partner | High Liner Foods |
+| 7 | 0 | 3 | SR HR Business Partner- MON EMS | WVU Medicine |
+| 8 | 0 | 1 | Regional HR Manager (Internal HR Managers Applications Only) | NAPA Auto Parts |
+| 9 | 1 | 3 | Human Resouces Business Partner | Confidential |
+| 10 | 1 | 5 | Human Resources Director | Claire Myers Consulting |
 
 ---
 

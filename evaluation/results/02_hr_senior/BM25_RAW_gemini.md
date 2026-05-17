@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Human Resources Director | Insero Talent Solutions |
-| 2 | 1 | | Human Resources Director | Green Key Resources |
-| 3 | 0 | | Senior Vice President Human Resources | Miller Resource Group |
-| 4 | 0 | | VP of Human Resources Americas | Michael Page |
-| 5 | 1 | | Senior Human Resources Business Partner | Potere Search (PS) |
-| 6 | 0 | | Director of HR | Rise Baking Company |
-| 7 | 0 | | Human Resources Manager | MSI Recruiting |
-| 8 | 0 | | Human Resources Manager | Swanson Health |
-| 9 | 0 | | Regional HR Manager (Internal HR Managers Applications Only) | NAPA Auto Parts |
-| 10 | 1 | | Human Resources Director | Claire Myers Consulting |
+| 1 | 1 | 5 | Human Resources Director | Insero Talent Solutions |
+| 2 | 1 | 5 | Human Resources Director | Green Key Resources |
+| 3 | 0 | 3 | Senior Vice President Human Resources | Miller Resource Group |
+| 4 | 0 | 3 | VP of Human Resources Americas | Michael Page |
+| 5 | 1 | 5 | Senior Human Resources Business Partner | Potere Search (PS) |
+| 6 | 0 | 3 | Director of HR | Rise Baking Company |
+| 7 | 0 | 3 | Human Resources Manager | MSI Recruiting |
+| 8 | 0 | 3 | Human Resources Manager | Swanson Health |
+| 9 | 0 | 1 | Regional HR Manager (Internal HR Managers Applications Only) | NAPA Auto Parts |
+| 10 | 1 | 5 | Human Resources Director | Claire Myers Consulting |
 
 ---
 

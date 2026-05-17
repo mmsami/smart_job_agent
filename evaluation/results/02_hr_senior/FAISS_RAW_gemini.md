@@ -17,16 +17,16 @@ Fill this in after reading the job details below.
 
 | # | Relevant (0/1) | Quality (1-5) | Title | Company |
 |---|----------------|---------------|-------|---------|
-| 1 | 1 | | Senior Director DEI & Talent (REMOTE) | EnerSys |
-| 2 | 0 | | VP of Human Resources Americas | Michael Page |
-| 3 | 1 | | Senior Director Human Resources | Third Plateau |
-| 4 | 1 | | Human Resources Director | Insero Talent Solutions |
-| 5 | 0 | | Sr. HRBP | The Opus Group |
-| 6 | 0 | | Senior Human Resources Business Partner | CooperSurgical |
-| 7 | 0 | | Director, Human Resources | Tarsus Pharmaceuticals, Inc. |
-| 8 | 0 | | Human Resources Manager | ProMach |
-| 9 | 0 | | HR Business Partner | Everfox |
-| 10 | 1 | | Regional HR Director, Americas | monday.com |
+| 1 | 1 | 5 | Senior Director DEI & Talent (REMOTE) | EnerSys |
+| 2 | 0 | 3 | VP of Human Resources Americas | Michael Page |
+| 3 | 1 | 5 | Senior Director Human Resources | Third Plateau |
+| 4 | 1 | 5 | Human Resources Director | Insero Talent Solutions |
+| 5 | 0 | 3 | Sr. HRBP | The Opus Group |
+| 6 | 0 | 3 | Senior Human Resources Business Partner | CooperSurgical |
+| 7 | 0 | 3 | Director, Human Resources | Tarsus Pharmaceuticals, Inc. |
+| 8 | 0 | 3 | Human Resources Manager | ProMach |
+| 9 | 0 | 1 | HR Business Partner | Everfox |
+| 10 | 1 | 5 | Regional HR Director, Americas | monday.com |
 
 ---
 
