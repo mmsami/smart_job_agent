@@ -63,6 +63,7 @@ RETRY_DELAY = 2.0
 CURRENT_YEAR = datetime.now().year
 MIN_YEAR = 1950
 LOGIC_VERSION = "v10"  # bump when Python logic changes to invalidate stale cache
+_PLACEHOLDER_TITLES = {"", "unknown", "n/a"}
 
 CACHE_DIR = Path(__file__).parent.parent.parent / ".cache" / "cv_profiler"
 _cache = Cache(str(CACHE_DIR))
@@ -108,7 +109,7 @@ def _is_bad_output(data: dict) -> bool:
         valid_titles = [
             j for j in jobs
             if isinstance(j, dict)
-            and str(j.get("title", "")).strip().lower() not in ("", "unknown", "n/a")
+            and str(j.get("title", "")).strip().lower() not in _PLACEHOLDER_TITLES
         ]
         if len(valid_titles) == 0:
             return True
@@ -132,13 +133,24 @@ def _call_gemma_profile(user_message: str, system_prompt: str, attempt: int) -> 
         )
         return json.loads((response.text or "").strip())
 
-    ex = ThreadPoolExecutor(max_workers=1)
-    future = ex.submit(_do_call)
+    with ThreadPoolExecutor(max_workers=1) as ex:
+        future = ex.submit(_do_call)
+        try:
+            return future.result(timeout=_GEMMA_TIMEOUT)
+        except _FuturesTimeout:
+            raise TimeoutError(f"Gemma API call timed out after {_GEMMA_TIMEOUT}s")
+
+
+def _call_with_fallback(user_message: str, system_prompt: str, attempt: int) -> dict:
+    """Try Gemma first; fall back to OpenRouter on final attempt if Gemma fails."""
     try:
-        return future.result(timeout=_GEMMA_TIMEOUT)
-    except _FuturesTimeout:
-        ex.shutdown(wait=False)
-        raise TimeoutError(f"Gemma API call timed out after {_GEMMA_TIMEOUT}s")
+        return _call_gemma_profile(user_message, system_prompt, attempt)
+    except (TimeoutError, json.JSONDecodeError, ValueError) as e:
+        if attempt == MAX_RETRIES:
+            error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
+            logger.warning(f"[cv-profiler] Gemma {error_desc} on final attempt — falling back to OpenRouter")
+            return _call_openrouter_profile(user_message, system_prompt, attempt)
+        raise
 
 
 def _call_openrouter_profile(user_message: str, system_prompt: str, attempt: int) -> dict:
@@ -174,17 +186,7 @@ def _call_llm(raw_text: str, system_prompt: str) -> dict:
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            # Try Gemma first; fall back to OpenRouter on timeout/parse error
-            if attempt < MAX_RETRIES:
-                data = _call_gemma_profile(user_message, system_prompt, attempt)
-            else:
-                # Last attempt — try OpenRouter instead of Gemma
-                try:
-                    data = _call_gemma_profile(user_message, system_prompt, attempt)
-                except (TimeoutError, json.JSONDecodeError, ValueError) as e:
-                    error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
-                    logger.warning(f"[cv-profiler] Gemma {error_desc} on final attempt — falling back to OpenRouter")
-                    data = _call_openrouter_profile(user_message, system_prompt, attempt)
+            data = _call_with_fallback(user_message, system_prompt, attempt)
 
             if not isinstance(data, dict):
                 raise ValueError(
@@ -373,8 +375,7 @@ _KEEP_CASE = {
     "SCRUM",
     "OKR",
 }
-_KEEP_CASE_LOWER = {k.lower() for k in _KEEP_CASE}
-_KEEP_CASE_LOOKUP = {k.lower(): k for k in _KEEP_CASE}  # O(1) lookup vs O(n) next() scan
+_KEEP_CASE_LOOKUP = {k.lower(): k for k in _KEEP_CASE}
 
 
 def _smart_title(text: str) -> str:
@@ -419,17 +420,8 @@ def _normalize_education(raw: Optional[str]) -> Optional[Literal["bachelor", "ma
     return None
 
 
-def _build_profile(raw: dict) -> CVProfile:
-    """Step 2: compute derived fields and build validated CVProfile."""
-    raw_jobs = raw.get("jobs")
-    jobs_list = raw_jobs if isinstance(raw_jobs, list) else []
-    jobs = _clean_jobs(jobs_list)
-    education = raw.get("education") if isinstance(raw.get("education"), list) else []
-
-    years = _compute_years_experience(jobs)
-    level = _classify_experience_level(years)
-
-    # Extract best education level from education list
+def _extract_highest_education(education: Optional[list]) -> tuple[Optional[Literal["bachelor", "master", "phd"]], Optional[str]]:
+    """Return (level, field) for the highest degree found; None if none recognized."""
     edu_priority = {"phd": 3, "master": 2, "bachelor": 1}
     best_edu = None
     best_field = None
@@ -442,6 +434,20 @@ def _build_profile(raw: dict) -> CVProfile:
             best_score = score
             best_edu = normalized
             best_field = _smart_title(str(edu.get("field") or "")) or None
+    return best_edu, best_field
+
+
+def _build_profile(raw: dict) -> CVProfile:
+    """Step 2: compute derived fields and build validated CVProfile."""
+    raw_jobs = raw.get("jobs")
+    jobs_list = raw_jobs if isinstance(raw_jobs, list) else []
+    jobs = _clean_jobs(jobs_list)
+    education = raw.get("education") if isinstance(raw.get("education"), list) else []
+
+    years = _compute_years_experience(jobs)
+    level = _classify_experience_level(years)
+
+    best_edu, best_field = _extract_highest_education(education)
 
     # contact is extracted for logging/debugging only — intentionally not stored in CVProfile (privacy)
     contact = raw.get("contact") or {}
