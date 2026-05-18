@@ -32,6 +32,24 @@ _GEMMA_TIMEOUT = 30
 
 PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 
+_PREFERENCE_DEFAULTS = {
+    "target_location": "United States",
+    "work_type": "full-time",
+    "employment_type": "full-time",
+    "willing_to_relocate": False,
+    "remote_preference": "flexible",
+    "target_roles": [],
+    "industry_preference": [],
+}
+
+
+def _strip_fences(raw: str) -> str:
+    if raw.startswith("```"):
+        parts = raw.split("```")
+        if len(parts) > 1:
+            raw = parts[1].strip().removeprefix("json").strip()
+    return raw
+
 
 def _openrouter_client() -> OpenAI:
     key = os.getenv("OPENROUTER_API_KEY")
@@ -44,8 +62,10 @@ def _call_gemma(prompt: str) -> dict:
     if not _client:
         raise ValueError("GOOGLE_API_KEY not set")
 
+    client = _client
+
     def _do():
-        response = _client.models.generate_content(
+        response = client.models.generate_content(
             model=MODEL_NAME,
             contents=prompt,
             config=types.GenerateContentConfig(
@@ -53,15 +73,7 @@ def _call_gemma(prompt: str) -> dict:
                 temperature=0.0,
             ),
         )
-        raw = (response.text or "").strip()
-        if raw.startswith("```"):
-            parts = raw.split("```")
-            if len(parts) > 1:
-                raw = parts[1]
-                if raw.startswith("json"):
-                    raw = raw[4:]
-                raw = raw.strip()
-        return json.loads(raw)
+        return json.loads(_strip_fences((response.text or "").strip()))
 
     ex = ThreadPoolExecutor(max_workers=1)
     future = ex.submit(_do)
@@ -80,15 +92,7 @@ def _call_openrouter(prompt: str) -> dict:
         response_format={"type": "json_object"},
         temperature=0.0,
     )
-    raw = (response.choices[0].message.content or "").strip()
-    if raw.startswith("```"):
-        parts = raw.split("```")
-        if len(parts) > 1:
-            raw = parts[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-            raw = raw.strip()
-    return json.loads(raw)
+    return json.loads(_strip_fences((response.choices[0].message.content or "").strip()))
 
 
 def _call(prompt: str) -> dict:
@@ -99,6 +103,14 @@ def _call(prompt: str) -> dict:
         return _call_openrouter(prompt)
 
 
+def _call_and_validate(model_cls, prompt: str, fallback: dict | None = None):
+    data = _call(prompt)
+    if fallback:
+        for k, v in fallback.items():
+            data.setdefault(k, v)
+    return model_cls.model_validate(data)
+
+
 # ── Public API ────────────────────────────────────────────────────────────────
 
 def parse_preferences(text: str) -> JobSearchPreferences:
@@ -106,21 +118,15 @@ def parse_preferences(text: str) -> JobSearchPreferences:
     template = (PROMPTS_DIR / "pref_parser.md").read_text(encoding="utf-8")
     prompt = template.replace("{{USER_INPUT}}", text.strip())
 
-    data = _call(prompt)
-
-    data.setdefault("target_location", "United States")
-    data.setdefault("work_type", "full-time")
-    data.setdefault("employment_type", "full-time")
-    data.setdefault("willing_to_relocate", False)
-    data.setdefault("remote_preference", "flexible")
-    data.setdefault("target_roles", [])
-    data.setdefault("industry_preference", [])
-
-    return JobSearchPreferences(**data)
+    return _call_and_validate(JobSearchPreferences, prompt, _PREFERENCE_DEFAULTS)
 
 
 def refine_preferences(existing: JobSearchPreferences, correction: str) -> JobSearchPreferences:
-    """Merge a correction into existing preferences — preserves unchanged fields."""
+    """Merge a natural language correction into existing preferences.
+
+    Only fields mentioned in the correction are changed; all others are
+    preserved — first by prompt instruction, then by Python fallback.
+    """
     current = existing.model_dump_json(indent=2)
     prompt = f"""You are updating a user's job search preferences. Apply only what the user specifies — keep all other fields exactly as they are.
 
@@ -131,12 +137,7 @@ User correction: {correction.strip()}
 
 Return ONLY the updated preferences as valid JSON with the exact same schema and field names. Do not reset fields the user did not mention."""
 
-    data = _call(prompt)
-    # Fill any missing keys from existing to be safe
-    existing_dict = existing.model_dump()
-    for k, v in existing_dict.items():
-        data.setdefault(k, v)
-    return JobSearchPreferences(**data)
+    return _call_and_validate(JobSearchPreferences, prompt, existing.model_dump())
 
 
 def apply_profile_edit(profile: CVProfile, instruction: str) -> CVProfile:
@@ -151,5 +152,4 @@ Instruction: {instruction.strip()}
 
 Return ONLY the updated profile as valid JSON with the exact same schema and field names. Do not add or remove fields."""
 
-    data = _call(prompt)
-    return CVProfile.model_validate(data)
+    return _call_and_validate(CVProfile, prompt)
