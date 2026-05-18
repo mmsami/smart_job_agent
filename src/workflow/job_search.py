@@ -46,42 +46,71 @@ INDEX_PATH = PROJECT_ROOT / "data" / "vector_store" / "faiss_minilm.index"
 DOCSTORE_PATH = PROJECT_ROOT / "data" / "vector_store" / "docstore_minilm.json"
 DESCRIPTIONS_PATH = PROJECT_ROOT / "data" / "vector_store" / "job_descriptions_minilm.json"
 
-# retriever.search(cv, prefs) → list[JobRecord] (ranked by relevance)
+SOURCE_FILTER_BUFFER = 40  # Kaggle is ~99% of index; buffer absorbs source filtering
+DEDUP_BUFFER = 20  # Additional buffer for per-job chunk deduplication
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# Load raw FAISS index + parallel docstore — graceful failure if index not present
-try:
-    index = faiss.read_index(str(INDEX_PATH), faiss.IO_FLAG_MMAP)
-    with open(DOCSTORE_PATH, "r", encoding="utf-8") as f:
-        docstore = json.load(f)
+# Global index state — lazy-loaded on first retrieval call
+_index: Optional[faiss.Index] = None
+_job_texts: list[str] = []
+_job_metadata: list[dict[str, Any]] = []
+_job_descriptions: dict[str, str] = {}
 
-    job_texts = [d["page_content"] for d in docstore]
-    job_metadata = [d["metadata"] for d in docstore]
 
-    assert len(job_texts) == index.ntotal, (
-        f"Docstore/index mismatch: {len(job_texts):,} entries vs {index.ntotal:,} vectors"
-    )
-    logger.info(
-        f"Loaded index: {index.ntotal:,} vectors | docstore: {len(docstore):,} entries"
-    )
-except FileNotFoundError:
-    index = None  # type: ignore[assignment]
+def _safe_float(val: Any) -> Optional[float]:
+    """Convert value to float, handling None safely."""
+    return float(val) if val is not None else None
+
+
+def load_index() -> tuple[Optional[faiss.Index], list[str], list[dict[str, Any]], dict[str, str]]:
+    """Load FAISS index, docstore, and descriptions from disk. Graceful failure if files missing."""
+    global _index, _job_texts, _job_metadata, _job_descriptions
+
+    index = None
     job_texts = []
     job_metadata = []
-    logger.warning(
-        "FAISS index not found — download from Google Drive before running retrieval. "
-        f"Expected: {INDEX_PATH}"
-    )
-
-# Load job_id → description lookup (built alongside the index by build_vector_store_minilm.py)
-try:
-    with open(DESCRIPTIONS_PATH, "r", encoding="utf-8") as f:
-        job_descriptions: dict[str, str] = json.load(f)
-    logger.info(f"Loaded descriptions lookup: {len(job_descriptions):,} entries")
-except FileNotFoundError:
     job_descriptions = {}
-    logger.warning(f"Descriptions lookup not found at {DESCRIPTIONS_PATH} — rebuild index to fix")
+
+    # Load raw FAISS index + parallel docstore
+    try:
+        index = faiss.read_index(str(INDEX_PATH), faiss.IO_FLAG_MMAP)
+        with open(DOCSTORE_PATH, "r", encoding="utf-8") as f:
+            docstore = json.load(f)
+
+        job_texts = [d["page_content"] for d in docstore]
+        job_metadata = [d["metadata"] for d in docstore]
+
+        assert len(job_texts) == index.ntotal, (
+            f"Docstore/index mismatch: {len(job_texts):,} entries vs {index.ntotal:,} vectors"
+        )
+        logger.info(
+            f"Loaded index: {index.ntotal:,} vectors | docstore: {len(docstore):,} entries"
+        )
+    except FileNotFoundError:
+        logger.warning(
+            "FAISS index not found — download from Google Drive before running retrieval. "
+            f"Expected: {INDEX_PATH}"
+        )
+
+    # Load job_id → description lookup
+    try:
+        with open(DESCRIPTIONS_PATH, "r", encoding="utf-8") as f:
+            job_descriptions = json.load(f)
+        logger.info(f"Loaded descriptions lookup: {len(job_descriptions):,} entries")
+    except FileNotFoundError:
+        logger.warning(f"Descriptions lookup not found at {DESCRIPTIONS_PATH} — rebuild index to fix")
+
+    _index = index
+    _job_texts = job_texts
+    _job_metadata = job_metadata
+    _job_descriptions = job_descriptions
+
+    return index, job_texts, job_metadata, job_descriptions
+
+
+# Load on module import for backward compatibility
+index, job_texts, job_metadata, job_descriptions = load_index()
 
 
 def serialize_cv_profile(cv: CVProfile) -> str:
@@ -208,6 +237,53 @@ def write_results(results: list[dict[str, Any]], out_path: Path) -> None:
     logger.info(f"Results written to {out_path}")
 
 
+def _filter_and_deduplicate(
+    raw: list[dict[str, Any]],
+    source: Optional[str],
+    cv_experience_level: Optional[str],
+    top_k: int,
+) -> list[dict[str, Any]]:
+    """
+    Filter raw search results by source and seniority, deduplicate by job_id and URL.
+    Returns up to top_k results.
+    """
+    seen_ids: set[str] = set()
+    seen_urls: set[str] = set()
+    filtered: list[dict[str, Any]] = []
+    cv_level = (cv_experience_level or "").lower()
+
+    for r in raw:
+        # Source filtering
+        if source and r.get("source") != source:
+            continue
+
+        # Dedup by job_id
+        job_id = str(r.get("job_id", ""))
+        if job_id in seen_ids:
+            continue
+
+        # Seniority hard filter
+        exp_level = (r.get("experience_level") or "").lower()
+        title = (r.get("title") or "").lower()
+        if not passes_seniority_filter(exp_level, title, cv_level):
+            continue
+
+        # URL dedup — same URL = same posting
+        url = r.get("url") or ""
+        if url and url in seen_urls:
+            continue
+
+        seen_ids.add(job_id)
+        if url:
+            seen_urls.add(url)
+
+        filtered.append(r)
+        if len(filtered) >= top_k:
+            break
+
+    return filtered
+
+
 def retrieve_jobs(
     cv: CVProfile,
     prefs: JobSearchPreferences,
@@ -240,8 +316,7 @@ def retrieve_jobs(
     query_embedding = embed_profile_and_preferences(cv, prefs)
 
     # Over-fetch to absorb source filtering and per-job chunk dedup.
-    # Kaggle is 99.2% of index; +40 covers both without over-scanning.
-    fetch_k = top_k + 40 if source else top_k + 20
+    fetch_k = top_k + (SOURCE_FILTER_BUFFER if source else DEDUP_BUFFER)
     raw = search_jobs(
         query_embedding=query_embedding,
         index=index,
@@ -250,31 +325,13 @@ def retrieve_jobs(
         top_k=fetch_k,
     )
 
-    _cv_level = (cv.experience_level or "").lower()
+    # Filter by source, seniority, and dedup by job_id + URL
+    filtered = _filter_and_deduplicate(raw, source, cv.experience_level, top_k)
 
+    # Convert to typed JobRecord objects
     records: list[JobRecord] = []
-    seen: set[str] = set()
-    for r in raw:
-        if source and r.get("source") != source:
-            continue
+    for r in filtered:
         job_id = str(r.get("job_id", ""))
-        if job_id in seen:
-            continue
-
-        # Seniority hard filter
-        _exp = (r.get("experience_level") or "").lower()
-        _title = (r.get("title") or "").lower()
-        if not passes_seniority_filter(_exp, _title, _cv_level):
-            continue
-
-        # URL dedup — same URL = same posting
-        _url = r.get("url") or ""
-        if _url and _url in seen:
-            continue
-
-        seen.add(job_id)
-        if _url:
-            seen.add(_url)
         records.append(
             JobRecord(
                 job_id=job_id,
@@ -284,20 +341,14 @@ def retrieve_jobs(
                 location=r.get("location"),
                 experience_level=r.get("experience_level"),
                 work_type=r.get("work_type"),
-                min_salary=float(r["min_salary"])
-                if r.get("min_salary") is not None
-                else None,
-                max_salary=float(r["max_salary"])
-                if r.get("max_salary") is not None
-                else None,
+                min_salary=_safe_float(r.get("min_salary")),
+                max_salary=_safe_float(r.get("max_salary")),
                 url=r.get("url"),
                 skill_labels=r.get("skill_labels"),
                 source=str(r.get("source", "kaggle")),
                 score=float(r["score"]),
             )
         )
-        if len(records) >= top_k:
-            break
 
     logger.info(
         f"retrieve_jobs: {len(records)} JobRecords returned "
