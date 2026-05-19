@@ -43,6 +43,15 @@ KEEP_COLUMNS = [
     "source",
 ]
 
+VALID_EXPERIENCE_LEVELS = [
+    "Entry level",
+    "Associate",
+    "Mid-Senior level",
+    "Director",
+    "Executive",
+    "Internship",
+]
+
 
 def strip_html(text):
     """Remove HTML tags and decode common entities."""
@@ -101,12 +110,8 @@ def load_and_join(data_dir):
     return postings
 
 
-def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
-    """Clean the merged dataframe."""
-    report = []
-    n_start = len(df)
-    report.append(f"Starting rows: {n_start:,}")
-
+def clean(df: pd.DataFrame) -> pd.DataFrame:
+    """Clean and validate the merged dataframe."""
     # ── Strip HTML from descriptions ───────────────────────────────────
     print("Stripping HTML from descriptions...")
     df["description"] = df["description"].apply(strip_html)
@@ -116,33 +121,20 @@ def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     desc_bad = df["description"].isna() | (
         df["description"].str.len() < MIN_DESCRIPTION_CHARS
     )
-    junk = title_bad | desc_bad  # drop if either is unusable — can't embed without description
+    junk = title_bad | desc_bad
     n_junk = junk.sum()
     df = df.loc[~junk].copy()
-    report.append(f"Dropped (bad title or desc): {n_junk:,}")
     print(f"  Dropped {n_junk:,} junk rows")
 
     # ── Validate experience_level ──────────────────────────────────────
-    valid_exp = [
-        "Entry level",
-        "Associate",
-        "Mid-Senior level",
-        "Director",
-        "Executive",
-        "Internship",
-    ]
     unexpected_exp = df["formatted_experience_level"].notna() & ~df[
         "formatted_experience_level"
-    ].isin(valid_exp)
+    ].isin(VALID_EXPERIENCE_LEVELS)
     n_unexpected_exp = unexpected_exp.sum()
     if int(n_unexpected_exp) > 0:
         bad_vals = df.loc[unexpected_exp, "formatted_experience_level"].unique()
-        report.append(
-            f"Unexpected experience_level values set to null: {n_unexpected_exp:,} ({bad_vals})"
-        )
+        print(f"  Setting {n_unexpected_exp:,} unexpected experience_level values to null: {bad_vals}")
         df.loc[unexpected_exp, "formatted_experience_level"] = None
-    else:
-        report.append("Experience level values: all valid (no unexpected values)")
 
     # ── Add source column ──────────────────────────────────────────────
     df["source"] = "kaggle"
@@ -151,21 +143,52 @@ def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     available = [c for c in KEEP_COLUMNS if c in df.columns]
     df = df.loc[:, available].copy()
 
-    # ── Final stats ────────────────────────────────────────────────────
-    n_final = len(df)
+    return df
+
+
+def deduplicate(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove duplicate postings by URL, then by (title, company) pair."""
+    n_before = len(df)
+
+    # Deduplicate by URL first — same URL = same posting
+    has_url = df["application_url"].notna() & (df["application_url"] != "")
+    df_with_url = df[has_url].drop_duplicates(subset=["application_url"], keep="first")
+    df_no_url = df[~has_url]
+    df = pd.concat([df_with_url, df_no_url], ignore_index=True)
+    n_after_url = len(df)
+    print(f"  URL dedup: removed {n_before - n_after_url:,} rows ({n_after_url:,} remaining)")
+
+    # Deduplicate by normalized (title, company)
+    df["_title_norm"] = df["title"].fillna("").str.strip().str.lower()
+    df["_company_norm"] = df["company_name"].fillna("").str.strip().str.lower()
+    df = df.drop_duplicates(subset=["_title_norm", "_company_norm"], keep="first")
+    df = df.drop(columns=["_title_norm", "_company_norm"])
+    n_after_tc = len(df)
+    print(f"  Title+company dedup: removed {n_after_url - n_after_tc:,} rows ({n_after_tc:,} remaining)")
+
+    return df
+
+
+def build_quality_report(df_before: pd.DataFrame, df_after: pd.DataFrame) -> list[str]:
+    """Generate quality report comparing before/after cleaning."""
+    report = []
+    n_start = len(df_before)
+    n_final = len(df_after)
+
+    report.append(f"Starting rows: {n_start:,}")
     report.append(f"Final rows: {n_final:,}")
     report.append(f"Rows retained: {n_final / n_start * 100:.1f}%")
     report.append("")
 
     # Column-level nulls
     report.append("Column null counts:")
-    for col in df.columns:
-        null_n = df[col].isna().sum()
-        null_pct = null_n / len(df) * 100
+    for col in df_after.columns:
+        null_n = df_after[col].isna().sum()
+        null_pct = null_n / len(df_after) * 100
         report.append(f"  {col:35s}: {null_n:>7,} ({null_pct:5.1f}%)")
 
     # Description length stats
-    desc_len = df["description"].dropna().str.len()
+    desc_len = df_after["description"].dropna().str.len()
     report.append("")
     report.append(
         f"Description length — median: {desc_len.median():.0f}, mean: {desc_len.mean():.0f}, min: {desc_len.min():.0f}, max: {desc_len.max():.0f}"
@@ -174,25 +197,25 @@ def clean(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     # Experience level distribution
     report.append("")
     report.append("Experience level distribution:")
-    exp_counts = df["formatted_experience_level"].value_counts(dropna=False)
+    exp_counts = df_after["formatted_experience_level"].value_counts(dropna=False)
     for val, cnt in exp_counts.items():
         label = val if pd.notna(val) else "(null)"
-        report.append(f"  {label:25s}: {cnt:>7,} ({cnt / len(df) * 100:.1f}%)")
+        report.append(f"  {label:25s}: {cnt:>7,} ({cnt / len(df_after) * 100:.1f}%)")
 
     # Skill labels coverage
-    has_skills = df["skill_labels"].notna().sum()
+    has_skills = df_after["skill_labels"].notna().sum()
     report.append("")
     report.append(
-        f"Skill labels coverage: {has_skills:,} / {len(df):,} ({has_skills / len(df) * 100:.1f}%)"
+        f"Skill labels coverage: {has_skills:,} / {len(df_after):,} ({has_skills / len(df_after) * 100:.1f}%)"
     )
 
     # Industry coverage
-    has_ind = df["industries"].notna().sum()
+    has_ind = df_after["industries"].notna().sum()
     report.append(
-        f"Industry coverage: {has_ind:,} / {len(df):,} ({has_ind / len(df) * 100:.1f}%)"
+        f"Industry coverage: {has_ind:,} / {len(df_after):,} ({has_ind / len(df_after) * 100:.1f}%)"
     )
 
-    return df, report
+    return report
 
 
 def main():
@@ -200,41 +223,34 @@ def main():
     print("Kaggle LinkedIn Job Postings — Data Pipeline")
     print("=" * 60)
 
-    df = load_and_join(DATA_DIR)
-    df, report = clean(df)
+    # Load and clean
+    print("\nLoading and joining...")
+    df_raw = load_and_join(DATA_DIR)
+    n_raw = len(df_raw)
 
-    # ── Deduplicate by URL then title+company ──────────────────────────
-    # URL dedup first: same URL = same posting regardless of title differences
-    # (staffing agencies post identical jobs with reference codes in the title)
-    n_before = len(df)
-    has_url = df["application_url"].notna() & (df["application_url"] != "")
-    df_with_url = df[has_url].drop_duplicates(subset=["application_url"], keep="first")
-    df_no_url = df[~has_url]
-    df = pd.concat([df_with_url, df_no_url], ignore_index=True)
-    n_after_url = len(df)
-    print(f"  URL dedup: removed {n_before - n_after_url:,} rows ({n_after_url:,} remaining)")
+    print("\nCleaning...")
+    df_clean = clean(df_raw)
 
-    df["_title_norm"] = df["title"].fillna("").str.strip().str.lower()
-    df["_company_norm"] = df["company_name"].fillna("").str.strip().str.lower()
-    df = df.drop_duplicates(subset=["_title_norm", "_company_norm"], keep="first")
-    df = df.drop(columns=["_title_norm", "_company_norm"])
-    n_after_tc = len(df)
-    print(f"  Title+company dedup (normalized): removed {n_after_url - n_after_tc:,} rows ({n_after_tc:,} remaining)")
+    print("\nDeduplicating...")
+    df_dedup = deduplicate(df_clean)
 
-    # ── Save cleaned CSV ───────────────────────────────────────────────
+    # Generate report
+    print("\nGenerating quality report...")
+    report = build_quality_report(df_raw, df_dedup)
+
+    # Save outputs
+    print("\nSaving outputs...")
     out_csv = os.path.join(OUTPUT_DIR, "postings_cleaned.csv")
-    print(f"\nSaving cleaned data to {out_csv}...")
-    df.to_csv(out_csv, index=False)
-    print(f"  Saved {len(df):,} rows")
+    df_dedup.to_csv(out_csv, index=False)
+    print(f"  Saved {len(df_dedup):,} rows to {out_csv}")
 
-    # ── Save quality report ────────────────────────────────────────────
     out_report = os.path.join(OUTPUT_DIR, "data_quality_report.txt")
     report_text = "\n".join(report)
     with open(out_report, "w") as f:
         f.write("Kaggle Data Quality Report\n")
         f.write("=" * 40 + "\n")
         f.write(report_text)
-    print(f"  Quality report saved to {out_report}")
+    print(f"  Saved report to {out_report}")
 
     print("\n" + report_text)
     print("\nDone.")
