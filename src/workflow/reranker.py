@@ -67,7 +67,7 @@ def _openrouter_client():
 
 MAX_RETRIES = 3
 RETRY_DELAY = 2.0
-DESCRIPTION_CHAR_LIMIT = 5500  # truncate job descriptions before sending to LLM
+DESCRIPTION_CHAR_LIMIT = 5500  # ~1,375 tokens @ 4 chars/token — keeps 20 jobs + CV + prefs under 32k context
 
 CACHE_DIR = Path(__file__).parent.parent.parent / ".cache" / "reranker"
 _cache = Cache(str(CACHE_DIR), size_limit=int(1e9))  # 1 GB cap
@@ -123,6 +123,18 @@ def _truncate_description(desc: str) -> str:
     if len(desc) <= DESCRIPTION_CHAR_LIMIT:
         return desc
     return desc[:DESCRIPTION_CHAR_LIMIT] + "... [truncated]"
+
+
+def _strip_markdown_fences(raw: str) -> str:
+    if not raw.startswith("```"):
+        return raw
+    parts = raw.split("```", 2)  # Split on first two occurrences
+    if len(parts) < 2:
+        return raw
+    content = parts[1].strip()
+    if content.startswith("json"):
+        content = content[4:].strip()
+    return content
 
 
 def _build_user_message(
@@ -202,14 +214,7 @@ def _call_openrouter_rerank(user_message: str, system_prompt: str, attempt: int)
         temperature=temperature,
     )
     raw = (response.choices[0].message.content or "").strip()
-    # Strip markdown fences if model wraps output despite json_object mode
-    if raw.startswith("```"):
-        parts = raw.split("```")
-        if len(parts) > 1:
-            raw = parts[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-            raw = raw.strip()
+    raw = _strip_markdown_fences(raw)
     data = json.loads(raw)
     return data
 
@@ -221,7 +226,12 @@ def _call_llm(user_message: str, system_prompt: str, attempt: int) -> dict:
     except (TimeoutError, json.JSONDecodeError, ValueError) as e:
         error_desc = "timed out" if isinstance(e, TimeoutError) else "returned invalid output"
         logger.warning(f"[gemma-reranker] Gemma {error_desc} — falling back to OpenRouter")
-        return _call_openrouter_rerank(user_message, system_prompt, attempt)
+        try:
+            return _call_openrouter_rerank(user_message, system_prompt, attempt)
+        except Exception as fallback_error:
+            raise RuntimeError(
+                f"Both Gemma (reranker: {error_desc}) and OpenRouter failed"
+            ) from fallback_error
 
 
 def _validate_output(
@@ -314,7 +324,7 @@ def rerank_jobs(
     job_lookup = {j.job_id: j for j in jobs}
     min_results = min(10, len(jobs))
 
-    last_error: Exception = RuntimeError("unknown error")
+    last_error: Exception | None = None
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
@@ -352,9 +362,10 @@ def rerank_jobs(
             if attempt < MAX_RETRIES:
                 time.sleep(RETRY_DELAY * attempt)
 
-    raise RuntimeError(
-        f"Reranking failed after {MAX_RETRIES} attempts — last error: {last_error}"
-    )
+    error_msg = f"Reranking failed after {MAX_RETRIES} attempts"
+    if last_error:
+        error_msg += f" — last error: {last_error}"
+    raise RuntimeError(error_msg)
 
 
 # ── Smoke test ───────────────────────────────────────────────────────────────
