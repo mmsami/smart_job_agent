@@ -146,6 +146,7 @@ def _build_user_message(cv: CVProfile, jobs: list[JobRecord]) -> str:
 
 
 def _cache_key(cv: CVProfile, jobs: list[JobRecord]) -> str:
+    # NOTE: Overlaps with _build_user_message serialization — keep in sync to avoid stale cache hits
     payload = json.dumps(
         {
             "logic_version": LOGIC_VERSION,
@@ -184,18 +185,18 @@ def _normalize_text_list(values: list[str]) -> list[str]:
 
 
 def _cv_known_terms(cv: CVProfile) -> set[str]:
-    terms: list[str] = (
-        cv.skills
-        + cv.certifications
-        + cv.languages
-        + cv.job_titles_held
-        + cv.industries
-        + cv.domain_keywords
-        + cv.tools
-    )
-    for attr in ("field_of_study", "current_location", "education_level", "experience_level"):
-        val = getattr(cv, attr, None)
-        if val:
+    """Extract all skill/knowledge terms from CV, ignoring model changes."""
+    terms: list[str] = []
+    # Dynamically collect all string and list[str] fields — survives CVProfile schema changes
+    for field_name, field_info in CVProfile.model_fields.items():
+        if field_name.startswith("_"):
+            continue
+        val = getattr(cv, field_name, None)
+        if not val:
+            continue
+        if isinstance(val, list):
+            terms.extend(v for v in val if isinstance(v, str))
+        elif isinstance(val, str):
             terms.append(val)
     return {t.strip().casefold() for t in terms if t and t.strip()}
 
@@ -267,6 +268,18 @@ def _validate_explanations(report: ReasoningReport, jobs: list[JobRecord]) -> No
 # ── LLM call ─────────────────────────────────────────────────────────────────
 
 
+def _strip_markdown_fences(raw: str) -> str:
+    if not raw.startswith("```"):
+        return raw
+    parts = raw.split("```", 2)
+    if len(parts) < 2:
+        return raw
+    content = parts[1].strip()
+    if content.startswith("json"):
+        content = content[4:].strip()
+    return content
+
+
 def _call_openrouter(
     user_message: str, system_prompt: str, attempt: int, provider: Provider,
     model_override: str | None = None,
@@ -283,21 +296,8 @@ def _call_openrouter(
         temperature=temperature,
     )
     raw = (response.choices[0].message.content or "").strip()
-    # Strip markdown fences if model wraps output despite json_object mode
-    if raw.startswith("```"):
-        parts = raw.split("```")
-        if len(parts) > 1:
-            raw = parts[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-            raw = raw.strip()
+    raw = _strip_markdown_fences(raw)
     return ReasoningReport.model_validate_json(raw)
-
-
-def _call_llm(
-    user_message: str, system_prompt: str, attempt: int, provider: Provider
-) -> ReasoningReport:
-    return _call_openrouter(user_message, system_prompt, attempt, provider)
 
 
 # ── Public API ────────────────────────────────────────────────────────────────
@@ -336,12 +336,12 @@ def analyze_job_matches(
     system_prompt = _load_prompt()
     user_message = _build_user_message(cv, jobs)
 
-    last_error: Exception = RuntimeError("unknown error")
+    last_error: Exception | None = None
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             with _LLM_SEM:
-                parsed = _call_llm(user_message, system_prompt, attempt, provider)
+                parsed = _call_openrouter(user_message, system_prompt, attempt, provider)
             _validate_explanations(parsed, jobs)
             final = _postprocess(parsed, cv)
 
@@ -361,9 +361,10 @@ def analyze_job_matches(
                 delay = _RETRY_DELAYS[attempt - 1] + random.uniform(0, 3)
                 time.sleep(delay)
 
-    raise RuntimeError(
-        f"[{provider}] Reasoning failed after {MAX_RETRIES} attempts — last error: {last_error}"
-    )
+    error_msg = f"[{provider}] Reasoning failed after {MAX_RETRIES} attempts"
+    if last_error:
+        error_msg += f" — last error: {last_error}"
+    raise RuntimeError(error_msg)
 
 
 def report_to_pretty_json(report: ReasoningReport) -> str:
