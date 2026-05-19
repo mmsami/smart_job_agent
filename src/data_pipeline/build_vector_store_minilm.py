@@ -51,7 +51,9 @@ EMBED_MODEL = "all-MiniLM-L6-v2"
 # count is subtracted in build_chunks to keep total under the model limit.
 MODEL_MAX_TOKENS = 256                        # hard limit for all-MiniLM-L6-v2
 MAX_WORDS = int(MODEL_MAX_TOKENS / 1.3)       # ≈ 196 words → safe chunk body
-OVERLAP_WORDS = int(50 / 1.3)                 # ≈ 38 words overlap between windows
+OVERLAP_TOKENS = 50                           # tokens of overlap between chunk windows
+OVERLAP_WORDS = int(OVERLAP_TOKENS / 1.3)     # ≈ 38 words overlap between windows
+MIN_CHUNK_WORDS = 50                          # minimum words to preserve chunk coherence
 
 BATCH_SIZE = 64  # smaller batch to avoid OOM on Mac
 
@@ -87,12 +89,7 @@ def get_float(value: object) -> Optional[float]:
     return None
 
 
-# ── Tokenization (approximation — avoids loading a full tokenizer) ─────
-def approx_token_count(text: str) -> int:
-    """Approximate BPE token count from whitespace-word count."""
-    return int(len(text.split()) * 1.3)
-
-
+# ── Chunking ──────────────────────────────────────────────────────────
 def split_into_chunks(text: str, max_words: int = MAX_WORDS) -> list[str]:
     """
     Paragraph-based chunking with fixed-size fallback.
@@ -128,6 +125,22 @@ def split_into_chunks(text: str, max_words: int = MAX_WORDS) -> list[str]:
     return chunks if chunks else [" ".join(text.split()[:max_words])]
 
 
+# ── Deduplication ─────────────────────────────────────────────────────
+def deduplicate(docs: list[JobDocument]) -> list[JobDocument]:
+    """Remove duplicate documents by (title, company) key."""
+    seen: set[tuple[str, str]] = set()
+    deduped: list[JobDocument] = []
+    for doc in docs:
+        key = (doc.title.lower().strip(), doc.company.lower().strip())
+        if key not in seen:
+            seen.add(key)
+            deduped.append(doc)
+    duplicates = len(docs) - len(deduped)
+    if duplicates:
+        print(f"  Removed {duplicates:,} duplicate title+company pairs")
+    return deduped
+
+
 # ── Source loaders ─────────────────────────────────────────────────────
 def load_kaggle(path: str) -> list[JobDocument]:
     print(f"Loading Kaggle data from {path}...")
@@ -156,21 +169,8 @@ def load_kaggle(path: str) -> list[JobDocument]:
             logger.warning(f"Skipped Kaggle row (job_id={row.get('job_id')}): {e}")
             skipped += 1
 
-    # Deduplicate by (title, company) — staffing agencies post the same role many times
-    # with different job IDs. Keeps the first occurrence (lowest job_id in CSV order).
-    seen: set[tuple[str, str]] = set()
-    deduped: list[JobDocument] = []
-    for doc in docs:
-        key = (doc.title.lower().strip(), doc.company.lower().strip())
-        if key not in seen:
-            seen.add(key)
-            deduped.append(doc)
-    duplicates = len(docs) - len(deduped)
-    if duplicates:
-        print(f"  Removed {duplicates:,} duplicate title+company pairs")
-
-    print(f"  Loaded {len(deduped):,} Kaggle docs ({skipped:,} skipped, {duplicates:,} deduped)")
-    return deduped
+    print(f"  Loaded {len(docs):,} Kaggle docs ({skipped:,} skipped)")
+    return docs
 
 
 def load_arbeitnow(path: str) -> list[JobDocument]:
@@ -214,7 +214,7 @@ def build_chunks(docs: list[JobDocument]) -> tuple[list[str], list[dict]]:
         prefix = doc.to_page_content_prefix()
         prefix_words = len(prefix.split())
         # Reserve space for prefix so total embedded string ≤ MODEL_MAX_TOKENS
-        effective_max = max(MAX_WORDS - prefix_words, min(50, MAX_WORDS))  # floor respects token budget
+        effective_max = max(MAX_WORDS - prefix_words, min(MIN_CHUNK_WORDS, MAX_WORDS))
 
         chunks = split_into_chunks(doc.description, max_words=effective_max)
         meta = doc.to_metadata()
@@ -241,7 +241,84 @@ def embed_in_batches(texts: list[str], model: SentenceTransformer) -> np.ndarray
     return np.vstack(all_vecs).astype("float32")
 
 
-# ── Main ───────────────────────────────────────────────────────────────
+def load_or_embed(texts: list[str], model: SentenceTransformer, cache_path: str) -> np.ndarray:
+    """Load cached vectors or embed and cache. Cache invalidated if chunk count changes."""
+    if os.path.exists(cache_path):
+        print(f"Loading cached vectors from {cache_path}...")
+        cached = np.load(cache_path)
+        if cached.shape[0] == len(texts):
+            print(f"  Loaded. Shape: {cached.shape}")
+            return cached
+        print(f"  Cache shape {cached.shape[0]} != {len(texts)} chunks — re-embedding.")
+
+    print("Embedding chunks...")
+    t0 = time.time()
+    vectors = embed_in_batches(texts, model)
+    print(f"  Done in {time.time() - t0:.1f}s. Shape: {vectors.shape}")
+    np.save(cache_path, vectors)
+    print(f"  Saved vector cache to {cache_path}")
+    return vectors
+
+
+def save_json(data: dict | list, path: str, label: str) -> None:
+    """Save data to JSON file with logging."""
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False)
+    count = len(data) if isinstance(data, (dict, list)) else "?"
+    print(f"  Saved {label} to {path} ({count:,} entries)")
+
+
+# ── Orchestration ─────────────────────────────────────────────────────
+def load_all_docs() -> list[JobDocument]:
+    """Load and deduplicate documents from all sources."""
+    kaggle_docs = load_kaggle(KAGGLE_CSV)
+    arbeitnow_docs = load_arbeitnow(ARBEITNOW_JSON)
+    all_docs = kaggle_docs + arbeitnow_docs
+    print(f"\nTotal before dedup: {len(all_docs):,}")
+    all_docs = deduplicate(all_docs)
+    print(f"Total after dedup: {len(all_docs):,}")
+    return all_docs
+
+
+def build_index(vectors: np.ndarray) -> faiss.IndexFlatIP:
+    """Create and normalize vectors, build FAISS index."""
+    print("\nNormalizing vectors for cosine similarity...")
+    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+    norms = np.where(norms == 0, 1, norms)
+    vectors = np.ascontiguousarray(vectors / norms, dtype="float32")
+
+    dim = vectors.shape[1]
+    index = faiss.IndexFlatIP(dim)
+    index.add(vectors)  # type: ignore
+    print(f"  Index built: {index.ntotal:,} vectors, dim={dim}")
+    return index
+
+
+def save_artifacts(
+    index: faiss.IndexFlatIP,
+    page_contents: list[str],
+    metadatas: list[dict],
+    all_docs: list[JobDocument],
+) -> None:
+    """Save FAISS index, docstore, and description lookup."""
+    print("\nSaving artifacts...")
+    faiss.write_index(index, INDEX_PATH)
+    print(f"  Saved index to {INDEX_PATH}")
+
+    docstore = [
+        {"page_content": pc, "metadata": meta}
+        for pc, meta in zip(page_contents, metadatas)
+    ]
+    save_json(docstore, DOCSTORE_PATH, "docstore")
+
+    descriptions = {
+        doc.job_id: doc.description
+        for doc in all_docs
+        if doc.description.strip()
+    }
+    save_json(descriptions, DESCRIPTIONS_PATH, "descriptions lookup")
+
+
 def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
@@ -249,11 +326,8 @@ def main():
     print("Build FAISS Vector Store (all-MiniLM-L6-v2)")
     print("=" * 60)
 
-    # Load both sources
-    kaggle_docs = load_kaggle(KAGGLE_CSV)
-    arbeitnow_docs = load_arbeitnow(ARBEITNOW_JSON)
-    all_docs = kaggle_docs + arbeitnow_docs
-    print(f"\nTotal documents: {len(all_docs):,}")
+    # Load and deduplicate
+    all_docs = load_all_docs()
 
     # Chunk
     print("\nChunking documents...")
@@ -265,66 +339,19 @@ def main():
     print(f"  Avg chunks/doc: {len(page_contents) / len(all_docs):.2f}")
 
     # Embed
-    print(f"\nLoading embedding model ({EMBED_MODEL})...")
-    model = SentenceTransformer(EMBED_MODEL)
     if not page_contents:
         raise ValueError("No documents to index — check that data files exist and loaded correctly")
 
-    # Crash-recovery cache only. Safe to reuse when dataset/chunking/dedup logic
-    # is unchanged. Delete this file before rebuilding if any of those change.
+    print(f"\nLoading embedding model ({EMBED_MODEL})...")
+    model = SentenceTransformer(EMBED_MODEL)
+
     VECTORS_CACHE = os.path.join(VECTOR_DIR, "vectors_minilm_cache.npy")
-    vectors = None
-    if os.path.exists(VECTORS_CACHE):
-        print(f"Loading cached vectors from {VECTORS_CACHE}...")
-        _cached = np.load(VECTORS_CACHE)
-        if _cached.shape[0] == len(page_contents):
-            vectors = _cached
-            print(f"  Loaded. Shape: {vectors.shape}")
-        else:
-            print(f"  Cache shape {_cached.shape[0]} != {len(page_contents)} chunks — re-embedding.")
-    if vectors is None:
-        print("Embedding chunks...")
-        t0 = time.time()
-        vectors = embed_in_batches(page_contents, model)
-        print(f"  Done in {time.time() - t0:.1f}s. Shape: {vectors.shape}")
-        np.save(VECTORS_CACHE, vectors)
-        print(f"  Saved vector cache to {VECTORS_CACHE}")
+    print("\nLoading or embedding vectors...")
+    vectors = load_or_embed(page_contents, model, VECTORS_CACHE)
 
-    # Normalize for cosine similarity (FAISS IndexFlatIP on unit vectors = cosine)
-    print("\nNormalizing vectors for cosine similarity...")
-    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
-    norms = np.where(norms == 0, 1, norms)
-    vectors = np.ascontiguousarray(vectors / norms, dtype="float32")
-
-    # Build FAISS index
-    dim = vectors.shape[1]
-    index = faiss.IndexFlatIP(dim)  # inner product on normalized = cosine
-    index.add(vectors)  # type: ignore
-    print(f"  Index built: {index.ntotal:,} vectors, dim={dim}")
-
-    # Save index
-    faiss.write_index(index, INDEX_PATH)
-    print(f"  Saved index to {INDEX_PATH}")
-
-    # Save docstore (page_content + metadata, parallel to index)
-    docstore = [
-        {"page_content": pc, "metadata": meta}
-        for pc, meta in zip(page_contents, metadatas)
-    ]
-    with open(DOCSTORE_PATH, "w", encoding="utf-8") as f:
-        json.dump(docstore, f, ensure_ascii=False)
-    print(f"  Saved docstore to {DOCSTORE_PATH} ({len(docstore):,} entries)")
-
-    # Save job_id → description lookup (separate from docstore to avoid repeating
-    # description text once per chunk; retrieve_jobs reads this to populate JobRecord)
-    descriptions = {
-        doc.job_id: doc.description
-        for doc in all_docs
-        if doc.description.strip()
-    }
-    with open(DESCRIPTIONS_PATH, "w", encoding="utf-8") as f:
-        json.dump(descriptions, f, ensure_ascii=False)
-    print(f"  Saved descriptions lookup to {DESCRIPTIONS_PATH} ({len(descriptions):,} entries)")
+    # Build and save
+    index = build_index(vectors)
+    save_artifacts(index, page_contents, metadatas, all_docs)
 
     print("\nDone.")
 
